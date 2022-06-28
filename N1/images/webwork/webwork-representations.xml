@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="pretext-sequencia/problem1.pg">
+      <statement><p>Determine o limite da sequência ou mostre que a sequência diverge usando as regras do limite ou teoremas apropriados. Se a sequência divergir, digite DIV como sua resposta.
+<me>a_n=\frac{2 n^2+n+2}{11 n^2-3}</me></p>
+<p><m>\lim\limits_{n\to\infty}a_n =</m>  <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.181818181818182</m>
+        </p>
+      </answer>
+      <solution><p>Nós temos <m>a_n=f(n)</m>, na qual <m>f(x)=\frac{2 x^2+x+2}{11 x^2-3}</m>. Assim,</p>
+<p><me>\lim_{n\rightarrow \infty} \frac{2 n^2+n+2}{11 n^2-3} = \lim_{x\rightarrow \infty} \frac{2 x^2+x+2}{11 x^2-3} =\frac{2}{11}.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-sequencia/problem1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-sequencia/problem1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-sequencia/problem1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-sequencia/problem1.pg</server-url>
+    <pg source="pretext-sequencia/problem1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="pretext-sequencia/problem10.pg">
+      <statement><p>Escreva os primeiros cinco termos da sequência com, <m>\left[{\frac{\ln\!\left(n\right)}{n+1}}\right]_{n=1}^{\infty}</m>, determine se a sequência converge e, em caso afirmativo, encontre seu limite.</p>
+<p>Insira as seguintes informações para <m>a_n=\frac{\ln\!\left(n\right)}{n+1}</m>.</p>
+<p><m>a_1=</m>  <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>a_2=</m>  <fillin name="AnSwEr0002" characters="20"/></p>
+<p><m>a_3=</m>  <fillin name="AnSwEr0003" characters="20"/></p>
+<p><m>a_4=</m>  <fillin name="AnSwEr0004" characters="20"/></p>
+<p><m>a_5=</m>  <fillin name="AnSwEr0005" characters="30"/></p>
+<p><m>\displaystyle \lim_{n\to\infty} \frac{\ln\!\left(n\right)}{n+1} =</m> <fillin name="AnSwEr0006" characters="30"/></p>
+<p>(Digite DNE se o limite não existir.)</p>
+<p>A sequência converge <fillin name="AnSwEr0007" characters="30"/> (Digite "sim" or "não").</p>
+</statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{\ln\!\left(2\right)}{2+1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{\ln\!\left(3\right)}{3+1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{\ln\!\left(4\right)}{4+1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{\ln\!\left(5\right)}{5+1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{yes}</m>
+        </p>
+      </answer>
+      <solution><p>Para <m>a_n=\frac{\ln\!\left(n\right)}{n+1}</m></p>
+<p><m>a_1=\frac{\ln{1}}{2}=0</m></p>
+<p><m>a_2=\frac{\ln{2}}{3}</m></p>
+<p><m>a_3=\frac{\ln{3}}{4}</m></p>
+<p><m>a_4=\frac{\ln{4}}{5}</m></p>
+<p><m>a_5=\frac{\ln{5}}{6}</m></p>
+<p><m>\displaystyle \lim_{n\to\infty} \frac{\ln\!\left(n\right)}{n+1} =\lim_{n\to\infty} \frac{1}{n} =0</m> então a sequência converge para <m>0</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-sequencia/problem10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-sequencia/problem10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-sequencia/problem10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-sequencia/problem10.pg</server-url>
+    <pg source="pretext-sequencia/problem10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="pretext-sequencia/problem2.pg">
+      <statement><p><alert> Sequência definida por uma função (Theorem 1.6.)</alert></p>
+<p>Seja <m>f(x)</m> uma função definida em <m>[c,\infty ]</m> para alguma constante  <m>c</m>.  Se <m>\lim_{x\to\infty}f(x)</m> existe, então a sequência <m>a_n=f(n)</m>, definida para <m>n\geq c</m>, converge e
+<me>\lim_{n\to\infty}a_n=\lim_{x\to\infty}f(x)</me></p>
+<p>Use a afirmação acima para determinar o limite da sequência ou digite DIV se a sequência divergir.</p>
+<p><m>a_n=2</m></p>
+<p><m>\lim\limits_{n\to\infty}a_n =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+      <solution><p>Temos <m>a_n=f(n)</m> no qual <m>f(x)=2</m>.  Assim,
+<me>\lim_{n\to\infty}a_n = 
+\lim_{x\to\infty}f(x) =
+\lim_{x\to\infty}2= 2</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-sequencia/problem2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-sequencia/problem2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-sequencia/problem2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-sequencia/problem2.pg</server-url>
+    <pg source="pretext-sequencia/problem2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="pretext-sequencia/problem3.pg">
+      <statement><p>Determine o limite da sequência ou mostre que a sequência diverge usando as regras do limite ou teoremas apropriados. Se a sequência divergir, digite DIV como sua resposta.
+<me>c_n=\ln\left(\frac{4 n-7}{2 n+4}\right)</me></p>
+<p><m>\lim\limits_{n\to\infty}c_n =</m>  <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.693147180559945</m>
+        </p>
+      </answer>
+      <solution><p>Do fato da função <m>f(x)=\ln x</m> ser contínua segue que</p>
+<p><me>\lim_{n\rightarrow \infty} c_n = \lim_{x\rightarrow \infty}\ln\left(\frac{4 x-7}{2 x+4}\right)=\ln\left(\lim_{x\rightarrow \infty}\frac{4 x-7}{2 x+4}\right)=\ln \left(\frac{4}{2}\right).</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-sequencia/problem3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-sequencia/problem3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-sequencia/problem3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-sequencia/problem3.pg</server-url>
+    <pg source="pretext-sequencia/problem3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="pretext-sequencia/problem4.pg">
+      <statement><p>Seja <m>a_n=\frac{n+1}{n+4}</m>.  Encontre o menor número <m>M</m> tal que :</p>
+<p><alert> (a) </alert> <m>|a_n-1|\le 0.001</m> para <m>n\ge M</m></p>
+<p><m>M=</m><fillin name="AnSwEr0001" characters="10"/></p>
+<p><alert> (b) </alert> <m>|a_n-1|\le 0.00001</m> para <m>n\ge M</m></p>
+<p><m>M=</m><fillin name="AnSwEr0002" characters="10"/></p>
+<p><alert> (c) </alert> Agora use a definição de limite para provar que <m>\displaystyle\lim_{n\to\infty}a_n=1</m>. Ou seja, encontre o menor valor de <m>M</m> (em termos de <m>t</m>) tal que <m>\left|a_n-1\right|\lt t</m> para todo <m>n&gt;M</m>.</p>
+<p>(Observe que estamos usando <m>t</m> em vez de <m>\epsilon</m> na definição para permitir que você insira sua resposta mais facilmente).</p>
+<p><m>M=</m><fillin name="AnSwEr0003" characters="20"/> Digite sua resposta em função de <m>t</m>).</p>
+</statement>
+      <answer>
+        <p>
+          <m>2996</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>299996</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{3}{t}-4</m>
+        </p>
+      </answer>
+      <solution><p>Temos
+<me>\left|a_n-1\right|=\left|\frac{n+1}{n+4}-1\right|=\left|\frac{n+1-\left(n+4\right)}{n+4}\right|=\left|\frac{-3}{n+4}\right|=\frac{3}{n+4}</me>
+Portanto, <m>|a_n-1|\le 0.001</m> forneceu <m>\frac{3}{n+4}\le 0.001</m>, ou seja, <m>n\ge 2996</m>.  Segue-se que podemos tomar <m>M=2996</m>.</p>
+<p>Pela parte (a), <m>|a_n-1|\le 0.00001</m> forneceu <m>\frac{3}{n+4}\le 0.00001</m>, ou seja, <m>n\ge 299996</m>.  Segue-se que podemos tomar <m>M=299996</m>.</p>
+<p>Usando a parte (a), sabemos que <me>|a_n-1|=\frac{3}{n+4}\lt t,</me> forneceu <m>n&gt;\frac{3}{t}-4</m>.  Assim, para completar a prova, seja <m>t&gt;0</m> e faça<m>M=\frac{3}{t}-4</m>.  Então, 
+para <m>n&gt;M</m>, obtemos
+<me>|a_n-1|=\frac{3}{n+4}\lt \frac{3}{M+4}=t.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-sequencia/problem4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-sequencia/problem4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-sequencia/problem4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-sequencia/problem4.pg</server-url>
+    <pg source="pretext-sequencia/problem4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="pretext-sequencia/problem5.pg">
+      <statement><p>Determine se a sequência 
+    <m>\displaystyle a_n = \frac{1^2}{n^3} + \frac{2^2}{n^3} + \cdots + \frac{n^2}{n^3}</m>
+converge ou diverge. Se convergir, encontre o limite.</p>
+<p>Observe,
+<me>\sum_{i=1}^k i^2 = \frac{k(k+1)(2k+1)}{6}</me></p>
+<p>Converge (sim/não): <fillin name="AnSwEr0001" characters="20"/></p>
+<p>Limite: <fillin name="AnSwEr0002" characters="40"/></p>
+</statement>
+      <answer>
+        <p>y</p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.333333333333333</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-sequencia/problem5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-sequencia/problem5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-sequencia/problem5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-sequencia/problem5.pg</server-url>
+    <pg source="pretext-sequencia/problem5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="pretext-sequencia/problem6.pg">
+      <statement><p>Determine se a sequência é divergente ou convergente.
+Se for convergente, avalie seu limite.</p>
+<p>(Se divergir para o infinito, indique sua resposta como <em> inf </em> . Se divergir para infinito negativo, indique sua resposta como <em> -inf </em> . Se diverge sem ser infinito ou infinito negativo, responda como <em> div </em>)</p>
+<p><me>\lim_{n\rightarrow\infty} (-1)^n\sin(14/n)</me></p>
+<p>Resposta: <fillin name="AnSwEr0001" characters="30"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-sequencia/problem6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-sequencia/problem6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-sequencia/problem6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-sequencia/problem6.pg</server-url>
+    <pg source="pretext-sequencia/problem6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="pretext-sequencia/problem7.pg">
+      <statement><p>Escreva os cinco primeiros termos da sequência com, <m>\left[{\left(1-\frac{6}{n+6}\right)^{n}}\right]_{n=1}^{\infty}</m>, determine se a sequência converge e, em caso afirmativo, encontre seu limite.</p>
+<p>Enter the following information for <m>a_n=\left(1-\frac{6}{n+6}\right)^{n}</m>.</p>
+<p><m>a_1=</m>  <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>a_2=</m>  <fillin name="AnSwEr0002" characters="20"/></p>
+<p><m>a_3=</m>  <fillin name="AnSwEr0003" characters="20"/></p>
+<p><m>a_4=</m>  <fillin name="AnSwEr0004" characters="20"/></p>
+<p><m>a_5=</m>  <fillin name="AnSwEr0005" characters="30"/></p>
+<p><m>\displaystyle \lim_{n\to\infty} \left(1-\frac{6}{n+6}\right)^{n} =</m> <fillin name="AnSwEr0006" characters="30"/></p>
+<p>(Digite DNE se o limite não existir.)</p>
+<p>A sequência converge <fillin name="AnSwEr0007" characters="30"/> (Digite "sim" ou "não").</p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(1-\frac{6}{1+6}\right)^{1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(1-\frac{6}{2+6}\right)^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(1-\frac{6}{3+6}\right)^{3}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(1-\frac{6}{4+6}\right)^{4}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(1-\frac{6}{5+6}\right)^{5}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>e^{-6}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{yes}</m>
+        </p>
+      </answer>
+      <solution><p>Para <m>a_n=\left(1-\frac{6}{n+6}\right)^{n}</m></p>
+<p><m>a_1={\textstyle\frac{1}{7}}</m></p>
+<p><m>a_2={\textstyle\frac{1}{16}}</m></p>
+<p><m>a_3={\textstyle\frac{1}{27}}</m></p>
+<p><m>a_4={\textstyle\frac{16}{625}}</m></p>
+<p><m>a_5={\textstyle\frac{3125}{161051}}</m></p>
+<p><m>\displaystyle \lim_{n\to\infty} \left(1-\frac{6}{n+6}\right)^{n} =\lim_{n\to\infty} e^{n\ln\!\left(1-\frac{6}{n+6}\right)}  =e^{\displaystyle\lim_{n\to\infty} \frac{\ln\!\left(\frac{n}{n+6}\right)}{\frac{1}{n}} }=e^{\displaystyle\lim_{n\to\infty} -\frac{\frac{6}{n\!\left(n+6\right)}}{\frac{1}{n^{2}}} } =e^{\displaystyle\lim_{n\to\infty} -\frac{6}{1+\frac{6}{n}} }=  e^{-6}</m>, então a sequência converge para <m>e^{-6}</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-sequencia/problem7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-sequencia/problem7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-sequencia/problem7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-sequencia/problem7.pg</server-url>
+    <pg source="pretext-sequencia/problem7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="pretext-sequencia/problem8.pg">
+      <statement><p>Escreva os cinco primeiros termos da sequência <m>\left[{\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}}\right]_{n=1}^{\infty}</m>,determine se a sequência converge e, em caso afirmativo, encontre seu limite.</p>
+<p>Insira as seguintes informações para <m>a_n=\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}</m>.</p>
+<p><m>a_1=</m>  <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>a_2=</m>  <fillin name="AnSwEr0002" characters="20"/></p>
+<p><m>a_3=</m>  <fillin name="AnSwEr0003" characters="20"/></p>
+<p><m>a_4=</m>  <fillin name="AnSwEr0004" characters="20"/></p>
+<p><m>a_5=</m>  <fillin name="AnSwEr0005" characters="30"/></p>
+<p><m>\displaystyle \lim_{n\to\infty} \frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}} =</m> <fillin name="AnSwEr0006" characters="30"/></p>
+<p>(Digite DNE se o limite não existir.)</p>
+<p>A sequência converge<fillin name="AnSwEr0007" characters="30"/> (Digite "sim" ou "não").</p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{\left(-1\right)^{1+-1}}{\left(1+6\right)^{2}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{\left(-1\right)^{2+-1}}{\left(2+6\right)^{2}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{\left(-1\right)^{3+-1}}{\left(3+6\right)^{2}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{\left(-1\right)^{4+-1}}{\left(4+6\right)^{2}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{\left(-1\right)^{5+-1}}{\left(5+6\right)^{2}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{yes}</m>
+        </p>
+      </answer>
+      <solution><p>Para <m>a_n=\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}</m></p>
+<p><m>a_1={\textstyle\frac{1}{49}}</m></p>
+<p><m>a_2=-{\textstyle\frac{1}{64}}</m></p>
+<p><m>a_3={\textstyle\frac{1}{81}}</m></p>
+<p><m>a_4=-{\textstyle\frac{1}{100}}</m></p>
+<p><m>a_5={\textstyle\frac{1}{121}}</m></p>
+<p><m>\displaystyle \lim_{n\to\infty} \frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}} =0</m> então a sequência converge para <m>0</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-sequencia/problem8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-sequencia/problem8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-sequencia/problem8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-sequencia/problem8.pg</server-url>
+    <pg source="pretext-sequencia/problem8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="pretext-sequencia/problem9.pg">
+      <statement><p>Escreva os primeiros cinco termos da sequência com <m>\left[{\left(\frac{n+9}{n+8}\right)^{n}}\right]_{n=1}^{\infty}</m>, determine se a sequência converge e, em caso afirmativo, encontre seu limite.</p>
+<p>Insira as seguintes informações para <m>a_n=\left(\frac{n+9}{n+8}\right)^{n}</m>.</p>
+<p><m>a_1=</m>  <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>a_2=</m>  <fillin name="AnSwEr0002" characters="20"/></p>
+<p><m>a_3=</m>  <fillin name="AnSwEr0003" characters="20"/></p>
+<p><m>a_4=</m>  <fillin name="AnSwEr0004" characters="20"/></p>
+<p><m>a_5=</m>  <fillin name="AnSwEr0005" characters="30"/></p>
+<p><m>\displaystyle \lim_{n\to\infty} \left(\frac{n+9}{n+8}\right)^{n} =</m> <fillin name="AnSwEr0006" characters="30"/></p>
+<p>(Digite DNE se o limite não existir.)</p>
+<p>A sequência converge <fillin name="AnSwEr0007" characters="30"/> (Digite "sim" ou "não").</p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(\frac{1+9}{1+8}\right)^{1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(\frac{2+9}{2+8}\right)^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(\frac{3+9}{3+8}\right)^{3}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(\frac{4+9}{4+8}\right)^{4}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(\frac{5+9}{5+8}\right)^{5}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>e^{9-8}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{yes}</m>
+        </p>
+      </answer>
+      <solution><p>Para <m>a_n=\left(\frac{n+9}{n+8}\right)^{n}</m></p>
+<p><m>a_1={\textstyle\frac{10}{9}}</m></p>
+<p><m>a_2={\textstyle\frac{121}{100}}</m></p>
+<p><m>a_3={\textstyle\frac{1728}{1331}}</m></p>
+<p><m>a_4={\textstyle\frac{28561}{20736}}</m></p>
+<p><m>a_5={\textstyle\frac{537824}{371293}}</m></p>
+<p><m>\displaystyle \lim_{n\to\infty} \left(\frac{n+9}{n+8}\right)^{n}  =\lim_{n\to\infty} e^{n\ln\!\left(\frac{n+9}{n+8}\right)}  =e^{\displaystyle\lim_{n\to\infty} \frac{\ln\!\left(\frac{n+9}{n+8}\right)}{\frac{1}{n}} }=e^{\displaystyle\lim_{n\to\infty} \frac{\frac{-1}{\left(n+9\right)\!\left(n+8\right)}}{\frac{-1}{n^{2}}} } =e^{\displaystyle\lim_{n\to\infty} \frac{1}{\left(1+\frac{9}{n}\right)\!\left(1+\frac{8}{n}\right)} }=e</m>, então a sequência converge para <m>e</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-sequencia/problem9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-sequencia/problem9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-sequencia/problem9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-sequencia/problem9.pg</server-url>
+    <pg source="pretext-sequencia/problem9.pg"/>
+  </webwork-reps>
+</webwork-representations>

@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Introdução às Sequências</title>
+    <introduction>
+
+        <p>
+            O polinômio de Taylor de <m>e^x</m> é dada por
+            <md>
+                <mrow>
+                    e^x &amp;= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + E_n(x)
+                </mrow>
+            </md>
+            em que <m>E_n(x)</m> é o erro introduzido quando você aproxima <m>e^x</m> por seu polinômio de Taylor de
+            grau <m>n</m>. No curso de derivada conhemos uma fórmula para  <m>E_n(x)</m>. Agora vamos perguntar o que
+            acontece quando <m>n</m> vai
+            ao infinito? O erro vai para zero, dando uma fórmula exata para <m>e^x</m>? Veremos mais tarde que
+            faz e isso
+            <md>
+                <mrow>
+                    e^x &amp;=1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=0}^\infty\frac{x^n}{n!}
+                </mrow>
+            </md>
+            Neste ponto, não definimos ou desenvolvemos qualquer compreensão dessa soma infinita. Como podemos calcular
+            a soma de um número infinito de termos? De fato, quando a soma de um número infinito de termos faz
+            senso? Claramente, precisamos construir bases para lidar com essas ideias. Ao longo do caminho também
+            veremos
+            outras funções para as quais o erro correspondente obedece <m>\lim\limits_{n\rightarrow\infty}E_n(x)=0</m> para
+            alguns valores de <m>x</m> e não para outros valores de <m>x</m>.
+        </p>
+
+        <p>
+            Agora considere a fórmula acima com  <m>x=1</m> para calcular o número <m>
+            e</m>:
+            <md>
+                <mrow>
+                    e &amp;= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1}{n!}
+                </mrow>
+            </md>
+            Como dissemos acima, ainda não entendemos o que fazer com esse número infinito de termos, mas podemos tentar
+            descobrir isso pensando no que acontece à medida que pegamos mais e mais termos.
+            <md>
+                <mrow>
+                    \text{1 termo}\phantom{s} &amp;&amp; 1&amp;=1
+                </mrow>
+                <mrow>
+                    \text{2 termos} &amp;&amp; 1+1&amp;=2
+                </mrow>
+                <mrow>
+                    \text{3 termos} &amp;&amp; 1+1+\frac{1}{2}&amp;=2.5
+                </mrow>
+                <mrow>
+                    \text{4 termos} &amp;&amp; 1+1+\frac{1}{2}+\frac{1}{6}&amp;=2.666666\dots
+                </mrow>
+                <mrow>
+                    \text{5 termos} &amp;&amp; 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24}&amp;=2.708333\dots
+                </mrow>
+                <mrow>
+                    \text{6 termos} &amp;&amp; 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24} + \frac{1}{120}&amp;=2.716666\dots
+                </mrow>
+            </md>
+            Ao olhar para a soma infinita desta forma, obtemos naturalmente uma sequência de números
+            <md>
+                <mrow>
+                    \{\ 1\,,\,2\,,\,2.5\,,\,2.666666\,,\cdots,\,2.708333\,,\cdots,\,
+                    2.716666\,,\cdots,\,\cdots\ \}.
+                </mrow>
+            </md>
+            A chave para entender a soma infinita original é entender o comportamento dessa <term>sequências</term> de
+            números
+            <mdash/>
+            em
+            particular, o que os números fazem à medida que avançamos mais e mais? Ele estabelece um determinado limite?
+
+
+        </p>
+
+    </introduction>
+
+    <subsection>
+        <title>Limites de uma Sequência</title>
+
+        <p>
+            A seguir uma definição matemática do termo <term>sequências</term> que usamos acima.
+        </p>
+
+        <definition xml:id="def_SRsequence">
+            <statement>
+                <p>
+                    Uma sequência é uma lista de infinitos números com uma ordem específica. Denotaremos uma sequência
+                    numérica por
+                    <me>
+                        \big\{a_1,\ a_2,\ a_3,\ \cdots,\ a_n,\ \cdots\big\}
+                        \quad\text{ou}\quad
+                        \big\{a_n\big\}
+                        \quad\text{ou}\quad
+                        \big\{a_n\big\}_{n=1}^\infty
+                    </me>
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            Frequentemente, especificamos uma sequência escrevendo-a mais explicitamente, como
+            <md>
+                <mrow>
+                    \Big\{ a_n = f(n) \Big\}_{n=1}^\infty
+                </mrow>
+            </md>
+            No qual  <m>f(n)</m> é alguma função dos números naturais para os números reais.
+        </p>
+
+        <example xml:id="eg_SRsequence">
+            <title>Três sequências e mais uma</title>
+            <p>
+                Aqui estão três sequências.
+                <md>
+                    <mrow>
+                        &amp;\Big\{1,\ \frac{1}{2},\ \frac{1}{3},\ \cdots,\ \frac{1}{n},\ \cdots\Big\}
+                        &amp;&amp;\text{ou}
+                        &amp;&amp;\Big\{a_n=\frac{1}{n}\Big\}_{n=1}^\infty
+                    </mrow>
+                    <mrow>
+                        &amp;\Big\{1,\ 2,\ 3,\ \cdots,\ n,\ \cdots\Big\}
+                        &amp;&amp;\text{ou}
+                        &amp;&amp;\Big\{a_n=n\Big\}_{n=1}^\infty
+                    </mrow>
+                    <mrow>
+                        &amp;\Big\{1,\ -1,\ 1,\ -1,\ \cdots,\ (-1)^{n-1},\ \cdots\Big\}
+                        &amp;&amp;\text{ou}
+                        &amp;&amp;\Big\{a_n=(-1)^{n-1}\Big\}_{n=1}^\infty
+                    </mrow>
+                </md>
+                Muitas vezes não existe uma fórmula simples e explícita para o  <m>n</m>-ésimo termo de uma sequência.
+                Por exemplo, os dígitos decimais de  <m>\pi</m> formam uma sequência
+                <me>
+                    \big\{3,\ 1,\ 4,\ 1,\ 5,\ 9,\ 2,\ 6,\ 5,\ 3,\ 5,\ 8,\ 9,\ 7,\ 9,\ 3,\ 2,\ 3,\
+                    8,\ 4,\ 6,\ 2,\ 6,\ 4,\ \cdots\ \big\}
+                </me>
+                porém não existe uma fórmula simples para o <m>n</m>-ésimo dígito.
+
+
+            </p>
+
+        </example>
+
+        <p>
+            Nossa principal preocupação com sequências será o comportamento de <m>a_n</m> com <m>n</m> tendendo para o
+            infinito.
+            Estamos interessados em saber se
+            <m>a_n</m>
+            <term>converge</term>
+            par algum valor quando <m>n</m> tende ao infinito.
+        </p>
+
+        <definition xml:id="def_SRsequenceLimit">
+            <statement>
+                <p>
+                    Dizemos que uma sequência <m>\big\{a_n\big\}_{n=1}^\infty</m> converge para o limite <m>L</m> se <m>
+                    a_n
+                </m> se aproxima de  <m>L</m> quando <m>n</m> tende ao infinito. Nesta caso, escrevemos
+                    <me>
+                        \lim_{n\rightarrow\infty} a_n=L\qquad\hbox{or}\qquad a_n\rightarrow L\text{ com
+                        }n\rightarrow\infty
+                    </me>
+                    A <term>sequência converge</term> se converge para algum limite. Caso contrário, dizemos que
+                    a <term>sequência diverge</term>.
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            Note a similaridade com os limites infinitos.
+            <md>
+                <mrow>
+                    \lim_{x \to \infty} f(x) = L \qquad\hbox{if}\qquad
+                    f(x) \to L \text{ as } x \to \infty
+                </mrow>
+            </md>
+        </p>
+
+        <example xml:id="eg_SRsequenceLimA">
+            <title>Convergência no
+                <xref ref="eg_SRsequence"/>
+            </title>
+
+
+            <p>
+                Estude a convergência das sequências a seguir:
+            </p>
+
+            <task>
+                <statement>
+                    <p>
+                        <m>\big\{a_n=n\big\}_{n=1}^\infty</m>
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        A sequência <m>\big\{a_n=n\big\}_{n=1}^\infty</m> diverge pois  <m>a_n</m> cresce sem limite,
+                        em vez de se aproxima de algum valor finito, quando <m>n</m>  tende ao infinto.
+                    </p>
+                </solution>
+            </task>
+
+
+            <task>
+                <statement>
+                    <p>
+                        <m>\big\{a_n=(-1)^{n-1}\big\}_{n=1}^\infty</m>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        A sequência <m>\big\{a_n=(-1)^{n-1}\big\}_{n=1}^\infty</m> diverge pois <m>a_n</m> oscila
+                        entre <m>+1</m> e <m>-1</m> quando <m>n</m> tende ao infinito.
+                    </p>
+                </solution>
+            </task>
+
+
+            <task>
+                <statement>
+                    <p>
+                        A sequência dos dígitos decimais de
+                        <m>\pi</m>.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        A sequência dos dígitos decimais de <m>\pi</m> também diverge, embora a prova esteja fora do
+                        escorpo deste texto.
+                        <fn>
+                            Se os dígitos de <m>\pi</m> convergissem, então <m>\pi</m> teria que ser um número racional.
+                            A irracionalidade de <m>\pi</m> (que não pode ser escrito como uma fração) foi provada pela
+                            primeira vez por Lambert em 1761. A prova de Niven (1947) é mais acessível e convidamos o
+                            leitor interessado a usar seu mecanismo de busca favorito para encontrar guias passo a passo
+                            para essa prova.
+                        </fn>
+                        .
+                    </p>
+                </solution>
+            </task>
+
+
+            <task>
+                <statement>
+                    <p>
+                        <m>\left\{a_n=\frac{1}{n}\right\}^{\infty}_{n=1}</m>
+                    </p>
+                </statement>
+
+
+                <solution>
+                    <p>
+                        Com <m>n</m> tendendo para o infinito, <m>\frac{1}{n}</m> tende para zero. Então
+                        <me>
+                            \lim_{n\rightarrow\infty} \frac{1}{n}=0
+                        </me>
+                    </p>
+                </solution>
+            </task>
+
+
+        </example>
+
+
+        <example xml:id="eg_SRsequenceLimB">
+            <title>
+                <m>\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}</m>
+            </title>
+
+            <p>
+                Aqui está um exemplo um pouco menos trivial. Para estudar o comportamento de <m>\frac{n}{2n+1}</m> quando <m>
+                n\rightarrow\infty</m>. Reescrevendo a expressão obtemos:
+                <me>
+                    \frac{n}{2n+1}=\frac{1}{2+\frac{1}{n}}
+                </me>
+                Quando <m>n\rightarrow\infty</m>, o denominador <m>\frac{1}{n}</m> tende a zero, de modo que
+                o denominador <m>2+\frac{1}{n}</m> tende para  <m>2</m> e  <m>\frac{1}{2+\frac{1}{n}}</m> tende para <m>
+                \frac{1}{2}</m>. Então
+                <md>
+                    <mrow>
+                        \lim_{n\rightarrow\infty}\frac{n}{2n+1}
+                        =\lim_{n\rightarrow\infty}\frac{1}{2+\frac{1}{n}}
+                        =\frac{1}{2}
+                    </mrow>
+                </md>
+            </p>
+        </example>
+
+        <p>
+            Observe que no<xref ref="eg_SRsequenceLimB"/>, estamos realmente usando técnicas que usamos antes para
+            estudar limites
+            infinitos como  <m>\ds \lim_{x\rightarrow\infty}f(x)</m>. Essa experiência pode ser facilmente transferida
+            para lidar com limites  <m>\lim\limits_{n\rightarrow\infty}a_n</m>  usando o seguinte resultado.
+        </p>
+
+        <theorem xml:id="thm_SRxlimtoanlim">
+            <statement>
+                <p>
+                    Se
+                    <me>
+                        \lim_{x\rightarrow\infty} f(x) = L
+                    </me>
+                    e se <m>a_n=f(n)</m> para todos os inteiros positivos <m>n</m>, então
+                    <me>
+                        \lim_{n\rightarrow\infty} a_n = L
+                    </me>
+                </p>
+            </statement>
+        </theorem>
+
+        <example xml:id="eg_SRsequenceLimC">
+            <title>
+                <m>\lim\limits_{n\rightarrow\infty}e^{-n}</m>
+            </title>
+            <p>
+                Seja <m>f(x)=e^{-x}</m>. Então <m>e^{-n}=f(n)</m> and
+                <md>
+                    <mrow>
+                        \text{since }
+                        \lim_{x\rightarrow\infty}e^{-x}&amp;=0
+                        &amp;\text{ we know that }&amp;&amp;
+                        \lim\limits_{n\rightarrow\infty}e^{-n}&amp;=0
+                    </mrow>
+                </md>
+            </p>
+        </example>
+
+        <p>
+            A maior parte das regras para a aritmética de limites de funções que você já conhece também se aplica aos
+            limites de sequências. Ou seja, as regras que você aprendeu para trabalhar com limites como  <m>\ds
+            \lim_{x\rightarrow\infty}f(x)
+        </m>  também se aplicam a limites como  <m>\ds\lim_{n\rightarrow\infty}a_n</m>.
+        </p>
+
+        <theorem xml:id="thm_SRlimarith">
+            <title>Aritmética dos limites</title>
+            <statement>
+                <p>
+                    Sejam  <m>L</m>, <m>M</m> e <m>K</m>  números reais e sejam as duas sequências <m>
+                    \big\{a_n\big\}_{n=1}^\infty
+                </m> e <m>\big\{b_n\big\}_{n=1}^\infty</m> convergindo para <m>L</m> e <m>M</m> respectivamente. Ou
+                    seja, suponha que
+                    <md>
+                        <mrow>
+                            \lim_{n \to \infty} a_n&amp;=A &amp; \lim_{n \to \infty} b_n &amp;=B
+                        </mrow>
+                    </md>
+                    Então os seguintes limites são verdadeiros.
+                    <ol label="a">
+                        <li xml:id="limita">
+                            <p>
+                                <m>\ds \lim_{n \to \infty} \big[a_n+b_n\big] = A+B</m>
+                            </p>
+                            <p>(O limite da soma é a soma dos limites.)</p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\ds \lim_{n \to \infty} \big[a_n-b_n\big] = A-B</m>
+                            </p>
+                            <p>(O limite da diferença é a diferença dos limites.)</p>
+                        </li>
+                        <li><m>\ds \lim_{n \to \infty} C a_n = C A</m>.
+                        </li>
+                        <li xml:id="limitc">
+                            <p>
+                                <m>\ds \lim_{n \to \infty} a_n\,b_n = A\,B</m>
+                            </p>
+                            <p>(O limite do produto é o produto dos limites.)</p>
+                        </li>
+                        <li>
+                            <p>Se <m>B \neq 0</m> então
+                                <m>\ds \lim_{n \to \infty}\frac{a_n}{b_n} = \frac{A}{B}</m>
+                            </p>
+                            <p>(O limite do quociente é o quociente dos limites <em>desde que</em> o limite do
+                                denominador não seja zero.)
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+        </theorem>
+
+        <p>
+            Usamos essas regras para avaliar os limites de sequências mais complicadas em termos dos limites de
+            sequências mais simples
+            <mdash/>
+            assim como fizemos para limites de funções.
+        </p>
+
+        <example xml:id="eg_SRlimarith">
+            <title>Aritmética dos limites</title>
+            <p>
+                Combinando
+                <xref ref="eg_SRsequenceLimB"/>
+                e<xref ref="eg_SRsequenceLimC"/>,
+                <md>
+                    <mrow>
+                        \lim_{n\rightarrow\infty}\Big[\frac{n}{2n+1} + 7 e^{-n}\Big]
+                        &amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
+                        +\lim_{n\rightarrow\infty} 7 e^{-n}
+                        &amp; \text{by }<xref ref="thm_SRlimarith"/>(<xref ref="limita"/>)
+                    </mrow>
+                    <mrow>
+                        &amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
+                        +7\lim_{n\rightarrow\infty} e^{-n}
+                        &amp; \text{pelo }<xref ref="thm_SRlimarith"/>(<xref ref="limitc"/>)
+                    </mrow>
+                    <intertext>e então usando
+                        <nbsp/>
+                        <xref ref="eg_SRsequenceLimB"/>
+                        e
+                        <xref ref="eg_SRsequenceLimC"/>
+                    </intertext>
+                    <mrow>
+                        &amp;=\frac{1}{2} + 7\cdot 0
+                    </mrow>
+                    <mrow>
+                        &amp;=\frac{1}{2}
+                    </mrow>
+                </md>
+            </p>
+
+        </example>
+
+        <p>
+            Há também um teorema do confronto (sanduíche) para sequências.
+        </p>
+
+        <theorem xml:id="thm_SRsqueeze">
+            <title>Teorema do Confronto</title>
+            <statement>
+                <p>
+                    Se <m>a_n\le c_n\le b_n</m> para todos os números naturais <m>n</m>, e se
+                    <me>
+                        \lim_{n\rightarrow\infty}a_n=\lim_{n\rightarrow\infty}b_n=L
+                    </me>
+                    então
+                    <me>
+                        \lim_{n\rightarrow\infty}c_n=L
+                    </me>
+                </p>
+            </statement>
+        </theorem>
+
+        <example xml:id="eg_SRsqueeze">
+            <title>Usando o Teorema do Confronto</title>
+
+            <statement>
+                <p>
+                    Determine <m>\lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big]</m>, no qual
+                    <m>\pi_n</m>
+                    é o <m>n</m>ésimo digito decimal de <m>\pi</m>. Ou seja,
+                    <me>
+                        \pi_1=3\quad \pi_2=1 \quad \pi_3=4 \quad \pi_4=1 \quad \pi_5=5 \quad\pi_6=9\quad\cdots
+                    </me>
+                </p>
+            </statement>
+            <p>
+
+                Não temos uma fórmula simples para <m>\pi_n</m>. Mas nós sabemos que
+                <me>
+                    0\le\pi_n\le 9
+                    \implies 0 \le \frac{\pi_n}{n} \le \frac{9}{n}
+                    \implies 1 \le 1+\frac{\pi_n}{n} \le 1+\frac{9}{n}
+                </me>
+                e também sabemos que
+                <md>
+                    <mrow>
+                        \lim_{n\rightarrow\infty} 1 = 1\qquad
+                        \lim_{n\rightarrow\infty} \Big[1+\frac{9}{n}\Big] = 1
+                    </mrow>
+                </md>
+                Então o teorema do aperto com <m>a_n=1</m>, <m>b_n=1+\frac{\pi_n}{n}</m>, e <m>c_n=1+\frac{9}{n}</m> fornece
+                <me>
+                    \lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big] = 1
+                </me>
+            </p>
+        </example>
+
+        <p>
+            Finalmente, lembre-se de que podemos calcular o limite da composição de duas funções usando a continuidade.
+            Da mesma forma, temos o seguinte resultado:
+        </p>
+
+        <theorem xml:id="thm_SRcontfn">
+            <title>Limite de uma função contínua</title>
+            <statement>
+                <p>
+                    Se  <m>\lim\limits_{n\rightarrow\infty}a_n=L</m> e se a função <m>g(x)</m> é contínua
+                    em <m>L</m>, então
+                    <me>
+                        \lim_{n\rightarrow\infty}g(a_n)=g(L)
+                    </me>
+                </p>
+            </statement>
+        </theorem>
+
+        <example xml:id="eg_SRsequenceLimD">
+            <title>
+                <m>\lim\limits_{n\rightarrow\infty}\sin\frac{\pi n}{2n+1}</m>
+            </title>
+            <p>
+                Escreva <m>\sin\frac{\pi n}{2n+1}=g\big(\frac{n}{2n+1}\big)</m> com  <m>g(x)=\sin(\pi x)</m>. Vimos, no
+                <xref ref="eg_SRsequenceLimB"/>
+                que
+                <me>
+                    \lim_{n\rightarrow\infty}\frac{n}{2n+1} = \frac{1}{2}.
+                </me>
+                Já que <m>g(x) = \sin (\pi x)</m> é contínua e que  <m>x=\frac{1}{2}</m>, é o limite de <m>
+                \frac{n}{2n+1}</m>, temos
+                <me>
+                    \lim_{n\rightarrow\infty}\sin\frac{\pi n}{2n+1}
+                    =\lim_{n\rightarrow\infty}g\Big(\frac{n}{2n+1}\Big)
+                    =g\Big(\frac{1}{2}\Big)
+                    =\sin\frac{\pi}{2}
+                    =1
+                </me>
+            </p>
+        </example>
+
+
+    </subsection>
+
+    <subsection>
+        <title>Sugestão de vídeos</title>
+        <ul>
+            <li>
+
+                <p>
+                    <url href="https://youtu.be/CAKhkDBam1Q" visual="youtu.be/CAKhkDBam1Q">Sequências convergentes e
+                        divergentes
+                    </url>
+                </p>
+            </li>
+            <li>
+
+                <p>
+                    <url href="https://youtu.be/s_KzqFfmxhs" visual="youtu.be/s_KzqFfmxhs">Exemplos resolvidos.
+                    </url>
+                </p>
+
+
+            </li>
+
+            <li>
+
+                <p>
+                    <url href="https://youtu.be/-yAcNxTxLY0" visual="youtu.be/-yAcNxTxLY0">Definição formal do limite de
+                        uma sequência
+                    </url>
+                </p>
+
+
+            </li>
+
+            <li>
+
+                <p>
+                    <url href="https://youtu.be/vhogCuKoaVQ" visual="youtu.be/vhogCuKoaVQ">Prova de que uma sequência
+                        converge usando a definição formal
+                    </url>
+                </p>
+
+
+            </li>
+
+        </ul>
+    </subsection>
+
+
+    <!--<xi:include href="../problems/prob_s3.1.xml" />-->
+    <exercises xml:id="exercises-sequencias">
+        <exercise>
+            <webwork source="pretext-sequencia/problem1.pg"/>
+        </exercise>
+
+        <exercise>
+            <webwork source="pretext-sequencia/problem2.pg"/>
+        </exercise>
+
+        <exercise>
+            <webwork source="pretext-sequencia/problem3.pg"/>
+        </exercise>
+        <exercise>
+            <webwork source="pretext-sequencia/problem4.pg"/>
+        </exercise>
+        <exercise>
+            <webwork source="pretext-sequencia/problem5.pg"/>
+        </exercise>
+        <exercise>
+            <webwork source="pretext-sequencia/problem6.pg"/>
+        </exercise>
+
+        <exercise>
+            <webwork source="pretext-sequencia/problem7.pg"/>
+        </exercise>
+        <exercise>
+            <webwork source="pretext-sequencia/problem8.pg"/>
+        </exercise>
+        <exercise>
+            <webwork source="pretext-sequencia/problem9.pg"/>
+        </exercise>
+        <exercise>
+            <webwork source="pretext-sequencia/problem10.pg"/>
+        </exercise>
+    </exercises>
+</section>
