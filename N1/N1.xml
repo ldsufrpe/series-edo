@@ -118,8 +118,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </latex-image-preamble>
     </docinfo>
 
-    <article xml:id="calc-limite-derivada">
-        <title>Introdução às Sequências Numéricas: N1</title>
+    <article xml:id="calc-sequencia">
+        <title>Introdução às Sequências Infinitas: N1</title>
 
         <frontmatter>
 

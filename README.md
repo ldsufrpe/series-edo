@@ -3,4 +3,4 @@
 **Prof. Leon Silva**
 
 ### Sequências, Séries e Equações Diferenciais
-- [N1 - Limite de Sequências Infinitas](https://ldsufrpe.github.io/series-edo/N1). 
+- [N1 - Introdução às Sequências Infinitas](https://ldsufrpe.github.io/series-edo/N1). 
