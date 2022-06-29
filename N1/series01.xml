@@ -27,7 +27,7 @@
             </md>
             Neste ponto, não definimos ou desenvolvemos qualquer compreensão dessa soma infinita. Como podemos calcular
             a soma de um número infinito de termos? De fato, quando a soma de um número infinito de termos faz
-            senso? Claramente, precisamos construir bases para lidar com essas ideias. Ao longo do caminho também
+            sentido? Claramente, precisamos construir bases para lidar com essas ideias. Ao longo do caminho também
             veremos
             outras funções para as quais o erro correspondente obedece <m>\lim\limits_{n\rightarrow\infty}E_n(x)=0</m> para
             alguns valores de <m>x</m> e não para outros valores de <m>x</m>.
@@ -154,7 +154,7 @@
             Estamos interessados em saber se
             <m>a_n</m>
             <term>converge</term>
-            par algum valor quando <m>n</m> tende ao infinito.
+            para algum valor quando <m>n</m> tende ao infinito.
         </p>
 
         <definition xml:id="def_SRsequenceLimit">
@@ -164,8 +164,8 @@
                     a_n
                 </m> se aproxima de  <m>L</m> quando <m>n</m> tende ao infinito. Nesta caso, escrevemos
                     <me>
-                        \lim_{n\rightarrow\infty} a_n=L\qquad\hbox{or}\qquad a_n\rightarrow L\text{ com
-                        }n\rightarrow\infty
+                        \lim_{n\rightarrow\infty} a_n=L\qquad\hbox{ou}\qquad a_n\rightarrow L\text{ com
+                         }n\rightarrow\infty
                     </me>
                     A <term>sequência converge</term> se converge para algum limite. Caso contrário, dizemos que
                     a <term>sequência diverge</term>.
@@ -177,8 +177,8 @@
             Note a similaridade com os limites infinitos.
             <md>
                 <mrow>
-                    \lim_{x \to \infty} f(x) = L \qquad\hbox{if}\qquad
-                    f(x) \to L \text{ as } x \to \infty
+                    \lim_{x \to \infty} f(x) = L \qquad\hbox{se}\qquad
+                    f(x) \to L \text{ com } x \to \infty
                 </mrow>
             </md>
         </p>
@@ -201,8 +201,8 @@
                 </statement>
                 <solution>
                     <p>
-                        A sequência <m>\big\{a_n=n\big\}_{n=1}^\infty</m> diverge pois  <m>a_n</m> cresce sem limite,
-                        em vez de se aproxima de algum valor finito, quando <m>n</m>  tende ao infinto.
+                        A sequência <m>\big\{a_n=n\big\}_{n=1}^\infty</m> diverge pois  <m>a_n</m> cresce sem limitações,
+                        em vez de se aproximar de algum valor finito, quando <m>n</m>  tende ao infinto.
                     </p>
                 </solution>
             </task>
@@ -273,7 +273,7 @@
 
         <example xml:id="eg_SRsequenceLimB">
             <title>
-                <m>\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}</m>
+                <m>\displaystyle\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}</m>
             </title>
 
             <p>
@@ -309,7 +309,7 @@
                     <me>
                         \lim_{x\rightarrow\infty} f(x) = L
                     </me>
-                    e se <m>a_n=f(n)</m> para todos os inteiros positivos <m>n</m>, então
+                    e se <m>a_n=f(n)</m> para todos os inteiros positivos <m>n</m>,  então
                     <me>
                         \lim_{n\rightarrow\infty} a_n = L
                     </me>
@@ -325,7 +325,7 @@
                 Seja <m>f(x)=e^{-x}</m>. Então <m>e^{-n}=f(n)</m> e
                 <md>
                     <mrow>
-                        \text{since }
+                        \text{já que }
                         \lim_{x\rightarrow\infty}e^{-x}&amp;=0
                         &amp;\text{ sabemos que }&amp;&amp;
                         \lim\limits_{n\rightarrow\infty}e^{-n}&amp;=0
@@ -372,13 +372,13 @@
                         </li>
                         <li xml:id="limitc">
                             <p>
-                                <m>\ds \lim_{n \to \infty} a_n\,b_n = L\cdotK</m>
+                                <m>\ds \lim_{n \to \infty} a_n\,b_n = L\cdot K</m>
                             </p>
                             <p>(O limite do produto é o produto dos limites.)</p>
                         </li>
                         <li>
-                            <p>Se <m>B \neq 0</m> então
-                                <m>\ds \lim_{n \to \infty}\frac{a_n}{b_n} = \frac{A}{B}</m>
+                            <p>Se <m>M \neq 0</m> então
+                                <m>\ds \lim_{n \to \infty}\frac{a_n}{b_n} = \frac{L}{M}</m>
                             </p>
                             <p>(O limite do quociente é o quociente dos limites <em>desde que</em> o limite do
                                 denominador não seja zero.)
@@ -414,11 +414,11 @@
                         +7\lim_{n\rightarrow\infty} e^{-n}
                         &amp; \text{pelo }<xref ref="thm_SRlimarith"/>(<xref ref="limitc"/>)
                     </mrow>
-                    <intertext>e então usando
+                    <intertext>e então usando o
                         <nbsp/>
                         <xref ref="eg_SRsequenceLimB"/>
-                        e
-                        <xref ref="eg_SRsequenceLimC"/>
+                        e o
+                        <xref ref="eg_SRsequenceLimC"/>:
                     </intertext>
                     <mrow>
                         &amp;=\frac{1}{2} + 7\cdot 0
@@ -454,16 +454,16 @@
         <example xml:id="eg_SRsqueeze">
             <title>Usando o Teorema do Confronto</title>
 
-            <statement>
+
                 <p>
                     Determine <m>\lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big]</m>, no qual
                     <m>\pi_n</m>
-                    é o <m>n</m>ésimo digito decimal de <m>\pi</m>. Ou seja,
+                    é o <m>n</m>-ésimo digito decimal de <m>\pi</m>. Ou seja,
                     <me>
                         \pi_1=3\quad \pi_2=1 \quad \pi_3=4 \quad \pi_4=1 \quad \pi_5=5 \quad\pi_6=9\quad\cdots
                     </me>
                 </p>
-            </statement>
+
             <p>
 
                 Não temos uma fórmula simples para <m>\pi_n</m>. Mas nós sabemos que
