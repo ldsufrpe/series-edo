@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-28T00:11:42-03:00       *-->
+<!--*       on 2022-06-28T18:10:52-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,54 +14,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>In this example, we are going to study the series  <span class="process-math">\(\sum\limits_{n=1}^\infty\log\big(1+\frac{1}{n}\big)\text{.}\)</span>  Let's start by just writing out the first few terms.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{alignat*}{1}
-\sum_{n=1}^\infty\log\Big(1+\frac{1}{n}\Big)
-&amp;=\overbrace{\log\Big(1+\frac{1}{1}\Big)}^{n=1}
-+\overbrace{\log\Big(1+\frac{1}{2}\Big)}^{n=2}
-+\overbrace{\log\Big(1+\frac{1}{3}\Big)}^{n=3}\\
-\amp\hskip1in
-+\overbrace{\log\Big(1+\frac{1}{4}\Big)}^{n=4} +\cdots\\
-&amp;=\log(2)+\log\Big(\frac{3}{2}\Big) +\log\Big(\frac{4}{3}\Big)\\
-\amp\hskip1in  +\log\Big(\frac{5}{4}\Big) + \cdots
-\end{alignat*}
-</div>
-<p class="continuation">This is pretty suggestive since</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-\log(2)+\log\Big(\frac{3}{2}\Big) +\log\Big(\frac{4}{3}\Big)
-+\log\Big(\frac{5}{4}\Big)
-=\log\Big(2\times\frac{3}{2}\times\frac{4}{3}\times \frac{5}{4}\Big)
-=\log(5)
-\end{gather*}
-</div>
-<p class="continuation">So let's try using this idea to compute the partial sum <span class="process-math">\(S_N\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-S_N&amp;=\sum_{n=1}^N\log\Big(1+\frac{1}{n}\Big)\\
-&amp;=\overbrace{\log\Big(1+\frac{1}{1}\Big)}^{n=1}
-+\overbrace{\log\Big(1+\frac{1}{2}\Big)}^{n=2}
-+\overbrace{\log\Big(1+\frac{1}{3}\Big)}^{n=3} + \cdots\\
-\amp\hskip1in +\overbrace{\log\Big(1+\frac{1}{N-1}\Big)}^{n=N-1}
-+\overbrace{\log\Big(1+\frac{1}{N}\Big)}^{n=N}\\
-&amp;=\log(2) + \log\Big(\frac{3}{2}\Big)  +\log\Big(\frac{4}{3}\Big)
-+\cdots+ \log\Big(\frac{N}{N-1}\Big) + \log\Big(\frac{N+1}{N}\Big)\\
-&amp;=\log\Big(2\times\frac{3}{2}\times\frac{4}{3}\times \cdots
-\times \frac{N}{N-1}\times \frac{N+1}{N}\Big)\\
-&amp;=\log(N+1)
-\end{align*}
-</div>
-<p class="continuation">Uh oh!</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-\lim_{N\rightarrow\infty} S_N
-=\lim_{N\rightarrow\infty}\log(N+1)
-=+\infty
-\end{gather*}
-</div>
-<p class="continuation">This telescoping series diverges! There is an important lesson here. Telescoping series <em class="emphasis">can diverge</em>. They do not always converge to <span class="process-math">\(b_1\text{.}\)</span></p>
+<h4 class="heading"><span class="type">Parágrafo</span></h4>
+<p>Normalmente, é muito difícil escrever uma expressão para as somas parciais de uma série. Séries geométricas são exceções a isso. Outra família de séries para as quais podemos escrever somas parciais é denominada “série telescópica”. Essas séries têm a propriedade desejável de que muitos dos termos da soma se cancelam, tornando as somas parciais bastante simples.</p>
 <span class="incontext"><a href="section-1.html#p-26" class="internal">em contexto</a></span>
 </body>
 </html>

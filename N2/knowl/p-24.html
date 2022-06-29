@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-28T00:11:42-03:00       *-->
+<!--*       on 2022-06-28T18:10:52-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,43 +14,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>In this example, we are going to study the series  <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n(n+1)}\text{.}\)</span> This is a rather artificial series <a href="" class="fn-knowl original" data-knowl="./knowl/fn-6-hidden.html" title="Nota de rodapé 1.6"><sup> 6 </sup></a> that has been rigged to illustrate a phenomenon called  “telescoping”. Notice that the <span class="process-math">\(n^{\rm th}\)</span> term can be rewritten as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-\frac{1}{n(n+1)}= \frac{1}{n}-\frac{1}{n+1}\\
-\end{align*}
-<p class="intertext">and so we have</p>
-\begin{align*}
-a_n &amp;= b_n - b_{n+1} &amp; \text{where } b_n &amp;= \frac{1}{n}.
-\end{align*}
-</div>
-<p class="continuation">Because of this we get big cancellations when we add terms together. This allows us to get a simple formula for the partial sums of this series.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-S_N&amp;= \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} +
-\cdots + \frac{1}{N\cdot (N+1)}\\
-&amp;= \Big(\frac{1}{1}-\frac{1}{2}\Big)
-+ \Big(\frac{1}{2}-\frac{1}{3}\Big)
-+ \Big(\frac{1}{3}-\frac{1}{4}\Big) +
-\cdots + \Big(\frac{1}{N}-\frac{1}{N+1}\Big)
-\end{align*}
-</div>
-<p class="continuation">The second term of each bracket exactly cancels the first term of the following bracket. So the sum “telescopes” leaving just</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<h6 class="heading"><span class="type">Parágrafo</span></h6>
+<p>Podemos levar essa ideia adiante. Considere a expansão decimal periódica:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_geomsum.html">
 \begin{equation*}
-S_N  = 1-\frac{1}{N+1}
+0.16161616\cdots
+=\frac{16}{100}+\frac{16}{10000}+\frac{16}{1000000}+\cdots
 \end{equation*}
 </div>
-<p class="continuation">and we can now easily compute</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">Esta é outra série geométrica com o primeiro termo <span class="process-math">\(a=\frac{16}{100}\)</span>  e razão <span class="process-math">\(r=\frac{1}{100}\text{.}\)</span> Então, pelo <a href="" class="xref" data-knowl="./knowl/lem_geomsum.html" title="Lema 1.7: Séries Geométricas">Lema 1.7</a>,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_geomsum.html">
 \begin{equation*}
-\sum_{n=1}^\infty\frac{1}{n(n+1)}
-=\lim_{N\rightarrow\infty} S_N
-=\lim_{N\rightarrow\infty}\Big( 1-\frac{1}{N+1}\Big)
-=1
+0.16161616\cdots
+=\sum_{n=1}^\infty\frac{16}{100^n}
+=\frac{\frac{16}{100}}{1-\frac{1}{100}}
+=\frac{\frac{16}{100}}{\frac{99}{100}}
+=\frac{16}{99}
 \end{equation*}
 </div>
+<p class="continuation">novamente, como esperado. Desta forma, qualquer expansão decimal periódica converge para uma razão de dois inteiros — ou seja, para um número racional.</p>
 <span class="incontext"><a href="section-1.html#p-24" class="internal">em contexto</a></span>
 </body>
 </html>

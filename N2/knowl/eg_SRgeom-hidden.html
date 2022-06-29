@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-28T00:11:42-03:00       *-->
+<!--*       on 2022-06-28T16:50:22-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -20,7 +20,7 @@ a + ar + ar^2 + \cdots + ar^n + \cdots = \sum_{n=0}^\infty ar^n
 \end{equation*}
 </div>
 <p class="continuation">is called the geometric series with first term <span class="process-math">\(a\)</span> and ratio <span class="process-math">\(r\text{.}\)</span></p>
-<p>Notice that we have chosen to start the summation index at <span class="process-math">\(n=0\text{.}\)</span>  That's fine. The first <a href="" class="fn-knowl original" data-knowl="./knowl/fn-2-hidden.html" title="Nota de rodapé 1.2"><sup> 2 </sup></a> term is the <span class="process-math">\(n=0\)</span> term, which is <span class="process-math">\(ar^0=a\text{.}\)</span> The  second term is the <span class="process-math">\(n=1\)</span> term, which is <span class="process-math">\(ar^1=ar\text{.}\)</span> And so on.  We could have also written the series <span class="process-math">\(\sum_{n=1}^\infty ar^{n-1}\text{.}\)</span> That's exactly the same series — the first term is  <span class="process-math">\(ar^{n-1}\big|_{n=1}=ar^{1-1}=a\text{,}\)</span> the second term is <span class="process-math">\(ar^{n-1}\big|_{n=2}=ar^{2-1}=ar\text{,}\)</span> and so on <a href="" class="fn-knowl original" data-knowl="./knowl/fn-3-hidden.html" title="Nota de rodapé 1.3"><sup> 3 </sup></a>. Regardless of  how we write the geometric series, <span class="process-math">\(a\)</span> is the first term and <span class="process-math">\(r\)</span> is the  ratio between successive terms.</p>
+<p>Notice that we have chosen to start the summation index at <span class="process-math">\(n=0\text{.}\)</span> That's fine. The first <a href="" class="fn-knowl original" data-knowl="./knowl/fn-1-hidden.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a> term is the <span class="process-math">\(n=0\)</span> term, which is <span class="process-math">\(ar^0=a\text{.}\)</span> The second term is the <span class="process-math">\(n=1\)</span> term, which is <span class="process-math">\(ar^1=ar\text{.}\)</span> And so on. We could have also written the series <span class="process-math">\(\sum_{n=1}^\infty ar^{n-1}\text{.}\)</span> That's exactly the same series — the first term is  <span class="process-math">\(ar^{n-1}\big|_{n=1}=ar^{1-1}=a\text{,}\)</span> the second term is <span class="process-math">\(ar^{n-1}\big|_{n=2}=ar^{2-1}=ar\text{,}\)</span> and so on <a href="" class="fn-knowl original" data-knowl="./knowl/fn-2-hidden.html" title="Nota de rodapé 1.2"><sup> 2 </sup></a>. Regardless of how we write the geometric series, <span class="process-math">\(a\)</span> is the first term and <span class="process-math">\(r\)</span> is the ratio between successive terms.</p>
 <p>Geometric series have the extremely useful property that there is a very simple formula for their partial sums. Denote the partial sum by</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
@@ -32,7 +32,7 @@ rS_N &amp;= r\big(a + ar + ar^2 + \cdots + ar^N\big)\\
 &amp; = ar + ar^2 + ar^3 + \cdots + ar^{N+1}
 \end{align*}
 </div>
-<p class="continuation">Notice that this is almost the same <a href="" class="fn-knowl original" data-knowl="./knowl/fn-4-hidden.html" title="Nota de rodapé 1.4"><sup> 4 </sup></a> as <span class="process-math">\(S_N\text{.}\)</span> The only differences are that the first term, <span class="process-math">\(a\text{,}\)</span> is missing and one additional term, <span class="process-math">\(ar^{N+1}\text{,}\)</span> has been tacked  on the end. So</p>
+<p class="continuation">Notice that this is almost the same <a href="" class="fn-knowl original" data-knowl="./knowl/fn-3-hidden.html" title="Nota de rodapé 1.3"><sup> 3 </sup></a> as <span class="process-math">\(S_N\text{.}\)</span> The only differences are that the first term, <span class="process-math">\(a\text{,}\)</span> is missing and one additional term, <span class="process-math">\(ar^{N+1}\text{,}\)</span> has been tacked on the end. So</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
 S_N &amp;= a + ar + ar^2 + \cdots + ar^N\\
@@ -40,7 +40,7 @@ r S_N &amp;= \phantom{ar +} ar + ar^2 + \cdots + ar^N + ar^{N+1}\\
 \end{align*}
 <p class="intertext">Hence taking the difference of these expressions cancels almost all the terms:</p>
 \begin{align*}
-(1-r) S_N &amp;= a - ar ^{N+1}  = a (1-r^{N+1})\\
+(1-r) S_N &amp;= a - ar ^{N+1} = a (1-r^{N+1})\\
 \end{align*}
 <p class="intertext">Provided <span class="process-math">\(r\neq 1\)</span> we can divide both side by <span class="process-math">\(1-r\)</span> to isolate <span class="process-math">\(S_N\text{:}\)</span></p>
 \begin{align*}
@@ -62,7 +62,8 @@ a(N+1) &amp; \text{if $r=1$}
 \end{cases}
 \end{equation*}
 </div>
-<p>Now that we have this expression we can determine whether or not the  series converges. If <span class="process-math">\(|r| \lt 1\text{,}\)</span> then <span class="process-math">\(r^{N+1}\)</span>  tends to zero as <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> so that <span class="process-math">\(S_N\)</span>  converges to <span class="process-math">\(\frac{a}{1-r}\)</span> as <span class="process-math">\(N\rightarrow\infty\)</span> and</p>
+<p>Now that we have this expression we can determine whether or not the series converges. If <span class="process-math">\(|r| \lt
+1\text{,}\)</span> then <span class="process-math">\(r^{N+1}\)</span>  tends to zero as <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> so that <span class="process-math">\(S_N\)</span>  converges to <span class="process-math">\(\frac{a}{1-r}\)</span> as <span class="process-math">\(N\rightarrow\infty\)</span> and</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \sum_{n=0}^\infty ar^n = \frac{a}{1-r}
@@ -72,7 +73,7 @@ a(N+1) &amp; \text{if $r=1$}
 <p class="continuation">On the other hand if <span class="process-math">\(|r|\ge 1\text{,}\)</span> <span class="process-math">\(S_N\)</span> diverges. To understand this divergence, consider the following 4 cases:</p>
 <ul class="disc">
 <li><p>If <span class="process-math">\(r \gt 1\text{,}\)</span> then <span class="process-math">\(r^N\)</span> grows to <span class="process-math">\(\infty\)</span> as <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></li>
-<li><p>If <span class="process-math">\(r \lt -1\text{,}\)</span> then the magnitude of <span class="process-math">\(r^N\)</span> grows to <span class="process-math">\(\infty\text{,}\)</span> and the sign of <span class="process-math">\(r^N\)</span> oscillates between <span class="process-math">\(+\)</span> and <span class="process-math">\(-\text{,}\)</span>  as <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></li>
+<li><p>If <span class="process-math">\(r \lt -1\text{,}\)</span> then the magnitude of <span class="process-math">\(r^N\)</span> grows to <span class="process-math">\(\infty\text{,}\)</span> and the sign of <span class="process-math">\(r^N\)</span> oscillates between <span class="process-math">\(+\)</span> and <span class="process-math">\(-\text{,}\)</span> as <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></li>
 <li><p>If <span class="process-math">\(r=+1\text{,}\)</span> then <span class="process-math">\(N+1\)</span> grows to <span class="process-math">\(\infty\)</span> as <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></li>
 <li><p>If <span class="process-math">\(r=-1\text{,}\)</span> then <span class="process-math">\(r^N\)</span> just oscillates between <span class="process-math">\(+1\)</span> and <span class="process-math">\(-1\)</span> as <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></li>
 </ul>

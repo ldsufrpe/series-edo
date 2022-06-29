@@ -322,12 +322,12 @@
                 <m>\lim\limits_{n\rightarrow\infty}e^{-n}</m>
             </title>
             <p>
-                Seja <m>f(x)=e^{-x}</m>. Então <m>e^{-n}=f(n)</m> and
+                Seja <m>f(x)=e^{-x}</m>. Então <m>e^{-n}=f(n)</m> e
                 <md>
                     <mrow>
                         \text{since }
                         \lim_{x\rightarrow\infty}e^{-x}&amp;=0
-                        &amp;\text{ we know that }&amp;&amp;
+                        &amp;\text{ sabemos que }&amp;&amp;
                         \lim\limits_{n\rightarrow\infty}e^{-n}&amp;=0
                     </mrow>
                 </md>
@@ -335,8 +335,8 @@
         </example>
 
         <p>
-            A maior parte das regras para a aritmética de limites de funções que você já conhece também se aplica aos
-            limites de sequências. Ou seja, as regras que você aprendeu para trabalhar com limites como  <m>\ds
+            A maior parte das regras para a aritmética de limites de funções conhecidas conhece também se aplicam aos
+            limites de sequências. Ou seja, as regras aplicadas a limites como  <m>\ds
             \lim_{x\rightarrow\infty}f(x)
         </m>  também se aplicam a limites como  <m>\ds\lim_{n\rightarrow\infty}a_n</m>.
         </p>
@@ -351,28 +351,28 @@
                     seja, suponha que
                     <md>
                         <mrow>
-                            \lim_{n \to \infty} a_n&amp;=A &amp; \lim_{n \to \infty} b_n &amp;=B
+                            \lim_{n \to \infty} a_n&amp;=L &amp; \lim_{n \to \infty} b_n &amp;=M
                         </mrow>
                     </md>
                     Então os seguintes limites são verdadeiros.
                     <ol label="a">
                         <li xml:id="limita">
                             <p>
-                                <m>\ds \lim_{n \to \infty} \big[a_n+b_n\big] = A+B</m>
+                                <m>\ds \lim_{n \to \infty} \big[a_n+b_n\big] = L+M</m>
                             </p>
                             <p>(O limite da soma é a soma dos limites.)</p>
                         </li>
                         <li>
                             <p>
-                                <m>\ds \lim_{n \to \infty} \big[a_n-b_n\big] = A-B</m>
+                                <m>\ds \lim_{n \to \infty} \big[a_n-b_n\big] = L-M</m>
                             </p>
                             <p>(O limite da diferença é a diferença dos limites.)</p>
                         </li>
-                        <li><m>\ds \lim_{n \to \infty} C a_n = C A</m>.
+                        <li><m>\ds \lim_{n \to \infty} K a_n = K L</m>.
                         </li>
                         <li xml:id="limitc">
                             <p>
-                                <m>\ds \lim_{n \to \infty} a_n\,b_n = A\,B</m>
+                                <m>\ds \lim_{n \to \infty} a_n\,b_n = L\cdotK</m>
                             </p>
                             <p>(O limite do produto é o produto dos limites.)</p>
                         </li>
@@ -407,7 +407,7 @@
                         \lim_{n\rightarrow\infty}\Big[\frac{n}{2n+1} + 7 e^{-n}\Big]
                         &amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
                         +\lim_{n\rightarrow\infty} 7 e^{-n}
-                        &amp; \text{by }<xref ref="thm_SRlimarith"/>(<xref ref="limita"/>)
+                        &amp; \text{pelo }<xref ref="thm_SRlimarith"/>(<xref ref="limita"/>)
                     </mrow>
                     <mrow>
                         &amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}

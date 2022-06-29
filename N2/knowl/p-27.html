@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-28T00:11:42-03:00       *-->
+<!--*       on 2022-06-28T18:10:52-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,44 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Parágrafo</span></h4>
-<p>As was the case for limits, differentiation and antidifferentiation,  we can compute more complicated series in  terms of simpler ones by understanding how series interact  with the usual operations of arithmetic. It is, perhaps,  not so surprising that there are simple rules for addition and subtraction  of series and for multiplication of a series by a constant. Unfortunately  there are no simple general rules for computing products or ratios of series.</p>
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p>In this example, we are going to study the series  <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n(n+1)}\text{.}\)</span> This is a rather artificial series <a href="" class="fn-knowl original" data-knowl="./knowl/fn-1-hidden.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a> that has been rigged to illustrate a phenomenon called  “telescoping”. Notice that the <span class="process-math">\(n^{\rm
+th}\)</span> term can be rewritten as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\frac{1}{n(n+1)}= \frac{1}{n}-\frac{1}{n+1}\\
+\end{align*}
+<p class="intertext">and so we have</p>
+\begin{align*}
+a_n &amp;= b_n - b_{n+1} &amp; \text{where } b_n &amp;= \frac{1}{n}.
+\end{align*}
+</div>
+<p class="continuation">Because of this we get big cancellations when we add terms together. This allows us to get a simple formula for the partial sums of this series.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+S_N&amp;= \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} +
+\cdots + \frac{1}{N\cdot (N+1)}\\
+&amp;= \Big(\frac{1}{1}-\frac{1}{2}\Big)
++ \Big(\frac{1}{2}-\frac{1}{3}\Big)
++ \Big(\frac{1}{3}-\frac{1}{4}\Big) +
+\cdots + \Big(\frac{1}{N}-\frac{1}{N+1}\Big)
+\end{align*}
+</div>
+<p class="continuation">The second term of each bracket exactly cancels the first term of the following bracket. So the sum “telescopes” leaving just</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+S_N = 1-\frac{1}{N+1}
+\end{equation*}
+</div>
+<p class="continuation">and we can now easily compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{1}{n(n+1)}
+=\lim_{N\rightarrow\infty} S_N
+=\lim_{N\rightarrow\infty}\Big( 1-\frac{1}{N+1}\Big)
+=1
+\end{equation*}
+</div>
 <span class="incontext"><a href="section-1.html#p-27" class="internal">em contexto</a></span>
 </body>
 </html>
