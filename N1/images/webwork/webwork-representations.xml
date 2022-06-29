@@ -183,7 +183,7 @@ converge ou diverge. Se convergir, encontre o limite.</p>
 <p>Limite: <fillin name="AnSwEr0002" characters="40"/></p>
 </statement>
       <answer>
-        <p>y</p>
+        <p>sim</p>
       </answer>
       <answer>
         <p>
@@ -262,7 +262,7 @@ Se for convergente, avalie seu limite.</p>
       </answer>
       <answer>
         <p>
-          <m>\text{yes}</m>
+          <m>\text{sim}</m>
         </p>
       </answer>
       <solution><p>Para <m>a_n=\left(1-\frac{6}{n+6}\right)^{n}</m></p>
@@ -325,7 +325,7 @@ Se for convergente, avalie seu limite.</p>
       </answer>
       <answer>
         <p>
-          <m>\text{yes}</m>
+          <m>\text{sim}</m>
         </p>
       </answer>
       <solution><p>Para <m>a_n=\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}</m></p>
@@ -388,7 +388,7 @@ Se for convergente, avalie seu limite.</p>
       </answer>
       <answer>
         <p>
-          <m>\text{yes}</m>
+          <m>\text{sim}</m>
         </p>
       </answer>
       <solution><p>Para <m>a_n=\left(\frac{n+9}{n+8}\right)^{n}</m></p>
