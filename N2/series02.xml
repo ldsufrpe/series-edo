@@ -742,6 +742,83 @@
 
     </subsection>
 
+    <subsection>
+        <title>Sugestão de vídeos</title>
+        <ul>
+            <li>
+
+                <p>
+                    <url href="https://youtu.be/eR7pIQXNT2wQ" visual="youtu.be/eR7pIQXNT2w">Introdução a somas parciais
+                    </url>
+                </p>
+            </li>
+            <li>
+
+                <p>
+                    <url href="https://youtu.be/f-FrABeDX0o" visual="youtu.be/f-FrABeDX0o">Exemplo resolvido: fórmula
+                        para o enésimo termo
+                        da soma parcial
+                    </url>
+                </p>
+
+
+            </li>
+
+            <li>
+
+                <p>
+                    <url href="https://youtu.be/xvZGyrnXXsw" visual="youtu.be/xvZGyrnXXsw">Exemplo resolvido: valor do
+                        termo da soma parcial
+                    </url>
+                </p>
+
+
+            </li>
+
+            <li>
+
+                <p>
+                    <url href="https://youtu.be/xQtafdrGb_o" visual="https://youtu.be/xQtafdrGb_o"> A série <m>\sum_{n=1}^{\infty}\frac{2n^3}{(n+1)(n+2)} </m> converge?
+                    </url>
+                </p>
+
+
+            </li>
+
+            <li>
+
+                <p>
+                    <url href="https://youtu.be/4DQc6AJKNiQ" visual="youtu.be/4DQc6AJKNiQ"> Séries Geométricas: a série <m>8 + \frac{8}{3} + \frac{8}{9} + \ldots\,</m>  converge?
+                    </url>
+                </p>
+
+
+            </li>
+
+
+             <li>
+
+                <p>
+                    <url href="https://youtu.be/EWeltCgv2Qw" visual="youtu.be/EWeltCgv2Qw"> Séries Geométricas: a série <m>-0.5 + 1.5 - 4.5 + \ldots\, </m>  converge?
+                    </url>
+                </p>
+
+
+            </li>
+
+                <li>
+
+                <p>
+                    <url href="https://youtu.be/HTtAvoQSQZ0" visual="youtu.be/HTtAvoQSQZ0"> Séries Geométricas: dízimas periódicas
+                    </url>
+                </p>
+
+
+            </li>
+
+        </ul>
+    </subsection>
+
     <exercises xml:id="exercises-intro-series">
         <exercise>
             <webwork source="pretext-intro-series/problem1.pg"/>
@@ -757,13 +834,17 @@
         </exercise>
         <exercise>
             <webwork source="pretext-intro-series/problem5.pg"/>
-        </exercise><exercise>
+        </exercise>
+        <exercise>
             <webwork source="pretext-intro-series/problem8.pg"/>
-        </exercise><exercise>
+        </exercise>
+        <exercise>
             <webwork source="pretext-intro-series/problem6.pg"/>
-        </exercise><exercise>
+        </exercise>
+        <exercise>
             <webwork source="pretext-intro-series/problem7.pg"/>
-        </exercise><exercise>
+        </exercise>
+        <exercise>
             <webwork source="pretext-intro-series/problem9.pg"/>
         </exercise>
 
