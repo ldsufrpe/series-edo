@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-28T00:00:28-03:00       *-->
+<!--*       on 2022-07-01T00:05:10-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,11 +14,33 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>Do fato da função <span class="process-math">\(f(x)=\ln x\)</span> ser contínua segue que</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\lim_{n\rightarrow \infty} c_n = \lim_{x\rightarrow \infty}\ln\left(\frac{4 x-7}{2 x+4}\right)=\ln\left(\lim_{x\rightarrow \infty}\frac{4 x-7}{2 x+4}\right)=\ln \left(\frac{4}{2}\right).
+S_3=\left(\frac{1}{7}-\frac{1}{8}\right)+\left(\frac{1}{8}-\frac{1}{9}\right)+\left(\frac{1}{9}-\frac{1}{10}\right)=\frac{1}{7}-\frac{1}{10}=\frac{3}{70};
 \end{equation*}
 </div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+S_4=S_3+\left(\frac{1}{10}-\frac{1}{11}\right)=\frac{1}{7}-\frac{1}{11}=\frac{4}{77};
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+S_5=S_4+\left(\frac{1}{11}-\frac{1}{12}\right)=\frac{1}{7}-\frac{1}{12}=\frac{5}{84}.
+\end{equation*}
+</div>
+<p>O termo geral na sequência de somas parciais é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+S_N=\left(\frac{1}{7}-\frac{1}{8}\right)+\left(\frac{1}{8}-\frac{1}{9}\right)+\left(\frac{1}{9}-\frac{1}{10}\right)+\cdots +\left(\frac{1}{N+6}-\frac{1}{N+7}\right)=\frac{1}{7}-\frac{1}{N+7};
+\end{equation*}
+</div>
+<p class="continuation">então,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+S=\lim_{N\rightarrow \infty} S_N=\lim_{N\rightarrow \infty}\left(\frac{1}{7}-\frac{1}{N+7}\right)=\frac{1}{7}.
+\end{equation*}
+</div>
+<p>Portanto, a soma da série telescópica é <span class="process-math">\(\frac{1}{7}\text{.}\)</span></p>
 </div></body>
 </html>
