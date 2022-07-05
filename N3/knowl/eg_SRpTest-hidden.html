@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-05T18:17:55-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>Let <span class="process-math">\(p \gt 0\text{.}\)</span> We'll now use the integral test to determine whether or not the series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> (which is sometimes called the <span class="process-math">\(p\)</span>-series) converges.</p>
+<ul class="disc">
+<li><p>To do so, we need a function <span class="process-math">\(f(x)\)</span> that obeys <span class="process-math">\(f(n)=a_n=\frac{1}{n^p}\)</span> for all <span class="process-math">\(n\)</span>  bigger than some <span class="process-math">\(N_0\text{.}\)</span> Certainly <span class="process-math">\(f(x)=\frac{1}{x^p}\)</span> obeys  <span class="process-math">\(f(n)=\frac{1}{n^p}\)</span> for all <span class="process-math">\(n\ge 1\text{.}\)</span> So let's pick this <span class="process-math">\(f\)</span> and try <span class="process-math">\(N_0=1\text{.}\)</span> (We can always increase <span class="process-math">\(N_0\)</span> later if we need to.)</p></li>
+<li>
+<p>This function also obeys the other two conditions of  Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.5: The Integral Test">Teorema 1.5</a>:</p>
+<ol class="lower-roman">
+<li><p><span class="process-math">\(f(x) \gt 0\)</span> for all <span class="process-math">\(x\ge N_0=1\)</span> and</p></li>
+<li><p><span class="process-math">\(f(x)\)</span> decreases as <span class="process-math">\(x\)</span> increases because <span class="process-math">\(f'(x)=-p\frac{1}{x^{p+1}} \lt 0\)</span> for all <span class="process-math">\(x\ge N_0=1\text{.}\)</span></p></li>
+</ol>
+</li>
+<li><p>So the integral test tells us that the series   <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> converges if and only if the integral <span class="process-math">\(\int_1^\infty\frac{dx}{x^p}\)</span> converges.</p></li>
+<li><p>We have already seen, in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_IMPp1" missing or not unique]</code>, that  the integral <span class="process-math">\(\int_1^\infty\frac{dx}{x^p}\)</span> converges if and only if <span class="process-math">\(p \gt 1\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">So we conclude that <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> converges if and only if <span class="process-math">\(p \gt 1\text{.}\)</span> This is sometimes called the <span class="process-math">\(p\)</span>-test.</p>
+<ul class="disc">
+<li><p>In particular, the series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}\text{,}\)</span> which is called the harmonic series, has <span class="process-math">\(p=1\)</span> and so diverges.  As we add more and more terms of this series together, the terms we add,  namely <span class="process-math">\(\frac{1}{n}\text{,}\)</span> get smaller and smaller and tend to zero, but they tend to zero so slowly that the full sum is still infinite.</p></li>
+<li><p>On the other hand, the series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^{1.000001}}\)</span> has <span class="process-math">\(p = 1.000001 \gt 1\)</span> and so converges. This time as we add more and more  terms of this series together, the terms we add, namely  <span class="process-math">\(\frac{1}{n^{1.000001}}\text{,}\)</span> tend to zero (just) fast enough that  the full sum is finite. Mind you, for this example, the convergence takes place very slowly — you have to take a huge number of terms to get a decent approximation to the full sum. If we approximate <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^{1.000001}}\)</span> by the truncated series <span class="process-math">\(\sum_{n=1}^N\frac{1}{n^{1.000001}}\text{,}\)</span> we make an error of at most<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\int_N^\infty \frac{dx}{x^{1.000001}}
+&amp; = \lim_{R\rightarrow\infty} \int_N^R \frac{dx}{x^{1.000001}}\\
+&amp; = \lim_{R\rightarrow\infty}- \frac{1}{0.000001}
+\Big[\frac{1}{R^{0.000001}}-\frac{1}{N^{0.000001}}\Big]\\
+&amp; =\frac{10^6}{N^{0.000001}}
+\end{align*}
+</div>This does tend to zero as <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> but really slowly.</p></li>
+</ul></article></body>
+</html>

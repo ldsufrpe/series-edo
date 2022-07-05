@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-05T18:17:55-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Convergence of the harmonic series.</span>
+</h4>
+<p>Visualise the terms of the harmonic series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}\)</span> as a bar graph — each term is a rectangle of  height <span class="process-math">\(\frac{1}{n}\)</span> and width <span class="process-math">\(1\text{.}\)</span> The limit of the series is then the limiting area of this union of rectangles. Consider the sketch on the left below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/harmonic_int.svg" role="img" class="contained"></div></div></div>
+<p>It shows that the area of the shaded columns, <span class="process-math">\(\sum_{n=1}^4\frac{1}{n}\text{,}\)</span> is bigger than the area under the curve <span class="process-math">\(y=\frac{1}{x}\)</span> with  <span class="process-math">\(1\le x\le 5\text{.}\)</span> That is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\sum_{n=1}^4 \frac{1}{n} &amp; \ge \int_1^5 \frac{1}{x}\dee{x}
+\end{align*}
+</div>
+<p class="continuation">If we were to continue drawing the columns all the way out to infinity,  then we would have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\sum_{n=1}^\infty \frac{1}{n} &amp; \ge \int_1^\infty \frac{1}{x}\dee{x}
+\end{align*}
+</div>
+<p class="continuation">We are able to compute this improper integral exactly:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\int_1^\infty \frac{1}{x} \dee{x} &amp;= \lim_{R \to \infty} \Big[ \log|x| \Big]_1^R = +\infty
+\end{align*}
+</div>
+<p class="continuation">That is the area under the curve diverges to <span class="process-math">\(+\infty\)</span> and so the area represented by the columns must also diverge to  <span class="process-math">\(+\infty\text{.}\)</span></p>
+<p>It should be clear that the above argument can be quite easily  generalised. For example the same argument holds  <em class="emphasis">mutatis mutandis</em> <a href="" class="fn-knowl original" data-knowl="./knowl/fn-5-hidden.html" title="Nota de rodapé 1.5"><sup> 5 </sup></a> for the series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{1}{n^2}
+\end{gather*}
+</div>
+<p class="continuation">Indeed we see from the sketch on the right above that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\sum_{n=2}^N \frac{1}{n^2} &amp;\le \int_1^N \frac{1}{x^2}\dee{x}
+\end{align*}
+</div>
+<p class="continuation">and hence</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\sum_{n=2}^\infty \frac{1}{n^2} \leq \int_1^\infty \frac{1}{x^2}\dee{x}
+\end{gather*}
+</div>
+<p class="continuation">This last improper integral is easy to evaluate:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\int_2^\infty \frac{1}{x^2}\dee{x} &amp;= \lim_{R\to\infty} \left[ - \frac{1}{x} \right]_2^R\\
+&amp;= \lim_{R\to\infty} \left( \frac{1}{2} - \frac{1}{R} \right) = \frac{1}{2}
+\end{align*}
+</div>
+<p class="continuation">Thus we know that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{1}{n^2} = 1+ \sum_{n=2}^\infty \frac{1}{n^2} \leq \frac{3}{2}.
+\end{gather*}
+</div>
+<p class="continuation">and so the series must converge.</p></article><span class="incontext"><a href="section-1.html#eg_firstIntTest" class="internal">em contexto</a></span>
+</body>
+</html>
