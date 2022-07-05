@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-30T22:58:45-03:00       *-->
+<!--*       on 2022-07-05T14:49:57-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -172,31 +172,32 @@ true);
 <section class="introduction" id="introduction-2"><p id="p-3">O polinômio de Taylor de <span class="process-math">\(e^x\)</span> é dada por</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{align*}
-e^x &amp;= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + E_n(x)
+e^x \amp= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + E_n(x)
 \end{align*}
 </div>
 <p class="continuation">em que <span class="process-math">\(E_n(x)\)</span> é o erro introduzido quando você aproxima <span class="process-math">\(e^x\)</span> por seu polinômio de Taylor de grau <span class="process-math">\(n\text{.}\)</span> No curso de derivada conhemos uma fórmula para  <span class="process-math">\(E_n(x)\text{.}\)</span> Agora vamos perguntar o que acontece quando <span class="process-math">\(n\)</span> vai ao infinito? O erro vai para zero, dando uma fórmula exata para <span class="process-math">\(e^x\text{?}\)</span> Veremos mais tarde que faz e isso</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
 \begin{align*}
-e^x &amp;=1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=0}^\infty\frac{x^n}{n!}
+e^x \amp=1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=0}^\infty\frac{x^n}{n!}
 \end{align*}
 </div>
 <p class="continuation">Neste ponto, não definimos ou desenvolvemos qualquer compreensão dessa soma infinita. Como podemos calcular a soma de um número infinito de termos? De fato, quando a soma de um número infinito de termos faz sentido? Claramente, precisamos construir bases para lidar com essas ideias. Ao longo do caminho também veremos outras funções para as quais o erro correspondente obedece <span class="process-math">\(\lim\limits_{n\rightarrow\infty}E_n(x)=0\)</span> para alguns valores de <span class="process-math">\(x\)</span> e não para outros valores de <span class="process-math">\(x\text{.}\)</span></p>
 <p id="p-4">Agora considere a fórmula acima com  <span class="process-math">\(x=1\)</span> para calcular o número <span class="process-math">\(e\text{:}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
 \begin{align*}
-e &amp;= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1}{n!}
+e \amp= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1}{n!}
 \end{align*}
 </div>
 <p class="continuation">Como dissemos acima, ainda não entendemos o que fazer com esse número infinito de termos, mas podemos tentar descobrir isso pensando no que acontece à medida que pegamos mais e mais termos.</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
 \begin{align*}
-\text{1 termo}\phantom{s} &amp;&amp; 1&amp;=1\\
-\text{2 termos} &amp;&amp; 1+1&amp;=2\\
-\text{3 termos} &amp;&amp; 1+1+\frac{1}{2}&amp;=2.5\\
-\text{4 termos} &amp;&amp; 1+1+\frac{1}{2}+\frac{1}{6}&amp;=2.666666\dots\\
-\text{5 termos} &amp;&amp; 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24}&amp;=2.708333\dots\\
-\text{6 termos} &amp;&amp; 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24} + \frac{1}{120}&amp;=2.716666\dots
+\text{1 termo}\phantom{s} \amp\amp 1\amp=1\\
+\text{2 termos} \amp\amp 1+1\amp=2\\
+\text{3 termos} \amp\amp 1+1+\frac{1}{2}\amp=2.5\\
+\text{4 termos} \amp\amp 1+1+\frac{1}{2}+\frac{1}{6}\amp=2.666666\dots\\
+\text{5 termos} \amp\amp 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24}\amp=2.708333\dots\\
+\text{6 termos} \amp\amp 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24} +
+\frac{1}{120}\amp=2.716666\dots
 \end{align*}
 </div>
 <p class="continuation">Ao olhar para a soma infinita desta forma, obtemos naturalmente uma sequência de números</p>
@@ -234,15 +235,15 @@ e &amp;= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRsequence"><article class="example example-like"><p id="p-8">Aqui estão três sequências.</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
 \begin{align*}
-&amp;\Big\{1,\ \frac{1}{2},\ \frac{1}{3},\ \cdots,\ \frac{1}{n},\ \cdots\Big\}
-&amp;&amp;\text{ou}
-&amp;&amp;\Big\{a_n=\frac{1}{n}\Big\}_{n=1}^\infty\\
-&amp;\Big\{1,\ 2,\ 3,\ \cdots,\ n,\ \cdots\Big\}
-&amp;&amp;\text{ou}
-&amp;&amp;\Big\{a_n=n\Big\}_{n=1}^\infty\\
-&amp;\Big\{1,\ -1,\ 1,\ -1,\ \cdots,\ (-1)^{n-1},\ \cdots\Big\}
-&amp;&amp;\text{ou}
-&amp;&amp;\Big\{a_n=(-1)^{n-1}\Big\}_{n=1}^\infty
+\amp\Big\{1,\ \frac{1}{2},\ \frac{1}{3},\ \cdots,\ \frac{1}{n},\ \cdots\Big\}
+\amp\amp\text{ou}
+\amp\amp\Big\{a_n=\frac{1}{n}\Big\}_{n=1}^\infty\\
+\amp\Big\{1,\ 2,\ 3,\ \cdots,\ n,\ \cdots\Big\}
+\amp\amp\text{ou}
+\amp\amp\Big\{a_n=n\Big\}_{n=1}^\infty\\
+\amp\Big\{1,\ -1,\ 1,\ -1,\ \cdots,\ (-1)^{n-1},\ \cdots\Big\}
+\amp\amp\text{ou}
+\amp\amp\Big\{a_n=(-1)^{n-1}\Big\}_{n=1}^\infty
 \end{align*}
 </div>
 <p class="continuation">Muitas vezes não existe uma fórmula simples e explícita para o  <span class="process-math">\(n\)</span>-ésimo termo de uma sequência. Por exemplo, os dígitos decimais de  <span class="process-math">\(\pi\)</span> formam uma sequência</p>
@@ -324,7 +325,7 @@ f(x) \to L \text{ com } x \to \infty
 \lim_{x\rightarrow\infty} f(x) = L
 \end{equation*}
 </div>
-<p class="continuation">e se <span class="process-math">\(a_n=f(n)\)</span> para todos os inteiros positivos <span class="process-math">\(n\text{,}\)</span>  então</p>
+<p class="continuation">e se <span class="process-math">\(a_n=f(n)\)</span> para todos os inteiros positivos <span class="process-math">\(n\text{,}\)</span> então</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \lim_{n\rightarrow\infty} a_n = L
@@ -335,9 +336,9 @@ f(x) \to L \text{ com } x \to \infty
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
 \begin{align*}
 \text{já que }
-\lim_{x\rightarrow\infty}e^{-x}&amp;=0
-&amp;\text{ sabemos que }&amp;&amp;
-\lim\limits_{n\rightarrow\infty}e^{-n}&amp;=0
+\lim_{x\rightarrow\infty}e^{-x}\amp=0
+\amp\text{ sabemos que }\amp\amp
+\lim\limits_{n\rightarrow\infty}e^{-n}\amp=0
 \end{align*}
 </div></article></div>
 <p id="p-25">A maior parte das regras para a aritmética de limites de funções conhecidas conhece também se aplicam aos limites de sequências. Ou seja, as regras aplicadas a limites como  <span class="process-math">\(\ds
@@ -348,7 +349,7 @@ f(x) \to L \text{ com } x \to \infty
 <p id="p-26">Sejam  <span class="process-math">\(L\text{,}\)</span> <span class="process-math">\(M\)</span> e <span class="process-math">\(K\)</span>  números reais e sejam as duas sequências <span class="process-math">\(\big\{a_n\big\}_{n=1}^\infty\)</span> e <span class="process-math">\(\big\{b_n\big\}_{n=1}^\infty\)</span> convergindo para <span class="process-math">\(L\)</span> e <span class="process-math">\(M\)</span> respectivamente. Ou seja, suponha que</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
 \begin{align*}
-\lim_{n \to \infty} a_n&amp;=L &amp; \lim_{n \to \infty} b_n &amp;=M
+\lim_{n \to \infty} a_n\amp=L \amp \lim_{n \to \infty} b_n \amp=M
 \end{align*}
 </div>
 <p class="continuation">Então os seguintes limites são verdadeiros.</p>
@@ -377,17 +378,17 @@ f(x) \to L \text{ com } x \to \infty
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRsequenceLimB.html ./knowl/eg_SRsequenceLimC.html ./knowl/thm_SRlimarith.html ./knowl/limita.html ./knowl/thm_SRlimarith.html ./knowl/limitc.html ./knowl/eg_SRsequenceLimB.html ./knowl/eg_SRsequenceLimC.html" id="md-12">
 \begin{align*}
 \lim_{n\rightarrow\infty}\Big[\frac{n}{2n+1} + 7 e^{-n}\Big]
-&amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
+\amp= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
 +\lim_{n\rightarrow\infty} 7 e^{-n}
-&amp; \text{pelo }\knowl{./knowl/thm_SRlimarith.html}{\text{Teorema 1.8}}(\knowl{./knowl/limita.html}{\text{Item a}})\\
-&amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
+\amp \text{pelo }\knowl{./knowl/thm_SRlimarith.html}{\text{Teorema 1.8}}(\knowl{./knowl/limita.html}{\text{Item a}})\\
+\amp= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
 +7\lim_{n\rightarrow\infty} e^{-n}
-&amp; \text{pelo }\knowl{./knowl/thm_SRlimarith.html}{\text{Teorema 1.8}}(\knowl{./knowl/limitc.html}{\text{Item d}})\\
+\amp \text{pelo }\knowl{./knowl/thm_SRlimarith.html}{\text{Teorema 1.8}}(\knowl{./knowl/limitc.html}{\text{Item d}})\\
 \end{align*}
 <p class="intertext">e então usando o   <a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimB.html" title="Exemplo 1.5: \displaystyle\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}">Exemplo 1.5</a> e o <a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimC.html" title="Exemplo 1.7: \lim\limits_{n\rightarrow\infty}e^{-n}">Exemplo 1.7</a>:</p>
 \begin{align*}
-&amp;=\frac{1}{2} + 7\cdot 0\\
-&amp;=\frac{1}{2}
+\amp=\frac{1}{2} + 7\cdot 0\\
+\amp=\frac{1}{2}
 \end{align*}
 </div></article></div>
 <p id="p-37">Há também um teorema do confronto (sanduíche) para sequências.</p>
@@ -700,6 +701,194 @@ c_n=\ln\left(\frac{4 n-7}{2 n+4}\right)
 <p id="p-183"><span class="process-math">\(a_4=\frac{\ln{4}}{5}\)</span></p>
 <p id="p-184"><span class="process-math">\(a_5=\frac{\ln{5}}{6}\)</span></p>
 <p id="p-185"><span class="process-math">\(\displaystyle \lim_{n\to\infty} \frac{\ln\!\left(n\right)}{n+1} =\lim_{n\to\infty} \frac{1}{n} =0\)</span> então a sequência converge para <span class="process-math">\(0\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<p id="p-186">Suponha que a sequência de somas parciais da série <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> é <span class="process-math">\(\{S_N\} = \left\{\dfrac{N}{N+1}\right\}\text{.}\)</span></p>
+<ol class="lower-alpha">
+<li id="li-10"><p id="p-derived-li-10">Encontre <span class="process-math">\(\{a_n\}\text{.}\)</span></p></li>
+<li id="li-11"><p id="p-derived-li-11">Encontre <span class="process-math">\(\lim\limits_{n \to \infty} a_n\text{.}\)</span></p></li>
+<li id="li-12"><p id="p-derived-li-12">Determine <span class="process-math">\(\sum_{n=1}^\infty a_n\text{.}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-38" id="answer-38"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><p id="p-187">(a) <span class="process-math">\(\displaystyle a_n = \begin{cases}
+\frac12 \amp\mbox{ se } n=1\\
+\dfrac{1}{n(n+1)} \amp\mbox{ caso contrário }\\
+\end{cases}\qquad\)</span> (b) <span class="process-math">\(0\qquad\)</span> (c) 1</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><ol id="p-188" class="lower-alpha">
+<li id="li-13"><p id="p-derived-li-13"><span class="process-math">\(S_N\)</span> é a soma dos primeiros  <span class="process-math">\(N\)</span> termos de <span class="process-math">\(\{a_n\}\text{,}\)</span> e <span class="process-math">\(S_{N-1}\)</span> é a soma dos mesmos termos <em class="emphasis">exceto</em> <span class="process-math">\(a_N\text{.}\)</span> Então, <span class="process-math">\(a_N = S_N-S_{N-1}\)</span> quando <span class="process-math">\(N \geq 2\text{.}\)</span> Em outros termos:<div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
+\begin{align*}
+S_N \amp=a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1}+a_N\\
+S_{N-1}\amp=a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1}\\
+\\
+\end{align*}
+<p class="intertext">Então,</p>
+\begin{align*}
+S_N
+-S_{N-1}
+\amp=\Big[a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1}+a_N\Big]\\
+\amp- \Big[a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1} \Big]\\
+\amp=a_N\\
+\end{align*}
+<p class="intertext">Então, calculamos</p>
+\begin{align*}
+a_N\amp=S_N-S_{N-1}=\left(\dfrac{N}{N+1}\right)-\left(\dfrac{N-1}{N-1+1}\right)\\
+\amp=\frac{N^2}{N(N+1)}-\frac{N^2-1}{N(N+1)}\\
+\amp=\frac{1}{N(N+1)}\\
+\end{align*}
+<p class="intertext">Portanto,</p>
+\begin{align*}
+a_n\amp=\frac{1}{n(n+1)}
+\end{align*}
+</div></p></li>
+<li id="li-14">
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-189">
+\begin{equation*}
+\lim\limits_{n \to \infty} a_n =\lim\limits_{n \to \infty} \dfrac{1}{n(n+1)}=0.
+\end{equation*}
+</div>
+<p id="p-190">Ou seja, os termos que estamos somando estão ficando arbitrariamente pequenos à medida que avançamos.</p>
+</li>
+<li id="li-15"><p id="p-derived-li-15">Por definição,<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty a_n = \lim_{N \to \infty}S_N = \lim_{N \to \infty}\dfrac{N}{N+1}=1
+\end{equation*}
+</div>Ou seja, à medida que adicionamos mais termos da série, a nossa soma acumulada fica próxima de 1.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-191">Suponha que a sequência de somas parciais da série <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> é <span class="process-math">\(\{S_N\} = \left\{(-1)^N+\dfrac{1}{N}\right\}\text{.}\)</span> Encontre <span class="process-math">\(\{a_n\}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-192">Calcule <span class="process-math">\(a_1\)</span> separadamente dos outros termos.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-39" id="answer-39"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like"><p id="p-193"><span class="process-math">\(a_n=\begin{cases}
+0 \amp \mbox{ if } n=1\\
+2(-1)^{n} -\frac{1}{n(n-1)} \amp\mbox{ caso contrário }
+\end{cases}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="md-15">
+\begin{align*}
+a_N \amp=S_N-S_{N-1}=\left[(-1)^N+\dfrac{1}{N}\right]-\left[(-1)^{N-1}+\dfrac{1}{N-1}\right]\\
+\amp=(-1)^N-(-1)^{N-1} + \frac{1}{N}-\frac{1}{N-1}\\
+\amp=(-1)^N+(-1)^{N} + \frac{N-1}{N(N-1)}-\frac{N}{N(N-1)}\\
+\amp=2(-1)^{N} -\frac{1}{N(N-1)}\\
+\end{align*}
+<p class="intertext">Observe, no entanto, que <span class="process-math">\(a_N\)</span> é só igual <span class="process-math">\(S_N-S_{N-1}\)</span> quando <span class="process-math">\(N \geq
+2\text{:}\)</span> caso contrário, estamos tentando calcular <span class="process-math">\(S_1-S_0\text{,}\)</span> mas <span class="process-math">\(S_0\)</span> não está definida. Então, nós achamos <span class="process-math">\(a_1\)</span> separadamente:</p>
+\begin{align*}
+a_1\amp=S_1=(-1)^1+\frac{1}{1}=0\\
+\end{align*}
+<p class="intertext">Juntando tudo:</p>
+\begin{align*}
+a_n\amp=\begin{cases}
+0 \amp \mbox{ se } n=1\\
+2(-1)^{n} -\frac{1}{n(n-1)} \amp\mbox{ caso contrário }
+\end{cases}
+\end{align*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<p id="p-195">Calcule <span class="process-math">\(\displaystyle\sum_{n=0}^{100}\frac{1}{5^n}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-196"><span class="process-math">\(\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}\text{,}\)</span> para <span class="process-math">\(r \neq 1\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-40" id="answer-40"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like"><p id="p-197"><span class="process-math">\(\dfrac{5^{101}-1}{4\cdot 5^{100}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-198"><span class="process-math">\(\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}\text{,}\)</span> for <span class="process-math">\(r \neq 1\text{.}\)</span> A série é Geométrica com <span class="process-math">\(a=1\text{,}\)</span> <span class="process-math">\(r=\frac{1}{5}\text{,}\)</span> e <span class="process-math">\(N=100\text{.}\)</span> Logo:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\displaystyle\sum_{n=0}^{100}\frac{1}{5^n} =
+\frac{1-\frac{1}{5^{101}}}{1-\frac{1}{5}} = \dfrac{5^{101}-1}{4\cdot 5^{100}}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<p id="p-199">Calcule <span class="process-math">\(\displaystyle\sum_{n=50}^{100}\frac{1}{5^n}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-200">Para ajustar o índice inicial, fatore o primeiro termo da série ou subtraia duas séries.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-41" id="answer-41"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like"><p id="p-201"><span class="process-math">\(\dfrac{5^{51}-1}{4\cdot 5^{100}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-202">Observe que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-16">
+\begin{align*}
+\sum_{n={50}}^{100}
+\frac{1}{5^n}\amp=\sum_{n=0}^{100}\frac{1}{5^n}-\sum_{n=0}^{49}\frac{1}{5^n}\\
+\end{align*}
+<p class="intertext">Ou seja, queremos começar com a soma de todos os termos até <span class="process-math">\(\dfrac{1}{5^{100}}\)</span> e, em seguida, subtrair os termos que não desejamos até <span class="process-math">\(\dfrac{1}{5^{49}}\text{.}\)</span> Então</p>
+\begin{align*}
+\sum_{n=0}^{100}\frac{1}{5^n}-\sum_{n=0}^{49}\frac{1}{5^n}\amp=\frac{1-\frac{1}{5^{101}}}{1-\frac15}-\frac{1-\frac{1}{5^{50}}}{1-\frac15}\\
+\amp=\frac{5^{101}-1}{4\cdot 5^{100}}-\frac{5^{50}-1}{4\cdot
+5^{49}}\left(\frac{5^{51}}{5^{51}}\right)\\
+\amp=\frac{5^{101}-1}{4\cdot 5^{100}}-\frac{5^{101}-5^{51}}{4\cdot 5^{100}}\\
+\amp=\frac{5^{51}-1}{4\cdot 5^{100}}
+\end{align*}
+</div>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<p id="p-203">Se escrevermos os primeiros termos da nossa série, veremos que podemos fatorar uma constante para alterar o índice inicial.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-17">
+\begin{align*}
+\sum_{n={50}}^{100} \frac{1}{5^n}\amp= \frac{1}{5^{50}}+
+\frac{1}{5^{51}}+\frac{1}{5^{52}}+\frac{1}{5^{53}}+\cdots +\frac{1}{5^{100}}\\
+\amp=\frac{1}{5^{50}}\left(\frac{1}{5^0}+\frac{1}{5^1}+\frac{1}{5^2}+\frac{1}{5^3}+\cdots
++\frac{1}{5^{50}}\right)\\
+\amp=\sum_{n=0}^{50}\frac{1}{5^{50}}\cdot\frac{1}{5^n}\\
+\end{align*}
+<p class="intertext">Agora, com <span class="process-math">\(a=\dfrac{1}{5^{50}},\)</span> <span class="process-math">\(r=\dfrac15\text{,}\)</span> e <span class="process-math">\(N=50\text{.}\)</span></p>
+\begin{align*}
+\sum_{n=0}^{50}\frac{1}{5^{50}}\cdot\frac{1}{5^n}\amp=\frac{1}{5^{50}}\cdot\frac{1-\frac{1}{5^{51}}}{1-\frac15}=\frac{1-\frac{1}{5^{51}}}{4\cdot
+5^{49}}\left(\frac{5^{51}}{5^{51}}\right)\\
+\amp=\frac{5^{51}-1}{4\cdot 5^{100}}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-15"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<p id="p-204">Calcule <span class="process-math">\(\displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-205">Use regras de logaritmo para transformar isso em uma série telescópica mais simples</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-42" id="answer-42"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like"><p id="p-206">A séries diverge para <span class="process-math">\(-\infty\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
+<p id="p-207">Usando regras de logaritmo, notamos que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)=
+\displaystyle\sum_{n=5}^\infty \big[\log(n-3)-\log n\big]
+\end{equation*}
+</div>
+<p id="p-208">que é uma série telescópica. Vamos fazer uma tabela para descobrir as somas parciais.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-209">
+\begin{equation*}
+\begin{array}{c||cc||c}
+\mathbf{N}\amp\mathbf{\log(N\!-\!3)}\!\!\amp\mathbf{-\log N}\amp\mathbf{S_N}\\
+\hline
+5\amp\log 2\amp\color{red}{-\log 5}\amp\log 2 - \color{red}{\log 5}\\
+6\amp\log 3\amp\color{green}{-\log 6}\amp\log 2 +\log 3- \color{red}{\log 5}\color{green}{-\log
+6}\\
+7\amp\log 4\amp\color{purple}{-\log 7}\amp\log 2 +\log 3+\log 4- \color{red}{\log
+5}\color{green}{-\log 6}
+\color{purple}{-\log 7}\\
+8\amp\color{red}{\log 5} \amp\color{blue}{-\log 8} \amp\log 2 +\log 3+\log 4 \color{green}{-\log
+6}
+\color{purple}{-\log 7}\color{blue}{-\log 8}\\
+9\amp\color{green}{\log 6}\amp\color{orange}{-\log 9}\amp\log 2 +\log 3+\log 4
+\color{purple}{-\log 7}\color{blue}{-\log 8}\color{orange}{-\log 9}\\
+10\amp\color{purple}{\log 7}\amp\color{brown}{-\log 10}\amp\log 2 +\log 3+\log 4
+\color{blue}{-\log 8}\color{orange}{-\log 9}\color{brown}{-\log 10}\\
+11\amp\color{blue}{\log 8}\amp\color{yellow}{-\log 11}\amp\log 2 +\log 3+\log 4
+\color{orange}{-\log 9}\color{brown}{-\log 10}\color{yellow}{-\log 11}\\
+\vdots\amp\amp\amp
+\end{array}
+\end{equation*}
+</div>
+<p id="p-210">Assim, é possível perceber que a soma parcial de <span class="process-math">\(N\)</span> termos é:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-18">
+\begin{align*}
+S_N = \amp\sum_{n=5}^N \Big(\log(n-3)-\log(n)\Big)\\
+\amp\hskip0.5in=\log 2+\log 3 + \log 4 - \log(N-2)-\log(N-1)-\log(N)\\
+\amp\hskip0.5in=\log \left(\frac{24}{N(N-1)(N-2)}\right)\\
+\end{align*}
+<p class="intertext">para <span class="process-math">\(N \geq 7\text{.}\)</span> Então,</p>
+\begin{align*}
+\sum_{n=5}^\infty \Big(\log(n-3)-\log(n)\Big)\amp=
+\lim_{N \to \infty}S_N\\
+\amp=\lim_{N \to \infty}\log \left(\frac{24}{N(N-1)(N-2)}\right)\\
+\amp=-\infty
+\end{align*}
+</div>
 </div></div>
 </div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Se os dígitos de <span class="process-math">\(\pi\)</span> convergissem, então <span class="process-math">\(\pi\)</span> teria que ser um número racional. A irracionalidade de <span class="process-math">\(\pi\)</span> (que não pode ser escrito como uma fração) foi provada pela primeira vez por Lambert em 1761. A prova de Niven (1947) é mais acessível e convidamos o leitor interessado a usar seu mecanismo de busca favorito para encontrar guias passo a passo para essa prova.</div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/CAKhkDBam1Q</code></div></div>

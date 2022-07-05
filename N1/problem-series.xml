@@ -1,0 +1,65 @@
+
+
+<exercise>
+<statement>
+    <p>
+        Suponha que a sequência de somas parciais da série
+        <m>\displaystyle\sum_{n=1}^\infty a_n</m>
+        é <m>\{S_N\} = \left\{(-1)^N+\dfrac{1}{N}\right\}</m>.
+    </p>
+
+    <p>Encontre <m>\{a_n\}</m>.
+    </p>
+</statement>
+<hint>
+    <p>
+        Calcule <m>a_1</m> separadamente dos outros termos.
+    </p>
+</hint>
+<answer>
+    <p>
+        <m>a_n=\begin{cases}
+            0 &amp; \mbox{ if } n=1\\
+            2(-1)^{n} -\frac{1}{n(n-1)} &amp;\mbox{ caso contrário }
+            \end{cases}
+        </m>
+    </p>
+</answer>
+<solution>
+    <p>
+
+        <md>
+            <mrow>
+                a_N &amp;=S_N-S_{N-1}=\left[(-1)^N+\dfrac{1}{N}\right]-\left[(-1)^{N-1}+\dfrac{1}{N-1}\right]
+            </mrow>
+            <mrow>
+                &amp;=(-1)^N-(-1)^{N-1} + \frac{1}{N}-\frac{1}{N-1}
+            </mrow>
+            <mrow>
+                &amp;=(-1)^N+(-1)^{N} + \frac{N-1}{N(N-1)}-\frac{N}{N(N-1)}
+            </mrow>
+            <mrow>
+                &amp;=2(-1)^{N} -\frac{1}{N(N-1)}
+            </mrow>
+            <intertext>Observe, no entanto, que <m>a_N</m> é só igual <m>S_N-S_{N-1}</m> quando <m>N \geq 2</m>: caso
+                contrário, estamos tentando calcular <m>S_1-S_0</m>, mas <m>S_0</m> não está definida. Então, nós achamos <m>a_1
+                </m> separadamente:
+            </intertext>
+            <mrow>
+                a_1&amp;=S_1=(-1)^1+\frac{1}{1}=0
+            </mrow>
+            <intertext>Juntando tudo:</intertext>
+            <mrow>
+                a_n&amp;=\begin{cases}
+                0 &amp; \mbox{ se } n=1
+            </mrow>
+            <mrow>
+                2(-1)^{n} -\frac{1}{n(n-1)} &amp;\mbox{ caso contrário }
+                \end{cases}
+            </mrow>
+        </md>
+    </p>
+</solution>
+</exercise>
+
+

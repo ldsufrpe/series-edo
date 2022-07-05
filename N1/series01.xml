@@ -12,7 +12,7 @@
             O polinômio de Taylor de <m>e^x</m> é dada por
             <md>
                 <mrow>
-                    e^x &amp;= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + E_n(x)
+                    e^x \amp= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + E_n(x)
                 </mrow>
             </md>
             em que <m>E_n(x)</m> é o erro introduzido quando você aproxima <m>e^x</m> por seu polinômio de Taylor de
@@ -22,7 +22,7 @@
             faz e isso
             <md>
                 <mrow>
-                    e^x &amp;=1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=0}^\infty\frac{x^n}{n!}
+                    e^x \amp=1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=0}^\infty\frac{x^n}{n!}
                 </mrow>
             </md>
             Neste ponto, não definimos ou desenvolvemos qualquer compreensão dessa soma infinita. Como podemos calcular
@@ -38,29 +38,30 @@
             e</m>:
             <md>
                 <mrow>
-                    e &amp;= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1}{n!}
+                    e \amp= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1}{n!}
                 </mrow>
             </md>
             Como dissemos acima, ainda não entendemos o que fazer com esse número infinito de termos, mas podemos tentar
             descobrir isso pensando no que acontece à medida que pegamos mais e mais termos.
             <md>
                 <mrow>
-                    \text{1 termo}\phantom{s} &amp;&amp; 1&amp;=1
+                    \text{1 termo}\phantom{s} \amp\amp 1\amp=1
                 </mrow>
                 <mrow>
-                    \text{2 termos} &amp;&amp; 1+1&amp;=2
+                    \text{2 termos} \amp\amp 1+1\amp=2
                 </mrow>
                 <mrow>
-                    \text{3 termos} &amp;&amp; 1+1+\frac{1}{2}&amp;=2.5
+                    \text{3 termos} \amp\amp 1+1+\frac{1}{2}\amp=2.5
                 </mrow>
                 <mrow>
-                    \text{4 termos} &amp;&amp; 1+1+\frac{1}{2}+\frac{1}{6}&amp;=2.666666\dots
+                    \text{4 termos} \amp\amp 1+1+\frac{1}{2}+\frac{1}{6}\amp=2.666666\dots
                 </mrow>
                 <mrow>
-                    \text{5 termos} &amp;&amp; 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24}&amp;=2.708333\dots
+                    \text{5 termos} \amp\amp 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24}\amp=2.708333\dots
                 </mrow>
                 <mrow>
-                    \text{6 termos} &amp;&amp; 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24} + \frac{1}{120}&amp;=2.716666\dots
+                    \text{6 termos} \amp\amp 1+1+\frac{1}{2}+\frac{1}{6} + \frac{1}{24} +
+                    \frac{1}{120}\amp=2.716666\dots
                 </mrow>
             </md>
             Ao olhar para a soma infinita desta forma, obtemos naturalmente uma sequência de números
@@ -120,19 +121,19 @@
                 Aqui estão três sequências.
                 <md>
                     <mrow>
-                        &amp;\Big\{1,\ \frac{1}{2},\ \frac{1}{3},\ \cdots,\ \frac{1}{n},\ \cdots\Big\}
-                        &amp;&amp;\text{ou}
-                        &amp;&amp;\Big\{a_n=\frac{1}{n}\Big\}_{n=1}^\infty
+                        \amp\Big\{1,\ \frac{1}{2},\ \frac{1}{3},\ \cdots,\ \frac{1}{n},\ \cdots\Big\}
+                        \amp\amp\text{ou}
+                        \amp\amp\Big\{a_n=\frac{1}{n}\Big\}_{n=1}^\infty
                     </mrow>
                     <mrow>
-                        &amp;\Big\{1,\ 2,\ 3,\ \cdots,\ n,\ \cdots\Big\}
-                        &amp;&amp;\text{ou}
-                        &amp;&amp;\Big\{a_n=n\Big\}_{n=1}^\infty
+                        \amp\Big\{1,\ 2,\ 3,\ \cdots,\ n,\ \cdots\Big\}
+                        \amp\amp\text{ou}
+                        \amp\amp\Big\{a_n=n\Big\}_{n=1}^\infty
                     </mrow>
                     <mrow>
-                        &amp;\Big\{1,\ -1,\ 1,\ -1,\ \cdots,\ (-1)^{n-1},\ \cdots\Big\}
-                        &amp;&amp;\text{ou}
-                        &amp;&amp;\Big\{a_n=(-1)^{n-1}\Big\}_{n=1}^\infty
+                        \amp\Big\{1,\ -1,\ 1,\ -1,\ \cdots,\ (-1)^{n-1},\ \cdots\Big\}
+                        \amp\amp\text{ou}
+                        \amp\amp\Big\{a_n=(-1)^{n-1}\Big\}_{n=1}^\infty
                     </mrow>
                 </md>
                 Muitas vezes não existe uma fórmula simples e explícita para o  <m>n</m>-ésimo termo de uma sequência.
@@ -165,7 +166,7 @@
                 </m> se aproxima de  <m>L</m> quando <m>n</m> tende ao infinito. Nesta caso, escrevemos
                     <me>
                         \lim_{n\rightarrow\infty} a_n=L\qquad\hbox{ou}\qquad a_n\rightarrow L\text{ com
-                         }n\rightarrow\infty
+                        }n\rightarrow\infty
                     </me>
                     A <term>sequência converge</term> se converge para algum limite. Caso contrário, dizemos que
                     a <term>sequência diverge</term>.
@@ -201,7 +202,8 @@
                 </statement>
                 <solution>
                     <p>
-                        A sequência <m>\big\{a_n=n\big\}_{n=1}^\infty</m> diverge pois  <m>a_n</m> cresce sem limitações,
+                        A sequência <m>\big\{a_n=n\big\}_{n=1}^\infty</m> diverge pois  <m>a_n</m> cresce sem
+                        limitações,
                         em vez de se aproximar de algum valor finito, quando <m>n</m>  tende ao infinto.
                     </p>
                 </solution>
@@ -309,7 +311,7 @@
                     <me>
                         \lim_{x\rightarrow\infty} f(x) = L
                     </me>
-                    e se <m>a_n=f(n)</m> para todos os inteiros positivos <m>n</m>,  então
+                    e se <m>a_n=f(n)</m> para todos os inteiros positivos <m>n</m>, então
                     <me>
                         \lim_{n\rightarrow\infty} a_n = L
                     </me>
@@ -326,9 +328,9 @@
                 <md>
                     <mrow>
                         \text{já que }
-                        \lim_{x\rightarrow\infty}e^{-x}&amp;=0
-                        &amp;\text{ sabemos que }&amp;&amp;
-                        \lim\limits_{n\rightarrow\infty}e^{-n}&amp;=0
+                        \lim_{x\rightarrow\infty}e^{-x}\amp=0
+                        \amp\text{ sabemos que }\amp\amp
+                        \lim\limits_{n\rightarrow\infty}e^{-n}\amp=0
                     </mrow>
                 </md>
             </p>
@@ -351,7 +353,7 @@
                     seja, suponha que
                     <md>
                         <mrow>
-                            \lim_{n \to \infty} a_n&amp;=L &amp; \lim_{n \to \infty} b_n &amp;=M
+                            \lim_{n \to \infty} a_n\amp=L \amp \lim_{n \to \infty} b_n \amp=M
                         </mrow>
                     </md>
                     Então os seguintes limites são verdadeiros.
@@ -405,14 +407,14 @@
                 <md>
                     <mrow>
                         \lim_{n\rightarrow\infty}\Big[\frac{n}{2n+1} + 7 e^{-n}\Big]
-                        &amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
+                        \amp= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
                         +\lim_{n\rightarrow\infty} 7 e^{-n}
-                        &amp; \text{pelo }<xref ref="thm_SRlimarith"/>(<xref ref="limita"/>)
+                        \amp \text{pelo }<xref ref="thm_SRlimarith"/>(<xref ref="limita"/>)
                     </mrow>
                     <mrow>
-                        &amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
+                        \amp= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
                         +7\lim_{n\rightarrow\infty} e^{-n}
-                        &amp; \text{pelo }<xref ref="thm_SRlimarith"/>(<xref ref="limitc"/>)
+                        \amp \text{pelo }<xref ref="thm_SRlimarith"/>(<xref ref="limitc"/>)
                     </mrow>
                     <intertext>e então usando o
                         <nbsp/>
@@ -421,10 +423,10 @@
                         <xref ref="eg_SRsequenceLimC"/>:
                     </intertext>
                     <mrow>
-                        &amp;=\frac{1}{2} + 7\cdot 0
+                        \amp=\frac{1}{2} + 7\cdot 0
                     </mrow>
                     <mrow>
-                        &amp;=\frac{1}{2}
+                        \amp=\frac{1}{2}
                     </mrow>
                 </md>
             </p>
@@ -455,14 +457,14 @@
             <title>Usando o Teorema do Confronto</title>
 
 
-                <p>
-                    Determine <m>\lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big]</m>, no qual
-                    <m>\pi_n</m>
-                    é o <m>n</m>-ésimo digito decimal de <m>\pi</m>. Ou seja,
-                    <me>
-                        \pi_1=3\quad \pi_2=1 \quad \pi_3=4 \quad \pi_4=1 \quad \pi_5=5 \quad\pi_6=9\quad\cdots
-                    </me>
-                </p>
+            <p>
+                Determine <m>\lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big]</m>, no qual
+                <m>\pi_n</m>
+                é o <m>n</m>-ésimo digito decimal de <m>\pi</m>. Ou seja,
+                <me>
+                    \pi_1=3\quad \pi_2=1 \quad \pi_3=4 \quad \pi_4=1 \quad \pi_5=5 \quad\pi_6=9\quad\cdots
+                </me>
+            </p>
 
             <p>
 
@@ -612,5 +614,359 @@
         <exercise>
             <webwork source="pretext-sequencia/problem10.pg"/>
         </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Suponha que a sequência de somas parciais da série
+                    <m>\displaystyle\sum_{n=1}^\infty a_n</m>
+                    é <m>\{S_N\} = \left\{\dfrac{N}{N+1}\right\}</m>.
+                    <ol label="a">
+                        <li>Encontre <m>\{a_n\}</m>.
+                        </li>
+                        <li>Encontre <m>\lim\limits_{n \to \infty} a_n</m>.
+                        </li>
+                        <li>Determine <m>\sum_{n=1}^\infty a_n</m>.
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+
+            <answer>
+                <p>
+                    (a)
+                    <m>\displaystyle a_n = \begin{cases}
+                        \frac12 \amp\mbox{ se } n=1\\
+                        \dfrac{1}{n(n+1)} \amp\mbox{ caso contrário }\\
+                        \end{cases}\qquad
+                    </m>
+                    (b)
+                    <m>0\qquad</m>
+                    (c) 1
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    <ol label="a">
+                        <li>
+                            <m>S_N</m>
+                            é a soma dos primeiros  <m>N</m> termos de <m>\{a_n\}</m>, e <m>S_{N-1}</m> é a soma dos
+                            mesmos termos
+                            <em>exceto</em>
+                            <m>a_N</m>. Então, <m>a_N = S_N-S_{N-1}</m> quando <m>N \geq 2</m>. Em outros termos:
+                            <md>
+                                <mrow>
+                                    S_N \amp=a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1}+a_N
+                                </mrow>
+                                <mrow>
+                                    S_{N-1}\amp=a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1}
+                                </mrow>
+                                <mrow>
+                                </mrow>
+                                <intertext>Então,</intertext>
+                                <mrow>
+                                    S_N
+                                    -S_{N-1}
+                                    \amp=\Big[a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1}+a_N\Big]
+                                </mrow>
+                                <mrow>
+                                    \amp- \Big[a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1} \Big]
+                                </mrow>
+                                <mrow>
+                                    \amp=a_N
+                                </mrow>
+                                <intertext>Então, calculamos</intertext>
+                                <mrow>
+                                    a_N\amp=S_N-S_{N-1}=\left(\dfrac{N}{N+1}\right)-\left(\dfrac{N-1}{N-1+1}\right)
+                                </mrow>
+                                <mrow>
+                                    \amp=\frac{N^2}{N(N+1)}-\frac{N^2-1}{N(N+1)}
+                                </mrow>
+                                <mrow>
+                                    \amp=\frac{1}{N(N+1)}
+                                </mrow>
+                                <intertext>Portanto,</intertext>
+                                <mrow>
+                                    a_n\amp=\frac{1}{n(n+1)}
+                                </mrow>
+                            </md>
+
+                        </li>
+                        <li>
+                            <p>
+                                <me>
+                                    \lim\limits_{n \to \infty} a_n =\lim\limits_{n \to \infty} \dfrac{1}{n(n+1)}=0.
+                                </me>
+                            </p>
+
+                            <p>Ou seja, os termos que estamos somando estão ficando arbitrariamente pequenos à medida
+                                que
+                                avançamos.
+                            </p>
+                        </li>
+                        <li>Por definição,
+
+                            <me>
+                                \sum_{n=1}^\infty a_n = \lim_{N \to \infty}S_N = \lim_{N \to \infty}\dfrac{N}{N+1}=1
+                            </me>
+                            Ou seja, à medida que adicionamos mais termos da série, a nossa soma acumulada fica
+                            próxima de 1.
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Suponha que a sequência de somas parciais da série
+                    <m>\displaystyle\sum_{n=1}^\infty a_n</m>
+                    é <m>\{S_N\} = \left\{(-1)^N+\dfrac{1}{N}\right\}</m>. Encontre <m>\{a_n\}</m>.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Calcule <m>a_1</m> separadamente dos outros termos.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>a_n=\begin{cases}
+                        0 \amp \mbox{ if } n=1\\
+                        2(-1)^{n} -\frac{1}{n(n-1)} \amp\mbox{ caso contrário }
+                        \end{cases}
+                    </m>
+                </p>
+            </answer>
+            <solution>
+                <p>
+
+                    <md>
+                        <mrow>
+                            a_N \amp=S_N-S_{N-1}=\left[(-1)^N+\dfrac{1}{N}\right]-\left[(-1)^{N-1}+\dfrac{1}{N-1}\right]
+                        </mrow>
+                        <mrow>
+                            \amp=(-1)^N-(-1)^{N-1} + \frac{1}{N}-\frac{1}{N-1}
+                        </mrow>
+                        <mrow>
+                            \amp=(-1)^N+(-1)^{N} + \frac{N-1}{N(N-1)}-\frac{N}{N(N-1)}
+                        </mrow>
+                        <mrow>
+                            \amp=2(-1)^{N} -\frac{1}{N(N-1)}
+                        </mrow>
+                        <intertext>Observe, no entanto, que <m>a_N</m> é só igual <m>S_N-S_{N-1}</m> quando <m>N \geq
+                            2</m>: caso
+                            contrário, estamos tentando calcular <m>S_1-S_0</m>, mas <m>S_0</m> não está definida.
+                            Então, nós achamos <m>a_1
+                            </m> separadamente:
+                        </intertext>
+                        <mrow>
+                            a_1\amp=S_1=(-1)^1+\frac{1}{1}=0
+                        </mrow>
+                        <intertext>Juntando tudo:</intertext>
+                        <mrow>
+                            a_n\amp=\begin{cases}
+                            0 \amp \mbox{ se } n=1
+                        </mrow>
+                        <mrow>
+                            2(-1)^{n} -\frac{1}{n(n-1)} \amp\mbox{ caso contrário }
+                            \end{cases}
+                        </mrow>
+                    </md>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Calcule <m>\displaystyle\sum_{n=0}^{100}\frac{1}{5^n}</m>.
+                </p>
+            </statement>
+            <hint>
+                <p>
+
+                    <m>\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}</m>, para <m>r \neq 1</m>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>\dfrac{5^{101}-1}{4\cdot 5^{100}}</m>
+                </p>
+            </answer>
+            <solution>
+                <p>
+
+                    <m>\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}</m>, for <m>r \neq 1</m>.
+                    A série é Geométrica com <m>a=1</m>, <m>r=\frac{1}{5}</m>, e <m>N=100</m>. Logo:
+                    <me>
+                        \displaystyle\sum_{n=0}^{100}\frac{1}{5^n} =
+                        \frac{1-\frac{1}{5^{101}}}{1-\frac{1}{5}} = \dfrac{5^{101}-1}{4\cdot 5^{100}}
+                    </me>
+                </p>
+
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Calcule <m>\displaystyle\sum_{n=50}^{100}\frac{1}{5^n}</m>.
+                </p>
+            </statement>
+            <hint>
+                <p>
+
+                    Para ajustar o índice inicial, fatore o primeiro termo da série ou subtraia duas séries.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>\dfrac{5^{51}-1}{4\cdot 5^{100}}</m>
+                </p>
+            </answer>
+            <solution>
+                <p>
+
+                    Observe que
+                    <md>
+                        <mrow>
+                            \sum_{n={50}}^{100}
+                            \frac{1}{5^n}\amp=\sum_{n=0}^{100}\frac{1}{5^n}-\sum_{n=0}^{49}\frac{1}{5^n}
+                        </mrow>
+                        <intertext>Ou seja, queremos começar com a soma de todos os termos até <m>\dfrac{1}{5^{100}}</m> e,
+                            em seguida, subtrair os termos que não desejamos até <m>\dfrac{1}{5^{49}}</m>. Então
+                        </intertext>
+                        <mrow>
+                            \sum_{n=0}^{100}\frac{1}{5^n}-\sum_{n=0}^{49}\frac{1}{5^n}\amp=\frac{1-\frac{1}{5^{101}}}{1-\frac15}-\frac{1-\frac{1}{5^{50}}}{1-\frac15}
+                        </mrow>
+                        <mrow>
+                            \amp=\frac{5^{101}-1}{4\cdot 5^{100}}-\frac{5^{50}-1}{4\cdot
+                            5^{49}}\left(\frac{5^{51}}{5^{51}}\right)
+                        </mrow>
+                        <mrow>
+                            \amp=\frac{5^{101}-1}{4\cdot 5^{100}}-\frac{5^{101}-5^{51}}{4\cdot 5^{100}}
+                        </mrow>
+                        <mrow>
+                            \amp=\frac{5^{51}-1}{4\cdot 5^{100}}
+                        </mrow>
+                    </md>
+                </p>
+            </solution>
+            <solution>
+                <p>
+                    Se escrevermos os primeiros termos da nossa série, veremos que podemos fatorar uma constante para
+                    alterar o índice inicial.
+                    <md>
+                        <mrow>
+                            \sum_{n={50}}^{100} \frac{1}{5^n}\amp= \frac{1}{5^{50}}+
+                            \frac{1}{5^{51}}+\frac{1}{5^{52}}+\frac{1}{5^{53}}+\cdots +\frac{1}{5^{100}}
+                        </mrow>
+                        <mrow>
+                            \amp=\frac{1}{5^{50}}\left(\frac{1}{5^0}+\frac{1}{5^1}+\frac{1}{5^2}+\frac{1}{5^3}+\cdots
+                            +\frac{1}{5^{50}}\right)
+                        </mrow>
+                        <mrow>
+                            \amp=\sum_{n=0}^{50}\frac{1}{5^{50}}\cdot\frac{1}{5^n}
+                        </mrow>
+                        <intertext>Agora,
+                            com <m>a=\dfrac{1}{5^{50}},</m>
+                            <m>r=\dfrac15</m>, e <m>N=50</m>.
+                        </intertext>
+                        <mrow>
+                            \sum_{n=0}^{50}\frac{1}{5^{50}}\cdot\frac{1}{5^n}\amp=\frac{1}{5^{50}}\cdot\frac{1-\frac{1}{5^{51}}}{1-\frac15}=\frac{1-\frac{1}{5^{51}}}{4\cdot
+                            5^{49}}\left(\frac{5^{51}}{5^{51}}\right)
+                        </mrow>
+                        <mrow>
+                            \amp=\frac{5^{51}-1}{4\cdot 5^{100}}
+                        </mrow>
+                    </md>
+
+                </p>
+            </solution>
+        </exercise>
+
+
+        <exercise >
+            <statement>
+                <p>
+                    Calcule <m>\displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)</m>.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                   Use regras de logaritmo para transformar isso em uma série telescópica mais simples
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    A séries diverge para <m>-\infty</m>.
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    Usando regras de logaritmo, notamos que
+                    <me>
+                        \displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)=
+                        \displaystyle\sum_{n=5}^\infty \big[\log(n-3)-\log n\big]
+                    </me>
+                </p>
+
+                <p>que é uma série telescópica. Vamos fazer uma tabela para descobrir as somas parciais.
+                </p>
+
+                <p>
+                    <me>
+                        \begin{array}{c||cc||c}
+                        \mathbf{N}\amp\mathbf{\log(N\!-\!3)}\!\!\amp\mathbf{-\log N}\amp\mathbf{S_N}\\
+                        \hline
+                        5\amp\log 2\amp\color{red}{-\log 5}\amp\log 2 - \color{red}{\log 5}\\
+                        6\amp\log 3\amp\color{green}{-\log 6}\amp\log 2 +\log 3- \color{red}{\log 5}\color{green}{-\log
+                        6}\\
+                        7\amp\log 4\amp\color{purple}{-\log 7}\amp\log 2 +\log 3+\log 4- \color{red}{\log
+                        5}\color{green}{-\log 6}
+                        \color{purple}{-\log 7}\\
+                        8\amp\color{red}{\log 5} \amp\color{blue}{-\log 8} \amp\log 2 +\log 3+\log 4 \color{green}{-\log
+                        6}
+                        \color{purple}{-\log 7}\color{blue}{-\log 8}\\
+                        9\amp\color{green}{\log 6}\amp\color{orange}{-\log 9}\amp\log 2 +\log 3+\log 4
+                        \color{purple}{-\log 7}\color{blue}{-\log 8}\color{orange}{-\log 9}\\
+                        10\amp\color{purple}{\log 7}\amp\color{brown}{-\log 10}\amp\log 2 +\log 3+\log 4
+                        \color{blue}{-\log 8}\color{orange}{-\log 9}\color{brown}{-\log 10}\\
+                        11\amp\color{blue}{\log 8}\amp\color{yellow}{-\log 11}\amp\log 2 +\log 3+\log 4
+                        \color{orange}{-\log 9}\color{brown}{-\log 10}\color{yellow}{-\log 11}\\
+                        \vdots\amp\amp\amp
+                        \end{array}
+                    </me>
+                </p>
+
+                <p> Assim, é possível perceber que a soma parcial de <m>N</m> termos é:
+                    <md>
+                        <mrow>
+                            S_N = \amp\sum_{n=5}^N \Big(\log(n-3)-\log(n)\Big)
+                        </mrow>
+                        <mrow>\amp\hskip0.5in=\log 2+\log 3 + \log 4 - \log(N-2)-\log(N-1)-\log(N)
+                        </mrow>
+                        <mrow>
+                            \amp\hskip0.5in=\log \left(\frac{24}{N(N-1)(N-2)}\right)
+                        </mrow>
+                        <intertext>para <m>N \geq 7</m>. Então,
+                        </intertext>
+                        <mrow>
+                            \sum_{n=5}^\infty \Big(\log(n-3)-\log(n)\Big)\amp=
+                            \lim_{N \to \infty}S_N
+                        </mrow>
+                        <mrow>
+                            \amp=\lim_{N \to \infty}\log \left(\frac{24}{N(N-1)(N-2)}\right)
+                        </mrow>
+                        <mrow>
+                            \amp=-\infty
+                        </mrow>
+                    </md>
+                </p>
+            </solution>
+        </exercise>
+
+
     </exercises>
 </section>
