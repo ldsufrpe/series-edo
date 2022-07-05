@@ -1,4 +1,4 @@
-## Séries e EDO - LF3 - 2021.2
+## Séries e EDO 
 
 **Prof. Leon Silva**
 
