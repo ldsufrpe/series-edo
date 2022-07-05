@@ -325,7 +325,7 @@
             </m> quando <m>N\rightarrow\infty</m> e
                 <me xml:id="eq_geomsum">
                     \sum_{n=0}^\infty ar^n = \frac{a}{1-r}
-                    \text{provided $|r| \lt 1$}.
+                    \text{desde que $|r| \lt 1$}.
                 </me>
                 Por outro lado se <m>|r|\ge 1</m>, <m>S_N</m> diverge.
                 Para entender essa divergência, considere os <m>4</m> casos a seguir:
@@ -353,8 +353,8 @@
             <p>
                 Na
                 <xref ref="fig1"/>
-                estão alguns esboços dos gráficos de <m>\frac{1}{1-r}</m> and <m>S_N</m>,
-                <m>0\le N\le 5</m>, for <m>a=1</m> and <m>-1\le r\lt 1</m>.
+                estão alguns esboços dos gráficos de <m>\frac{1}{1-r}</m> e <m>S_N</m>,
+                <m>0\le N\le 5</m>, for <m>a=1</m> e <m>-1\le r\lt 1</m>.
             </p>
 
             <figure xml:id="fig1">
