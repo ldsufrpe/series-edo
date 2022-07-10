@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-05T18:20:50-03:00       *-->
+<!--*       on 2022-07-10T19:23:33-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,54 +14,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>Again, the convergence of this series will depend on <span class="process-math">\(x\text{.}\)</span></p>
-<ul class="disc">
-<li><p>Let us start with the ratio test — so we compute<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-\left|\frac{a_{n+1}}{a_n}\right|
-&amp;= \left|\frac{(-3)^{n+1} \sqrt{n+2} (2n+3) x^{n+1} }{(-3)^n \sqrt{n+1} (2n+5) x^n} \right|\\
-&amp;= |-3| \cdot \frac{\sqrt{n+2}}{\sqrt{n+1}} \cdot \frac{2n+3}{2n+5} \cdot |x|\\
-\end{align*}
-<p class="intertext">So in the limit as <span class="process-math">\(n \to \infty\)</span> we are left with</p>
-\begin{align*}
-\lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right|
-&amp;= 3 |x|
-\end{align*}
-</div></p></li>
-<li><p>The ratio test then tells us that if <span class="process-math">\(3|x| \gt 1\)</span> the series diverges, while when <span class="process-math">\(3|x| \lt 1\)</span> the series converges.</p></li>
-<li><p>This leaves us with the cases <span class="process-math">\(x=+\frac{1}{3}\)</span> and <span class="process-math">\(-\frac{1}{3}\text{.}\)</span></p></li>
-<li><p>Setting <span class="process-math">\(x=\frac{1}{3}\)</span> gives the series<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-\sum_{n=1}^\infty \frac{ (-1)^n \sqrt{n+1}}{2n+3}
-\end{gather*}
-</div>The fact that the terms alternate here suggests that we use the alternating series test. That will show that this series converges provided <span class="process-math">\(\frac{\sqrt{n+1}}{2n+3}\)</span> decreases as <span class="process-math">\(n\)</span> increases. So we define the function<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-f(t) &amp;= \frac{\sqrt{t+1}}{2t+3}
-\end{align*}
-</div>(which is constructed by replacing the <span class="process-math">\(n\)</span> in <span class="process-math">\(\frac{\sqrt{n+1}}{2n+3}\)</span> with <span class="process-math">\(t\)</span>) and verify that <span class="process-math">\(f(t)\)</span> is a decreasing function of <span class="process-math">\(t\text{.}\)</span> To prove that, it suffices to show its derivative is negative when <span class="process-math">\(t\geq 1\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-f'(t) &amp;= \frac{(2t+3)\cdot \frac{1}{2} \cdot(t+1)^{-1/2} - 2\sqrt{t+1} }{(2t+3)^2}\\
-&amp;=\frac{(2t+3) - 4(t+1)  }{2 \sqrt{t+1} (2t+3)^2}\\
-&amp;= \frac{-2t-1}{2 \sqrt{t+1} (2t+3)^2}
-\end{align*}
-</div>When <span class="process-math">\(t \geq 1\)</span> this is negative and so <span class="process-math">\(f(t)\)</span> is a decreasing function. Thus we can apply the alternating series  test to show that the series converges when <span class="process-math">\(x=\frac{1}{3}\text{.}\)</span></p></li>
-<li><p>When <span class="process-math">\(x = -\frac{1}{3}\)</span> the series becomes<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-\sum_{n=1}^\infty \frac{\sqrt{n+1}}{2n+3}.
-\end{gather*}
-</div>Notice that when <span class="process-math">\(n\)</span> is large, the summand is approximately  <span class="process-math">\(\frac{\sqrt{n}}{2n}\)</span> which suggests that the series will diverge  by comparison with <span class="process-math">\(\sum n^{-1/2}\text{.}\)</span> To formalise this, we can use the limit comparison theorem:<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-\lim_{n \to \infty} \frac{\sqrt{n+1}}{2n+3}\  \frac{1}{ n^{-1/2} }
-&amp;=
-\lim_{n \to \infty} \frac{\sqrt{n} \cdot \sqrt{1+1/n}}{n(2+3/n)} \cdot n^{1/2}\\
-&amp;=
-\lim_{n \to \infty} \frac{n \cdot \sqrt{1+1/n}}{n(2+3/n)}\\
-&amp;= \frac{1}{2}
-\end{align*}
-</div>So since this ratio has a finite limit and the series <span class="process-math">\(\sum n^{-1/2}\)</span> diverges, we know that our series also diverges.</p></li>
-</ul>
-<p class="continuation">So in summary the series converges when <span class="process-math">\(-\frac{1}{3}  \lt  x \leq \frac{1}{3}\)</span> and diverges otherwise.</p>
+<h4 class="heading"><span class="type">Parágrafo</span></h4>
+<p>Let's do a somewhat artificial example that forces us to combine a few of the techniques we have seen.</p>
 <span class="incontext"><a href="section-1.html#p-72" class="internal">em contexto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-05T18:20:49-03:00       *-->
+<!--*       on 2022-07-10T19:25:32-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,42 +15,43 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Demonstração</span></h4>
-<p>Let <span class="process-math">\(I\)</span> be any fixed integer with <span class="process-math">\(I \gt N_0\text{.}\)</span> Then</p>
+<p>Seja <span class="process-math">\(I\)</span> qualquer inteiro fixo com <span class="process-math">\(I \gt N_0\text{.}\)</span> Então</p>
 <ul class="disc">
-<li><p><span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converges if and only if  <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converges — removing a fixed finite number of terms from a series cannot impact whether or not it converges.</p></li>
-<li><p>Since <span class="process-math">\(a_n\ge 0\)</span> for all <span class="process-math">\(n\ge I \gt N_0\text{,}\)</span> the sequence of partial sums  <span class="process-math">\(s_\ell=\sum_{n=I}^\ell a_n\)</span> obeys <span class="process-math">\(s_{\ell+1} = s_\ell+a_{n+1} \ge s_\ell\text{.}\)</span> That is, <span class="process-math">\(s_\ell\)</span> increases as <span class="process-math">\(\ell\)</span> increases.</p></li>
-<li><p>So <span class="process-math">\(\big\{s_\ell\big\}\)</span> must either converge to some finite number or increase to infinity. That is, either <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converges to a finite number or it is <span class="process-math">\(+\infty\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converge se e somente se <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converge — remover um número finito fixo de termos de uma série não pode afetar se ela converge ou não.</p></li>
+<li><p>Como <span class="process-math">\(a_n\ge 0\)</span> para todos os <span class="process-math">\(n\ge I \gt N_0\text{,}\)</span> a sequência de somas parciais <span class="process-math">\(s_\ell=\sum_{n=I}^\ell a_n\)</span> obedece <span class="process-math">\(s_{\ell+1} = s_\ell+a_{n+1} \ge s_\ell\text{.}\)</span> Ou seja, <span class="process-math">\(s_\ell\)</span> aumenta à medida que <span class="process-math">\(\ell\)</span> aumenta.</p></li>
+<li><p>Portanto, <span class="process-math">\(\big\{s_\ell\big\}\)</span> deve convergir para algum número finito ou aumentar para infinito. Ou seja, <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converge para um número finito ou é <span class="process-math">\(+\infty\text{.}\)</span></p></li>
 </ul>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="images/intTest3.svg" role="img" class="contained"></div></div></div>
-<p>Look at the figure above. The shaded area in the figure is  <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> because</p>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="images/intTest3.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p>A área sombreada na <a href="" class="xref" data-knowl="./knowl/fig2.html" title="Figura 1.7">Figura 1.7</a> é <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> pois</p>
 <ul class="disc">
-<li><p>the first shaded rectangle has height <span class="process-math">\(a_I\)</span> and width <span class="process-math">\(1\text{,}\)</span> and hence area <span class="process-math">\(a_I\)</span> and</p></li>
-<li><p>the second shaded rectangle has height <span class="process-math">\(a_{I+1}\)</span> and width <span class="process-math">\(1\text{,}\)</span> and hence area <span class="process-math">\(a_{I+1}\text{,}\)</span> and so on</p></li>
+<li><p>o primeiro retângulo sombreado tem altura <span class="process-math">\(a_I\)</span> e largura <span class="process-math">\(1\)</span> e, portanto, área <span class="process-math">\(a_I\)</span> e</p></li>
+<li><p>o segundo retângulo sombreado tem altura <span class="process-math">\(a_{I+1}\)</span> e largura <span class="process-math">\(1\)</span> e, portanto, área <span class="process-math">\(a_{I+1}\)</span> e assim por diante</p></li>
 </ul>
-<p class="continuation">This shaded area is smaller than the area under the curve <span class="process-math">\(y=f(x)\)</span> for  <span class="process-math">\(I-1\le x \lt \infty\text{.}\)</span> So</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">Essa área sombreada é menor que a área sob a curva <span class="process-math">\(y=f(x)\)</span> para <span class="process-math">\(I-1\le x \lt \infty\text{.}\)</span> Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig2.html">
 \begin{equation*}
 \sum_{n=I}^\infty a_n \le \int_{I-1}^\infty f(x)\ dx
 \end{equation*}
 </div>
-<p class="continuation">and, if the integral is finite, the sum <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> is  finite too. Furthermore, the desired bound on the truncation error is just  the special case of this inequality with <span class="process-math">\(I=N+1\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">e, se a integral for finita, a soma <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> também será finita. Além disso, o limite desejado no erro de truncamento é apenas o caso especial desta desigualdade com <span class="process-math">\(I=N+1\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig2.html">
 \begin{gather*}
 \sum_{n=1}^\infty a_n - \sum_{n=1}^N a_n =\sum_{n=N+1}^\infty a_n \le \int_N^\infty f(x)\ dx
 \end{gather*}
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="images/intTest4.svg" role="img" class="contained"></div></div></div>
-<p>For the “divergence case” look at the figure above.  The (new) shaded area in the figure is again <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span>  because</p>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="images/intTest4.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p>Para o “caso de divergência” veja a<a href="" class="xref" data-knowl="./knowl/fig3.html" title="Figura 1.8">Figura 1.8</a>. A (nova) área sombreada na figura é novamente <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> porque</p>
 <ul class="disc">
-<li><p>the first shaded rectangle has height <span class="process-math">\(a_I\)</span> and width <span class="process-math">\(1\text{,}\)</span> and hence area <span class="process-math">\(a_I\)</span> and</p></li>
-<li><p>the second shaded rectangle has height <span class="process-math">\(a_{I+1}\)</span> and width <span class="process-math">\(1\text{,}\)</span> and hence area <span class="process-math">\(a_{I+1}\text{,}\)</span> and so on</p></li>
+<li><p>o primeiro retângulo sombreado tem altura <span class="process-math">\(a_I\)</span> e largura <span class="process-math">\(1\)</span> e, portanto, área <span class="process-math">\(a_I\)</span> e</p></li>
+<li><p>o segundo retângulo sombreado tem altura <span class="process-math">\(a_{I+1}\)</span> e largura <span class="process-math">\(1\)</span> e, portanto, área <span class="process-math">\(a_{I+1}\)</span> e assim por diante</p></li>
 </ul>
-<p class="continuation">This time the shaded area is larger than the area under the curve  <span class="process-math">\(y=f(x)\)</span> for <span class="process-math">\(I\le x \lt \infty\text{.}\)</span> So</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">Desta vez, a área sombreada é maior que a área sob a curva <span class="process-math">\(y=f(x)\)</span> para <span class="process-math">\(I\le x \lt
+\infty\text{.}\)</span> Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig3.html">
 \begin{equation*}
 \sum_{n=I}^\infty a_n \ge \int_I^\infty f(x)\ dx
 \end{equation*}
 </div>
-<p class="continuation">and, if the integral is infinite, the sum <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> is infinite too.</p></article><span class="incontext"><a href="section-1.html#proof-1" class="internal">em contexto</a></span>
+<p class="continuation">e, se a integral for infinita, a soma <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> também será infinita.</p></article><span class="incontext"><a href="section-1.html#proof-1" class="internal">em contexto</a></span>
 </body>
 </html>

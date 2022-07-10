@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-05T18:20:49-03:00       *-->
+<!--*       on 2022-07-10T19:25:32-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="pt-BR">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Convergence Tests</title>
+<title>Teste de Convergencia</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
@@ -142,16 +142,10 @@ true);
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
 <li class="link active">
-<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Convergence Tests</span></a><ul>
-<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">The Divergence Test</a></li>
-<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">The Integral Test</a></li>
-<li><a href="section-1.html#subsection-3" data-scroll="subsection-3" class="internal">The Comparison Test</a></li>
-<li><a href="section-1.html#sec_AST" data-scroll="sec_AST" class="internal">The Alternating Series Test</a></li>
-<li><a href="section-1.html#sec_RatioTest" data-scroll="sec_RatioTest" class="internal">The Ratio Test</a></li>
-<li><a href="section-1.html#subsection-6" data-scroll="subsection-6" class="internal">Convergence Test List</a></li>
-<li><a href="section-1.html#sec_RootTest" data-scroll="sec_RootTest" class="internal">Optional — The Root Test</a></li>
-<li><a href="section-1.html#sec_HarminicBasel" data-scroll="sec_HarminicBasel" class="internal">Optional — Harmonic and Basel Series</a></li>
-<li><a href="section-1.html#sec_CompProof" data-scroll="sec_CompProof" class="internal">Optional — Some Proofs</a></li>
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Teste de Convergencia</span></a><ul>
+<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">O Teste de Divergência</a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">O teste da Integral</a></li>
+<li><a href="section-1.html#subsection-3" data-scroll="subsection-3" class="internal">O Teste da Comparação</a></li>
 </ul>
 </li>
 <li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
@@ -159,24 +153,27 @@ true);
 </div></div>
 <main class="main"><div id="content" class="pretext-content">
 <section class="section" id="section-1"><h2 class="heading hide-type">
-<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Convergence Tests</span>
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Teste de Convergencia</span>
 </h2>
-<section class="introduction" id="introduction-2"><p id="p-3">It is very common to encounter series for which it is difficult, or even virtually impossible, to determine the sum exactly. Often you try to evaluate the sum approximately by truncating it, i.e. having the index run only up to some finite <span class="process-math">\(N\text{,}\)</span> rather than infinity. But there is no point in doing so if the series diverges<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>. So you like to at least know if the series converges or diverges. Furthermore you would also like to know what error is introduced when you approximate <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> by the “truncated series” <span class="process-math">\(\sum_{n=1}^Na_n\text{.}\)</span> That's called the truncation error. There are a number  of “convergence tests” to help you with this.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">The Divergence Test</span>
+<section class="introduction" id="introduction-2"><p id="p-3">É muito comum encontrar séries para as quais é difícil, ou mesmo praticamente impossível, determinar soma de forma exata. Muitas vezes tenta-se avaliar a soma por aproximação truncando-a, ou seja, fazendo com que o índice seja executado apenas até algum valor finito <span class="process-math">\(N\text{,}\)</span> ao invés de infinito. Entratanto, não faz sentido fazê-lo se a série for divergênte. Potanto, se torna interessante saber se a série converge ou não. Além disso, também é importantante saber qual é o erro quando aproximamos <span class="process-math">\(\sum^{\infty}_{n=1}a_n\)</span> pela “série truncada” <span class="process-math">\(\sum^{N}_{n=1}a_n\text{.}\)</span> Isso é chamado de erro de truncamento.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">O Teste de Divergência</span>
 </h3>
-<p id="p-4">Our first test is very easy to apply, but it is also rarely useful.  It just allows us to quickly reject some “trivially divergent” series.  It is based on the observation that</p>
+<p id="p-4">Nosso primeiro teste basea-se na constatação de que</p>
 <ul class="disc">
-<li id="li-1"><p id="p-derived-li-1">by definition, a series <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span>  converges to <span class="process-math">\(S\)</span> when the partial sums <span class="process-math">\(S_N=\sum_{n=1}^N a_n\)</span> converge  to  <span class="process-math">\(S\text{.}\)</span></p></li>
-<li id="li-2"><p id="p-derived-li-2">Then, as <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> we have <span class="process-math">\(S_N\rightarrow S\)</span> and, because <span class="process-math">\(N-1\rightarrow\infty\)</span> too, we also have <span class="process-math">\(S_{N-1}\rightarrow S\text{.}\)</span></p></li>
-<li id="li-3"><p id="p-derived-li-3">So <span class="process-math">\(a_N=S_N-S_{N-1}\rightarrow S-S=0\text{.}\)</span></p></li>
+<li id="li-1"><p id="p-derived-li-1">por definição, uma série <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span>  converge para <span class="process-math">\(S\)</span> quando as somas parciais <span class="process-math">\(S_N=\sum_{n=1}^N a_n\)</span> converge para   <span class="process-math">\(S\text{.}\)</span></p></li>
+<li id="li-2"><p id="p-derived-li-2">Então, como <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> temos <span class="process-math">\(S_N\rightarrow S\)</span> e, pois <span class="process-math">\(N-1\rightarrow\infty\)</span> temos também <span class="process-math">\(S_{N-1}\rightarrow S\text{.}\)</span></p></li>
+<li id="li-3"><p id="p-derived-li-3">Logo <span class="process-math">\(a_N=S_N-S_{N-1}\rightarrow S-S=0\text{.}\)</span></p></li>
 </ul>
-<p class="continuation">This tells us that, if we already know that a given series <span class="process-math">\(\sum a_n\)</span>  is convergent, then the <span class="process-math">\(n^{\rm th}\)</span> term of the series, <span class="process-math">\(a_n\text{,}\)</span> must converge to <span class="process-math">\(0\)</span> as <span class="process-math">\(n\)</span> tends to infinity. In this form,  the test is not so useful. However the contrapositive <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a> of the statement is a useful test for <em class="emphasis">divergence</em>.</p>
+<p class="continuation">Isso nos diz que, se já sabemos que uma dada série,  <span class="process-math">\(\sum a_n\)</span>  é convergente, então <span class="process-math">\(n\)</span>- ésimo termo da série, <span class="process-math">\(a_n\text{,}\)</span> deve convergir para <span class="process-math">\(0\)</span> com <span class="process-math">\(n\)</span> tende ao infinito. Nesta forma, o teste não é tão útil. No entanto, a contrapositiva é um teste útil para  <em class="emphasis">divergência</em>.</p>
 <article class="theorem theorem-like" id="thm_SRdivergenceTest"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Divergence Test.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Teste da Divergência.</span>
 </h4>
-<p id="p-5">If the sequence <span class="process-math">\(\big\{a_n\big\}_{n=1}^\infty\)</span> fails to converge to zero as <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> then the series <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> diverges.</p></article><article class="example example-like" id="eg_SRdivTest"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRdivTest"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">A simple divergence.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRdivTest"><article class="example example-like"><p id="p-6">Let <span class="process-math">\(a_n=\frac{n}{n+1}\text{.}\)</span> Then</p>
+<p id="p-5">Se a sequência <span class="process-math">\(\big\{a_n\big\}_{n=1}^\infty\)</span> não converge para zero <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> tentão a série <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> diverge.</p></article><article class="example example-like" id="eg_SRdivTest"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRdivTest"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Uma série divergente.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRdivTest"><article class="example example-like"><p id="p-6">A série <span class="process-math">\(\sum_{n=1}^\infty \frac{n}{n+1}\)</span> é divergente.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-7">Seja <span class="process-math">\(a_n=\frac{n}{n+1}\text{.}\)</span> Então</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \lim_{n\rightarrow\infty} a_n
@@ -185,136 +182,141 @@ true);
 =1\ne 0
 \end{equation*}
 </div>
-<p class="continuation">So the series <span class="process-math">\(\sum_{n=1}^\infty \frac{n}{n+1}\)</span> diverges.</p></article></div>
+<p class="continuation">Assim a série <span class="process-math">\(\sum_{n=1}^\infty \frac{n}{n+1}\)</span> diverge.</p>
+</div></div>
+</div></article></div>
 <article class="warning remark-like" id="wrn_SRdivTest"><h4 class="heading">
 <span class="type">Atenção</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
 </h4>
-<p id="p-7">The divergence test is a “one way test”. It tells us that if <span class="process-math">\(\lim_{n\rightarrow\infty}a_n\)</span> is nonzero, or fails to exist, then the series <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> diverges. But it tells us <em class="emphasis">absolutely nothing</em> when <span class="process-math">\(\lim_{n\rightarrow\infty}a_n=0\text{.}\)</span> In particular, it is perfectly possible for a series <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> to <em class="emphasis">diverge</em> even  though  <span class="process-math">\(\lim_{n\rightarrow\infty}a_n=0\text{.}\)</span> An example is <span class="process-math">\(\sum_{n=1}^\infty \frac{1}{n}\text{.}\)</span> We'll show in Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a>, below, that it diverges.</p></article><p id="p-8">Now while convergence or divergence of series like  <span class="process-math">\(\sum_{n=1}^\infty \frac{1}{n}\)</span> can be determined using some  clever tricks — see the optional §<a href="section-1.html#sec_HarminicBasel" class="internal" title="Subseção 1.8: Optional — Harmonic and Basel Series">Subseção 1.8</a> —,  it would be much better of have methods that are more systematic and  rely less on being sneaky. Over the next subsections we will discuss  several methods for testing series for convergence.</p>
-<p id="p-9">Note that while these tests will tell us whether or not a series  converges, they do not (except in rare cases) tell us what the  series adds up to. For example, the test we will  see in the next subsection tells us quite immediately that the series</p>
+<p id="p-8">O teste de divergência é um “teste de sentido único”. Afirma que <span class="process-math">\(\lim_{n\rightarrow\infty}a_n\)</span> não é zero, ou não existe, então a série <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> diverge. Mas não nos diz <em class="emphasis">absolutamente nada</em> quando <span class="process-math">\(\lim_{n\rightarrow\infty}a_n=0\text{.}\)</span> Em particular, é perfeitamente possível que uma série <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> <em class="emphasis">divergir</em> embora  <span class="process-math">\(\lim_{n\rightarrow\infty}a_n=0\text{.}\)</span> A série <span class="process-math">\(\sum_{n=1}^\infty \frac{1}{n}\)</span> é um exemplo disto. Mostraremos no <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.9: O p-teste: \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.9</a>, que ela diverge.</p></article><p id="p-9">Agora, enquanto a convergência ou divergência de séries como  <span class="process-math">\(\sum_{n=1}^\infty \frac{1}{n}\)</span> pode ser determinado usando alguns truques inteligentes. Nas próximas subseções, discutiremos vários métodos para testar a convergência de séries.</p>
+<p id="p-10">Observe que, embora esses testes nos digam se uma série converge ou não, eles não (exceto em casos raros) nos dizem qual é a soma da série. Por exemplo, o teste que veremos na próxima subseção nos diz imediatamente que a série</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{gather*}
 \sum_{n=1}^\infty \frac{1}{n^3}
 \end{gather*}
 </div>
-<p class="continuation">converges. However it does not tell us its value <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a>.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">The Integral Test</span>
+<p class="continuation">converge. No entanto, não nos diz o seu valor.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">O teste da Integral</span>
 </h3>
-<p id="p-10">In the integral test, we think of a series <span class="process-math">\(\sum_{n=1}^\infty a_n\text{,}\)</span> that  we cannot evaluate explicitly, as the area of a union of rectangles, with <span class="process-math">\(a_n\)</span> representing the area of a rectangle of width one and  height <span class="process-math">\(a_n\text{.}\)</span> Then we compare that area with the area represented  by an integral, that we can evaluate explicitly, much as we did in  Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_IMPcomparison" missing or not unique]</code>, the comparison test for improper integrals. We'll start with a simple example,  to illustrate the idea. Then we'll move on to a formulation of the test in general.</p>
+<p id="p-11">No teste da integral, pensamos em uma série <span class="process-math">\(\sum_{n=1}^\infty a_n\text{,}\)</span> que não podemos avaliar explicitamente, como a área de uma união de retângulos, com <span class="process-math">\(a_n\)</span> representando a área de um retângulo de largura um e altura <span class="process-math">\(a_n\text{.}\)</span> Então comparamos essa área com a área representada por uma integral, que podemos avaliar explicitamente. Começaremos com um exemplo simples, para ilustrar a ideia. Em seguida, passaremos a uma formulação do teste em geral.</p>
 <article class="example example-like" id="eg_firstIntTest"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_firstIntTest"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Convergence of the harmonic series.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_firstIntTest"><article class="example example-like"><p id="p-11">Visualise the terms of the harmonic series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}\)</span> as a bar graph — each term is a rectangle of  height <span class="process-math">\(\frac{1}{n}\)</span> and width <span class="process-math">\(1\text{.}\)</span> The limit of the series is then the limiting area of this union of rectangles. Consider the sketch on the left below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/harmonic_int.svg" role="img" class="contained"></div></div></div>
-<p id="p-12">It shows that the area of the shaded columns, <span class="process-math">\(\sum_{n=1}^4\frac{1}{n}\text{,}\)</span> is bigger than the area under the curve <span class="process-math">\(y=\frac{1}{x}\)</span> with  <span class="process-math">\(1\le x\le 5\text{.}\)</span> That is</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Convergência da série harmônica.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_firstIntTest"><article class="example example-like"><p id="p-12">Visualize os termos da série harmônica <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}\)</span> como um gráfico de barras — cada termo é um retângulo de altura <span class="process-math">\(\frac{1}{n}\)</span> e largura <span class="process-math">\(1\text{.}\)</span> O limite da série é então a área limite desta união de retângulos.</p>
+<figure class="figure figure-like" id="fig1"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/harmonic_int.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-13">Considere o esboço à esquerda da<a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.5">Figura 1.5</a>. Isto mostra que a área das colunas sombreadas, <span class="process-math">\(\sum_{n=1}^4\frac{1}{n}\text{,}\)</span> é maior que a área sob a curva <span class="process-math">\(y=\frac{1}{x}\)</span> com <span class="process-math">\(1\le x\le 5\text{.}\)</span> Oe seja</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html" id="md-2">
 \begin{align*}
 \sum_{n=1}^4 \frac{1}{n} &amp; \ge \int_1^5 \frac{1}{x}\dee{x}
 \end{align*}
 </div>
-<p class="continuation">If we were to continue drawing the columns all the way out to infinity,  then we would have</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+<p class="continuation">Se continuássemos desenhando as colunas infinitamente, teríamos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html" id="md-3">
 \begin{align*}
 \sum_{n=1}^\infty \frac{1}{n} &amp; \ge \int_1^\infty \frac{1}{x}\dee{x}
 \end{align*}
 </div>
-<p class="continuation">We are able to compute this improper integral exactly:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+<p class="continuation">Podemos calcular exatamente essa integral imprópria:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html" id="md-4">
 \begin{align*}
 \int_1^\infty \frac{1}{x} \dee{x} &amp;= \lim_{R \to \infty} \Big[ \log|x| \Big]_1^R = +\infty
 \end{align*}
 </div>
-<p class="continuation">That is the area under the curve diverges to <span class="process-math">\(+\infty\)</span> and so the area represented by the columns must also diverge to  <span class="process-math">\(+\infty\text{.}\)</span></p>
-<p id="p-13">It should be clear that the above argument can be quite easily  generalised. For example the same argument holds  <em class="emphasis">mutatis mutandis</em> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a> for the series</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+<p class="continuation">Ou seja, a área sob a curva diverge para <span class="process-math">\(+\infty\)</span> e, portanto, a área representada pelas colunas também deve divergir para <span class="process-math">\(+\infty\text{.}\)</span></p>
+<p id="p-14">Deve ficar claro que o argumento acima pode ser facilmente generalizado. Por exemplo, o mesmo argumento vale para a série</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html" id="md-5">
 \begin{gather*}
 \sum_{n=1}^\infty \frac{1}{n^2}
 \end{gather*}
 </div>
-<p class="continuation">Indeed we see from the sketch on the right above that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+<p class="continuation">De fato, vemos à direita da <a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.5">Figura 1.5</a> que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html" id="md-6">
 \begin{align*}
 \sum_{n=2}^N \frac{1}{n^2} &amp;\le \int_1^N \frac{1}{x^2}\dee{x}
 \end{align*}
 </div>
-<p class="continuation">and hence</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+<p class="continuation">e, portanto</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html" id="md-7">
 \begin{gather*}
 \sum_{n=2}^\infty \frac{1}{n^2} \leq \int_1^\infty \frac{1}{x^2}\dee{x}
 \end{gather*}
 </div>
-<p class="continuation">This last improper integral is easy to evaluate:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+<p class="continuation">Esta última integral imprópria é fácil de calcular:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html" id="md-8">
 \begin{align*}
 \int_2^\infty \frac{1}{x^2}\dee{x} &amp;= \lim_{R\to\infty} \left[ - \frac{1}{x} \right]_2^R\\
 &amp;= \lim_{R\to\infty} \left( \frac{1}{2} - \frac{1}{R} \right) = \frac{1}{2}
 \end{align*}
 </div>
-<p class="continuation">Thus we know that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+<p class="continuation">Assim sabemos que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html" id="md-9">
 \begin{gather*}
-\sum_{n=1}^\infty \frac{1}{n^2} = 1+ \sum_{n=2}^\infty \frac{1}{n^2} \leq \frac{3}{2}.
+\sum_{n=1}^\infty \frac{1}{n^2} = 1+ \sum_{n=2}^\infty \frac{1}{n^2} \leq \frac{3} {2}.
 \end{gather*}
 </div>
-<p class="continuation">and so the series must converge.</p></article></div>
-<p id="p-14">The above arguments are formalised in the following theorem.</p>
+<p class="continuation">e assim a série deve convergir.</p></article></div>
+<p id="p-15">Os argumentos acima são formalizados no seguinte teorema.</p>
 <article class="theorem theorem-like" id="thm_SRintegralTest"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Integral Test.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Integral Test.</span>
 </h4>
-<p id="p-15">Let <span class="process-math">\(N_0\)</span> be any natural number. If <span class="process-math">\(f(x)\)</span> is a function which is defined  and continuous for all <span class="process-math">\(x\ge N_0\)</span> and which obeys</p>
+<p id="p-16">Seja <span class="process-math">\(N_0\)</span> qualquer número natural. Se <span class="process-math">\(f(x)\)</span> for uma função definida e contínua para todos os <span class="process-math">\(x\ge N_0\)</span> e que obedece</p>
 <ol class="lower-roman">
-<li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(f(x)\ge 0\)</span> for all <span class="process-math">\(x\ge N_0\)</span> and</p></li>
-<li id="li-5"><p id="p-derived-li-5"><span class="process-math">\(f(x)\)</span> decreases as <span class="process-math">\(x\)</span> increases and</p></li>
-<li id="li-6"><p id="p-derived-li-6"><span class="process-math">\(f(n)=a_n\)</span> for all  <span class="process-math">\(n\ge N_0\text{.}\)</span></p></li>
+<li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(f(x)\ge 0\)</span> para todos os <span class="process-math">\(x\ge N_0\)</span> e</p></li>
+<li id="li-5"><p id="p-derived-li-5"><span class="process-math">\(f(x)\)</span> diminui à medida que <span class="process-math">\(x\)</span> aumenta e</p></li>
+<li id="li-6"><p id="p-derived-li-6"><span class="process-math">\(f(n)=a_n\)</span> para todos os <span class="process-math">\(n\ge N_0\text{.}\)</span></p></li>
 </ol>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/intTest.svg" role="img" class="contained"></div></div></div>
-<p id="p-16">Then</p>
+<p id="p-17">Então</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\sum_{n=1}^\infty a_n\text{ converges }\iff \int_{N_0}^\infty f(x)\ dx\text{ converges}
+\sum_{n=1}^\infty a_n\text{ converge }\iff \int_{N_0}^\infty f(x)\ dx\text{ converge }
 \end{equation*}
 </div>
-<p class="continuation">Furthermore, when the series converges, the truncation error</p>
+<p class="continuation">Além disso, quando a série converge, o erro de truncamento</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\bigg|\sum_{n=1}^\infty a_n-\sum_{n=1}^N a_n\bigg|\le \int_N^\infty f(x)\ dx\qquad\text{for all $N\ge N_0$}
+\bigg|\sum_{n=1}^\infty a_n-\sum_{n=1}^N a_n\bigg|\le \int_N^\infty f(x)\ dx\qquad\text{para
+todo
+$N\ge N_0$}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-17">Let <span class="process-math">\(I\)</span> be any fixed integer with <span class="process-math">\(I \gt N_0\text{.}\)</span> Then</p>
+</div></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-18">Seja <span class="process-math">\(I\)</span> qualquer inteiro fixo com <span class="process-math">\(I \gt N_0\text{.}\)</span> Então</p>
 <ul class="disc">
-<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converges if and only if  <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converges — removing a fixed finite number of terms from a series cannot impact whether or not it converges.</p></li>
-<li id="li-8"><p id="p-derived-li-8">Since <span class="process-math">\(a_n\ge 0\)</span> for all <span class="process-math">\(n\ge I \gt N_0\text{,}\)</span> the sequence of partial sums  <span class="process-math">\(s_\ell=\sum_{n=I}^\ell a_n\)</span> obeys <span class="process-math">\(s_{\ell+1} = s_\ell+a_{n+1} \ge s_\ell\text{.}\)</span> That is, <span class="process-math">\(s_\ell\)</span> increases as <span class="process-math">\(\ell\)</span> increases.</p></li>
-<li id="li-9"><p id="p-derived-li-9">So <span class="process-math">\(\big\{s_\ell\big\}\)</span> must either converge to some finite number or increase to infinity. That is, either <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converges to a finite number or it is <span class="process-math">\(+\infty\text{.}\)</span></p></li>
+<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converge se e somente se <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converge — remover um número finito fixo de termos de uma série não pode afetar se ela converge ou não.</p></li>
+<li id="li-8"><p id="p-derived-li-8">Como <span class="process-math">\(a_n\ge 0\)</span> para todos os <span class="process-math">\(n\ge I \gt N_0\text{,}\)</span> a sequência de somas parciais <span class="process-math">\(s_\ell=\sum_{n=I}^\ell a_n\)</span> obedece <span class="process-math">\(s_{\ell+1} = s_\ell+a_{n+1} \ge s_\ell\text{.}\)</span> Ou seja, <span class="process-math">\(s_\ell\)</span> aumenta à medida que <span class="process-math">\(\ell\)</span> aumenta.</p></li>
+<li id="li-9"><p id="p-derived-li-9">Portanto, <span class="process-math">\(\big\{s_\ell\big\}\)</span> deve convergir para algum número finito ou aumentar para infinito. Ou seja, <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converge para um número finito ou é <span class="process-math">\(+\infty\text{.}\)</span></p></li>
 </ul>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="images/intTest3.svg" role="img" class="contained"></div></div></div>
-<p id="p-18">Look at the figure above. The shaded area in the figure is  <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> because</p>
+<figure class="figure figure-like" id="fig2"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="images/intTest3.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-19">A área sombreada na <a href="" class="xref" data-knowl="./knowl/fig2.html" title="Figura 1.7">Figura 1.7</a> é <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> pois</p>
 <ul class="disc">
-<li id="li-10"><p id="p-derived-li-10">the first shaded rectangle has height <span class="process-math">\(a_I\)</span> and width <span class="process-math">\(1\text{,}\)</span> and hence area <span class="process-math">\(a_I\)</span> and</p></li>
-<li id="li-11"><p id="p-derived-li-11">the second shaded rectangle has height <span class="process-math">\(a_{I+1}\)</span> and width <span class="process-math">\(1\text{,}\)</span> and hence area <span class="process-math">\(a_{I+1}\text{,}\)</span> and so on</p></li>
+<li id="li-10"><p id="p-derived-li-10">o primeiro retângulo sombreado tem altura <span class="process-math">\(a_I\)</span> e largura <span class="process-math">\(1\)</span> e, portanto, área <span class="process-math">\(a_I\)</span> e</p></li>
+<li id="li-11"><p id="p-derived-li-11">o segundo retângulo sombreado tem altura <span class="process-math">\(a_{I+1}\)</span> e largura <span class="process-math">\(1\)</span> e, portanto, área <span class="process-math">\(a_{I+1}\)</span> e assim por diante</p></li>
 </ul>
-<p class="continuation">This shaded area is smaller than the area under the curve <span class="process-math">\(y=f(x)\)</span> for  <span class="process-math">\(I-1\le x \lt \infty\text{.}\)</span> So</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">Essa área sombreada é menor que a área sob a curva <span class="process-math">\(y=f(x)\)</span> para <span class="process-math">\(I-1\le x \lt \infty\text{.}\)</span> Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig2.html">
 \begin{equation*}
 \sum_{n=I}^\infty a_n \le \int_{I-1}^\infty f(x)\ dx
 \end{equation*}
 </div>
-<p class="continuation">and, if the integral is finite, the sum <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> is  finite too. Furthermore, the desired bound on the truncation error is just  the special case of this inequality with <span class="process-math">\(I=N+1\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+<p class="continuation">e, se a integral for finita, a soma <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> também será finita. Além disso, o limite desejado no erro de truncamento é apenas o caso especial desta desigualdade com <span class="process-math">\(I=N+1\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig2.html" id="md-10">
 \begin{gather*}
 \sum_{n=1}^\infty a_n - \sum_{n=1}^N a_n =\sum_{n=N+1}^\infty a_n \le \int_N^\infty f(x)\ dx
 \end{gather*}
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="images/intTest4.svg" role="img" class="contained"></div></div></div>
-<p id="p-19">For the “divergence case” look at the figure above.  The (new) shaded area in the figure is again <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span>  because</p>
+<figure class="figure figure-like" id="fig3"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="images/intTest4.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-20">Para o “caso de divergência” veja a<a href="" class="xref" data-knowl="./knowl/fig3.html" title="Figura 1.8">Figura 1.8</a>. A (nova) área sombreada na figura é novamente <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> porque</p>
 <ul class="disc">
-<li id="li-12"><p id="p-derived-li-12">the first shaded rectangle has height <span class="process-math">\(a_I\)</span> and width <span class="process-math">\(1\text{,}\)</span> and hence area <span class="process-math">\(a_I\)</span> and</p></li>
-<li id="li-13"><p id="p-derived-li-13">the second shaded rectangle has height <span class="process-math">\(a_{I+1}\)</span> and width <span class="process-math">\(1\text{,}\)</span> and hence area <span class="process-math">\(a_{I+1}\text{,}\)</span> and so on</p></li>
+<li id="li-12"><p id="p-derived-li-12">o primeiro retângulo sombreado tem altura <span class="process-math">\(a_I\)</span> e largura <span class="process-math">\(1\)</span> e, portanto, área <span class="process-math">\(a_I\)</span> e</p></li>
+<li id="li-13"><p id="p-derived-li-13">o segundo retângulo sombreado tem altura <span class="process-math">\(a_{I+1}\)</span> e largura <span class="process-math">\(1\)</span> e, portanto, área <span class="process-math">\(a_{I+1}\)</span> e assim por diante</p></li>
 </ul>
-<p class="continuation">This time the shaded area is larger than the area under the curve  <span class="process-math">\(y=f(x)\)</span> for <span class="process-math">\(I\le x \lt \infty\text{.}\)</span> So</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">Desta vez, a área sombreada é maior que a área sob a curva <span class="process-math">\(y=f(x)\)</span> para <span class="process-math">\(I\le x \lt
+\infty\text{.}\)</span> Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig3.html">
 \begin{equation*}
 \sum_{n=I}^\infty a_n \ge \int_I^\infty f(x)\ dx
 \end{equation*}
 </div>
-<p class="continuation">and, if the integral is infinite, the sum <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> is infinite too.</p></article></div>
-<p id="p-20">Now that we have the integral test, it is straightforward to determine  for which values of <span class="process-math">\(p\)</span> the series <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p>
+<p class="continuation">e, se a integral for infinita, a soma <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> também será infinita.</p></article></div>
+<p id="p-21">Agora que temos o teste da integral, é simples determinar para quais valores de <span class="process-math">\(p\)</span> a série</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
 \begin{gather*}
 \sum_{n=1}^\infty \frac{1}{n^p}
@@ -322,24 +324,26 @@ true);
 </div>
 <p class="continuation">converges.</p>
 <article class="example example-like" id="eg_SRpTest"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRpTest"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">The <span class="process-math">\(p\)</span> test:  <span class="process-math">\(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRpTest"><article class="example example-like"><p id="p-21">Let <span class="process-math">\(p \gt 0\text{.}\)</span> We'll now use the integral test to determine whether or not the series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> (which is sometimes called the <span class="process-math">\(p\)</span>-series) converges.</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">O <span class="process-math">\(p\)</span>-teste: <span class="process-math">\(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRpTest"><article class="example example-like"><p id="p-22">Seja <span class="process-math">\(p \gt 0\text{.}\)</span> Agora usaremos o teste da integral para determinar se a série <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> (que às vezes é chamada de <span class="process-math">\(p\)</span>-series) converge.</p>
 <ul class="disc">
-<li id="li-14"><p id="p-derived-li-14">To do so, we need a function <span class="process-math">\(f(x)\)</span> that obeys <span class="process-math">\(f(n)=a_n=\frac{1}{n^p}\)</span> for all <span class="process-math">\(n\)</span>  bigger than some <span class="process-math">\(N_0\text{.}\)</span> Certainly <span class="process-math">\(f(x)=\frac{1}{x^p}\)</span> obeys  <span class="process-math">\(f(n)=\frac{1}{n^p}\)</span> for all <span class="process-math">\(n\ge 1\text{.}\)</span> So let's pick this <span class="process-math">\(f\)</span> and try <span class="process-math">\(N_0=1\text{.}\)</span> (We can always increase <span class="process-math">\(N_0\)</span> later if we need to.)</p></li>
+<li id="li-14"><p id="p-derived-li-14">Para isso, precisamos de uma função <span class="process-math">\(f(x)\)</span> que obedeça <span class="process-math">\(f(n)=a_n=\frac{1}{n^p}\)</span> para todo <span class="process-math">\(n\)</span> maior que algum <span class="process-math">\(N_0\text{.}\)</span> Certamente <span class="process-math">\(f(x)=\frac{1}{x^p}\)</span> obedece <span class="process-math">\(f(n)=\frac{1}{n^p}\)</span> para todo <span class="process-math">\(n\ge 1\text{.}\)</span> Então, vamos escolher este <span class="process-math">\(f\)</span> e tentar <span class="process-math">\(N_0=1\text{.}\)</span> (Podemos sempre aumentar <span class="process-math">\(N_0\text{,}\)</span> se for necessário.)</p></li>
 <li id="li-15">
-<p id="p-22">This function also obeys the other two conditions of  Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.5: The Integral Test">Teorema 1.5</a>:</p>
+<p id="p-23">Esta função também obedece às outras duas condições do <a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.6: The Integral Test">Teorema 1.6</a> :</p>
 <ol class="lower-roman">
-<li id="li-16"><p id="p-derived-li-16"><span class="process-math">\(f(x) \gt 0\)</span> for all <span class="process-math">\(x\ge N_0=1\)</span> and</p></li>
-<li id="li-17"><p id="p-derived-li-17"><span class="process-math">\(f(x)\)</span> decreases as <span class="process-math">\(x\)</span> increases because <span class="process-math">\(f'(x)=-p\frac{1}{x^{p+1}} \lt 0\)</span> for all <span class="process-math">\(x\ge N_0=1\text{.}\)</span></p></li>
+<li id="li-16"><p id="p-derived-li-16"><span class="process-math">\(f(x) \gt 0\)</span> para todo <span class="process-math">\(x\ge N_0=1\)</span> e</p></li>
+<li id="li-17"><p id="p-derived-li-17"><span class="process-math">\(f(x)\)</span> descrece à medida que <span class="process-math">\(x\)</span> cresce já que  <span class="process-math">\(f'(x)=-p\frac{1}{x^{p+1}} \lt
+0\)</span> para todo <span class="process-math">\(x\ge N_0=1\text{.}\)</span></p></li>
 </ol>
 </li>
-<li id="li-18"><p id="p-derived-li-18">So the integral test tells us that the series   <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> converges if and only if the integral <span class="process-math">\(\int_1^\infty\frac{dx}{x^p}\)</span> converges.</p></li>
-<li id="li-19"><p id="p-derived-li-19">We have already seen, in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_IMPp1" missing or not unique]</code>, that  the integral <span class="process-math">\(\int_1^\infty\frac{dx}{x^p}\)</span> converges if and only if <span class="process-math">\(p \gt 1\text{.}\)</span></p></li>
+<li id="li-18"><p id="p-derived-li-18">Portanto, o teste da integral nos diz que a série <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> converge se e somente se a integral <span class="process-math">\(\int_1^\infty\frac{dx}{x^p}\)</span> converge.</p></li>
+<li id="li-19"><p id="p-derived-li-19">Sabemos que a integral <span class="process-math">\(\int_1^\infty\frac{dx}{x^p}\)</span> converge se somente se <span class="process-math">\(p \gt 1\text{.}\)</span></p></li>
 </ul>
-<p class="continuation">So we conclude that <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> converges if and only if <span class="process-math">\(p \gt 1\text{.}\)</span> This is sometimes called the <span class="process-math">\(p\)</span>-test.</p>
+<p class="continuation">Portanto, concluímos que <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> converge se e somente se <span class="process-math">\(p \gt 1\text{.}\)</span> Este às vezes é chamado de  <span class="process-math">\(p\)</span>-teste.</p>
 <ul class="disc">
-<li id="li-20"><p id="p-derived-li-20">In particular, the series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}\text{,}\)</span> which is called the harmonic series, has <span class="process-math">\(p=1\)</span> and so diverges.  As we add more and more terms of this series together, the terms we add,  namely <span class="process-math">\(\frac{1}{n}\text{,}\)</span> get smaller and smaller and tend to zero, but they tend to zero so slowly that the full sum is still infinite.</p></li>
-<li id="li-21"><p id="p-derived-li-21">On the other hand, the series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^{1.000001}}\)</span> has <span class="process-math">\(p = 1.000001 \gt 1\)</span> and so converges. This time as we add more and more  terms of this series together, the terms we add, namely  <span class="process-math">\(\frac{1}{n^{1.000001}}\text{,}\)</span> tend to zero (just) fast enough that  the full sum is finite. Mind you, for this example, the convergence takes place very slowly — you have to take a huge number of terms to get a decent approximation to the full sum. If we approximate <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^{1.000001}}\)</span> by the truncated series <span class="process-math">\(\sum_{n=1}^N\frac{1}{n^{1.000001}}\text{,}\)</span> we make an error of at most<div class="displaymath process-math" data-contains-math-knowls="" id="md-12">
+<li id="li-20"><p id="p-derived-li-20">Em particular, a série <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}\text{,}\)</span> que é chamada de série harmônica, tem <span class="process-math">\(p=1\)</span> e assim diverge. À medida que adicionamos mais e mais termos dessa série, os termos que adicionamos, a saber, <span class="process-math">\(\frac{1}{n}\text{,}\)</span> ficam cada vez menores e tendem a zero, mas tendem a zero muito lentamente que a soma total ainda é infinita.</p></li>
+<li id="li-21"><p id="p-derived-li-21">Por outro lado, a série <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^{1.000001}}\)</span> tem <span class="process-math">\(p = 1.000001
+\gt 1\)</span> e assim converge. Desta vez, à medida que adicionamos mais termos desta série, os termos que adicionamos, a saber, <span class="process-math">\(\frac{1}{n^{1.000001}}\text{,}\)</span> tendem a zero (apenas) rápido o suficiente para que soma total seja finita. Lembre-se, para este exemplo, a convergência ocorre muito lentamente — você tem que pegar um grande número de termos para obter uma aproximação decente da soma total. Se aproximarmos <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^{1.000001}}\)</span> pela série truncada <span class="process-math">\(\sum_{n=1}^N\frac{1}{n^{1.000001}}\text{,}\)</span> cometemos um erro de no máximo<div class="displaymath process-math" data-contains-math-knowls="" id="md-12">
 \begin{align*}
 \int_N^\infty \frac{dx}{x^{1.000001}}
 &amp; = \lim_{R\rightarrow\infty} \int_N^R \frac{dx}{x^{1.000001}}\\
@@ -347,80 +351,91 @@ true);
 \Big[\frac{1}{R^{0.000001}}-\frac{1}{N^{0.000001}}\Big]\\
 &amp; =\frac{10^6}{N^{0.000001}}
 \end{align*}
-</div>This does tend to zero as <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> but really slowly.</p></li>
+</div>Isso tende a zero quando <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> mas muito lentamente.</p></li>
 </ul></article></div>
-<p id="p-23">We now know that the dividing line between convergence and divergence  of <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> occurs at <span class="process-math">\(p=1\text{.}\)</span> We can dig  a little deeper and ask ourselves how much more quickly than  <span class="process-math">\(\frac{1}{n}\)</span> the <span class="process-math">\(n^{\rm th}\)</span> term  needs to shrink in order for the series to converge.  We know that for large <span class="process-math">\(x\text{,}\)</span> the function <span class="process-math">\(\log x\)</span> is smaller than  <span class="process-math">\(x^a\)</span> for any positive <span class="process-math">\(a\)</span> — you can convince yourself of this with  a quick application of L'Hôpital's rule. So it is not unreasonable  to ask whether the series</p>
+<p id="p-24">Agora sabemos que a linha divisória entre convergência e divergência de <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> ocorre em <span class="process-math">\(p=1\text{.}\)</span> Podemos ir um pouco mais a fundo e perguntar quanto mais rápido do que <span class="process-math">\(\frac{1}{n}\)</span> o termo <span class="process-math">\(n^{\rm th}\)</span> precisa diminuir para que a série convirja. Sabemos que para grandes valores para <span class="process-math">\(x\text{,}\)</span> a função <span class="process-math">\(\log x\)</span> é menor que <span class="process-math">\(x^a\)</span> para qualquer <span class="process-math">\(a\)</span> — você pode se convencer disso com uma rápida aplicação da regra de L'Hôpital. Portanto, não é irracional perguntar se a série</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-13">
 \begin{gather*}
 \sum_{n=2}^\infty \frac{1}{n \log n}
 \end{gather*}
 </div>
-<p class="continuation">converges. Notice that we sum from <span class="process-math">\(n=2\)</span> because when <span class="process-math">\(n=1, n\log n=0\text{.}\)</span>  And we don't need to stop there <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a>. We can analyse the convergence of  this sum with any power of <span class="process-math">\(\log n\text{.}\)</span></p>
+<p class="continuation">converge. Observe que somamos de <span class="process-math">\(n=2\)</span> porque quando <span class="process-math">\(n=1, n\log n=0\text{.}\)</span> Podemos analisar a convergência dessa soma com qualquer potência de <span class="process-math">\(\log n\text{.}\)</span></p>
 <article class="example example-like" id="eg_SRlnpTest"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRlnpTest"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRlnpTest"><article class="example example-like"><p id="p-24">Let <span class="process-math">\(p \gt 0\text{.}\)</span> We'll now use the integral test to determine whether or not the series <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span> converges.</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRlnpTest"><article class="example example-like"><p id="p-25">Seja <span class="process-math">\(p \gt 0\text{.}\)</span> Agora usaremos o teste integral para determinar se a série <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span> converge.</p>
 <ul class="disc">
-<li id="li-22"><p id="p-derived-li-22">As in the last example, we start by choosing a function that obeys  <span class="process-math">\(f(n)=a_n=\frac{1}{n(\log n)^p}\)</span> for all <span class="process-math">\(n\)</span>  bigger than some <span class="process-math">\(N_0\text{.}\)</span> Certainly <span class="process-math">\(f(x)=\frac{1}{x(\log x)^p}\)</span> obeys  <span class="process-math">\(f(n)=\frac{1}{n(\log n)^p}\)</span> for all <span class="process-math">\(n\ge 2\text{.}\)</span> So let's use that <span class="process-math">\(f\)</span> and try <span class="process-math">\(N_0=2\text{.}\)</span></p></li>
+<li id="li-22"><p id="p-derived-li-22">Como no último exemplo, começamos escolhendo uma função que obedece <span class="process-math">\(f(n)=a_n=\frac{1}{n(\log
+n)^p}\)</span> para todo <span class="process-math">\(n\)</span> maior que algum <span class="process-math">\(N_0\text{.}\)</span> Certamente <span class="process-math">\(f(x)=\frac{1}{x(\log x)^p}\)</span> obedece <span class="process-math">\(f(n)=\frac{1}{n(\log n)^p}\)</span> para todo <span class="process-math">\(n\ge 2\text{.}\)</span> Então, vamos usar esse <span class="process-math">\(f\)</span> e tentar <span class="process-math">\(N_0=2\text{.}\)</span></p></li>
 <li id="li-23">
-<p id="p-25">Now let's check the other two conditions of  Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.5: The Integral Test">Teorema 1.5</a>:</p>
+<p id="p-26">Agora vamos verificar as outras duas condições do<a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.6: The Integral Test">Teorema 1.6</a>:</p>
 <ol class="lower-roman">
-<li id="li-24"><p id="p-derived-li-24">Both <span class="process-math">\(x\)</span> and <span class="process-math">\(\log x\)</span> are positive for all <span class="process-math">\(x \gt 1\text{,}\)</span> so <span class="process-math">\(f(x) \gt 0\)</span> for all <span class="process-math">\(x\ge N_0=2\text{.}\)</span></p></li>
-<li id="li-25"><p id="p-derived-li-25">As <span class="process-math">\(x\)</span> increases both <span class="process-math">\(x\)</span> and <span class="process-math">\(\log x\)</span> increase and so <span class="process-math">\(x(\log x)^p\)</span>  increases and <span class="process-math">\(f(x)\)</span> decreases.</p></li>
+<li id="li-24"><p id="p-derived-li-24">Tanto <span class="process-math">\(x\)</span> quanto <span class="process-math">\(\log x\)</span> são positivos para todos os <span class="process-math">\(x \gt 1\text{,}\)</span> então <span class="process-math">\(f(x) \gt
+0\)</span> para todos os <span class="process-math">\(x\ge N_0=2\text{.}\)</span></p></li>
+<li id="li-25"><p id="p-derived-li-25">À medida que <span class="process-math">\(x\)</span> aumenta, <span class="process-math">\(x\)</span> e <span class="process-math">\(\log x\)</span> aumentam e, portanto, <span class="process-math">\(x(\log
+x)^p\)</span> aumenta e <span class="process-math">\(f(x)\)</span> diminui.</p></li>
 </ol>
 </li>
-<li id="li-26"><p id="p-derived-li-26">So the integral test tells us that the series   <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span> converges if and only if  the integral <span class="process-math">\(\int_2^\infty\frac{dx}{x (\log x)^p}\)</span> converges.</p></li>
-<li id="li-27"><p id="p-derived-li-27">To test the convergence of the integral, we make the substitution <span class="process-math">\(u=\log x\text{,}\)</span> <span class="process-math">\(du=\frac{dx}{x}\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
+<li id="li-26"><p id="p-derived-li-26">Assim, o teste integral nos diz que a série <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log
+n)^p}\)</span> converge se e somente se a integral <span class="process-math">\(\int_2^\infty\frac{dx}{x (\log x)^p}\)</span> converge.</p></li>
+<li id="li-27"><p id="p-derived-li-27">Para testar a convergência da integral, fazemos a substituição <span class="process-math">\(u=\log x\text{,}\)</span> <span class="process-math">\(du=\frac{dx}{x}\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
 \begin{gather*}
 \int_2^R \frac{dx}{x (\log x)^p}
 =\int_{\log 2}^{\log R}\frac{du}{u^p}
 \end{gather*}
-</div>We already know that the integral the integral <span class="process-math">\(\int_1^\infty\frac{du}{u^p}\text{,}\)</span> and hence the integral <span class="process-math">\(\int_2^R \frac{dx}{x (\log x)^p}\text{,}\)</span> converges if and  only if <span class="process-math">\(p \gt 1\text{.}\)</span></p></li>
+</div>Já sabemos que a integral é a integral <span class="process-math">\(\int_1^\infty\frac{du}{u^p}\)</span> e, portanto, a integral <span class="process-math">\(\int_2^R \frac{dx}{x (\log x)^p}\text{,}\)</span> converge se e somente se <span class="process-math">\(p \gt 1\text{.}\)</span></p></li>
 </ul>
-<p class="continuation">So we conclude that  <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span>  converges if and only if <span class="process-math">\(p \gt 1\text{.}\)</span></p></article></div></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">The Comparison Test</span>
+<p class="continuation">Portanto, concluímos que <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span> converge se e somente se <span class="process-math">\(p
+\gt 1\text{.}\)</span></p></article></div></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">O Teste da Comparação</span>
 </h3>
-<p id="p-26">Our next convergence test is the comparison test. It is much like  the comparison test for improper integrals (see Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_IMPcomparison" missing or not unique]</code>) and is true for much the same reasons.  The rough idea is quite simple. A sum of larger terms  must be bigger than a sum of smaller terms. So if we know the  big sum converges, then the small sum must converge too. On the other  hand, if we know the small sum diverges, then the big sum must also  diverge. Formalising this idea gives the following theorem.</p>
+<p id="p-27">Nosso próximo teste de convergência é o teste de comparação. É muito parecido com o teste de comparação para integrais impróprias e é válido pelas mesmas razões. A ideia aproximada é bastante simples. Uma soma de termos maiores deve ser maior que uma soma de termos menores. Então, se sabemos que a grande soma converge, a pequena soma também deve convergir. Por outro lado, se sabemos que a pequena soma diverge, a grande soma também deve divergir. A formalização dessa ideia fornece o seguinte teorema.</p>
 <article class="theorem theorem-like" id="thm_SRcomparisonTest"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">The Comparison Test.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">O Teste da Comparação.</span>
 </h4>
-<p id="p-27">Let <span class="process-math">\(N_0\)</span> be a natural number and let <span class="process-math">\(K \gt 0\text{.}\)</span></p>
+<p id="p-28">Seja <span class="process-math">\(N_0\)</span> um número natural e seja <span class="process-math">\(K \gt 0\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-28"><p id="p-derived-li-28">If <span class="process-math">\(|a_n|\le K c_n\)</span> for all <span class="process-math">\(n\ge N_0\)</span> and  <span class="process-math">\(\sum\limits_{n=0}^\infty c_n\)</span> converges, then <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> converges.</p></li>
-<li id="li-29"><p id="p-derived-li-29">If <span class="process-math">\(a_n\ge K d_n\ge0 \)</span> for all <span class="process-math">\(n\ge N_0\)</span> and  <span class="process-math">\(\sum\limits_{n=0}^\infty d_n\)</span> diverges, then <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> diverges.</p></li>
-</ol></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="title">“Proof”.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-28">We will not prove this theorem here. We'll just observe that it is very  reasonable. That's why there are quotation marks around “Proof”. For an actual proof see the optional section <a href="section-1.html#sec_CompProof" class="internal" title="Subseção 1.9: Optional — Some Proofs">Subseção 1.9</a>.</p>
+<li id="li-28"><p id="p-derived-li-28">Se <span class="process-math">\(|a_n|\le K c_n\)</span> para todo <span class="process-math">\(n\ge N_0\)</span> e  <span class="process-math">\(\sum\limits_{n=0}^\infty c_n\)</span> converge, então <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> converge.</p></li>
+<li id="li-29"><p id="p-derived-li-29">Se <span class="process-math">\(a_n\ge K d_n\ge0\)</span> para todo <span class="process-math">\(n\ge N_0\)</span> e  <span class="process-math">\(\sum\limits_{n=0}^\infty d_n\)</span> diverge, então <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> diverge.</p></li>
+</ol></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="title">“Demonstração”.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-29">Não Demonstraremos este teorema aqui. Vamos apenas fazer algumas observações. É por isso que existem aspas em “Demonstração”. Para uma prova real veja a seção opcional<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_CompProof" missing or not unique]</code>.</p>
 <ol class="lower-alpha">
-<li id="li-30"><p id="p-derived-li-30">If <span class="process-math">\(\sum\limits_{n=0}^\infty c_n\)</span> converges to a finite number and if the terms in <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> are smaller than the terms in <span class="process-math">\(\sum\limits_{n=0}^\infty c_n\text{,}\)</span> then it is no surprise that <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> converges too.</p></li>
-<li id="li-31"><p id="p-derived-li-31">If <span class="process-math">\(\sum\limits_{n=0}^\infty d_n\)</span> diverges (i.e. adds up to <span class="process-math">\(\infty\)</span>)  and if the terms in <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> are larger than the terms in <span class="process-math">\(\sum\limits_{n=0}^\infty d_n\text{,}\)</span> then of course <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> adds up to <span class="process-math">\(\infty\text{,}\)</span> and so diverges, too.</p></li>
+<li id="li-30"><p id="p-derived-li-30">Se <span class="process-math">\(\sum\limits_{n=0}^\infty c_n\)</span> converge para um número finito e se os termos em <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> são menores que os termos em <span class="process-math">\(\sum\limits_{n=0}^\infty c_n\text{,}\)</span> então não é surpresa que <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> também converge.</p></li>
+<li id="li-31"><p id="p-derived-li-31">Se <span class="process-math">\(\sum\limits_{n=0}^\infty d_n\)</span> diverge (ou seja, tende ao <span class="process-math">\(\infty\)</span>) e se os termos em <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> são maiores que os termos em <span class="process-math">\(\sum\limits_{n=0}^\infty
+d_n\text{,}\)</span> então obviamente <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> tende ao <span class="process-math">\(\infty\text{,}\)</span> e assim também diverge.</p></li>
 </ol></article></div>
-<p id="p-29">The comparison test for series is also used in much the same way as is the comparison test for improper integrals. Of course, one needs a good  series to compare against, and often the series <span class="process-math">\(\sum n^{-p}\)</span> (from Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a>), for some <span class="process-math">\(p \gt 0\text{,}\)</span> turns out to be just  what is needed.</p>
+<p id="p-30">O teste de comparação para séries também é usado da mesma maneira que o teste de comparação para integrais impróprias. Claro, é preciso uma boa série para comparar, e muitas vezes a série <span class="process-math">\(\sum n^{-p}\)</span> (do   <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.9: O p-teste: \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.9</a>), para algum <span class="process-math">\(p \gt 0\text{,}\)</span> é a escolhida.</p>
 <article class="example example-like" id="eg_SRcomparisonTestA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRcomparisonTestA"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+2n+3}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRcomparisonTestA"><article class="example example-like"><p id="p-30">We could determine whether or not the series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+2n+3}\)</span> converges by applying the integral test. But it is not worth the effort <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a>. Whether or not any series converges is determined by the behaviour of the summand <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a> for very large <span class="process-math">\(n\text{.}\)</span> So the first step in tackling such a problem is to develop some intuition about the behaviour of <span class="process-math">\(a_n\)</span> when <span class="process-math">\(n\)</span> is very large.</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+2n+3}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRcomparisonTestA"><article class="example example-like"><p id="p-31">Poderíamos determinar se a série <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+2n+3}\)</span> converge aplicando o teste da integral. Mas não vale o esforço. A convergência ou não de qualquer série é determinada pelo comportamento da soma para <span class="process-math">\(n\)</span> muito grande. Portanto, o primeiro passo para lidar com esse problema é desenvolver alguma intuição sobre o comportamento de <span class="process-math">\(a_n\)</span> quando <span class="process-math">\(n\)</span> for muito grande.</p>
 <ul class="disc">
-<li id="li-32"><p id="p-derived-li-32"><em class="emphasis">Step 1: Develop intuition.</em> In this case, when <span class="process-math">\(n\)</span> is very large <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a> <span class="process-math">\(n^2\gg 2n \gg 3\)</span> so that  <span class="process-math">\(\frac{1}{n^2+2n+3}\approx\frac{1}{n^2}\text{.}\)</span> We already know, from Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a>, that  <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> converges if and only if <span class="process-math">\(p \gt 1\text{.}\)</span> So <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}\text{,}\)</span> which has <span class="process-math">\(p=2\text{,}\)</span> converges, and  we would expect that <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+2n+3}\)</span> converges too.</p></li>
-<li id="li-33"><p id="p-derived-li-33"><em class="emphasis">Step 2: Verify intuition.</em> We can use the comparison test to confirm that this is indeed the case. For any <span class="process-math">\(n\ge 1\text{,}\)</span> <span class="process-math">\(n^2+2n+3  \gt  n^2\text{,}\)</span> so that  <span class="process-math">\(\frac{1}{n^2+2n+3}\le\frac{1}{n^2}\text{.}\)</span> So the comparison test,  Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRcomparisonTest.html" title="Teorema 1.8: The Comparison Test">Teorema 1.8</a>, with <span class="process-math">\(a_n=\frac{1}{n^2+2n+3}\)</span> and <span class="process-math">\(c_n=\frac{1}{n^2}\text{,}\)</span> tells us that <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+2n+3}\)</span> converges.</p></li>
+<li id="li-32"><p id="p-derived-li-32"><em class="emphasis">Passo 1:</em> Neste caso, quando <span class="process-math">\(n\)</span> for muito grande <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> <span class="process-math">\(n^2\gg 2n \gg 3\)</span> para que <span class="process-math">\(\frac{1}{n^2+2n+3}\approx\frac{1}{n^2}\text{.}\)</span> Já sabemos, do<a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.9: O p-teste: \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.9</a>, que <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^p}\)</span> converge se e somente se <span class="process-math">\(p \gt 1\text{.}\)</span> Portanto, <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}\text{,}\)</span> que tem <span class="process-math">\(p=2\text{,}\)</span> converge, e esperamos que <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+2n+3}\)</span> convirja também.</p></li>
+<li id="li-33"><p id="p-derived-li-33"><em class="emphasis">Passo 2:</em> Podemos usar o teste de comparação para confirmar que esse é realmente o caso. Para qualquer <span class="process-math">\(n\ge
+1\text{,}\)</span> <span class="process-math">\(n^2+2n+3 \gt n^2\text{,}\)</span> de modo que <span class="process-math">\(\frac{1}{n^2+2n+3}\le\frac{ 1}{n^2}\text{.}\)</span> Então o teste de comparação,<a href="" class="xref" data-knowl="./knowl/thm_SRcomparisonTest.html" title="Teorema 1.11: O Teste da Comparação">Teorema 1.11</a>, com <span class="process-math">\(a_n=\frac{1}{n^2+2n+3}\)</span> e <span class="process-math">\(c_n=\frac{1}{n^2}\text{,}\)</span> nos diz que <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+2n+3}\)</span> converge.</p></li>
 </ul></article></div>
-<p id="p-31">Of course the previous example was “rigged” to give an easy application of the comparison test. It is often relatively easy, using arguments like  those in Example <a href="" class="xref" data-knowl="./knowl/eg_SRcomparisonTestA.html" title="Exemplo 1.9: \sum_{n=1}^\infty\frac{1}{n^2+2n+3}">Exemplo 1.9</a>, to find a  “simple” series <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> with <span class="process-math">\(b_n\)</span> almost the same as <span class="process-math">\(a_n\)</span> when <span class="process-math">\(n\)</span> is large. However it is pretty rare that <span class="process-math">\(a_n\le b_n\)</span>  for all <span class="process-math">\(n\text{.}\)</span> It is much more common that <span class="process-math">\(a_n\le K b_n\)</span>  for some constant <span class="process-math">\(K\text{.}\)</span> This is enough to allow application of the  comparison test. Here is an example.</p>
+<p id="p-32">O exemplo anterior foi “manipulado” para facilitar a aplicação do teste de comparação. Geralmente é relativamente fácil, usando argumentos como aqueles no<a href="" class="xref" data-knowl="./knowl/eg_SRcomparisonTestA.html" title="Exemplo 1.12: \sum_{n=1}^\infty\frac{1}{n^2+2n+3}">Exemplo 1.12</a>, encontrar uma série “simples” <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> com <span class="process-math">\(b_n\)</span> quase igual a <span class="process-math">\(a_n\)</span> quando<span class="process-math">\(n\)</span> é grande. No entanto, é muito raro que <span class="process-math">\(a_n\le b_n\)</span> para todo <span class="process-math">\(n\text{.}\)</span> É muito mais comum que <span class="process-math">\(a_n\le K
+b_n\)</span> para alguma constante <span class="process-math">\(K\text{.}\)</span> Isso é suficiente para permitir a aplicação do teste da comparação. A seguir um exemplo.</p>
 <article class="example example-like" id="eg_SRcomparisonTestB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRcomparisonTestB"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty\frac{n+\cos n}{n^3-1/3}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRcomparisonTestB"><article class="example example-like"><p id="p-32">As in the previous example, the first step is to develop some  intuition about the behaviour of <span class="process-math">\(a_n\)</span> when <span class="process-math">\(n\)</span> is very large.</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty\frac{n+\cos n}{n^3-1/3}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRcomparisonTestB"><article class="example example-like"><p id="p-33">Como no exemplo anterior, o primeiro passo é desenvolver alguma intuição sobre o comportamento de <span class="process-math">\(a_n\)</span> quando <span class="process-math">\(n\)</span> for muito grande.</p>
 <ul class="disc">
 <li id="li-34">
-<p id="p-33"><em class="emphasis">Step 1: Develop intuition.</em>  When <span class="process-math">\(n\)</span> is very large,</p>
+<p id="p-34"><em class="emphasis">Passo 1:</em> Quando <span class="process-math">\(n\)</span> é muito grande,</p>
 <ul class="circle">
-<li id="li-35"><p id="p-derived-li-35"><span class="process-math">\(n\gg |\cos n|\)</span> so that  the numerator <span class="process-math">\(n+\cos n\approx n\)</span>  and</p></li>
-<li id="li-36"><p id="p-derived-li-36"><span class="process-math">\(n^3 \gg \frac{1}{3}\)</span> so that the denominator  <span class="process-math">\(n^3-\frac{1}{3}\approx n^3\text{.}\)</span></p></li>
+<li id="li-35"><p id="p-derived-li-35"><span class="process-math">\(n\gg |\cos n|\)</span> temos <span class="process-math">\(n+\cos n\approx n\)</span>  e</p></li>
+<li id="li-36"><p id="p-derived-li-36"><span class="process-math">\(n^3 \gg \frac{1}{3}\)</span> temos  <span class="process-math">\(n^3-\frac{1}{3}\approx
+n^3\text{.}\)</span></p></li>
 </ul>
-<p class="continuation">So when <span class="process-math">\(n\)</span> is very large</p>
+<p class="continuation">Assim quando <span class="process-math">\(n\)</span> é muito grande</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html">
 \begin{equation*}
 a_n=\frac{n+\cos n}{n^3-\frac{1}{3}}\approx\frac{n}{n^3}=\frac{1}{n^2}
 \end{equation*}
 </div>
-<p class="continuation">We already know from Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a>, with <span class="process-math">\(p=2\text{,}\)</span> that <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}\)</span> converges, so we would expect that <span class="process-math">\(\sum_{n=1}^\infty\frac{n+\cos n}{n^3-\frac{1}{3}}\)</span> converges too.</p>
+<p class="continuation">Já sabemos do<a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.9: O p-teste: \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.9</a>, com <span class="process-math">\(p=2\text{,}\)</span> que <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}\)</span> converge, então esperamos que <span class="process-math">\(\sum_{n=1}^\infty\frac{n+\cos n}{n^3-\frac{1}{3}}\)</span> convirja também</p>
 </li>
 <li id="li-37">
-<p id="p-34"><em class="emphasis">Step 2: Verify intuition.</em>  We can use the comparison test to confirm that this is indeed the case. To do so we need to find a constant <span class="process-math">\(K\)</span> such that  <span class="process-math">\(|a_n|= \frac{|n+\cos n|}{n^3-1/3}=\frac{n+\cos n}{n^3-1/3}\)</span> is smaller than <span class="process-math">\(\frac{K}{n^2}\)</span> for all <span class="process-math">\(n\text{.}\)</span> A good way <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 11 </sup></a> to do that is to factor the dominant term (in this case <span class="process-math">\(n\)</span>) out of the  numerator and also factor the dominant term (in this case <span class="process-math">\(n^3\)</span>) out of the denominator.</p>
+<p id="p-35"><em class="emphasis">Passo 2:</em> Podemos usar o teste de comparação para confirmar que esse é realmente o caso. Para fazer isso, precisamos encontrar uma constante <span class="process-math">\(K\)</span> tal que <span class="process-math">\(|a_n|= \frac{|n+\cos
+n|}{n^3-1/3}=\frac{n+ \cos
+n}{n^3-1/3}\)</span> é menor que <span class="process-math">\(\frac{K}{n^2}\)</span> para todo<span class="process-math">\(n\text{.}\)</span> Uma boa maneira <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a> para fazer isso é fatorar o termo dominante (neste caso <span class="process-math">\(n\)</span>) do numerador e também fatorar o termo dominante (neste caso <span class="process-math">\(n^3\)</span>) do denominador.</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 a_n=\frac{n+\cos n}{n^3-\frac{1}{3}}
@@ -430,82 +445,86 @@ a_n=\frac{n+\cos n}{n^3-\frac{1}{3}}
 \frac{1+\frac{\cos n}{n}}{1-\frac{1}{3n^3}}
 \end{equation*}
 </div>
-<p class="continuation">So now we need to find a constant <span class="process-math">\(K\)</span> such that  <span class="process-math">\(\frac{1+\frac{(\cos n)}{n}}{1-\frac{1}{3n^3}}\)</span> is smaller than <span class="process-math">\(K\)</span> for all <span class="process-math">\(n\ge 1\text{.}\)</span></p>
+<p class="continuation">Então agora precisamos encontrar uma constante <span class="process-math">\(K\)</span> de tal forma que  <span class="process-math">\(\frac{1+\frac{(\cos
+n)}{n}}{1-\frac{1}{3n^3}}\)</span> seja menor que <span class="process-math">\(K\)</span> for all <span class="process-math">\(n\ge 1\text{.}\)</span></p>
 <ul class="circle">
 <li id="li-38">
-<p id="p-35">First consider the numerator <span class="process-math">\(1+(\cos n)\frac{1}{n}\text{.}\)</span>  For all <span class="process-math">\(n\ge 1\)</span></p>
+<p id="p-36">Primeiro considere o numerador <span class="process-math">\(1+(\cos n)\frac{1}{n}\text{.}\)</span> Para todo <span class="process-math">\(n\ge 1\)</span></p>
 <ul class="square">
-<li id="li-39"><p id="p-derived-li-39"><span class="process-math">\(\frac{1}{n}\le 1\)</span> and</p></li>
+<li id="li-39"><p id="p-derived-li-39"><span class="process-math">\(\frac{1}{n}\le 1\)</span> e</p></li>
 <li id="li-40"><p id="p-derived-li-40"><span class="process-math">\(\displaystyle |\cos n|\le 1\)</span></p></li>
 </ul>
-<p class="continuation">So the numerator <span class="process-math">\(1+(\cos n)\frac{1}{n}\)</span> is always smaller than <span class="process-math">\(1+(1)\frac{1}{1}=2\text{.}\)</span></p>
+<p class="continuation">Assim o numerador <span class="process-math">\(1+(\cos n)\frac{1}{n}\)</span> é sempre menor que <span class="process-math">\(1+(1)\frac{1}{1}=2\text{.}\)</span></p>
 </li>
 <li id="li-41">
-<p id="p-36">Next consider the denominator <span class="process-math">\(1-\frac{1}{3n^3}\text{.}\)</span></p>
+<p id="p-37">Em seguida, considere o denominador <span class="process-math">\(1-\frac{1}{3n^3}\text{.}\)</span></p>
 <ul class="square">
-<li id="li-42"><p id="p-derived-li-42">When <span class="process-math">\(n\ge 1\text{,}\)</span> <span class="process-math">\(\frac{1}{3n^3}\)</span> lies between <span class="process-math">\(\frac{1}{3}\)</span> and <span class="process-math">\(0\)</span> so that</p></li>
-<li id="li-43"><p id="p-derived-li-43"><span class="process-math">\(1-\frac{1}{3n^3}\)</span> is between <span class="process-math">\(\frac{2}{3}\)</span> and <span class="process-math">\(1\)</span> and consequently</p></li>
-<li id="li-44"><p id="p-derived-li-44"><span class="process-math">\(\frac{1}{1-\frac{1}{3n^3}}\)</span> is between <span class="process-math">\(\frac{3}{2}\)</span> and <span class="process-math">\(1\text{.}\)</span></p></li>
+<li id="li-42"><p id="p-derived-li-42">Quando <span class="process-math">\(n\ge 1\text{,}\)</span> <span class="process-math">\(\frac{1}{3n^3}\)</span> encontra-se entre <span class="process-math">\(\frac{1}{3}\)</span> e <span class="process-math">\(0\)</span> de modo a</p></li>
+<li id="li-43"><p id="p-derived-li-43"><span class="process-math">\(1-\frac{1}{3n^3}\)</span> está entre <span class="process-math">\(\frac{2}{3}\)</span> e <span class="process-math">\(1\)</span> e cosequentemente</p></li>
+<li id="li-44"><p id="p-derived-li-44"><span class="process-math">\(\frac{1}{1-\frac{1}{3n^3}}\)</span> está entre <span class="process-math">\(\frac{3}{2}\)</span> e <span class="process-math">\(1\text{.}\)</span></p></li>
 </ul>
 </li>
-<li id="li-45"><p id="p-derived-li-45">As the numerator <span class="process-math">\(1+(\cos n)\frac{1}{n}\)</span> is always smaller  than <span class="process-math">\(2\)</span> and <span class="process-math">\(\frac{1}{1-\frac{1}{3n^3}}\)</span> is always smaller than <span class="process-math">\(\frac{3}{2}\text{,}\)</span> the fraction<div class="displaymath process-math" data-contains-math-knowls="">
+<li id="li-45"><p id="p-derived-li-45">Como o numerador <span class="process-math">\(1+(\cos n)\frac{1}{n}\)</span> é sempre menor que <span class="process-math">\(2\)</span> e <span class="process-math">\(\frac{1}{1-\frac{1}{3n^3}}\)</span> é sempre menor que <span class="process-math">\(\frac{3}{2}\text{,}\)</span> a fração<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \frac{1+\frac{\cos n}{n}}{1-\frac{1}{3n^3}} \le 2\Big(\frac{3}{2}\Big) =3
 \end{equation*}
 </div></p></li>
 </ul>
-<p class="continuation">We now know that</p>
+<p class="continuation">Agora sabemos que</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-|a_n| =\frac{1}{n^2}\  \frac{1+\frac{2}{n}}{1-\frac{1}{3n^3}} \le  \frac{3}{n^2}
+|a_n| =\frac{1}{n^2}\ \frac{1+\frac{2}{n}}{1-\frac{1}{3n^3}} \le \frac{3}{n^2}
 \end{equation*}
 </div>
-<p class="continuation">and, since we know <span class="process-math">\(\sum_{n=1}^\infty n^{-2}\)</span> converges,  the comparison test tells us that  <span class="process-math">\(\sum_{n=1}^\infty\frac{n+\cos n}{n^3-1/3}\)</span> converges.</p>
+<p class="continuation">e, já que <span class="process-math">\(\sum_{n=1}^\infty n^{-2}\)</span> converge, pelo teste da comparação  <span class="process-math">\(\sum_{n=1}^\infty\frac{n+\cos n}{n^3-1/3}\)</span> converge.</p>
 </li>
 </ul></article></div>
-<p id="p-37">The last example was actually a relatively simple application of the comparison theorem — finding a suitable constant  <span class="process-math">\(K\)</span> can be <em class="emphasis">really</em> tedious <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a>. Fortunately, there is a variant of the  comparison test that completely eliminates the need to explicitly find <span class="process-math">\(K\text{.}\)</span></p>
-<p id="p-38">The idea behind this isn't too complicated. We have already seen  that the convergence or divergence of a series depends not on its  first few terms, but just on what happens when <span class="process-math">\(n\)</span> is really large.  Consequently, if we can work out how  the series terms behave for  really big <span class="process-math">\(n\)</span> then we can work out if the series converges.  So instead of comparing the terms of our series for all <span class="process-math">\(n\text{,}\)</span> just  compare them when <span class="process-math">\(n\)</span> is big.</p>
+<p id="p-38">O último exemplo foi na verdade uma aplicação relativamente simples do teorema de comparação — encontrar uma constante adequada <span class="process-math">\(K\)</span> pode ser <em class="emphasis">realmente</em> complicado. Existe uma variante do teste de comparação que elimina a necessidade de encontrar explicitamente <span class="process-math">\(K\text{.}\)</span></p>
+<p id="p-39">A ideia por trás disso não é muito complicada. Já vimos que a convergência ou divergência de uma série não depende dos primeiros termos, mas apenas do que acontece quando <span class="process-math">\(n\)</span> é realmente grande. Consequentemente, se pudermos descobrir como os termos da série se comportam para <span class="process-math">\(n\)</span> realmente grande, podemos descobrir se a série converge. Então, em vez de comparar os termos da série para todos os <span class="process-math">\(n\text{,}\)</span> apenas compare-os quando <span class="process-math">\(n\)</span> for grande.</p>
 <article class="theorem theorem-like" id="thm_SRlimitComparison"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Limit Comparison Theorem.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Teste da Comparação do Limite.</span>
 </h4>
-<p id="p-39">Let <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> and <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> be two series with <span class="process-math">\(b_n \gt 0\)</span> for all <span class="process-math">\(n\text{.}\)</span> Assume that</p>
+<p id="p-40">Seja <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> e <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> duas séries com <span class="process-math">\(b_n \gt 0\)</span> para todo <span class="process-math">\(n\text{.}\)</span> Assuma que</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \lim_{n\rightarrow\infty}\frac{a_n}{b_n}=L
 \end{equation*}
 </div>
-<p class="continuation">exists.</p>
+<p class="continuation">existe.</p>
 <ol class="lower-alpha">
-<li id="li-46"><p id="p-derived-li-46">If <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span>  converges, then <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converges too.</p></li>
-<li id="li-47"><p id="p-derived-li-47">If <span class="process-math">\(L\ne 0\)</span> and <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span>  diverges, then <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> diverges too.</p></li>
+<li id="li-46"><p id="p-derived-li-46">Se <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span>  converge, então <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> também converge.</p></li>
+<li id="li-47"><p id="p-derived-li-47">Se <span class="process-math">\(L\ne 0\)</span> e <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span>  diverge, então <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> também diverge.</p></li>
 </ol>
-<p class="continuation">In particular, if <span class="process-math">\(L\ne 0\text{,}\)</span> then <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converges if and only if <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> converges.</p></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-40">(a)  Because we are told that  <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{a_n}{b_n}=L \text{,}\)</span>  we know that,</p>
+<p class="continuation">Em particular, se <span class="process-math">\(L\ne 0\text{,}\)</span> então <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converge se e somente se <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> converge.</p></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-41">(a) Como <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{a_n}{b_n}=L\text{,}\)</span> sabemos que,</p>
 <ul class="disc">
-<li id="li-48"><p id="p-derived-li-48">when <span class="process-math">\(n\)</span> is large,  <span class="process-math">\(\frac{a_n}{b_n}\)</span> is very close to <span class="process-math">\(L\text{,}\)</span> so that <span class="process-math">\(\Big|\frac{a_n}{b_n}\Big|\)</span> is very close to <span class="process-math">\(|L|\text{.}\)</span></p></li>
-<li id="li-49"><p id="p-derived-li-49">In particular, there is some natural number <span class="process-math">\(N_0\)</span> so that  <span class="process-math">\(\Big|\frac{a_n}{b_n}\Big|\le |L|+1\text{,}\)</span> for all <span class="process-math">\(n\ge N_0\text{,}\)</span> and hence</p></li>
-<li id="li-50"><p id="p-derived-li-50"><span class="process-math">\(|a_n|\le Kb_n\)</span> with <span class="process-math">\(K=|L|+1\text{,}\)</span> for all <span class="process-math">\(n\ge N_0\text{.}\)</span></p></li>
-<li id="li-51"><p id="p-derived-li-51">The comparison Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRcomparisonTest.html" title="Teorema 1.8: The Comparison Test">Teorema 1.8</a> now implies that <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converges.</p></li>
+<li id="li-48"><p id="p-derived-li-48">quando <span class="process-math">\(n\)</span> é grande, <span class="process-math">\(\frac{a_n}{b_n}\)</span> fica muito próximo de <span class="process-math">\(L\text{,}\)</span> então <span class="process-math">\(\left|\frac{a_n}{b_n}\right|\)</span> está próximo de <span class="process-math">\(|L|\text{.}\)</span></p></li>
+<li id="li-49"><p id="p-derived-li-49">Em particular, existe algum número natural <span class="process-math">\(N_0\)</span> para que <span class="process-math">\(\Big|\frac{a_n}{b_n}\Big|\le
+|L|+1\text{,}\)</span> para todo <span class="process-math">\(n\ge N_0\)</span> e, portanto,</p></li>
+<li id="li-50"><p id="p-derived-li-50"><span class="process-math">\(|a_n|\le Kb_n\)</span> com <span class="process-math">\(K=|L|+1\text{,}\)</span> para todo <span class="process-math">\(n\ge N_0\text{.}\)</span></p></li>
+<li id="li-51"><p id="p-derived-li-51"><a href="" class="xref" data-knowl="./knowl/thm_SRcomparisonTest.html" title="Teorema 1.11: O Teste da Comparação">O Teste da Comparação</a> implica que <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converge.</p></li>
 </ul>
-<p id="p-41">(b) Let's suppose that <span class="process-math">\(L \gt 0\text{.}\)</span> (If <span class="process-math">\(L \lt 0\text{,}\)</span> just replace <span class="process-math">\(a_n\)</span> with <span class="process-math">\(-a_n\text{.}\)</span>) Because we are told that  <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{a_n}{b_n}=L \text{,}\)</span>  we know that,</p>
+<p id="p-42">(b) Vamos supor que <span class="process-math">\(L \gt 0\text{.}\)</span> (Se <span class="process-math">\(L \lt 0\text{,}\)</span> basta substituir <span class="process-math">\(a_n\)</span> por <span class="process-math">\(-a_n\text{.}\)</span>) Como nos disseram que <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{a_n}{b_n}=L\text{,}\)</span> sabemos que,</p>
 <ul class="disc">
-<li id="li-52"><p id="p-derived-li-52">when <span class="process-math">\(n\)</span> is large,  <span class="process-math">\(\frac{a_n}{b_n}\)</span> is very close to <span class="process-math">\(L\text{.}\)</span></p></li>
-<li id="li-53"><p id="p-derived-li-53">In particular, there is some natural number <span class="process-math">\(N\)</span> so that  <span class="process-math">\(\frac{a_n}{b_n}\ge \frac{L}{2}\text{,}\)</span> and hence</p></li>
-<li id="li-54"><p id="p-derived-li-54"><span class="process-math">\(a_n\ge Kb_n\)</span> with <span class="process-math">\(K=\frac{L}{2} \gt 0\text{,}\)</span> for all <span class="process-math">\(n\ge N\text{.}\)</span></p></li>
-<li id="li-55"><p id="p-derived-li-55">The comparison Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRcomparisonTest.html" title="Teorema 1.8: The Comparison Test">Teorema 1.8</a> now implies that <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> diverges.</p></li>
+<li id="li-52"><p id="p-derived-li-52">quando <span class="process-math">\(n\)</span> é grande, <span class="process-math">\(\frac{a_n}{b_n}\)</span> está muito próximo de <span class="process-math">\(L\text{.}\)</span></p></li>
+<li id="li-53"><p id="p-derived-li-53">Em particular, existe algum número natural <span class="process-math">\(N\)</span> para que <span class="process-math">\(\frac{a_n}{b_n}\ge
+\frac{L}{2}\)</span> e, portanto,</p></li>
+<li id="li-54"><p id="p-derived-li-54"><span class="process-math">\(a_n\ge Kb_n\)</span> com <span class="process-math">\(K=\frac{L}{2} \gt 0\text{,}\)</span> para todo <span class="process-math">\(n\ge N\text{.}\)</span></p></li>
+<li id="li-55"><p id="p-derived-li-55"><a href="" class="xref" data-knowl="./knowl/thm_SRcomparisonTest.html" title="Teorema 1.11: O Teste da Comparação">O Teste da Comparação</a> implica que <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> diverge.</p></li>
 </ul></article></div>
-<p id="p-42">The next two examples illustrate how much of an improvement the above  theorem is over the straight comparison test (though of course, we  needed the comparison test to develop the limit comparison test).</p>
+<p id="p-43">Os próximos dois exemplos ilustram a melhoria do teorema acima em relação ao teste de comparação direta (embora, é claro, precisássemos do teste de comparação para desenvolver o teste de comparação do limite).</p>
 <article class="example example-like" id="eg_SRlimCompA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRlimCompA"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRlimCompA"><article class="example example-like"><p id="p-43">Set <span class="process-math">\(a_n= \frac{\sqrt{n+1}}{n^2-2n+3}\text{.}\)</span>  We first try to develop some  intuition about the behaviour of <span class="process-math">\(a_n\)</span> for large <span class="process-math">\(n\)</span> and then we confirm that our intuition was correct.</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRlimCompA"><article class="example example-like"><p id="p-44">Defina <span class="process-math">\(a_n= \frac{\sqrt{n+1}}{n^2-2n+3}\text{.}\)</span> Primeiro tentamos desenvolver alguma intuição sobre o comportamento de <span class="process-math">\(a_n\)</span> para  <span class="process-math">\(n\)</span> grande e confirmamos que a intuição esá correta.</p>
 <ul class="disc">
-<li id="li-56"><p id="p-derived-li-56"><em class="emphasis">Step 1: Develop intuition.</em>  When <span class="process-math">\(n\gg 1\text{,}\)</span> the numerator <span class="process-math">\(\sqrt{n+1}\approx \sqrt{n}\text{,}\)</span> and the denominator <span class="process-math">\(n^2-2n+3\approx n^2\)</span> so that  <span class="process-math">\(a_n\approx \frac{\sqrt{n}}{n^2}=\frac{1}{n^{3/2}}\)</span> and it looks like our series should converge by Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a> with <span class="process-math">\(p=\frac{3}{2}\text{.}\)</span></p></li>
-<li id="li-57"><p id="p-derived-li-57"><em class="emphasis">Step 2: Verify intuition.</em> To confirm our intuition we set <span class="process-math">\(b_n=\frac{1}{n^{3/2}}\)</span> and compute the limit<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html ./knowl/thm_SRlimitComparison.html">
+<li id="li-56"><p id="p-derived-li-56"><em class="emphasis">Passo 1: Intuição.</em> Quando <span class="process-math">\(n\gg 1\text{,}\)</span> o numerador <span class="process-math">\(\sqrt{n+1}\approx \sqrt{n}\)</span> e o denominador <span class="process-math">\(n^2-2n+3
+\approx n^2\)</span> para que <span class="process-math">\(a_n\approx \frac{\sqrt{n}}{n^2}=\frac{1}{n^{3/2}}\)</span> e pelo<a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.9: O p-teste: \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.9</a>, com <span class="process-math">\(p=\frac{3}{2}\text{,}\)</span> a série converge.</p></li>
+<li id="li-57"><p id="p-derived-li-57"><em class="emphasis">Passo 2: Confirmando a intuição.</em> Para confirmar a intuição, definimos <span class="process-math">\(b_n=\frac{1}{n^{3/2}}\)</span> e calculamos o limite<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html ./knowl/thm_SRlimitComparison.html">
 \begin{equation*}
 \lim_{n\rightarrow\infty}\frac{a_n}{b_n}
 =\lim_{n\rightarrow\infty}\frac{\frac{\sqrt{n+1}}{n^2-2n+3}}{\frac{1}{n^{3/2}}}
 =\lim_{n\rightarrow\infty}\frac{n^{3/2}\sqrt{n+1}}{n^2-2n+3}
 \end{equation*}
-</div>Again it is a good idea to factor the dominant term out of the numerator and the dominant term out of the denominator.<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html ./knowl/thm_SRlimitComparison.html">
+</div>Novamente, é uma boa ideia fatorar o termo dominante do numerador e o termo dominante do denominador.<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html ./knowl/thm_SRlimitComparison.html">
 \begin{equation*}
 \lim_{n\rightarrow\infty}\frac{a_n}{b_n}
 =\lim_{n\rightarrow\infty}\frac{n^2\sqrt{1+\frac{1}{n}}}
@@ -514,784 +533,42 @@ a_n=\frac{n+\cos n}{n^3-\frac{1}{3}}
 {1-\frac{2}{n}+\frac{3}{n^2}}
 =1
 \end{equation*}
-</div>We already know that the series <span class="process-math">\(\sum_{n=1}^\infty b_n =\sum_{n=1}^\infty\frac{1}{n^{3/2}}\)</span> converges by Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a> with <span class="process-math">\(p=\frac{3}{2}\text{.}\)</span> So our series converges by the limit comparison test, Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRlimitComparison.html" title="Teorema 1.11: Limit Comparison Theorem">Teorema 1.11</a>.</p></li>
+</div>Já sabemos que a série <span class="process-math">\(\sum_{n=1}^\infty b_n =\sum_{n=1}^\infty\frac{1}{n^{3/2}}\)</span> converge pelo <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.9: O p-teste: \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.9</a> como <span class="process-math">\(p=\frac{3}{2}\text{.}\)</span> Então a série converge pelo teste de comparação de limite,<a href="" class="xref" data-knowl="./knowl/thm_SRlimitComparison.html" title="Teorema 1.14: Teste da Comparação do Limite">Teorema 1.14</a>.</p></li>
 </ul></article></div>
 <article class="example example-like" id="eg_SRlimCompAbis"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRlimCompAbis"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}\text{,}\)</span> again.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRlimCompAbis"><article class="example example-like"><p id="p-44">We can also try to deal with the series of Example <a href="" class="xref" data-knowl="./knowl/eg_SRlimCompA.html" title="Exemplo 1.12: \sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}">Exemplo 1.12</a>,  using the comparison test directly.  But that requires us to find <span class="process-math">\(K\)</span> so that</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}\text{,}\)</span> again.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRlimCompAbis"><article class="example example-like"><p id="p-45">Também podemos tentar lidar com a série de<a href="" class="xref" data-knowl="./knowl/eg_SRlimCompA.html" title="Exemplo 1.15: \sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}">Exemplo 1.15</a>, usando o teste de comparação diretamente. Mas isso exige que encontremos <span class="process-math">\(K\)</span> para que</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRlimCompA.html ./knowl/eg_SRlimCompA.html" id="md-15">
 \begin{align*}
 \frac{\sqrt{n+1}}{n^2-2n+3} &amp; \leq \frac{K}{n^{3/2}}
 \end{align*}
 </div>
-<p class="continuation">We might do this by examining the numerator and denominator separately:</p>
+<p class="continuation">Podemos fazer isso examinando o numerador e o denominador separadamente:</p>
 <ul class="disc">
-<li id="li-58"><p id="p-derived-li-58">The numerator isn't too bad since for all <span class="process-math">\(n \geq 1\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-16">
+<li id="li-58"><p id="p-derived-li-58">O numerador não é razoável, pois para todos os <span class="process-math">\(n \geq 1\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-16">
 \begin{align*}
 n+1 &amp;\leq 2n \qquad \text{and so}\\
 \sqrt{n+1} &amp;\leq \sqrt{2n}
 \end{align*}
 </div></p></li>
-<li id="li-59"><p id="p-derived-li-59">The denominator is quite a bit more tricky, since we need a  <em class="emphasis">lower</em> bound, rather than an upper bound, and we cannot  just write  <span class="process-math">\(|n^2-2n+3| \ge n^2\text{,}\)</span> which is false.  Instead we have to make a more careful argument. In particular,  we'd like to find <span class="process-math">\(N_0\)</span> and <span class="process-math">\(K'\)</span> so that <span class="process-math">\(n^2-2n+3\ge  K'n^2\text{,}\)</span> i.e. <span class="process-math">\(\frac{1}{n^2-2n+3}\le\frac{1}{K'n^2}\)</span> for all  <span class="process-math">\(n \geq N_0\text{.}\)</span> For <span class="process-math">\(n\ge 4\text{,}\)</span> we have <span class="process-math">\(2n = \frac{1}{2} 4n\le \frac{1}{2}n\cdot n=\frac{1}{2}n^2\text{.}\)</span> So for  <span class="process-math">\(n\ge 4\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-17">
+<li id="li-59"><p id="p-derived-li-59">O denominador é um pouco mais complicado, pois precisamos de um limite <em class="emphasis">inferior</em>, em vez de um limite superior, e não podemos simplesmente escrever <span class="process-math">\(|n^2-2n+3| \ge n^2\text{,}\)</span> que é falso. Em vez disso, temos que fazer um argumento mais cuidadoso. Em particular, gostaríamos de encontrar <span class="process-math">\(N_0\)</span> e <span class="process-math">\(K'\)</span> para que <span class="process-math">\(n^2-2n+3\ge K'n^2\)</span> , ou seja, <span class="process-math">\(\frac{1}{n^2-2n+3}\le\frac{1}{K'n^2}\)</span> para todos os <span class="process-math">\(n
+\geq N_0\text{.}\)</span> Para <span class="process-math">\(n\ge 4\text{,}\)</span> temos <span class="process-math">\(2n = \frac{1}{2} 4n\le \frac{1}{2}n\cdot
+n=\frac{1}{2}n^2\text{.}\)</span> Portanto, para <span class="process-math">\(n\ge 4\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-17">
 \begin{align*}
 n^2-2n+3 &amp; \geq n^2 -\frac{1}{2}n^2 + 3
 \ge \frac{1}{2} n^2
 \end{align*}
 </div></p></li>
 </ul>
-<p class="continuation">Putting the numerator and denominator back together we have</p>
+<p class="continuation">Juntando o numerador e o denominador temos</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRlimCompA.html ./knowl/eg_SRlimCompA.html" id="md-18">
 \begin{align*}
-\frac{\sqrt{n+1}}{n^2-2n+3} &amp; \leq \frac{\sqrt{2n}}{n^2/2}  = 2\sqrt{2}\frac{1}{n^{3/2}}
+\frac{\sqrt{n+1}}{n^2-2n+3} &amp; \leq \frac{\sqrt{2n}}{n^2/2} = 2\sqrt{2}\frac{1}{n^{3/2}}
 \qquad\text{for all $n\ge 4$}
 \end{align*}
 </div>
-<p class="continuation">and the comparison test then tells us that our series converges.  It is pretty clear that the approach of Example <a href="" class="xref" data-knowl="./knowl/eg_SRlimCompA.html" title="Exemplo 1.12: \sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}">Exemplo 1.12</a> was much more straightforward.</p></article></div></section><section class="subsection" id="sec_AST"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">The Alternating Series Test</span>
-</h3>
-<p id="p-45">When the signs of successive terms in a series alternate between <span class="process-math">\(+\)</span> and <span class="process-math">\(-\text{,}\)</span> like for example in  <span class="process-math">\(\ 1-\frac{1}{2} +\frac{1}{3}-\frac{1}{4}+ \cdots\  \text{,}\)</span> the series is called an <em class="emphasis">alternating series</em>. More generally, the series</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-A_1-A_2+A_3-A_4+\cdots =\sum_{n=1}^\infty (-1)^{n-1} A_n
-\end{equation*}
-</div>
-<p class="continuation">is alternating if every <span class="process-math">\(A_n\ge 0\text{.}\)</span> Often (but not always) the terms in alternating series get successively smaller. That is, then <span class="process-math">\(A_1\ge A_2 \ge A_3 \ge \cdots\text{.}\)</span> In this case:</p>
-<ul class="disc">
-<li id="li-60"><p id="p-derived-li-60">The first partial sum is <span class="process-math">\(S_1=A_1\text{.}\)</span></p></li>
-<li id="li-61"><p id="p-derived-li-61">The second partial sum, <span class="process-math">\(S_2=A_1-A_2\text{,}\)</span> is smaller than <span class="process-math">\(S_1\)</span> by <span class="process-math">\(A_2\text{.}\)</span></p></li>
-<li id="li-62"><p id="p-derived-li-62">The third partial sum, <span class="process-math">\(S_3=S_2+A_3\text{,}\)</span> is bigger than <span class="process-math">\(S_2\)</span> by <span class="process-math">\(A_3\text{,}\)</span> but because <span class="process-math">\(A_3\le A_2\text{,}\)</span> <span class="process-math">\(S_3\)</span> remains smaller than <span class="process-math">\(S_1\text{.}\)</span> See the figure below.</p></li>
-<li id="li-63"><p id="p-derived-li-63">The fourth partial sum, <span class="process-math">\(S_4=S_3-A_4\text{,}\)</span> is smaller than <span class="process-math">\(S_3\)</span> by <span class="process-math">\(A_4\text{,}\)</span> but because <span class="process-math">\(A_4\le A_3\text{,}\)</span> <span class="process-math">\(S_4\)</span> remains bigger than <span class="process-math">\(S_2\text{.}\)</span> Again, see the figure below.</p></li>
-<li id="li-64"><p id="p-derived-li-64">And so on.</p></li>
-</ul>
-<p class="continuation">So the successive partial sums oscillate, but with ever decreasing amplitude. If, in addition, <span class="process-math">\(A_n\)</span> tends to <span class="process-math">\(0\)</span> as <span class="process-math">\(n\)</span> tends to <span class="process-math">\(\infty\text{,}\)</span> the amplitude of oscillation tends to zero and the sequence <span class="process-math">\(S_1\text{,}\)</span> <span class="process-math">\(S_2\text{,}\)</span> <span class="process-math">\(S_3\text{,}\)</span> <span class="process-math">\(\cdots\)</span> converges to some limit <span class="process-math">\(S\text{.}\)</span></p>
-<p id="p-46">This is illustrated in the figure</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/altSeriesF.svg" role="img" class="contained"></div></div></div>
-<p id="p-47">Here is a convergence test for alternating series that exploits this structure, and that is really easy to apply.</p>
-<article class="theorem theorem-like" id="thm_SRalternating"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Alternating Series Test.</span>
-</h4>
-<p id="p-48">Let <span class="process-math">\(\big\{A_n\big\}_{n=1}^\infty\)</span> be a sequence of real numbers that obeys</p>
-<ol class="lower-roman">
-<li id="li-65"><p id="p-derived-li-65"><span class="process-math">\(A_n\ge 0\)</span> for all <span class="process-math">\(n\ge 1\)</span> and</p></li>
-<li id="li-66"><p id="p-derived-li-66"><span class="process-math">\(A_{n+1}\le A_n\)</span>  for all <span class="process-math">\(n\ge 1\)</span> (i.e. the  sequence is monotone decreasing) and</p></li>
-<li id="li-67"><p id="p-derived-li-67"><span class="process-math">\(\lim_{n\rightarrow\infty}A_n=0\text{.}\)</span></p></li>
-</ol>
-<p class="continuation">Then</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-A_1-A_2+A_3-A_4+\cdots=\sum\limits_{n=1}^\infty (-1)^{n-1} A_n =S
-\end{equation*}
-</div>
-<p class="continuation">converges and, for each natural number <span class="process-math">\(N\text{,}\)</span>  <span class="process-math">\(S-S_N\)</span> is between <span class="process-math">\(0\)</span> and (the  first dropped term) <span class="process-math">\((-1)^N A_{N+1}\text{.}\)</span> Here <span class="process-math">\(S_N\)</span> is, as previously, the <span class="process-math">\(N^{\rm th}\)</span> partial sum <span class="process-math">\(\sum\limits_{n=1}^N (-1)^{n-1} A_n\text{.}\)</span></p></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="title">“Proof”.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-49">We shall only give part of the proof here. For the rest of the proof see the optional section <a href="section-1.html#sec_CompProof" class="internal" title="Subseção 1.9: Optional — Some Proofs">Subseção 1.9</a>. We shall fix any natural number <span class="process-math">\(N\)</span> and concentrate on the last statement, which gives a bound on the truncation error (which is the error introduced when you approximate the full series by the partial sum <span class="process-math">\(S_N\)</span>)</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/sec_CompProof.html ./knowl/sec_CompProof.html" id="md-19">
-\begin{align*}
-E_N &amp;= S-S_N= \sum_{n=N+1}^\infty (-1)^{n-1} A_n\\
-&amp; = (-1)^N\Big[A_{N+1}-A_{N+2} +A_{N+3}-A_{N+4}+\cdots\Big]
-\end{align*}
-</div>
-<p class="continuation">This is of course another series. We're going to study the partial sums</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/sec_CompProof.html ./knowl/sec_CompProof.html">
-\begin{equation*}
-S_{N,\ell} = \sum_{n=N+1}^\ell (-1)^{n-1} A_n = (-1)^N\sum_{m=1}^{\ell-N} (-1)^{m-1} A_{N+m}
-\end{equation*}
-</div>
-<p class="continuation">for that series.</p>
-<ul class="disc">
-<li id="li-68"><p id="p-derived-li-68">If <span class="process-math">\(\ell' \gt N+1\text{,}\)</span> with <span class="process-math">\(\ell'-N\)</span> even,<div class="displaymath process-math" data-contains-math-knowls="" id="md-20">
-\begin{align*}
-(-1)^N S_{N,\ell'}&amp;=\overbrace{(A_{N+1}-A_{N+2})}^{\ge 0}
-+\overbrace{(A_{N+3}-A_{N+4})}^{\ge 0}+\cdots\\
-\amp\hskip1in+\overbrace{(A_{\ell'-1}-A_{\ell'})}^{\ge 0}\\
-\amp\ge 0\\
-\\
-\text{and}\\
-(-1)^N S_{N,\ell'+1}&amp;=\overbrace{(-1)^N S_{N,\ell'}}^{\ge 0}
-+\overbrace{A_{\ell'+1}}^{\ge 0}
-\ge 0
-\end{align*}
-</div>This tells us that <span class="process-math">\((-1)^N S_{N,\ell}\ge 0\)</span> for all <span class="process-math">\(\ell \gt N+1\text{,}\)</span> both even and odd.</p></li>
-<li id="li-69"><p id="p-derived-li-69">Similarly, if <span class="process-math">\(\ell' \gt N+1\text{,}\)</span> with <span class="process-math">\(\ell'-N\)</span> odd,<div class="displaymath process-math" data-contains-math-knowls="" id="md-21">
-\begin{align*}
-(-1)^N S_{N,\ell'}&amp;=A_{N+1}-(\overbrace{A_{N+2}-A_{N+3}}^{\ge 0})
--(\overbrace{A_{N+4}-A_{N+5}}^{\ge 0})-\cdots\\
-\amp\hskip1in -\overbrace{(A_{\ell'-1}-A_{\ell'})}^{\ge 0}\\
-\amp\le A_{N+1}\\
-(-1)^NS_{N,\ell'+1}&amp;=\overbrace{(-1)^N S_{N,\ell'}}^{\le A_{N+1}}
--\overbrace{A_{\ell'+1}}^{\ge 0}
-\le A_{N+1}
-\end{align*}
-</div>This tells us that <span class="process-math">\((-1)^N S_{N,\ell}\le A_{N+1}\)</span> for all  for all <span class="process-math">\(\ell \gt N+1\text{,}\)</span> both even and odd.</p></li>
-</ul>
-<p class="continuation">So we now know that <span class="process-math">\(S_{N,\ell}\)</span> lies between its first term, <span class="process-math">\((-1)^NA_{N+1}\text{,}\)</span> and <span class="process-math">\(0\)</span> for all <span class="process-math">\(\ell \gt N+1\text{.}\)</span> While we are not going to prove it here  (see the optional section <a href="section-1.html#sec_CompProof" class="internal" title="Subseção 1.9: Optional — Some Proofs">Subseção 1.9</a>), this implies that, since <span class="process-math">\(A_{N+1}\rightarrow 0\)</span> as <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> the series converges and that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/sec_CompProof.html ./knowl/sec_CompProof.html">
-\begin{equation*}
-S-S_N=\lim_{\ell\rightarrow\infty} S_{N,\ell}
-\end{equation*}
-</div>
-<p class="continuation">lies between <span class="process-math">\((-1)^NA_{N+1}\)</span> and <span class="process-math">\(0\text{.}\)</span></p></article></div>
-<article class="example example-like" id="eg_SRaltharmonic"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRaltharmonic"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Convergence of the alternating harmonic series.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRaltharmonic"><article class="example example-like"><p id="p-50">We have already seen, in Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a>, that the harmonic series <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}\)</span> diverges. On the other hand, the  series <span class="process-math">\(\sum_{n=1}^\infty(-1)^{n-1}\frac{1}{n}\)</span> converges by the alternating series test with <span class="process-math">\(A_n=\frac{1}{n}\text{.}\)</span> Note that</p>
-<ol class="lower-roman">
-<li id="li-70"><p id="p-derived-li-70"><span class="process-math">\(A_n=\frac{1}{n}\ge 0\)</span> for all <span class="process-math">\(n\ge 1\text{,}\)</span> so that <span class="process-math">\(\sum_{n=1}^\infty(-1)^{n-1}\frac{1}{n}\)</span> really is an alternating series,  and</p></li>
-<li id="li-71"><p id="p-derived-li-71"><span class="process-math">\(A_n=\frac{1}{n}\)</span> decreases as <span class="process-math">\(n\)</span> increases,  and</p></li>
-<li id="li-72"><p id="p-derived-li-72"><span class="process-math">\(\lim\limits_{n\rightarrow\infty}A_n =\lim\limits_{n\rightarrow\infty}\frac{1}{n}=0\text{.}\)</span></p></li>
-</ol>
-<p class="continuation">so that all of the hypotheses of the alternating series test, i.e. of Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRalternating.html" title="Teorema 1.14: Alternating Series Test">Teorema 1.14</a>, are satisfied. We shall see, in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_SRpsrepC" missing or not unique]</code>, that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html ./knowl/thm_SRalternating.html " id="md-22">
-\begin{align*}
-\sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} &amp;= \log 2.
-\end{align*}
-</div></article></div>
-<article class="example example-like" id="eg_SRaltharmonicB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRaltharmonicB"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(e\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRaltharmonicB"><article class="example example-like"><p id="p-51">You may already know that  <span class="process-math">\(e^x=\sum_{n=0}^\infty\frac{x^n}{n!} \text{.}\)</span> In any event, we shall prove this in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_expSeries" missing or not unique]</code>, below. In particular</p>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm_SRalternating.html" id="md-23">
-\begin{gather*}
-\frac{1}{e}=e^{-1} = \sum_{n=0}^\infty\frac{(-1)^n}{n!}
-= 1 -\frac{1}{1!} +\frac{1}{2!} -\frac{1}{3!} +\frac{1}{4!}
-- \frac{1}{5!}+\cdots
-\end{gather*}
-</div>
-<p class="continuation">is an alternating series and satisfies all of the conditions of the alternating series test, Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRalternating.html" title="Teorema 1.14: Alternating Series Test">Teorema 1.14</a>a:</p>
-<ol class="lower-roman">
-<li id="li-73"><p id="p-derived-li-73">The terms in the series alternate in sign.</p></li>
-<li id="li-74"><p id="p-derived-li-74">The magnitude of the <span class="process-math">\(n^{\rm th}\)</span> term in the series decreases monotonically as <span class="process-math">\(n\)</span> increases.</p></li>
-<li id="li-75"><p id="p-derived-li-75">The <span class="process-math">\(n^{\rm th}\)</span> term in the series converges to zero as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span></p></li>
-</ol>
-<p class="continuation">So the alternating series test guarantees that, if we approximate, for example,</p>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm_SRalternating.html" id="md-24">
-\begin{gather*}
-\frac{1}{e} \approx \frac{1}{2!}-\frac{1}{3!} +\frac{1}{4!}-\frac{1}{5!}+\frac{1}{6!}-\frac{1}{7!} +\frac{1}{8!}-\frac{1}{9!}
-\end{gather*}
-</div>
-<p class="continuation">then the error in this approximation lies between <span class="process-math">\(0\)</span> and the next term in the series, which is <span class="process-math">\(\frac{1}{10!}\text{.}\)</span> That is</p>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm_SRalternating.html" id="md-25">
-\begin{gather*}
-\frac{1}{2!}-\frac{1}{3!} +\frac{1}{4!}-\frac{1}{5!}+\frac{1}{6!}-\frac{1}{7!}
-+\frac{1}{8!}-\frac{1}{9!} \le \frac{1}{e} \qquad\qquad\qquad\qquad\\
-\qquad\qquad\qquad\qquad \le \frac{1}{2!}-\frac{1}{3!} +\frac{1}{4!}-\frac{1}{5!}+\frac{1}{6!}-\frac{1}{7!}
-+\frac{1}{8!}-\frac{1}{9!}+\frac{1}{10!}
-\end{gather*}
-</div>
-<p class="continuation">so that</p>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm_SRalternating.html" id="md-26">
-\begin{gather*}
-\frac{1}{
-\frac{1}{2!}-\frac{1}{3!} +\frac{1}{4!}-\frac{1}{5!}+\frac{1}{6!}-\frac{1}{7!}
-+\frac{1}{8!}-\frac{1}{9!}+\frac{1}{10!}} \le e
-\qquad\qquad\qquad\qquad\\
-\qquad\qquad\qquad\qquad \le \frac{1}{
-\frac{1}{2!}-\frac{1}{3!} +\frac{1}{4!}-\frac{1}{5!}+\frac{1}{6!}-\frac{1}{7!}
-+\frac{1}{8!}-\frac{1}{9!}}
-\end{gather*}
-</div>
-<p class="continuation">which, to seven decimal places says</p>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm_SRalternating.html" id="md-27">
-\begin{align*}
-2.7182816 \le e\le  &amp;2.7182837
-\end{align*}
-</div>
-<p class="continuation">(To seven decimal places <span class="process-math">\(e=2.7182818\text{.}\)</span>)</p>
-<p id="p-52">The alternating series test tells us that, for any natural number <span class="process-math">\(N\text{,}\)</span> the error that we make when we approximate <span class="process-math">\(\frac{1}{e}\)</span> by the partial sum <span class="process-math">\(S_N= \sum_{n=0}^N\frac{(-1)^n}{n!}\)</span> has magnitude no larger than <span class="process-math">\(\frac{1}{(N+1)!}\text{.}\)</span> This tends to zero spectacularly quickly as <span class="process-math">\(N\)</span> increases, simply because <span class="process-math">\((N+1)!\)</span> increases spectacularly quickly as <span class="process-math">\(N\)</span> increases <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 13 </sup></a>. For example <span class="process-math">\(20!\approx 2.4\times 10^{27}\text{.}\)</span></p></article></div>
-<article class="example example-like" id="eg_SRaltLog"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRaltLog"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Computing <span class="process-math">\(\log\frac{11}{10}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRaltLog"><article class="example example-like"><p id="p-53">We will shortly see, in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_SRpsrepC" missing or not unique]</code>,  that if <span class="process-math">\(-1 \lt x\le 1\text{,}\)</span> then</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\log(1+x) = x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots = \sum_{n=1}^\infty (-1)^{n-1}\frac{x^n}{n}
-\end{equation*}
-</div>
-<p class="continuation">Suppose that we have to compute <span class="process-math">\(\log\frac{11}{10}\)</span> to within an accuracy of <span class="process-math">\(10^{-12}\text{.}\)</span> Since <span class="process-math">\(\frac{11}{10}=1+\frac{1}{10}\text{,}\)</span> we can get <span class="process-math">\(\log\frac{11}{10}\)</span> by evaluating <span class="process-math">\(\log(1+x)\)</span> at <span class="process-math">\(x=\frac{1}{10}\text{,}\)</span> so that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-28">
-\begin{align*}
-\log\frac{11}{10} &amp; = \log\Big(1+\frac{1}{10}\Big)
-=\frac{1}{10}
--\frac{1}{2\times 10^2}
-+\frac{1}{3\times 10^3}
--\frac{1}{4\times 10^4}+\cdots\\
-&amp; = \sum_{n=1}^\infty (-1)^{n-1}\frac{1}{n\times 10^n}
-\end{align*}
-</div>
-<p class="continuation">By the alternating series test, this series converges. Also by the alternating series test, approximating <span class="process-math">\(\log\frac{11}{10}\)</span> by throwing away all but the first <span class="process-math">\(N\)</span> terms</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-29">
-\begin{align*}
-\log\frac{11}{10} &amp; \approx
-\frac{1}{10}
--\frac{1}{2\times 10^2}
-+\frac{1}{3\times 10^3}
--\frac{1}{4\times 10^4}+\cdots
-+(-1)^{N-1}\frac{1}{N\times 10^N}\\
-&amp; = \sum_{n=1}^{N} (-1)^{n-1}\frac{1}{n\times 10^n}
-\end{align*}
-</div>
-<p class="continuation">introduces an error whose magnitude is no more than the magnitude of the first term that we threw away.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\text{error} \le \frac{1}{(N+1)\times 10^{N+1}}
-\end{equation*}
-</div>
-<p class="continuation">To achieve an error that is no more than <span class="process-math">\(10^{-12}\text{,}\)</span> we have to choose <span class="process-math">\(N\)</span> so  that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{1}{(N+1)\times 10^{N+1}} \le 10^{-12}
-\end{equation*}
-</div>
-<p class="continuation">The best way to do so is simply to guess — we are not going to be able to manipulate the inequality  <span class="process-math">\(\frac{1}{(N+1)\times 10^{N+1}} \le \frac{1}{10^{12}}\)</span> into the form <span class="process-math">\(N\le \cdots\text{,}\)</span> and even if we could, it would not  be worth the effort. We need to choose <span class="process-math">\(N\)</span> so that the denominator <span class="process-math">\((N+1)\times 10^{N+1}\)</span>  is at least <span class="process-math">\(10^{12}\text{.}\)</span> That is easy, because the denominator contains the factor <span class="process-math">\(10^{N+1}\)</span> which is at least <span class="process-math">\(10^{12}\)</span> whenever <span class="process-math">\(N+1\ge 12\text{,}\)</span> i.e. whenever <span class="process-math">\(N\ge 11\text{.}\)</span> So we will achieve an error of less than <span class="process-math">\(10^{-12}\)</span> if we choose <span class="process-math">\(N=11\text{.}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=11} = \frac{1}{12\times 10^{12}} \lt  \frac{1}{10^{12}}
-\end{equation*}
-</div>
-<p class="continuation">This is not the smallest possible choice of <span class="process-math">\(N\text{,}\)</span> but in practice that just doesn't matter — your computer is not going to care whether or not you ask it to compute a few extra terms. If you really need the smallest <span class="process-math">\(N\)</span> that obeys  <span class="process-math">\(\frac{1}{(N+1)\times 10^{N+1}} \le \frac{1}{10^{12}}\text{,}\)</span> you can next just try <span class="process-math">\(N=10\text{,}\)</span> then <span class="process-math">\(N=9\text{,}\)</span> and so on.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-30">
-\begin{align*}
-\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=11} &amp;= \frac{1}{12\times 10^{12}} \lt  \frac{1}{10^{12}}\\
-\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=10} &amp;= \frac{1}{11\times 10^{11}} \lt  \frac{1}{10\times 10^{11}} = \frac{1}{10^{12}}\\
-\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=9} &amp;= \frac{1}{10\times 10^{10}} = \frac{1}{10^{11}}  \gt  \frac{1}{10^{12}}
-\end{align*}
-</div>
-<p class="continuation">So in this problem, the smallest acceptable <span class="process-math">\(N=10\text{.}\)</span></p></article></div></section><section class="subsection" id="sec_RatioTest"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.5</span> <span class="title">The Ratio Test</span>
-</h3>
-<p id="p-54">The idea behind the ratio test comes from a reexamination of the  geometric series. Recall that the geometric series</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-31">
-\begin{gather*}
-\sum_{n=0}^\infty a_n = \sum_{n=0}^\infty a r^n
-\end{gather*}
-</div>
-<p class="continuation">converges when <span class="process-math">\(|r| \lt 1\)</span> and diverges otherwise. So the convergence of  this series is completely determined by the number <span class="process-math">\(r\text{.}\)</span> This number  is just the ratio of successive terms — that is <span class="process-math">\(r = a_{n+1}/a_n\text{.}\)</span></p>
-<p id="p-55">In general the ratio of successive terms of a series,  <span class="process-math">\(\frac{a_{n+1}}{a_n}\text{,}\)</span> is not constant, but depends on  <span class="process-math">\(n\text{.}\)</span> However, as we have noted above, the convergence of a  series <span class="process-math">\(\sum a_n\)</span> is determined by the behaviour of its  terms when <span class="process-math">\(n\)</span> is large. In this way, the behaviour of this  ratio when <span class="process-math">\(n\)</span> is small tells us nothing about the  convergence of the series, but the limit of the ratio as <span class="process-math">\(n\to\infty\)</span> does. This is the basis of the ratio test.</p>
-<article class="theorem theorem-like" id="thm_SRratio"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Ratio Test.</span>
-</h4>
-<p id="p-56">Let <span class="process-math">\(N\)</span> be any positive integer and assume that <span class="process-math">\(a_n\ne 0\)</span> for all <span class="process-math">\(n\ge N\text{.}\)</span></p>
-<ol class="lower-alpha">
-<li id="li-76"><p id="p-derived-li-76">If <span class="process-math">\(\lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = L \lt 1\text{,}\)</span> then <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> converges.</p></li>
-<li id="li-77"><p id="p-derived-li-77">If <span class="process-math">\(\lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = L \gt 1\text{,}\)</span> or <span class="process-math">\(\lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = +\infty\text{,}\)</span>  then <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> diverges.</p></li>
-</ol></article><article class="warning remark-like" id="warning-2"><h4 class="heading">
-<span class="type">Atenção</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
-</h4>
-<p id="p-57">Beware that the ratio test provides absolutely no conclusion about the convergence or divergence of the series <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> if <span class="process-math">\(\lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| =  1\text{.}\)</span> See Example <a href="" class="xref" data-knowl="./knowl/eg_SRratioC.html" title="Exemplo 1.22: L=1">Exemplo 1.22</a>, below.</p></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><p id="p-58">(a) Pick any number <span class="process-math">\(R\)</span> obeying <span class="process-math">\(L \lt R \lt 1\text{.}\)</span> We are assuming that  <span class="process-math">\(\Big|\frac{a_{n+1}}{a_n}\Big|\)</span> approaches <span class="process-math">\(L\)</span> as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> In particular there must be some natural number <span class="process-math">\(M\)</span> so that <span class="process-math">\(\Big|\frac{a_{n+1}}{a_n}\Big|\le R\)</span> for all <span class="process-math">\(n\ge M\text{.}\)</span> So  <span class="process-math">\(|a_{n+1}|\le R|a_n|\)</span> for all <span class="process-math">\(n\ge M\text{.}\)</span> In particular</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-32">
-\begin{align*}
-|a_{M+1}| &amp; \ \le\  R\,|a_M|\\
-|a_{M+2}| &amp; \ \le\  R\,|a_{M+1}| &amp; \le\  R^2 \,|a_M|\\
-|a_{M+3}| &amp; \ \le\  R\,|a_{M+2}| &amp; \le\  R^3 \,|a_M|\\
-&amp;\vdots\\
-|a_{M+\ell}| &amp;\le R^\ell \,|a_M|
-\end{align*}
-</div>
-<p class="continuation">for all <span class="process-math">\(\ell\ge 0\text{.}\)</span> The series <span class="process-math">\(\sum_{\ell=0}^\infty  R^\ell \,|a_M|\)</span> is a geometric series with ratio <span class="process-math">\(R\)</span> smaller than one in magnitude and so converges. Consequently, by the comparison test with <span class="process-math">\(a_n\)</span> replaced by <span class="process-math">\(A_\ell = a_{n+\ell}\)</span> and <span class="process-math">\(c_n\)</span> replaced by <span class="process-math">\(C_\ell= R^\ell \, |a_M|\text{,}\)</span> the series <span class="process-math">\(\sum\limits_{\ell=1}^\infty a_{M+\ell} =\sum\limits_{n=M+1}^\infty a_n\)</span> converges. So the series  <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> converges too.</p>
-<p id="p-59">(b) We are assuming that  <span class="process-math">\(\Big|\frac{a_{n+1}}{a_n}\Big|\)</span> approaches <span class="process-math">\(L \gt 1\)</span> as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> In particular there must be some natural number <span class="process-math">\(M \gt N\)</span> so that <span class="process-math">\(\Big|\frac{a_{n+1}}{a_n}\Big|\ge 1\)</span> for all <span class="process-math">\(n\ge M\text{.}\)</span> So  <span class="process-math">\(|a_{n+1}|\ge |a_n|\)</span> for all <span class="process-math">\(n\ge M\text{.}\)</span> That is, <span class="process-math">\(|a_n|\)</span> increases as <span class="process-math">\(n\)</span> increases as long as <span class="process-math">\(n\ge M\text{.}\)</span> So <span class="process-math">\(|a_n|\ge |a_M|\)</span> for all <span class="process-math">\(n\ge M\)</span> and <span class="process-math">\(a_n\)</span> cannot converge to zero as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> So the series diverges by the divergence test.</p></article></div>
-<article class="example example-like" id="eg_SRratioA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRratioA"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=0}^\infty a n x^{n-1}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRratioA"><article class="example example-like"><p id="p-60">Fix any two nonzero real numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(x\text{.}\)</span> We have already seen in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_SRgeom" missing or not unique]</code> and Lemma <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "lem_geomsum" missing or not unique]</code> — we have just renamed <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> — that the geometric series <span class="process-math">\(\sum_{n=0}^\infty a x^n\)</span> converges when <span class="process-math">\(|x| \lt 1\)</span> and diverges when <span class="process-math">\(|x|\ge 1\text{.}\)</span> We are now going to consider a new series, constructed by differentiating <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 14 </sup></a> each term in the geometric series  <span class="process-math">\(\sum_{n=0}^\infty a x^n\text{.}\)</span> This new series is</p>
-<div class="displaymath process-math" data-contains-math-knowls="  ">
-\begin{equation*}
-\sum_{n=0}^\infty a_n\qquad\text{with}\quad a_n = a\, n\, x^{n-1}
-\end{equation*}
-</div>
-<p class="continuation">Let's apply the ratio test.</p>
-<div class="displaymath process-math" data-contains-math-knowls="  " id="md-33">
-\begin{align*}
-\Big|\frac{a_{n+1}}{a_n}\Big|
-&amp;= \Big|\frac{a\, (n+1)\, x^n}{a\, n\, x^{n-1}}\Big|
-= \frac{n+1}{n} |x|
-= \Big(1+\frac{1}{n}\Big) |x|
-\rightarrow L=|x|\quad\text{as $n\rightarrow\infty$}
-\end{align*}
-</div>
-<p class="continuation">The ratio test now tells us that the series <span class="process-math">\(\sum_{n=0}^\infty a\, n\, x^{n-1}\)</span> converges if <span class="process-math">\(|x| \lt 1\)</span> and diverges if <span class="process-math">\(|x| \gt 1\text{.}\)</span> It says nothing about the cases <span class="process-math">\(x=\pm 1\text{.}\)</span> But in both of those cases <span class="process-math">\(a_n=a\,n\,(\pm 1)^n\)</span> does not converge to zero as <span class="process-math">\(n\rightarrow\infty\)</span> and the series diverges by the divergence test.</p></article></div>
-<p id="p-61">Notice that in the above example, we had to apply another convergence  test in addition to the ratio test. This will be commonplace when we  reach power series and Taylor series — the ratio test will tell us  something like</p>
-<blockquote class="blockquote" id="blockquote-1"><p id="p-62">The series converges for <span class="process-math">\(|x| \lt R\)</span> and diverges for <span class="process-math">\(|x| \gt R\text{.}\)</span></p></blockquote>
-<p id="p-63">Of course, we will still have to to determine what happens when <span class="process-math">\(x=+R, -R\text{.}\)</span> To determine convergence or divergence in those cases we  will need to use one of the other tests we have seen.</p>
-<article class="example example-like" id="eg_SRratioB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRratioB"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRratioB"><article class="example example-like"><p id="p-64">Once again, fix any two nonzero real numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(X\text{.}\)</span> We again start with the geometric series <span class="process-math">\(\sum_{n=0}^\infty a x^n\)</span> but this time we construct a new series by integrating <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 15 </sup></a> each term, <span class="process-math">\(a x^n\text{,}\)</span> from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=X\)</span> giving <span class="process-math">\(\frac{a}{n+1} X^{n + 1}\text{.}\)</span> The resulting new series is</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\sum_{n=0}^\infty a_n\qquad\text{with }a_n = \frac{a}{n+1} X^{n + 1}
-\end{equation*}
-</div>
-<p class="continuation">To apply the ratio test we need to compute</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-34">
-\begin{align*}
-\Big|\frac{a_{n+1}}{a_n}\Big|
-&amp;= \bigg|\frac{\frac{a}{n+2} X^{n + 2}}{\frac{a}{n+1} X^{n + 1}}\bigg|
-= \frac{n+1}{n+2} |X|
-= \frac{1+\frac{1}{n}}{1+\frac{2}{n}} |X|
-\rightarrow L=|X|\quad\text{as $n\rightarrow\infty$}
-\end{align*}
-</div>
-<p class="continuation">The ratio test now tells us that the series  <span class="process-math">\(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\)</span> converges if <span class="process-math">\(|X| \lt 1\)</span> and diverges if <span class="process-math">\(|X| \gt 1\text{.}\)</span> It says nothing about the cases <span class="process-math">\(X=\pm 1\text{.}\)</span></p>
-<p id="p-65">If <span class="process-math">\(X=1\text{,}\)</span> the series reduces to</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html">
-\begin{equation*}
-\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\bigg|_{X=1}
-=\sum_{n=0}^\infty \frac{a}{n+1}
-=a\sum_{m=1}^\infty \frac{1}{m}\qquad\text{with }m=n+1
-\end{equation*}
-</div>
-<p class="continuation">which is just <span class="process-math">\(a\)</span> times the harmonic series, which we know diverges, by Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a>.</p>
-<p id="p-66">If <span class="process-math">\(X=-1\text{,}\)</span> the series reduces to</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRaltharmonic.html">
-\begin{equation*}
-\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\bigg|_{X=-1} =\sum_{n=0}^\infty (-1)^{n+1}\frac{a}{n+1}
-\end{equation*}
-</div>
-<p class="continuation">which converges by the alternating series test. See Example <a href="" class="xref" data-knowl="./knowl/eg_SRaltharmonic.html" title="Exemplo 1.15: Convergence of the alternating harmonic series">Exemplo 1.15</a>.</p>
-<p id="p-67">In conclusion, the series <span class="process-math">\(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\)</span> converges if and only if <span class="process-math">\(-1\le X \lt 1\text{.}\)</span></p></article></div>
-<p id="p-68">The ratio test is often quite easy to apply, but one must always be  careful when the limit of the ratio is <span class="process-math">\(1\text{.}\)</span> The next example  illustrates this.</p>
-<article class="example example-like" id="eg_SRratioC"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRratioC"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(L=1\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRratioC"><article class="example example-like"><p id="p-69">In this example, we are going to see three different series that all have <span class="process-math">\(\lim_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = 1\text{.}\)</span> One is going to diverge and the other two are going to converge.</p>
-<ul id="p-70" class="disc">
-<li id="li-78"><p id="p-derived-li-78">The first series is the harmonic series<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html">
-\begin{equation*}
-\sum_{n=1}^\infty a_n\qquad\text{with }a_n = \frac{1}{n}
-\end{equation*}
-</div>We have already seen, in Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a>, that this series diverges. It has<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html">
-\begin{equation*}
-\Big|\frac{a_{n+1}}{a_n}\Big|
-= \bigg|\frac{\frac{1}{n+1}}{\frac{1}{n}}\bigg|
-= \frac{n}{n+1}
-= \frac{1}{1+\frac{1}{n}}
-\rightarrow L=1\quad\text{as $n\rightarrow\infty$}
-\end{equation*}
-</div></p></li>
-<li id="li-79"><p id="p-derived-li-79">The second series is the alternating harmonic series<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRaltharmonic.html">
-\begin{equation*}
-\sum_{n=1}^\infty a_n\qquad\text{with }a_n = (-1)^{n-1}\frac{1}{n}
-\end{equation*}
-</div>We have already seen, in Example <a href="" class="xref" data-knowl="./knowl/eg_SRaltharmonic.html" title="Exemplo 1.15: Convergence of the alternating harmonic series">Exemplo 1.15</a>, that this series converges. But it also has<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRaltharmonic.html">
-\begin{equation*}
-\Big|\frac{a_{n+1}}{a_n}\Big|
-= \bigg|\frac{(-1)^n\frac{1}{n+1}}{(-1)^{n-1}\frac{1}{n}}\bigg|
-= \frac{n}{n+1}
-= \frac{1}{1+\frac{1}{n}}
-\rightarrow L=1\quad\text{as $n\rightarrow\infty$}
-\end{equation*}
-</div></p></li>
-<li id="li-80"><p id="p-derived-li-80">The third series is<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html">
-\begin{equation*}
-\sum_{n=1}^\infty a_n\qquad\text{with }a_n = \frac{1}{n^2}
-\end{equation*}
-</div>We have already seen, in Example <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.6: The p test:  \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.6</a> with <span class="process-math">\(p=2\text{,}\)</span>  that this series converges. But it also has<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html">
-\begin{equation*}
-\Big|\frac{a_{n+1}}{a_n}\Big|
-= \bigg|\frac{\frac{1}{(n+1)^2}}{\frac{1}{n^2}}\bigg|
-= \frac{n^2}{(n+1)^2}
-= \frac{1}{(1+\frac{1}{n})^2}
-\rightarrow L=1\quad\text{as $n\rightarrow\infty$}
-\end{equation*}
-</div></p></li>
-</ul></article></div>
-<p id="p-71">Let's do a somewhat artificial example that forces us to combine a few of the techniques we have seen.</p>
-<article class="example example-like" id="eg_ratioC"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_ratioC"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty \frac{ (-3)^n \sqrt{n+1}}{2n+3}x^n\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_ratioC"><article class="example example-like"><p id="p-72">Again, the convergence of this series will depend on <span class="process-math">\(x\text{.}\)</span></p>
-<ul class="disc">
-<li id="li-81"><p id="p-derived-li-81">Let us start with the ratio test — so we compute<div class="displaymath process-math" data-contains-math-knowls="" id="md-35">
-\begin{align*}
-\left|\frac{a_{n+1}}{a_n}\right|
-&amp;= \left|\frac{(-3)^{n+1} \sqrt{n+2} (2n+3) x^{n+1} }{(-3)^n \sqrt{n+1} (2n+5) x^n} \right|\\
-&amp;= |-3| \cdot \frac{\sqrt{n+2}}{\sqrt{n+1}} \cdot \frac{2n+3}{2n+5} \cdot |x|\\
-\end{align*}
-<p class="intertext">So in the limit as <span class="process-math">\(n \to \infty\)</span> we are left with</p>
-\begin{align*}
-\lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right|
-&amp;= 3 |x|
-\end{align*}
-</div></p></li>
-<li id="li-82"><p id="p-derived-li-82">The ratio test then tells us that if <span class="process-math">\(3|x| \gt 1\)</span> the series diverges, while when <span class="process-math">\(3|x| \lt 1\)</span> the series converges.</p></li>
-<li id="li-83"><p id="p-derived-li-83">This leaves us with the cases <span class="process-math">\(x=+\frac{1}{3}\)</span> and <span class="process-math">\(-\frac{1}{3}\text{.}\)</span></p></li>
-<li id="li-84"><p id="p-derived-li-84">Setting <span class="process-math">\(x=\frac{1}{3}\)</span> gives the series<div class="displaymath process-math" data-contains-math-knowls="" id="md-36">
-\begin{gather*}
-\sum_{n=1}^\infty \frac{ (-1)^n \sqrt{n+1}}{2n+3}
-\end{gather*}
-</div>The fact that the terms alternate here suggests that we use the alternating series test. That will show that this series converges provided <span class="process-math">\(\frac{\sqrt{n+1}}{2n+3}\)</span> decreases as <span class="process-math">\(n\)</span> increases. So we define the function<div class="displaymath process-math" data-contains-math-knowls="" id="md-37">
-\begin{align*}
-f(t) &amp;= \frac{\sqrt{t+1}}{2t+3}
-\end{align*}
-</div>(which is constructed by replacing the <span class="process-math">\(n\)</span> in <span class="process-math">\(\frac{\sqrt{n+1}}{2n+3}\)</span> with <span class="process-math">\(t\)</span>) and verify that <span class="process-math">\(f(t)\)</span> is a decreasing function of <span class="process-math">\(t\text{.}\)</span> To prove that, it suffices to show its derivative is negative when <span class="process-math">\(t\geq 1\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-38">
-\begin{align*}
-f'(t) &amp;= \frac{(2t+3)\cdot \frac{1}{2} \cdot(t+1)^{-1/2} - 2\sqrt{t+1} }{(2t+3)^2}\\
-&amp;=\frac{(2t+3) - 4(t+1)  }{2 \sqrt{t+1} (2t+3)^2}\\
-&amp;= \frac{-2t-1}{2 \sqrt{t+1} (2t+3)^2}
-\end{align*}
-</div>When <span class="process-math">\(t \geq 1\)</span> this is negative and so <span class="process-math">\(f(t)\)</span> is a decreasing function. Thus we can apply the alternating series  test to show that the series converges when <span class="process-math">\(x=\frac{1}{3}\text{.}\)</span></p></li>
-<li id="li-85"><p id="p-derived-li-85">When <span class="process-math">\(x = -\frac{1}{3}\)</span> the series becomes<div class="displaymath process-math" data-contains-math-knowls="" id="md-39">
-\begin{gather*}
-\sum_{n=1}^\infty \frac{\sqrt{n+1}}{2n+3}.
-\end{gather*}
-</div>Notice that when <span class="process-math">\(n\)</span> is large, the summand is approximately  <span class="process-math">\(\frac{\sqrt{n}}{2n}\)</span> which suggests that the series will diverge  by comparison with <span class="process-math">\(\sum n^{-1/2}\text{.}\)</span> To formalise this, we can use the limit comparison theorem:<div class="displaymath process-math" data-contains-math-knowls="" id="md-40">
-\begin{align*}
-\lim_{n \to \infty} \frac{\sqrt{n+1}}{2n+3}\  \frac{1}{ n^{-1/2} }
-&amp;=
-\lim_{n \to \infty} \frac{\sqrt{n} \cdot \sqrt{1+1/n}}{n(2+3/n)} \cdot n^{1/2}\\
-&amp;=
-\lim_{n \to \infty} \frac{n \cdot \sqrt{1+1/n}}{n(2+3/n)}\\
-&amp;= \frac{1}{2}
-\end{align*}
-</div>So since this ratio has a finite limit and the series <span class="process-math">\(\sum n^{-1/2}\)</span> diverges, we know that our series also diverges.</p></li>
-</ul>
-<p class="continuation">So in summary the series converges when <span class="process-math">\(-\frac{1}{3}  \lt  x \leq \frac{1}{3}\)</span> and diverges otherwise.</p></article></div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.6</span> <span class="title">Convergence Test List</span>
-</h3>
-<p id="p-73">We now have half a dozen convergence tests:</p>
-<ul class="disc">
-<li id="li-86">
-<p id="p-74"><em class="emphasis">Divergence Test</em></p>
-<ul class="circle"><li id="li-87"><p id="p-derived-li-87">works well when the <span class="process-math">\(n^{\mathrm{th}}\)</span> term in the series <em class="emphasis">fails</em> to converge to zero as <span class="process-math">\(n\)</span> tends to infinity</p></li></ul>
-</li>
-<li id="li-88">
-<p id="p-75"><em class="emphasis">Alternating Series Test</em></p>
-<ul class="circle">
-<li id="li-89"><p id="p-derived-li-89">works well when successive terms in the series alternate in sign</p></li>
-<li id="li-90"><p id="p-derived-li-90">don't forget to check that successive terms decrease in magnitude and tend to zero as <span class="process-math">\(n\)</span>  tends to infinity</p></li>
-</ul>
-</li>
-<li id="li-91">
-<p id="p-76"><em class="emphasis">Integral Test</em></p>
-<ul class="circle">
-<li id="li-92"><p id="p-derived-li-92">works well when, if you substitute <span class="process-math">\(x\)</span> for <span class="process-math">\(n\)</span> in the <span class="process-math">\(n^{\mathrm{th}}\)</span> term you get a function, <span class="process-math">\(f(x)\text{,}\)</span> that you can integrate</p></li>
-<li id="li-93"><p id="p-derived-li-93">don't forget to check that <span class="process-math">\(f(x)\ge 0\)</span> and that <span class="process-math">\(f(x)\)</span> decreases as <span class="process-math">\(x\)</span> increases</p></li>
-</ul>
-</li>
-<li id="li-94">
-<p id="p-77"><em class="emphasis">Ratio Test</em></p>
-<ul class="circle">
-<li id="li-95"><p id="p-derived-li-95">works well when <span class="process-math">\(\frac{a_{n+1}}{a_n}\)</span> simplifies enough that you can easily compute  <span class="process-math">\(\lim\limits_{n\rightarrow\infty}\big|\frac{a_{n+1}}{a_n}\big|=L\)</span></p></li>
-<li id="li-96"><p id="p-derived-li-96">this often happens when <span class="process-math">\(a_n\)</span> contains powers, like <span class="process-math">\(7^n\text{,}\)</span> or factorials, like <span class="process-math">\(n!\)</span></p></li>
-<li id="li-97"><p id="p-derived-li-97">don't forget that <span class="process-math">\(L=1\)</span> tells you nothing about the convergence/divergence of the series</p></li>
-</ul>
-</li>
-<li id="li-98">
-<p id="p-78"><em class="emphasis">Comparison Test and Limit Comparison Test</em></p>
-<ul class="circle">
-<li id="li-99"><p id="p-derived-li-99">works well when, for very large <span class="process-math">\(n\text{,}\)</span> the <span class="process-math">\(n^{\mathrm{th}}\)</span> term  <span class="process-math">\(a_n\)</span> is approximately the same as a simpler term <span class="process-math">\(b_n\)</span> (see Example <a href="" class="xref" data-knowl="./knowl/eg_SRcomparisonTestB.html" title="Exemplo 1.10: \sum_{n=1}^\infty\frac{n+\cos n}{n^3-1/3}">Exemplo 1.10</a>) and it is easy to determine whether or not <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> converges</p></li>
-<li id="li-100"><p id="p-derived-li-100">don't forget to check that <span class="process-math">\(b_n\ge 0\)</span></p></li>
-<li id="li-101"><p id="p-derived-li-101">usually the Limit Comparison Test is easier to apply than the Comparison Test</p></li>
-</ul>
-</li>
-</ul></section><section class="subsection" id="sec_RootTest"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.7</span> <span class="title">Optional — The Root Test</span>
-</h3>
-<p id="p-79">There is another test that is very similar in spirit to the ratio test. It also comes from a reexamination of the  geometric series</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-41">
-\begin{gather*}
-\sum_{n=0}^\infty a_n = \sum_{n=0}^\infty a r^n
-\end{gather*}
-</div>
-<p class="continuation">The ratio test was based on the observation that <span class="process-math">\(r\text{,}\)</span> which largely determines whether or not the series converges, could be found by  computing the ratio <span class="process-math">\(r = a_{n+1}/a_n\text{.}\)</span> The root test is based on  the observation that <span class="process-math">\(|r|\)</span> can also be determined by looking that  the <span class="process-math">\(n^{\rm th}\)</span> root of the <span class="process-math">\(n^{\rm th}\)</span> term with <span class="process-math">\(n\)</span> very large:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\lim_{n\to\infty}\root{n}\of{\big|ar^n\big|}
-=|r|\lim_{n\to\infty}\root{n}\of{\big|a\big|}
-=|r|\qquad\text{if $a\ne 0$}
-\end{equation*}
-</div>
-<p class="continuation">Of course, in general, the <span class="process-math">\(n^{\rm th}\)</span> term is not exactly <span class="process-math">\(ar^n\text{.}\)</span>  However, if for very large <span class="process-math">\(n\text{,}\)</span> the <span class="process-math">\(n^{\rm th}\)</span> term is  approximately proportional to <span class="process-math">\(r^n\text{,}\)</span> with <span class="process-math">\(|r|\)</span> given by the above limit, we would expect the series to converge when <span class="process-math">\(|r| \lt 1\)</span> and diverge when <span class="process-math">\(|r| \gt 1\text{.}\)</span> That is indeed the case.</p>
-<article class="theorem theorem-like" id="thm_SRroot"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span><span class="space"> </span><span class="title">Root Test.</span>
-</h4>
-<p id="p-80">Assume that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-L = \lim_{n\to\infty}\root{n}\of{\big|a_n\big|}
-\end{equation*}
-</div>
-<p class="continuation">exists or is <span class="process-math">\(+\infty\text{.}\)</span></p>
-<ol class="lower-alpha">
-<li id="li-102"><p id="p-derived-li-102">If <span class="process-math">\(L \lt 1\text{,}\)</span> then <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> converges.</p></li>
-<li id="li-103"><p id="p-derived-li-103">If <span class="process-math">\(L \gt 1\text{,}\)</span> or <span class="process-math">\(L=+\infty\text{,}\)</span>  then <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> diverges.</p></li>
-</ol></article><article class="warning remark-like" id="warning-3"><h4 class="heading">
-<span class="type">Atenção</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
-</h4>
-<p id="p-81">Beware that the root test provides absolutely no conclusion about the convergence or divergence of the series <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> if <span class="process-math">\(\lim\limits_{n\rightarrow\infty}\root{n}\of{\big|a_n\big|} =  1\text{.}\)</span></p></article><article class="hiddenproof" id="proof-6"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-82">(a) Pick any number <span class="process-math">\(R\)</span> obeying <span class="process-math">\(L \lt R \lt 1\text{.}\)</span> We are assuming that  <span class="process-math">\(\root{n}\of{|a_n|}\)</span> approaches <span class="process-math">\(L\)</span> as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> In particular there must be some natural number <span class="process-math">\(M\)</span> so that <span class="process-math">\(\root{n}\of{|a_n|}\le R\)</span> for all <span class="process-math">\(n\ge M\text{.}\)</span> So  <span class="process-math">\(|a_n|\le R^n\)</span> for all <span class="process-math">\(n\ge M\)</span> and the series  <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> converges by comparison to the geometric series <span class="process-math">\(\sum\limits_{n=1}^\infty R^n\)</span></p>
-<p id="p-83">(b) We are assuming that  <span class="process-math">\(\root{n}\of{|a_n|}\)</span> approaches <span class="process-math">\(L \gt 1\)</span> (or grows unboundedly) as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> In particular there must be some natural  number <span class="process-math">\(M\)</span> so that <span class="process-math">\(\root{n}\of{|a_n|}\ge 1\)</span> for all <span class="process-math">\(n\ge M\text{.}\)</span>  So <span class="process-math">\(|a_n|\ge 1\)</span> for all <span class="process-math">\(n\ge M\)</span> and the series diverges by the  divergence test.</p></article></div>
-<article class="example example-like" id="eg_rootA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_rootA"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty \frac{ (-3)^n \sqrt{n+1}}{2n+3}x^n\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_rootA"><article class="example example-like"><p id="p-84">We have already used the ratio test, in Example <a href="" class="xref" data-knowl="./knowl/eg_ratioC.html" title="Exemplo 1.23: \sum_{n=1}^\infty \frac{ (-3)^n \sqrt{n+1}}{2n+3}x^n">Exemplo 1.23</a>, to show that this series converges when <span class="process-math">\(|x| \lt \frac{1}{3}\)</span> and diverges  when <span class="process-math">\(|x| \gt \frac{1}{3}\text{.}\)</span> We'll now use the root test to draw the  same conclusions.</p>
-<ul class="disc">
-<li id="li-104"><p id="p-derived-li-104">Write <span class="process-math">\(a_n=  \frac{ (-3)^n \sqrt{n+1}}{2n+3}x^n\text{.}\)</span></p></li>
-<li id="li-105"><p id="p-derived-li-105">We compute<div class="displaymath process-math" data-contains-math-knowls="" id="md-42">
-\begin{align*}
-\root{n}\of{|a_n|}
-&amp;= \root{n}\of{ \bigg|\frac{ (-3)^n \sqrt{n+1}}{2n+3}x^n\bigg|}\\
-&amp;= 3 |x|\big(n+1\big)^{\frac{1}{2n}}  \big(2n+3)^{-\frac{1}{n}}
-\end{align*}
-</div></p></li>
-<li id="li-106"><p id="p-derived-li-106">We'll now show that the limit of <span class="process-math">\(\big(n+1\big)^{\frac{1}{2n}}\)</span> as <span class="process-math">\(n\to\infty\)</span> is exactly <span class="process-math">\(1\text{.}\)</span> To do, so we first compute the limit  of the logarithm.<div class="displaymath process-math" data-contains-math-knowls="" id="md-43">
-\begin{align*}
-\lim_{n\to\infty}\log \big(n+1\big)^{\frac{1}{2n}}
-&amp;=\lim_{n\to\infty}\frac{\log \big(n+1\big)}{2n}
-\qquad&amp;\text{now apply Theorem }[cross-reference to target(s) "thm_SRxlimtoanlim" missing or not unique]\\
-&amp;=\lim_{t\to\infty}\frac{\log \big(t+1\big)}{2t}\\
-&amp;=\lim_{t\to\infty}\frac{\frac{1}{t+1}}{2} \qquad&amp;\text{by l'Hôpital}\\
-&amp;=0
-\end{align*}
-</div>So<div class="displaymath process-math" data-contains-math-knowls="" id="md-44">
-\begin{gather*}
-\lim_{n\to\infty}\big(n+1\big)^{\frac{1}{2n}}
-=\lim_{n\to\infty}\exp\big\{\log \big(n+1\big)^{\frac{1}{2n}}\big\}
-= e^0=1
-\end{gather*}
-</div>An essentially identical computation also gives that  <span class="process-math">\(\lim_{n\to\infty}\big(2n+3)^{-\frac{1}{n}} = e^0=1\text{.}\)</span></p></li>
-<li id="li-107"><p id="p-derived-li-107">So<div class="displaymath process-math" data-contains-math-knowls="" id="md-45">
-\begin{gather*}
-\lim_{n\to\infty}\root{n}\of{|a_n|}
-= 3 |x|
-\end{gather*}
-</div></p></li>
-</ul>
-<p class="continuation">and the root test also tells us that if <span class="process-math">\(3|x| \gt 1\)</span> the series diverges,  while when <span class="process-math">\(3|x| \lt 1\)</span> the series converges.</p></article></div>
-<p id="p-85">We have done the last example once, in Example <a href="" class="xref" data-knowl="./knowl/eg_ratioC.html" title="Exemplo 1.23: \sum_{n=1}^\infty \frac{ (-3)^n \sqrt{n+1}}{2n+3}x^n">Exemplo 1.23</a>,  using the ratio test and once, in Example <a href="" class="xref" data-knowl="./knowl/eg_rootA.html" title="Exemplo 1.26: \sum_{n=1}^\infty \frac{ (-3)^n \sqrt{n+1}}{2n+3}x^n">Exemplo 1.26</a>, using the root test. It was clearly much easier to use the ratio test. Here is an example that is most easily handled by the root test.</p>
-<article class="example example-like" id="eg_rootB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_rootB"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty \big(\frac{n}{n+1}\big)^{n^2}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_rootB"><article class="example example-like"><p id="p-86">Write <span class="process-math">\(a_n=  \big(\frac{n}{n+1}\big)^{n^2}\text{.}\)</span> Then</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-46">
-\begin{align*}
-\root{n}\of{|a_n|}
-&amp;= \root{n}\of{ \Big(\frac{n}{n+1}\Big)^{n^2}}
-= \Big(\frac{n}{n+1}\Big)^{n}
-= \Big(1+\frac{1}{n}\Big)^{-n}
-\end{align*}
-</div>
-<p class="continuation">Now we take the limit,</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-47">
-\begin{align*}
-\lim_{n\to\infty}\Big(1+\frac{1}{n}\Big)^{-n}
-&amp;=\lim_{X\to\infty}\Big(1+\frac{1}{X}\Big)^{-X}
-\qquad&amp;\text{by Theorem }[cross-reference to target(s) "thm_SRxlimtoanlim" missing or not unique]\\
-&amp;=\lim_{x\to 0}\big(1+x\big)^{-1/x}
-\qquad&amp;\text{where $x=\frac{1}{X}$}\\
-&amp;= e^{-1}
-\end{align*}
-</div>
-<p class="continuation">by Example 3.7.20 in the CLP-1 text with <span class="process-math">\(a=-1\text{.}\)</span> As the limit is strictly smaller than <span class="process-math">\(1\text{,}\)</span> the series  <span class="process-math">\(\sum_{n=1}^\infty \big(\frac{n}{n+1}\big)^{n^2}\)</span> converges.</p>
-<p id="p-87">To draw the same conclusion using the ratio test, one would have to show that the limit of</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-48">
-\begin{align*}
-\frac{a_{n+1}}{a_n}
-&amp;= \Big(\frac{n+1}{n+2}\Big)^{(n+1)^2}  \Big(\frac{n+1}{n}\Big)^{n^2}
-\end{align*}
-</div>
-<p class="continuation">as <span class="process-math">\(n\rightarrow\infty\)</span> is strictly smaller than 1. It's clearly  better to stick with the root test.</p></article></div></section><section class="subsection" id="sec_HarminicBasel"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.8</span> <span class="title">Optional — Harmonic and Basel Series</span>
-</h3>
-<section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
-<span class="type">Subsubseção</span> <span class="codenumber">1.8.1</span> <span class="title">The Harmonic Series</span>
-</h4>
-<p id="p-88">The series</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/wrn_SRdivTest.html" id="md-49">
-\begin{gather*}
-\sum_{n=1}^\infty \frac{1}{n}
-\end{gather*}
-</div>
-<p class="continuation">that appeared in Warning <a href="" class="xref" data-knowl="./knowl/wrn_SRdivTest.html" title="Atenção 1.3">Atenção 1.3</a>, is called the Harmonic series <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-16" id="fn-16"><sup> 16 </sup></a>, and its partial sums</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/wrn_SRdivTest.html" id="md-50">
-\begin{align*}
-H_N &amp;= \sum_{n=1}^N \frac{1}{n}
-\end{align*}
-</div>
-<p class="continuation">are called the Harmonic numbers. Though these numbers have been studied  at least as far back as Pythagoras, the divergence of the series was  first proved in around 1350 by Nicholas Oresme (1320-5 – 1382), though the  proof was lost for many years and rediscovered by Mengoli (1626–1686)  and the Bernoulli brothers (Johann 1667–1748 and Jacob 1655–1705).</p>
-<p id="p-89">Oresme's proof is beautiful and all the more remarkable that it was  produced more than 300 years before calculus was developed by Newton  and Leibnitz. It starts by grouping the terms of the harmonic series  carefully:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-51">
-\begin{align*}
-\amp\sum_{n=1}^\infty \frac{1}{n}
-= 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} + \cdots\\
-&amp;= 1 + \frac{1}{2}
-+ \left( \frac{1}{3} + \frac{1}{4} \right)
-+ \left( \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} \right)
-+ \left( \frac{1}{9} + \frac{1}{10} + \cdots + \frac{1}{15} + \frac{1}{16} \right)
-+ \cdots\\
-&amp; \gt  1 + \frac{1}{2}
-+ \left( \frac{1}{4} + \frac{1}{4} \right)
-+ \left( \frac{1}{8} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} \right)
-+ \left( \frac{1}{16} + \frac{1}{16} + \cdots + \frac{1}{16} + \frac{1}{16} \right)
-+ \cdots\\
-&amp;= 1 + \frac{1}{2} + \left( \frac{2}{4} \right) + \left( \frac{4}{8}  \right)
-+ \left( \frac{8}{16}  \right) + \cdots
-\end{align*}
-</div>
-<p class="continuation">So one can see that this is <span class="process-math">\(1 + \frac{1}{2} +\frac{1}{2}+\frac{1}{2} +\frac{1}{2} +\cdots\)</span> and so must diverge <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 17 </sup></a>.</p>
-<p id="p-90">There are many variations on Oresme's proof — for example, using groups of two or three. A rather different proof relies on the inequality</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-52">
-\begin{gather*}
-e^x  \gt  1 + x \qquad \text{ for $x  \gt  0$}
-\end{gather*}
-</div>
-<p class="continuation">which follows immediately from the Taylor series for <span class="process-math">\(e^x\)</span> given in Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_SRimportantTaylorSeries" missing or not unique]</code>. From this we can  bound the exponential of the Harmonic numbers:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-53">
-\begin{align*}
-e^{H_n}
-&amp;= e^{1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \cdots + \frac{1}{n}}\\
-&amp;= e^1 \cdot e^{1/2} \cdot e^{1/3} \cdot e^{1/4} \cdots e^{1/n}\\
-&amp; \gt  (1+1)\cdot(1+1/2)\cdot(1+1/3)\cdot(1+1/4)\cdots(1+1/n)\\
-&amp;= \frac{2}{1} \cdot \frac{3}{2} \cdot \frac{4}{3} \cdot \frac{5}{4} \cdots \frac{n+1}{n}\\
-&amp;= n+1
-\end{align*}
-</div>
-<p class="continuation">Since <span class="process-math">\(e^{H_n}\)</span> grows unboundedly with <span class="process-math">\(n\text{,}\)</span> the harmonic series diverges.</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
-<span class="type">Subsubseção</span> <span class="codenumber">1.8.2</span> <span class="title">The Basel Problem</span>
-</h4>
-<p id="p-91">The problem of determining the exact value of the sum of the series</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-54">
-\begin{gather*}
-\sum_{n=1}^\infty \frac{1}{n^2}
-\end{gather*}
-</div>
-<p class="continuation">is called the Basel problem. The problem is named after the home town of Leonhard Euler, who solved it. One can use telescoping series to show that this series must converge.  Notice that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-55">
-\begin{align*}
-\frac{1}{n^2} &amp; \lt  \frac{1}{n(n-1)} = \frac{1}{n-1} - \frac{1}{n}
-\end{align*}
-</div>
-<p class="continuation">Hence we can bound the partial sum:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-56">
-\begin{align*}
-S_k=\sum_{n=1}^k \frac{1}{n^2}
-&amp;  \lt  1 + \sum_{n=2}^k \frac{1}{n(n-1)} &amp;&amp; \text{avoid dividing by $0$}\\
-&amp;= 1 + \sum_{n=2}^k \left(\frac{1}{n-1} - \frac{1}{n} \right) &amp;&amp;
-\text{which telescopes to}\\
-&amp;= 1 + 1 - \frac{1}{k}
-\end{align*}
-</div>
-<p class="continuation">Thus, as <span class="process-math">\(k\)</span> increases, the partial sum <span class="process-math">\(S_k\)</span> increases  (the series is a sum of positive terms), but is always smaller  than <span class="process-math">\(2\text{.}\)</span>  So the sequence of partial sums converges.</p>
-<p id="p-92">Mengoli posed the problem of evaluating the series exactly in 1644  and it was solved — not entirely rigorously — by Euler in 1734.  A rigorous proof had to wait another 7 years. Euler used some extremely  cunning observations and manipulations of the sine function to show that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_sinProdFormula.html ./knowl/eqn_sinProdFormula.html ./knowl/eqn_sinProdFormula.html" id="md-57">
-\begin{align*}
-\sum_{n=1}^\infty \frac{1}{n^2} &amp;= \frac{\pi^2}{6}.
-\end{align*}
-</div>
-<p class="continuation">He used the Maclaurin series</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_sinProdFormula.html ./knowl/eqn_sinProdFormula.html ./knowl/eqn_sinProdFormula.html" id="md-58">
-\begin{align*}
-\sin x &amp;= 1 - \frac{x^3}{6} + \frac{x^5}{24} - \cdots
-\end{align*}
-</div>
-<p class="continuation">and a product formula for sine</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_sinProdFormula.html ./knowl/eqn_sinProdFormula.html ./knowl/eqn_sinProdFormula.html" id="mdn-1">
-\begin{align}
-\begin{split}
-\sin x &amp;= x
-\cdot \left(1 -\frac{x}{\pi} \right)
-\cdot \left(1 + \frac{x}{\pi} \right)
-\cdot \left(1 -\frac{x}{2\pi} \right)
-\cdot \left(1 + \frac{x}{2\pi} \right)
-\cdot \left(1 -\frac{x}{3\pi} \right)
-\cdot \left(1 + \frac{x}{3\pi} \right)
-\cdots\\
-&amp;= x
-\cdot \left(1 -\frac{x^2}{\pi} \right)
-\cdot \left(1 - \frac{x^2}{4\pi} \right)
-\cdot \left(1 -\frac{x^2}{9\pi} \right)
-\cdots
-\end{split}\tag{✶}
-\end{align}
-</div>
-<p class="continuation">Extracting the coefficient of <span class="process-math">\(x^3\)</span> from both expansions gives the desired result. The proof of the product formula is well beyond the scope of  this course. But notice that at least the values of <span class="process-math">\(x\)</span> which make the left hand side of <a href="" class="xref" data-knowl="./knowl/eqn_sinProdFormula.html" title="Equação">(✶)</a> zero, namely <span class="process-math">\(x=n\pi\)</span> with <span class="process-math">\(n\)</span>  integer, are exactly the same as the values of <span class="process-math">\(x\)</span> which make the  right hand side of  <a href="" class="xref" data-knowl="./knowl/eqn_sinProdFormula.html" title="Equação">(✶)</a> zero <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 18 </sup></a>.</p>
-<p id="p-93">This approach can also be used to compute <span class="process-math">\(\sum_{n=1}^\infty n^{-2p}\)</span> for <span class="process-math">\(p=1,2,3,\cdots\)</span> and show that they are rational  multiples <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 19 </sup></a> of <span class="process-math">\(\pi^{2p}\text{.}\)</span> The corresponding series of odd powers are significantly nastier and getting closed form expressions for  them remains a famous open problem.</p></section></section><section class="subsection" id="sec_CompProof"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.9</span> <span class="title">Optional — Some Proofs</span>
-</h3>
-<p id="p-94">In this optional section we provide proofs of two convergence tests. We shall repeatedly use the fact that any sequence <span class="process-math">\(a_1\text{,}\)</span> <span class="process-math">\(a_2\text{,}\)</span> <span class="process-math">\(a_3\text{,}\)</span>  <span class="process-math">\(\cdots\text{,}\)</span> of real numbers which is increasing  (i.e. <span class="process-math">\(a_{n+1}\ge a_n\)</span> for all <span class="process-math">\(n\)</span>) and bounded (i.e. there is a constant <span class="process-math">\(M\)</span> such that <span class="process-math">\(a_n\le M\)</span> for all <span class="process-math">\(n\)</span>) converges. We shall not prove this fact <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 20 </sup></a>.</p>
-<p id="p-95">We start with the comparison test, and then move on to the  alternating series test.</p>
-<article class="theorem theorem-like" id="theorem-8"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span><span class="space"> </span><span class="title">The Comparison Test (stated again).</span>
-</h4>
-<p id="p-96">Let <span class="process-math">\(N_0\)</span> be a natural number and let <span class="process-math">\(K \gt 0\text{.}\)</span></p>
-<ol class="lower-alpha">
-<li id="li-108"><p id="p-derived-li-108">If <span class="process-math">\(|a_n|\le K c_n\)</span> for all <span class="process-math">\(n\ge N_0\)</span> and <span class="process-math">\(\sum\limits_{n=0}^\infty c_n\)</span> converges, then <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> converges.</p></li>
-<li id="li-109"><p id="p-derived-li-109">If <span class="process-math">\(a_n\ge K d_n\ge0 \)</span> for all <span class="process-math">\(n\ge N_0\)</span> and <span class="process-math">\(\sum\limits_{n=0}^\infty d_n\)</span> diverges, then <span class="process-math">\(\sum\limits_{n=0}^\infty a_n\)</span> diverges.</p></li>
-</ol></article><article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-97">(a) By hypothesis <span class="process-math">\(\sum_{n=0}^\infty c_n\)</span> converges. So it suffices to prove that <span class="process-math">\(\sum_{n=0}^\infty [Kc_n-a_n]\)</span> converges, because then, by our Arithmetic of series  Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_SRseriesarith" missing or not unique]</code>,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\sum_{n=0}^\infty a_n = \sum_{n=0}^\infty K c_n -\sum_{n=0}^\infty [Kc_n-a_n]
-\end{equation*}
-</div>
-<p class="continuation">will converge too. But for all <span class="process-math">\(n\ge N_0\text{,}\)</span> <span class="process-math">\(Kc_n-a_n\ge 0\)</span> so that, for all <span class="process-math">\(N\ge N_0\text{,}\)</span> the partial sums</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-S_N = \sum_{n=0}^N [Kc_n-a_n]
-\end{equation*}
-</div>
-<p class="continuation">increase with <span class="process-math">\(N\text{,}\)</span> but never gets bigger than the finite number <span class="process-math">\(\sum\limits_{n=0}^{N_0} [Kc_n-a_n]  + K \sum\limits_{n=N_0+1}^\infty  c_n\text{.}\)</span> So the partial sums <span class="process-math">\(S_N\)</span> converge as <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p>
-<p id="p-98">(b) For all <span class="process-math">\(N \gt  N_0\text{,}\)</span> the partial sum</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-S_N = \sum_{n=0}^N a_n \ge \sum_{n=0}^{N_0} a_n + K\hskip-10pt\sum_{n=N_0+1}^N\hskip-10pt d_n
-\end{equation*}
-</div>
-<p class="continuation">By hypothesis, <span class="process-math">\(\sum_{n=N_0+1}^N d_n\text{,}\)</span> and hence <span class="process-math">\(S_N\text{,}\)</span> grows without bound as  <span class="process-math">\(N\rightarrow\infty\text{.}\)</span> So <span class="process-math">\(S_N\rightarrow\infty\)</span>  as <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></article></div>
-<article class="theorem theorem-like" id="theorem-9"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.29</span><span class="period">.</span><span class="space"> </span><span class="title">Alternating Series Test (stated again).</span>
-</h4>
-<p id="p-99">Let <span class="process-math">\(\big\{a_n\big\}_{n=1}^\infty\)</span> be a sequence of real numbers that obeys</p>
-<ol class="lower-roman">
-<li id="li-110"><p id="p-derived-li-110"><span class="process-math">\(a_n\ge 0\)</span> for all <span class="process-math">\(n\ge 1\)</span> and</p></li>
-<li id="li-111"><p id="p-derived-li-111"><span class="process-math">\(a_{n+1}\le a_n\)</span>  for all <span class="process-math">\(n\ge 1\)</span> (i.e. the  sequence is monotone decreasing) and</p></li>
-<li id="li-112"><p id="p-derived-li-112"><span class="process-math">\(\lim_{n\rightarrow\infty}a_n=0\text{.}\)</span></p></li>
-</ol>
-<p class="continuation">Then</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-a_1-a_2+a_3-a_4+\cdots=\sum\limits_{n=1}^\infty (-1)^{n-1} a_n =S
-\end{equation*}
-</div>
-<p class="continuation">converges and, for each natural number <span class="process-math">\(N\text{,}\)</span>  <span class="process-math">\(S-S_N\)</span> is between <span class="process-math">\(0\)</span> and (the  first dropped term) <span class="process-math">\((-1)^N a_{N+1}\text{.}\)</span> Here <span class="process-math">\(S_N\)</span> is, as previously, the <span class="process-math">\(N^{\rm th}\)</span> partial sum <span class="process-math">\(\sum\limits_{n=1}^N (-1)^{n-1} a_n\text{.}\)</span></p></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-100">Let <span class="process-math">\(2n\)</span> be an even natural number. Then the <span class="process-math">\(2n^{\rm th}\)</span> partial sum obeys</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/sec_AST.html" id="md-59">
-\begin{align*}
-S_{2n}&amp;=\overbrace{(a_1-a_2)}^{\ge 0}
-+\overbrace{(a_3-a_4)}^{\ge 0}+\cdots
-+\overbrace{(a_{2n-1}-a_{2n})}^{\ge 0}\\
-&amp;\le\overbrace{(a_1-a_2)}^{\ge 0}
-+\overbrace{(a_3-a_4)}^{\ge 0}+\cdots
-+\overbrace{(a_{2n-1}-a_{2n})}^{\ge 0}
-+\overbrace{(a_{2n+1}-a_{2n+2})}^{\ge 0}\\
-\amp=S_{2(n+1)}
-\end{align*}
-</div>
-<p class="continuation">and</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/sec_AST.html" id="md-60">
-\begin{align*}
-S_{2n}&amp;=a_1-(\overbrace{a_2-a_3}^{\ge 0})
--(\overbrace{a_4-a_5}^{\ge 0})-\cdots
--\overbrace{(a_{2n-2}-a_{2n-1})}^{\ge 0}
--\overbrace{a_{2n}}^{\ge 0}\\
-&amp;\le a_1
-\end{align*}
-</div>
-<p class="continuation">So the sequence <span class="process-math">\(S_2\text{,}\)</span> <span class="process-math">\(S_4\text{,}\)</span> <span class="process-math">\(S_6\text{,}\)</span> <span class="process-math">\(\cdots\)</span> of even partial sums is a bounded, increasing sequence and hence converges to some real  number <span class="process-math">\(S\text{.}\)</span> Since <span class="process-math">\(S_{2n+1} = S_{2n} +a_{2n+1}\)</span> and <span class="process-math">\(a_{2n+1}\)</span> converges zero as <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> the odd partial sums <span class="process-math">\(S_{2n+1}\)</span> also converge to <span class="process-math">\(S\text{.}\)</span> That <span class="process-math">\(S-S_N\)</span> is between <span class="process-math">\(0\)</span> and (the  first dropped term) <span class="process-math">\((-1)^N a_{N+1}\)</span> was already proved in §<a href="section-1.html#sec_AST" class="internal" title="Subseção 1.4: The Alternating Series Test">Subseção 1.4</a>.</p></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">The authors should be a little more careful making such a blanket statement. While it is true that it is not wise to approximate a divergent series by taking <span class="process-math">\(N\)</span> terms with <span class="process-math">\(N\)</span> large, there are cases when one can get a very good approximation by taking <span class="process-math">\(N\)</span> terms with <span class="process-math">\(N\)</span> small! For example, the Taylor remainder theorem shows us that when the <span class="process-math">\(n^{\rm th}\)</span> derivative of a function <span class="process-math">\(f(x)\)</span> grows very quickly with <span class="process-math">\(n\text{,}\)</span> Taylor polynomials of degree <span class="process-math">\(N\text{,}\)</span> with <span class="process-math">\(N\)</span> large, can give bad approximations of <span class="process-math">\(f(x)\text{,}\)</span> while the Taylor polynomials of degree one or two can still provide very good approximations of <span class="process-math">\(f(x)\)</span> when <span class="process-math">\(x\)</span> is very small. As an example of this, one of the triumphs of quantum electrodynamics, namely the computation of the anomalous magnetic moment of the electron, depends on precisely this. A number of important quantities were predicted using the first few terms of divergent power series. When those quantities were measured experimentally, the predictions turned out to be incredibly accurate.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">The field of asymptotic analysis often makes use of the first few terms of divergent series to generate approximate solutions to problems; this, along with numerical computations, is one of the most important techniques in applied mathematics. Indeed, there is a whole wonderful book  (which, unfortunately, is too advanced for most Calculus 2 students) devoted to playing with divergent series called, unsurprisingly, “Divergent Series” by G.H. Hardy. This is not to be confused with the “Divergent” series by V. Roth set in a post-apocalyptic dystopian Chicago. That latter series diverges quite dramatically from mathematical topics, while the former does not have a film adaptation (yet).</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">We have discussed the contrapositive a few times  in the CLP notes, but it doesn't hurt to discuss it again here (or for  the reader to quickly look up the relevant footnote in Section 1.3 of  the CLP-1 text).  At any rate, given a statement of the form “If A is true, then B is true”  the contrapositive is “If B is not true, then A is not true”.  The two statements in quotation marks are logically equivalent —  if one is true, then so is the other. In the present context we have “If (<span class="process-math">\(\sum a_n\)</span> converges)  then  (<span class="process-math">\(a_n\)</span> converges to <span class="process-math">\(0\)</span>).” The contrapositive of this statement is then “If   (<span class="process-math">\(a_n\)</span> does not converge to 0)  then (<span class="process-math">\(\sum a_n\)</span> does not converge).”</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">This series  converges to Apéry's constant <span class="process-math">\(1.2020569031\dots\text{.}\)</span> The constant is  named for Roger Apéry (1916–1994) who proved that this number must be irrational. This number appears in many contexts including the following  cute fact — the reciprocal of Apéry's constant gives the probability  that three positive integers, chosen at random, do not share  a common prime factor.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">Latin for “Once the necessary changes  are made”. This phrase still gets used a little, but  these days mathematicians tend to write something equivalent in English. Indeed, English is pretty much the <em class="emphasis">lingua franca</em> for  mathematical publishing. <em class="emphasis">Quidquid erit.</em>
-</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">This series, viewed  as a function of <span class="process-math">\(p\text{,}\)</span> is called the Riemann zeta function, <span class="process-math">\(\zeta(p)\text{,}\)</span>  or the Euler-Riemann zeta function. It is extremely important because  of its connections to prime numbers (among many other things). Indeed  Euler proved that <span class="process-math">\(\zeta(p) = \sum_{n=1}^\infty \frac{1}{n^p}
-= \prod_{\text{P prime}} \left(1 - {\rm P}^{-p} \right)^{-1}
-\text{.}\)</span> Riemann showed the connections between the zeros of this function (over  complex numbers <span class="process-math">\(p\)</span>) and the distribution of prime numbers. Arguably the  most famous unsolved problem in mathematics, the Riemann  hypothesis, concerns the locations of zeros of this function.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">We could go even further and see  what happens if we include powers of <span class="process-math">\(\log(\log(n))\)</span> and other more  exotic slow growing functions.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">Go back and quickly scan Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.5: The Integral Test">Teorema 1.5</a>; to apply it we need to show that <span class="process-math">\(\frac{1} {n^2+2n+3}\)</span> is  positive and decreasing (it is), and then  we need to integrate <span class="process-math">\(\int \frac{1}{x^2+2x+3}\dee{x}\text{.}\)</span> To do that  we reread the notes on partial fractions, then rewrite <span class="process-math">\(x^2+2x+3
-= (x+1)^2+2\)</span> and so <span class="process-math">\(\int_1^\infty \frac{1}{x^2+2x+3}\dee{x}
-= \int_1^\infty \frac{1}{(x+1)^2+2}\dee{x} \cdots\)</span> and then arctangent appears,  etc etc. Urgh. Okay — let's go  back to the text now and see how to avoid this.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">To understand this consider any series  <span class="process-math">\(\sum_{n=1}^\infty a_n\text{.}\)</span> We can always cut such a series into  two parts — pick some huge number like <span class="process-math">\(10^6\text{.}\)</span> Then <span class="process-math">\(\sum_{n=1}^\infty a_n = \sum_{n=1}^{10^6} a_n + \sum_{n=10^6+1}^\infty a_n
-\text{.}\)</span> The first sum, though it could be humongous, is finite. So the left hand side, <span class="process-math">\(\sum_{n=1}^\infty a_n\text{,}\)</span> is a well-defined finite number if and only if <span class="process-math">\(\sum_{n=10^6+1}^\infty a_n\text{,}\)</span> is a well-defined  finite number. The convergence or divergence of the series is  determined by the second sum, which  only contains <span class="process-math">\(a_n\)</span> for “large” <span class="process-math">\(n\text{.}\)</span>
-</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn">The symbol “<span class="process-math">\(\gg\)</span>” means “much larger than”. Similarly, the symbol “<span class="process-math">\(\ll\)</span>” means “much  less than”. Good shorthand symbols can be quite expressive.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">This is very similar to how we computed limits at infinity way way back near the  beginning of CLP-1.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">Really, really tedious. And you thought some of those partial fractions  computations were bad …</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">The interested reader may wish to check out  “Stirling's approximation”, which says that <span class="process-math">\(n!\approx \sqrt{2\pi n}\left(\frac {n}{e}\right)^{n}\text{.}\)</span>
-</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">We shall see later, in Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_SRpsops" missing or not unique]</code>, that the function  <span class="process-math">\(\sum_{n=0}^\infty a n x^{n-1}\)</span> is indeed the derivative of the  function <span class="process-math">\(\sum_{n=0}^\infty a x^n\text{.}\)</span> Of course, such a statement  only makes sense where these series converge — how can you differentiate  a divergent series? (This is not an allusion to a popular series of dystopian novels.) Actually, there is quite a bit of interesting and useful  mathematics involving divergent series, but it is well beyond the scope  of this course.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn">We shall  also see later, in Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_SRpsops" missing or not unique]</code>, that the function  <span class="process-math">\(\sum_{n=0}^\infty \frac{a}{n+1} x^{n + 1}\)</span> is indeed an antiderivative  of the function <span class="process-math">\(\sum_{n=0}^\infty a x^n\text{.}\)</span>
-</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn">The interested reader should use their favourite  search engine to read more on the link between this series and musical harmonics. You can also find interesting links between the Harmonic series  and the so-called “jeep problem” and also the problem of stacking a  tower of dominoes to create an overhang that does not topple over.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn">The grouping argument can be generalised further and the interested reader should look up Cauchy's condensation test.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">Knowing that the left and right hand sides of <a href="" class="xref" data-knowl="./knowl/eqn_sinProdFormula.html" title="Equação">(✶)</a> are zero for the same values of <span class="process-math">\(x\)</span> is far from the end of the story. Two functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> having the same zeros, need not be  equal. It is certainly possible that <span class="process-math">\(f(x)=g(x)*A(x)\)</span> where <span class="process-math">\(A(x)\)</span>  is a function that is nowhere zero. The interested reader should look up the Weierstrass factorisation theorem.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn">Search-engine your way to “Riemann zeta function”.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn">It is one way to state a property of the real number system  called “completeness”. The interested reader should use their  favourite search engine to look up “completeness of the real numbers”.</div></div>
+<p class="continuation">e o teste de comparação garante que a série converge. É bastante claro que a abordagem do <a href="" class="xref" data-knowl="./knowl/eg_SRlimCompA.html" title="Exemplo 1.15: \sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}">Exemplo 1.15</a> foi muito mais direto.</p></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">O símbolo “<span class="process-math">\(\gg\)</span>” significa “muito maior que”. Da mesma forma, o símbolo “<span class="process-math">\(\ll\)</span>” significa “muito menos que”. Bons símbolos taquigráficos podem ser bastante expressivos.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Semelhante a como calculamos os limites no infinito.</div></div>
 </div></main>
 </div>
 </body>

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-05T18:20:50-03:00       *-->
+<!--*       on 2022-07-10T19:23:33-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,10 +13,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="example example-like"><p>We will shortly see, in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_SRpsrepC" missing or not unique]</code>,  that if <span class="process-math">\(-1 \lt x\le 1\text{,}\)</span> then</p>
+<body class="ignore-math"><article class="example example-like"><p>We will shortly see, in Example<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_SRpsrepC" missing or not unique]</code>, that if <span class="process-math">\(-1 \lt x\le 1\text{,}\)</span> then</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\log(1+x) = x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots = \sum_{n=1}^\infty (-1)^{n-1}\frac{x^n}{n}
+\log(1+x) = x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots = \sum_{n=1}^\infty
+(-1)^{n-1}\frac{x^n}{n}
 \end{equation*}
 </div>
 <p class="continuation">Suppose that we have to compute <span class="process-math">\(\log\frac{11}{10}\)</span> to within an accuracy of <span class="process-math">\(10^{-12}\text{.}\)</span> Since <span class="process-math">\(\frac{11}{10}=1+\frac{1}{10}\text{,}\)</span> we can get <span class="process-math">\(\log\frac{11}{10}\)</span> by evaluating <span class="process-math">\(\log(1+x)\)</span> at <span class="process-math">\(x=\frac{1}{10}\text{,}\)</span> so that</p>
@@ -48,24 +49,28 @@
 \text{error} \le \frac{1}{(N+1)\times 10^{N+1}}
 \end{equation*}
 </div>
-<p class="continuation">To achieve an error that is no more than <span class="process-math">\(10^{-12}\text{,}\)</span> we have to choose <span class="process-math">\(N\)</span> so  that</p>
+<p class="continuation">To achieve an error that is no more than <span class="process-math">\(10^{-12}\text{,}\)</span> we have to choose <span class="process-math">\(N\)</span> so that</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \frac{1}{(N+1)\times 10^{N+1}} \le 10^{-12}
 \end{equation*}
 </div>
-<p class="continuation">The best way to do so is simply to guess — we are not going to be able to manipulate the inequality  <span class="process-math">\(\frac{1}{(N+1)\times 10^{N+1}} \le \frac{1}{10^{12}}\)</span> into the form <span class="process-math">\(N\le \cdots\text{,}\)</span> and even if we could, it would not  be worth the effort. We need to choose <span class="process-math">\(N\)</span> so that the denominator <span class="process-math">\((N+1)\times 10^{N+1}\)</span>  is at least <span class="process-math">\(10^{12}\text{.}\)</span> That is easy, because the denominator contains the factor <span class="process-math">\(10^{N+1}\)</span> which is at least <span class="process-math">\(10^{12}\)</span> whenever <span class="process-math">\(N+1\ge 12\text{,}\)</span> i.e. whenever <span class="process-math">\(N\ge 11\text{.}\)</span> So we will achieve an error of less than <span class="process-math">\(10^{-12}\)</span> if we choose <span class="process-math">\(N=11\text{.}\)</span></p>
+<p class="continuation">The best way to do so is simply to guess — we are not going to be able to manipulate the inequality  <span class="process-math">\(\frac{1}{(N+1)\times 10^{N+1}} \le
+\frac{1}{10^{12}}\)</span> into the form <span class="process-math">\(N\le \cdots\text{,}\)</span> and even if we could, it would not be worth the effort. We need to choose <span class="process-math">\(N\)</span> so that the denominator <span class="process-math">\((N+1)\times 10^{N+1}\)</span>  is at least <span class="process-math">\(10^{12}\text{.}\)</span> That is easy, because the denominator contains the factor <span class="process-math">\(10^{N+1}\)</span> which is at least <span class="process-math">\(10^{12}\)</span> whenever <span class="process-math">\(N+1\ge 12\text{,}\)</span> i.e. whenever <span class="process-math">\(N\ge 11\text{.}\)</span> So we will achieve an error of less than <span class="process-math">\(10^{-12}\)</span> if we choose <span class="process-math">\(N=11\text{.}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=11} = \frac{1}{12\times 10^{12}} \lt  \frac{1}{10^{12}}
+\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=11} = \frac{1}{12\times 10^{12}} \lt \frac{1}{10^{12}}
 \end{equation*}
 </div>
 <p class="continuation">This is not the smallest possible choice of <span class="process-math">\(N\text{,}\)</span> but in practice that just doesn't matter — your computer is not going to care whether or not you ask it to compute a few extra terms. If you really need the smallest <span class="process-math">\(N\)</span> that obeys  <span class="process-math">\(\frac{1}{(N+1)\times 10^{N+1}} \le \frac{1}{10^{12}}\text{,}\)</span> you can next just try <span class="process-math">\(N=10\text{,}\)</span> then <span class="process-math">\(N=9\text{,}\)</span> and so on.</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=11} &amp;= \frac{1}{12\times 10^{12}} \lt  \frac{1}{10^{12}}\\
-\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=10} &amp;= \frac{1}{11\times 10^{11}} \lt  \frac{1}{10\times 10^{11}} = \frac{1}{10^{12}}\\
-\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=9} &amp;= \frac{1}{10\times 10^{10}} = \frac{1}{10^{11}}  \gt  \frac{1}{10^{12}}
+\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=11} &amp;= \frac{1}{12\times 10^{12}} \lt
+\frac{1}{10^{12}}\\
+\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=10} &amp;= \frac{1}{11\times 10^{11}} \lt
+\frac{1}{10\times 10^{11}} = \frac{1}{10^{12}}\\
+\frac{1}{(N+1)\times 10^{N+1}}\bigg|_{N=9} &amp;= \frac{1}{10\times 10^{10}} = \frac{1}{10^{11}}
+\gt \frac{1}{10^{12}}
 \end{align*}
 </div>
 <p class="continuation">So in this problem, the smallest acceptable <span class="process-math">\(N=10\text{.}\)</span></p></article></body>

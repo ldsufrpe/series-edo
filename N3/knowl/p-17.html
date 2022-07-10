@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-05T18:20:49-03:00       *-->
+<!--*       on 2022-07-10T19:25:32-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,13 +14,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Parágrafo</span></h4>
-<p>Let <span class="process-math">\(I\)</span> be any fixed integer with <span class="process-math">\(I \gt N_0\text{.}\)</span> Then</p>
-<ul class="disc">
-<li><p><span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converges if and only if  <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converges — removing a fixed finite number of terms from a series cannot impact whether or not it converges.</p></li>
-<li><p>Since <span class="process-math">\(a_n\ge 0\)</span> for all <span class="process-math">\(n\ge I \gt N_0\text{,}\)</span> the sequence of partial sums  <span class="process-math">\(s_\ell=\sum_{n=I}^\ell a_n\)</span> obeys <span class="process-math">\(s_{\ell+1} = s_\ell+a_{n+1} \ge s_\ell\text{.}\)</span> That is, <span class="process-math">\(s_\ell\)</span> increases as <span class="process-math">\(\ell\)</span> increases.</p></li>
-<li><p>So <span class="process-math">\(\big\{s_\ell\big\}\)</span> must either converge to some finite number or increase to infinity. That is, either <span class="process-math">\(\sum_{n=I}^\infty a_n\)</span> converges to a finite number or it is <span class="process-math">\(+\infty\text{.}\)</span></p></li>
-</ul>
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p>Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty a_n\text{ converge }\iff \int_{N_0}^\infty f(x)\ dx\text{ converge }
+\end{equation*}
+</div>
+<p class="continuation">Além disso, quando a série converge, o erro de truncamento</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\bigg|\sum_{n=1}^\infty a_n-\sum_{n=1}^N a_n\bigg|\le \int_N^\infty f(x)\ dx\qquad\text{para
+todo
+$N\ge N_0$}
+\end{equation*}
+</div>
 <span class="incontext"><a href="section-1.html#p-17" class="internal">em contexto</a></span>
 </body>
 </html>

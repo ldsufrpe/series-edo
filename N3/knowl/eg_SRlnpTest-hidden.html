@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-05T18:20:49-03:00       *-->
+<!--*       on 2022-07-10T19:25:32-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,23 +13,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="example example-like"><p>Let <span class="process-math">\(p \gt 0\text{.}\)</span> We'll now use the integral test to determine whether or not the series <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span> converges.</p>
+<body class="ignore-math"><article class="example example-like"><p>Seja <span class="process-math">\(p \gt 0\text{.}\)</span> Agora usaremos o teste integral para determinar se a série <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span> converge.</p>
 <ul class="disc">
-<li><p>As in the last example, we start by choosing a function that obeys  <span class="process-math">\(f(n)=a_n=\frac{1}{n(\log n)^p}\)</span> for all <span class="process-math">\(n\)</span>  bigger than some <span class="process-math">\(N_0\text{.}\)</span> Certainly <span class="process-math">\(f(x)=\frac{1}{x(\log x)^p}\)</span> obeys  <span class="process-math">\(f(n)=\frac{1}{n(\log n)^p}\)</span> for all <span class="process-math">\(n\ge 2\text{.}\)</span> So let's use that <span class="process-math">\(f\)</span> and try <span class="process-math">\(N_0=2\text{.}\)</span></p></li>
+<li><p>Como no último exemplo, começamos escolhendo uma função que obedece <span class="process-math">\(f(n)=a_n=\frac{1}{n(\log
+n)^p}\)</span> para todo <span class="process-math">\(n\)</span> maior que algum <span class="process-math">\(N_0\text{.}\)</span> Certamente <span class="process-math">\(f(x)=\frac{1}{x(\log x)^p}\)</span> obedece <span class="process-math">\(f(n)=\frac{1}{n(\log n)^p}\)</span> para todo <span class="process-math">\(n\ge 2\text{.}\)</span> Então, vamos usar esse <span class="process-math">\(f\)</span> e tentar <span class="process-math">\(N_0=2\text{.}\)</span></p></li>
 <li>
-<p>Now let's check the other two conditions of  Theorem <a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.5: The Integral Test">Teorema 1.5</a>:</p>
+<p>Agora vamos verificar as outras duas condições do<a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.6: The Integral Test">Teorema 1.6</a>:</p>
 <ol class="lower-roman">
-<li><p>Both <span class="process-math">\(x\)</span> and <span class="process-math">\(\log x\)</span> are positive for all <span class="process-math">\(x \gt 1\text{,}\)</span> so <span class="process-math">\(f(x) \gt 0\)</span> for all <span class="process-math">\(x\ge N_0=2\text{.}\)</span></p></li>
-<li><p>As <span class="process-math">\(x\)</span> increases both <span class="process-math">\(x\)</span> and <span class="process-math">\(\log x\)</span> increase and so <span class="process-math">\(x(\log x)^p\)</span>  increases and <span class="process-math">\(f(x)\)</span> decreases.</p></li>
+<li><p>Tanto <span class="process-math">\(x\)</span> quanto <span class="process-math">\(\log x\)</span> são positivos para todos os <span class="process-math">\(x \gt 1\text{,}\)</span> então <span class="process-math">\(f(x) \gt
+0\)</span> para todos os <span class="process-math">\(x\ge N_0=2\text{.}\)</span></p></li>
+<li><p>À medida que <span class="process-math">\(x\)</span> aumenta, <span class="process-math">\(x\)</span> e <span class="process-math">\(\log x\)</span> aumentam e, portanto, <span class="process-math">\(x(\log
+x)^p\)</span> aumenta e <span class="process-math">\(f(x)\)</span> diminui.</p></li>
 </ol>
 </li>
-<li><p>So the integral test tells us that the series   <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span> converges if and only if  the integral <span class="process-math">\(\int_2^\infty\frac{dx}{x (\log x)^p}\)</span> converges.</p></li>
-<li><p>To test the convergence of the integral, we make the substitution <span class="process-math">\(u=\log x\text{,}\)</span> <span class="process-math">\(du=\frac{dx}{x}\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+<li><p>Assim, o teste integral nos diz que a série <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log
+n)^p}\)</span> converge se e somente se a integral <span class="process-math">\(\int_2^\infty\frac{dx}{x (\log x)^p}\)</span> converge.</p></li>
+<li><p>Para testar a convergência da integral, fazemos a substituição <span class="process-math">\(u=\log x\text{,}\)</span> <span class="process-math">\(du=\frac{dx}{x}\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
 \begin{gather*}
 \int_2^R \frac{dx}{x (\log x)^p}
 =\int_{\log 2}^{\log R}\frac{du}{u^p}
 \end{gather*}
-</div>We already know that the integral the integral <span class="process-math">\(\int_1^\infty\frac{du}{u^p}\text{,}\)</span> and hence the integral <span class="process-math">\(\int_2^R \frac{dx}{x (\log x)^p}\text{,}\)</span> converges if and  only if <span class="process-math">\(p \gt 1\text{.}\)</span></p></li>
+</div>Já sabemos que a integral é a integral <span class="process-math">\(\int_1^\infty\frac{du}{u^p}\)</span> e, portanto, a integral <span class="process-math">\(\int_2^R \frac{dx}{x (\log x)^p}\text{,}\)</span> converge se e somente se <span class="process-math">\(p \gt 1\text{.}\)</span></p></li>
 </ul>
-<p class="continuation">So we conclude that  <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span>  converges if and only if <span class="process-math">\(p \gt 1\text{.}\)</span></p></article></body>
+<p class="continuation">Portanto, concluímos que <span class="process-math">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span> converge se e somente se <span class="process-math">\(p
+\gt 1\text{.}\)</span></p></article></body>
 </html>

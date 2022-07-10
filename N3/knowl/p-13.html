@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-05T18:20:49-03:00       *-->
+<!--*       on 2022-07-10T19:25:32-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,38 +15,25 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>It should be clear that the above argument can be quite easily  generalised. For example the same argument holds  <em class="emphasis">mutatis mutandis</em> <a href="" class="fn-knowl original" data-knowl="./knowl/fn-5-hidden.html" title="Nota de rodapé 1.5"><sup> 5 </sup></a> for the series</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-\sum_{n=1}^\infty \frac{1}{n^2}
-\end{gather*}
-</div>
-<p class="continuation">Indeed we see from the sketch on the right above that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p>Considere o esboço à esquerda da<a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.5">Figura 1.5</a>. Isto mostra que a área das colunas sombreadas, <span class="process-math">\(\sum_{n=1}^4\frac{1}{n}\text{,}\)</span> é maior que a área sob a curva <span class="process-math">\(y=\frac{1}{x}\)</span> com <span class="process-math">\(1\le x\le 5\text{.}\)</span> Oe seja</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{align*}
-\sum_{n=2}^N \frac{1}{n^2} &amp;\le \int_1^N \frac{1}{x^2}\dee{x}
+\sum_{n=1}^4 \frac{1}{n} &amp; \ge \int_1^5 \frac{1}{x}\dee{x}
 \end{align*}
 </div>
-<p class="continuation">and hence</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-\sum_{n=2}^\infty \frac{1}{n^2} \leq \int_1^\infty \frac{1}{x^2}\dee{x}
-\end{gather*}
-</div>
-<p class="continuation">This last improper integral is easy to evaluate:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">Se continuássemos desenhando as colunas infinitamente, teríamos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{align*}
-\int_2^\infty \frac{1}{x^2}\dee{x} &amp;= \lim_{R\to\infty} \left[ - \frac{1}{x} \right]_2^R\\
-&amp;= \lim_{R\to\infty} \left( \frac{1}{2} - \frac{1}{R} \right) = \frac{1}{2}
+\sum_{n=1}^\infty \frac{1}{n} &amp; \ge \int_1^\infty \frac{1}{x}\dee{x}
 \end{align*}
 </div>
-<p class="continuation">Thus we know that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-\sum_{n=1}^\infty \frac{1}{n^2} = 1+ \sum_{n=2}^\infty \frac{1}{n^2} \leq \frac{3}{2}.
-\end{gather*}
+<p class="continuation">Podemos calcular exatamente essa integral imprópria:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
+\begin{align*}
+\int_1^\infty \frac{1}{x} \dee{x} &amp;= \lim_{R \to \infty} \Big[ \log|x| \Big]_1^R = +\infty
+\end{align*}
 </div>
-<p class="continuation">and so the series must converge.</p>
+<p class="continuation">Ou seja, a área sob a curva diverge para <span class="process-math">\(+\infty\)</span> e, portanto, a área representada pelas colunas também deve divergir para <span class="process-math">\(+\infty\text{.}\)</span></p>
 <span class="incontext"><a href="section-1.html#p-13" class="internal">em contexto</a></span>
 </body>
 </html>
