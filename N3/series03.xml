@@ -920,7 +920,7 @@
         </example>
 
         <example xml:id="eg_SRlimCompAbis">
-            <title><m>\sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}</m>, again
+            <title><m>\sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^2-2n+3}</m>, novamente
             </title>
             <p>
                 Também podemos tentar lidar com a série de<xref ref="eg_SRlimCompA"/>, usando o teste de comparação
