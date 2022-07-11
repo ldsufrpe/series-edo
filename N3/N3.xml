@@ -118,7 +118,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </latex-image-preamble>
     </docinfo>
 
-    <article xml:id="calc-intro-serie">
+    <article xml:id="calc-serie-teste-convergencia">
         <title>Testes de Convergência: N3</title>
 
         <frontmatter>

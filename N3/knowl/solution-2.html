@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-11T10:29:49-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h5 class="heading">
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.5.8.1</span><span class="period">.</span>
+</h5>
+<p>Em primeiro lugar, a função <span class="process-math">\(\dfrac1{(4 x+2)^3}\)</span> é positiva e decrescente para todo <span class="process-math">\(x\ge1\text{,}\)</span> pois seu denominador é positivo e crescente para <span class="process-math">\(x\ge1\text{.}\)</span> Além disso, a função vai para 0 como <span class="process-math">\(x\to\infty\)</span> porque seu denominador vai para o infinito. Portanto, o Teste Integral, e sua Estimativa do Resto, podem ser aplicados.</p>
+<p>Para parte (A), a estimativa do resto é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+|s-s_n| \amp \le \int_n^\infty \frac{dx}{(4 x+2)^3} \\
+\amp = \lim_{t\to\infty} \frac{-1}{4(2)(4 x+2)^2} \biggr]_n^t
+\amp = \frac1{4(2)(4 n+2)^2} \;.
+\end{aligned}
+\end{equation*}
+</div>
+<p>Para parte (B), precisamos encontrar o menor inteiro positivo <span class="process-math">\(n\)</span> para o qual a expressão acima é menor que 0.00009. Então, montamos a desigualdade relevante e a resolvemos:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\frac1{4(2)(4 n+2)^2} \amp \lt  0.00009 \\
+(4 n+2)^2 \amp &gt; \frac1{4(2)0.00009} \\
+(4 n+2) \amp &gt; \frac1{\root 2\of{4(2)0.00009}} \\
+n \amp &gt; \frac{\frac1{\root 2\of{4(2)0.00009}} - 2}{4}
+\approx 8.8169
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Arredondando para o próximo maior inteiro dá <span class="process-math">\(n = 9\text{.}\)</span></p>
+</div>
+<span class="incontext"><a href="section-1.html#solution-2" class="internal">em contexto</a></span>
+</body>
+</html>

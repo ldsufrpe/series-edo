@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-11T00:35:05-03:00       *-->
+<!--*       on 2022-07-11T10:29:48-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -36,7 +49,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -110,7 +124,7 @@
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="calc-intro-serie.html"><span class="title">Testes de Convergência: N3</span></a></h1>
+<h1 class="heading"><a href="calc-serie-teste-convergencia.html"><span class="title">Testes de Convergência: N3</span></a></h1>
 <p class="byline">Leon Silva</p>
 </div>
 </div></div>
@@ -131,11 +145,11 @@ var ggbApp = new GGBApplet({"appName": "graphing",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-intro-serie.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-intro-serie.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-serie-teste-convergencia.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-serie-teste-convergencia.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-intro-serie.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-intro-serie.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-serie-teste-convergencia.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-serie-teste-convergencia.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -144,9 +158,10 @@ true);
 <li class="link active">
 <a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Testes de Convergencia</span></a><ul>
 <li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">O Teste da Divergência</a></li>
-<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">O teste da Integral</a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">O Teste da Integral</a></li>
 <li><a href="section-1.html#subsection-3" data-scroll="subsection-3" class="internal">O Teste da Comparação</a></li>
 <li><a href="section-1.html#subsection-4" data-scroll="subsection-4" class="internal">Sugestão de Vídeos</a></li>
+<li><a href="section-1.html#exercises-teste-convergencia" data-scroll="exercises-teste-convergencia" class="internal">Exercícios</a></li>
 </ul>
 </li>
 <li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
@@ -197,7 +212,7 @@ true);
 \end{gather*}
 </div>
 <p class="continuation">converge. No entanto, não nos diz o seu valor.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">O teste da Integral</span>
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">O Teste da Integral</span>
 </h3>
 <p id="p-11">No teste da integral, pensamos em uma série <span class="process-math">\(\sum_{n=1}^\infty a_n\text{,}\)</span> que não podemos avaliar explicitamente, como a área de uma união de retângulos, com <span class="process-math">\(a_n\)</span> representando a área de um retângulo de largura um e altura <span class="process-math">\(a_n\text{.}\)</span> Então comparamos essa área com a área representada por uma integral, que podemos avaliar explicitamente. Começaremos com um exemplo simples, para ilustrar a ideia. Em seguida, passaremos a uma formulação do teste em geral.</p>
 <article class="example example-like" id="eg_firstIntTest"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_firstIntTest"><h4 class="heading">
@@ -257,7 +272,7 @@ true);
 <p class="continuation">e assim a série deve convergir.</p></article></div>
 <p id="p-15">Os argumentos acima são formalizados no seguinte teorema.</p>
 <article class="theorem theorem-like" id="thm_SRintegralTest"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Integral Test.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">O Teste da Integral.</span>
 </h4>
 <p id="p-16">Seja <span class="process-math">\(N_0\)</span> qualquer número natural. Se <span class="process-math">\(f(x)\)</span> for uma função definida e contínua para todos os <span class="process-math">\(x\ge N_0\)</span> e que obedece</p>
 <ol class="lower-roman">
@@ -330,7 +345,7 @@ $N\ge N_0$}
 <ul class="disc">
 <li id="li-14"><p id="p-derived-li-14">Para isso, precisamos de uma função <span class="process-math">\(f(x)\)</span> que obedeça <span class="process-math">\(f(n)=a_n=\frac{1}{n^p}\)</span> para todo <span class="process-math">\(n\)</span> maior que algum <span class="process-math">\(N_0\text{.}\)</span> Certamente <span class="process-math">\(f(x)=\frac{1}{x^p}\)</span> obedece <span class="process-math">\(f(n)=\frac{1}{n^p}\)</span> para todo <span class="process-math">\(n\ge 1\text{.}\)</span> Então, vamos escolher este <span class="process-math">\(f\)</span> e tentar <span class="process-math">\(N_0=1\text{.}\)</span> (Podemos sempre aumentar <span class="process-math">\(N_0\text{,}\)</span> se for necessário.)</p></li>
 <li id="li-15">
-<p id="p-23">Esta função também obedece às outras duas condições do <a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.6: The Integral Test">Teorema 1.6</a> :</p>
+<p id="p-23">Esta função também obedece às outras duas condições do <a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.6: O Teste da Integral">Teorema 1.6</a> :</p>
 <ol class="lower-roman">
 <li id="li-16"><p id="p-derived-li-16"><span class="process-math">\(f(x) \gt 0\)</span> para todo <span class="process-math">\(x\ge N_0=1\)</span> e</p></li>
 <li id="li-17"><p id="p-derived-li-17"><span class="process-math">\(f(x)\)</span> descrece à medida que <span class="process-math">\(x\)</span> cresce já que  <span class="process-math">\(f'(x)=-p\frac{1}{x^{p+1}} \lt
@@ -368,7 +383,7 @@ $N\ge N_0$}
 <li id="li-22"><p id="p-derived-li-22">Como no último exemplo, começamos escolhendo uma função que obedece <span class="process-math">\(f(n)=a_n=\frac{1}{n(\log
 n)^p}\)</span> para todo <span class="process-math">\(n\)</span> maior que algum <span class="process-math">\(N_0\text{.}\)</span> Certamente <span class="process-math">\(f(x)=\frac{1}{x(\log x)^p}\)</span> obedece <span class="process-math">\(f(n)=\frac{1}{n(\log n)^p}\)</span> para todo <span class="process-math">\(n\ge 2\text{.}\)</span> Então, vamos usar esse <span class="process-math">\(f\)</span> e tentar <span class="process-math">\(N_0=2\text{.}\)</span></p></li>
 <li id="li-23">
-<p id="p-26">Agora vamos verificar as outras duas condições do<a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.6: The Integral Test">Teorema 1.6</a>:</p>
+<p id="p-26">Agora vamos verificar as outras duas condições do<a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.6: O Teste da Integral">Teorema 1.6</a>:</p>
 <ol class="lower-roman">
 <li id="li-24"><p id="p-derived-li-24">Tanto <span class="process-math">\(x\)</span> quanto <span class="process-math">\(\log x\)</span> são positivos para todos os <span class="process-math">\(x \gt 1\text{,}\)</span> então <span class="process-math">\(f(x) \gt
 0\)</span> para todos os <span class="process-math">\(x\ge N_0=2\text{.}\)</span></p></li>
@@ -581,7 +596,200 @@ n^2-2n+3 &amp; \geq n^2 -\frac{1}{2}n^2 + 3
 <li id="li-67"><p id="p-53"><a class="external" href="https://youtu.be/Gy4FmfKKipQ" target="_blank">Teste da Comparação do Limite</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a></p></li>
 <li id="li-68"><p id="p-54"><a class="external" href="https://youtu.be/kO5Zrzomqo0" target="_blank">Exemplo Resolvido: Teste da Comparação do Limite</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 11 </sup></a></p></li>
 <li id="li-69"><p id="p-55"><a class="external" href="https://youtu.be/KDeZ-0jB7Eo" target="_blank">Série Hamônica diverge</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a></p></li>
-</ul></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">O símbolo “<span class="process-math">\(\gg\)</span>” significa “muito maior que”. Da mesma forma, o símbolo “<span class="process-math">\(\ll\)</span>” significa “muito menos que”. Bons símbolos taquigráficos podem ser bastante expressivos.</div></div>
+</ul>
+<section class="exercises" id="exercises-teste-convergencia"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.5</span> <span class="title">Exercícios</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-1">
+<h4 class="heading"><span class="title">Teste da Divergencia, Testa da Integral e Teste da Comparação.</span></h4>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-56">Determine se a série é convergente ou divergente. Se convergente, encontre a soma; se divergente, insira <em class="emphasis">div</em>.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty \frac{n}{\sqrt{n^2+3}}
+\end{equation*}
+</div>
+<p class="continuation">Resposta: <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-57"><span class="process-math">\(\text{div}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-58">O teste de divergência aplicado à série</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty \frac{2n}{4n+3}
+\end{equation*}
+</div>
+<p class="continuation">nos diz que a série <ul style="list-style:circle;">
+<li id="li-70"><p id="p-59">a série converge.</p></li>
+<li id="li-71"><p id="p-60">a série diverge.</p></li>
+<li id="li-72"><p id="p-61">mais testes são necessários.</p></li>
+</ul></p></article><article class="exercise exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-62">Cada uma das seguintes afirmações é uma tentativa de mostrar que uma determinada série é convergente ou divergente usando o Teste de Comparação (NÃO o Teste de Comparação de Limite).</p>
+<p id="p-63">Para cada declaração, digite C (para "correto") se o argumento é válido, ou digite I (para "incorreto") se qualquer parte do argumento for defeituosa. (Nota: se a conclusão for verdadeira, mas o argumento que levou a ela estiver errado, você deve digitar I.)</p></article><article class="exercise exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-64">O teste de divergência aplicado à série</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{k=1}^\infty \frac{4k}{\left(7k+4\right)^{2}}
+\end{equation*}
+</div>
+<p class="continuation">nos diz que <ul style="list-style:circle;">
+<li id="li-73"><p id="p-65">a série converge.</p></li>
+<li id="li-74"><p id="p-66">a série diverge.</p></li>
+<li id="li-75"><p id="p-67">mais testes são necessários.</p></li>
+</ul></p></article><article class="exercise exercise-like" id="exercise-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-68">Determine se a seguinte série converge ou diverge:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{n}{ \sqrt{n^{7}+4} }
+\end{equation*}
+</div>
+<p class="continuation">Ponha <em class="emphasis">C</em> para convergência e <em class="emphasis">D</em> para divergência: <span class="fillin" role="img" aria-label="1-character blank" style="width: 0.454545454545455em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-69">C</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-70">Determine se a seguinte série é convergente ou divergente. Se convergir, encontre seu valor. Se divergir, insira DIV.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-71">
+\begin{equation*}
+\frac{1}{7}+\frac{1}{9}+\frac{1}{11}+\frac{1}{13}+\frac{1}{15}+\frac{1}{17}+\cdots
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-73"><span class="process-math">\(\text{DIV}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p id="p-74">Calcule o valor da seguinte integral imprópria. Se isso converge, insira seu valor. Insira <em class="alert">infinity</em> se divergir para <span class="process-math">\(\infty\text{,}\)</span> e <em class="alert">-infinity</em> se divergir para <span class="process-math">\(-\infty\text{.}\)</span> Caso contrário, insira <em class="alert">diverge.</em></p>
+<p id="p-75"><span class="process-math">\(\displaystyle \int_{1}^{\infty} 8 x^2 e^{-x^3} \, dx\)</span> = <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-76">A série <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} 8 n^2 e^{-n^3}\)</span> converge ou diverge? <ul style="list-style:circle;">
+<li id="li-77"><p id="p-78">converge</p></li>
+<li id="li-78"><p id="p-79">diverge para +infinity</p></li>
+<li id="li-79"><p id="p-80">diverge para -infinity</p></li>
+<li id="li-80"><p id="p-81">diverge</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-82"><span class="process-math">\(\frac{8}{3e}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p id="p-83">A série</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty \frac1{(4 n+2)^3}
+\end{equation*}
+</div>
+<p class="continuation">é convergente.</p>
+<p id="p-84">(A). De acordo com a Estimativa do Resto para o Teste Integral, o erro na aproximação <span class="process-math">\(s\approx s_n\)</span> (onde <span class="process-math">\(s\)</span> é o valor da soma infinita e <span class="process-math">\(s_n\)</span> é o <span class="process-math">\(n\)</span> -ésima soma parcial) é</p>
+<p id="p-85"><span class="process-math">\(|s-s_n| \le\)</span> <span class="fillin" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span></p>
+<p id="p-86">(B). Encontre o menor valor de <span class="process-math">\(n\)</span> tal que este limite superior é menor do que 0.00009 .</p>
+<p id="p-87"><span class="process-math">\(n =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-88"><span class="process-math">\(\frac{1}{8\!\left(4n+2\right)^{2}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-89"><span class="process-math">\(9\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-90">Em primeiro lugar, a função <span class="process-math">\(\dfrac1{(4 x+2)^3}\)</span> é positiva e decrescente para todo <span class="process-math">\(x\ge1\text{,}\)</span> pois seu denominador é positivo e crescente para <span class="process-math">\(x\ge1\text{.}\)</span> Além disso, a função vai para 0 como <span class="process-math">\(x\to\infty\)</span> porque seu denominador vai para o infinito. Portanto, o Teste Integral, e sua Estimativa do Resto, podem ser aplicados.</p>
+<p id="p-91">Para parte (A), a estimativa do resto é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+|s-s_n| \amp \le \int_n^\infty \frac{dx}{(4 x+2)^3} \\
+\amp = \lim_{t\to\infty} \frac{-1}{4(2)(4 x+2)^2} \biggr]_n^t
+\amp = \frac1{4(2)(4 n+2)^2} \;.
+\end{aligned}
+\end{equation*}
+</div>
+<p id="p-92">Para parte (B), precisamos encontrar o menor inteiro positivo <span class="process-math">\(n\)</span> para o qual a expressão acima é menor que 0.00009. Então, montamos a desigualdade relevante e a resolvemos:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\frac1{4(2)(4 n+2)^2} \amp \lt  0.00009 \\
+(4 n+2)^2 \amp &gt; \frac1{4(2)0.00009} \\
+(4 n+2) \amp &gt; \frac1{\root 2\of{4(2)0.00009}} \\
+n \amp &gt; \frac{\frac1{\root 2\of{4(2)0.00009}} - 2}{4}
+\approx 8.8169
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Arredondando para o próximo maior inteiro dá <span class="process-math">\(n = 9\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<p id="p-93">Encontre os valores de <span class="process-math">\(p\)</span> para que a série convirja.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^{\infty} \frac{\ln n}{n^{5 p}}
+\end{equation*}
+</div>
+<p class="continuation">Resposta (use notação de intervalo): <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-94"><span class="process-math">\(\left(0.2,\infty \right)\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<p id="p-95">Encontre o valor de</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_1^{\infty} \frac{2 \ln(x)}{x^6} \, dx
+\end{equation*}
+</div>
+<p id="p-97">Determine se a série converge ou diverge:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\displaystyle \sum_{n=1}^\infty \frac{2\ln(n)}{n^6}
+\end{equation*}
+</div>
+<p class="continuation">Insira A se a série for convergente ou B se for divergente. <span class="fillin" role="img" aria-label="1-character blank" style="width: 0.454545454545455em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-98"><span class="process-math">\(0.08\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-99">A</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-100">Por definição,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-101">
+\begin{equation*}
+\int_1^{\infty} \frac{2 \ln(x)}{x^6} \, dx
+= \lim_{t\to\infty} \int_1^t \frac{2 \ln(x)}{x^6} \, dx \;.
+\end{equation*}
+</div>
+<p id="p-102">Para calcular a integral, integramos por partes, usando a fórmula</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-103">
+\begin{equation*}
+\int u dv = u v - \int v du
+\end{equation*}
+</div>
+<p id="p-104">e substituindo <span class="process-math">\(u = \ln(x)\)</span> e <span class="process-math">\(dv = x^{-6}dx\text{,}\)</span> tal que <span class="process-math">\(du = \frac{dx}{x}\)</span> e <span class="process-math">\(v = \frac{1}{-6+1}(x^{-6+1}) = -\frac{1}{5 x^5}\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-105">
+\begin{equation*}
+\begin{aligned}
+\lim_{t\to\infty} \int_1^t \frac{2 \ln(x)}{x^6} \, dx
+\amp = 2 \lim_{t\to\infty} \int_1^t \ln(x) \cdot \frac{dx}{x^6} \\\\
+\amp = 2 \lim_{t\to\infty} \left[
+\left. -\frac{\ln(x)}{5 x^5} \right|_1^t
+- \int_1^t \left( -\frac{1}{5 x^5} \right) \, \frac{dx}{x}
+\right] \\\\
+\amp = -\frac{2}{5} \left[
+\left( \lim_{t\to\infty} \frac{\ln(t)}{t^5}
+- \frac{\ln(1)}{1^5} \right)
+- \lim_{t\to\infty} \int_1^t \frac{dx}{x^6}
+\right] \\\\
+\amp = -\frac{2}{5} \left[ \left( 0 - \frac 01 \right)
++ \lim_{t\to\infty}
+\left( \left. \frac1{5 x^5} \right|_1^t \right)
+\right] \\\\
+\amp = -\frac{2}{5} \left( \lim_{t\to\infty}
+\frac1{5 t^5} - \frac1{5 \cdot 1^5}
+\right) \\\\
+\amp = -\frac{2}{5} \left( 0 - \frac1{5} \right) \\\\
+\amp = \frac{2}{25} = 0.08 \;.
+\end{aligned}
+\end{equation*}
+</div>
+<p id="p-106">Esta primeira questão está intimamente relacionada com a segunda questão, é claro, porque é o teste integral da série dada. No entanto, é importante primeiro verificar se o teste integral realmente se aplica. Descobrimos que, como <span class="process-math">\(\ln(x)\)</span> e <span class="process-math">\(x^{-6}\)</span> são ambas funções contínuas positivas, a série é positiva e contínua. (A única descontinuidade introduzida possível seria em <span class="process-math">\(x^6=0\text{,}\)</span> mas isso não ocorre no domínio da integração <span class="process-math">\([1,\infty)\text{.}\)</span>) Já que <span class="process-math">\(x^6\ ) cresce muito mais rápido que \(\ln(x)\text{,}\)</span> a série está diminuindo. Podemos ver mais claramente por que isso acontece, porque</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{d}{dx} \left( \frac{\ln(x)}{x^6} \right)
+= \frac {\frac{1}{x}\cdot x^6 - 6 x^5\ln(x)} {x^{12}}
+= \frac{1 - 6\ln(x)}{x^7}\;,
+\end{equation*}
+</div>
+<p class="continuation">que é negativa para todo <span class="process-math">\(x&gt;e^{1/6}\text{.}\)</span></p>
+<p id="p-107">Assim, todas as condições para o teste da integral se aplicam, e o fato de nossa integral produzir um número real mostra que a série converge.</p>
+</div></div>
+</div></article>
+</div>
+</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">O símbolo “<span class="process-math">\(\gg\)</span>” significa “muito maior que”. Da mesma forma, o símbolo “<span class="process-math">\(\ll\)</span>” significa “muito menos que”. Bons símbolos taquigráficos podem ser bastante expressivos.</div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Semelhante a como calculamos os limites no infinito.</div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/cP-ZlVmR62Q</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/J51Ew7VCPr4</code></div></div>

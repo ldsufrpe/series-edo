@@ -123,7 +123,7 @@
     </subsection>
 
     <subsection>
-        <title>O teste da Integral</title>
+        <title>O Teste da Integral</title>
 
         <p>
             No teste da integral, pensamos em uma série <m>\sum_{n=1}^\infty a_n</m>, que não podemos avaliar
@@ -219,7 +219,7 @@
         </p>
 
         <theorem xml:id="thm_SRintegralTest">
-            <title>The Integral Test</title>
+            <title>O Teste da Integral</title>
             <statement>
                 <p>
                     Seja <m>N_0</m> qualquer número natural. Se <m>f(x)</m> for uma função definida e contínua
@@ -2792,8 +2792,9 @@
     </subsection>
     <ul>
         <li>
-<p>
-                <url href="https://youtu.be/cP-ZlVmR62Q" visual="youtu.be/cP-ZlVmR62Q">Teste do n-ésimo termo para divergência
+            <p>
+                <url href="https://youtu.be/cP-ZlVmR62Q" visual="youtu.be/cP-ZlVmR62Q">Teste do n-ésimo termo para
+                    divergência
                 </url>
             </p>
         </li>
@@ -2802,10 +2803,12 @@
                 <url href="https://youtu.be/J51Ew7VCPr4" visual="youtu.be/J51Ew7VCPr4">Sobre o Teste da Integral
                 </url>
             </p>
-        </li> <li>
+        </li>
+        <li>
 
             <p>
-                <url href="https://youtu.be/9e2x5DAHx3g" visual="youtu.be/9e2x5DAHx3g">Exemplo resolvido: Teste da integral
+                <url href="https://youtu.be/9e2x5DAHx3g" visual="youtu.be/9e2x5DAHx3g">Exemplo resolvido: Teste da
+                    integral
                 </url>
             </p>
         </li>
@@ -2813,25 +2816,17 @@
         <li>
 
             <p>
-                <url href="https://youtu.be/CBW3D0af3q0" visual="https://youtu.be/CBW3D0af3q0">Exemplo resolvido: <m>p</m>-série
+                <url href="https://youtu.be/CBW3D0af3q0" visual="https://youtu.be/CBW3D0af3q0">Exemplo resolvido: <m>
+                    p</m>-série
                 </url>
             </p>
         </li>
 
-         <li>
+        <li>
 
             <p>
-                <url href="https://youtu.be/BQNWeLSuXTg" visual="youtu.be/BQNWeLSuXTg">Prova dos critérios de convergência para  <m>p</m>-série
-                </url>
-            </p>
-        </li>
-
-
-
-         <li>
-
-            <p>
-                <url href="https://youtu.be/wFrznmCypfk" visual="youtu.be/wFrznmCypfk"> Sobre o Teste da Comparação
+                <url href="https://youtu.be/BQNWeLSuXTg" visual="youtu.be/BQNWeLSuXTg">Prova dos critérios de
+                    convergência para  <m>p</m>-série
                 </url>
             </p>
         </li>
@@ -2840,7 +2835,17 @@
         <li>
 
             <p>
-                <url href="https://youtu.be/9SMKa0y7qB8" visual="youtu.be/9SMKa0y7qB8"> Exemplo resolvido: Teste da Comparação
+                <url href="https://youtu.be/wFrznmCypfk" visual="youtu.be/wFrznmCypfk">Sobre o Teste da Comparação
+                </url>
+            </p>
+        </li>
+
+
+        <li>
+
+            <p>
+                <url href="https://youtu.be/9SMKa0y7qB8" visual="youtu.be/9SMKa0y7qB8">Exemplo resolvido: Teste da
+                    Comparação
                 </url>
             </p>
         </li>
@@ -2848,13 +2853,15 @@
         <li>
 
             <p>
-                <url href="https://youtu.be/Gy4FmfKKipQ" visual="youtu.be/Gy4FmfKKipQ"> Teste da Comparação do Limite
+                <url href="https://youtu.be/Gy4FmfKKipQ" visual="youtu.be/Gy4FmfKKipQ">Teste da Comparação do Limite
                 </url>
             </p>
-        </li> <li>
+        </li>
+        <li>
 
             <p>
-                <url href="https://youtu.be/kO5Zrzomqo0" visual="youtu.be/kO5Zrzomqo0">Exemplo Resolvido: Teste da Comparação do Limite
+                <url href="https://youtu.be/kO5Zrzomqo0" visual="youtu.be/kO5Zrzomqo0">Exemplo Resolvido: Teste da
+                    Comparação do Limite
                 </url>
             </p>
         </li>
@@ -2867,5 +2874,41 @@
         </li>
     </ul>
 
+    <exercises xml:id="exercises-teste-convergencia">
+        <exercisegroup>
+            <title>Teste da Divergencia, Testa da Integral e Teste da Comparação</title>
 
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem1.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem2.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem3.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem4.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem5.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem6.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem7.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem8.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem9.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem10.pg"/>
+            </exercise>
+
+        </exercisegroup>
+    </exercises>
 </section>
