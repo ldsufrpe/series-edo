@@ -42,7 +42,7 @@
             </ul>
             Isso nos diz que, se já sabemos que uma dada série,  <m>\sum a_n</m>  é convergente, então <m>
             n
-        </m>- ésimo termo da série, <m>a_n</m>, deve convergir para <m>0</m> com <m>n</m> tende ao infinito. Nesta
+        </m>- ésimo termo da série, <m>a_n</m>, deve convergir para <m>0</m> quando <m>n</m> tende ao infinito. Nesta
             forma, o teste não é tão útil. No entanto, a contrapositiva
 
             é um teste útil para  <em>divergência</em>.
@@ -87,7 +87,7 @@
                 <p>
                     O teste de divergência é um <q>teste de sentido único</q>. Afirma que <m>
                     \lim_{n\rightarrow\infty}a_n
-                </m> não é zero, ou não existe, então a série <m>\sum_{n=1}^\infty a_n</m> diverge. Mas não nos diz
+                </m> não é zero, ou não existe, então a série <m>\sum_{n=1}^\infty a_n</m> diverge. Mas não diz
                     <em>absolutamente nada</em>
                     quando <m>\lim_{n\rightarrow\infty}a_n=0</m>. Em particular, é perfeitamente possível que uma série
                     <m>
@@ -104,20 +104,20 @@
 
         <p>
             Agora, enquanto a convergência ou divergência de séries como  <m>\sum_{n=1}^\infty \frac{1}{n}</m> pode ser
-            determinado usando alguns truques inteligentes. Nas próximas subseções, discutiremos
+            determinado usando alguns truques. Nas próximas subseções, discutiremos
             vários métodos para testar a convergência de séries.
         </p>
 
         <p>
             Observe que, embora esses testes nos digam se uma série converge ou não, eles não (exceto em casos raros)
-            nos dizem qual é a soma da série. Por exemplo, o teste que veremos na próxima subseção nos diz imediatamente
+            determinam qual é a soma da série. Por exemplo, o teste que veremos na próxima subseção verifica
             que a série
             <md>
                 <mrow>
                     \sum_{n=1}^\infty \frac{1}{n^3}
                 </mrow>
             </md>
-            converge. No entanto, não nos diz o seu valor.
+            converge. No entanto, não calcula seu valor.
 
         </p>
     </subsection>
@@ -151,7 +151,7 @@
             <p>
                 Considere o esboço à esquerda da<xref ref="fig1"/>. Isto mostra que a área das colunas sombreadas, <m>
                 \sum_{n=1}^4\frac{1}{n}</m>, é maior que a área
-                sob a curva <m>y=\frac{1}{x}</m> com <m>1\le x\le 5</m>. Oe seja
+                sob a curva <m>y=\frac{1}{x}</m> com <m>1\le x\le 5</m>. Ou seja
                 <md>
                     <mrow>
                         \sum_{n=1}^4 \frac{1}{n} &amp; \ge \int_1^5 \frac{1}{x}\dee{x}
@@ -223,11 +223,11 @@
             <statement>
                 <p>
                     Seja <m>N_0</m> qualquer número natural. Se <m>f(x)</m> for uma função definida e contínua
-                    para todos os <m>x\ge N_0</m> e que obedece
+                    para todo  <m>x\ge N_0</m> e que obedece
                     <ol label="i">
                         <li>
                             <m>f(x)\ge 0</m>
-                            para todos os <m>x\ge N_0</m> e
+                            para todo <m>x\ge N_0</m> e
                         </li>
                         <li>
                             <m>f(x)</m>
@@ -235,7 +235,7 @@
                         </li>
                         <li>
                             <m>f(n)=a_n</m>
-                            para todos os <m>n\ge N_0</m>.
+                            para todo <m>n\ge N_0</m>.
                         </li>
                     </ol>
                 </p>
@@ -248,7 +248,7 @@
                     <me>
                         \sum_{n=1}^\infty a_n\text{ converge }\iff \int_{N_0}^\infty f(x)\ dx\text{ converge }
                     </me>
-                    Além disso, quando a série converge, o erro de truncamento
+                    Além disso, quando a série converge, o erro de truncamento é
                     <me>
                         \bigg|\sum_{n=1}^\infty a_n-\sum_{n=1}^N a_n\bigg|\le \int_N^\infty f(x)\ dx\qquad\text{para
                         todo
@@ -269,7 +269,7 @@
                         remover um número finito fixo de termos de uma série não pode afetar se ela converge ou não.
                     </li>
                     <li>
-                        Como <m>a_n\ge 0</m> para todos os <m>n\ge I \gt N_0</m>, a sequência de somas parciais <m>
+                        Como <m>a_n\ge 0</m> para todo <m>n\ge I \gt N_0</m>, a sequência de somas parciais <m>
                         s_\ell=\sum_{n=I}^\ell a_n
                     </m> obedece <m>s_{\ell+1} = s_\ell+a_{n+1} \ge s_\ell</m>. Ou seja, <m>s_\ell</m> aumenta à medida
                         que <m>
@@ -427,7 +427,7 @@
                         para que soma total seja finita. Lembre-se, para este exemplo, a convergência ocorre muito
                         lentamente
                         <mdash/>
-                        você tem que pegar um grande número de termos para obter uma aproximação decente da soma total.
+                        é necessário pegar um grande número de termos para obter uma aproximação decente da soma total.
                         Se aproximarmos <m>\sum_{n=1}^\infty\frac{1}{n^{1.000001}}</m> pela série truncada <m>
                         \sum_{n=1}^N\frac{1}{n^{1.000001}}</m>, cometemos um erro de no máximo
                         <md>
@@ -457,7 +457,7 @@
             x</m>, a função <m>\log x</m> é menor que <m>x^a</m> para qualquer
             <m>a</m>
             <mdash/>
-            você pode se convencer disso com uma rápida aplicação da regra de L'Hôpital. Portanto, não é irracional
+            para se convencer disso basta aplicar da regra de L'Hôpital. Portanto, não é irracional
             perguntar se a série
             <md>
                 <mrow>
@@ -489,10 +489,10 @@
                             Agora vamos verificar as outras duas condições do<xref ref="thm_SRintegralTest"/>:
                             <ol label="i">
                                 <li>
-                                    Tanto <m>x</m> quanto <m>\log x</m> são positivos para todos os <m>x \gt 1</m>,
+                                    Tanto <m>x</m> quanto <m>\log x</m> são positivos para todo <m>x \gt 1</m>,
                                     então <m>f(x) \gt
                                     0
-                                </m> para todos os <m>x\ge N_0=2</m>.
+                                </m> para todo <m>x\ge N_0=2</m>.
                                 </li>
                                 <li>
                                     À medida que <m>x</m> aumenta, <m>x</m> e <m>\log x</m> aumentam e, portanto, <m>
@@ -650,7 +650,7 @@
             <q>simples
             </q>
             <m>\sum_{n=1}^\infty b_n</m>
-            com <m>b_n</m> quase igual a <m>a_n</m> quando<m>n
+            com <m>b_n</m> quase igual a <m>a_n</m> quando <m>n
         </m> é grande.
             No entanto, é muito raro que <m>a_n\le b_n</m> para todo <m>n</m>. É muito mais comum que <m>a_n\le K
             b_n
@@ -700,7 +700,7 @@
                             isso, precisamos encontrar uma constante <m>K</m> tal que <m>|a_n|= \frac{|n+\cos
                             n|}{n^3-1/3}=\frac{n+ \cos
                             n}{n^3-1/3}
-                        </m> é menor que <m>\frac{K}{n^2}</m> para todo<m>n</m>. Uma boa maneira
+                        </m> é menor que <m>\frac{K}{n^2}</m> para todo <m>n</m>. Uma boa maneira
                             <fn>
                                 Semelhante a como calculamos os limites no infinito.
                             </fn>
@@ -789,7 +789,7 @@
             A ideia por trás disso não é muito complicada. Já vimos que a convergência ou divergência de uma série não
             depende dos primeiros termos, mas apenas do que acontece quando <m>n</m> é realmente grande.
             Consequentemente, se pudermos descobrir como os termos da série se comportam para <m>n</m> realmente grande,
-            podemos descobrir se a série converge. Então, em vez de comparar os termos da série para todos os <m>
+            podemos descobrir se a série converge. Então, em vez de comparar os termos da série para todo <m>
             n</m>, apenas compare-os quando <m>n</m> for grande.
         </p>
 
@@ -845,7 +845,7 @@
             </p>
             <p>
                 (b) Vamos supor que <m>L \gt 0</m>. (Se <m>L \lt 0</m>, basta substituir <m>a_n</m> por <m>-a_n</m>.)
-                Como nos disseram que <m>\lim_{n\rightarrow\infty}\frac{a_n}{b_n}=L</m>, sabemos que,
+                Já que <m>\lim_{n\rightarrow\infty}\frac{a_n}{b_n}=L</m>, sabemos que,
                 <ul>
                     <li>
                         quando <m>n</m> é grande, <m>\frac{a_n}{b_n}</m> está muito próximo de <m>L</m>.
@@ -870,8 +870,8 @@
         </proof>
 
         <p>
-            Os próximos dois exemplos ilustram a melhoria do teorema acima em relação ao teste de comparação direta
-            (embora, é claro, precisássemos do teste de comparação para desenvolver o teste de comparação do limite).
+            Os próximos dois exemplos ilustram o desempenho do teorema acima em relação ao teste de comparação direta
+            (embora, é claro, precisássemos do teste de comparação para desenvolver o teste da comparação do limite).
         </p>
 
         <example xml:id="eg_SRlimCompA">
@@ -933,7 +933,7 @@
                 Podemos fazer isso examinando o numerador e o denominador separadamente:
                 <ul>
                     <li>
-                        O numerador não é razoável, pois para todos os <m>n \geq 1</m>:
+                        O numerador não é razoável, pois para todo <m>n \geq 1</m>:
                         <md>
                             <mrow>
                                 n+1 &amp;\leq 2n \qquad \text{and so}
@@ -949,7 +949,7 @@
                         falso. Em vez disso, temos que fazer um argumento mais cuidadoso. Em particular, gostaríamos de
                         encontrar <m>N_0</m> e <m>K'</m> para que <m>n^2-2n+3\ge K'n^2</m> , ou seja, <m>
                         \frac{1}{n^2-2n+3}\le\frac{1}{K'n^2}
-                    </m> para todos os <m>n
+                    </m> para todo <m>n
                         \geq N_0</m>. Para <m>n\ge 4</m>, temos <m>2n = \frac{1}{2} 4n\le \frac{1}{2}n\cdot
                         n=\frac{1}{2}n^2</m>. Portanto, para <m>n\ge 4</m>,
                         <md>
@@ -964,7 +964,7 @@
                 <md>
                     <mrow>
                         \frac{\sqrt{n+1}}{n^2-2n+3} &amp; \leq \frac{\sqrt{2n}}{n^2/2} = 2\sqrt{2}\frac{1}{n^{3/2}}
-                        \qquad\text{for all $n\ge 4$}
+                        \qquad\text{para todo $n\ge 4$}
                     </mrow>
                 </md>
                 e o teste de comparação garante que a série converge. É bastante claro que a abordagem do
