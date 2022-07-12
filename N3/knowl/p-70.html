@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-12T10:01:09-03:00       *-->
+<!--*       on 2022-07-12T19:32:14-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Parágrafo</span></h6>
-<p>Determine se a seguinte série é convergente ou divergente. Se convergir, encontre seu valor. Se divergir, insira DIV.</p>
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p>Para aplicar o <a href="" class="xref" data-knowl="./knowl/thm_SRratio.html" title="Teorema 1.21: Teste da Razão">Teste da Razão</a> precisamos calcular</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRratio.html">
+\begin{align*}
+\Big|\frac{a_{n+1}}{a_n}\Big|
+&amp;= \bigg|\frac{\frac{a}{n+2} X^{n + 2}}{\frac{a}{n+1} X^{n + 1}}\bigg|
+= \frac{n+1}{n+2} |X|
+= \frac{1+\frac{1}{n}}{1+\frac{2}{n}} |X|
+\rightarrow L=|X|\quad\text{as $n\rightarrow\infty$}
+\end{align*}
+</div>
+<p class="continuation">O Teste da Razão garante que a série  <span class="process-math">\(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\)</span> converge se <span class="process-math">\(|X| \lt 1\)</span> e diverge se <span class="process-math">\(|X| \gt 1\text{.}\)</span> Entretanto, não sabemos nada sobre os casos em que <span class="process-math">\(X=\pm 1\text{.}\)</span></p>
 <span class="incontext"><a href="section-1.html#p-70" class="internal">em contexto</a></span>
 </body>
 </html>

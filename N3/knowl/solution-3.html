@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-12T10:01:09-03:00       *-->
+<!--*       on 2022-07-12T19:32:14-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,59 +15,38 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h5 class="heading">
-<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.5.10.1</span><span class="period">.</span>
-</h5>
-<p>Por definição,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<h4 class="heading">
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.24.1</span><span class="period">.</span>
+</h4>
+<p>Para aplicar o <a href="" class="xref" data-knowl="./knowl/thm_SRratio.html" title="Teorema 1.21: Teste da Razão">Teste da Razão</a> precisamos calcular</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRratio.html">
+\begin{align*}
+\Big|\frac{a_{n+1}}{a_n}\Big|
+&amp;= \bigg|\frac{\frac{a}{n+2} X^{n + 2}}{\frac{a}{n+1} X^{n + 1}}\bigg|
+= \frac{n+1}{n+2} |X|
+= \frac{1+\frac{1}{n}}{1+\frac{2}{n}} |X|
+\rightarrow L=|X|\quad\text{as $n\rightarrow\infty$}
+\end{align*}
+</div>
+<p class="continuation">O Teste da Razão garante que a série  <span class="process-math">\(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\)</span> converge se <span class="process-math">\(|X| \lt 1\)</span> e diverge se <span class="process-math">\(|X| \gt 1\text{.}\)</span> Entretanto, não sabemos nada sobre os casos em que <span class="process-math">\(X=\pm 1\text{.}\)</span></p>
+<p>Se <span class="process-math">\(X=1\text{,}\)</span> a série se reduz a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRpTest.html">
 \begin{equation*}
-\int_1^{\infty} \frac{2 \ln(x)}{x^6} \, dx
-= \lim_{t\to\infty} \int_1^t \frac{2 \ln(x)}{x^6} \, dx \;.
+\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\bigg|_{X=1}
+=\sum_{n=0}^\infty \frac{a}{n+1}
+=a\sum_{m=1}^\infty \frac{1}{m}\qquad\text{com }m=n+1
 \end{equation*}
 </div>
-<p>Para calcular a integral, integramos por partes, usando a fórmula</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">que é justamente <span class="process-math">\(a\)</span> vezes a série harmônica, divergente, pelo<a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.9: O p-teste: \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.9</a>.</p>
+<p>Se <span class="process-math">\(X=-1\text{,}\)</span> a série se reduz a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRalternating.html ./knowl/eg_SRaltharmonic.html">
 \begin{equation*}
-\int u dv = u v - \int v du
+\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\bigg|_{X=-1} =\sum_{n=0}^\infty
+(-1)^{n+1}\frac{a}{n+1}
 \end{equation*}
 </div>
-<p>e substituindo <span class="process-math">\(u = \ln(x)\)</span> e <span class="process-math">\(dv = x^{-6}dx\text{,}\)</span> tal que <span class="process-math">\(du = \frac{dx}{x}\)</span> e <span class="process-math">\(v = \frac{1}{-6+1}(x^{-6+1}) = -\frac{1}{5 x^5}\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\begin{aligned}
-\lim_{t\to\infty} \int_1^t \frac{2 \ln(x)}{x^6} \, dx
-\amp = 2 \lim_{t\to\infty} \int_1^t \ln(x) \cdot \frac{dx}{x^6} \\\\
-\amp = 2 \lim_{t\to\infty} \left[
-\left. -\frac{\ln(x)}{5 x^5} \right|_1^t
-- \int_1^t \left( -\frac{1}{5 x^5} \right) \, \frac{dx}{x}
-\right] \\\\
-\amp = -\frac{2}{5} \left[
-\left( \lim_{t\to\infty} \frac{\ln(t)}{t^5}
-- \frac{\ln(1)}{1^5} \right)
-- \lim_{t\to\infty} \int_1^t \frac{dx}{x^6}
-\right] \\\\
-\amp = -\frac{2}{5} \left[ \left( 0 - \frac 01 \right)
-+ \lim_{t\to\infty}
-\left( \left. \frac1{5 x^5} \right|_1^t \right)
-\right] \\\\
-\amp = -\frac{2}{5} \left( \lim_{t\to\infty}
-\frac1{5 t^5} - \frac1{5 \cdot 1^5}
-\right) \\\\
-\amp = -\frac{2}{5} \left( 0 - \frac1{5} \right) \\\\
-\amp = \frac{2}{25} = 0.08 \;.
-\end{aligned}
-\end{equation*}
-</div>
-<p>Esta primeira questão está intimamente relacionada com a segunda questão, é claro, porque é o teste integral da série dada. No entanto, é importante primeiro verificar se o teste integral realmente se aplica. Descobrimos que, como <span class="process-math">\(\ln(x)\)</span> e <span class="process-math">\(x^{-6}\)</span> são ambas funções contínuas positivas, a série é positiva e contínua. (A única descontinuidade introduzida possível seria em <span class="process-math">\(x^6=0\text{,}\)</span> mas isso não ocorre no domínio da integração <span class="process-math">\([1,\infty)\text{.}\)</span>) Já que <span class="process-math">\(x^6\ ) cresce muito mais rápido que \(\ln(x)\text{,}\)</span> a série está diminuindo. Podemos ver mais claramente por que isso acontece, porque</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{d}{dx} \left( \frac{\ln(x)}{x^6} \right)
-= \frac {\frac{1}{x}\cdot x^6 - 6 x^5\ln(x)} {x^{12}}
-= \frac{1 - 6\ln(x)}{x^7}\;,
-\end{equation*}
-</div>
-<p class="continuation">que é negativa para todo <span class="process-math">\(x&gt;e^{1/6}\text{.}\)</span></p>
-<p>Assim, todas as condições para o teste da integral se aplicam, e o fato de nossa integral produzir um número real mostra que a série converge.</p>
+<p class="continuation">que converge pelo<a href="" class="xref" data-knowl="./knowl/thm_SRalternating.html" title="Teorema 1.18: Teste da Série Alternada">Teste da Série Alternada</a>. Veja o<a href="" class="xref" data-knowl="./knowl/eg_SRaltharmonic.html" title="Exemplo 1.19: Convergência da série harmônica alternada">Exemplo 1.19</a>.</p>
+<p>Concluímos, que a série <span class="process-math">\(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\)</span> converge se e somente se <span class="process-math">\(-1\le X \lt 1\text{.}\)</span></p>
 </div>
 <span class="incontext"><a href="section-1.html#solution-3" class="internal">em contexto</a></span>
 </body>

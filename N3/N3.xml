@@ -147,11 +147,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </introduction>
 
 
-        <xi:include href="./series03.xml" />
-<!--        <xi:include href="./otimizacao.xml" />-->
-
-
-
+        <xi:include href="series03.xml"/>
 
         <references xml:id="references-backmatter">
             <title>Referências</title>
