@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-12T19:32:13-03:00       *-->
+<!--*       on 2022-07-12T20:31:25-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -1114,6 +1114,241 @@ n \amp &gt; \frac{\frac1{\root 2\of{4(2)0.00009}} - 2}{4}
 </div>
 <p class="continuation">que é negativa para todo <span class="process-math">\(x&gt;e^{1/6}\text{.}\)</span></p>
 <p id="p-146">Assim, todas as condições para o teste da integral se aplicam, e o fato de nossa integral produzir um número real mostra que a série converge.</p>
+</div></div>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-2">
+<h4 class="heading"><span class="title">Teste da Série Alternada, Testa da Razão e Teste da Raiz.</span></h4>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-11"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<p id="p-147">Aproxime o valor da série com um erro de no máximo <span class="process-math">\(10^{-4}\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-148">
+\begin{equation*}
+\sum_{n=1}^{\infty} \frac{ (-1)^{n+1}}{n^{5}}
+\end{equation*}
+</div>
+<p class="continuation">De acordo com o Teste da Série Alternada:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left| S_N-S \right|\le a_{N+1} .
+\end{equation*}
+</div>
+<p class="continuation">Qual o menor valor de <span class="process-math">\(N\)</span> que se aproxima para <span class="process-math">\(S\)</span> dentro de um erro de no máximo <span class="process-math">\(10^{-4}\text{?}\)</span></p>
+<p id="p-149"><span class="process-math">\(N =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-150"><span class="process-math">\(S\approx\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-151"><span class="process-math">\(6\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-152"><span class="process-math">\(0.97208\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-153">Seja <span class="process-math">\(S =  \sum _{n=1}^{\infty} \frac{ (-1)^{n+1}}{n^{5}}\text{,}\)</span> de maneira que <span class="process-math">\(a_n = \frac{1}{n^{5}}\text{.}\)</span>  Então,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-154">
+\begin{equation*}
+| S_N - S | \le a_{N+1} = \frac{1}{(N+1)^{5}}.
+\end{equation*}
+</div>
+<p id="p-155">Para tornar o erro menor que <span class="process-math">\(10^{-4}\text{,}\)</span> devemos escolher <span class="process-math">\(N\)</span> de modo que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{(N+1)^{5}} \lt  10^{-4} \qquad\textrm{or}\qquad N &gt; 10^\frac{4}{5}-1\approx 5.31.
+\end{equation*}
+</div>
+<p id="p-156">O menor valor que satisfaz a desigualdade requerida é então <span class="process-math">\(N=6\text{.}\)</span>  Portanto,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+S \approx S_{6} = 1-\frac{1}{2^{5}}+\frac{1}{3^{5}}-\frac{1}{4^{5}}+\frac{1}{5^{5}}-\frac{1}{6^{5}} = 0.97208
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p id="p-157">Determine se a seguinte série converge ou diverge.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{(-1)^{n+1}}{ 4 n^{9}+8 }
+\end{equation*}
+</div>
+<p id="p-158">Insira <em class="emphasis">C</em> para convergente e <em class="emphasis">D</em> para divergente: <span class="fillin" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-159">C</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-13"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<p id="p-160">Determine se a seguinte série converge ou diverge.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{ (-1)^{n-1} }{ \sqrt{n} }
+\end{equation*}
+</div>
+<p id="p-161">Insira <em class="emphasis">C</em> para convergente e <em class="emphasis">D</em> para divergente: <span class="fillin" role="img" aria-label="1-character blank" style="width: 0.454545454545455em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-162">C</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-14"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<p id="p-163">Aplique o Teste de Razão para determinar convergência ou divergência, ou declare que o Teste de Razão é inconclusivo.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum\limits_{n=1}^{\infty} \frac{(n!)^2}{(2n)!}
+\end{equation*}
+</div>
+<p class="continuation"><span class="process-math">\(\rho = \lim\limits_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> (Insira 'inf' para <span class="process-math">\(\infty\text{.}\)</span>)</p>
+<p id="p-164"><span class="process-math">\(\displaystyle
+\sum_{n=1}^{\infty} \frac{(n!)^2}{(2n)!}\)</span> é:</p>
+<p id="p-165"><ul style="list-style:circle;">
+<li id="li-99"><p id="p-166">convergente</p></li>
+<li id="li-100"><p id="p-167">divergente</p></li>
+<li id="li-101"><p id="p-168">O Teste da Razão é inconclusivo</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-169"><span class="process-math">\(0.25\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-170">Com <span class="process-math">\(a_n = \frac{(n!)^2}{(2n)!}\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left| \frac{a_{n+1}}{a_n} \right| = \frac{((n+1)!)^2}{(2n+2)!} \cdot \frac{(2n)!}{(n!)^2} = \frac{(n+1)^2}{(2n+2)(2n+1)}
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\rho = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \frac{1}{4} \lt  1.
+\end{equation*}
+</div>
+<p class="continuation">Portanto, a série <span class="process-math">\(\sum\limits_{n=1}^{\infty} \frac{(n!)^2}{(2n)!}\)</span> converge pelo Teste da Razão.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-15"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<p id="p-171">Assuma que <span class="process-math">\(| \frac{a_{n+1}}{a_n}|\)</span> converge para <span class="process-math">\(\rho = \frac{1}{7}\text{.}\)</span>  O que você pode dizer sobre a convergência da série dada?</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum\limits_{n=1}^{\infty} {b_n} =  \sum\limits_{n=1}^{\infty} n^{9} a_n
+\end{equation*}
+</div>
+<p class="continuation"><span class="process-math">\(\lim\limits_{n \to \infty} \left| \frac{b_{n+1}}{b_n} \right| =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> (Insira 'inf' para <span class="process-math">\(\infty\text{.}\)</span>)</p>
+<p id="p-172"><span class="process-math">\(\sum\limits_{n=1}^{\infty} n^{9} a_n\)</span> é: <ul style="list-style:circle;">
+<li id="li-102"><p id="p-173">convergente</p></li>
+<li id="li-103"><p id="p-174">divergente</p></li>
+<li id="li-104"><p id="p-175">O Teste da Razão é inconclusivo</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-176"><span class="process-math">\(0.142857\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<p id="p-177">Seja <span class="process-math">\(b_n = n^{9} a_n\text{.}\)</span>  Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-178">
+\begin{equation*}
+\rho =  \lim_{n \to \infty} \left| \frac{b_{n+1}}{b_n} \right| 
+= \lim_{n \to \infty} \left( \frac{n+1}{n} \right)^{9} \left| \frac{a_{n+1}}{a_n} \right|
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+=  1^{9} \cdot \frac{1}{7} = \frac{1}{7} \lt  1
+\end{equation*}
+</div>
+<p class="continuation">Portanto, a série <span class="process-math">\(\sum\limits_{n=1}^{\infty} n^{9} a_n\)</span> converge pelo Teste da Razão.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-16"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<p id="p-179">Use qualquer método para determinar se a série converge.</p>
+<p id="p-180">(1) <span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{\left(k+4\right)!^{2}}{\left(2k\right)!}\)</span></p>
+<p id="p-181"><ul style="list-style:circle;">
+<li id="li-106"><p id="p-183">Converge</p></li>
+<li id="li-107"><p id="p-184">Diverge</p></li>
+</ul></p>
+<p id="p-185">(2) <span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{\ln\!\left(k\right)}{6^{k}}\)</span></p>
+<p id="p-186"><ul style="list-style:circle;">
+<li id="li-109"><p id="p-188">Converge</p></li>
+<li id="li-110"><p id="p-189">Diverge</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-190">Usando o Teste de Razão</p>
+<p id="p-191">(1) <span class="process-math">\(\displaystyle\rho=\lim_{k\to\infty} \left(\frac{\left(k+5\right)^{2}}{\left(2k+2\right)\!\left(2k+1\right)}\right)={\textstyle\frac{1}{4}}\text{,}\)</span> então a série é Convergente.</p>
+<p id="p-192">(2) <span class="process-math">\(\displaystyle\rho=\lim_{k\to\infty} \left(\frac{\ln\!\left(k+1\right)}{6\ln\!\left(k\right)}\right)={\textstyle\frac{1}{6}}\text{,}\)</span> então a série é Convergente.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-17"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<p id="p-193">Use o Teste de Raiz para determinar a convergência ou divergência de uma determinada série ou declare que o Teste de Raiz é inconclusivo.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum\limits_{n=1}^{\infty} \left(\frac{n + 17}{3 n + 18}\right)^n
+\end{equation*}
+</div>
+<p class="continuation"><span class="process-math">\(L = \lim\limits_{n \to \infty} \sqrt[n]{\left| a_n \right|} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> (Enter 'inf' for <span class="process-math">\(\infty\text{.}\)</span>)</p>
+<p id="p-194"><span class="process-math">\(\sum\limits_{n=1}^{\infty} \left(\frac{n + 17}{3 n + 18}\right)^n\)</span> is: <ul style="list-style:circle;">
+<li id="li-111"><p id="p-195">convergente</p></li>
+<li id="li-112"><p id="p-196">divergente</p></li>
+<li id="li-113"><p id="p-197">O Teste de Raiz é inconclusivo</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-198"><span class="process-math">\(0.333333\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-199">Com <span class="process-math">\(a_n = \left(\frac{n + 17}{3 n + 18}\right)^n\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sqrt[n]{a_n} = \sqrt[n]{\left(\frac{n + 17}{3 n + 18}\right)^n} = \frac{n + 17}{3 n + 18}
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n \to \infty} \sqrt[n]{a_n}  \frac{1}{3} \lt  1.
+\end{equation*}
+</div>
+<p id="p-200">Portanto, a série <span class="process-math">\(\sum\limits_{n=1}^{\infty}\)</span> converge pelo Teste da Raiz.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-18"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
+<p id="p-201">Use o Teste de Raiz para determinar a convergência ou divergência de uma determinada série ou declare que o Teste de Raiz é inconclusivo.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum\limits_{n=1}^{\infty} \frac{1}{n^{9 n}}
+\end{equation*}
+</div>
+<p class="continuation"><span class="process-math">\(L = \lim\limits_{n \to \infty} \sqrt[n]{\left| a_n \right|} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> (Insira 'inf' para <span class="process-math">\(\infty\text{.}\)</span>)</p>
+<p id="p-202"><span class="process-math">\(\sum\limits_{n=1}^{\infty} \frac{1}{n^{9 n}}\)</span> is: <ul style="list-style:circle;">
+<li id="li-114"><p id="p-203">convergente</p></li>
+<li id="li-115"><p id="p-204">divergente</p></li>
+<li id="li-116"><p id="p-205">O Teste de Raiz é inconclusivo</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-206"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-207">Com <span class="process-math">\(a_n = \frac{1}{n^{9 n}}\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sqrt[n]{a_n} = \sqrt[n]{\frac{1}{n^{9 n}}} = \frac{1}{n^{9}}
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+L = \lim_{n \to \infty} \sqrt[n]{a_n} = 0 \lt  1.
+\end{equation*}
+</div>
+<p class="continuation">Portanto, a série <span class="process-math">\(\sum\limits_{n=1}^{\infty} \frac{1}{n^{9 n}}\)</span> converge pelo Teste da Raiz.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-19"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<p id="p-208">Use o Teste de Raiz para determinar a convergência ou divergência de uma determinada série ou declare que o Teste de Raiz é inconclusivo.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum\limits_{n=1}^{\infty} \left(1+\frac{1}{2 n}\right)^{-n^2}
+\end{equation*}
+</div>
+<p class="continuation"><span class="process-math">\(L = \lim\limits_{n \to \infty} \sqrt[n]{\left| a_n \right|} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> (Insira 'inf' para <span class="process-math">\(\infty\text{.}\)</span>)</p>
+<p id="p-209"><span class="process-math">\(\sum_{n=4}^{\infty} \left(1+\frac{1}{2 n}\right)^{-n^2}\)</span> is: <ul style="list-style:circle;">
+<li id="li-117"><p id="p-210">convergente</p></li>
+<li id="li-118"><p id="p-211">divergente</p></li>
+<li id="li-119"><p id="p-212">O Teste de Raiz é inconclusivo</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-213"><span class="process-math">\(0.606531\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-214">Com <span class="process-math">\(a_n = \left(1+\frac{1}{2 n}\right)^{-n^2}\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sqrt[n]{a_n} = \sqrt[n]{\left(1+\frac{1}{2 n}\right)^{-n^2}} = \left( 1 + \frac{1}{2 n} \right)^{-n}
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n \to \infty} \sqrt[n]{a_n} = \lim_{n\to\infty} \left( 1+\frac{1}{2 n}\right)^{-n} = \lim_{n\to\infty}\left[\left(1+\frac{1}{2 n} \right)^{2 n} \right]^{-\frac{1}{2}} =e^{-\frac{1}{2}}\lt 1.
+\end{equation*}
+</div>
+<p class="continuation">Portanto, a série <span class="process-math">\(\sum\limits_{n=1}^{\infty} \left(1+\frac{1}{2 n}\right)^{-n^2}\)</span> converge pelo Teste de Raiz.</p>
 </div></div>
 </div></article>
 </div>

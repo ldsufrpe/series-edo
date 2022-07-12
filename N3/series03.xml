@@ -2757,7 +2757,8 @@
 
         </ul>
     </subsection>
-
+<!--TODO Convergencia absoluta e condicional-->
+<!--TODO Exercícios Webwork - teste da razão, raiz e alternada-->
     <exercises xml:id="exercises-teste-convergencia">
         <exercisegroup>
             <title>Teste da Divergencia, Testa da Integral e Teste da Comparação</title>
@@ -2791,6 +2792,28 @@
             </exercise>
             <exercise>
                 <webwork source="pretext-teste-convergencia/problem10.pg"/>
+            </exercise>
+            </exercisegroup>
+             <exercisegroup>
+            <title>Teste da Série Alternada, Testa da Razão e Teste da Raiz</title>
+            <exercise>
+                <webwork source="pretext-teste-convergencia/problem11.pg"/>
+            </exercise><exercise>
+                <webwork source="pretext-teste-convergencia/problem12.pg"/>
+            </exercise><exercise>
+                <webwork source="pretext-teste-convergencia/problem13.pg"/>
+            </exercise><exercise>
+                <webwork source="pretext-teste-convergencia/problem14.pg"/>
+            </exercise><exercise>
+                <webwork source="pretext-teste-convergencia/problem15.pg"/>
+            </exercise><exercise>
+                <webwork source="pretext-teste-convergencia/problem16.pg"/>
+            </exercise><exercise>
+                <webwork source="pretext-teste-convergencia/problem17.pg"/>
+            </exercise><exercise>
+                <webwork source="pretext-teste-convergencia/problem18.pg"/>
+            </exercise><exercise>
+                <webwork source="pretext-teste-convergencia/problem19.pg"/>
             </exercise>
 
         </exercisegroup>
