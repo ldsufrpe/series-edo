@@ -565,7 +565,7 @@
             </title>
             <p>
                 Não Demonstraremos este teorema aqui. Vamos apenas fazer algumas observações. É por isso que existem
-                aspas em <q>Demonstração</q>. Para uma prova real veja a seção opcional<xref
+                aspas em <q>Demonstração</q>. Para uma prova real veja a seção opcional <xref
                     ref="sec_CompProof"/>.
                 <ol label="a">
                     <li>
@@ -912,7 +912,7 @@
                         Já sabemos que a série <m>\sum_{n=1}^\infty b_n =\sum_{n=1}^\infty\frac{1}{n^{3/2}}</m> converge
                         pelo
                         <xref ref="eg_SRpTest"/>
-                        como <m>p=\frac{3}{2}</m>. Então a série converge pelo teste de comparação de limite,<xref
+                        como <m>p=\frac{3}{2}</m>. Então a série converge pelo teste de comparação de limite, <xref
                             ref="thm_SRlimitComparison"/>.
                     </li>
                 </ul>
@@ -1074,7 +1074,7 @@
             <me>
                 A_1-A_2+A_3-A_4+\cdots =\sum_{n=1}^\infty (-1)^{n-1} A_n
             </me>
-            se cada <m>A_n\ge</m> for positivo. Muitas vezes (mas nem sempre) os termos em séries alternadas ficam
+            se cada <m>A_n</m> for positivo. Muitas vezes (mas nem sempre) os termos em séries alternadas ficam
             sucessivamente menores. Ou seja, <m>A_1\ge A_2 \ge A_3 \ge \cdots</m>. Neste caso:
             <ul>
                 <li>
@@ -1085,18 +1085,17 @@
                 </li>
                 <li>
                     A terceira soma parcial, <m>S_3=S_2+A_3</m>, é maior que <m>S_2</m> por <m>A_3</m>, pois <m>
-                    A_3\le A_2</m>, <m>S_3</m> permanece menor do que  <m>S_1</m>. Veja a
-                    <xref ref="fig-alternada-serie"/>
+                    A_3\le A_2</m>, <m>S_3</m> permanece menor do que  <m>S_1</m>. Veja a  <xref ref="fig-alternada-serie"/>
                 </li>
                 <li>
                     A quarta soma parcial, <m>S_4=S_3-A_4</m>, é menor que <m>S_3</m> por <m>A_4</m>, já que <m>A_4\le
-                    A_3</m>, <m>S_4</m> contua maior que <m>S_2</m>. Novamente, veja a<xref ref="fig-alternada-serie"/>.
+                    A_3</m>, <m>S_4</m> contua maior que <m>S_2</m>. Novamente, veja a <xref ref="fig-alternada-serie"/>.
                 </li>
                 <li>E assim por diante</li>
             </ul>
             Assim, as sucessivas somas parciais oscilam, mas com amplitude cada vez menor. Se, além disso, <m>A_n</m> tende
             a <m>0</m> quando <m>n</m> tende a <m>\infty</m>, a amplitude de oscilação tende a zero e a sequência <m>
-            S_1</m>, <m>S_2</m>, <m>S_3</m>, <m>\cdots</m> converge para algum limite <m>S</m> m>.
+            S_1</m>, <m>S_2</m>, <m>S_3</m>, <m>\cdots</m> converge para algum limite <m>S</m>.
         </p>
 
         <p>
@@ -1328,7 +1327,7 @@
                 <p>
                     Observe que o teste da razão não fornece absolutamente nenhuma conclusão sobre a convergência ou
                     divergência da série <m>\sum\limits_{n=1}^\infty a_n</m> se <m>
-                    \lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = 1</m>. Como mostra o<xref
+                    \lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = 1</m>. Como mostra o <xref
                         ref="eg_SRratioC"/>, mais adiante.
                 </p>
             </statement>
