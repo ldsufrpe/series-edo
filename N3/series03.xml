@@ -2341,7 +2341,7 @@
                     <mrow>
                         \lim_{n\to\infty}\Big(1+\frac{1}{n}\Big)^{-n}
                         &amp;=\lim_{X\to\infty}\Big(1+\frac{1}{X}\Big)^{-X}
-                        \qquad&amp;\text{\ctm{\lim_{n\to\infty}f(n)=\lim_{n\to\infty}f(t)\quad t\in\mathbb{R}} }
+                        \qquad&amp;\text{\ctm{$\lim_{n\to\infty}f(n)=\lim_{n\to\infty}f(t)\quad t\in\mathbb{R}}$}
 
                     </mrow>
                     <mrow>
