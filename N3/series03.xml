@@ -359,7 +359,7 @@
                     \sum_{n=1}^\infty \frac{1}{n^p}
                 </mrow>
             </md>
-            converges.
+            converge.
         </p>
 
         <example xml:id="eg_SRpTest">
@@ -1253,7 +1253,7 @@
             <title>
                 <m>\sum_{n=1}^{\infty}\frac{(-1)^n3n}{4n-1}</m>
             </title>
-            Escreva <m>A_n=\frac{3n}{4n-1}</m>. A série \sum_{n=1}^{\infty}\frac{(-1)^n3n}{4n-1} é alternada, mas
+            Escreva <m>A_n=\frac{3n}{4n-1}</m>. A série <m>\sum_{n=1}^{\infty}\frac{(-1)^n3n}{4n-1}</m> é alternada, mas
 
             <md>
                 <mrow>
