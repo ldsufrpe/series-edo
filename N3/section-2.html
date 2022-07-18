@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-15T18:09:39-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Convergência Absoluta e Condicional</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(           \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+           \newcommand{ctm}[1]{\color{gray}{#1}}
+
+           \newcommand{\doubler}[1]{2#1}
+           \newcommand{\dd}{\mathrm{d}}
+           \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+           \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+           \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+           \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+           \DeclareMathOperator{\arcsec}{arc \,sec}
+           \DeclareMathOperator{\sin}{sen}
+           \DeclareMathOperator{\arcsin}{arc \,sen}
+           \DeclareMathOperator{\arccos}{arc \,cos}
+           \DeclareMathOperator{\csc}{cossec}
+           \DeclareMathOperator{\tan}{tg}
+           \DeclareMathOperator{\arctan}{arc\,tg}
+           \DeclareMathOperator{\cot}{cotg}
+           \newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-serie-teste-convergencia.html"><span class="title">Testes de Convergência: N3</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-1.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-serie-teste-convergencia.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="section-1.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-serie-teste-convergencia.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link">
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Testes de Convergência</span></a><ul>
+<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Teste da Divergência</a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Teste da Integral</a></li>
+<li><a href="section-1.html#subsection-3" data-scroll="subsection-3" class="internal">Teste da Comparação</a></li>
+<li><a href="section-1.html#subsection-4" data-scroll="subsection-4" class="internal">Sugestão de Vídeos</a></li>
+<li><a href="section-1.html#sec_AST" data-scroll="sec_AST" class="internal">Teste da Série Alternada</a></li>
+<li><a href="section-1.html#sec_RatioTest" data-scroll="sec_RatioTest" class="internal">Teste da Razão</a></li>
+<li><a href="section-1.html#sec_RootTest" data-scroll="sec_RootTest" class="internal">Teste da Raiz</a></li>
+<li><a href="section-1.html#subsection-8" data-scroll="subsection-8" class="internal">Sugesão de Vídeos</a></li>
+<li><a href="section-1.html#exercises-teste-convergencia" data-scroll="exercises-teste-convergencia" class="internal">Exercícios</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="section-2.html" data-scroll="section-2" class="internal"><span class="codenumber">2</span> <span class="title">Convergência Absoluta e Condicional</span></a><ul><li><a href="section-2.html#sec_abs_conv" data-scroll="sec_abs_conv" class="internal">Definições</a></li></ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">3</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-2"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">2</span> <span class="title">Convergência Absoluta e Condicional</span>
+</h2>
+<section class="introduction" id="introduction-3"><p id="p-215">🔗Até aqui apresentamos exemplos de séries que convergem e de séries que divergem. De fato, não discutimos o quão robusta é a convergência das séries — ou seja, podemos ajustar os coeficientes de alguma forma, deixando a convergência inalterada. Um bom exemplo disso é a série</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRratioB.html" id="md-33">
+\begin{gather*}
+\sum_{n=1}^\infty \left(\frac{1}{3} \right)^n
+\end{gather*}
+</div>
+<p class="continuation">Esta é uma série geométrica simples e sabemos que converge. O exemplo <a href="" class="xref" data-knowl="./knowl/eg_SRratioB.html" title="Exemplo 1.24: \sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}">Exemplo 1.24</a> mostrou que podemos multiplicar ou dividir o <span class="process-math">\(\text{}\)</span>-ésimo termo por <span class="process-math">\(n\)</span> e ainda vai convergir. Podemo também multiplicar <span class="process-math">\(n\)</span>-enésimo termo por  <span class="process-math">\((-1)^n\)</span> (tornando-a em uma série alternada), e ainda convergirá.</p>
+<p id="p-216">exploramos bastante a série Harmonic e suas variações e sabemos que é muito mais delicada. Enquanto</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-34">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{1}{n}
+\end{gather*}
+</div>
+<p class="continuation">diverge, as duas séries a seguir convergem:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-35">
+\begin{align*}
+\sum_{n=1}^\infty \frac{1}{n^{1.00000001}} &amp;&amp; \sum_{n=1}^\infty (-1)^n \frac{1}{n}.
+\end{align*}
+</div>
+<p class="continuation">sso sugere que a divergência da série Harmônica é muito mais delicada. Nesta seção, discutimos uma maneira de caracterizar esse tipo de convergência delicada — especialmente na presença de mudanças de sinal.</p></section><section class="subsection" id="sec_abs_conv"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">2.1</span> <span class="title">Definições</span>
+</h3>
+<article class="definition definition-like" id="def_SRabsCond"><h4 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Convergência absoluta e Condicional.</span>
+</h4>
+<ol id="p-217" class="lower-alpha">
+<li id="li-120"><p id="p-derived-li-120">Uma série <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> é dita absolutamente convergente se a série <span class="process-math">\(\sum\limits_{n=1}^\infty |a_n|\)</span> converge.</p></li>
+<li id="li-121"><p id="p-derived-li-121">Se <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> converge mas   <span class="process-math">\(\sum\limits_{n=1}^\infty |a_n|\)</span> diverge dizemos que <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> é condicionalmente convergente.</p></li>
+</ol></article><p id="p-218">Considerando essas definições, deve ficar claro que a convergência absoluta é uma condição mais forte do que apenas a convergência simples. Todos os termos em <span class="process-math">\(\sum_n |a_n|\)</span> são forçados a ser positivos (pela operação de valor absoluto), de modo que <span class="process-math">\(\sum_n |a_n|\)</span> deve ser maior que <span class="process-math">\(\sum_n a_n\)</span> — tornando mais fácil para  <span class="process-math">\(\sum_n |a_n|\)</span> divergir. Isso é formalizado pelo seguinte teorema, que é uma consequência imediata do<a href="" class="xref" data-knowl="./knowl/thm_SRcomparisonTest.html" title="Teorema 1.11: Teste da Comparação">Teste da Comparação</a>, com <span class="process-math">\(c_n=|a_n|\text{.}\)</span></p>
+<article class="theorem theorem-like" id="thm_SRabs"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Convergência absoluta implica em Convergência.</span>
+</h4>
+<p id="p-219">Se a série <span class="process-math">\(\sum\limits_{n=1}^\infty |a_n|\)</span> converge então a série <span class="process-math">\(\sum\limits_{n=1}^\infty a_n\)</span> também converge. Ou seja, convergência absoluta implica convergência.</p></article><p id="p-220">Lembre-se de que alguns dos testes de testes de convergência apresentados (por exemplo, <a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.6: Teste da Integral">Teste da Integral</a> ) só podem ser aplicados a séries com termos positivos. O <a href="" class="xref" data-knowl="./knowl/thm_SRabs.html" title="Teorema 2.2: Convergência absoluta implica em Convergência">Teorema 2.2</a> abre a possibilidade de aplicar testes destes de convergência  “somente positivos”  para séries cujos termos não são todos positivos, verificando a “convergência absoluta” ao invés da “convergência simples”</p>
+<article class="example example-like" id="eg_SRabsCond"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRabsCond"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty(-1)^{n-1}\frac{1}{n}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRabsCond"><article class="example example-like"><p id="p-221">A série harmônica alternada <span class="process-math">\(\sum\limits_{n=1}^\infty(-1)^{n-1}\frac{1}{n}\)</span> do Exemplo <a href="" class="xref" data-knowl="./knowl/eg_SRaltharmonic.html" title="Exemplo 1.19: Convergência da série harmônica alternada">Exemplo 1.19</a> converge (<a href="" class="xref" data-knowl="./knowl/thm_SRalternating.html" title="Teorema 1.18: Teste da Série Alternada">Teste da Série Alternada</a>). Mas a série harmônica<span class="process-math">\(\sum\limits_{n=1}^\infty\frac{1}{n}\)</span> do <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.9: O p-teste: \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.9</a> diverge (pelo<a href="" class="xref" data-knowl="./knowl/thm_SRintegralTest.html" title="Teorema 1.6: Teste da Integral">Teste da Integral</a>). Então a série harmônica alternada <span class="process-math">\(\sum\limits_{n=1}^\infty(-1)^{n-1}\frac{1}{n}\)</span> converge condicionalmente.</p></article></div>
+<article class="example example-like" id="eg_SRabsCondB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRabsCondB"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty(-1)^{n-1}\frac{1}{n^2}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRabsCondB"><article class="example example-like"><p id="p-222">Já que a série <span class="process-math">\(\sum_{n=1}^\infty\big|(-1)^{n-1}\frac{1}{n^2}\big|
+=\sum\limits_{n=1}^\infty\frac{1}{n^2}\)</span> do <a href="" class="xref" data-knowl="./knowl/eg_SRpTest.html" title="Exemplo 1.9: O p-teste: \sum\limits_{n=1}^\infty\frac{1}{n^p}">Exemplo 1.9</a> converge (<a href="" class="xref" data-knowl="./knowl/thm_SRalternating.html" title="Teorema 1.18: Teste da Série Alternada">Teste da Série Alternada</a>), a série <span class="process-math">\(\sum\limits_{n=1}^\infty(-1)^{n-1}\frac{1}{n^2}\)</span> converge absolutamente, e portanto converge.</p></article></div></section></section></div></main>
+</div>
+</body>
+</html>

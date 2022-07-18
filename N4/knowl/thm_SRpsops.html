@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-18T10:31:46-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Operations on Power Series.</span>
+</h4>
+<p>Assume that the functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are given by the power series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) = \sum_{n=0}^\infty A_n (x-c)^n \qquad
+g(x) = \sum_{n=0}^\infty B_n (x-c)^n
+\end{equation*}
+</div>
+<p class="continuation">for all <span class="process-math">\(x\)</span> obeying <span class="process-math">\(|x-c| \lt R\text{.}\)</span> In particular, we are assuming that both power series have radius of convergence at least <span class="process-math">\(R\text{.}\)</span> Also let <span class="process-math">\(K\)</span> be a constant. Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f(x)+g(x) &amp;= \sum_{n=0}^\infty [A_n+B_n]\, (x-c)^n\\
+Kf(x) &amp;= \sum_{n=0}^\infty K\, A_n\, (x-c)^n\\
+(x-c)^Nf(x) &amp;= \sum_{n=0}^\infty A_n\, (x-c)^{n+N}
+\quad\text{for any integer $N\ge 1$}\\
+&amp;= \sum_{k=N}^\infty A_{k-N}\, (x-c)^k
+\quad\text{where $k=n+N$}\\
+f'(x) &amp;= \sum_{n=0}^\infty A_n\, n\,(x-c)^{n-1}
+= \sum_{n=1}^\infty A_n\, n\,(x-c)^{n-1}\\
+\int_c^x f(t)\dee{t} &amp;= \sum_{n=0}^\infty A_n \frac{(x-c)^{n+1}}{n+1}\\
+\int f(x)\ dx &amp;= \bigg[\sum_{n=0}^\infty A_n \frac{(x-c)^{n+1}}{n+1}\bigg]+C
+\quad\text{with $C$ an arbitrary constant}
+\end{align*}
+</div>
+<p class="continuation">for all <span class="process-math">\(x\)</span> obeying <span class="process-math">\(|x-c| \lt R\text{.}\)</span></p>
+<p>In particular the radius of convergence of each of the six power series on the right hand sides is at least <span class="process-math">\(R\text{.}\)</span> In fact, if <span class="process-math">\(R\)</span>  is the radius of convergence of <span class="process-math">\(\sum\limits_{n=0}^\infty
+A_n (x-c)^n\text{,}\)</span> then <span class="process-math">\(R\)</span> is also the radius of convergence of all of the above right hand sides, with the possible exceptions of  <span class="process-math">\(\sum\limits_{n=0}^\infty [A_n+B_n]\, (x-c)^n\)</span> and <span class="process-math">\(\sum\limits_{n=0}^\infty KA_n\, (x-c)^n\)</span> when <span class="process-math">\(K=0\text{.}\)</span></p></article><span class="incontext"><a href="section-1.html#thm_SRpsops" class="internal">em contexto</a></span>
+</body>
+</html>

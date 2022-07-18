@@ -3,7 +3,7 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 <section xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Testes de Convergencia</title>
+    <title>Testes de Convergência</title>
     <introduction>
 
         <p>
@@ -2182,10 +2182,10 @@
             <me>
                 \lim_{n\to\infty}\root{n}\of{\big|ar^n\big|}
                 =|r|\lim_{n\to\infty}\root{n}\of{\big|a\big|}
-                =|r|\qquad\text{if $a\ne 0$}
+                =|r|\qquad\text{se $a\ne 0$}
             </me>
-            É claro que, em geral, o termo <m>n^{\rm th}</m> não é exatamente <m>ar^n</m>. No entanto, se para <m>n</m> muito
-            grande, o termo <m>n^{\rm th}</m> é aproximadamente proporcional a <m>r^n</m>, com <m>|r|</m> dado pelo
+            É claro que, em geral, o <m>n</m>-ésimo termo não é exatamente <m>ar^n</m>. No entanto, se para <m>n</m> muito
+            grande, o <m>n</m>-ésimo termo  é aproximadamente proporcional a <m>r^n</m>, com <m>|r|</m> dado pelo
             limite acima, esperaríamos que a série convergisse quando <m>|r| \lt 1</m> e divergem quando <m>|r| \gt
             1</m>. Esse é realmente o caso.
         </p>
@@ -2341,7 +2341,7 @@
                     <mrow>
                         \lim_{n\to\infty}\Big(1+\frac{1}{n}\Big)^{-n}
                         &amp;=\lim_{X\to\infty}\Big(1+\frac{1}{X}\Big)^{-X}
-                        \qquad&amp;\text{\ctm{$\lim_{n\to\infty}f(n)=\lim_{n\to\infty}f(t)\quad t\in\mathbb{R}}$}
+                        \qquad&amp;\ctm{\lim_{n\to\infty}f(n)=\lim_{n\to\infty}f(t)\quad t\in\mathbb{R}}
 
                     </mrow>
                     <mrow>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-18T10:36:48-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Parágrafo</span></h3>
+<p>É claro que representar uma função tão simples quanto <span class="process-math">\(\frac{1}{1-x}\)</span> por uma série não parece que vai tornar a vida mais fácil. No entanto, a ideia de representar uma função por uma série acaba sendo extremamente útil. As séries de potências são objetos matemáticos muito robustos e interagem muito bem não apenas com operações aritméticas padrão, mas também com derivação e integração. Isso significa, por exemplo, que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\diff{}{x} \left\{\frac{1}{1-x}\right\}
+&amp;= \diff{}{x} \sum_{n=0}^\infty x^n &amp; \text{ $|x| \lt 1$}\\
+&amp;= \sum_{n=0}^\infty \diff{}{x} x^n &amp; \text{basta derivar termo a termo}\\
+&amp;= \sum_{n=0}^\infty n x^{n-1}\\
+\end{align*}
+<p class="intertext">e de forma similar</p>
+\begin{align*}
+\int \frac{1}{1-x} \dee{x} &amp;= \int \sum_{n=0}^\infty x^n \dee{x} &amp; \text{$|x| \lt
+1$}\\
+&amp;= \sum_{n=0}^\infty \int x^n \dee{x} &amp; \text{integrar termo a termo}\\
+&amp;= C + \sum_{n=0}^\infty \frac{1}{n+1} x^{n+1}
+\end{align*}
+</div>
+<p class="continuation">Pode ver acima que uma vez que temos uma representação em série de potências de uma função, a derivação e a integração se tornam muito diretas.</p>
+<span class="incontext"><a href="section-1.html#p-4" class="internal">em contexto</a></span>
+</body>
+</html>

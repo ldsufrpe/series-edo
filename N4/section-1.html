@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-18T10:36:48-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Série de Potência</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(           \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+           \newcommand{ctm}[1]{\color{gray}{#1}}
+
+           \newcommand{\doubler}[1]{2#1}
+           \newcommand{\dd}{\mathrm{d}}
+           \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+           \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+           \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+           \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+           \DeclareMathOperator{\arcsec}{arc \,sec}
+           \DeclareMathOperator{\sin}{sen}
+           \DeclareMathOperator{\arcsin}{arc \,sen}
+           \DeclareMathOperator{\arccos}{arc \,cos}
+           \DeclareMathOperator{\csc}{cossec}
+           \DeclareMathOperator{\tan}{tg}
+           \DeclareMathOperator{\arctan}{arc\,tg}
+           \DeclareMathOperator{\cot}{cotg}
+           \newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-serie-potencia.html"><span class="title">Testes de Convergência: N4</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-serie-potencia.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-serie-potencia.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-serie-potencia.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-serie-potencia.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link active">
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Série de Potência</span></a><ul><li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Definições</a></li></ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Série de Potência</span>
+</h2>
+<section class="introduction" id="introduction-2"><p id="p-3">Voltamos a série geométrica</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+\begin{gather*}
+\sum_{n=0}^\infty x^n
+\end{gather*}
+</div>
+<p class="continuation">na qual <span class="process-math">\(x\)</span> é algum número real. Como já vimos, para <span class="process-math">\(|x| \lt 1\)</span> esta série converge para um limite, que varia com <span class="process-math">\(x\text{,}\)</span> enquanto para <span class="process-math">\(|x|\geq 1\)</span> a série diverge. Consequentemente, podemos considerar esta série como uma função de <span class="process-math">\(x\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+\begin{align*}
+f(x) &amp;= \sum_{n=0}^\infty x^n &amp; \text{no domínio $|x| \lt 1$}.
+\end{align*}
+</div>
+<p class="continuation">Além disso,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+\begin{align*}
+f(x) &amp;= \sum_{n=0}^\infty x^n = \frac{1}{1-x}.
+\end{align*}
+</div>
+<p class="continuation">Assim, podemos considerar a série <span class="process-math">\(\sum_{n=0}^\infty x^n\)</span> como uma nova forma de representar a função <span class="process-math">\(\frac{1}{1-x}\)</span> quando <span class="process-math">\(|x| \lt 1\text{.}\)</span> Esta série é um exemplo de uma série de potências.</p>
+<p id="p-4">É claro que representar uma função tão simples quanto <span class="process-math">\(\frac{1}{1-x}\)</span> por uma série não parece que vai tornar a vida mais fácil. No entanto, a ideia de representar uma função por uma série acaba sendo extremamente útil. As séries de potências são objetos matemáticos muito robustos e interagem muito bem não apenas com operações aritméticas padrão, mas também com derivação e integração. Isso significa, por exemplo, que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+\begin{align*}
+\diff{}{x} \left\{\frac{1}{1-x}\right\}
+&amp;= \diff{}{x} \sum_{n=0}^\infty x^n &amp; \text{ $|x| \lt 1$}\\
+&amp;= \sum_{n=0}^\infty \diff{}{x} x^n &amp; \text{basta derivar termo a termo}\\
+&amp;= \sum_{n=0}^\infty n x^{n-1}\\
+\end{align*}
+<p class="intertext">e de forma similar</p>
+\begin{align*}
+\int \frac{1}{1-x} \dee{x} &amp;= \int \sum_{n=0}^\infty x^n \dee{x} &amp; \text{$|x| \lt
+1$}\\
+&amp;= \sum_{n=0}^\infty \int x^n \dee{x} &amp; \text{integrar termo a termo}\\
+&amp;= C + \sum_{n=0}^\infty \frac{1}{n+1} x^{n+1}
+\end{align*}
+</div>
+<p class="continuation">Pode ver acima que uma vez que temos uma representação em série de potências de uma função, a derivação e a integração se tornam muito diretas.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Definições</span>
+</h3>
+<article class="definition definition-like" id="def_SRpowerSeries"><h4 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
+</h4>
+<p id="p-5">Uma série da forma</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+A_0 +A_1(x-c) + A_2(x-c)^2 + A_3 (x-c)^3 + \cdots =\sum_{n=0}^\infty A_n(x-c)^n
+\end{equation*}
+</div>
+<p class="continuation">é denominada <em class="emphasis">série de potências em <span class="process-math">\((x-c)\)</span></em> ou uma <em class="emphasis">série de potência centrada em <span class="process-math">\(c\)</span></em> . Os números  <span class="process-math">\(A_n\)</span> são chamados de coeficientes da série de potências. called the coefficients of the power series.</p>
+<p id="p-6">Muitas vezes consideramos séries de potências centradas em <span class="process-math">\(c=0\)</span> e então a série se reduz a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+A_0 +A_1 x + A_2 x^2 + A_3 x^3 + \cdots =\sum_{n=0}^\infty A_n x^n
+\end{equation*}
+</div></article><p id="p-7">Por exemplo  <span class="process-math">\(\sum_{n=0}^\infty \frac{x^n}{n!}\)</span> é a série de potência com <span class="process-math">\(c=0\)</span> e <span class="process-math">\(A_n=\frac{1}{n!}\text{.}\)</span> Normalmente, como nesse caso, os coeficientes <span class="process-math">\(A_n\)</span> são números fixos, mas o “<span class="process-math">\(x\)</span>” is to be thought of as a variable. Assim, cada série de potências é uma família de séries — uma série diferente para cada valor de <span class="process-math">\(x\text{.}\)</span></p>
+<p id="p-8">Um valor possível de <span class="process-math">\(x\)</span> é <span class="process-math">\(x=c\)</span> e então a série se reduz a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+\begin{align*}
+\sum_{n=0}^\infty A_n (x-c)^n\Big|_{x=c} &amp;=\sum_{n=0}^\infty A_n (c-c)^n\\
+&amp;=\underbrace{A_0}_{n=0}
++\underbrace{0}_{n=1}
++\underbrace{0}_{n=2}
++\underbrace{0}_{n=3}
++\cdots
+\end{align*}
+</div>
+<p class="continuation">e assim simplesmente converge para <span class="process-math">\(A_0\text{.}\)</span></p>
+<p id="p-9">Agora sabemos que uma série de potências converge quando <span class="process-math">\(x=c\text{.}\)</span> Podemos os testes de convergência para determinar para quais outros valores de <span class="process-math">\(x\)</span> a série converge. Talvez o mais simples seja o teste da razão. O <span class="process-math">\(n\)</span> -ésimo termo da série  <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span> é <span class="process-math">\(a_n=A_n(x-c)^n\text{.}\)</span> Para aplicar o teste da razão, precisamos calcular o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+\begin{align*}
+\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_n}\right|
+&amp;=\lim_{n \to \infty} \left|\frac{A_{n+1}(x-c)^{n+1}}{A_n(x-c)^n}\right|\\
+&amp;=\lim_{n \to \infty} \left|\frac{A_{n+1}}{A_n}\right|\cdot |x-c|\\
+&amp;= |x-c| \cdot \lim_{n \to \infty} \left|\frac{A_{n+1}}{A_n}\right|.
+\end{align*}
+</div>
+<p class="continuation">Quando fazemos isso, há vários resultados possíveis.</p>
+<ul class="disc">
+<li id="li-1">
+<p id="p-10">Se o limite de razão existe e é diferente de zero</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big| &amp;= A \neq 0,
+\end{align*}
+</div>
+<p class="continuation">então o teste da razão diz que a série <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span></p>
+<ul class="circle">
+<li id="li-2"><p id="p-derived-li-2">converge quando <span class="process-math">\(A \cdot |x-c| \lt 1\text{,}\)</span> i.e. quando <span class="process-math">\(|x-c| \lt \frac{1}{A}\text{,}\)</span> e</p></li>
+<li id="li-3"><p id="p-derived-li-3">diverge quando <span class="process-math">\(A \cdot |x-c| \gt 1\text{,}\)</span> i.e. quando <span class="process-math">\(|x-c| \gt \frac{1}{A}\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Por isso, quando existe o limite, a quantidade</p>
+<article class="fact theorem-like" id="eq_SRradConv"><h4 class="heading">
+<span class="type">Fato</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Raio de convergência.</span>
+</h4>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+\begin{align*}
+R&amp;=\frac{1}{A}
+=\bigg[\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|\bigg]^{-1}
+\end{align*}
+</div></article><p id="p-12">é denominada <em class="emphasis">raio de convergência</em> da série.</p>
+</li>
+<li id="li-4"><p id="p-derived-li-4">Se o limite de razões existe e é zero<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big| &amp;= 0
+\end{align*}
+</div>então <span class="process-math">\(\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big||x-c| =0\)</span>  para todo <span class="process-math">\(x\)</span> e pelo teste da razão temos que a série  <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span> converge para todo  <span class="process-math">\(x\text{.}\)</span> Neste caso dizemos que a série tem um raio de convergência infinito.</p></li>
+<li id="li-5"><p id="p-derived-li-5">Se o limite dos rácios divergir para <span class="process-math">\(+\infty\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big| &amp;= +\infty
+\end{align*}
+</div>então <span class="process-math">\(\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big||x-c| =+\infty\)</span> para todo  <span class="process-math">\(x\ne
+c\text{.}\)</span> Segue do teste da razão que  <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span> diverge para qualquer <span class="process-math">\(x\ne c\text{.}\)</span> Como vimos acima, quando <span class="process-math">\(x=c\text{,}\)</span> a série se reduz a  <span class="process-math">\(A_0+0+0+0+0+\cdots\text{,}\)</span> que obviamente converge. Neste caso dizemos que a série tem raio de convergência zero.</p></li>
+<li id="li-6"><p id="p-derived-li-6">Se <span class="process-math">\(\Big|\frac{A_{n+1}}{A_n}\Big|\)</span>não se aproxima de um limite quando <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> então vamos precisar de outras ferramentas para enteder a convergência da série.</p></li>
+</ul>
+<p class="continuation">Mais adiante apresentaremos um exemplo de cada um dos casos acima. Antes, segue uma definição formal para <dfn class="terminology">Raio de Covergência</dfn></p>
+<article class="definition definition-like" id="def_SRradiusConvergence"><h4 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h4>
+<ol id="p-13" class="lower-alpha">
+<li id="li-7"><p id="p-derived-li-7">Seja <span class="process-math">\(0 \lt R \lt \infty\text{.}\)</span> Se <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span>  converge para <span class="process-math">\(|x-c| \lt R\text{,}\)</span> e diverge para <span class="process-math">\(|x-c| \gt R\text{,}\)</span> então dizemos que a série tem raio de convergência <span class="process-math">\(R\text{.}\)</span></p></li>
+<li id="li-8"><p id="p-derived-li-8">Se <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span> converge para todo <span class="process-math">\(x\text{,}\)</span> dizemos que a série tem um raio de convergência infinito.</p></li>
+<li id="li-9"><p id="p-derived-li-9">Se <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span> diverge para todo <span class="process-math">\(x\ne c\text{,}\)</span> dizemos que a série tem raio de convergência zero.</p></li>
+</ol></article><article class="example example-like" id="eg_PWRa"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_PWRa"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Raio de convergência finito não nulo.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_PWRa"><article class="example example-like"><p id="p-14">Já sabemos que, se <span class="process-math">\(a\ne 0\text{,}\)</span> a série geomética <span class="process-math">\(\sum\limits_{n=0}^\infty a x^n\)</span> converge quando <span class="process-math">\(|x| \lt 1\)</span> e diverge quando <span class="process-math">\(|x|\ge 1\text{.}\)</span> Assim, na terminologia da<a href="" class="xref" data-knowl="./knowl/def_SRradiusConvergence.html" title="Definição 1.3">Definição 1.3</a>, a série geométrica tem raio de convergência <span class="process-math">\(R=1\text{.}\)</span> Como verificação de consistência, também podemos calcular <span class="process-math">\(R\)</span> usando<a href="" class="xref" data-knowl="./knowl/eq_SRradConv.html" title="Fato 1.2: Raio de convergência">Fato 1.2</a>. A série <span class="process-math">\(\sum\limits_{n=0}^\infty a x^n\)</span> tem <span class="process-math">\(A_n=a\text{.}\)</span> Assim</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def_SRradiusConvergence.html ./knowl/eq_SRradConv.html">
+\begin{equation*}
+R=\bigg[\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|\bigg]^{-1}
+=\Big[\lim_{n\rightarrow\infty}1\Big]^{-1}
+=1
+\end{equation*}
+</div>
+<p class="continuation">como esperado.</p></article></div>
+<article class="example example-like" id="eg_PWRb"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_PWRb"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Raio de convergência = <span class="process-math">\(+\infty\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_PWRb"><article class="example example-like"><p id="p-15">A série <span class="process-math">\(\sum\limits_{n=0}^\infty \frac{x^n}{n!}\)</span> tem <span class="process-math">\(A_n=\frac{1}{n!}\text{.}\)</span> Logo</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|
+&amp;=\lim_{n\rightarrow\infty}\frac{\frac{1}{(n+1)!}}{\frac{1}{n!}}\\
+&amp; =\lim_{n\rightarrow\infty}\frac{n!}{(n+1)!}\\
+&amp; =\lim_{n\rightarrow\infty}\frac{1\times 2\times 3\times\cdots\times n}
+{1\times 2\times 3\times\cdots\times n\times(n+1)}\\
+&amp;=\lim_{n\rightarrow\infty}\frac{1}{n+1}\\
+&amp;=0
+\end{align*}
+</div>
+<p class="continuation">e <span class="process-math">\(\sum\limits_{n=0}^\infty \frac{x^n}{n!}\)</span> tem raio de convergência <span class="process-math">\(\infty\text{.}\)</span> Isto converge para todo <span class="process-math">\(x\text{.}\)</span></p></article></div>
+<article class="example example-like" id="eg_PWRc"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_PWRc"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Raio de convergência = 0.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_PWRc"><article class="example example-like"><p id="p-16">A série <span class="process-math">\(\sum\limits_{n=0}^\infty n! x^n\)</span> tem <span class="process-math">\(A_n=n!\text{.}\)</span> Assim</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-12">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|
+&amp;=\lim_{n\rightarrow\infty}\frac{(n+1)!}{n!}
+=\lim_{n\rightarrow\infty} \frac
+{1\times 2\times 3\times 4\times\cdots\times n\times(n+1)}
+{1\times 2\times 3\times 4\times\cdots\times n}\\
+&amp;=\lim_{n\rightarrow\infty}(n+1)\\
+&amp;=+\infty
+\end{align*}
+</div>
+<p class="continuation">e <span class="process-math">\(\sum\limits_{n=0}^\infty n! x^n\)</span> tem raio de convergencia zero. Isto converge apenas para <span class="process-math">\(x=0\text{,}\)</span> que vale <span class="process-math">\(0!=1\text{.}\)</span></p></article></div>
+<article class="example example-like" id="eg_PWRda"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_PWRda"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Uma série difícil de testar.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_PWRda"><article class="example example-like"><p id="p-17">Comparando a série</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-13">
+\begin{alignat*}{7}
+&amp;\ 1&amp;+&amp;\ 2x&amp;+&amp;x^2&amp;+&amp;2x^3&amp;+&amp;x^4&amp;+&amp;2x^5&amp;+\cdots \\\\
+\end{alignat*}
+<p class="intertext">com</p>
+\begin{alignat*}{7}
+\sum_{n=1}^\infty A_nx^n=&amp;A_0&amp;+&amp;A_1x&amp;+&amp;A_2x^2&amp;+&amp;A_3x^3&amp;+&amp;A_4x^4&amp;+&amp;A_5x^5&amp;+\cdots
+\end{alignat*}
+</div>
+<p class="continuation">vemos que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
+\begin{alignat*}{7}
+A_0&amp;=1&amp;\quad
+A_1&amp;=2&amp;\quad
+A_2&amp;=1&amp;\quad
+A_3&amp;=2&amp;\quad
+A_4&amp;=1&amp;\quad
+A_5&amp;=2&amp;\quad\cdots\\
+\end{alignat*}
+<p class="intertext">de modo a</p>
+\begin{alignat*}{7}
+&amp; &amp;
+\frac{A_1}{A_0}&amp;=2&amp;\qquad
+\frac{A_2}{A_1}&amp;=\frac{1}{2}&amp;\qquad
+\frac{A_3}{A_2}&amp;=2&amp;\qquad
+\frac{A_4}{A_3}&amp;=\frac{1}{2}&amp;\qquad
+\frac{A_5}{A_4}&amp;=2&amp;\qquad\cdots
+\end{alignat*}
+</div>
+<p class="continuation">e <span class="process-math">\(\frac{A_{n+1}}{A_n}\)</span> não converge quando <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> Já que o limite da razão não existe, não podemos dizer nada do teste da razão. No entanto, ainda podemos descobrir para quais <span class="process-math">\(x\)</span>'s a série de potências converge.</p>
+<ul class="disc">
+<li id="li-10"><p id="p-derived-li-10">Já que todos os coeficientes <span class="process-math">\(A_n\)</span> é 1 ou 2, o  <span class="process-math">\(n\)</span>-ésimo termo na série satisfaz<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\big|A_nx^n\big|\le 2 |x|^n
+\end{equation*}
+</div>e por isso é menor do que <span class="process-math">\(n\)</span>-ésimo termo na série geomátrica <span class="process-math">\(\sum_{n=0}^\infty
+2|x|^n\text{.}\)</span> Esta série geométrica converge se <span class="process-math">\(|x| \lt 1\text{.}\)</span> Então, pelo este da comparação, a série converge também para <span class="process-math">\(|x| \lt 1\text{.}\)</span></p></li>
+<li id="li-11"><p id="p-derived-li-11">Uma vez que todo <span class="process-math">\(A_n\)</span> é pelo menos um, o <span class="process-math">\(n\)</span>-ésimo termo na série satisfaz<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\big|A_nx^n\big|\ge |x|^n
+\end{equation*}
+</div>Se <span class="process-math">\(|x|\ge 1\text{,}\)</span> isto <span class="process-math">\(a_n=A_n x^n\)</span> não pode convergir ara zero quando  <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> e a série diverge pelo teste da divergência.</p></li>
+</ul>
+<p class="continuation">Concluindo, a série converge se e somente se <span class="process-math">\(|x| \lt 1\text{,}\)</span> e assim tem raio de convergência   <span class="process-math">\(1\text{.}\)</span></p></article></div></section></section></div></main>
+</div>
+</body>
+</html>
