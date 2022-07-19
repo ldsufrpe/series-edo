@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-18T10:44:34-03:00       *-->
+<!--*       on 2022-07-19T15:04:23-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -110,7 +110,7 @@
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="calc-serie-potencia.html"><span class="title">Séries de Potências: N4</span></a></h1>
+<h1 class="heading"><a href="calc-serie-potencia.html"><span class="title">Séries: N4</span></a></h1>
 <p class="byline">Leon Silva</p>
 </div>
 </div></div>
@@ -156,7 +156,7 @@ true);
 \sum_{n=0}^\infty x^n
 \end{gather*}
 </div>
-<p class="continuation">na qual <span class="process-math">\(x\)</span> é algum número real. Como já vimos, para <span class="process-math">\(|x| \lt 1\)</span> esta série converge para um limite, que varia com <span class="process-math">\(x\text{,}\)</span> enquanto para <span class="process-math">\(|x|\geq 1\)</span> a série diverge. Consequentemente, podemos considerar esta série como uma função de <span class="process-math">\(x\)</span></p>
+<p class="continuation">na qual <span class="process-math">\(x\)</span> é algum número real. Como já vimos, para <span class="process-math">\(|x| \lt 1\)</span> esta série converge para um limite, que varia com <span class="process-math">\(x\text{,}\)</span> enquanto para <span class="process-math">\(|x|\geq 1\)</span> a série diverge. Consequentemente, podemos considerar esta série como uma função de <span class="process-math">\(x\text{,}\)</span> como a seguir:</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
 \begin{align*}
 f(x) &amp;= \sum_{n=0}^\infty x^n &amp; \text{no domínio $|x| \lt 1$}.
@@ -169,12 +169,12 @@ f(x) &amp;= \sum_{n=0}^\infty x^n = \frac{1}{1-x}.
 \end{align*}
 </div>
 <p class="continuation">Assim, podemos considerar a série <span class="process-math">\(\sum_{n=0}^\infty x^n\)</span> como uma nova forma de representar a função <span class="process-math">\(\frac{1}{1-x}\)</span> quando <span class="process-math">\(|x| \lt 1\text{.}\)</span> Esta série é um exemplo de uma série de potências.</p>
-<p id="p-4">É claro que representar uma função tão simples quanto <span class="process-math">\(\frac{1}{1-x}\)</span> por uma série não parece que vai tornar a vida mais fácil. No entanto, a ideia de representar uma função por uma série acaba sendo extremamente útil. As séries de potências são objetos matemáticos muito robustos e interagem muito bem não apenas com operações aritméticas padrão, mas também com derivação e integração. Isso significa, por exemplo, que</p>
+<p id="p-4">É claro que representar uma função tão simples quanto <span class="process-math">\(\frac{1}{1-x}\)</span> por uma série não parece que vai tornar a vida mais fácil. No entanto, a ideia de representar uma função por uma série acaba sendo extremamente útil. As séries de potências são objetos matemáticos muito robustos e interagem muito bem não apenas com operações aritméticas padrão, mas também com derivação e integração de funções. Isso significa, por exemplo, que</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
 \begin{align*}
 \diff{}{x} \left\{\frac{1}{1-x}\right\}
 &amp;= \diff{}{x} \sum_{n=0}^\infty x^n &amp; \text{ $|x| \lt 1$}\\
-&amp;= \sum_{n=0}^\infty \diff{}{x} x^n &amp; \text{basta derivar termo a termo}\\
+&amp;= \sum_{n=0}^\infty \diff{}{x} x^n &amp; \text{derivar termo a termo}\\
 &amp;= \sum_{n=0}^\infty n x^{n-1}\\
 \end{align*}
 <p class="intertext">e de forma similar</p>
@@ -185,7 +185,7 @@ f(x) &amp;= \sum_{n=0}^\infty x^n = \frac{1}{1-x}.
 &amp;= C + \sum_{n=0}^\infty \frac{1}{n+1} x^{n+1}
 \end{align*}
 </div>
-<p class="continuation">Pode ver acima que uma vez que temos uma representação em série de potências de uma função, a derivação e a integração se tornam muito diretas.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<p class="continuation">Uma vez que temos uma representação em série de potências de uma função, a derivação e a integração se tornam muito diretas.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Definições</span>
 </h3>
 <article class="definition definition-like" id="def_SRpowerSeries"><h4 class="heading">
@@ -197,13 +197,13 @@ f(x) &amp;= \sum_{n=0}^\infty x^n = \frac{1}{1-x}.
 A_0 +A_1(x-c) + A_2(x-c)^2 + A_3 (x-c)^3 + \cdots =\sum_{n=0}^\infty A_n(x-c)^n
 \end{equation*}
 </div>
-<p class="continuation">é denominada <em class="emphasis">série de potências em <span class="process-math">\((x-c)\)</span></em> ou uma <em class="emphasis">série de potência centrada em <span class="process-math">\(c\)</span></em> . Os números  <span class="process-math">\(A_n\)</span> são chamados de coeficientes da série de potências. called the coefficients of the power series.</p>
+<p class="continuation">é denominada <em class="emphasis">série de potências em <span class="process-math">\((x-c)\)</span></em> ou uma <em class="emphasis">série de potência centrada em <span class="process-math">\(c\)</span></em> . Os números  <span class="process-math">\(A_n\)</span> são chamados de coeficientes da série de potências.</p>
 <p id="p-6">Muitas vezes consideramos séries de potências centradas em <span class="process-math">\(c=0\)</span> e então a série se reduz a</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A_0 +A_1 x + A_2 x^2 + A_3 x^3 + \cdots =\sum_{n=0}^\infty A_n x^n
 \end{equation*}
-</div></article><p id="p-7">Por exemplo  <span class="process-math">\(\sum_{n=0}^\infty \frac{x^n}{n!}\)</span> é a série de potência com <span class="process-math">\(c=0\)</span> e <span class="process-math">\(A_n=\frac{1}{n!}\text{.}\)</span> Normalmente, como nesse caso, os coeficientes <span class="process-math">\(A_n\)</span> são números fixos, mas o “<span class="process-math">\(x\)</span>” is to be thought of as a variable. Assim, cada série de potências é uma família de séries — uma série diferente para cada valor de <span class="process-math">\(x\text{.}\)</span></p>
+</div></article><p id="p-7">Por exemplo  <span class="process-math">\(\sum_{n=0}^\infty \frac{x^n}{n!}\)</span> é a série de potências com <span class="process-math">\(c=0\)</span> e <span class="process-math">\(A_n=\frac{1}{n!}\text{.}\)</span> Normalmente, como nesse caso, os coeficientes <span class="process-math">\(A_n\)</span> são números fixos, mas o “<span class="process-math">\(x\)</span>” deve ser pensado como uma variável. Assim, cada série de potências é uma família de séries — uma série diferente para cada valor de <span class="process-math">\(x\text{.}\)</span></p>
 <p id="p-8">Um valor possível de <span class="process-math">\(x\)</span> é <span class="process-math">\(x=c\)</span> e então a série se reduz a</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
 \begin{align*}
@@ -216,7 +216,7 @@ A_0 +A_1 x + A_2 x^2 + A_3 x^3 + \cdots =\sum_{n=0}^\infty A_n x^n
 \end{align*}
 </div>
 <p class="continuation">e assim simplesmente converge para <span class="process-math">\(A_0\text{.}\)</span></p>
-<p id="p-9">Agora sabemos que uma série de potências converge quando <span class="process-math">\(x=c\text{.}\)</span> Podemos os testes de convergência para determinar para quais outros valores de <span class="process-math">\(x\)</span> a série converge. Talvez o mais simples seja o teste da razão. O <span class="process-math">\(n\)</span> -ésimo termo da série  <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span> é <span class="process-math">\(a_n=A_n(x-c)^n\text{.}\)</span> Para aplicar o teste da razão, precisamos calcular o limite</p>
+<p id="p-9">Agora sabemos que uma série de potências converge quando <span class="process-math">\(x=c\text{.}\)</span> Podemos os testes de convergência para determinar para quais outros valores de <span class="process-math">\(x\)</span> a série converge. Vamos considerar usar o teste da razão. O <span class="process-math">\(n\)</span>-ésimo termo da série  <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span> é <span class="process-math">\(a_n=A_n(x-c)^n\text{.}\)</span> Para aplicar o teste da razão, precisamos calcular o limite</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
 \begin{align*}
 \lim_{n \to \infty}\left|\frac{a_{n+1}}{a_n}\right|
@@ -225,7 +225,7 @@ A_0 +A_1 x + A_2 x^2 + A_3 x^3 + \cdots =\sum_{n=0}^\infty A_n x^n
 &amp;= |x-c| \cdot \lim_{n \to \infty} \left|\frac{A_{n+1}}{A_n}\right|.
 \end{align*}
 </div>
-<p class="continuation">Quando fazemos isso, há vários resultados possíveis.</p>
+<p class="continuation">Quando fazemos isso, há vários resultados possíveis:</p>
 <ul class="disc">
 <li id="li-1">
 <p id="p-10">Se o limite de razão existe e é diferente de zero</p>
@@ -234,7 +234,7 @@ A_0 +A_1 x + A_2 x^2 + A_3 x^3 + \cdots =\sum_{n=0}^\infty A_n x^n
 \lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big| &amp;= A \neq 0,
 \end{align*}
 </div>
-<p class="continuation">então o teste da razão diz que a série <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span></p>
+<p class="continuation">então o teste da razão fornece que a série <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\text{:}\)</span></p>
 <ul class="circle">
 <li id="li-2"><p id="p-derived-li-2">converge quando <span class="process-math">\(A \cdot |x-c| \lt 1\text{,}\)</span> i.e. quando <span class="process-math">\(|x-c| \lt \frac{1}{A}\text{,}\)</span> e</p></li>
 <li id="li-3"><p id="p-derived-li-3">diverge quando <span class="process-math">\(A \cdot |x-c| \gt 1\text{,}\)</span> i.e. quando <span class="process-math">\(|x-c| \gt \frac{1}{A}\text{.}\)</span></p></li>
@@ -250,7 +250,7 @@ R&amp;=\frac{1}{A}
 \end{align*}
 </div></article><p id="p-12">é denominada <em class="emphasis">raio de convergência</em> da série.</p>
 </li>
-<li id="li-4"><p id="p-derived-li-4">Se o limite de razões existe e é zero<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+<li id="li-4"><p id="p-derived-li-4">Se o limite de razões existe e é zero:<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
 \begin{align*}
 \lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big| &amp;= 0
 \end{align*}
@@ -261,7 +261,7 @@ R&amp;=\frac{1}{A}
 \end{align*}
 </div>então <span class="process-math">\(\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big||x-c| =+\infty\)</span> para todo  <span class="process-math">\(x\ne
 c\text{.}\)</span> Segue do teste da razão que  <span class="process-math">\(\sum_{n=0}^\infty A_n(x-c)^n\)</span> diverge para qualquer <span class="process-math">\(x\ne c\text{.}\)</span> Como vimos acima, quando <span class="process-math">\(x=c\text{,}\)</span> a série se reduz a  <span class="process-math">\(A_0+0+0+0+0+\cdots\text{,}\)</span> que obviamente converge. Neste caso dizemos que a série tem raio de convergência zero.</p></li>
-<li id="li-6"><p id="p-derived-li-6">Se <span class="process-math">\(\Big|\frac{A_{n+1}}{A_n}\Big|\)</span>não se aproxima de um limite quando <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> então vamos precisar de outras ferramentas para enteder a convergência da série.</p></li>
+<li id="li-6"><p id="p-derived-li-6">Se <span class="process-math">\(\Big|\frac{A_{n+1}}{A_n}\Big|\)</span> não se aproxima de um limite quando <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> então vamos precisar de outras ferramentas para enteder a convergência da série.</p></li>
 </ul>
 <p class="continuation">Mais adiante apresentaremos um exemplo de cada um dos casos acima. Antes, segue uma definição formal para <dfn class="terminology">Raio de Covergência</dfn></p>
 <article class="definition definition-like" id="def_SRradiusConvergence"><h4 class="heading">
@@ -351,7 +351,7 @@ A_5&amp;=2&amp;\quad\cdots\\
 \big|A_nx^n\big|\le 2 |x|^n
 \end{equation*}
 </div>e por isso é menor do que <span class="process-math">\(n\)</span>-ésimo termo na série geomátrica <span class="process-math">\(\sum_{n=0}^\infty
-2|x|^n\text{.}\)</span> Esta série geométrica converge se <span class="process-math">\(|x| \lt 1\text{.}\)</span> Então, pelo este da comparação, a série converge também para <span class="process-math">\(|x| \lt 1\text{.}\)</span></p></li>
+2|x|^n\text{.}\)</span> Esta série geométrica converge se <span class="process-math">\(|x| \lt 1\text{.}\)</span> Então, pelo teste da comparação, a série converge também para <span class="process-math">\(|x| \lt 1\text{.}\)</span></p></li>
 <li id="li-11"><p id="p-derived-li-11">Uma vez que todo <span class="process-math">\(A_n\)</span> é pelo menos um, o <span class="process-math">\(n\)</span>-ésimo termo na série satisfaz<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \big|A_nx^n\big|\ge |x|^n
