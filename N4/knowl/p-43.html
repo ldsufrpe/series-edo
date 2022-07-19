@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-18T10:31:46-03:00       *-->
+<!--*       on 2022-07-19T18:46:56-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,25 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>Find a power series representation for <span class="process-math">\(\frac{1}{5-x}\)</span> with centre <span class="process-math">\(3\text{.}\)</span></p>
+<p>Lembre-se que <span class="process-math">\(\diff{}{x}\arctan x = \frac{1}{1+x^2}\)</span> e assim<span class="process-math">\(\arctan t\)</span> é uma primitiva (antiderivada) de  <span class="process-math">\(\frac{1}{1+t^2}\)</span> e</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRpsops.html">
+\begin{align*}
+\arctan x\ &amp;=\ \int_0^x \frac{dt}{1+t^2}
+\ =\ \int_0^x\Big[\sum_{n=0}^\infty {(-t^2)}^n\Big]\dee{t}
+\ =\ \sum_{n=0}^\infty \int_0^x (-1)^n t^{2n}\dee{t}\\
+&amp;=\ \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}\\
+&amp;=x -\frac{x^3}{3} +\frac{x^5}{5}-\cdots
+\end{align*}
+</div>
+<p class="continuation">O <a href="" class="xref" data-knowl="./knowl/thm_SRpsops.html" title="Teorema 1.11: Operações em Série de Potências">Teorema 1.11</a> garante que o raio de convergência é exatamente <span class="process-math">\(1\)</span> (o raio de convergência da série geométrica  <span class="process-math">\(\sum_{n=0}^\infty (-t^2)^n\)</span>) e que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRpsops.html">
+\begin{align*}
+\arctan x\ &amp;=\ \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}
+\qquad\text{para todo $-1 \lt x \lt 1$}
+\end{align*}
+</div>
+<p class="continuation">Quando <span class="process-math">\(x=\pm 1\text{,}\)</span> a série converge pelo teste da série alternada. Então o intervalo de convergência é <span class="process-math">\(-1\le x\le 1\text{.}\)</span> É possível provar, embora mais uma vez não o façamos aqui, que quando <span class="process-math">\(x=\pm 1\text{,}\)</span> a série  <span class="process-math">\(\sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}\)</span> converge para o valor do lado esquerdo, <span class="process-math">\(\arctan x\text{,}\)</span> aplicado a <span class="process-math">\(x=\pm 1\text{.}\)</span> Ou seja, para <span class="process-math">\(\arctan(\pm 1)=\pm
+\frac{\pi}{4}\text{.}\)</span></p>
 <span class="incontext"><a href="section-1.html#p-43" class="internal">em contexto</a></span>
 </body>
 </html>

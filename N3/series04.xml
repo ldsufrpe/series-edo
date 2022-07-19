@@ -27,7 +27,7 @@
         </p>
 
         <p>
-            exploramos bastante a série Harmonic e suas variações e sabemos que é muito mais delicada. Enquanto
+            exploramos bastante a série harmônica e suas variações e sabemos que é muito mais sutíl. Enquanto
             <md>
                 <mrow>
                     \sum_{n=1}^\infty \frac{1}{n}
@@ -39,7 +39,7 @@
                     \sum_{n=1}^\infty \frac{1}{n^{1.00000001}} &amp;&amp; \sum_{n=1}^\infty (-1)^n \frac{1}{n}.
                 </mrow>
             </md>
-            sso sugere que a divergência da série Harmônica é muito mais delicada. Nesta seção, discutimos uma maneira
+            Isso sugere que a divergência da série harmônica é muito mais delicada. Nesta seção, discutimos uma maneira
             de caracterizar esse tipo de convergência delicada
             <mdash/>
             especialmente na presença de mudanças de sinal.
@@ -78,8 +78,8 @@
             maior que
             <m>\sum_n a_n</m>
             <mdash/>
-            tornando mais fácil para  <m>\sum_n |a_n|</m> divergir. Isso é formalizado pelo seguinte teorema, que é uma
-            consequência imediata do<xref ref="thm_SRcomparisonTest" text="title"/>, com <m>
+            tornando mais fácil para  <m>\sum_n |a_n|</m> divergir. Isso é formalizado pelo seguinte teorema, sendo uma
+            consequência imediata do <xref ref="thm_SRcomparisonTest" text="title"/>, com <m>
             c_n=|a_n|</m>.
         </p>
 
@@ -95,7 +95,7 @@
         </theorem>
 
         <p>
-            Lembre-se de que alguns dos testes de testes de convergência apresentados (por exemplo,
+            Lembre-se de que alguns dos testes de convergência apresentados (por exemplo,
             <xref ref="thm_SRintegralTest" text="title"/>
             ) só podem ser aplicados a séries com termos positivos. O
             <xref ref="thm_SRabs"/>

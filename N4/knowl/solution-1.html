@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-19T18:46:55-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.13.1</span><span class="period">.</span>
+</h4>
+<p>Para muitas funções, o segredo para encontrar representações de séries de potências é manipulá-las de tal forma que <span class="process-math">\(\frac{1}{1-y}\)</span> apareça e a partir disso usar a representação em série geométrica  <span class="process-math">\(\frac{1}{1-y} = \sum_{n=0}^\infty y^n\text{.}\)</span> Para isso, precisamos fazer <span class="process-math">\(y=x^2\)</span> de modo que torna <span class="process-math">\(\frac{1}{1-y}\)</span> igual a <span class="process-math">\(\frac{1}{1-x^2}\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\frac{1}{1-x^2} &amp;= \frac{1}{1-y}\bigg|_{y=x^2}
+=\bigg[\sum_{n=0}^\infty y^n
+\bigg]_{y=x^2}
+\quad\text{se $|y| \lt 1$, i.e. $|x| \lt 1$}\\
+&amp;= \sum_{n=0}^\infty {\big(x^2\big)}^n
+= \sum_{n=0}^\infty x^{2n}\\
+&amp;= 1+x^2+x^4+x^6 +\cdots\hskip-0.2in
+\end{align*}
+</div>
+<p class="continuation">A série geométrica que usamos no final da primeira linha converge para</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+|y| \lt 1 \iff \big|x^2\big| \lt 1 \iff |x| \lt 1
+\end{gather*}
+</div>
+<p class="continuation">Então a série de potências tem raio de convergência <span class="process-math">\(1\)</span>e intervalo de convergência <span class="process-math">\(-1 \lt x
+\lt
+1\text{.}\)</span></p>
+</div>
+<span class="incontext"><a href="section-1.html#solution-1" class="internal">em contexto</a></span>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-18T10:31:45-03:00       *-->
+<!--*       on 2022-07-19T18:46:55-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,30 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>We are told that a certain power series with centre <span class="process-math">\(c=3\text{,}\)</span> converges at <span class="process-math">\(x=4\)</span> and diverges at <span class="process-math">\(x=1\text{.}\)</span> What else can we say about the convergence or divergence of the series for other values of <span class="process-math">\(x\text{?}\)</span></p>
+<p>Suponha que as funções <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> são dadas por uma série de potências</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) = \sum_{n=0}^\infty A_n (x-c)^n \qquad
+g(x) = \sum_{n=0}^\infty B_n (x-c)^n
+\end{equation*}
+</div>
+<p class="continuation">para todo <span class="process-math">\(x\)</span>  satisfazendo <span class="process-math">\(|x-c| \lt R\text{.}\)</span> Em particular, estamos assumindo que ambas as séries de potências têm raio de convergência de pelo menos <span class="process-math">\(R\text{.}\)</span> Seja  <span class="process-math">\(K\)</span> uma constante. Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f(x)+g(x) &amp;= \sum_{n=0}^\infty [A_n+B_n]\, (x-c)^n\\
+Kf(x) &amp;= \sum_{n=0}^\infty K\, A_n\, (x-c)^n\\
+(x-c)^Nf(x) &amp;= \sum_{n=0}^\infty A_n\, (x-c)^{n+N}
+\quad\text{para qualquer $N\ge 1$}\\
+&amp;= \sum_{k=N}^\infty A_{k-N}\, (x-c)^k
+\quad\text{no qual $k=n+N$}\\
+f'(x) &amp;= \sum_{n=0}^\infty A_n\, n\,(x-c)^{n-1}
+= \sum_{n=1}^\infty A_n\, n\,(x-c)^{n-1}\\
+\int_c^x f(t)\dee{t} &amp;= \sum_{n=0}^\infty A_n \frac{(x-c)^{n+1}}{n+1}\\
+\int f(x)\ dx &amp;= \bigg[\sum_{n=0}^\infty A_n \frac{(x-c)^{n+1}}{n+1}\bigg]+C
+\quad\text{com $C$ uma constante arbitrária}
+\end{align*}
+</div>
+<p class="continuation">para todo <span class="process-math">\(x\)</span> satisfazendo <span class="process-math">\(|x-c| \lt R\text{.}\)</span></p>
 <span class="incontext"><a href="section-1.html#p-25" class="internal">em contexto</a></span>
 </body>
 </html>
