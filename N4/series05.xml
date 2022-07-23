@@ -540,7 +540,27 @@
 
     </subsection>
     <subsection>
-    <title>Sugestão de Vídeos</title>
+        <title>Sugestão de Vídeos</title>
+
+        <ul>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/XGJp6iuaseo" visual="youtu.be/XGJp6iuaseo">Introdução à série de
+                        potências
+                    </url>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/4My_Z2t5JFs" visual="youtu.be/4My_Z2t5JFs">Encontrar o intervalo de
+                        convergência para <m>\sum_{n=1}^{\infty}\frac{x^n}{n\cdot 5^n}</m>.
+                    </url>
+                </p>
+            </li>
+
+        </ul>
 
 
     </subsection>
@@ -936,23 +956,23 @@
 
         <example xml:id="eg_SRpsrepC">
             <title>
-                <m>f(x)=\log (1+x)</m>
+                <m>f(x)= \ln (1+x)</m>
             </title>
             <statement>
                 <p>
-                    Encontre uma representação em série de potências para <m>\log (1+x)</m>.
+                    Encontre uma representação em série de potências para <m>\ln (1+x)</m>.
                 </p>
             </statement>
             <solution>
                 <p>
 
-                    Lembre-se que <m>\diff{}{x}\log (1+x) = \frac{1}{1+x}</m> de modo que <m>\log(1+t)</m> é uma
+                    Lembre-se que <m>\diff{}{x} \ln (1+x) = \frac{1}{1+x}</m> de modo que <m>\ln(1+t)</m> é uma
                     primitiva (antiderivada) deEncontre uma representação em série de potências para <m>
                     \frac{1}{1+t}
                 </m> e
                     <md>
                         <mrow>
-                            \log(1+x)\ &amp;=\ \int_0^x \frac{dt}{1+t}
+                            \ln(1+x)\ &amp;=\ \int_0^x \frac{dt}{1+t}
                             \ =\ \int_0^x\Big[\sum_{n=0}^\infty (-t)^n\Big]\dee{t}
                         </mrow>
                         <mrow>
@@ -973,16 +993,16 @@
                     \sum_{n=0}^\infty (-t)^n</m>) e que
                     <md>
                         <mrow>
-                            \log(1+x) = \sum_{n=0}^\infty (-1)^n\frac{x^{n+1}}{n+1}
+                            \ln(1+x) = \sum_{n=0}^\infty (-1)^n\frac{x^{n+1}}{n+1}
                             \qquad\text{para todo }\quad -1 \lt x \lt 1
                         </mrow>
                     </md>
                     Quando  <m>x=-1</m> a série se reduz a  <m>\sum_{n=0}^\infty \frac{-1}{n+1}</m>, que é (menos)
                     a série harmônicae assim diverge. Isso não surpreende já que
                     <mdash/>
-                    <m>\log(1+(-1)) =\log 0=-\infty</m>. Quando <m>x=1</m>, a série converge pelo teste da série
+                    <m>\ln(1+(-1)) = \ln 0=-\infty</m>. Quando <m>x=1</m>, a série converge pelo teste da série
                     alternada. É possível provar, por continuidade, embora não o façamos aqui, que a soma é <m>
-                    \log
+                    \ln
                     2</m>.
                     De toda forma, o intervalo de convergência é <m>-1 \lt x\le 1</m>.
                 </p>
@@ -1048,18 +1068,74 @@
 
             <xref ref="thm_SRpsops"/>
             sozinho não nos dará representações de séries de potências de muitas das nossas funções úteis (como  <m>e^x
-        </m> e <m>\sin x</m>).  Felizmente, podemos encontrar tais representações estendendo polinômios de Taylor para séries de Taylor.
+        </m> e <m>\sin x</m>). Felizmente, podemos encontrar tais representações estendendo polinômios de Taylor para
+            séries de Taylor.
         </p>
 
     </subsection>
 
-<subsection><title>Sugestão de Vídeos</title></subsection>
+    <subsection>
+        <title>Sugestão de Vídeos</title>
 
- <exercises xml:id="exercises-serie-potencia">
+        <ul>
+            <li>
+                <p>
+                    <url href="https://youtu.be/lE0VVkesRBY" visual="youtu.be/lE0VVkesRBY">Encontrando uma série de
+                        potências para <m>f(x)=\frac{6}{1+x^3}</m>.
+                    </url>
+                </p>
+            </li>
 
-<!--     <exercise>-->
-<!--                <webwork source="pretext-teste-convergencia/problem19.pg"/>-->
-<!--            </exercise>-->
+            <li>
+                <p>
+                    <url href="https://youtu.be/cNspjy_VHeQ" visual="youtu.be/cNspjy_VHeQ">Reescrevendo  <m>f(x)= 2-
+                        8x^2+32x^4 -128x^6 \cdots</m>.
+                    </url>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/6CKq8w-7ljc" visual="https://youtu.be/6CKq8w-7ljc">Série de potências de  <m>
+                        \ln(1+x^3)</m>.
+                    </url>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/QKtI-p8qjTw" visual="https://youtu.be/QKtI-p8qjTw">Encontrando
+                        <m>\int_0^1f(x)\mathrm{d}x</m>
+                        para <m>f(x)=\sum_{n=1}^{\infty}\frac{n+1}{4^{n+1}}</m>.
+                    </url>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/QKtI-p8qjTw" visual="https://youtu.be/QKtI-p8qjTw">Encontrando
+                        <m>f'''(0)</m>
+                        para <m>f(x)=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+3}}{(2n+1)!}</m>.
+                    </url>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/lI965HKuUTY" visual="youtu.be/lI965HKuUTY">Como encontrar funções a
+                        partir de séries de potência por integração.
+                    </url>
+                </p>
+            </li>
+
+        </ul>
+    </subsection>
+
+    <exercises xml:id="exercises-serie-potencia">
+
+        <!--     <exercise>-->
+        <!--                <webwork source="pretext-teste-convergencia/problem19.pg"/>-->
+        <!--            </exercise>-->
 
     </exercises>
 </section>

@@ -1191,7 +1191,62 @@
     <!--</example>-->
     <!--</subsubsection>-->
 
+    <subsection>
+        <title>Sugestão de Vídeos</title>
+        <ul>
 
+            <li>
+                <p>
+                    <url href="https://youtu.be/7Xr0Lm2m6SQ" visual="youtu.be/7Xr0Lm2m6SQ">Série de Maclaurin de <m>
+                       \cos{x}</m>.
+                    </url>
+                </p>
+            </li>
+
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/URAEuEjNTjU" visual="youtu.be/URAEuEjNTjU">Série de Maclaurin de <m>
+                       \sin{x}</m>.
+                    </url>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/0qLSl_ea7ZE" visual="youtu.be/0qLSl_ea7ZE">Série de Maclaurin de <m>
+                       e^x</m>.
+                    </url>
+                </p>
+            </li>
+
+             <li>
+                <p>
+                    <url href="https://youtu.be/1OI3BgQYag4" visual="youtu.be/1OI3BgQYag4"> <m>
+                       \sum_{n=0}^{\infty}(-1)^n\frac{x^{4n}}{2n!}</m> quando <m>x=\sqrt[3]{\frac{\pi}{2}}.</m>
+                    </url>
+                </p>
+            </li>
+
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/-XGIgBxsHCA" visual="youtu.be/-XGIgBxsHCA"> <m>
+                       \sum_{n=0}^{\infty}(-1)^n\frac{x^{n}}{n!}</m> é uma série de Taylor para que função?.
+                    </url>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/brdfig4XMPU" visual="youtu.be/brdfig4XMPU">
+                      Visualização de aproximações da série de Taylor.
+                    </url>
+                </p>
+            </li>
+        </ul>
+
+    </subsection>
     <subsection>
         <title>Cálculos com a Série de Taylor</title>
 
@@ -2146,441 +2201,441 @@
     <!--</subsection>-->
 
 
-<!--    <subsection>-->
-<!--        <title>Optional-->
-<!--            <mdash/>-->
-<!--            Evaluating Limits Using Taylor Expansions-->
-<!--            <mdash/>-->
-<!--            More Examples-->
-<!--        </title>-->
+    <!--    <subsection>-->
+    <!--        <title>Optional-->
+    <!--            <mdash/>-->
+    <!--            Evaluating Limits Using Taylor Expansions-->
+    <!--            <mdash/>-->
+    <!--            More Examples-->
+    <!--        </title>-->
 
-<!--        <example xml:id="eg_bigohlimitAA">-->
-<!--            <title>Example-->
-<!--                <xref ref="eg_TaylorlimitA"/>-->
-<!--                revisited-->
-<!--            </title>-->
-<!--            <p>-->
-<!--                In this example, we'll return to the limit-->
-<!--                <me>-->
-<!--                    \lim_{x\rightarrow 0}\frac{\sin x}{x}-->
-<!--                </me>-->
-<!--                of Example-->
-<!--                <xref ref="eg_TaylorlimitA"/>-->
-<!--                and treat it more carefully. By Example<xref ref="eg_bigohsincos"/>,-->
-<!--                <me>-->
-<!--                    \sin x = x-\frac{1}{3!}x^3+O(|x|^5)-->
-<!--                </me>-->
-<!--                That is, for small <m>x</m>, <m>\sin x</m> is the same as <m>x-\frac{1}{3!}x^3</m>, up to an error that-->
-<!--                is bounded by some constant times <m>|x|^5</m>. So, dividing by <m>x</m>, <m>\frac{\sin x}{x}</m> is the-->
-<!--                same as  <m>1-\frac{1}{3!}x^2</m>, up to an error that is bounded by some constant times-->
-<!--                <m>x^4</m>-->
-<!--                <mdash/>-->
-<!--                see Remark<xref ref="rem_bigohppties"/>(b). That is-->
-<!--                <me>-->
-<!--                    \frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)-->
-<!--                </me>-->
-<!--                But any function that is bounded by some constant times <m>x^4</m> (for all <m>x</m> smaller than some-->
-<!--                constant <m>D \gt 0</m>) necessarily tends to <m>0</m> as-->
-<!--                <m>x\rightarrow 0</m>-->
-<!--                <mdash/>-->
-<!--                see Remark<xref ref="rem_bigohppties"/>(a). . Thus-->
-<!--                <me>-->
-<!--                    \lim_{x\rightarrow 0}\frac{\sin x}{x}-->
-<!--                    =\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2+O(x^4)\Big]-->
-<!--                    =\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2\Big]-->
-<!--                    =1-->
-<!--                </me>-->
-<!--            </p>-->
+    <!--        <example xml:id="eg_bigohlimitAA">-->
+    <!--            <title>Example-->
+    <!--                <xref ref="eg_TaylorlimitA"/>-->
+    <!--                revisited-->
+    <!--            </title>-->
+    <!--            <p>-->
+    <!--                In this example, we'll return to the limit-->
+    <!--                <me>-->
+    <!--                    \lim_{x\rightarrow 0}\frac{\sin x}{x}-->
+    <!--                </me>-->
+    <!--                of Example-->
+    <!--                <xref ref="eg_TaylorlimitA"/>-->
+    <!--                and treat it more carefully. By Example<xref ref="eg_bigohsincos"/>,-->
+    <!--                <me>-->
+    <!--                    \sin x = x-\frac{1}{3!}x^3+O(|x|^5)-->
+    <!--                </me>-->
+    <!--                That is, for small <m>x</m>, <m>\sin x</m> is the same as <m>x-\frac{1}{3!}x^3</m>, up to an error that-->
+    <!--                is bounded by some constant times <m>|x|^5</m>. So, dividing by <m>x</m>, <m>\frac{\sin x}{x}</m> is the-->
+    <!--                same as  <m>1-\frac{1}{3!}x^2</m>, up to an error that is bounded by some constant times-->
+    <!--                <m>x^4</m>-->
+    <!--                <mdash/>-->
+    <!--                see Remark<xref ref="rem_bigohppties"/>(b). That is-->
+    <!--                <me>-->
+    <!--                    \frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)-->
+    <!--                </me>-->
+    <!--                But any function that is bounded by some constant times <m>x^4</m> (for all <m>x</m> smaller than some-->
+    <!--                constant <m>D \gt 0</m>) necessarily tends to <m>0</m> as-->
+    <!--                <m>x\rightarrow 0</m>-->
+    <!--                <mdash/>-->
+    <!--                see Remark<xref ref="rem_bigohppties"/>(a). . Thus-->
+    <!--                <me>-->
+    <!--                    \lim_{x\rightarrow 0}\frac{\sin x}{x}-->
+    <!--                    =\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2+O(x^4)\Big]-->
+    <!--                    =\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2\Big]-->
+    <!--                    =1-->
+    <!--                </me>-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                Reviewing the above computation, we see that we did a little more work than we had to. It wasn't-->
-<!--                necessary to keep track of the <m>-\frac{1}{3!}x^3</m> contribution to <m>\sin x</m> so carefully. We-->
-<!--                could have just said that-->
-<!--                <me>-->
-<!--                    \sin x = x+O(|x|^3)-->
-<!--                </me>-->
-<!--                so that-->
-<!--                <me>-->
-<!--                    \lim_{x\rightarrow 0}\frac{\sin x}{x}-->
-<!--                    =\lim_{x\rightarrow 0}\frac{x+O(|x|^3)}{x}-->
-<!--                    =\lim_{x\rightarrow 0}\big[1+O(x^2)\big]-->
-<!--                    =1-->
-<!--                </me>-->
-<!--                We'll spend a little time in the later, more complicated, examples learning how to choose the number of-->
-<!--                terms we keep in our Taylor expansions so as to make our computations as efficient as possible.-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--            <p>-->
+    <!--                Reviewing the above computation, we see that we did a little more work than we had to. It wasn't-->
+    <!--                necessary to keep track of the <m>-\frac{1}{3!}x^3</m> contribution to <m>\sin x</m> so carefully. We-->
+    <!--                could have just said that-->
+    <!--                <me>-->
+    <!--                    \sin x = x+O(|x|^3)-->
+    <!--                </me>-->
+    <!--                so that-->
+    <!--                <me>-->
+    <!--                    \lim_{x\rightarrow 0}\frac{\sin x}{x}-->
+    <!--                    =\lim_{x\rightarrow 0}\frac{x+O(|x|^3)}{x}-->
+    <!--                    =\lim_{x\rightarrow 0}\big[1+O(x^2)\big]-->
+    <!--                    =1-->
+    <!--                </me>-->
+    <!--                We'll spend a little time in the later, more complicated, examples learning how to choose the number of-->
+    <!--                terms we keep in our Taylor expansions so as to make our computations as efficient as possible.-->
+    <!--            </p>-->
+    <!--        </example>-->
 
-<!--        <example xml:id="eg_bigohlimitA">-->
-<!--            <title>Practicing using Taylor polynomials for limits</title>-->
-<!--            <p>-->
-<!--                In this example, we'll use the Taylor polynomial of Example-->
-<!--                <xref ref="eg_bigohlog"/>-->
-<!--                to evaluate <m>\lim\limits_{x\rightarrow 0}\tfrac{\log(1+x)}{x}</m> and <m>\lim\limits_{x\rightarrow-->
-<!--                0}(1+x)^{a/x}</m>. The Taylor expansion of equation-->
+    <!--        <example xml:id="eg_bigohlimitA">-->
+    <!--            <title>Practicing using Taylor polynomials for limits</title>-->
+    <!--            <p>-->
+    <!--                In this example, we'll use the Taylor polynomial of Example-->
+    <!--                <xref ref="eg_bigohlog"/>-->
+    <!--                to evaluate <m>\lim\limits_{x\rightarrow 0}\tfrac{\log(1+x)}{x}</m> and <m>\lim\limits_{x\rightarrow-->
+    <!--                0}(1+x)^{a/x}</m>. The Taylor expansion of equation-->
 
-<!--                <xref ref="eq_bigohlog"/>-->
-<!--                with <m>n=1</m> tells us that-->
-<!--                <me>-->
-<!--                    \log(1+x)=x+O(|x|^2)-->
-<!--                </me>-->
-<!--                That is, for small <m>x</m>, <m>\log(1+x)</m> is the same as <m>x</m>, up to an error that is bounded by-->
-<!--                some constant times <m>x^2</m>. So, dividing by <m>x</m>, <m>\frac{1}{x}\log(1+x)</m> is the same as <m>-->
-<!--                1</m>, up to an error that is bounded by some constant times <m>|x|</m>. That is-->
-<!--                <me>-->
-<!--                    \frac{1}{x}\log(1+x)=1+O(|x|)-->
-<!--                </me>-->
-<!--                But any function that is bounded by some constant times <m>|x|</m>, for all <m>x</m> smaller than some-->
-<!--                constant <m>D \gt 0</m>, necessarily tends to <m>0</m> as <m>x\rightarrow 0</m>. Thus-->
-<!--                <me>-->
-<!--                    \lim_{x\rightarrow 0}\frac{\log(1+x)}{x}-->
-<!--                    =\lim_{x\rightarrow 0}\frac{x+O(|x|^2)}{x}-->
-<!--                    =\lim_{x\rightarrow 0}\big[1+O(|x|)\big]-->
-<!--                    =1-->
-<!--                </me>-->
-<!--            </p>-->
+    <!--                <xref ref="eq_bigohlog"/>-->
+    <!--                with <m>n=1</m> tells us that-->
+    <!--                <me>-->
+    <!--                    \log(1+x)=x+O(|x|^2)-->
+    <!--                </me>-->
+    <!--                That is, for small <m>x</m>, <m>\log(1+x)</m> is the same as <m>x</m>, up to an error that is bounded by-->
+    <!--                some constant times <m>x^2</m>. So, dividing by <m>x</m>, <m>\frac{1}{x}\log(1+x)</m> is the same as <m>-->
+    <!--                1</m>, up to an error that is bounded by some constant times <m>|x|</m>. That is-->
+    <!--                <me>-->
+    <!--                    \frac{1}{x}\log(1+x)=1+O(|x|)-->
+    <!--                </me>-->
+    <!--                But any function that is bounded by some constant times <m>|x|</m>, for all <m>x</m> smaller than some-->
+    <!--                constant <m>D \gt 0</m>, necessarily tends to <m>0</m> as <m>x\rightarrow 0</m>. Thus-->
+    <!--                <me>-->
+    <!--                    \lim_{x\rightarrow 0}\frac{\log(1+x)}{x}-->
+    <!--                    =\lim_{x\rightarrow 0}\frac{x+O(|x|^2)}{x}-->
+    <!--                    =\lim_{x\rightarrow 0}\big[1+O(|x|)\big]-->
+    <!--                    =1-->
+    <!--                </me>-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                We can now use this limit to evaluate-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \lim_{x\rightarrow 0}(1+x)^{a/x}.-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                Now, we could either evaluate the limit of the logarithm of this expression, or we can carefully rewrite-->
-<!--                the expression as <m>e^\mathrm{(something)}</m>. Let us do the latter.-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \lim_{x\rightarrow 0}(1+x)^{a/x}-->
-<!--                        &amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x} \log(1+x) }-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x}[x+O(|x|^2)]}-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;=\lim_{x\rightarrow 0}e^{a+O(|x|)}-->
-<!--                        =e^a-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                Here we have used that if <m>F(x)=O(|x|^2)</m> then-->
-<!--                <m>\frac{a}{x} F(x) = O(x)</m>-->
-<!--                <mdash/>-->
-<!--                see Remark-->
+    <!--            <p>-->
+    <!--                We can now use this limit to evaluate-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \lim_{x\rightarrow 0}(1+x)^{a/x}.-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                Now, we could either evaluate the limit of the logarithm of this expression, or we can carefully rewrite-->
+    <!--                the expression as <m>e^\mathrm{(something)}</m>. Let us do the latter.-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \lim_{x\rightarrow 0}(1+x)^{a/x}-->
+    <!--                        &amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x} \log(1+x) }-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x}[x+O(|x|^2)]}-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;=\lim_{x\rightarrow 0}e^{a+O(|x|)}-->
+    <!--                        =e^a-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                Here we have used that if <m>F(x)=O(|x|^2)</m> then-->
+    <!--                <m>\frac{a}{x} F(x) = O(x)</m>-->
+    <!--                <mdash/>-->
+    <!--                see Remark-->
 
-<!--                <xref ref="rem_bigohppties"/>(b). We have also used that the exponential is continuous-->
-<!--                <mdash/>-->
-<!--                as <m>x</m>  tends to zero, the exponent of <m>e^{a+O(|x|)}</m> tends to <m>a</m>  so that <m>-->
-<!--                e^{a+O(|x|)}-->
-<!--            </m> tends to-->
-<!--                <m>e^a</m>-->
-<!--                <mdash/>-->
-<!--                see Remark-->
+    <!--                <xref ref="rem_bigohppties"/>(b). We have also used that the exponential is continuous-->
+    <!--                <mdash/>-->
+    <!--                as <m>x</m>  tends to zero, the exponent of <m>e^{a+O(|x|)}</m> tends to <m>a</m>  so that <m>-->
+    <!--                e^{a+O(|x|)}-->
+    <!--            </m> tends to-->
+    <!--                <m>e^a</m>-->
+    <!--                <mdash/>-->
+    <!--                see Remark-->
 
-<!--                <xref ref="rem_bigohppties"/>(a).-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--                <xref ref="rem_bigohppties"/>(a).-->
+    <!--            </p>-->
+    <!--        </example>-->
 
 
-<!--        <example xml:id="bigohlimitB">-->
-<!--            <title>A difficult limit</title>-->
-<!--            <p>-->
-<!--                In this example, we'll evaluate-->
-<!--                <fn>-->
-<!--                    Use of l'Hôpital's rule here could be characterised as a <q>courageous decision</q>. The interested-->
-<!--                    reader should search-engine their way to Sir Humphrey Appleby and <q>Yes Minister</q> to better-->
-<!--                    understand this reference (and the workings of government in the Westminster system). Discretion-->
-<!--                    being the better part of valour, we'll stop and think a little before limiting (ha) our choices.-->
-<!--                </fn>-->
-<!--                the harder limit-->
-<!--                <me>-->
-<!--                    \lim_{x\rightarrow 0}\frac{\cos x -1 + \half x\sin x}{{[\log(1+x)]}^4}-->
-<!--                </me>-->
-<!--                The first thing to notice about this limit is that, as <m>x</m> tends to zero, the numerator-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \cos x -1 + \half x\sin x &amp;\to \cos 0 -1 +\half\cdot 0\cdot\sin 0=0-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                and the denominator-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        [\log(1+x)]^4 &amp; \to [\log(1+0)]^4=0-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                too. So both the numerator and denominator tend to zero and we may not simply evaluate the limit of the-->
-<!--                ratio by taking the limits of the numerator and denominator and dividing.-->
-<!--            </p>-->
+    <!--        <example xml:id="bigohlimitB">-->
+    <!--            <title>A difficult limit</title>-->
+    <!--            <p>-->
+    <!--                In this example, we'll evaluate-->
+    <!--                <fn>-->
+    <!--                    Use of l'Hôpital's rule here could be characterised as a <q>courageous decision</q>. The interested-->
+    <!--                    reader should search-engine their way to Sir Humphrey Appleby and <q>Yes Minister</q> to better-->
+    <!--                    understand this reference (and the workings of government in the Westminster system). Discretion-->
+    <!--                    being the better part of valour, we'll stop and think a little before limiting (ha) our choices.-->
+    <!--                </fn>-->
+    <!--                the harder limit-->
+    <!--                <me>-->
+    <!--                    \lim_{x\rightarrow 0}\frac{\cos x -1 + \half x\sin x}{{[\log(1+x)]}^4}-->
+    <!--                </me>-->
+    <!--                The first thing to notice about this limit is that, as <m>x</m> tends to zero, the numerator-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \cos x -1 + \half x\sin x &amp;\to \cos 0 -1 +\half\cdot 0\cdot\sin 0=0-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                and the denominator-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        [\log(1+x)]^4 &amp; \to [\log(1+0)]^4=0-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                too. So both the numerator and denominator tend to zero and we may not simply evaluate the limit of the-->
+    <!--                ratio by taking the limits of the numerator and denominator and dividing.-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                To find the limit, or show that it does not exist, we are going to have to exhibit a cancellation-->
-<!--                between the numerator and the denominator. To develop a strategy for evaluating this limit, let's do-->
-<!--                a <q>little scratch work</q>, starting by taking a closer look at the denominator. By Example<xref-->
-<!--                    ref="eg_bigohlog"/>,-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \log(1+x) = x+O(x^2)-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                This tells us that <m>\log(1+x)</m> looks a lot like <m>x</m> for very small <m>x</m>. So the-->
-<!--                denominator <m>[x+O(x^2)]^4</m> looks a lot like <m>x^4</m> for very small <m>x</m>. Now, what about the-->
-<!--                numerator?-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        If the numerator looks like some constant times <m>x^p</m> with <m>p \gt 4</m>, for very-->
-<!--                        small <m>x</m>, then the ratio will look like the constant times  <m>\frac{x^p}{x^4}=x^{p-4}</m> and,-->
-<!--                        as <m>p-4 \gt 0</m>, will tend to <m>0</m> as <m>x</m>  tends to zero.-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        If the numerator looks like some constant times <m>x^p</m> with <m>p \lt 4</m>, for very-->
-<!--                        small <m>x</m>, then the ratio will look like the constant times  <m>\frac{x^p}{x^4}=x^{p-4}</m> and-->
-<!--                        will, as <m>p-4 \lt 0</m>, tend to infinity, and in particular diverge, as <m>x</m> tends to-->
-<!--                        zero.-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        If the numerator looks like  <m>Cx^4</m>, for very small <m>x</m>, then the ratio will look like <m>-->
-<!--                        \frac{Cx^4}{x^4}=C-->
-<!--                    </m> and will tend to <m>C</m> as  <m>x</m> tends to zero.-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--                The moral of the above <q>scratch work</q> is that we need to know the behaviour of the numerator, for-->
-<!--                small <m>x</m>, up to order <m>x^4</m>. Any contributions of order <m>x^p</m> with <m>p \gt 4</m> may be-->
-<!--                put into error terms <m>O(|x|^p)</m>.-->
-<!--            </p>-->
+    <!--            <p>-->
+    <!--                To find the limit, or show that it does not exist, we are going to have to exhibit a cancellation-->
+    <!--                between the numerator and the denominator. To develop a strategy for evaluating this limit, let's do-->
+    <!--                a <q>little scratch work</q>, starting by taking a closer look at the denominator. By Example<xref-->
+    <!--                    ref="eg_bigohlog"/>,-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \log(1+x) = x+O(x^2)-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                This tells us that <m>\log(1+x)</m> looks a lot like <m>x</m> for very small <m>x</m>. So the-->
+    <!--                denominator <m>[x+O(x^2)]^4</m> looks a lot like <m>x^4</m> for very small <m>x</m>. Now, what about the-->
+    <!--                numerator?-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        If the numerator looks like some constant times <m>x^p</m> with <m>p \gt 4</m>, for very-->
+    <!--                        small <m>x</m>, then the ratio will look like the constant times  <m>\frac{x^p}{x^4}=x^{p-4}</m> and,-->
+    <!--                        as <m>p-4 \gt 0</m>, will tend to <m>0</m> as <m>x</m>  tends to zero.-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        If the numerator looks like some constant times <m>x^p</m> with <m>p \lt 4</m>, for very-->
+    <!--                        small <m>x</m>, then the ratio will look like the constant times  <m>\frac{x^p}{x^4}=x^{p-4}</m> and-->
+    <!--                        will, as <m>p-4 \lt 0</m>, tend to infinity, and in particular diverge, as <m>x</m> tends to-->
+    <!--                        zero.-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        If the numerator looks like  <m>Cx^4</m>, for very small <m>x</m>, then the ratio will look like <m>-->
+    <!--                        \frac{Cx^4}{x^4}=C-->
+    <!--                    </m> and will tend to <m>C</m> as  <m>x</m> tends to zero.-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--                The moral of the above <q>scratch work</q> is that we need to know the behaviour of the numerator, for-->
+    <!--                small <m>x</m>, up to order <m>x^4</m>. Any contributions of order <m>x^p</m> with <m>p \gt 4</m> may be-->
+    <!--                put into error terms <m>O(|x|^p)</m>.-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                Now we are ready to evaluate the limit. Because the expressions are a little involved, we will simplify-->
-<!--                the numerator and denominator separately and then put things together. Using the expansions we developed-->
-<!--                in Example<xref ref="eg_bigohsincos"/>, the numerator,-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \cos x -1 + \frac{1}{2} x\sin x-->
-<!--                        &amp;=-->
-<!--                        \left( 1 - \frac{1}{2!}x^2 + \frac{1}{4!}x^4 + O(|x|^6) \right)-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;\phantom{=\ } -1 + \frac{x}{2}\left( x - \frac{1}{3!}x^3 + O(|x|^5) \right)-->
-<!--                        &amp; \text{expand}-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;= \left( \frac{1}{24}-\frac{1}{12} \right)x^4 + O(|x|^6) + \frac{x}{2} O(|x|^5)-->
-<!--                    </mrow>-->
-<!--                    <intertext>Then by Remark<xref ref="rem_bigohppties"/>(b)-->
-<!--                    </intertext>-->
-<!--                    <mrow>-->
-<!--                        &amp;= - \frac{1}{24}x^4 + O(|x|^6) + O(|x|^6)-->
-<!--                    </mrow>-->
-<!--                    <intertext>and now by Remark<xref ref="rem_bigohppties"/>(c)-->
-<!--                    </intertext>-->
-<!--                    <mrow>-->
-<!--                        &amp;= - \frac{1}{24}x^4 + O(|x|^6)-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                Similarly, using the expansion that we developed in Example<xref ref="eg_bigohlog"/>,-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        [ \log(1+x) ]^4 &amp;= \big[ x + O(|x|^2) \big]^4-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;= \big[x + x O(|x|)\big]^4 &amp; \text{by Remark }<xref ref="rem_bigohppties"/>\text{(b)}-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;= x^4 [1 + O(|x|)]^4-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                Now put these together and take the limit as <m>x \to 0</m>:-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \lim_{x \to 0}-->
-<!--                        \frac{\cos x -1 + \half x\sin x}{[\log(1+x)]^4}-->
-<!--                        &amp;= \lim_{x \to 0}-->
-<!--                        \frac{ -\frac{1}{24}x^4 + O(|x|^6)}{x^4 [1+O(|x|)]^4}-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;= \lim_{x \to 0}-->
-<!--                        \frac{-\frac{1}{24}x^4 + x^4O(|x|^2)}{x^4 [1+O(|x|)]^4}&amp; \text{by Remark }<xref-->
-<!--                            ref="rem_bigohppties"/>\text{(b)}-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;= \lim_{x \to 0}-->
-<!--                        \frac{-\frac{1}{24} + O(|x|^2)}{[1+O(|x|)]^4}-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;= -\frac{1}{24} &amp; \text{by Remark }<xref ref="rem_bigohppties"/>\text{(a)}.-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--            <p>-->
+    <!--                Now we are ready to evaluate the limit. Because the expressions are a little involved, we will simplify-->
+    <!--                the numerator and denominator separately and then put things together. Using the expansions we developed-->
+    <!--                in Example<xref ref="eg_bigohsincos"/>, the numerator,-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \cos x -1 + \frac{1}{2} x\sin x-->
+    <!--                        &amp;=-->
+    <!--                        \left( 1 - \frac{1}{2!}x^2 + \frac{1}{4!}x^4 + O(|x|^6) \right)-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;\phantom{=\ } -1 + \frac{x}{2}\left( x - \frac{1}{3!}x^3 + O(|x|^5) \right)-->
+    <!--                        &amp; \text{expand}-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;= \left( \frac{1}{24}-\frac{1}{12} \right)x^4 + O(|x|^6) + \frac{x}{2} O(|x|^5)-->
+    <!--                    </mrow>-->
+    <!--                    <intertext>Then by Remark<xref ref="rem_bigohppties"/>(b)-->
+    <!--                    </intertext>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;= - \frac{1}{24}x^4 + O(|x|^6) + O(|x|^6)-->
+    <!--                    </mrow>-->
+    <!--                    <intertext>and now by Remark<xref ref="rem_bigohppties"/>(c)-->
+    <!--                    </intertext>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;= - \frac{1}{24}x^4 + O(|x|^6)-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                Similarly, using the expansion that we developed in Example<xref ref="eg_bigohlog"/>,-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        [ \log(1+x) ]^4 &amp;= \big[ x + O(|x|^2) \big]^4-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;= \big[x + x O(|x|)\big]^4 &amp; \text{by Remark }<xref ref="rem_bigohppties"/>\text{(b)}-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;= x^4 [1 + O(|x|)]^4-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                Now put these together and take the limit as <m>x \to 0</m>:-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \lim_{x \to 0}-->
+    <!--                        \frac{\cos x -1 + \half x\sin x}{[\log(1+x)]^4}-->
+    <!--                        &amp;= \lim_{x \to 0}-->
+    <!--                        \frac{ -\frac{1}{24}x^4 + O(|x|^6)}{x^4 [1+O(|x|)]^4}-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;= \lim_{x \to 0}-->
+    <!--                        \frac{-\frac{1}{24}x^4 + x^4O(|x|^2)}{x^4 [1+O(|x|)]^4}&amp; \text{by Remark }<xref-->
+    <!--                            ref="rem_bigohppties"/>\text{(b)}-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;= \lim_{x \to 0}-->
+    <!--                        \frac{-\frac{1}{24} + O(|x|^2)}{[1+O(|x|)]^4}-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;= -\frac{1}{24} &amp; \text{by Remark }<xref ref="rem_bigohppties"/>\text{(a)}.-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--            </p>-->
+    <!--        </example>-->
 
-<!--        <p>-->
-<!--            The next two limits have much the same flavour as those above-->
-<!--            <mdash/>-->
-<!--            expand the numerator and denominator to high enough order, do some cancellations and then take the limit. We-->
-<!--            have increased the difficulty a little by introducing <q>expansions of expansions</q>.-->
-<!--        </p>-->
+    <!--        <p>-->
+    <!--            The next two limits have much the same flavour as those above-->
+    <!--            <mdash/>-->
+    <!--            expand the numerator and denominator to high enough order, do some cancellations and then take the limit. We-->
+    <!--            have increased the difficulty a little by introducing <q>expansions of expansions</q>.-->
+    <!--        </p>-->
 
-<!--        <example xml:id="eg_bigohlimitC">-->
-<!--            <title>Another difficult limit</title>-->
-<!--            <p>-->
-<!--                In this example we'll evaluate another harder limit, namely-->
-<!--                <me>-->
-<!--                    \lim_{x\rightarrow 0}\frac{\log\big(\frac{\sin x}{x}\big)}{x^2}-->
-<!--                </me>-->
-<!--                The first thing to notice about this limit is that, as <m>x</m> tends to zero, the denominator <m>x^2-->
-<!--            </m> tends to <m>0</m>. So, yet again, to find the limit, we are going to have to show that the numerator-->
-<!--                also tends to <m>0</m> and we are going to have to exhibit a cancellation between the numerator and the-->
-<!--                denominator.-->
-<!--            </p>-->
+    <!--        <example xml:id="eg_bigohlimitC">-->
+    <!--            <title>Another difficult limit</title>-->
+    <!--            <p>-->
+    <!--                In this example we'll evaluate another harder limit, namely-->
+    <!--                <me>-->
+    <!--                    \lim_{x\rightarrow 0}\frac{\log\big(\frac{\sin x}{x}\big)}{x^2}-->
+    <!--                </me>-->
+    <!--                The first thing to notice about this limit is that, as <m>x</m> tends to zero, the denominator <m>x^2-->
+    <!--            </m> tends to <m>0</m>. So, yet again, to find the limit, we are going to have to show that the numerator-->
+    <!--                also tends to <m>0</m> and we are going to have to exhibit a cancellation between the numerator and the-->
+    <!--                denominator.-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                Because the denominator is <m>x^2</m> any terms in the numerator, <m>\log\big(\frac{\sin x}{x}\big)</m> that-->
-<!--                are of order <m>x^3</m> or higher will contribute terms in the ratio <m>\frac{\log(\frac{\sin-->
-<!--                x}{x})}{x^2}-->
-<!--            </m> that are of order <m>x</m> or higher. Those terms in the ratio will converge to zero as <m>x\rightarrow-->
-<!--                0</m>. The moral of this discussion is that we need to compute <m>\log\frac{\sin x}{x}</m> to order <m>-->
-<!--                x^2-->
-<!--            </m> with errors of order <m>x^3</m>. Now we saw, in Example<xref ref="eg_bigohlimitAA"/>, that-->
-<!--                <me>-->
-<!--                    \frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)-->
-<!--                </me>-->
-<!--                We also saw, in equation-->
+    <!--            <p>-->
+    <!--                Because the denominator is <m>x^2</m> any terms in the numerator, <m>\log\big(\frac{\sin x}{x}\big)</m> that-->
+    <!--                are of order <m>x^3</m> or higher will contribute terms in the ratio <m>\frac{\log(\frac{\sin-->
+    <!--                x}{x})}{x^2}-->
+    <!--            </m> that are of order <m>x</m> or higher. Those terms in the ratio will converge to zero as <m>x\rightarrow-->
+    <!--                0</m>. The moral of this discussion is that we need to compute <m>\log\frac{\sin x}{x}</m> to order <m>-->
+    <!--                x^2-->
+    <!--            </m> with errors of order <m>x^3</m>. Now we saw, in Example<xref ref="eg_bigohlimitAA"/>, that-->
+    <!--                <me>-->
+    <!--                    \frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)-->
+    <!--                </me>-->
+    <!--                We also saw, in equation-->
 
-<!--                <xref ref="eq_bigohlog"/>-->
-<!--                with <m>n=1</m>, that-->
-<!--                <me>-->
-<!--                    \log(1+X) = X +O(X^2)-->
-<!--                </me>-->
-<!--                Substituting-->
-<!--                <fn>-->
-<!--                    In our derivation of <m>\log(1+X) = X +O(X^2)</m> in Example<xref ref="eg_bigohlog"/>, we required-->
-<!--                    only that <m>|X|\le\frac{1}{2}</m>. So we are free to substitute <m>X= -\frac{1}{3!}x^2+O(x^4)</m> for-->
-<!--                    any <m>x</m> that is small enough that <m>\big|-\frac{1}{3!}x^2+O(x^4)\big| \lt \frac{1}{2}</m>.-->
-<!--                </fn>-->
-<!--                <m>X= -\frac{1}{3!}x^2+O(x^4)</m>, and using that <m>X^2=O(x^4)</m> (by Remark<xref-->
-<!--                    ref="rem_bigohppties"/>(b,c)), we have that the numerator-->
-<!--                <me>-->
-<!--                    \log\Big(\frac{\sin x}{x}\Big)-->
-<!--                    =\log(1+X)-->
-<!--                    = X +O(X^2)-->
-<!--                    =-\frac{1}{3!}x^2+O(x^4)-->
-<!--                </me>-->
-<!--                and the limit-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \lim_{x\rightarrow 0}\frac{\log\big(\frac{\sin x}{x}\big)}{x^2}-->
-<!--                        \amp=\lim_{x\rightarrow 0}\frac{-\frac{1}{3!}x^2+O(x^4)}{x^2}-->
-<!--                        =\lim_{x\rightarrow 0}\Big[-\frac{1}{3!}+O(x^2)\Big]-->
-<!--                        =-\frac{1}{3!}-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        \amp=-\frac{1}{6}-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--                <xref ref="eq_bigohlog"/>-->
+    <!--                with <m>n=1</m>, that-->
+    <!--                <me>-->
+    <!--                    \log(1+X) = X +O(X^2)-->
+    <!--                </me>-->
+    <!--                Substituting-->
+    <!--                <fn>-->
+    <!--                    In our derivation of <m>\log(1+X) = X +O(X^2)</m> in Example<xref ref="eg_bigohlog"/>, we required-->
+    <!--                    only that <m>|X|\le\frac{1}{2}</m>. So we are free to substitute <m>X= -\frac{1}{3!}x^2+O(x^4)</m> for-->
+    <!--                    any <m>x</m> that is small enough that <m>\big|-\frac{1}{3!}x^2+O(x^4)\big| \lt \frac{1}{2}</m>.-->
+    <!--                </fn>-->
+    <!--                <m>X= -\frac{1}{3!}x^2+O(x^4)</m>, and using that <m>X^2=O(x^4)</m> (by Remark<xref-->
+    <!--                    ref="rem_bigohppties"/>(b,c)), we have that the numerator-->
+    <!--                <me>-->
+    <!--                    \log\Big(\frac{\sin x}{x}\Big)-->
+    <!--                    =\log(1+X)-->
+    <!--                    = X +O(X^2)-->
+    <!--                    =-\frac{1}{3!}x^2+O(x^4)-->
+    <!--                </me>-->
+    <!--                and the limit-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \lim_{x\rightarrow 0}\frac{\log\big(\frac{\sin x}{x}\big)}{x^2}-->
+    <!--                        \amp=\lim_{x\rightarrow 0}\frac{-\frac{1}{3!}x^2+O(x^4)}{x^2}-->
+    <!--                        =\lim_{x\rightarrow 0}\Big[-\frac{1}{3!}+O(x^2)\Big]-->
+    <!--                        =-\frac{1}{3!}-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        \amp=-\frac{1}{6}-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--            </p>-->
+    <!--        </example>-->
 
-<!--        <example xml:id="eg_bigohlimitD">-->
-<!--            <title>Yet another difficult limit</title>-->
-<!--            <p>-->
-<!--                Evaluate-->
-<!--                <me>-->
-<!--                    \lim_{x\rightarrow 0}\frac{e^{x^2}-\cos x}{\log(1+x)-\sin x}-->
-<!--                </me>-->
-<!--            </p>-->
+    <!--        <example xml:id="eg_bigohlimitD">-->
+    <!--            <title>Yet another difficult limit</title>-->
+    <!--            <p>-->
+    <!--                Evaluate-->
+    <!--                <me>-->
+    <!--                    \lim_{x\rightarrow 0}\frac{e^{x^2}-\cos x}{\log(1+x)-\sin x}-->
+    <!--                </me>-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                <alert>Solution:</alert>-->
-<!--                <em>Step 1</em>: Find the limit of the denominator.-->
-<!--                <me>-->
-<!--                    \lim_{x\rightarrow 0}\big[\log(1+x)-\sin x\big]-->
-<!--                    =\log(1+0)-\sin 0-->
-<!--                    =0-->
-<!--                </me>-->
-<!--                This tells us that we can't evaluate the limit just by finding the limits of the numerator and-->
-<!--                denominator separately and then dividing.-->
-<!--            </p>-->
+    <!--            <p>-->
+    <!--                <alert>Solution:</alert>-->
+    <!--                <em>Step 1</em>: Find the limit of the denominator.-->
+    <!--                <me>-->
+    <!--                    \lim_{x\rightarrow 0}\big[\log(1+x)-\sin x\big]-->
+    <!--                    =\log(1+0)-\sin 0-->
+    <!--                    =0-->
+    <!--                </me>-->
+    <!--                This tells us that we can't evaluate the limit just by finding the limits of the numerator and-->
+    <!--                denominator separately and then dividing.-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                <em>Step 2</em>: Determine the leading order behaviour of the denominator near <m>x=0</m>. By equations-->
+    <!--            <p>-->
+    <!--                <em>Step 2</em>: Determine the leading order behaviour of the denominator near <m>x=0</m>. By equations-->
 
-<!--                <xref ref="eq_bigohlog"/>-->
-<!--                and-->
+    <!--                <xref ref="eq_bigohlog"/>-->
+    <!--                and-->
 
-<!--                <xref ref="eq_SRsincosExp"/>,-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \log(1+x) &amp; = x-\tfrac{1}{2}x^2+\tfrac{1}{3}x^3-\cdots-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        \sin x &amp; = x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                Taking the difference of these expansions gives-->
-<!--                <me>-->
-<!--                    \log(1+x)-\sin x = -\tfrac{1}{2}x^2+\big(\tfrac{1}{3}-->
-<!--                    +\tfrac{1}{3!}\big)x^3 +\cdots-->
-<!--                </me>-->
-<!--                This tells us that, for <m>x</m> near zero, the denominator is  <m>-\tfrac{x^2}{2}</m> (that's the-->
-<!--                leading order term) plus contributions that are of order <m>x^3</m> and smaller. That is-->
-<!--                <me>-->
-<!--                    \log(1+x)-\sin x = -\tfrac{x^2}{2}+ O(|x|^3)-->
-<!--                </me>-->
-<!--            </p>-->
+    <!--                <xref ref="eq_SRsincosExp"/>,-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \log(1+x) &amp; = x-\tfrac{1}{2}x^2+\tfrac{1}{3}x^3-\cdots-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        \sin x &amp; = x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                Taking the difference of these expansions gives-->
+    <!--                <me>-->
+    <!--                    \log(1+x)-\sin x = -\tfrac{1}{2}x^2+\big(\tfrac{1}{3}-->
+    <!--                    +\tfrac{1}{3!}\big)x^3 +\cdots-->
+    <!--                </me>-->
+    <!--                This tells us that, for <m>x</m> near zero, the denominator is  <m>-\tfrac{x^2}{2}</m> (that's the-->
+    <!--                leading order term) plus contributions that are of order <m>x^3</m> and smaller. That is-->
+    <!--                <me>-->
+    <!--                    \log(1+x)-\sin x = -\tfrac{x^2}{2}+ O(|x|^3)-->
+    <!--                </me>-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                <em>Step 3</em>: Determine the behaviour of the numerator near <m>x=0</m> to order <m>x^2</m> with-->
-<!--                errors of order <m>x^3</m> and smaller (just like the denominator). By equation-->
+    <!--            <p>-->
+    <!--                <em>Step 3</em>: Determine the behaviour of the numerator near <m>x=0</m> to order <m>x^2</m> with-->
+    <!--                errors of order <m>x^3</m> and smaller (just like the denominator). By equation-->
 
-<!--                <xref ref="eq_SRexpExp"/>-->
-<!--                <me>-->
-<!--                    e^X=1+X+O\big(X^2\big)-->
-<!--                </me>-->
-<!--                Substituting-->
-<!--                <m>X=x^2</m>-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        e^{x^2} &amp; = 1+x^2 +O\big(x^4\big)-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        \cos x &amp; = 1-\tfrac{1}{2}x^2+O\big(x^4\big)-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                by equation-->
+    <!--                <xref ref="eq_SRexpExp"/>-->
+    <!--                <me>-->
+    <!--                    e^X=1+X+O\big(X^2\big)-->
+    <!--                </me>-->
+    <!--                Substituting-->
+    <!--                <m>X=x^2</m>-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        e^{x^2} &amp; = 1+x^2 +O\big(x^4\big)-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        \cos x &amp; = 1-\tfrac{1}{2}x^2+O\big(x^4\big)-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                by equation-->
 
-<!--                <xref ref="eq_SRsincosExp"/>. Subtracting, the numerator-->
-<!--                <me>-->
-<!--                    e^{x^2}-\cos x = \tfrac{3}{2}x^2+O\big(x^4\big)-->
-<!--                </me>-->
-<!--            </p>-->
+    <!--                <xref ref="eq_SRsincosExp"/>. Subtracting, the numerator-->
+    <!--                <me>-->
+    <!--                    e^{x^2}-\cos x = \tfrac{3}{2}x^2+O\big(x^4\big)-->
+    <!--                </me>-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                <em>Step 4</em>: Evaluate the limit.-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \lim_{x\rightarrow 0}\frac{e^{x^2}-\cos x}{\log(1+x)-\sin x}-->
-<!--                        &amp; =\lim_{x\rightarrow 0}\frac{\frac{3}{2}x^2+O(x^4)}-->
-<!--                        {-\frac{x^2}{2}+ O(|x|^3)}-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp; =\lim_{x\rightarrow 0}\frac{\frac{3}{2}+O(x^2)}-->
-<!--                        {-\frac{1}{2}+ O(|x|)}-->
-<!--                    </mrow>-->
-<!--                    <mrow>-->
-<!--                        &amp;-->
-<!--                        =\frac{\frac{3}{2}} {-\frac{1}{2}}-->
-<!--                        =-3-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--            </p>-->
-<!--        </example>-->
-<!--    </subsection>-->
+    <!--            <p>-->
+    <!--                <em>Step 4</em>: Evaluate the limit.-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \lim_{x\rightarrow 0}\frac{e^{x^2}-\cos x}{\log(1+x)-\sin x}-->
+    <!--                        &amp; =\lim_{x\rightarrow 0}\frac{\frac{3}{2}x^2+O(x^4)}-->
+    <!--                        {-\frac{x^2}{2}+ O(|x|^3)}-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp; =\lim_{x\rightarrow 0}\frac{\frac{3}{2}+O(x^2)}-->
+    <!--                        {-\frac{1}{2}+ O(|x|)}-->
+    <!--                    </mrow>-->
+    <!--                    <mrow>-->
+    <!--                        &amp;-->
+    <!--                        =\frac{\frac{3}{2}} {-\frac{1}{2}}-->
+    <!--                        =-3-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--            </p>-->
+    <!--        </example>-->
+    <!--    </subsection>-->
 
     <!--<xi:include href="../problems/prob_s3.6.xml" />-->
     <subsection>
         <title>Sugestão de Vídeos</title>
     </subsection>
-<exercises xml:id="exercises-series-taylor">
-<!--    <exercise>-->
-<!--                <webwork source="pretext-teste-convergencia/problem19.pg"/>-->
-<!--            </exercise>-->
-</exercises>
+    <exercises xml:id="exercises-series-taylor">
+        <!--    <exercise>-->
+        <!--                <webwork source="pretext-teste-convergencia/problem19.pg"/>-->
+        <!--            </exercise>-->
+    </exercises>
 </section>
