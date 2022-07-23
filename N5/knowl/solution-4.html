@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-19T18:46:55-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.16.1</span><span class="period">.</span>
+</h4>
+<p>Mais uma vez a idéia é representar <span class="process-math">\(\frac{1}{(1-x)^2}\)</span> em termos de <span class="process-math">\(\frac{1}{1-x}\text{.}\)</span> Note que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRpsops.html ./knowl/thm_SRpsops.html">
+\begin{align*}
+\frac{1}{(1-x)^2} &amp;= \diff{}{x}\left\{\frac{1}{1-x}\right\}\\
+&amp;= \diff{}{x} \left\{\sum_{n=0}^\infty x^n \right\}\\
+&amp;= \sum_{n=1}^\infty nx^{n-1}
+\qquad
+\knowl{./knowl/thm_SRpsops.html}{\text{Teorema 1.11}}
+\end{align*}
+</div>
+<p class="continuation">Observe que o termo dado por  <span class="process-math">\(n=0\)</span>  desapareceu pois, para <span class="process-math">\(n=0\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRpsops.html ./knowl/thm_SRpsops.html">
+\begin{equation*}
+\diff{}{x} x^n = \diff{}{x} x^0 = \diff{}{x} 1= 0
+\end{equation*}
+</div>
+<p class="continuation">Observe também que o raio de convergência desta série é <span class="process-math">\(1\text{.}\)</span> Podemos ver isso através do <a href="" class="xref" data-knowl="./knowl/thm_SRpsops.html" title="Teorema 1.11: Operações em Série de Potências">Teorema 1.11</a>. Esse teorema nos diz que o raio de convergência de uma série de potências não é alterado pela derivação — e como  <span class="process-math">\(\sum_{n=0}^\infty x^n\)</span> tem raio de convergência <span class="process-math">\(1\text{,}\)</span> o mesmo acontece com a sua derivada.</p>
+<p>Sem muito trabalho, podemos determinar o intervalo de convergência testando em <span class="process-math">\(x=\pm 1\text{.}\)</span> Quando <span class="process-math">\(x=\pm 1\)</span> os termos da série não vão a zero quando <span class="process-math">\(n \to \infty\)</span> e assim, pelo teste de divergência, a série não converge. Portanto, o intervalo de convergência da série é <span class="process-math">\(-1 \lt x \lt
+1\text{.}\)</span></p>
+</div>
+<span class="incontext"><a href="section-1.html#solution-4" class="internal">em contexto</a></span>
+</body>
+</html>

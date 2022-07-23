@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-23T15:11:20-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p>Because the denominator is <span class="process-math">\(x^2\)</span> any terms in the numerator, <span class="process-math">\(\log\big(\frac{\sin x}{x}\big)\)</span> that are of order <span class="process-math">\(x^3\)</span> or higher will contribute terms in the ratio <span class="process-math">\(\frac{\log(\frac{\sin
+x}{x})}{x^2}\)</span> that are of order <span class="process-math">\(x\)</span> or higher. Those terms in the ratio will converge to zero as <span class="process-math">\(x\rightarrow
+0\text{.}\)</span> The moral of this discussion is that we need to compute <span class="process-math">\(\log\frac{\sin x}{x}\)</span> to order <span class="process-math">\(x^2\)</span> with errors of order <span class="process-math">\(x^3\text{.}\)</span> Now we saw, in Example<a href="" class="xref" data-knowl="./knowl/eg_bigohlimitAA.html" title="Exemplo 1.16: Example Exemplo 1.14 revisited">Exemplo 1.16</a>, that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_bigohlimitAA.html   ">
+\begin{equation*}
+\frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)
+\end{equation*}
+</div>
+<p class="continuation">We also saw, in equation <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eq_bigohlog" missing or not unique]</code> with <span class="process-math">\(n=1\text{,}\)</span> that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_bigohlimitAA.html   ">
+\begin{equation*}
+\log(1+X) = X +O(X^2)
+\end{equation*}
+</div>
+<p class="continuation">Substituting <a href="" class="fn-knowl original" data-knowl="./knowl/fn-3-hidden.html" title="Nota de rodapé 1.3"><sup> 3 </sup></a> <span class="process-math">\(X= -\frac{1}{3!}x^2+O(x^4)\text{,}\)</span> and using that <span class="process-math">\(X^2=O(x^4)\)</span> (by Remark<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "rem_bigohppties" missing or not unique]</code>(b,c)), we have that the numerator</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_bigohlimitAA.html   ">
+\begin{equation*}
+\log\Big(\frac{\sin x}{x}\Big)
+=\log(1+X)
+= X +O(X^2)
+=-\frac{1}{3!}x^2+O(x^4)
+\end{equation*}
+</div>
+<p class="continuation">and the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_bigohlimitAA.html   ">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{\log\big(\frac{\sin x}{x}\big)}{x^2}
+\amp=\lim_{x\rightarrow 0}\frac{-\frac{1}{3!}x^2+O(x^4)}{x^2}
+=\lim_{x\rightarrow 0}\Big[-\frac{1}{3!}+O(x^2)\Big]
+=-\frac{1}{3!}\\
+\amp=-\frac{1}{6}
+\end{align*}
+</div>
+<span class="incontext"><a href="section-1.html#p-51" class="internal">em contexto</a></span>
+</body>
+</html>

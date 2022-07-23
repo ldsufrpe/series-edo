@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-23T15:11:20-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p>In this example, we'll return to the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_TaylorlimitA.html   ">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{\sin x}{x}
+\end{equation*}
+</div>
+<p class="continuation">of Example <a href="" class="xref" data-knowl="./knowl/eg_TaylorlimitA.html" title="Exemplo 1.14: Um limite simples de uma série de Taylor">Exemplo 1.14</a> and treat it more carefully. By Example<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_bigohsincos" missing or not unique]</code>,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_TaylorlimitA.html   ">
+\begin{equation*}
+\sin x = x-\frac{1}{3!}x^3+O(|x|^5)
+\end{equation*}
+</div>
+<p class="continuation">That is, for small <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\sin x\)</span> is the same as <span class="process-math">\(x-\frac{1}{3!}x^3\text{,}\)</span> up to an error that is bounded by some constant times <span class="process-math">\(|x|^5\text{.}\)</span> So, dividing by <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\frac{\sin x}{x}\)</span> is the same as  <span class="process-math">\(1-\frac{1}{3!}x^2\text{,}\)</span> up to an error that is bounded by some constant times <span class="process-math">\(x^4\)</span> — see Remark<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "rem_bigohppties" missing or not unique]</code>(b). That is</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_TaylorlimitA.html   ">
+\begin{equation*}
+\frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)
+\end{equation*}
+</div>
+<p class="continuation">But any function that is bounded by some constant times <span class="process-math">\(x^4\)</span> (for all <span class="process-math">\(x\)</span> smaller than some constant <span class="process-math">\(D \gt 0\)</span>) necessarily tends to <span class="process-math">\(0\)</span> as <span class="process-math">\(x\rightarrow 0\)</span> — see Remark<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "rem_bigohppties" missing or not unique]</code>(a). . Thus</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_TaylorlimitA.html   ">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{\sin x}{x}
+=\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2+O(x^4)\Big]
+=\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2\Big]
+=1
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-1.html#p-42" class="internal">em contexto</a></span>
+</body>
+</html>

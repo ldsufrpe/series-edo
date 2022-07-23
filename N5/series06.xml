@@ -1,0 +1,2586 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+<section xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Séries de Taylor</title>
+    <introduction></introduction>
+
+    <subsection>
+        <title>Estendendo Polinômios de Taylor</title>
+
+        <p>
+            Lembramos que os polinômios de Taylor fornecem uma hierarquia de aproximações para uma determinada
+            funçãoperto de um determinado ponto <m>a</m>. Normalmente, a qualidade dessas aproximações melhora à medida
+            que subimos na hierarquia.
+            <ul>
+                <li>A aproximação mais grosseira é a aproximação constante <m>f(x)\approx f(a)</m>.
+                </li>
+                <li>Em seguida, vem a aproximação linear, ou linha tangente <m>f(x)\approx f(a) + f'(a)\,(x-a)</m>.
+                </li>
+                <li>Então vem a aproximação quadrática
+                    <me>
+                        f(x)\approx f(a) + f'(a)\,(x-a) +\frac{1}{2} f''(a)\,(x-a)^2
+                    </me>
+                </li>
+                <li>
+                    Em geral, o polinômio de Taylor de grau <m>n</m>, para a função <m>f(x)</m>, sobre o ponto de
+                    expansão <m>a</m>, é o polinômio, <m>T_n(x)</m>, determinados pelos requisitos que <m>
+                    f^{(k)}(a) = T_n^{(k)}(a)
+                </m> para todo <m>0\le k \le n</m>. Isto é, <m>f</m> e <m>T_n</m> tem as mesmas derivadas em <m>a</m>,
+                    até a ordem <m>n</m>. Explicitamente,
+                    <md>
+                        <mrow>
+                            f(x) &amp;\approx T_n(x)
+                        </mrow>
+                        <mrow>
+                            &amp;= f(a) + f'(a)\,(x-a) +\frac{1}{2} f''(a)\,(x-a)^2
+                            +\cdots+\frac{1}{n!} f^{(n)}(a)\,(x-a)^n
+                        </mrow>
+                        <mrow>
+                            &amp;=\sum_{k=0}^n\frac{1}{k!} f^{(k)}(a)\,(x-a)^k
+                        </mrow>
+                    </md>
+                </li>
+            </ul>
+            Estas são, é claro, aproximações
+            <mdash/>
+            muitas vezes aproximações muito boas perto de
+            <m>x=a</m>
+            <mdash/>
+            mas ainda apenas aproximações. Pode-se esperar que, se deixarmos o grau, <m>n</m>, da aproximação ir para o
+            infinito
+            então o erro na aproximação pode ir para zero. Se for esse o caso, então o polinômio de Taylor  <q>
+            infinito
+        </q> seria uma representação exata da função. Vamos ver como isso pode funcionar.
+        </p>
+
+        <p>
+            Fixe um numéro real <m>a</m> suponha que todas as derivadas da função <m>f(x)</m> existem. Então, para
+            qualquer número natural <m>n</m>,
+        </p>
+
+        <fact xml:id="eq_TaylorPolyPlusError">
+            <statement>
+                <p>
+                    <md>
+                        <mrow>
+                            f(x) &amp;=T_n(x) +E_n(x)
+                        </mrow>
+                    </md>
+                </p>
+            </statement>
+        </fact>
+
+        <p>
+            no qual <m>T_n(x)</m> é um polinômio de Taylor de grau <m>n</m>  para a função <m>f(x)</m> em torno de <m>
+            a</m>, e  <m>E_n(x)=f(x)-T_n(x)</m>  é o erro na aproximação  <m>f(x) \approx T_n(x)</m>. O
+            polinômio de Taylor é dado pela fórmula
+
+        </p>
+
+        <fact xml:id="eq_TaylorPolyPlusError_a">
+            <statement>
+                <p>
+                    <md>
+                        <mrow>
+                            T_n(x)&amp;=f(a)+f'(a)\,(x-a)+\cdots+\tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
+                        </mrow>
+                    </md>
+                </p>
+            </statement>
+        </fact>
+        <p>enquanto erro satisfaz
+
+        </p>
+        <fact xml:id="eq_TaylorPolyPlusError_b">
+            <statement>
+                <p>
+                    <md>
+                        <mrow>
+                            E_n(x)=\tfrac{1}{(n+1)!}f^{(n+1)}(c)\, (x-a)^{n+1}
+                        </mrow>
+                    </md>
+                    para algum  <m>c</m> estritamente entre <m>a</m> e <m>x</m>.
+                </p>
+            </statement>
+        </fact>
+
+        <!--        <p>-->
+        <!--            Observe que normalmente não sabemos o valor de <m>c</m> na fórmula do erro. Em vez disso, usamos os limites-->
+        <!--            em <m>c</m> to find bounds on <m>f^{(n+1)}(c)</m> and so bound the error<fn>-->
+        <!--            The discussion here is only supposed to jog your memory. If it is feeling insufficiently jogged, then please-->
+        <!--            look at your notes from last term.-->
+        <!--        </fn>.-->
+        <!--        </p>-->
+
+        <p>
+            Para que nosso polinômio de Taylor seja uma representação exata da função <m>f(x)</m> precisamos que o erro <m>
+            E_n(x)
+        </m> seja nulo. Isso não acontecerá quando <m>n</m> for finito a menos que <m>f(x)</m> seja um polinômio.
+            No entanto, isso pode acontecer quando <m>n \to \infty</m>, e nesse caso podemos escrever  <m>
+            f(x)
+        </m> como o limite
+            <me>
+                f(x)=\lim_{n\rightarrow\infty} T_n(x)
+                =\lim_{n\rightarrow\infty} \sum_{k=0}^n \tfrac{1}{k!}f^{(k)}(a)\, (x-a)^k
+            </me>
+            Este é realmente um limite de somas parciais, e assim podemos escrever
+            <md>
+                <mrow>
+                    f(x)=\sum_{k=0}^\infty \tfrac{1}{k!}f^{(k)}(a)\, (x-a)^k
+                </mrow>
+            </md>
+            que é uma representação em série de potências da função. Vamos formalizar isso na definição a seguir.
+        </p>
+
+        <definition xml:id="defn_taylorSeries">
+            <title>Série de Taylor</title>
+            <statement>
+                <p>
+                    A séries de Taylor para a função <m>f(x)</m> em torno de <m>a</m> é a série de potência
+                    <md>
+                        <mrow>
+                            \sum_{n=0}^\infty \tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
+                        </mrow>
+                    </md>
+                    Quando <m>a=0</m> ambém é chamada série de Maclaurin <m>f(x)</m>.
+                    Se  <m>\lim_{n\rightarrow\infty}E_n(x)=0</m>, então
+                    <md>
+                        <mrow>
+                            f(x)=\sum_{n=0}^\infty \tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
+                        </mrow>
+                    </md>
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            Demonstrar que, para uma dada função, <m>\lim_{n\rightarrow\infty}E_n(x)=0</m> pode ser difícil,
+            porém para muitas das funções comuns da matemática elementar, esse cálculo pode ser simples. Vamos calcular
+            algumas séries de Taylor a seguir.
+        </p>
+
+        <example xml:id="eg_expSeries">
+            <title>Série Exponencial</title>
+            <statement>
+                <p>
+                    Encontre a série Maclaurin para <m>f(x)=e^x</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+
+                    Assim como foi o caso para calcular polinômios de Taylor, precisamos calcular as derivadas da função
+                    em <m>a</m>.Já que se trata de uma série de Maclaurin,  <m>a=0</m>.
+                    Então agora só precisamos encontrar  <m>f^{(k)}(0)</m> para todos os inteiros <m>k\ge 0</m>.
+                </p>
+
+                <p>
+                    Uma vez que <m>\diff{}{x}e^x = e^x</m> temos
+                    <md>
+                        <mrow>
+                            e^x &amp;= f(x) = f'(x) = f''(x) = \cdots = f^{(k)}(x) = \cdots &amp; \text{que produz}
+                        </mrow>
+                        <mrow>
+                            1 &amp;= f(0) = f'(0) = f''(0) = \cdots = f^{(k)}(0) = \cdots.
+                        </mrow>
+                    </md>
+                    As Equações do
+                    <nbsp/>
+                    <xref ref="eq_TaylorPolyPlusError"/>
+                    e
+                    <nbsp/>
+                    <xref ref="eq_TaylorPolyPlusError_a"/>
+                    fornecem
+                    <md>
+                        <mrow>
+                            e^x=f(x)&amp;= 1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+E_n(x)
+                        </mrow>
+                    </md>
+                    Veremos,
+                    <xref ref="eg_expSeriesB"/>
+                    que para qualquer <m>x</m> fixado, <m>\lim\limits_{n\rightarrow\infty}E_n(x)=0</m>.
+                    Consequentemente,
+                    para todo <m>x</m>,
+                    <me>
+                        e^x=\lim_{n\rightarrow\infty}\Big[1 +x + \frac{1}{2} x^2
+                        +\frac{1}{3!} x^3+\cdots+\frac{1}{n!} x^n\Big]
+                        =\sum_{n=0}^\infty \frac{1}{n!}x^n
+                    </me>
+                </p>
+            </solution>
+        </example>
+
+        <p>
+            Vimos até aqui representações de séries de potências para as funções
+            <md>
+                <mrow>
+                    \frac{1}{1-x} &amp;&amp; \frac{1}{(1-x)^2} &amp;&amp; \log(1+x) &amp;&amp; \arctan(x) &amp;&amp;
+                    e^x.
+                </mrow>
+            </md>
+            Desenvolvemos séries para seno e cosseno a seguir.
+        </p>
+
+        <example xml:id="eg_sincosSeries">
+            <title>Séries Seno e Cosseno</title>
+            <p>
+                Vamos usar a série de Maclaurin para representar as funções trigonométricas <m>\sin x</m> e <m>\cos x
+            </m> Para isso, vamos encontrar primeiro as suas derivadas gerais em  <m>x</m>.
+                <md>
+                    <mrow>
+                        f(x)&amp;=\sin x &amp;
+                        f'(x)&amp;=\cos x &amp;
+                        f''(x)&amp;=\!-\sin x &amp;
+                        f^{(3)}(x)&amp;=\!-\cos x
+                    </mrow>
+                    <mrow>
+                        &amp; &amp;
+                        f^{(4)}(x)&amp;=\sin x &amp; \cdots
+                    </mrow>
+                    <mrow>
+                        g(x)&amp;=\cos x &amp;
+                        g'(x)&amp;=\!-\sin x &amp;
+                        g''(x)&amp;=\!-\cos x &amp;
+                        g^{(3)}(x)&amp;=\sin x
+                    </mrow>
+                    <mrow>
+                        &amp; &amp;
+                        g^{(4)}(x)&amp;=\cos x &amp; \cdots
+                    </mrow>
+                </md>
+
+            </p>
+
+            <p>Agora defina <m>x=a=0</m>.
+                <md>
+                    <mrow>
+                        f(x)&amp;=\sin x &amp;
+                        f(0)&amp;=0 &amp;
+                        f'(0)&amp;=1 &amp;
+                        f''(0)&amp;=0 &amp;
+                        f^{(3)}(0)&amp;=\!-1
+                    </mrow>
+                    <mrow>
+                        &amp; &amp;
+                        f^{(4)}(0)&amp;=0 &amp; \cdots
+                    </mrow>
+                    <mrow>
+                        g(x)&amp;=\cos x &amp;
+                        g(0)&amp;=1 &amp;
+                        g'(0)&amp;=0 &amp;
+                        g''(0)&amp;=\!-1 &amp;
+                        g^{(3)}(0)&amp;=0
+                    </mrow>
+                    <mrow>
+                        &amp; &amp;
+                        g^{(4)}(0)&amp;=1 &amp; \cdots
+                    </mrow>
+                </md>
+                Para <m>\sin x</m>, todas as derivadas de ordem par (em <m>x=0</m>) são nulas, enquanto as derivadas
+                ímpares alternam entre <m>1</m> e <m>-1</m>. Similarmente, para <m>\cos x</m>, todas derivadas de ordem
+                ímpar (em <m>x=0</m>) são nulas, enquanto as derivadas pares alternam entre <m>
+                    1
+                </m> e <m>-1</m>. Então, os polinômios de Taylor quem melhor aproximam <m>\sin x</m> e <m>\cos x</m>  em
+                torno de <m>
+                    x=a=0
+                </m> são
+                <md>
+                    <mrow>
+                        \sin x &amp;\approx x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots
+                    </mrow>
+                    <mrow>
+                        \cos x &amp;\approx 1-\tfrac{1}{2!}x^2+\tfrac{1}{4!}x^4-\cdots
+                    </mrow>
+                </md>
+                Veremos no
+                <xref ref="eg_sincosSeriesB"/>
+                mais adiante, que, para ambos <m>\sin x</m> e <m>\cos x</m>, temos <m>
+                    \lim\limits_{n\rightarrow\infty}E_n(x)=0
+                </m> de modo a
+                <md>
+                    <mrow>
+                        f(x)&amp;=\lim_{n\rightarrow\infty}\Big[f(0)+f'(0)\,x+\cdots
+                        +\tfrac{1}{n!}f^{(n)}(0)\, x^n\Big]
+                    </mrow>
+                    <mrow>
+                        g(x)&amp;=\lim_{n\rightarrow\infty}\Big[g(0)+g'(0)\,x+\cdots
+                        +\tfrac{1}{n!}g^{(n)}(0)\, x^n\Big]
+                    </mrow>
+                </md>
+                Revendo os padrões que encontramos nas derivadas, concluímos que, para todo <m>x</m>,
+                <me>
+                    \begin{alignedat}{2}
+                    \sin x &amp;= x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots&amp;
+                    &amp;=\sum_{n=0}^\infty(-1)^n\tfrac{1}{(2n+1)!}x^{2n+1}\\
+                    \cos x &amp;= 1-\tfrac{1}{2!}x^2+\tfrac{1}{4!}x^4-\cdots&amp;
+                    &amp;=\sum_{n=0}^\infty(-1)^n\tfrac{1}{(2n)!}x^{2n}
+                    \end{alignedat}
+                </me>
+                e, em particular, ambas as séries do lado direito convergem para todo <m>x</m>.
+            </p>
+
+            <p>
+                Também poderíamos testar a convergência da série usando o teste da razão. O cálculo das razões de termos
+                sucessivos nessas duas séries nos dá
+                <md>
+                    <mrow>
+                        \left| \frac{A_{n+1}}{A_n} \right|
+                        &amp;= \frac{|x|^{2n+3}/(2n+3)!}{|x|^{2n+1}/(2n+1)!}
+                        = \frac{|x|^2}{(2n+3)(2n+2)}
+                    </mrow>
+                    <mrow>
+                        \left| \frac{A_{n+1}}{A_n} \right|
+                        &amp;= \frac{|x|^{2n+2}/(2n+2)!}{|x|^{2n}/(2n)!}
+                        = \frac{|x|^2}{(2n+2)(2n+1)}
+                    </mrow>
+                </md>
+                para seno e cosseno respectivamente. Portanto quando <m>n \to \infty</m> estas razões tendem a zero e,
+                consequentemente,
+                ambas sas séries são convergentes para todo <m>x</m>.
+            </p>
+        </example>
+
+        <p>
+            Desenvolvemos representações de séries de potências para várias funções importantes. Abaixo o teorema que os
+            resume.
+
+        </p>
+
+        <theorem xml:id="thm_SRimportantTaylorSeries">
+            <statement>
+                <p>
+                    <me>
+                        \begin{alignedat}{5}
+                        e^x &amp;= \sum_{n=0}^\infty\dfrac{x^n}{n!}
+                        &amp;&amp;= 1 +x + \frac{1}{2!} x^2 +\frac{1}{3!} x^3+\cdots
+                        &amp;&amp;\ \text{para todo $-\infty \lt x \lt \infty$} \\
+                        \sin(x) &amp;= \sum_{n=0}^\infty(-1)^n\dfrac{x^{2n+1}}{(2n+1)!}
+                        &amp;&amp;= x-\frac{1}{3!}x^3+\frac{1}{5!}x^5-\cdots
+                        &amp;&amp;\ \text{para todo $-\infty \lt x \lt \infty$} \\
+                        \cos(x) &amp;= \sum_{n=0}^\infty(-1)^n\dfrac{x^{2n}}{(2n)!}
+                        &amp;&amp;= 1-\frac{1}{2!}x^2+\frac{1}{4!}x^4-\cdots
+                        &amp;&amp;\ \text{para todo $-\infty \lt x \lt \infty$} \\
+                        \frac{1}{1-x} &amp;= \sum_{n=0}^\infty x^n
+                        &amp;&amp;= 1 + x+ x^2 + x^3 + \cdots
+                        &amp;&amp;\ \text{para todo $-1 \lt x \lt 1$} \\
+                        \log(1+x) &amp;= \sum_{n=0}^\infty (-1)^n\dfrac{x^{n+1}}{n+1}
+                        &amp;&amp;= x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+                        &amp;&amp;\ \text{para todo $-1 \lt x\le 1$} \\
+                        \arctan x &amp;= \sum_{n=0}^\infty (-1)^n\dfrac{x^{2n+1}}{2n+1}
+                        &amp;&amp;= x -\frac{x^3}{3} +\frac{x^5}{5}-\cdots
+                        &amp;&amp;\ \text{para todo $-1\le x\le 1$}
+                        \end{alignedat}
+                    </me>
+                </p>
+            </statement>
+        </theorem>
+
+
+        <example xml:id="eg_expSeriesB">
+            <title>
+
+                <m>\sum_{n=0}^\infty \frac{1}{n!}x^n</m>
+                =
+                <m>e^x</m>
+            </title>
+            <p>
+                Já vimos no<xref ref="eg_expSeries"/>, que
+                <me>
+                    e^x = 1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+E_n(x)
+                </me>
+                Por (<xref ref="eq_TaylorPolyPlusError_b"/>)
+                <me>
+                    E_n(x) = \frac{1}{(n+1)!}e^c x^{n+1}
+                </me>
+                para algum  <m>c</m> entre <m>0</m> e <m>x</m>. Fixado qualquer número real  <m>x</m>. Vamos agora
+                mostar que
+                <m>E_n(x)</m>
+                converge para zero quando <m>n\rightarrow\infty</m>.
+            </p>
+
+            <p>
+                Para fazer isso, precisamos limitar o tamanho de <m>e^c</m>, e então considere o que acontece se  <m>x
+            </m> é
+                positivo ou negativo.
+                <ul>
+                    <li>
+                        Se <m>x \lt 0</m> então <m>x \leq c \leq 0</m> e portanto <m>e^x \leq e^c \leq e^0=1</m>.
+                    </li>
+                    <li>
+                        Por outro lado, se <m>x\geq 0</m> então <m>0\leq c \leq x</m> e assim <m>1=e^0 \leq e^c \leq
+                        e^x</m>.
+                    </li>
+                </ul>
+                Em qualquer dos casos temos que <m>0 \leq e^c \leq 1+e^x</m>. Logo, o termo que representa o erro
+                satisfaz
+                <me>
+                    |E_n(x)|=\Big|\frac{e^c}{(n+1)!}x^{n+1}\Big| \le [e^x+1]\frac{|x|^{n+1}}{(n+1)!}
+                </me>
+                Afirmamos que esse é o limite superior e, e portanro o erro <m>E_n(x)</m>, tende rapidamente para zero
+                quando <m>n \to
+                \infty</m>.
+            </p>
+
+            <p>
+                Defina o limite superior por  <m>
+                e_n(x)=\tfrac{|x|^{n+1}}{(n+1)!}
+            </m> (exceto para o fator <m>e^x+1</m>, que independe de   <m>n</m>). Para mostrar que isso se reduz a zero
+                quando <m>n\rightarrow\infty</m>,
+                vamos escrevê-lo da seguinte forma:
+                <md>
+                    <mrow>
+                        e_n(x) &amp;= \frac{|x|^{n+1}}{(n+1)!}
+                        = \overbrace{\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3}
+                        \cdots \frac{|x|}{n}\cdot \frac{|x|}{|n+1|}}^{\text{$n+1$ factors}}
+                    </mrow>
+                    <intertext>Agora seja <m>k</m> um inteiro maior que <m>|x|</m>. Podemos dividir o produto
+                    </intertext>
+                    <mrow>
+                        e_n(x)
+                        &amp;= \overbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
+                        \frac{|x|}{k} \right)}^{
+                        \text{$k$ fatores}} \cdot \left( \frac{|x|}{k+1} \cdots \frac{|x|}{|n+1|}\right)
+                    </mrow>
+                    <mrow>
+                        &amp;\leq \underbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
+                        \frac{|x|}{k} \right)}_{=Q(x)}
+                        \cdot
+                        \left( \frac{|x|}{k+1} \right)^{n+1-k}
+                    </mrow>
+                    <mrow>
+                        &amp;= Q(x) \cdot \left( \frac{|x|}{k+1} \right)^{n+1-k}
+                    </mrow>
+                </md>
+                Já que <m>k</m> não dependa de <m>n</m> (embora dependa de <m>x</m>), a função <m>Q(x)
+            </m> não se altera à medida que <m>n</m> cresce. Além disso, sabemos que <m>|x| \lt k+1</m> e então <m>
+                \frac{|x|}{k+1} \lt 1</m>. Portanto quando fazemos <m>n \to \infty</m> o limite acima deve ser zero.
+            </p>
+
+            <p>
+                Alternativamente, compare <m>e_n(x)</m> e <m>e_{n+1}(x)</m>.
+                <me>
+                    \frac{e_{n+1}(x)}{e_n(x)}
+                    =\frac{\vphantom{\Big[}\tfrac{|x|^{n+2}}{(n+2)!}}
+                    {\vphantom{\Big[}\tfrac{|x|^{n+1}}{(n+1)!}}
+                    =\frac{|x|}{n+2}
+                </me>
+                Quando <m>n</m> é maior que, por exemplo <m>2|x|</m>, temos <m>\tfrac{e_{n+1}(x)}{e_n(x)} \lt
+                \half</m>. Ou seja, incrementando o índice  <m>e_n(x)</m> por um decrementa o tamanho de <m>e_n(x)</m> por
+                um fator de pelo menos dois. Como resultado <m>e_n(x)</m> deve tender a zero quando <m>
+                n\rightarrow\infty</m>.
+            </p>
+
+            <p>
+                Consequentemente, para todo <m>x</m>, temos
+                <me>
+                    e^x=\lim_{n\rightarrow\infty}\Big[1 +x + \frac{1}{2} x^2
+                    +\frac{1}{3!} x^3+\cdots+\frac{1}{n!} x^n\Big]
+                    =\sum_{n=0}^\infty \frac{1}{n!}x^n
+                </me>
+            </p>
+        </example>
+
+
+        <!--        <example xml:id="eg_expSeriesC">-->
+        <!--            <title>Optional-->
+        <!--                <mdash/>-->
+        <!--                Another approach to showing that  <m>\sum_{n=0}^\infty \frac{1}{n!}x^n</m> is-->
+        <!--                <m>e^x</m>-->
+        <!--            </title>-->
+        <!--            <p>-->
+        <!--                We already know from Example<xref ref="eg_PWRb"/>, that the series <m>\sum_{n=0}^\infty-->
+        <!--                \frac{1}{n!}x^n-->
+        <!--            </m> converges to some function <m>f(x)</m> for all values of <m>x</m> . All that remains to do is to show-->
+        <!--                that <m>f(x)</m>  is really <m>e^x</m>. We will do this by showing that <m>f(x)</m> and <m>e^x</m> satisfy-->
+        <!--                the same differential equation with the same initial conditions-->
+        <!--                <fn>-->
+        <!--                    Recall that when we solve of a separable differential equation our general solution will have an-->
+        <!--                    arbitrary constant in it. That constant cannot be determined from the differential equation alone-->
+        <!--                    and we need some extra data to find it. This extra information is often information about the system-->
+        <!--                    at its beginning (for example when position or time is zero)-->
+        <!--                    <mdash/>-->
+        <!--                    hence <q>initial conditions</q>. Of course the reader is already familiar with this because it was-->
+        <!--                    covered back in Section-->
+        <!--                    <nbsp/>-->
+        <!--                    <xref ref="sec_sep_de"/>.-->
+        <!--                </fn>-->
+        <!--                .-->
+        <!--                We know that <m>y=e^x</m> satisfies-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \diff{y}{x} &amp;= y &amp;\text{and} &amp;&amp; y(0)=1-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                and by Theorem-->
+        <!--                <nbsp/>-->
+        <!--                <xref ref="thm_linearODE"/>-->
+        <!--                (with <m>a=1</m>, <m>b=0</m> and <m>y(0)=1</m>), this is the only solution. So it suffices to show that <m>-->
+        <!--                f(x)= \sum_{n=0}^\infty \frac{x^n}{n!}-->
+        <!--            </m> satisfies-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \diff{f}{x}&amp;=f(x) &amp;\text{and} &amp;&amp; f(0)&amp;=1.-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--            </p>-->
+
+        <!--            <p>-->
+        <!--                <ul>-->
+        <!--                    <li>-->
+        <!--                        By Theorem<xref ref="thm_SRpsops"/>,-->
+        <!--                        <md>-->
+        <!--                            <mrow>-->
+        <!--                                \diff{f}{x} &amp;= \diff{}{x}\left\{\sum_{n=0}^\infty \frac{1}{n!}x^n\right\}-->
+        <!--                                = \sum_{n=1}^\infty \frac{n}{n!}x^{n-1}-->
+        <!--                                = \sum_{n=1}^\infty \frac{1}{(n-1)!}x^{n-1}-->
+        <!--                            </mrow>-->
+        <!--                            <mrow>-->
+        <!--                                &amp;= \overbrace{1}^{n=1} + \overbrace{x}^{n=2}-->
+        <!--                                + \overbrace{\frac{x^2}{2!}}^{n=3}-->
+        <!--                                + \overbrace{\frac{x^3}{3!}}^{n=4}-->
+        <!--                                + \cdots-->
+        <!--                            </mrow>-->
+        <!--                            <mrow>-->
+        <!--                                &amp;= f(x)-->
+        <!--                            </mrow>-->
+        <!--                        </md>-->
+        <!--                    </li>-->
+        <!--                    <li>-->
+        <!--                        When we substitute <m>x=0</m> into the series we get (see the discussion after Definition-->
+        <!--                        <nbsp/>-->
+        <!--                        <xref ref="def_SRpowerSeries"/>)-->
+        <!--                        <md>-->
+        <!--                            <mrow>-->
+        <!--                                f(0) &amp;= 1 + \frac{0}{1!} + \frac{0}{2!} + \cdots = 1.-->
+        <!--                            </mrow>-->
+        <!--                        </md>-->
+        <!--                    </li>-->
+        <!--                </ul>-->
+        <!--                Hence <m>f(x)</m> solves the same initial value problem and we must have  <m>f(x)=e^x</m>.-->
+        <!--            </p>-->
+        <!--        </example>-->
+
+        <p>
+            Podemos mostrar que os termos de erro nos polinômios de Maclaurin para seno e cosseno vão para zero quando <m>
+            n \to
+            \infty
+        </m> usando praticamente a mesma abordagem do
+
+            <xref ref="eg_expSeriesB"/>.
+        </p>
+        <example xml:id="eg_sincosSeriesB">
+            <title>
+
+                <m>\sum\limits_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}=\sin x</m>
+                e
+                <m>\sum\limits_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}=\cos x</m>
+            </title>
+            <p>
+                Suponha que  <m>f(x)</m> seja <m>\sin x</m> ou <m>\cos x</m>. Sabemos que toda derivada de <m>f(x)</m> será
+                <m>\pm \sin(x)</m>
+                ou <m>\pm \cos(x)</m>. Consequentemente, quando calculamos o termo de erro usando a equação
+
+                <xref ref="eq_TaylorPolyPlusError_b"/>
+                sempre temos <m>\big|f^{(n+1)}(c)\big|\le 1</m> e portanto
+                <md>
+                    <mrow>
+                        |E_n(x)| &amp;\le \frac{|x|^{n+1}}{(n+1)!}.
+                    </mrow>
+                </md>
+                No
+                <xref ref="eg_expSeries"/>, mostramos que <m>\frac{|x|^{n+1}}{(n+1)!} \to 0</m> quando
+                <m>n \to \infty</m>.
+                Já que o erro vai para zero para ambos <m>f(x)=\sin x</m> e <m>
+                f(x)=\cos x</m>, e
+                <md>
+                    <mrow>
+                        f(x)=\lim_{n\rightarrow\infty}\Big[f(0)+f'(0)\,x+\cdots +\tfrac{1}{n!}f^{(n)}(0)\, x^n\Big]
+                    </mrow>
+                </md>
+                como gostariamos.
+            </p>
+
+
+        </example>
+    </subsection>
+
+    <!--<subsubsection><title>Optional <mdash/> More about the Taylor Remainder</title>-->
+    <!--<p>-->
+    <!--In this section, we fix a real number <m>a</m> and a natural number <m>n</m>,-->
+    <!--suppose that all derivatives of the function <m>f(x)</m> exist, and we study the-->
+    <!--error-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--E_n(a,x) &amp;= f(x) - T_n(a,x) -->
+    <!--</mrow>-->
+    <!--<mrow>-->
+    <!--\text{where } -->
+    <!--T_n(a,x)  &amp;=f(a)+f'(a)\,(x-a)+\cdots+\tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--made when we approximate <m>f(x)</m> by the Taylor polynomial <m>T_n(a,x)</m> of degree <m>n</m> for the function <m>f(x)</m>, expanded about <m>a</m>.-->
+    <!--We have already seen,-->
+    <!--in (<xref ref="eq_TaylorPolyPlusError_b"/>), one formula, probably the most commonly used formula, for <m>E_n(a,x)</m>. In the next theorem, we repeat that formula and give a second, commonly used, formula.-->
+    <!--After an example, we give a second theorem that contains some less commonly used formulae.-->
+    <!--</p>-->
+    <!--<theorem xml:id="thm_TaylorRemainderA"><title>Commonly used formulae for the Taylor remainder</title>-->
+    <!--<statement><p>-->
+    <!--The Taylor remainder <m>E_n(a,x)</m> is given by-->
+    <!--<ol label="a">-->
+    <!--<li>-->
+    <!-- (integral form) -->
+    <!-- <me> -->
+    <!--    E_n(a,x)=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}-->
+    <!-- </me>-->
+    <!--</li><li>-->
+    <!--(Lagrange form) -->
+    <!--  <me>-->
+    <!--    E_n(a,x)=\frac{1}{(n+1)!}\,f^{(n+1)}(c)\, (x-a)^{n+1}-->
+    <!--  </me>-->
+    <!--for some <m>c</m> strictly between <m>a</m> and <m>x</m>.-->
+    <!--</li>-->
+    <!--</ol>-->
+    <!--</p></statement>-->
+    <!--</theorem>-->
+    <!--<p>-->
+    <!--Notice that the integral form of the error is explicit - we could, in principle, compute it exactly. (Of course if we could do that, we probably wouldn't need to use a Taylor -->
+    <!--expansion to approximate <m>f</m>.) This contrasts with the Lagrange form which is an <sq>existential</sq> statement - it tells us that <sq><m>c</m></sq> exists, but not how to compute it.-->
+    <!--</p>-->
+    <!--<proof>-->
+    <!--<p>-->
+
+
+    <!--<ol label="a">-->
+    <!--<li>-->
+    <!--<p>-->
+    <!--We will give two proofs. The first is shorter and simpler, but uses some trickery. The second is longer, but is more straightforward. It uses a technique called mathematical induction.-->
+    <!--</p>-->
+
+    <!--<p><em>Proof 1:</em>&#x20;&#x20;&#x20;-->
+    <!--We are going to use a little trickery to get a simple proof.-->
+    <!--We simply view <m>x</m> as being fixed and study the dependence of <m>E_n(a,x)</m>-->
+    <!--on <m>a</m>. To emphasise that that is what we are doing, we define-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--S(t) &amp;= f(x) - f(t) -f'(t)\,(x-t)-\tfrac{1}{2}f''(t)\,(x-t)^2-->
+    <!--</mrow><mrow>-->
+    <!--     &amp;\hskip2in -\cdots-\tfrac{1}{n!}f^{(n)}(t)\, (x-t)^n-->
+    <!--\tag{$*$}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--and observe that <m>E_n(a,x) = S(a)</m>.-->
+    <!--</p>-->
+
+    <!--<p>-->
+    <!--So, by the fundamental theorem of calculus (Theorem<nbsp/><xref ref="thm_INTfundthmofcalc"/>), the function <m>S(t)</m> is determined by its derivative, <m>S'(t)</m>, and its value at a single point. Finding a value of <m>S(t)</m> for -->
+    <!--one value of <m>t</m> is easy. Substitute <m>t=x</m> into <m>(*)</m> to yield <m>S(x)=0</m>. -->
+    <!--To find <m>S'(t)</m>, apply <m>\diff{}{t}</m> to both sides of <m>(*)</m>.  Recalling that-->
+    <!--<m>x</m> is just a constant parameter,-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--S'(t)&amp;= 0 - {\color{blue}{f'(t)}} -->
+    <!--         - \big[{\color{red}{f''(t)(x\!-\!t)}}-{\color{blue}{f'(t)}}\big]-->
+    <!--</mrow><mrow>-->
+    <!--&amp;\hskip0.5in-->
+    <!--         -\big[\tfrac{1}{2}f^{(3)}(t)(x\!-\!t)^2-{\color{red}{f''(t)(x\!-\!t)}}\big]-->
+    <!--</mrow><mrow>-->
+    <!--&amp;\hskip0.5in  -\cdots-\big[\tfrac{1}{n!}  f^{(n+1)}(t)\,(x-t)^n-->
+    <!--               -\tfrac{1}{(n-1)!}f^{(n)}(t)\,(x-t)^{n-1} \big]-->
+    <!--</mrow><mrow>-->
+    <!--&amp;=-\tfrac{1}{n!}  f^{(n+1)}(t)\,(x-t)^n-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--So, by the fundamental theorem of calculus, <m>S(x)=S(a)+\int_a^x S'(t)\,\dee{t}</m> and-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--E_n(a,x) &amp;= -\big[S(x)-S(a)\big] = - \int_a^x S'(t)\,\dee{t}-->
+    <!--</mrow><mrow>-->
+    <!--&amp;=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--</p>-->
+
+    <!--<p><em>Proof 2:</em>&#x20;&#x20;&#x20;-->
+    <!--The proof that we have just given was short, but also very tricky -&#45;&#45; almost noone could create that proof without big hints. Here is another much less tricky, but also commonly used, proof.-->
+    <!--<ul>-->
+    <!--<li>-->
+    <!--First consider the case <m>n=0</m>. When <m>n=0</m>,-->
+    <!--<me>-->
+    <!--E_0(a,x) = f(x) - T_0(a,x) = f(x) -f(a)-->
+    <!--</me>-->
+    <!--The fundamental theorem of calculus gives-->
+    <!--<me>-->
+    <!--f(x)-f(a) = \int_a^x f'(t)\,\dee{t}-->
+    <!--</me>-->
+    <!--so that-->
+    <!--<me>-->
+    <!--E_0(a,x) = \int_a^x f'(t)\,\dee{t}-->
+    <!--</me>-->
+    <!--That is exactly the <m>n=0</m> case of part (a).-->
+    <!--</li><li>-->
+    <!--Next fix any integer <m>n\ge 0</m> and suppose that we already know  that -->
+    <!--<me>-->
+    <!-- E_n(a,x)=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}-->
+    <!--</me>-->
+    <!--Apply integration by parts (Theorem<nbsp/><xref ref="thm_PRTSintbyparts"/>) to this integral with-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--u(t)&amp;=f^{(n+1)}(t)-->
+    <!--</mrow><mrow>-->
+    <!--\dee{v}&amp;= \frac{1}{n!}(x-t)^n\,\dee{t},\qquad -->
+    <!--v(t)=- \frac{1}{(n+1)!}(x-t)^{n+1}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Since <m>v(x)=0</m>, integration by parts gives-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--&amp;E_n(a,x)=u(x)v(x)-u(a)v(a)-\int_a^x v(t) u'(t)\,\dee{t} -->
+    <!--</mrow><mrow>-->
+    <!--   &amp;\quad=\frac{1}{(n+1)!}f^{(n+1)}(a)\, (x-a)^{n+1}-->
+    <!--</mrow><mrow>-->
+    <!--   &amp;\hskip0.5in-->
+    <!--    +\int_a^x \frac{1}{(n+1)!}f^{(n+2)}(t)\, (x-t)^{n+1}\,\dee{t}-->
+    <!--\tag{$**$}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Now, we defined-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--E_n(a,x) &amp;= f(x) - f(a) -f'(a)\,(x-a)-\tfrac{1}{2}f''(a)\,(x-a)^2-->
+    <!--</mrow><mrow>-->
+    <!--&amp;\hskip1in-->
+    <!--                      -\cdots-\tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--so-->
+    <!--<me>-->
+    <!--E_{n+1}(a,x) = E_n(a,x)-\tfrac{1}{(n+1)!}f^{(n+1)}(a)\, (x-a)^{n+1}-->
+    <!--</me>-->
+    <!--This formula expresses <m>E_{n+1}(a,x)</m> in terms of <m>E_n(a,x)</m>. That's called a-->
+    <!--reduction formula.-->
+    <!--Combining the reduction formula with (<m>**</m>) gives-->
+    <!--<me>-->
+    <!--E_{n+1}(a,x)=\int_a^x \frac{1}{(n+1)!}f^{(n+2)}(t)\, (x-t)^{n+1}\,\dee{t}-->
+    <!--</me>-->
+    <!--</li><li>-->
+    <!--<p>-->
+    <!--Let's pause to summarise what we have learned in the last two bullets.-->
+    <!--Use the notation <m>P(n)</m> to stand for the statement -->
+    <!--<q><m>E_n(a,x)=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}</m></q>.-->
+    <!--To prove part (a) of the theorem, we need to prove that the statement <m>P(n)</m>-->
+    <!--is true for all integers <m>n\ge 0</m>.-->
+    <!--In the first bullet, we showed that the statement <m>P(0)</m> is true.-->
+    <!--In the second bullet, we showed that if, for some integer <m>n\ge 0</m>,-->
+    <!--the statement <m>P(n)</m> is true, then the statement <m>P(n+1)</m> is also true. -->
+    <!--Consequently,-->
+    <!--<ul>-->
+    <!--<li>-->
+    <!--<m>P(0)</m> is true by the first bullet and then-->
+    <!--</li><li> <m>P(1)</m> is true by the second bullet with <m>n=0</m> and then-->
+    <!--</li><li> <m>P(2)</m> is true by the second bullet with <m>n=1</m> and then-->
+    <!--</li><li> <m>P(3)</m> is true by the second bullet with <m>n=2</m> -->
+    <!--</li><li> and so on, for ever and ever.-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--That tells us that <m>P(n)</m> is true for all integers <m>n\ge 0</m>, which is -->
+    <!--exactly part (a) of the theorem. This proof technique is called mathematical-->
+    <!--induction<fn>While the use of the ideas of induction goes back over 2000 years,-->
+    <!--the first recorded rigorous use of induction appeared in the work of Levi ben Gershon (1288<ndash/>1344, better known as Gersonides). The first explicit formulation of mathematical induction was given by the French mathematician Blaise Pascal in 1665.</fn>.  -->
+    <!--</p>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</p>-->
+
+
+    <!--</li><li>-->
+    <!--<p>-->
+    <!--We have already seen one proof in the optional Section 3.4.9 of the CLP-1 text. We will see two more proofs here.-->
+    <!--</p>-->
+    <!--<p>-->
+    <!--<em>Proof 1:</em>&#x20;&#x20;&#x20; We apply the generalised mean value theorem, which -->
+    <!--is Theorem 3.4.38 in the CLP-1 text. It says that-->
+    <!--<me>-->
+    <!--\frac{F(b)-F(a)}{G(b)-G(a)} = \frac{F'(c)}{G'(c)}-->
+    <!--\tag{GMVT}</me>-->
+    <!--for some <m>c</m> strictly between<fn>In Theorem 3.4.38 in the CLP-1 text, we assumed, for simplicity, that <m>a\lt b</m>. To get (GVMT) when <m>b\lt a</m> simply exchange <m>a</m> and <m>b</m> -->
+    <!--in Theorem 3.4.38. </fn> <m>a</m> and <m>b</m>. We apply (GMVT) with-->
+    <!--<m>b=x</m>, <m>F(t)=S(t)</m> and <m>G(t)=(x-t)^{n+1}</m>. This gives-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--E_n(a,x)-->
+    <!--&amp;= -\big[S(x)-S(a)\big] =-\frac{S'(c)}{G'(c)}\big[G(x)-G(a)\big] -->
+    <!--</mrow><mrow>-->
+    <!--&amp;=-\frac{ -\frac{1}{n!}  f^{(n+1)}(c)\,(x-c)^n}{-(n+1)(x-c)^n}\ \big[0-(x-a)^{n+1}\big]-->
+    <!--</mrow><mrow>-->
+    <!--&amp;=\frac{1}{(n+1)!}f^{(n+1)}(c)(x-a)^{n+1}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Don't forget, when computing <m>G'(c)</m>, that <m>G</m> is a function of <m>t</m> -->
+    <!--with <m>x</m> just a fixed parameter.-->
+    <!--</p> -->
+
+    <!--<p>-->
+    <!--<em>Proof 2:</em>&#x20;&#x20;&#x20; We apply Theorem <xref ref="thm_AVwtmvt"/> (the mean value theorem for weighted integrals). If <m>a\lt x</m>,  we use the weight function <m>w(t) = \frac{1}{n!} (x-t)^n</m>, which is strictly positive for all <m>a\lt t\lt x</m>.-->
+    <!--By part (a) this gives-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--E_n(a,x) &amp;=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t} -->
+    <!--</mrow><mrow>-->
+    <!--    &amp;= f^{(n+1)}(c) \int_a^x \frac{1}{n!} (x-t)^n\,\dee{t} \qquad-->
+    <!--          \text{for some } a\lt c\lt x-->
+    <!--</mrow><mrow>-->
+    <!--    &amp;= f^{(n+1)}(c) \left[-\frac{1}{n!}\frac{(x-t)^{n+1}}{n+1}\right]_a^x-->
+    <!--</mrow><mrow> -->
+    <!--    &amp;= \frac{1}{(n+1)!}f^{(n+1)}(c)\,(x-a)^{n+1} -->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!-- If <m>x\lt a</m>,  we instead use the weight function  <m>w(t) = \frac{1}{n!} (t-x)^n</m>, which is strictly positive for all <m>x\lt t\lt a</m>. This gives-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--E_n(a,x) &amp;=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t} -->
+    <!--</mrow><mrow>-->
+    <!--      &amp;=-(-1)^n\int^a_x \frac{1}{n!}f^{(n+1)}(t)\, (t-x)^n\,\dee{t}  -->
+    <!--</mrow><mrow>-->
+    <!--    &amp;=(-1)^{n+1} f^{(n+1)}(c) \int_x^a \frac{1}{n!} (t-x)^n\,\dee{t} \qquad-->
+    <!--          \text{for some } x\lt c\lt a -->
+    <!--</mrow><mrow>-->
+    <!--    &amp;= (-1)^{n+1} f^{(n+1)}(c) -->
+    <!--             \left[\frac{1}{n!}\frac{(t-x)^{n+1}}{n+1}\right]_x^a -->
+    <!--</mrow><mrow>-->
+    <!--    &amp;= \frac{1}{(n+1)!}f^{(n+1)}(c)\, (-1)^{n+1} (a-x)^{n+1} -->
+    <!--</mrow><mrow>-->
+    <!--    &amp;= \frac{1}{(n+1)!}f^{(n+1)}(c)\,(x-a)^{n+1} -->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--</p>-->
+    <!--</li>-->
+    <!--</ol>-->
+    <!--</p>-->
+    <!--</proof>-->
+    <!--<p>-->
+    <!--Theorem <nbsp/><xref ref="thm_TaylorRemainderA"/> has provided us with two formulae for-->
+    <!--the Taylor remainder <m>E_n(a,x)</m>. The formula of part (b),-->
+    <!--<m>E_n(a,x)=\frac{1}{(n+1)!}\,f^{(n+1)}(c)\, (x-a)^{n+1}</m>, is probably the -->
+    <!--easiest to use, and the most commonly used, formula for <m>E_n(a,x)</m>.-->
+    <!--The formula of part (a), <m>E_n(a,x)=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}</m>, while a -->
+    <!--bit harder to apply, gives a bit better bound than that of part (b) (in the proof of -->
+    <!--Theorem<nbsp/><xref ref="thm_TaylorRemainderA"/> we showed that part (b) -->
+    <!--follows from part (a)). Here is an example in which we use both parts. -->
+    <!--</p>-->
+
+    <!--<example xml:id="eg_integralRemainder">-->
+    <!--<p>-->
+    <!--In Theorem<nbsp/><xref ref="thm_SRimportantTaylorSeries"/> we stated that-->
+    <!--<me>-->
+    <!--\log(1+x) = \sum_{n=0}^\infty (-1)^n\frac{x^{n+1}}{n+1}-->
+    <!--     = x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots -->
+    <!--\tag{S1}</me>-->
+    <!--for all <m>-1\lt x\le 1</m>.-->
+    <!--But, so far, we have not justified this statement. We do so now, using (both parts of) -->
+    <!--Theorem<nbsp/><xref ref="thm_TaylorRemainderA"/>. We start by setting -->
+    <!--<m>f(x)=\log(1+x)</m> and finding the Taylor polynomials <m>T_n(0,x)</m>, and the corresponding errors <m>E_n(0,x)</m>, for <m>f(x)</m>.-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  f(x) &amp;= \log(1+x) &amp; f(0) &amp;= \log 1 = 0 -->
+    <!--</mrow><mrow>-->
+    <!--  f'(x) &amp;= \frac{1}{1+x} &amp; f'(0) &amp;= 1 -->
+    <!--</mrow><mrow>-->
+    <!--  f''(x) &amp;= \frac{-1}{(1+x)^2} &amp; f''(0) &amp;= -1 -->
+    <!--\</mrow><mrow>-->
+    <!--  f'''(x) &amp;= \frac{2}{(1+x)^3} &amp; f'''(1) &amp;= 2 -->
+    <!--</mrow><mrow>-->
+    <!--  f^{(4)}(x) &amp;= \frac{-2\times 3}{(1+x)^4} &amp; f^{(4)}(0) &amp;= -3! -->
+    <!--\</mrow><mrow>-->
+    <!--  f^{(5)}(x) &amp;= \frac{2\times 3\times 4}{(1+x)^5} &amp; f^{(5)}(0) &amp;= 4! -->
+    <!--\</mrow><mrow>-->
+    <!--             &amp;\ \ \ \vdots &amp;  &amp;\ \ \ \vdots -->
+    <!--</mrow><mrow>-->
+    <!--  f^{(n)}(x)&amp;=\frac{(-1)^{n+1}(n-1)!}{(1+x)^n} &amp; f^{(n)}(0) &amp;= (-1)^{n+1}(n-1)!-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--So the Taylor polynomial of degree <m>n</m> for the function <m>f(x)=\log(1+x)</m>,-->
+    <!--expanded about <m>a=0</m>, is-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--T_n(0,x) &amp;=f(0)+f'(0)\,x+\cdots+\tfrac{1}{n!}f^{(n)}(0)\, x^n -->
+    <!--</mrow><mrow>-->
+    <!-- &amp;= x - \frac{1}{2}x^2 + \frac{1}{3}x^3 - \frac{1}{4}x^4 + \frac{1}{5}x^5 -->
+    <!--           +\cdots + \frac{(-1)^{n+1}}{n}x^n-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Theorem<nbsp/><xref ref="thm_TaylorRemainderA"/> gives us two formulae for the -->
+    <!--error <m>E_n(0,x) = f(x) - T_n(0,x)</m> made when we approximate <m>f(x)</m> -->
+    <!--by <m>T_n(0,x)</m>. Part (a) of the theorem gives-->
+    <!--<me>-->
+    <!--E_n(0,x) = \int_0^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}-->
+    <!--         = (-1)^n \int_0^x \frac{(x-t)^n}{(1+t)^{n+1}}\,\dee{t}-->
+    <!--\tag{Ea}</me>-->
+    <!--and part (b) gives-->
+    <!--<me>-->
+    <!--E_n(0,x)=\frac{1}{(n+1)!}\,f^{(n+1)}(c)\, x^{n+1}  -->
+    <!--        = (-1)^n\,\frac{1}{n+1}\,\frac{x^{n+1}}{(1+c)^{n+1}}-->
+    <!--\tag{Eb}</me>-->
+    <!--for some (unknown) <m>c</m> between <m>0</m> and <m>x</m>. The statement (S1), that we wish to prove, is equivalent to the statement-->
+    <!--<me>-->
+    <!--\lim_{n\rightarrow\infty} E_n(0,x)=0 \qquad\text{for all }-1\lt x\le 1 -->
+    <!--\tag{S2}</me>-->
+    <!--and we will now show that (S2) is true.-->
+    <!--<dl>-->
+    <!--<li>-->
+    <!--<title>The case <m>x=0</m>:</title>-->
+    <!--<p>-->
+    <!--This case is trivial, since, when <m>x=0</m>, <m>E_n(0,x)=0</m> for all <m>n</m>.-->
+    <!--</p>-->
+    <!--</li><li>-->
+    <!--<title>The case <m>0\lt x\le 1</m>:</title>-->
+    <!--<p>-->
+    <!--This case is relatively easy to deal with using (Eb). In this case <m>0\lt x\le 1</m>,-->
+    <!--so that the <m>c</m> of (Eb) must be positive and-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--\left|E_n(0,x)\right| -->
+    <!--&amp;= \frac{1}{n+1}\frac{x^{n+1}}{(1+c)^{n+1}}-->
+    <!--</mrow><mrow>-->
+    <!--&amp;\le \frac{1}{n+1}\frac{1^{n+1}}{(1+0)^{n+1}}-->
+    <!--</mrow><mrow> -->
+    <!--&amp;=\frac{1}{n+1}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--converges to zero as <m>n\rightarrow\infty</m>.-->
+    <!--</p>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<title>The case <m>-1\lt x\lt 0</m>:</title>-->
+    <!--<p>-->
+    <!--When <m>-1\lt x\lt 0</m> is close to <m>-1</m>, (Eb) is not -->
+    <!--sufficient to show that (S2) is true. To see this, let's consider the -->
+    <!--example <m>x=-0.8</m>. All we know about the <m>c</m> of (Eb) is that it has to be-->
+    <!--between <m>0</m> and <m>-0.8</m>. For example, (Eb) certainly allows <m>c</m> to be <m>-0.6</m> -->
+    <!--and then-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--&amp;\left|(-1)^n\frac{1}{n+1}\frac{x^{n+1}}{(1+c)^{n+1}}-->
+    <!--       \right|_{\genfrac{}{}{0pt}{}{x=-0.8}{c=-0.6}}-->
+    <!--</mrow><mrow>-->
+    <!--&amp;\hskip0.25in=\frac{1}{n+1}\frac{0.8^{n+1}}{(1-0.6)^{n+1}}-->
+    <!--</mrow><mrow>-->
+    <!--&amp;\hskip0.25in=\frac{1}{n+1}2^{n+1}-->
+    <!--</mrow>-->
+    <!--</md>   -->
+    <!--goes to <m>+\infty</m> as <m>n\rightarrow\infty</m>.-->
+    <!--</p> -->
+
+    <!--<p>-->
+    <!--Note that, while this does tell us that (Eb) is not sufficient to prove (S2), when <m>x</m> is close to <m>-1</m>, it does not also tell us that <m>\lim\limits_{n\rightarrow\infty}|E_n(0,-0.8)|=+\infty</m> (which would imply that (S2) is false)  <mdash/> <m>c</m> could equally well be <m>-0.2</m> -->
+    <!--and then -->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--&amp;\left|(-1)^n\frac{1}{n+1}\frac{x^{n+1}}{(1+c)^{n+1}}-->
+    <!--       \right|_{\genfrac{}{}{0pt}{}{x=-0.8}{c=-0.2}}-->
+    <!--</mrow><mrow>-->
+    <!--&amp;\hskip0.25in=\frac{1}{n+1}\frac{0.8^{n+1}}{(1-0.2)^{n+1}}-->
+    <!--</mrow><mrow>-->
+    <!--&amp;\hskip0.25in=\frac{1}{n+1}-->
+    <!--</mrow>-->
+    <!--</md>   -->
+    <!--goes to <m>0</m> as <m>n\rightarrow\infty</m>.-->
+    <!--</p>-->
+
+    <!--<p>-->
+    <!--We'll now use (Ea) (which has the advantage of not containing any unknown free parameter <m>c</m>)-->
+    <!--to verify (S2) when <m>-1\lt x\lt 0</m>. Rewrite the right hand side of (Ea)-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--&amp; (-1)^n \int_0^x \frac{(x-t)^n}{(1+t)^{n+1}}\,\dee{t}-->
+    <!--=-\int_x^0 \frac{(t-x)^n}{(1+t)^{n+1}}\,\dee{t} -->
+    <!--</mrow><mrow>-->
+    <!--&amp;=-\int_0^{-x}\frac{s^n}{(1+x+s)^{n+1}}\,\dee{s}-->
+    <!--\  s=t-x,\,\dee{s}=\dee{t} -->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--The exact evaluation of this integral is very messy and not very illuminating. Instead, we bound it.-->
+    <!--Note that, for <m>1+x\gt 0</m>,-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--\diff{}{s}\left(\frac{s}{1+x+s}\right) -->
+    <!--&amp;= \diff{}{s}\left(\frac{1+x+s-(1+x)}{1+x+s} \right)-->
+    <!--</mrow><mrow>-->
+    <!--&amp;= \diff{}{s}\left(1- \frac{1+x}{1+x+s}\right) -->
+    <!--</mrow><mrow>-->
+    <!--&amp;=\frac{1+x}{(1+x+s)^2}-->
+    <!--\gt 0-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--so that <m>\frac{s}{1+x+s}</m> increases as <m>s</m> increases. Consequently, the biggest value that -->
+    <!--<m>\frac{s}{1+x+s}</m> takes on the domain of integration  <m>0\le s\le -x=|x|</m> is-->
+    <!--<me>-->
+    <!--\frac{s}{1+x+s}\bigg|_{s=-x} = -x = |x|-->
+    <!--</me>-->
+    <!--and the integrand-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--0\le \frac{s^n}{[1+x+s]^{n+1}} -->
+    <!--  &amp;=\left(\frac{s}{1+x+s}\right)^n\frac{1}{1+x+s}-->
+    <!--  </mrow><mrow>-->
+    <!--  &amp;\le \frac{|x|^n}{1+x+s}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Consequently,-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--\left|E_n(0,x)\right| -->
+    <!--&amp;= \left|(-1)^n \int_0^x \frac{(x-t)^n}{(1+t)^{n+1}}\,\dee{t}\right|-->
+    <!--</mrow><mrow>-->
+    <!--&amp;=\int_0^{-x}\frac{s^n}{[1+x+s]^{n+1}}\,\dee{s} -->
+    <!--</mrow><mrow>-->
+    <!--&amp;\le |x|^n \int_0^{-x}\frac{1}{1+x+s}\,\dee{s}-->
+    <!--</mrow><mrow>-->
+    <!--&amp;=|x|^n\Big[\log(1+x+s)\Big]_{s=0}^{s=-x} -->
+    <!--</mrow><mrow>-->
+    <!--&amp;= |x|^n [-\log(1+x)]-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--converges to zero as <m>n\rightarrow\infty</m> for each fixed <m>-1\lt x\lt 0</m>.-->
+    <!--</p>-->
+    <!--</li>-->
+    <!--</dl>-->
+    <!--So we have verified (S2), as desired.-->
+    <!--</p>-->
+
+    <!--</example>-->
+
+    <!--<p>-->
+    <!--As we said above, Theorem<nbsp/><xref ref="thm_TaylorRemainderA"/> gave the two most-->
+    <!--commonly used formulae for the Taylor remainder. Here are some less commonly used, but occasionally useful, formulae.-->
+    <!--</p>-->
+
+    <!--<theorem xml:id="thm_TaylorRemainderB"><title>More formulae for the Taylor remainder</title>-->
+    <!--<statement><p>-->
+    <!--<ol label="a">-->
+    <!--<li>-->
+    <!--If <m>G(t)</m> is differentiable<fn>Note that the function <m>G</m> need not be related to <m>f</m>. It just has to be differentiable with a nonzero derivative.</fn> and <m>G'(c)</m> is nonzero for all <m>c</m> strictly -->
+    <!--between <m>a</m> and <m>x</m>, then the Taylor remainder-->
+    <!--<me>-->
+    <!--E_n(a,x)=\frac{1}{n!} f^{(n+1)}(c)\,\frac{G(x)-G(a)}{G'(c)}\, (x-c)^n-->
+    <!--</me> -->
+    <!--for some <m>c</m> strictly between <m>a</m> and <m>x</m>.-->
+    <!--</li><li>-->
+    <!-- (Cauchy form) -->
+    <!-- <me> -->
+    <!--    E_n(a,x)=\frac{1}{n!}f^{(n+1)}(c)\, (x-c)^n(x-a)-->
+    <!-- </me>-->
+    <!--for some <m>c</m> strictly between <m>a</m> and <m>x</m>.-->
+    <!--</li>-->
+    <!--</ol>-->
+    <!--</p></statement>-->
+    <!--</theorem>-->
+    <!--<proof>-->
+    <!--<p>-->
+    <!--As in the proof of Theorem<nbsp/><xref ref="thm_TaylorRemainderA"/>, we define-->
+    <!--<me>-->
+    <!--S(t) = f(x) - f(t) -f'(t)\,(x\!-\!t)-\tfrac{1}{2}f''(t)\,(x\!-\!t)^2-->
+    <!--                      -\cdots-\tfrac{1}{n!}f^{(n)}(t)\, (x\!-\!t)^n-->
+    <!--</me>-->
+    <!--and observe that <m>E_n(a,x) = S(a)</m> and <m>S(x)=0</m> and-->
+    <!--<m>S'(t)= -\tfrac{1}{n!}  f^{(n+1)}(t)\,(x-t)^n</m>.-->
+    <!--<ol label="a">-->
+    <!--<li>-->
+    <!--Recall that the generalised mean-value theorem, which -->
+    <!--is Theorem 3.4.38 in the CLP-1 text, says that-->
+    <!--<me>-->
+    <!--\frac{F(b)-F(a)}{G(b)-G(a)} = \frac{F'(c)}{G'(c)}-->
+    <!--\tag{GMVT}</me>-->
+    <!--for some <m>c</m> strictly between <m>a</m> and <m>b</m>. We apply this theorem with-->
+    <!--<m>b=x</m> and <m>F(t)=S(t)</m>. This gives-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--E_n(a,x)-->
+    <!--&amp;= -\big[S(x)-S(a)\big] =-\frac{S'(c)}{G'(c)}\big[G(x)-G(a)\big]-->
+    <!--</mrow><mrow>-->
+    <!--&amp;=-\frac{ -\frac{1}{n!}  f^{(n+1)}(c)\,(x-c)^n}{G'(c)}\ \big[G(x)-G(a)\big]-->
+    <!--</mrow><mrow>-->
+    <!--&amp;=\frac{1}{n!} f^{(n+1)}(c)\,\frac{G(x)-G(a)}{G'(c)}\, (x-c)^n-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--</li><li>-->
+    <!--Apply part (a) with <m>G(x)=x</m>. This gives-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--E_n(a,x)-->
+    <!--&amp;=\frac{1}{n!} f^{(n+1)}(c)\,\frac{x-a}{1}\, (x-c)^n -->
+    <!--</mrow><mrow>-->
+    <!--&amp;=\frac{1}{n!} f^{(n+1)}(c)\, (x-c)^n(x-a)-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--for some <m>c</m> strictly between <m>a</m> and <m>b</m>. -->
+    <!--</li>-->
+    <!--</ol>-->
+    <!--</p>-->
+    <!--</proof>-->
+
+    <!--<example xml:id="eg_cauchyRemainder"><title>Example<nbsp/><xref ref="eg_integralRemainder"/>, continued</title>-->
+    <!--<p>-->
+    <!--In Example<nbsp/><xref ref="eg_integralRemainder"/> we verified that-->
+    <!--<me>-->
+    <!--\log(1+x) = \sum_{n=0}^\infty (-1)^n\frac{x^{n+1}}{n+1}-->
+    <!--     = x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots-->
+    <!--\tag{S1}</me>-->
+    <!--for all <m>-1\lt x\le 1</m>.-->
+    <!--There we used the Lagrange form,-->
+    <!--<me>-->
+    <!--E_n(a,x)=\frac{1}{(n+1)!}\,f^{(n+1)}(c)\, (x-a)^{n+1}-->
+    <!--</me> -->
+    <!--for the Taylor remainder to verify (S1) when <m>0\le x\le 1</m>, but we also saw that it is not possible to use the Lagrange form to verify (S1) when <m>x</m> is close to <m>-1</m>. We instead used the integral form -->
+    <!--<me>-->
+    <!--E_n(a,x) = \int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}-->
+    <!--</me>-->
+    <!--We will now use the Cauchy form (part (b) of Theorem<nbsp/><xref ref="thm_TaylorRemainderB"/>)-->
+    <!--<me>-->
+    <!--E_n(a,x)=\frac{1}{n!}f^{(n+1)}(c)\, (x-c)^n(x-a)-->
+    <!--</me>-->
+    <!--to verify-->
+    <!--<me>-->
+    <!--\lim_{n\rightarrow\infty} E_n(0,x)=0-->
+    <!--\tag{S2}</me>-->
+    <!--when <m>-1\lt x\lt 0</m>.-->
+    <!--We have already noted that (S2) is equivalent to (S1).-->
+    <!--</p>-->
+
+    <!--<p>-->
+    <!--Write <m>f(x)=\log(1+x)</m>. We saw in Example<nbsp/><xref ref="eg_integralRemainder"/> that-->
+    <!--<me>-->
+    <!--f^{(n+1)}(x) = \frac{(-1)^n n!}{(1+x)^{n+1}}-->
+    <!--</me> -->
+    <!--So, in this example, the Cauchy form is-->
+    <!--<me>-->
+    <!--E_n(0,x)=(-1)^n\frac{(x-c)^nx}{(1+c)^{n+1}}-->
+    <!--</me>-->
+    <!--for some <m>x\lt c\lt 0</m>. When <m>-1\lt x\lt c \lt 0</m>, -->
+    <!--<ul>-->
+    <!--<li>-->
+    <!--<m>c</m> and <m>x</m> are negative and <m>1+x</m>, <m>1+c</m> and <m>c-x</m> are (strictly) positive so that-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--c(1+x)\lt 0-->
+    <!--&amp;\implies c \lt -cx-->
+    <!--\implies c-x \lt -x-xc=|x|(1+c)-->
+    <!--</mrow><mrow>-->
+    <!--&amp;\implies \left|\frac{x-c}{1+c}\right|-->
+    <!--=\frac{c-x}{1+c}\lt |x|-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!-- so that <m>\left|\frac{x-c}{1+c}\right|^n \lt |x|^n</m> -->
+    <!--  and-->
+    <!--</li><li>-->
+    <!--  the distance from <m>-1</m> to <m>c</m>, namely <m>c-(-1)=1+c</m> is greater than the distance from-->
+    <!--  <m>-1</m> to <m>x</m>, namely <m>x-(-1)=1+x</m>, so that <m>\frac{1}{1+c}\lt\frac{1}{1+x}</m>.-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--So, for <m>-1\lt x\lt c\lt 0</m>,-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--|E_n(0,x)|=\left|\frac{x-c}{1+c}\right|^n\frac{|x|}{1+c}-->
+    <!--          \lt \frac{|x|^{n+1}}{1+c}-->
+    <!--          \lt \frac{|x|^{n+1}}{1+x}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--goes to zero as <m>n\rightarrow\infty</m>.-->
+    <!--</p>-->
+    <!--</example>-->
+    <!--</subsubsection>-->
+
+
+    <subsection>
+        <title>Cálculos com a Série de Taylor</title>
+
+        <p>
+            A série de Taylor tem muitas aplicações. Um dos mais imediatos é que eles
+            nos dão uma forma alternativa de calcular muitas funções. Por exemplo, a primeira definição que vemos para
+            as funções seno e cosseno é em triângulos. Essas definições, no entanto, não se prestam ao cálculo
+            de seno e cosseno, exceto em ângulos muito especiais. Armados com representações de séries de potências, no
+            entanto, podemos computá-las com altíssima precisão em qualquer ângulo. Para ilustrar isso, considere o
+            cálculo de
+            <m>\pi</m>
+            <mdash/>
+            um problema que remonta aos babilônios.
+
+
+        </p>
+
+        <example xml:id="eg_pi">
+            <title>Calculando o número
+                <m>\pi</m>
+            </title>
+            <p>
+                Existem vários métodos de calcular <m>\pi</m> para qualquer grau de precisão desejado.
+                Muitos deles usam a série de Maclaurin
+                <md>
+                    <mrow>
+                        \arctan x &amp;= \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}
+                    </mrow>
+                </md>
+                do<xref ref="thm_SRimportantTaylorSeries"/>. Uma vez que <m>\arctan(1)=\frac{\pi}{4}</m>, a série
+                nos fornece uma fórmula para  <m>\pi</m>:
+                <md>
+                    <mrow>
+                        \frac{\pi}{4} = \arctan 1 &amp;= \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}
+                    </mrow>
+                    <mrow>
+                        \pi &amp;= 4 \left( 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots \right)
+                    </mrow>
+                </md>
+                De fato, esta série não é muito útil para calcular  <m>\pi</m>pois converge lentamente.
+                Se aproximamos s série pela sua <m>N</m>-ésima soma parcial, então o teste da série alternada nos diz
+                que o erro é limitado pelo primeiro termo que eliminamos. Para garantir que temos pelo menos 2 dígitos
+                decimais corretos de <m>\pi</m> corretos,
+                preciamos somar os 200 primeiros termos!
+            </p>
+
+            <p>
+                Uma maneira muito melhor de calcular <m>\pi</m> usar esta série é usar a igualdade:
+
+                <m>
+                    \tan\frac{\pi}{6}=\frac{1}{\sqrt{3}}</m>:
+                <md>
+                    <mrow>
+                        \pi&amp;= 6\arctan\Big(\frac{1}{\sqrt{3}}\Big)
+                        = 6\sum_{n=0}^\infty (-1)^n\frac{1}{2n+1}\ \frac{1}{{(\sqrt{3})}^{2n+1}}
+                    </mrow>
+                    <mrow>
+                        &amp;= 2\sqrt{3} \sum_{n=0}^\infty (-1)^n\frac{1}{2n+1}\ \frac{1}{3^n}
+                    </mrow>
+                    <mrow>
+                        &amp;=2\sqrt{3}\Big(1-\frac{1}{3\times 3}+\frac{1}{5\times 9}-\frac{1}{7\times 27}
+                        +\frac{1}{9\times 81}-\frac{1}{11\times 243}+\cdots\Big)
+                    </mrow>
+                </md>
+                Novamente, esta é uma série alternada e então o erro que introduzimos ao truncá-la é limitado pelo
+                primeiro termo eliminado. Por exemplo, se mantivermos dez termos, parando em
+                <m>n=9</m>, temos <m>\pi=3.141591</m>  (até 6 casas decimais) com um erro entre zero e
+                <me>
+                    \frac{2\sqrt{3}}{21\times 3^{10}} \lt 3\times 10^{-6}
+                </me>
+            </p>
+        </example>
+
+        <p>
+            As séries de potência também nos dão acesso a novas funções que podem não ser facilmente expressas em termos
+            das funções apresentadas até agora. O seguinte é um bom exemplo disso.
+        </p>
+
+        <example xml:id="eg_erf">
+            <title>Função Erro</title>
+            <p>
+                A
+                <em>função erro</em>
+                <me>
+                    \erf(x) =\frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\dee{t}
+                </me>
+                é usada no cálculo de probabilidades de <q>curva de sino</q> . A integral indefinida do integrando <m>
+                e^{-t^2}
+            </m> não pode ser expressa por funções elementares. Mas ainda podemos avaliar a integral dentro de
+                qualquer grau de precisão desejado usando a série de Taylor da exponencial. Começaremos com a série
+                Maclaurin para <m>e^x</m>:
+                <md>
+                    <mrow>
+                        e^x &amp;= \sum_{n=0}^\infty \frac{1}{n!}x^n
+                    </mrow>
+                    <intertext>e em seguida substituimos <m>x = -t^2</m> daí:
+                    </intertext>
+                    <mrow>
+                        e^{-t^2} &amp;= \sum_{n=0}^\infty \frac{(-1)^n}{n!}t^{2n}
+                    </mrow>
+                </md>
+
+                E agora integrando termo a termo:
+                <md>
+                    <mrow>
+                        \erf(x)
+                        &amp;=\frac{2}{\sqrt{\pi}}\int_0^x
+                        \left[\sum_{n=0}^\infty \frac{{(-t^2)}^n}{n!}\right]\dee{t}
+                    </mrow>
+                    <mrow>
+                        &amp;=\frac{2}{\sqrt{\pi}}\sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)n!}
+                    </mrow>
+                </md>
+                Por exemplo, para a curva em sino, a probabilidade de estar dentro de um desvio padrão da média <fn>
+
+                Desvio padrão é uma forma de quantificar a variação dentro de uma população..
+            </fn>,
+                é
+                <md>
+                    <mrow>
+                        \amp\erf\Big(\frac{1}{\sqrt{2}}\Big)
+                        = \frac{2}{\sqrt{\pi}}
+                        \sum_{n=0}^\infty (-1)^n\frac{ {(\frac{1}{\sqrt{2}})}^{2n+1}}{(2n+1)n!}
+                        = \frac{2}{\sqrt{2\pi}}
+                        \sum_{n=0}^\infty (-1)^n\frac{1}{(2n+1) 2^n n!}
+                    </mrow>
+                    <mrow>
+                        &amp;=\sqrt{\frac{2}{\pi}}\Big(1-\frac{1}{3\times 2} +\frac{1}{5\times 2^2\times 2}
+                        -\frac{1}{7\times 2^3\times 3!} + \frac{1}{9\times2^4\times 4!}-\cdots
+                        \Big)
+                    </mrow>
+                </md>
+                Esta é mais uma série alternada. Se mantivermos cinco termos, parando em <m>n=4</m>, temos <m>
+                0.68271
+            </m> (até 5 casas decimais) com, pelo teste da série alternada, um erro entre zero e o primeiro termo
+                descartado, que é menor que
+                <me>
+                    \sqrt{\frac{2}{\pi}}\ \frac{1}{11\times 2^5\times 5!} \lt 2\times 10^{-5}
+                </me>
+            </p>
+        </example>
+
+        <example xml:id="eg_lntwo">
+            <title>Duas séries interessantes</title>
+            <statement>
+                <p>
+                    Calcule
+                    <me>
+                        \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n3^n}\qquad\text{and}\qquad
+                        \sum_{n=1}^\infty \frac{1}{n3^n}
+                    </me>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Não há muitas séries que podem ser facilmente avaliadas com exatidão. Mas ocasionalmente encontramos
+                    uma série que pode ser avaliada simplesmente percebendo ser exatamente uma das séries do<xref
+                        ref="thm_SRimportantTaylorSeries"/>,apenas com um valor específico de <m>x</m>. A série dada à
+                    esquerda é
+
+
+                    <me>
+                        \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n}\ \frac{1}{3^n}
+                        = \frac{1}{3}-\frac{1}{2}\ \frac{1}{3^2}+\frac{1}{3}\ \frac{1}{3^3}
+                        -\frac{1}{4}\ \frac{1}{3^4}+\cdots
+                    </me>
+                    A série
+                    <xref ref="thm_SRimportantTaylorSeries"/>
+                    que mais se assemelha é
+                    <me>
+                        \log(1+x) = x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}-\cdots
+                    </me>
+                    De fato
+                    <md>
+                        <mrow>
+                            \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n}\ \frac{1}{3^n}
+                            \amp= \frac{1}{3}-\frac{1}{2}\ \frac{1}{3^2}+\frac{1}{3}\ \frac{1}{3^3}
+                            -\frac{1}{4}\ \frac{1}{3^4}+\cdots
+                        </mrow>
+                        <mrow>
+                            \amp = \bigg[x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}-\cdots\bigg]_{x=\frac{1}{3}}
+                        </mrow>
+                        <mrow>
+                            \amp = \Big[\log(1+x) \Big]_{x=\frac{1}{3}}
+                        </mrow>
+                        <mrow>
+                            \amp = \log \frac{4}{3}
+                        </mrow>
+                    </md>
+                    A série à direita difere da série à esquerda apenas porque os sinais da série à esquerda se alternam
+                    enquanto a da direita, não. Podemos inverter cada segundo sinal em uma série de potências apenas
+                    usando um sinal negativo <m>x</m>.
+                    <md>
+                        <mrow>
+                            \Big[\log(1+x) \Big]_{x=-\frac{1}{3}}
+                            \amp=\bigg[x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}-\cdots
+                            \bigg]_{x=-\frac{1}{3}}
+                        </mrow>
+                        <mrow>
+                            \amp= -\frac{1}{3}-\frac{1}{2}\ \frac{1}{3^2}-\frac{1}{3}\ \frac{1}{3^3}
+                            -\frac{1}{4}\ \frac{1}{3^4}+\cdots
+                        </mrow>
+                    </md>
+                    que é exatamente menos a série desejada à direita. Então
+                    <me>
+                        \sum_{n=1}^\infty \frac{1}{n3^n}
+                        =- \Big[\log(1+x) \Big]_{x=-\frac{1}{3}}
+                        =-\log\frac{2}{3}
+                        =\log\frac{3}{2}
+                    </me>
+                </p>
+            </solution>
+        </example>
+
+        <example xml:id="eg_SRfindDeriv">
+            <title>Encontrando a derivada de uma série</title>
+            <statement>
+                <p>
+                    Seja <m>f(x) = \sin(2x^3)</m>. Encontre <m>f^{(15)}(0)</m>.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+
+                    É claro que poderíamos usar as regras do produto e da cadeia para aplicar diretamente quinze
+                    derivadas e
+                    então avaliar em <m>x=0</m>,mas isso seria extremamente tedioso.
+
+                    Existe uma abordagem muito mais eficiente que explora dois conhecimentos que temos. Vejamos:
+                    <ul>
+                        <li>
+                            Da equação
+
+                            <xref ref="eq_TaylorPolyPlusError_a"/>, vemos que o coeficiente de <m>(x-a)^n</m> na série
+                            de Taylor de <m>f(x)</m> em torno de <m>a</m> é exatamente <m>\frac{1}{n!}
+                            f^{(n)}(a)</m>. Assim <m>f^{(n)}(a)</m> é exatamente <m>n!</m> vezes o coeficiente de <m>
+                            (x-a)^n
+                        </m> na série de Taylor  <m>f(x)</m> em torno de <m>a</m>.
+                        </li>
+                        <li>
+                            Sabemos a série de Taylor para <m>\sin(2x^3)</m>.
+                        </li>
+                    </ul>
+                    Aplicando essa estratégio:
+                    <ul>
+                        <li>
+                            Em primeiro lugar, sabemos que, para todo <m>y</m>,
+                            <me>
+                                \sin y = y-\frac{1}{3!}y^3+\frac{1}{5!}y^5-\cdots
+                            </me>
+                        </li>
+                        <li>
+                            Apenas substituindo <m>y= 2x^3</m>, temos
+                            <md>
+                                <mrow>
+                                    \sin(2 x^3) \amp= 2x^3-\frac{1}{3!}{(2x^3)}^3+\frac{1}{5!}{(2x^3)}^5-\cdots
+                                </mrow>
+                                <mrow>
+                                    \amp= 2x^3-\frac{8}{3!}x^9+\frac{2^5}{5!}x^{15}-\cdots
+                                </mrow>
+                            </md>
+                        </li>
+                        <li>
+                            Então o coeficiente de  <m>x^{15}</m> na série de Taylor de  <m>f(x)=\sin(2x^3)</m> em torno
+                            de <m>a=0</m> é
+                            <m>\frac{2^5}{5!}</m>
+                        </li>
+                    </ul>
+                    daí
+                    <me>
+                        f^{(15)}(0) = 15!\times \frac{2^5}{5!} = 348{,}713{,}164{,}800
+                    </me>
+                </p>
+            </solution>
+        </example>
+
+
+        <!--        <example xml:id="eg_exp">-->
+        <!--            <title>Optional-->
+        <!--                <mdash/>-->
+        <!--                Computing the number-->
+        <!--                <m>e</m>-->
+        <!--            </title>-->
+        <!--            <p>-->
+        <!--                Back in Example-->
+
+        <!--                <xref ref="eg_expSeriesB"/>, we saw that-->
+        <!--                <me>-->
+        <!--                    e^x =1+x+\tfrac{x^2}{2!}+\cdots+\tfrac{x^n}{n!}+\tfrac{1}{(n+1)!}e^c x^{n+1}-->
+        <!--                </me>-->
+        <!--                for some (unknown) <m>c</m> between <m>0</m> and <m>x</m>. This can be used to approximate the-->
+        <!--                number <m>e</m>, with any desired degree of accuracy. Setting <m>x=1</m> in this equation gives-->
+        <!--                <me>-->
+        <!--                    e=1+1+\tfrac{1}{2!}+\cdots+\tfrac{1}{n!}+\tfrac{1}{(n+1)!}e^c-->
+        <!--                </me>-->
+        <!--                for some <m>c</m> between <m>0</m> and <m>1</m>. Even though we don't know <m>c</m> exactly, we can-->
+        <!--                bound that term quite readily. We do know that <m>e^c</m> in an increasing function-->
+        <!--                <fn>Check the derivative!</fn>-->
+        <!--                of <m>c</m>, and so <m>1=e^0 \leq e^c \leq e^1=e</m>. Thus we know that-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{1}{(n+1)!} \leq e - \left( 1+1+\tfrac{1}{2!}+\cdots+\tfrac{1}{n!} \right) \leq-->
+        <!--                        \frac{e}{(n+1)!}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                So we have a lower bound on the error, but our upper bound involves the-->
+        <!--                <m>e</m>-->
+        <!--                <mdash/>-->
+        <!--                precisely the quantity we are trying to get a handle on.-->
+        <!--            </p>-->
+
+        <!--            <p>-->
+        <!--                But all is not lost. Let's look a little more closely at the right-hand inequality when <m>n=1</m>:-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        e - (1+1) &amp;\leq \frac{e}{2}&amp; \text{move the $e$'s to one side}-->
+        <!--                    </mrow>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{e}{2} &amp; \leq 2 &amp; \text{and clean it up}-->
+        <!--                    </mrow>-->
+        <!--                    <mrow>-->
+        <!--                        e &amp; \leq 4.-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                Now this is a pretty crude bound-->
+        <!--                <fn>-->
+        <!--                    The authors hope that by now we all <q>know</q> that <m>e</m> is between 2 and 3, but maybe we don't-->
+        <!--                    know how to prove it.-->
+        <!--                </fn>-->
+        <!--                but it isn't hard to improve. Try this again with <m>n=1</m>:-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        e - (1+1+\frac{1}{2}) &amp; \leq \frac{e}{6} &amp; \text{move $e$'s to one side}-->
+        <!--                    </mrow>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{5e}{6} &amp; \leq \frac{5}{2}-->
+        <!--                    </mrow>-->
+        <!--                    <mrow>-->
+        <!--                        e &amp; \leq 3.-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                Better. Now we can rewrite our bound:-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{1}{(n+1)!} \leq e - \left( 1+1+\tfrac{1}{2!}+\cdots+\tfrac{1}{n!} \right) \leq-->
+        <!--                        \frac{e}{(n+1)!} \leq \frac{3}{(n+1)!}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                If we set <m>n=4</m> in this we get-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{1}{120}=\frac{1}{5!} &amp;\leq e - \left(1 + 1 + \frac{1}{2} + \frac{1}{6} + \frac{1}{24}-->
+        <!--                        \right) \leq \frac{3}{120}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                So the error is between <m>\frac{1}{120}</m> and-->
+        <!--                <m>\frac{3}{120}=\frac{1}{40}</m>-->
+        <!--                <mdash/>-->
+        <!--                this approximation isn't guaranteed to give us the first 2 decimal places. If we ramp <m>n</m> up to <m>-->
+        <!--                9-->
+        <!--            </m> however, we get-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{1}{10!} &amp;\leq e - \left(1 + 1 + \frac{1}{2} + \cdots + \frac{1}{9!} \right) \leq-->
+        <!--                        \frac{3}{10!}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                Since <m>10! = 3628800</m>, the upper bound on the error is <m>\frac{3}{3628800} \lt \frac{3}{3000000} =-->
+        <!--                10^{-6}</m>, and we can approximate <m>e</m> by-->
+        <!--                <me>-->
+        <!--                    \begin{alignedat}{10}-->
+        <!--                    &amp;1+1 +\ \tfrac{1}{2!} &amp;-->
+        <!--                    &amp;+\ \ \tfrac{1}{3!}\ &amp;-->
+        <!--                    &amp;+\hskip10pt\tfrac{1}{4!}\hskip10pt &amp;-->
+        <!--                    &amp;+\hskip10pt\tfrac{1}{5!}\hskip10pt &amp;-->
+        <!--                    &amp;+\hskip15pt\tfrac{1}{6!}\hskip15pt &amp;-->
+        <!--                    &amp;+\hskip15pt\tfrac{1}{7!}\hskip15pt-->
+        <!--                    \\-->
+        <!--                    &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+\hskip15pt\tfrac{1}{8!}\hskip15pt &amp;-->
+        <!--                    &amp;+\hskip15pt\tfrac{1}{9!}-->
+        <!--                    \\-->
+        <!--                    =&amp;1+1+0.5&amp;-->
+        <!--                    &amp;+0.1\dot 6&amp;-->
+        <!--                    &amp;+0.041\dot 6&amp;-->
+        <!--                    &amp;+0.008\dot 3&amp;-->
+        <!--                    &amp;+0.0013\dot 8&amp;-->
+        <!--                    &amp;+0.0001984&amp;-->
+        <!--                    \\-->
+        <!--                    &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+0.0000248&amp;-->
+        <!--                    &amp;+0.0000028\\-->
+        <!--                    =&amp;2.718282-->
+        <!--                    \end{alignedat}-->
+        <!--                </me>-->
+        <!--                and it is correct to six decimal places.-->
+        <!--            </p>-->
+        <!--        </example>-->
+    </subsection>
+
+
+    <!--<subsection xml:id="sec_Euler">-->
+    <!--<title>Optional <mdash/> Linking <m>e^x</m> with trigonometric functions</title>-->
+
+    <!--<p>-->
+    <!--Let us return to the observation that we made earlier about the Maclaurin series for sine, cosine and the exponential  functions:-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  \cos x + \sin x-->
+    <!--  &amp;= 1 + x - \frac{1}{2!}x^2 - \frac{1}{3!}x^3 + \frac{1}{4!}x^4 + \frac{1}{5!}x^5 - \cdots-->
+    <!--</mrow><mrow>-->
+    <!--  e^x-->
+    <!--  &amp;= 1 + x + \frac{1}{2!}x^2 + \frac{1}{3!}x^3 + \frac{1}{4!}x^4 + \frac{1}{5!}x^5 + \cdots-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--We see that these series are identical except for the differences in the  signs of the coefficients.  Let us try to make them look even more alike by introducing extra constants  <m>A, B</m> and <m>q</m> into the equations. Consider-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  A \cos x + B \sin x-->
+    <!--  &amp;= A + Bx - \frac{A}{2!}x^2 - \frac{B}{3!}x^3 + \frac{A}{4!}x^4 + \frac{B}{5!}x^5 - \cdots-->
+    <!--</mrow><mrow>-->
+    <!--  e^{q x}-->
+    <!--  &amp;= 1 + qx + \frac{q^2}{2!}x^2 + \frac{q^3}{3!}x^3 + \frac{q^4}{4!}x^4 + \frac{q^5}{5!}x^5 + \cdots-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Let's try to choose <m>A</m>, <m>B</m> and <m>q</m> so that these to expressions are equal. To do so we must make sure that the coefficients of the various powers of  <m>x</m> agree. Looking just at the coefficients of <m>x^0</m> and <m>x^1</m>, we see  that we need-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  A&amp;=1 &amp; \text{and}&amp;&amp; B&amp;=q-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Substituting this into our expansions gives-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  \cos x + q\sin x-->
+    <!--  &amp;= 1 + qx - \frac{1}{2!}x^2 - \frac{q}{3!}x^3 + \frac{1}{4!}x^4 + \frac{q}{5!}x^5 - \cdots-->
+    <!--</mrow><mrow>-->
+    <!--  e^{q x}-->
+    <!--  &amp;= 1 + qx + \frac{q^2}{2!}x^2 + \frac{q^3}{3!}x^3 + \frac{q^4}{4!}x^4 + \frac{q^5}{5!}x^5 + \cdots-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Now the coefficients of <m>x^0</m> and <m>x^1</m> agree, but the coefficient of <m>x^2</m> tells us that we need <m>q</m> to be a number so  that <m>q^2 =-1</m>, or-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  q &amp;= \sqrt{-1}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--We know that no such <em>real</em> number <m>q</m> exists. But for the moment  let us see what happens if we just assume<fn>-->
+    <!--		We do not wish to give a primer on imaginary and complex numbers here. The interested reader can start by looking at Appendix<nbsp/><xref ref="ap_complex"/>.-->
+    <!--	</fn>-->
+    <!--that  we can find <m>q</m> so that <m>q^2=-1</m>. Then we will have that-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  q^3 &amp;= -q &amp; q^4 &amp;= 1 &amp; q^5 &amp;= q &amp; \cdots-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--so that the series for <m>\cos x + q\sin x</m> and <m>e^{q x}</m> are identical. That is-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  e^{qx}-->
+    <!--  &amp;= \cos x + q\sin x-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--If we now write this with the more usual notation <m>q=\sqrt{-1}=i</m> we  arrive at what is now known as Euler's formula-->
+    <!--</p>-->
+    <!--<fact>-->
+    <!--<statement><p>-->
+    <!-- <md>-->
+    <!--<mrow>-->
+    <!--  e^{i x} &amp;= \cos x + i \sin x-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--</p></statement>-->
+    <!--</fact>-->
+
+    <!--<p>-->
+    <!--Euler's proof of this formula (in 1740) was based on Maclaurin expansions (much like our explanation above). Euler's  formula<fn>-->
+    <!--		It is worth mentioning here that history of this topic is perhaps a little rough on Roger Cotes (1682<ndash/>1716) who was one of the strongest mathematicians of his time and a collaborator of Newton. Cotes published a paper on logarithms in 1714 in which he states-->
+    <!--		<m>-->
+    <!--		ix = \log( \cos x + i \sin x).-->
+    <!--		</m>-->
+    <!--		(after translating his results into more modern notation). He proved this result by computing in two different ways  the surface area of an ellipse rotated about one axis and equating the results. Unfortunately Cotes died only 2 years  later at the age of 33. Upon hearing of his death Newton is supposed to have said <q>If he had lived, we might have  known something.</q> The reader might think this a rather weak statement, however coming from Newton it was high praise.-->
+    <!--	</fn>-->
+    <!--is widely regarded as one of the most important and  beautiful in all of mathematics.-->
+    <!--</p>-->
+
+    <!--<p>-->
+    <!--Of course having established Euler's formula one can find slicker demonstrations. For example, let-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  f(x) &amp;= e^{-ix} \left(\cos x + i\sin x \right)-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Differentiating (with product and chain rules and the fact that <m>i^2=-1</m>) gives us-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  f'(x) &amp;= -i e^{-ix} \left(\cos x + i\sin x \right) + e^{-ix} \left(-\sin x + i\cos x \right)-->
+    <!--</mrow><mrow>-->
+    <!--  &amp;= 0-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Since the derivative is zero, the function <m>f(x)</m> must be a constant. Setting <m>x=0</m> tells us that-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  f(0) &amp;= e^0 \left(\cos 0 + i\sin 0 \right) = 1.-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--Hence <m>f(x)=1</m> for all <m>x</m>. Rearranging then arrives at-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  e^{ix} &amp;= \cos x + i \sin x-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--as required.-->
+    <!--</p>-->
+
+    <!--<p>-->
+    <!--Substituting <m>x=\pi</m> into Euler's formula we get Euler's identity-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  e^{i \pi} &amp;= -1-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--which is more often stated-->
+    <!--</p>-->
+    <!--<fact><title>Euler's identity</title>-->
+    <!--<statement><p>-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  e^{i\pi} + 1 &amp;= 0-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--</p></statement>-->
+    <!--</fact>-->
+    <!--<p>-->
+    <!--which links the 5 most important constants in mathematics, <m>1,0,\pi,e</m> and <m>\sqrt{-1}</m>.-->
+    <!--</p>-->
+    <!--</subsection>-->
+
+    <subsection>
+        <title>Avaliando Limites usando Série de Taylor</title>
+
+        <p>
+            Os polinômios de Taylor fornecem uma boa maneira de entender o comportamento de uma função perto de um ponto
+            especificado e, portanto, são úteis para avaliar limites complicados. Aqui estão alguns exemplos.
+        </p>
+
+        <example xml:id="eg_TaylorlimitA">
+            <title>Um limite simples de uma série de Taylor</title>
+            <p>
+                Neste exemplo, começaremos com um limite relativamente simples, ou seja,
+                <me>
+                    \lim_{x\rightarrow 0}\frac{\sin x}{x}
+                </me>
+                A primeira coisa a notar sobre esse limite é que, quando <m>x</m> tende para zero, tanto o
+                numerador, <m>
+                \sin x</m>, quanto o denominador, <m>x</m>, tendem para <m>0</m>. Portanto, não podemos avaliar o limite
+                da razão simplesmente dividindo os limites do numerador e do denominador. Para encontrar o limite, ou
+                mostrar que ele não existe, teremos que exibir um cancelamento entre o numerador e o denominador. Vamos
+                começar estudando o numerador. Por exemplo<xref
+                    ref="eg_sincosSeries"/>,
+                <me>
+                    \sin x = x-\frac{1}{3!}x^3+\frac{1}{5!}x^5 - \cdots
+                </me>
+                Consequentemente,
+
+                <me>
+                    \frac{\sin x}{x}=1-\frac{1}{3!}x^2 + \frac{1}{5!}x^4 - \cdots
+                </me>
+                Cada termo desta série, exceto o primeiro termo, é proporcional a uma potência estritamente positiva de <m>
+                x</m>. Consequentemente, quando <m>x</m> tende para zero, todos os termos nesta série, exceto o primeiro
+                termo, tendem a zero. De fato, a soma de todos os termos, começando com o segundo termo, também tende a
+                zero. Isto é,
+                <me>
+                    \lim_{x\rightarrow 0}\Big[-\frac{1}{3!}x^2 + \frac{1}{5!}x^4 - \cdots\Big] =0
+                </me>
+                Então
+                <md>
+                    <mrow>
+                        \lim_{x\rightarrow 0}\frac{\sin x}{x}
+                        \amp =\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2 + \frac{1}{5!}x^4 - \cdots\Big]
+                    </mrow>
+                    <mrow>
+                        \amp=1+\lim_{x\rightarrow 0}\Big[-\frac{1}{3!}x^2 + \frac{1}{5!}x^4 - \cdots\Big]
+                    </mrow>
+                    <mrow>
+                        \amp=1
+                    </mrow>
+                </md>
+            </p>
+        </example>
+
+        <p>
+            O limite do
+            <xref ref="eg_TaylorlimitA"/>
+            também pode ser avaliado com relativa facilidade usando a regra de L'Hôpital. Embora o limite a seguir
+            também
+            possa, em princípio, ser calculado usando a regra de l'Hôpital, é muito mais eficiente usar séries de Taylor
+
+
+        </p>
+
+        <example xml:id="eg_TaylorlimitB">
+            <title>Limite usando Série de Taylor</title>
+            <p>
+                Neste exemplo calcularemos
+                <me>
+                    \lim_{x\rightarrow 0}\frac{\arctan x -x}{\sin x-x}
+                </me>
+                Mais uma vez, a primeira coisa a notar sobre este limite é que, quendo <m>x</m>  tende para zero, o
+                numerador tende para
+                <m>\arctan 0 -0</m>, que é <m>0</m>, e o denominador tende para <m>\sin 0-0</m>, que é
+                também <m>0</m>.Portanto, não podemos avaliar o limite da razão simplesmente dividindo os limites do
+                numerador e do denominador. Novamente, para encontrar o limite, ou mostrar que ele não existe, teremos
+                que exibir um cancelamento entre o numerador e o denominador. Para obter uma compreensão mais detalhada
+                do comportamento do numerador e denominador próximo de <m>x=0</m>, vamos encontrar as repectivas séries
+                de Taylor
+                <me>
+                    \arctan x = x-\frac{x^3}{3}+\frac{x^5}{5}-\cdots
+                </me>
+                assim o numerador
+                <me>
+                    \arctan x -x = -\frac{x^3}{3}+\frac{x^5}{5}-\cdots
+                </me>
+                Do<xref ref="eg_sincosSeries"/>,
+                <me>
+                    \sin x = x-\frac{1}{3!}x^3+\frac{1}{5!}x^5 - \cdots
+                </me>
+                assim o denominador
+                <me>
+                    \sin x -x = -\frac{1}{3!}x^3+\frac{1}{5!}x^5 - \cdots
+                </me>
+                e a razão
+                <me>
+                    \frac{\arctan x -x}{\sin x - x}
+                    = \frac{-\frac{x^3}{3}+\frac{x^5}{5}-\cdots}
+                    {-\frac{1}{3!}x^3+\frac{1}{5!}x^5 - \cdots}
+                </me>
+                Observe que todo termo no numerador e no denominador contém um fator comum de <m>x^3</m>,
+                que podemos cancelar
+                <me>
+                    \frac{\arctan x -x}{\sin x - x}
+                    = \frac{-\frac{1}{3}+\frac{x^2}{5}-\cdots}
+                    {-\frac{1}{3!}+\frac{1}{5!}x^2 - \cdots}
+                </me>
+                Quando <m>x</m> tende para zero,
+                <ul>
+                    <li>
+                        o numerador tende a <m>-\frac{1}{3}</m>, que não é <m>0</m>, e
+                    </li>
+                    <li>
+                        o denominador tende a <m>-\frac{1}{3!}=-\frac{1}{6}</m>, que também não é <m>0</m>.
+                    </li>
+                </ul>
+                então podemos agora avaliar legitimamente o limite da razão simplesmente dividindo os limites do
+                numerador e do denominador.
+                <md>
+                    <mrow>
+                        \lim_{x\rightarrow 0}\frac{\arctan x -x}{\sin x-x}
+                        \amp=\lim_{x\rightarrow 0} \frac{-\frac{1}{3}+\frac{x^2}{5}-\cdots}
+                        {-\frac{1}{3!}+\frac{1}{5!}x^2 - \cdots}
+                    </mrow>
+                    <mrow>
+                        \amp=\frac{\lim_{x\rightarrow 0} \big[-\frac{1}{3}+\frac{x^2}{5}-\cdots\big]}
+                        {\lim_{x\rightarrow 0} \big[-\frac{1}{3!}+\frac{1}{5!}x^2 - \cdots\big]}
+                    </mrow>
+                    <mrow>
+                        \amp=\frac{-\frac{1}{3}}{-\frac{1}{3!}}
+                    </mrow>
+                    <mrow>
+                        \amp=2
+                    </mrow>
+                </md>
+            </p>
+        </example>
+    </subsection>
+
+    <!--<subsection>-->
+    <!--<title>Optional <mdash/> The Big O Notation</title>-->
+
+    <!--<p>-->
+    <!--In Example <xref ref="eg_TaylorlimitA"/> we used, without justification<fn>-->
+    <!--		Though there were a few comments in a footnote.-->
+    <!--	</fn>,-->
+    <!--that, as <m>x</m> tends to zero, not only does every term in-->
+    <!--<me>-->
+    <!--\frac{\sin x}{x}-1-->
+    <!--= -\frac{1}{3!}x^2 + \frac{1}{5!}x^4 - \cdots-->
+    <!--=\sum_{n=1}^\infty (-1)^n\frac{1}{(2n+1)!}x^{2n}-->
+    <!--</me>-->
+    <!--converge to zero, but in fact the sum of all infinitely many terms also converges to zero. We did something similar twice in Example <xref ref="eg_TaylorlimitB"/>; once in computing the limit of the numerator and once in computing the limit of the denominator.-->
+    <!--</p>-->
+
+    <!--<p>-->
+    <!--We'll now develop some machinery that provides the  justification. We start by recalling, from equation<nbsp/><xref ref="eq_TaylorPolyPlusError"/>,  that if, for some natural number <m>n</m>, the function <m>f(x)</m> has  <m>n+1</m> derivatives near the point <m>a</m>, then-->
+    <!--<me>-->
+    <!--f(x) =T_n(x) +E_n(x)-->
+    <!--</me>-->
+    <!--where-->
+    <!--<me>-->
+    <!--T_n(x)=f(a)+f'(a)\,(x-a)+\cdots+\tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n-->
+    <!--</me>-->
+    <!--is the Taylor polynomial of degree <m>n</m> for the function <m>f(x)</m> and expansion point <m>a</m> and-->
+    <!--<me>-->
+    <!--E_n(x)=f(x)-T_n(x)=\tfrac{1}{(n+1)!}f^{(n+1)}(c)\, (x-a)^{n+1}-->
+    <!--</me>-->
+    <!--is the error introduced when we approximate <m>f(x)</m> by the polynomial <m>T_n(x)</m>. Here <m>c</m> is some unknown number between <m>a</m> and <m>x</m>. As <m>c</m> is not known, we do not know exactly what the error <m>E_n(x)</m> is. But that is usually not a problem.-->
+    <!--</p>-->
+
+    <!--<p>-->
+    <!--In the present context<fn>-->
+    <!--		It is worth pointing out that  our Taylor series must be expanded about the point to  which we are limiting <mdash/> i.e. a. To work out a limit as  <m>x\to a</m> we need Taylor series expanded about <m>a</m> and not  some other point.</fn>-->
+    <!--we are interested in taking the limit as  <m>x \to a</m>.  So we are only interested in <m>x</m>-values that are  very close to <m>a</m>, and because <m>c</m> lies between <m>x</m> and <m>a</m>,  <m>c</m> is also very close to <m>a</m>. Now, as long as  <m>f^{(n+1)}(x)</m> is continuous at <m>a</m>, as <m>x \to a</m>,  <m>f^{(n+1)}(c)</m> must approach <m>f^{(n+1)}(a)</m> which is  some finite value. This, in turn,  means that there must be  constants <m>M,D \gt 0</m> such that <m>\big|f^{(n+1)}(c)\big|\le M</m>  for all <m>c</m>'s within a distance <m>D</m> of <m>a</m>. If so, there is  another constant <m>C</m> (namely <m>\tfrac{M}{(n+1)!}</m>) such that-->
+    <!--<me>-->
+    <!--\big|E_n(x)\big|\le C |x-a|^{n+1}\qquad\hbox{whenever }|x-a|\le D-->
+    <!--</me>-->
+    <!--There is some notation for this behaviour.-->
+    <!--</p>-->
+
+    <!--<definition xml:id="def_bigoh"><title>Big O</title>-->
+    <!--<statement><p>-->
+    <!--Let <m>a</m> and <m>m</m> be real numbers. We say that the function  <q><m>g(x)</m> is of order <m>|x-a|^m</m> near <m>a</m></q> and we write  <m>g(x)=O\big(|x-a|^m\big)</m> if there exist constants<fn>-->
+    <!--		To be precise, <m>C</m> and <m>D</m> do not depend on <m>x</m>, though they may, and usually do, depend on <m>m</m>.-->
+    <!--	</fn>-->
+    <!--<m>C,D \gt 0</m> such that-->
+
+    <!--<mdn>-->
+    <!--<mrow xml:id="eq_bigoh" tag="star">-->
+    <!--\big|g(x)\big|\le C |x-a|^m\qquad\hbox{whenever }|x-a|\le D-->
+    <!--</mrow>-->
+    <!--</mdn>-->
+
+    <!--Whenever <m>O\big(|x-a|^m\big)</m> appears in an algebraic expression,  it just stands for some (unknown) function <m>g(x)</m> that obeys <xref ref="eq_bigoh"/>. This is called <q>big O</q> notation.-->
+    <!--</p></statement>-->
+    <!--</definition>-->
+
+    <!--<p>-->
+    <!--How should we parse the big O notation when we see it? Consider  the following-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--  g(x) &amp;= O( |x-3|^2 )-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--First of all, we know from the definition that the notation only tells us something about <m>g(x)</m> for <m>x</m> near the  point <m>a</m>. The equation above contains <q><m>O(|x-3|^2)</m></q> which  tells us something about what the function looks like when <m>x</m>  is close to <m>3</m>. Further, because it is <q><m>|x-3|</m></q> squared,  it says that the graph of the function lies below a parabola <m>y=C(x-3)^2</m> and above a parabola <m>y=-C(x-3)^2</m> near <m>x=3</m>. The notation doesn't  tell us anything more than this <mdash/> we don't know, for example,  that the graph of <m>g(x)</m> is concave up or concave down. It also  tells us that Taylor expansion of <m>g(x)</m> around <m>x=3</m> does not  contain any constant or linear term <mdash/> the first nonzero term  in the expansion is of degree at least two.  For example, all of the  following functions are <m>O(|x-3|^2)</m>.-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--5(x-3)^2 + 6(x-3)^3,\qquad-->
+    <!-- -7(x-3)^2 - 8(x-3)^4,\qquad-->
+    <!--(x-3)^3,\qquad-->
+    <!--(x-3)^{\frac{5}{2}}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--</p>-->
+
+    <!--<p>-->
+    <!--In the next few examples we will rewrite a few of the Taylor  polynomials that we know using this big O notation.-->
+    <!--</p>-->
+
+    <!--<example xml:id="eg_bigohsincos"><title>Sine and the big O</title>-->
+    <!--<p>-->
+    <!--Let <m>f(x)=\sin x</m> and <m>a=0</m>. Then-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--f(x)&amp;=\sin x &amp;-->
+    <!--f'(x)&amp;=\cos x &amp;-->
+    <!--f''(x)&amp;=-\sin x &amp;-->
+    <!--f^{(3)}(x)&amp;=-\cos x &amp;-->
+    <!--</mrow><mrow>-->
+    <!--f(0)&amp;=0 &amp;-->
+    <!--f'(0)&amp;=1 &amp;-->
+    <!--f''(0)&amp;=0 &amp;-->
+    <!--f^{(3)}(0)&amp;=-1 &amp;-->
+    <!--</mrow><mrow>-->
+    <!--f^{(4)}(x)&amp;=\sin x &amp; &amp;\cdots-->
+    <!--</mrow><mrow>-->
+    <!--f^{(4)}(0)&amp;=0 &amp; &amp;\cdots-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--and the pattern repeats. So every derivative is plus or minus either  sine or cosine and, as we saw in previous examples,  this makes analysing the error term for the sine and cosine series quite straightforward. In particular, <m>\big|f^{(n+1)}(c)\big|\le 1</m> for all real numbers <m>c</m> and all  natural numbers <m>n</m>. So the Taylor polynomial of, for  example, degree 3 and its error term are-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--\sin x &amp;= x-\tfrac{1}{3!}x^3+\tfrac{\cos c}{5!} x^5-->
+    <!--</mrow><mrow>-->
+    <!--       &amp;= x-\tfrac{1}{3!}x^3+O(|x|^5)-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--under Definition <xref ref="def_bigoh"/>, with <m>C=\tfrac{1}{5!}</m> and any <m>D \gt 0</m>.  Similarly, for any natural number <m>n</m>,-->
+    <!--</p>-->
+    <!--<fact xml:id="eq_SRsincosExp">-->
+    <!--<statement><p>-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--\sin x&amp;=x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots+(-1)^{n}\tfrac{1}{(2n+1)!}-->
+    <!--x^{2n+1} +O\big( |x|^{2n+3}\big)-->
+    <!--</mrow><mrow>-->
+    <!--\cos x&amp;=1-\tfrac{1}{2!}x^2+\tfrac{1}{4!}x^4-\cdots+(-1)^{n}\tfrac{1}{(2n)!}-->
+    <!--x^{2n} +O\big( |x|^{2n+2}\big)-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--</p></statement>-->
+    <!--</fact>-->
+
+    <!--</example>-->
+
+    <!--<p>-->
+    <!--When we studied the error in the expansion of the exponential function  (way back in optional Example<nbsp/><xref ref="eg_expSeriesB"/>), we had to go to  some length to understand the behaviour of the error term well enough  to prove convergence for all numbers <m>x</m>.  However, in the big O notation, we are free to assume that  <m>x</m> is close to <m>0</m>. Furthermore we do not need to derive an explicit bound on the size of the coefficient <m>C</m>. This makes it quite a bit easier to  verify that the big O notation is correct.-->
+    <!--</p>-->
+
+    <!--<example xml:id="eg_bigohexp"><title>Exponential and the big O</title>-->
+    <!--<p>-->
+    <!--Let <m>n</m> be any natural number. Since <m>\diff{}{x} e^x = e^x</m>, we know that  <m>\ddiff{k}{}{x}\left\{ e^x \right\} = e^x</m> for every integer <m>k \geq 0</m>.  Thus-->
+    <!--<me>-->
+    <!--e^x=1+x+\tfrac{x^2}{2!}+\tfrac{x^3}{3!}+\cdots+\tfrac{x^n}{n!} +\tfrac{e^c}{(n+1)!} x^{n+1}-->
+    <!--</me>-->
+    <!--for some <m>c</m> between <m>0</m> and <m>x</m>. If, for example, <m>|x|\le 1</m>, then <m>|e^c|\le e</m>, so that the error term-->
+    <!--<me>-->
+    <!--\big|\tfrac{e^c}{(n+1)!} x^{n+1}\big| \le  C|x|^{n+1}\qquad\hbox{ with } C=\tfrac{e}{(n+1)!}\qquad\hbox{ whenever }|x|\le 1-->
+    <!--</me>-->
+    <!--So, under Definition <xref ref="def_bigoh"/>, with <m>C=\tfrac{e}{(n+1)!}</m>-->
+    <!--and <m>D=1</m>,-->
+    <!--</p>-->
+    <!--<fact xml:id="eq_SRexpExp">-->
+    <!--<statement><p>-->
+    <!--<me>-->
+    <!--e^x=1+x+\tfrac{x^2}{2!}+\tfrac{x^3}{3!}+\cdots+\tfrac{x^n}{n!}-->
+    <!--          +O\big( |x|^{n+1}\big)-->
+    <!--</me>-->
+    <!--</p></statement>-->
+    <!--</fact>-->
+
+    <!--<p>-->
+    <!--You can see that, because we only have to consider <m>x</m>'s that are close to the  expansion point (in this example, <m>0</m>) it is relatively easy to derive  the bounds that are required to justify the use of the big O notation.-->
+    <!--</p>-->
+    <!--</example>-->
+
+    <!--<example xml:id="eg_bigohlog"><title>Logarithms and the big O</title>-->
+    <!--<p>-->
+    <!--Let <m>f(x)=\log(1+x)</m> and <m>a=0</m>. Then-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--f'(x)&amp;=\tfrac{1}{1+x} &amp;-->
+    <!--f''(x)&amp;=-\tfrac{1}{(1+x)^2} &amp;-->
+    <!--f^{(3)}(x)&amp;=\tfrac{2}{(1+x)^3} &amp;-->
+    <!--</mrow><mrow>-->
+    <!--f'(0)&amp;=1 &amp;-->
+    <!--f''(0)&amp;=-1 &amp;-->
+    <!--f^{(3)}(0)&amp;=2 &amp;-->
+    <!--</mrow><mrow>-->
+    <!--f^{(4)}(x)&amp;=-\tfrac{2\times 3}{(1+x)^4} &amp;-->
+    <!--f^{(5)}(x)&amp;=\tfrac{2\times 3\times 4}{(1+x)^5}-->
+    <!--</mrow><mrow>-->
+    <!--f^{(4)}(0)&amp;=-3! &amp;-->
+    <!--f^{(5)}(0)&amp;=4!-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--We can see a pattern for <m>f^{(n)}(x)</m> forming here <mdash/> <m>f^{(n)}(x)</m> is a sign times a ratio with-->
+    <!--<ul>-->
+    <!--<li>-->
+    <!--	the sign being <m>+</m> when <m>n</m> is odd and being <m>-</m> when <m>n</m> is even. So the sign is <m>(-1)^{n-1}</m>.-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--	The denominator is <m>(1+x)^n</m>.-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--	The numerator<fn>-->
+    <!--			Remember that <m>n! = 1\times 2\times 3\times \cdots\times n</m>, and that we use the  convention <m>0!=1</m>.-->
+    <!--		</fn>-->
+    <!--	is the product <m>2\times 3\times 4\times \cdots \times (n-1) = (n-1)!</m>.-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--Thus<fn>-->
+    <!--		It is not too hard to make this rigorous using the principle  of mathematical induction. The interested  reader should do a little search-engine-ing. Induction is a very standard technique for proving statements of the  form <q>For every natural number <m>n</m>,<ellipsis/></q>. For example-->
+    <!--		<m>-->
+    <!--		\text{For every natural number $n$, } \sum_{k=1}^n k = \frac{n(n+1)}{2}</m>,-->
+    <!--or-->
+    <!--		<m>-->
+    <!--		\text{For every natural number $n$, } \ddiff{n}{}{x} \left\{ \log(1+x)\right\} = (-1)^{n-1} \frac{(n-1)!}{(1+x)^n}-->
+    <!--		</m>.-->
+    <!--		It was also used by Polya (1887<ndash/>1985) to give a very convincing (but subtly (and deliberately) flawed)  proof that all horses have the same colour.-->
+    <!--	</fn>,-->
+    <!--for any natural number <m>n</m>,-->
+    <!--<md>-->
+    <!--<mrow>-->
+    <!--f^{(n)}(x)&amp;=(-1)^{n-1}\tfrac{(n-1)!}{(1+x)^n} &amp; \text{which means that}-->
+    <!--</mrow><mrow>-->
+    <!--\tfrac{1}{n!}f^{(n)}(0)\,x^n &amp;= (-1)^{n-1}\tfrac{(n-1)!}{n!}x^n = (-1)^{n-1}\tfrac{x^n}{n}-->
+    <!--</mrow>-->
+    <!--</md>-->
+    <!--so-->
+    <!--<me>-->
+    <!--\log(1+x) = x-\tfrac{x^2}{2}+\tfrac{x^3}{3}-\cdots +(-1)^{n-1}\tfrac{x^n}{n} +E_n(x)-->
+    <!--</me>-->
+    <!--with-->
+    <!--<me>-->
+    <!--E_n(x)=\tfrac{1}{(n+1)!}f^{(n+1)}(c)\, (x-a)^{n+1} = \tfrac{1}{n+1} \cdot \tfrac{(-1)^n}{(1+c)^{n+1}} \cdot x^{n+1}-->
+    <!--</me>-->
+    <!--If we choose, for example <m>D=\half</m>, then<fn>-->
+    <!--		Since <m>|c|\leq \half</m>,  <m>-\half \leq c \leq \half</m>. If we now add 1 to every term we get <m>\half \leq 1+c \leq \frac{3}{2}</m> and so <m>|1+c| \geq  \half</m>. You can also do this with the triangle inequality which tells us that for any <m>x,y</m> we know that <m>|x+y| \leq  |x|+|y|</m>. Actually, you want the reverse triangle inequality (which is a simple corollary of the triangle inequality)  which says that for any <m>x,y</m> we have <m>|x+y| \geq \big||x|-|y| \big|</m>.-->
+    <!--	</fn>-->
+    <!--for any <m>x</m> obeying <m>|x|\le D=\half</m>, we have  <m>|c|\le\half </m> and <m>|1+c|\ge\half</m> so that-->
+    <!--<me>-->
+    <!--|E_n(x)|\le \tfrac{1}{(n+1)(1/2)^{n+1}}|x|^{n+1} = O\big(|x|^{n+1}\big)-->
+    <!--</me>-->
+    <!--under Definition <xref ref="def_bigoh"/>, with <m>C=\tfrac{2^{n+1}}{n+1}</m> and <m>D=\half</m>. Thus we may write-->
+    <!--</p>-->
+    <!--<fact xml:id="eq_bigohlog">-->
+    <!--<statement><p>-->
+    <!--<me>-->
+    <!--\log(1+x) = x-\tfrac{x^2}{2}+\tfrac{x^3}{3}-\cdots +(-1)^{n-1}\tfrac{x^n}{n} +O\big(|x|^{n+1}\big)-->
+    <!--</me>-->
+    <!--</p></statement>-->
+    <!--</fact>-->
+
+    <!--</example>-->
+
+    <!--<remark xml:id="rem_bigohppties">-->
+    <!--<p>-->
+    <!--The big O notation has a few properties that are useful in computations and taking limits. All follow immediately from Definition <xref ref="def_bigoh"/>.-->
+    <!--<ol label="a">-->
+    <!--<li>-->
+    <!--	If <m>p \gt 0</m>, then-->
+    <!--	<me>-->
+    <!--	\lim\limits_{x\rightarrow 0} O(|x|^p)=0-->
+    <!--	</me>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--	For any real numbers <m>p</m> and <m>q</m>,-->
+    <!--     <me>-->
+    <!--     O(|x|^p)\  O(|x|^q)=O(|x|^{p+q})-->
+    <!--     </me>-->
+    <!--     (This is just because  <m>C|x|^p\times C'|x|^q= (CC')|x|^{p+q}</m>.)  In particular,-->
+    <!--     <me>-->
+    <!--     ax^m\,O(|x|^p)=O(|x|^{p+m})-->
+    <!--     </me>-->
+    <!--     for any constant <m>a</m> and any integer <m>m</m>.-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--	For any real numbers <m>p</m> and <m>q</m>,-->
+    <!--     <me>-->
+    <!--     O(|x|^p) + O(|x|^q)=O(|x|^{\min\{p,q\}})-->
+    <!--     </me>-->
+    <!--     (For example, if <m>p=2</m> and <m>q=5</m>, then <m>C|x|^2+C'|x|^5 =\big(C+C'|x|^3\big) |x|^2\le (C+C')|x|^2</m> whenever <m>|x|\le 1</m>.)-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--	For any real numbers <m>p</m> and <m>q</m> with <m>p \gt q</m>, any function which is <m>O(|x|^p)</m> is also <m>O(|x|^q)</m> because <m> C|x|^p= C|x|^{p-q}|x|^q\le C|x|^q</m> whenever <m>|x|\le 1</m>.-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--	All of the above observations also hold for more general expressions  with <m>|x|</m> replaced by <m>|x-a|</m>, i.e. for <m>O(|x-a|^p)</m>. The only  difference being in (a) where we must take the limit as <m>x \to a</m>  instead of <m>x\to 0</m>.-->
+    <!--</li>-->
+    <!--</ol>-->
+    <!--</p>-->
+    <!--</remark>-->
+    <!--</subsection>-->
+
+
+<!--    <subsection>-->
+<!--        <title>Optional-->
+<!--            <mdash/>-->
+<!--            Evaluating Limits Using Taylor Expansions-->
+<!--            <mdash/>-->
+<!--            More Examples-->
+<!--        </title>-->
+
+<!--        <example xml:id="eg_bigohlimitAA">-->
+<!--            <title>Example-->
+<!--                <xref ref="eg_TaylorlimitA"/>-->
+<!--                revisited-->
+<!--            </title>-->
+<!--            <p>-->
+<!--                In this example, we'll return to the limit-->
+<!--                <me>-->
+<!--                    \lim_{x\rightarrow 0}\frac{\sin x}{x}-->
+<!--                </me>-->
+<!--                of Example-->
+<!--                <xref ref="eg_TaylorlimitA"/>-->
+<!--                and treat it more carefully. By Example<xref ref="eg_bigohsincos"/>,-->
+<!--                <me>-->
+<!--                    \sin x = x-\frac{1}{3!}x^3+O(|x|^5)-->
+<!--                </me>-->
+<!--                That is, for small <m>x</m>, <m>\sin x</m> is the same as <m>x-\frac{1}{3!}x^3</m>, up to an error that-->
+<!--                is bounded by some constant times <m>|x|^5</m>. So, dividing by <m>x</m>, <m>\frac{\sin x}{x}</m> is the-->
+<!--                same as  <m>1-\frac{1}{3!}x^2</m>, up to an error that is bounded by some constant times-->
+<!--                <m>x^4</m>-->
+<!--                <mdash/>-->
+<!--                see Remark<xref ref="rem_bigohppties"/>(b). That is-->
+<!--                <me>-->
+<!--                    \frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)-->
+<!--                </me>-->
+<!--                But any function that is bounded by some constant times <m>x^4</m> (for all <m>x</m> smaller than some-->
+<!--                constant <m>D \gt 0</m>) necessarily tends to <m>0</m> as-->
+<!--                <m>x\rightarrow 0</m>-->
+<!--                <mdash/>-->
+<!--                see Remark<xref ref="rem_bigohppties"/>(a). . Thus-->
+<!--                <me>-->
+<!--                    \lim_{x\rightarrow 0}\frac{\sin x}{x}-->
+<!--                    =\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2+O(x^4)\Big]-->
+<!--                    =\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2\Big]-->
+<!--                    =1-->
+<!--                </me>-->
+<!--            </p>-->
+
+<!--            <p>-->
+<!--                Reviewing the above computation, we see that we did a little more work than we had to. It wasn't-->
+<!--                necessary to keep track of the <m>-\frac{1}{3!}x^3</m> contribution to <m>\sin x</m> so carefully. We-->
+<!--                could have just said that-->
+<!--                <me>-->
+<!--                    \sin x = x+O(|x|^3)-->
+<!--                </me>-->
+<!--                so that-->
+<!--                <me>-->
+<!--                    \lim_{x\rightarrow 0}\frac{\sin x}{x}-->
+<!--                    =\lim_{x\rightarrow 0}\frac{x+O(|x|^3)}{x}-->
+<!--                    =\lim_{x\rightarrow 0}\big[1+O(x^2)\big]-->
+<!--                    =1-->
+<!--                </me>-->
+<!--                We'll spend a little time in the later, more complicated, examples learning how to choose the number of-->
+<!--                terms we keep in our Taylor expansions so as to make our computations as efficient as possible.-->
+<!--            </p>-->
+<!--        </example>-->
+
+<!--        <example xml:id="eg_bigohlimitA">-->
+<!--            <title>Practicing using Taylor polynomials for limits</title>-->
+<!--            <p>-->
+<!--                In this example, we'll use the Taylor polynomial of Example-->
+<!--                <xref ref="eg_bigohlog"/>-->
+<!--                to evaluate <m>\lim\limits_{x\rightarrow 0}\tfrac{\log(1+x)}{x}</m> and <m>\lim\limits_{x\rightarrow-->
+<!--                0}(1+x)^{a/x}</m>. The Taylor expansion of equation-->
+
+<!--                <xref ref="eq_bigohlog"/>-->
+<!--                with <m>n=1</m> tells us that-->
+<!--                <me>-->
+<!--                    \log(1+x)=x+O(|x|^2)-->
+<!--                </me>-->
+<!--                That is, for small <m>x</m>, <m>\log(1+x)</m> is the same as <m>x</m>, up to an error that is bounded by-->
+<!--                some constant times <m>x^2</m>. So, dividing by <m>x</m>, <m>\frac{1}{x}\log(1+x)</m> is the same as <m>-->
+<!--                1</m>, up to an error that is bounded by some constant times <m>|x|</m>. That is-->
+<!--                <me>-->
+<!--                    \frac{1}{x}\log(1+x)=1+O(|x|)-->
+<!--                </me>-->
+<!--                But any function that is bounded by some constant times <m>|x|</m>, for all <m>x</m> smaller than some-->
+<!--                constant <m>D \gt 0</m>, necessarily tends to <m>0</m> as <m>x\rightarrow 0</m>. Thus-->
+<!--                <me>-->
+<!--                    \lim_{x\rightarrow 0}\frac{\log(1+x)}{x}-->
+<!--                    =\lim_{x\rightarrow 0}\frac{x+O(|x|^2)}{x}-->
+<!--                    =\lim_{x\rightarrow 0}\big[1+O(|x|)\big]-->
+<!--                    =1-->
+<!--                </me>-->
+<!--            </p>-->
+
+<!--            <p>-->
+<!--                We can now use this limit to evaluate-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        \lim_{x\rightarrow 0}(1+x)^{a/x}.-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--                Now, we could either evaluate the limit of the logarithm of this expression, or we can carefully rewrite-->
+<!--                the expression as <m>e^\mathrm{(something)}</m>. Let us do the latter.-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        \lim_{x\rightarrow 0}(1+x)^{a/x}-->
+<!--                        &amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x} \log(1+x) }-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x}[x+O(|x|^2)]}-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;=\lim_{x\rightarrow 0}e^{a+O(|x|)}-->
+<!--                        =e^a-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--                Here we have used that if <m>F(x)=O(|x|^2)</m> then-->
+<!--                <m>\frac{a}{x} F(x) = O(x)</m>-->
+<!--                <mdash/>-->
+<!--                see Remark-->
+
+<!--                <xref ref="rem_bigohppties"/>(b). We have also used that the exponential is continuous-->
+<!--                <mdash/>-->
+<!--                as <m>x</m>  tends to zero, the exponent of <m>e^{a+O(|x|)}</m> tends to <m>a</m>  so that <m>-->
+<!--                e^{a+O(|x|)}-->
+<!--            </m> tends to-->
+<!--                <m>e^a</m>-->
+<!--                <mdash/>-->
+<!--                see Remark-->
+
+<!--                <xref ref="rem_bigohppties"/>(a).-->
+<!--            </p>-->
+<!--        </example>-->
+
+
+<!--        <example xml:id="bigohlimitB">-->
+<!--            <title>A difficult limit</title>-->
+<!--            <p>-->
+<!--                In this example, we'll evaluate-->
+<!--                <fn>-->
+<!--                    Use of l'Hôpital's rule here could be characterised as a <q>courageous decision</q>. The interested-->
+<!--                    reader should search-engine their way to Sir Humphrey Appleby and <q>Yes Minister</q> to better-->
+<!--                    understand this reference (and the workings of government in the Westminster system). Discretion-->
+<!--                    being the better part of valour, we'll stop and think a little before limiting (ha) our choices.-->
+<!--                </fn>-->
+<!--                the harder limit-->
+<!--                <me>-->
+<!--                    \lim_{x\rightarrow 0}\frac{\cos x -1 + \half x\sin x}{{[\log(1+x)]}^4}-->
+<!--                </me>-->
+<!--                The first thing to notice about this limit is that, as <m>x</m> tends to zero, the numerator-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        \cos x -1 + \half x\sin x &amp;\to \cos 0 -1 +\half\cdot 0\cdot\sin 0=0-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--                and the denominator-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        [\log(1+x)]^4 &amp; \to [\log(1+0)]^4=0-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--                too. So both the numerator and denominator tend to zero and we may not simply evaluate the limit of the-->
+<!--                ratio by taking the limits of the numerator and denominator and dividing.-->
+<!--            </p>-->
+
+<!--            <p>-->
+<!--                To find the limit, or show that it does not exist, we are going to have to exhibit a cancellation-->
+<!--                between the numerator and the denominator. To develop a strategy for evaluating this limit, let's do-->
+<!--                a <q>little scratch work</q>, starting by taking a closer look at the denominator. By Example<xref-->
+<!--                    ref="eg_bigohlog"/>,-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        \log(1+x) = x+O(x^2)-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--                This tells us that <m>\log(1+x)</m> looks a lot like <m>x</m> for very small <m>x</m>. So the-->
+<!--                denominator <m>[x+O(x^2)]^4</m> looks a lot like <m>x^4</m> for very small <m>x</m>. Now, what about the-->
+<!--                numerator?-->
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        If the numerator looks like some constant times <m>x^p</m> with <m>p \gt 4</m>, for very-->
+<!--                        small <m>x</m>, then the ratio will look like the constant times  <m>\frac{x^p}{x^4}=x^{p-4}</m> and,-->
+<!--                        as <m>p-4 \gt 0</m>, will tend to <m>0</m> as <m>x</m>  tends to zero.-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        If the numerator looks like some constant times <m>x^p</m> with <m>p \lt 4</m>, for very-->
+<!--                        small <m>x</m>, then the ratio will look like the constant times  <m>\frac{x^p}{x^4}=x^{p-4}</m> and-->
+<!--                        will, as <m>p-4 \lt 0</m>, tend to infinity, and in particular diverge, as <m>x</m> tends to-->
+<!--                        zero.-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        If the numerator looks like  <m>Cx^4</m>, for very small <m>x</m>, then the ratio will look like <m>-->
+<!--                        \frac{Cx^4}{x^4}=C-->
+<!--                    </m> and will tend to <m>C</m> as  <m>x</m> tends to zero.-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                The moral of the above <q>scratch work</q> is that we need to know the behaviour of the numerator, for-->
+<!--                small <m>x</m>, up to order <m>x^4</m>. Any contributions of order <m>x^p</m> with <m>p \gt 4</m> may be-->
+<!--                put into error terms <m>O(|x|^p)</m>.-->
+<!--            </p>-->
+
+<!--            <p>-->
+<!--                Now we are ready to evaluate the limit. Because the expressions are a little involved, we will simplify-->
+<!--                the numerator and denominator separately and then put things together. Using the expansions we developed-->
+<!--                in Example<xref ref="eg_bigohsincos"/>, the numerator,-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        \cos x -1 + \frac{1}{2} x\sin x-->
+<!--                        &amp;=-->
+<!--                        \left( 1 - \frac{1}{2!}x^2 + \frac{1}{4!}x^4 + O(|x|^6) \right)-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;\phantom{=\ } -1 + \frac{x}{2}\left( x - \frac{1}{3!}x^3 + O(|x|^5) \right)-->
+<!--                        &amp; \text{expand}-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;= \left( \frac{1}{24}-\frac{1}{12} \right)x^4 + O(|x|^6) + \frac{x}{2} O(|x|^5)-->
+<!--                    </mrow>-->
+<!--                    <intertext>Then by Remark<xref ref="rem_bigohppties"/>(b)-->
+<!--                    </intertext>-->
+<!--                    <mrow>-->
+<!--                        &amp;= - \frac{1}{24}x^4 + O(|x|^6) + O(|x|^6)-->
+<!--                    </mrow>-->
+<!--                    <intertext>and now by Remark<xref ref="rem_bigohppties"/>(c)-->
+<!--                    </intertext>-->
+<!--                    <mrow>-->
+<!--                        &amp;= - \frac{1}{24}x^4 + O(|x|^6)-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--                Similarly, using the expansion that we developed in Example<xref ref="eg_bigohlog"/>,-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        [ \log(1+x) ]^4 &amp;= \big[ x + O(|x|^2) \big]^4-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;= \big[x + x O(|x|)\big]^4 &amp; \text{by Remark }<xref ref="rem_bigohppties"/>\text{(b)}-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;= x^4 [1 + O(|x|)]^4-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--                Now put these together and take the limit as <m>x \to 0</m>:-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        \lim_{x \to 0}-->
+<!--                        \frac{\cos x -1 + \half x\sin x}{[\log(1+x)]^4}-->
+<!--                        &amp;= \lim_{x \to 0}-->
+<!--                        \frac{ -\frac{1}{24}x^4 + O(|x|^6)}{x^4 [1+O(|x|)]^4}-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;= \lim_{x \to 0}-->
+<!--                        \frac{-\frac{1}{24}x^4 + x^4O(|x|^2)}{x^4 [1+O(|x|)]^4}&amp; \text{by Remark }<xref-->
+<!--                            ref="rem_bigohppties"/>\text{(b)}-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;= \lim_{x \to 0}-->
+<!--                        \frac{-\frac{1}{24} + O(|x|^2)}{[1+O(|x|)]^4}-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;= -\frac{1}{24} &amp; \text{by Remark }<xref ref="rem_bigohppties"/>\text{(a)}.-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--            </p>-->
+<!--        </example>-->
+
+<!--        <p>-->
+<!--            The next two limits have much the same flavour as those above-->
+<!--            <mdash/>-->
+<!--            expand the numerator and denominator to high enough order, do some cancellations and then take the limit. We-->
+<!--            have increased the difficulty a little by introducing <q>expansions of expansions</q>.-->
+<!--        </p>-->
+
+<!--        <example xml:id="eg_bigohlimitC">-->
+<!--            <title>Another difficult limit</title>-->
+<!--            <p>-->
+<!--                In this example we'll evaluate another harder limit, namely-->
+<!--                <me>-->
+<!--                    \lim_{x\rightarrow 0}\frac{\log\big(\frac{\sin x}{x}\big)}{x^2}-->
+<!--                </me>-->
+<!--                The first thing to notice about this limit is that, as <m>x</m> tends to zero, the denominator <m>x^2-->
+<!--            </m> tends to <m>0</m>. So, yet again, to find the limit, we are going to have to show that the numerator-->
+<!--                also tends to <m>0</m> and we are going to have to exhibit a cancellation between the numerator and the-->
+<!--                denominator.-->
+<!--            </p>-->
+
+<!--            <p>-->
+<!--                Because the denominator is <m>x^2</m> any terms in the numerator, <m>\log\big(\frac{\sin x}{x}\big)</m> that-->
+<!--                are of order <m>x^3</m> or higher will contribute terms in the ratio <m>\frac{\log(\frac{\sin-->
+<!--                x}{x})}{x^2}-->
+<!--            </m> that are of order <m>x</m> or higher. Those terms in the ratio will converge to zero as <m>x\rightarrow-->
+<!--                0</m>. The moral of this discussion is that we need to compute <m>\log\frac{\sin x}{x}</m> to order <m>-->
+<!--                x^2-->
+<!--            </m> with errors of order <m>x^3</m>. Now we saw, in Example<xref ref="eg_bigohlimitAA"/>, that-->
+<!--                <me>-->
+<!--                    \frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)-->
+<!--                </me>-->
+<!--                We also saw, in equation-->
+
+<!--                <xref ref="eq_bigohlog"/>-->
+<!--                with <m>n=1</m>, that-->
+<!--                <me>-->
+<!--                    \log(1+X) = X +O(X^2)-->
+<!--                </me>-->
+<!--                Substituting-->
+<!--                <fn>-->
+<!--                    In our derivation of <m>\log(1+X) = X +O(X^2)</m> in Example<xref ref="eg_bigohlog"/>, we required-->
+<!--                    only that <m>|X|\le\frac{1}{2}</m>. So we are free to substitute <m>X= -\frac{1}{3!}x^2+O(x^4)</m> for-->
+<!--                    any <m>x</m> that is small enough that <m>\big|-\frac{1}{3!}x^2+O(x^4)\big| \lt \frac{1}{2}</m>.-->
+<!--                </fn>-->
+<!--                <m>X= -\frac{1}{3!}x^2+O(x^4)</m>, and using that <m>X^2=O(x^4)</m> (by Remark<xref-->
+<!--                    ref="rem_bigohppties"/>(b,c)), we have that the numerator-->
+<!--                <me>-->
+<!--                    \log\Big(\frac{\sin x}{x}\Big)-->
+<!--                    =\log(1+X)-->
+<!--                    = X +O(X^2)-->
+<!--                    =-\frac{1}{3!}x^2+O(x^4)-->
+<!--                </me>-->
+<!--                and the limit-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        \lim_{x\rightarrow 0}\frac{\log\big(\frac{\sin x}{x}\big)}{x^2}-->
+<!--                        \amp=\lim_{x\rightarrow 0}\frac{-\frac{1}{3!}x^2+O(x^4)}{x^2}-->
+<!--                        =\lim_{x\rightarrow 0}\Big[-\frac{1}{3!}+O(x^2)\Big]-->
+<!--                        =-\frac{1}{3!}-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        \amp=-\frac{1}{6}-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--            </p>-->
+<!--        </example>-->
+
+<!--        <example xml:id="eg_bigohlimitD">-->
+<!--            <title>Yet another difficult limit</title>-->
+<!--            <p>-->
+<!--                Evaluate-->
+<!--                <me>-->
+<!--                    \lim_{x\rightarrow 0}\frac{e^{x^2}-\cos x}{\log(1+x)-\sin x}-->
+<!--                </me>-->
+<!--            </p>-->
+
+<!--            <p>-->
+<!--                <alert>Solution:</alert>-->
+<!--                <em>Step 1</em>: Find the limit of the denominator.-->
+<!--                <me>-->
+<!--                    \lim_{x\rightarrow 0}\big[\log(1+x)-\sin x\big]-->
+<!--                    =\log(1+0)-\sin 0-->
+<!--                    =0-->
+<!--                </me>-->
+<!--                This tells us that we can't evaluate the limit just by finding the limits of the numerator and-->
+<!--                denominator separately and then dividing.-->
+<!--            </p>-->
+
+<!--            <p>-->
+<!--                <em>Step 2</em>: Determine the leading order behaviour of the denominator near <m>x=0</m>. By equations-->
+
+<!--                <xref ref="eq_bigohlog"/>-->
+<!--                and-->
+
+<!--                <xref ref="eq_SRsincosExp"/>,-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        \log(1+x) &amp; = x-\tfrac{1}{2}x^2+\tfrac{1}{3}x^3-\cdots-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        \sin x &amp; = x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--                Taking the difference of these expansions gives-->
+<!--                <me>-->
+<!--                    \log(1+x)-\sin x = -\tfrac{1}{2}x^2+\big(\tfrac{1}{3}-->
+<!--                    +\tfrac{1}{3!}\big)x^3 +\cdots-->
+<!--                </me>-->
+<!--                This tells us that, for <m>x</m> near zero, the denominator is  <m>-\tfrac{x^2}{2}</m> (that's the-->
+<!--                leading order term) plus contributions that are of order <m>x^3</m> and smaller. That is-->
+<!--                <me>-->
+<!--                    \log(1+x)-\sin x = -\tfrac{x^2}{2}+ O(|x|^3)-->
+<!--                </me>-->
+<!--            </p>-->
+
+<!--            <p>-->
+<!--                <em>Step 3</em>: Determine the behaviour of the numerator near <m>x=0</m> to order <m>x^2</m> with-->
+<!--                errors of order <m>x^3</m> and smaller (just like the denominator). By equation-->
+
+<!--                <xref ref="eq_SRexpExp"/>-->
+<!--                <me>-->
+<!--                    e^X=1+X+O\big(X^2\big)-->
+<!--                </me>-->
+<!--                Substituting-->
+<!--                <m>X=x^2</m>-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        e^{x^2} &amp; = 1+x^2 +O\big(x^4\big)-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        \cos x &amp; = 1-\tfrac{1}{2}x^2+O\big(x^4\big)-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--                by equation-->
+
+<!--                <xref ref="eq_SRsincosExp"/>. Subtracting, the numerator-->
+<!--                <me>-->
+<!--                    e^{x^2}-\cos x = \tfrac{3}{2}x^2+O\big(x^4\big)-->
+<!--                </me>-->
+<!--            </p>-->
+
+<!--            <p>-->
+<!--                <em>Step 4</em>: Evaluate the limit.-->
+<!--                <md>-->
+<!--                    <mrow>-->
+<!--                        \lim_{x\rightarrow 0}\frac{e^{x^2}-\cos x}{\log(1+x)-\sin x}-->
+<!--                        &amp; =\lim_{x\rightarrow 0}\frac{\frac{3}{2}x^2+O(x^4)}-->
+<!--                        {-\frac{x^2}{2}+ O(|x|^3)}-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp; =\lim_{x\rightarrow 0}\frac{\frac{3}{2}+O(x^2)}-->
+<!--                        {-\frac{1}{2}+ O(|x|)}-->
+<!--                    </mrow>-->
+<!--                    <mrow>-->
+<!--                        &amp;-->
+<!--                        =\frac{\frac{3}{2}} {-\frac{1}{2}}-->
+<!--                        =-3-->
+<!--                    </mrow>-->
+<!--                </md>-->
+<!--            </p>-->
+<!--        </example>-->
+<!--    </subsection>-->
+
+    <!--<xi:include href="../problems/prob_s3.6.xml" />-->
+    <subsection>
+        <title>Sugestão de Vídeos</title>
+    </subsection>
+<exercises xml:id="exercises-series-taylor">
+<!--    <exercise>-->
+<!--                <webwork source="pretext-teste-convergencia/problem19.pg"/>-->
+<!--            </exercise>-->
+</exercises>
+</section>
