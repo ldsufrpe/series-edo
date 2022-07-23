@@ -382,6 +382,201 @@ nos diz que a série
     <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-teste-convergencia/problem2.pg</server-url>
     <pg source="pretext-teste-convergencia/problem2.pg"/>
   </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-20" ww-id="webwork-20">
+    <static seed="20" source="pretext-teste-convergencia/problem20.pg">
+      <statement><p>Determine se as seguintes séries alternadas convergem.</p>
+<p>(a) <m>\displaystyle \sum_{k=1}^{\infty}(-1)^{k+1} \frac{k+3}{3k+3}</m> <var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>Converge</p>
+</li>
+<li>
+<p>Diverge</p>
+</li>
+</var></p>
+<p>(b) <m>\displaystyle \sum_{k=1}^{\infty}(-1)^{k+1} \frac{k+3}{\sqrt{k}+3}</m> <var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>Converge</p>
+</li>
+<li>
+<p>Diverge</p>
+</li>
+</var></p>
+<p>(c) <m>\displaystyle \sum_{k=1}^{\infty} (-1)^{k+1}\frac{\ln{k}}{k}</m> <var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>Converge</p>
+</li>
+<li>
+<p>Diverge</p>
+</li>
+</var></p>
+</statement>
+      <solution><p>(a) <m>\displaystyle \lim_{k\to\infty}\frac{k+3}{3k+3} ={\textstyle\frac{1}{3}}\neq 0</m> então a série diverge.</p>
+<p>(b) <m>\displaystyle \lim_{k\to\infty}\frac{k+3}{\sqrt{k}+3} =\infty</m> então a série diverge.</p>
+<p>(c) <m>\displaystyle \lim_{k\to\infty}\frac{\ln{k}}{k} =\lim_{k\to\infty}\frac{1}{k} =0</m> e <m>a_{k+1}=\frac{\ln{(k+1)}}{k+1}\lt \frac{\ln{k}}{k}=a_k</m> for all <m>k\geq 2</m>, então a série converge.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-teste-convergencia/problem20.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-teste-convergencia/problem20.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-teste-convergencia/problem20.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-teste-convergencia/problem20.pg</server-url>
+    <pg source="pretext-teste-convergencia/problem20.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-21" ww-id="webwork-21">
+    <static seed="21" source="pretext-teste-convergencia/problem21.pg">
+      <statement><p>Considere a série
+<m>\displaystyle \sum_{n=1}^{\infty} a_n</m>
+na qual
+<me>a_n = \frac{ (2 n  - 5)^{n} }{ (-4 n  - 3)^{n} }</me>
+Neste problema você deve tentar usar o Teste de Raiz para decidir
+se a série converge.</p>
+<p>Calcule
+<me>L=\lim_{n\rightarrow\infty} \sqrt[n]{|a_n|}</me>
+Insira o valor numérico do limite L se ele convergir,
+INF se diverge ao infinito, MINF se diverge ao infinito negativo,
+ou DIV se diverge, mas não ao infinito ou infinito negativo.</p>
+<p><m>L =</m> <fillin name="AnSwEr0001" characters="30"/></p>
+<p>Qual das seguintes afirmações é verdadeira?</p>
+<p>A. O Teste da Raiz diz que a série converge absolutamente.</p>
+<p>B. O Teste da Raiz diz que a série diverge.</p>
+<p>C. O Teste da Raiz diz que a série converge condicionalmente.</p>
+<p>D. O Teste de Raiz é inconclusivo, mas a série converge
+absolutamente por outro teste ou testes.</p>
+<p>E. O Teste de Raiz é inconclusivo, mas a série diverge
+por outro teste ou testes.</p>
+<p>F. O Teste da Raiz é inconclusivo, mas a série converge
+condicionalmente por outro teste ou testes.</p>
+<p>Digite a letra de sua escolha aqui:
+<fillin name="AnSwEr0002" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>A</p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-teste-convergencia/problem21.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-teste-convergencia/problem21.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-teste-convergencia/problem21.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-teste-convergencia/problem21.pg</server-url>
+    <pg source="pretext-teste-convergencia/problem21.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-22" ww-id="webwork-22">
+    <static seed="22" source="pretext-teste-convergencia/problem22.pg">
+      <statement><p>Considere a série
+<m>\displaystyle \sum_{n=1}^{\infty} a_n</m>
+where
+<me>a_n =  \frac{ (-10)^{n} }{ (5 n + 4) 11^{n + 5} }</me>
+Neste problema você deve tentar usar o Teste de Razão para decidir
+se a série converge.</p>
+<p>Calcule
+<me>L=\lim_{n\rightarrow\infty} \left| \frac{ a_{n+1} }{a_n} \right|</me>
+Insira o valor numérico do limite <m>L</m> se convergir,
+INF se o limite para <m>L</m> diverge ao infinito, MINF se diverge
+para infinito negativo, ou DIV se diverge, mas não para infinito ou infinito negativo.</p>
+<p><m>L =</m> <fillin name="AnSwEr0001" characters="30"/></p>
+<p>Qual das seguintes afirmações é verdadeira?</p>
+<p>A. O Teste da Razão diz que a série converge absolutamente.</p>
+<p>B. O Teste da Razão diz que a série diverge.</p>
+<p>C. O Teste da Razão diz que a série converge condicionalmente.</p>
+<p>D. O Teste de Razão é inconclusivo, mas a série converge
+absolutamente por outro teste ou testes.</p>
+<p>E. O Teste de Razão é inconclusivo, mas a série diverge
+por outro teste ou testes.</p>
+<p>F. O Teste da Razão é inconclusivo, mas a série converge
+condicionalmente por outro teste ou testes.</p>
+<p>Digite a letra de sua escolha aqui:
+<var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>A</p>
+</li>
+<li>
+<p>B</p>
+</li>
+<li>
+<p>C</p>
+</li>
+<li>
+<p>D</p>
+</li>
+<li>
+<p>E</p>
+</li>
+<li>
+<p>F</p>
+</li>
+</var></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.909090909090909</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-teste-convergencia/problem22.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-teste-convergencia/problem22.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-teste-convergencia/problem22.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-teste-convergencia/problem22.pg</server-url>
+    <pg source="pretext-teste-convergencia/problem22.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-23" ww-id="webwork-23">
+    <static seed="23" source="pretext-teste-convergencia/problem24.pg">
+      <statement><p>Classifique cada série como absolutamente convergente, condicionalmente convergente ou divergente.</p>
+<p>(a) <m>\displaystyle \sum_{k=1}^{\infty} \frac{\left(-5\right)^{k}}{k^{2}}</m> <var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>Absolutely Convergent</p>
+</li>
+<li>
+<p>Conditionally Convergent</p>
+</li>
+<li>
+<p>Diverges</p>
+</li>
+</var></p>
+<p>(b) <m>\displaystyle \sum_{k=1}^{\infty}\frac{(-1)^{k+1} }{\left(k+1\right)! }</m> <var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>Absolutely Convergent</p>
+</li>
+<li>
+<p>Conditionally Convergent</p>
+</li>
+<li>
+<p>Diverges</p>
+</li>
+</var></p>
+</statement>
+      <solution><p>(a) Usando o teste da razão:</p>
+<p><m>\displaystyle \rho=\lim_{k\to\infty}\frac{\frac{5^{k+1}}{\left(k+1\right)^{2}}}{\frac{5^{k}}{k^{2}}} = 5&gt;1</m> então a série diverge.</p>
+<p>(b) Usando o teste da razão:</p>
+<p><m>\displaystyle \rho=\lim_{k\to\infty}\frac{\left(k+1\right)!}{\left(k+2\right)!} = \lim_{k\to\infty}\frac{1}{k+2}=0\lt 1</m> então a série converge absolutamente.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-teste-convergencia/problem24.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-teste-convergencia/problem24.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-teste-convergencia/problem24.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-teste-convergencia/problem24.pg</server-url>
+    <pg source="pretext-teste-convergencia/problem24.pg"/>
+  </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
     <static seed="3" source="pretext-teste-convergencia/problem3.pg">
       <statement><p>Cada uma das seguintes afirmações é uma tentativa de mostrar que uma determinada série é convergente ou divergente usando o Teste de Comparação (NÃO o Teste de Comparação de Limite).</p>

@@ -2813,6 +2813,24 @@
             </exercise><exercise>
                 <webwork source="pretext-teste-convergencia/problem19.pg"/>
             </exercise>
+         <exercise>
+<webwork source="pretext-teste-convergencia/problem20.pg"/>
+</exercise>
+          <exercise>
+<webwork source="pretext-teste-convergencia/problem21.pg"/>
+</exercise>
+
+<exercise>
+                <webwork source="pretext-teste-convergencia/problem22.pg"/>
+            </exercise>
+               <exercise>
+                <webwork source="pretext-teste-convergencia/problem24.pg"/>
+            </exercise>
+<!--                 <exercise>-->
+<!--                <webwork source="pretext-teste-convergencia/problem24.pg"/>-->
+<!--            </exercise>-->
+
+
 
         </exercisegroup>
     </exercises>
