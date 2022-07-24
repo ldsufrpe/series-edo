@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-24T12:30:46-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p>(b) Podemos encontrar a série de potências para <span class="process-math">\(\frac{24}{x^2+4}\)</span> usando</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\frac{24}{x^2+4}
+\amp =	\frac{24}{4-(-x^2)}	\\\\
+\amp =	\frac{\frac{24}4}{1-\left(-\frac{x^2}4\right)}	\\\\
+\amp =	6 \sum_{n=0}^\infty \left(\frac{-x^2}4\right)^n
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Então podemos calcular <span class="process-math">\(S\)</span> conforme a seguir:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+S
+\amp =	\int_0^2 6 \sum_{n=0}^\infty \left(\frac{-x^2}4\right)^n dx \\\\
+\amp =	6 \sum_{n=0}^\infty \int_0^2 \frac{(-1)^n x^{2n}}{4^n} dx	\\\\
+\amp =	6 \sum_{n=0}^\infty \frac{(-1)^n}{4^n(2n+1)}
+\left( \left. x^{2n+1} \right|_0^2 \right)	\\\\
+\amp =	6 \sum_{n=0}^\infty \frac{(-1)^n}{4^n(2n+1)} \cdot
+\left( 2^{2n+1}-0 \right)	\\\\
+\amp =	6 \sum_{n=0}^\infty \frac{(-1)^n}{4^n(2n+1)}
+\left( 2 \cdot 4^n \right)	\\\\
+\amp =	12 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">E agora podemos, com esta fórmula para<span class="process-math">\(S\text{,}\)</span> calcular seus primeiros termos:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+S
+\amp =	\frac{12 (-1)^0}{2 \cdot 0 + 1} +
+\frac{12 (-1)^1}{2 \cdot 1 + 1} +
+\frac{12 (-1)^2}{2 \cdot 2 + 1} +
+\frac{12 (-1)^3}{2 \cdot 3 + 1} +
+\frac{12 (-1)^4}{2 \cdot 4 + 1} + \cdots	\\\\
+\amp =	12 - \frac{12}3 + \frac{12}5 -
+\frac{12}7 + \frac{12}9 - \cdots	\\\\
+\amp =	12  - 4 + 2.4  - 1.71428571428571 + 1.33333333333333
+\end{aligned}
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-1.html#p-83" class="internal">em contexto</a></span>
+</body>
+</html>

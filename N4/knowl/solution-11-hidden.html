@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-24T12:30:47-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>Sabemos que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{\left(1-x\right)^2} = \sum_{n=0}^\infty \left(n+1\right)x^n
+\end{equation*}
+</div>
+<p>Vamos modificar este fato substituindo <span class="process-math">\(x\)</span> com <span class="process-math">\(10 x\)</span> para obter:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{\left(1 - 10 x\right)^2}
+= \sum_{n=0}^\infty \left(n+1\right)\left(10 x\right)^n
+\end{equation*}
+</div>
+<p>E essa equação nos permite resolver o problema:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\frac{10}{\left(1 - 10 x\right)^2}
+\amp =
+\sum_{n=0}^\infty \left(n+1\right)\left(10 x\right)^n		\\\\
+\amp =
+\sum_{n=0}^\infty 10^n\left(n+1\right)x^n					\\\\
+\amp =
+10^0\left(0+1\right)x^0 + 10^1\left(1+1\right)x^1 +
+10^2\left(2+1\right)x^2 + 10^3\left(3+1\right)x^3 +
+10^4\left(4+1\right)x^4 + \cdots							\\\\
+\amp =
+1\left(1\right)x^0 + 10\left(2\right)x^1 + 
+100\left(3\right)x^2 + 1000\left(4\right)x^3 +
+10000\left(5\right)x^4 + \cdots						\\\\
+\amp =
+10 x^0 + 200 x^1 + 3000 x^2 +
+40000 x^3 + 500000 x^4 + \cdots
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Assim:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+c_0	\amp =	10			\\\\
+c_1	\amp =	200			\\\\
+c_2	\amp =	3000			\\\\
+c_3	\amp =	40000			\\\\
+c_4	\amp =	500000
+\end{aligned}
+\end{equation*}
+</div>
+<p>O raio de convergência para isso pode ser calculado da seguinte forma:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\left|10 x\right| \lt  1	\amp \iff	10\left|x\right| \lt  1		\\\\
+\amp \iff	\left|x\right| \lt  \frac{1}{10}
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Então <span class="process-math">\(R=\frac{1}{10}=0.1\text{.}\)</span></p>
+</div></body>
+</html>

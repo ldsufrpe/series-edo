@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-23T15:59:59-03:00       *-->
+<!--*       on 2022-07-24T13:41:48-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -36,7 +49,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -172,10 +186,10 @@ f(x)\approx f(a) + f'(a)\,(x-a) +\frac{1}{2} f''(a)\,(x-a)^2
 </div></p></li>
 <li id="li-4"><p id="p-derived-li-4">Em geral, o polinômio de Taylor de grau <span class="process-math">\(n\text{,}\)</span> para a função <span class="process-math">\(f(x)\text{,}\)</span> sobre o ponto de expansão <span class="process-math">\(a\text{,}\)</span> é o polinômio, <span class="process-math">\(T_n(x)\text{,}\)</span> determinados pelos requisitos que <span class="process-math">\(f^{(k)}(a) = T_n^{(k)}(a)\)</span> para todo <span class="process-math">\(0\le k \le n\text{.}\)</span> Isto é, <span class="process-math">\(f\)</span> e <span class="process-math">\(T_n\)</span> tem as mesmas derivadas em <span class="process-math">\(a\text{,}\)</span> até a ordem <span class="process-math">\(n\text{.}\)</span> Explicitamente,<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{align*}
-f(x) &amp;\approx T_n(x)\\
-&amp;= f(a) + f'(a)\,(x-a) +\frac{1}{2} f''(a)\,(x-a)^2
+f(x)   \amp\approx T_n(x)\\
+\amp= f(a) + f'(a)\,(x-a) +\frac{1}{2} f''(a)\,(x-a)^2
 +\cdots+\frac{1}{n!} f^{(n)}(a)\,(x-a)^n\\
-&amp;=\sum_{k=0}^n\frac{1}{k!} f^{(k)}(a)\,(x-a)^k
+\amp=\sum_{k=0}^n\frac{1}{k!} f^{(k)}(a)\,(x-a)^k
 \end{align*}
 </div></p></li>
 </ul>
@@ -186,7 +200,7 @@ f(x) &amp;\approx T_n(x)\\
 </h4>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
 \begin{align*}
-f(x) &amp;=T_n(x) +E_n(x)
+f(x)   \amp=T_n(x) +E_n(x)
 \end{align*}
 </div></article><p id="p-6">no qual <span class="process-math">\(T_n(x)\)</span> é um polinômio de Taylor de grau <span class="process-math">\(n\)</span>  para a função <span class="process-math">\(f(x)\)</span> em torno de <span class="process-math">\(a\text{,}\)</span> e  <span class="process-math">\(E_n(x)=f(x)-T_n(x)\)</span>  é o erro na aproximação  <span class="process-math">\(f(x) \approx T_n(x)\text{.}\)</span> O polinômio de Taylor é dado pela fórmula</p>
 <article class="fact theorem-like" id="eq_TaylorPolyPlusError_a"><h4 class="heading">
@@ -194,7 +208,7 @@ f(x) &amp;=T_n(x) +E_n(x)
 </h4>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
 \begin{align*}
-T_n(x)&amp;=f(a)+f'(a)\,(x-a)+\cdots+\tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
+T_n(x)  \amp=f(a)+f'(a)\,(x-a)+\cdots+\tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
 \end{align*}
 </div></article><p id="p-8">enquanto erro satisfaz</p>
 <article class="fact theorem-like" id="eq_TaylorPolyPlusError_b"><h4 class="heading">
@@ -243,14 +257,14 @@ f(x)=\sum_{n=0}^\infty \tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
 <p id="p-15">Uma vez que <span class="process-math">\(\diff{}{x}e^x = e^x\)</span> temos</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_TaylorPolyPlusError.html ./knowl/eq_TaylorPolyPlusError_a.html ./knowl/eg_expSeriesB.html" id="md-8">
 \begin{align*}
-e^x &amp;= f(x) = f'(x) = f''(x) = \cdots = f^{(k)}(x) = \cdots &amp; \text{que produz}\\
-1 &amp;= f(0) = f'(0) = f''(0) = \cdots = f^{(k)}(0) = \cdots.
+e^x   \amp= f(x) = f'(x) = f''(x) = \cdots = f^{(k)}(x) = \cdots   \amp \text{que produz}\\
+1   \amp= f(0) = f'(0) = f''(0) = \cdots = f^{(k)}(0) = \cdots.
 \end{align*}
 </div>
 <p class="continuation">As Equações do   <a href="" class="xref" data-knowl="./knowl/eq_TaylorPolyPlusError.html" title="Fato 1.1">Fato 1.1</a> e   <a href="" class="xref" data-knowl="./knowl/eq_TaylorPolyPlusError_a.html" title="Fato 1.2">Fato 1.2</a> fornecem</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_TaylorPolyPlusError.html ./knowl/eq_TaylorPolyPlusError_a.html ./knowl/eg_expSeriesB.html" id="md-9">
 \begin{align*}
-e^x=f(x)&amp;= 1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+E_n(x)
+e^x=f(x)  \amp= 1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+E_n(x)
 \end{align*}
 </div>
 <p class="continuation">Veremos, <a href="" class="xref" data-knowl="./knowl/eg_expSeriesB.html" title="Exemplo 1.8: \sum_{n=0}^\infty \frac{1}{n!}x^n = e^x">Exemplo 1.8</a> que para qualquer <span class="process-math">\(x\)</span> fixado, <span class="process-math">\(\lim\limits_{n\rightarrow\infty}E_n(x)=0\text{.}\)</span> Consequentemente, para todo <span class="process-math">\(x\text{,}\)</span></p>
@@ -266,7 +280,7 @@ e^x=\lim_{n\rightarrow\infty}\Big[1 +x + \frac{1}{2} x^2
 <p id="p-16">Vimos até aqui representações de séries de potências para as funções</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
 \begin{align*}
-\frac{1}{1-x} &amp;&amp; \frac{1}{(1-x)^2} &amp;&amp; \log(1+x) &amp;&amp; \arctan(x) &amp;&amp;
+\frac{1}{1-x}   \amp  \amp \frac{1}{(1-x)^2}   \amp  \amp \log(1+x)   \amp  \amp \arctan(x)   \amp  \amp
 e^x.
 \end{align*}
 </div>
@@ -276,52 +290,52 @@ e^x.
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_sincosSeries"><article class="example example-like"><p id="p-17">Vamos usar a série de Maclaurin para representar as funções trigonométricas <span class="process-math">\(\sin x\)</span> e <span class="process-math">\(\cos x\)</span> Para isso, vamos encontrar primeiro as suas derivadas gerais em  <span class="process-math">\(x\text{.}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
 \begin{align*}
-f(x)&amp;=\sin x &amp;
-f'(x)&amp;=\cos x &amp;
-f''(x)&amp;=\!-\sin x &amp;
-f^{(3)}(x)&amp;=\!-\cos x\\
-&amp; &amp;
-f^{(4)}(x)&amp;=\sin x &amp; \cdots\\
-g(x)&amp;=\cos x &amp;
-g'(x)&amp;=\!-\sin x &amp;
-g''(x)&amp;=\!-\cos x &amp;
-g^{(3)}(x)&amp;=\sin x\\
-&amp; &amp;
-g^{(4)}(x)&amp;=\cos x &amp; \cdots
+f(x)  \amp=\sin x   \amp
+f'(x)  \amp=\cos x   \amp
+f''(x)  \amp=\!-\sin x   \amp
+f^{(3)}(x)  \amp=\!-\cos x\\
+\amp   \amp
+f^{(4)}(x)  \amp=\sin x   \amp \cdots\\
+g(x)  \amp=\cos x   \amp
+g'(x)  \amp=\!-\sin x   \amp
+g''(x)  \amp=\!-\cos x   \amp
+g^{(3)}(x)  \amp=\sin x\\
+\amp   \amp
+g^{(4)}(x)  \amp=\cos x   \amp \cdots
 \end{align*}
 </div>
 <p id="p-18">Agora defina <span class="process-math">\(x=a=0\text{.}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_sincosSeriesB.html" id="md-12">
 \begin{align*}
-f(x)&amp;=\sin x &amp;
-f(0)&amp;=0 &amp;
-f'(0)&amp;=1 &amp;
-f''(0)&amp;=0 &amp;
-f^{(3)}(0)&amp;=\!-1\\
-&amp; &amp;
-f^{(4)}(0)&amp;=0 &amp; \cdots\\
-g(x)&amp;=\cos x &amp;
-g(0)&amp;=1 &amp;
-g'(0)&amp;=0 &amp;
-g''(0)&amp;=\!-1 &amp;
-g^{(3)}(0)&amp;=0\\
-&amp; &amp;
-g^{(4)}(0)&amp;=1 &amp; \cdots
+f(x)  \amp=\sin x   \amp
+f(0)  \amp=0   \amp
+f'(0)  \amp=1   \amp
+f''(0)  \amp=0   \amp
+f^{(3)}(0)  \amp=\!-1\\
+\amp   \amp
+f^{(4)}(0)  \amp=0   \amp \cdots\\
+g(x)  \amp=\cos x   \amp
+g(0)  \amp=1   \amp
+g'(0)  \amp=0   \amp
+g''(0)  \amp=\!-1   \amp
+g^{(3)}(0)  \amp=0\\
+\amp   \amp
+g^{(4)}(0)  \amp=1   \amp \cdots
 \end{align*}
 </div>
 <p class="continuation">Para <span class="process-math">\(\sin x\text{,}\)</span> todas as derivadas de ordem par (em <span class="process-math">\(x=0\)</span>) são nulas, enquanto as derivadas ímpares alternam entre <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{.}\)</span> Similarmente, para <span class="process-math">\(\cos x\text{,}\)</span> todas derivadas de ordem ímpar (em <span class="process-math">\(x=0\)</span>) são nulas, enquanto as derivadas pares alternam entre <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{.}\)</span> Então, os polinômios de Taylor quem melhor aproximam <span class="process-math">\(\sin x\)</span> e <span class="process-math">\(\cos x\)</span>  em torno de <span class="process-math">\(x=a=0\)</span> são</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_sincosSeriesB.html" id="md-13">
 \begin{align*}
-\sin x &amp;\approx x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots\\
-\cos x &amp;\approx 1-\tfrac{1}{2!}x^2+\tfrac{1}{4!}x^4-\cdots
+\sin x   \amp\approx x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots\\
+\cos x   \amp\approx 1-\tfrac{1}{2!}x^2+\tfrac{1}{4!}x^4-\cdots
 \end{align*}
 </div>
 <p class="continuation">Veremos no <a href="" class="xref" data-knowl="./knowl/eg_sincosSeriesB.html" title="Exemplo 1.9: \sum\limits_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}=\sin x e \sum\limits_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}=\cos x">Exemplo 1.9</a> mais adiante, que, para ambos <span class="process-math">\(\sin x\)</span> e <span class="process-math">\(\cos x\text{,}\)</span> temos <span class="process-math">\(\lim\limits_{n\rightarrow\infty}E_n(x)=0\)</span> de modo a</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_sincosSeriesB.html" id="md-14">
 \begin{align*}
-f(x)&amp;=\lim_{n\rightarrow\infty}\Big[f(0)+f'(0)\,x+\cdots
+f(x)  \amp=\lim_{n\rightarrow\infty}\Big[f(0)+f'(0)\,x+\cdots
 +\tfrac{1}{n!}f^{(n)}(0)\, x^n\Big]\\
-g(x)&amp;=\lim_{n\rightarrow\infty}\Big[g(0)+g'(0)\,x+\cdots
+g(x)  \amp=\lim_{n\rightarrow\infty}\Big[g(0)+g'(0)\,x+\cdots
 +\tfrac{1}{n!}g^{(n)}(0)\, x^n\Big]
 \end{align*}
 </div>
@@ -329,10 +343,10 @@ g(x)&amp;=\lim_{n\rightarrow\infty}\Big[g(0)+g'(0)\,x+\cdots
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_sincosSeriesB.html">
 \begin{equation*}
 \begin{alignedat}{2}
-\sin x &amp;= x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots&amp;
-&amp;=\sum_{n=0}^\infty(-1)^n\tfrac{1}{(2n+1)!}x^{2n+1}\\
-\cos x &amp;= 1-\tfrac{1}{2!}x^2+\tfrac{1}{4!}x^4-\cdots&amp;
-&amp;=\sum_{n=0}^\infty(-1)^n\tfrac{1}{(2n)!}x^{2n}
+\sin x   \amp= x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots  \amp
+\amp=\sum_{n=0}^\infty(-1)^n\tfrac{1}{(2n+1)!}x^{2n+1}\\
+\cos x   \amp= 1-\tfrac{1}{2!}x^2+\tfrac{1}{4!}x^4-\cdots  \amp
+\amp=\sum_{n=0}^\infty(-1)^n\tfrac{1}{(2n)!}x^{2n}
 \end{alignedat}
 \end{equation*}
 </div>
@@ -341,10 +355,10 @@ g(x)&amp;=\lim_{n\rightarrow\infty}\Big[g(0)+g'(0)\,x+\cdots
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-15">
 \begin{align*}
 \left| \frac{A_{n+1}}{A_n} \right|
-&amp;= \frac{|x|^{2n+3}/(2n+3)!}{|x|^{2n+1}/(2n+1)!}
+\amp= \frac{|x|^{2n+3}/(2n+3)!}{|x|^{2n+1}/(2n+1)!}
 = \frac{|x|^2}{(2n+3)(2n+2)}\\
 \left| \frac{A_{n+1}}{A_n} \right|
-&amp;= \frac{|x|^{2n+2}/(2n+2)!}{|x|^{2n}/(2n)!}
+\amp= \frac{|x|^{2n+2}/(2n+2)!}{|x|^{2n}/(2n)!}
 = \frac{|x|^2}{(2n+2)(2n+1)}
 \end{align*}
 </div>
@@ -356,24 +370,24 @@ g(x)&amp;=\lim_{n\rightarrow\infty}\Big[g(0)+g'(0)\,x+\cdots
 <div class="displaymath process-math" data-contains-math-knowls="" id="p-21">
 \begin{equation*}
 \begin{alignedat}{5}
-e^x &amp;= \sum_{n=0}^\infty\dfrac{x^n}{n!}
-&amp;&amp;= 1 +x + \frac{1}{2!} x^2 +\frac{1}{3!} x^3+\cdots
-&amp;&amp;\ \text{para todo $-\infty \lt x \lt \infty$} \\
-\sin(x) &amp;= \sum_{n=0}^\infty(-1)^n\dfrac{x^{2n+1}}{(2n+1)!}
-&amp;&amp;= x-\frac{1}{3!}x^3+\frac{1}{5!}x^5-\cdots
-&amp;&amp;\ \text{para todo $-\infty \lt x \lt \infty$} \\
-\cos(x) &amp;= \sum_{n=0}^\infty(-1)^n\dfrac{x^{2n}}{(2n)!}
-&amp;&amp;= 1-\frac{1}{2!}x^2+\frac{1}{4!}x^4-\cdots
-&amp;&amp;\ \text{para todo $-\infty \lt x \lt \infty$} \\
-\frac{1}{1-x} &amp;= \sum_{n=0}^\infty x^n
-&amp;&amp;= 1 + x+ x^2 + x^3 + \cdots
-&amp;&amp;\ \text{para todo $-1 \lt x \lt 1$} \\
-\log(1+x) &amp;= \sum_{n=0}^\infty (-1)^n\dfrac{x^{n+1}}{n+1}
-&amp;&amp;= x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
-&amp;&amp;\ \text{para todo $-1 \lt x\le 1$} \\
-\arctan x &amp;= \sum_{n=0}^\infty (-1)^n\dfrac{x^{2n+1}}{2n+1}
-&amp;&amp;= x -\frac{x^3}{3} +\frac{x^5}{5}-\cdots
-&amp;&amp;\ \text{para todo $-1\le x\le 1$}
+e^x   \amp= \sum_{n=0}^\infty\dfrac{x^n}{n!}
+\amp  \amp= 1 +x + \frac{1}{2!} x^2 +\frac{1}{3!} x^3+\cdots
+\amp  \amp\ \text{para todo $-\infty \lt x \lt \infty$} \\
+\sin(x)   \amp= \sum_{n=0}^\infty(-1)^n\dfrac{x^{2n+1}}{(2n+1)!}
+\amp  \amp= x-\frac{1}{3!}x^3+\frac{1}{5!}x^5-\cdots
+\amp  \amp\ \text{para todo $-\infty \lt x \lt \infty$} \\
+\cos(x)   \amp= \sum_{n=0}^\infty(-1)^n\dfrac{x^{2n}}{(2n)!}
+\amp  \amp= 1-\frac{1}{2!}x^2+\frac{1}{4!}x^4-\cdots
+\amp  \amp\ \text{para todo $-\infty \lt x \lt \infty$} \\
+\frac{1}{1-x}   \amp= \sum_{n=0}^\infty x^n
+\amp  \amp= 1 + x+ x^2 + x^3 + \cdots
+\amp  \amp\ \text{para todo $-1 \lt x \lt 1$} \\
+\log(1+x)   \amp= \sum_{n=0}^\infty (-1)^n\dfrac{x^{n+1}}{n+1}
+\amp  \amp= x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+\amp  \amp\ \text{para todo $-1 \lt x\le 1$} \\
+\arctan x   \amp= \sum_{n=0}^\infty (-1)^n\dfrac{x^{2n+1}}{2n+1}
+\amp  \amp= x -\frac{x^3}{3} +\frac{x^5}{5}-\cdots
+\amp  \amp\ \text{para todo $-1\le x\le 1$}
 \end{alignedat}
 \end{equation*}
 </div></article><article class="example example-like" id="eg_expSeriesB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_expSeriesB"><h4 class="heading">
@@ -408,21 +422,21 @@ e^x\text{.}\)</span></p></li>
 <p id="p-24">Defina o limite superior por  <span class="process-math">\(e_n(x)=\tfrac{|x|^{n+1}}{(n+1)!}\)</span> (exceto para o fator <span class="process-math">\(e^x+1\text{,}\)</span> que independe de   <span class="process-math">\(n\)</span>). Para mostrar que isso se reduz a zero quando <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> vamos escrevê-lo da seguinte forma:</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-16">
 \begin{align*}
-e_n(x) &amp;= \frac{|x|^{n+1}}{(n+1)!}
+e_n(x)   \amp= \frac{|x|^{n+1}}{(n+1)!}
 = \overbrace{\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3}
 \cdots \frac{|x|}{n}\cdot \frac{|x|}{|n+1|}}^{\text{$n+1$ factors}}\\
 \end{align*}
 <p class="intertext">Agora seja <span class="process-math">\(k\)</span> um inteiro maior que <span class="process-math">\(|x|\text{.}\)</span> Podemos dividir o produto</p>
 \begin{align*}
 e_n(x)
-&amp;= \overbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
+\amp= \overbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
 \frac{|x|}{k} \right)}^{
 \text{$k$ fatores}} \cdot \left( \frac{|x|}{k+1} \cdots \frac{|x|}{|n+1|}\right)\\
-&amp;\leq \underbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
+\amp\leq \underbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
 \frac{|x|}{k} \right)}_{=Q(x)}
 \cdot
 \left( \frac{|x|}{k+1} \right)^{n+1-k}\\
-&amp;= Q(x) \cdot \left( \frac{|x|}{k+1} \right)^{n+1-k}
+\amp= Q(x) \cdot \left( \frac{|x|}{k+1} \right)^{n+1-k}
 \end{align*}
 </div>
 <p class="continuation">Já que <span class="process-math">\(k\)</span> não dependa de <span class="process-math">\(n\)</span> (embora dependa de <span class="process-math">\(x\)</span>), a função <span class="process-math">\(Q(x)\)</span> não se altera à medida que <span class="process-math">\(n\)</span> cresce. Além disso, sabemos que <span class="process-math">\(|x| \lt k+1\)</span> e então <span class="process-math">\(\frac{|x|}{k+1} \lt 1\text{.}\)</span> Portanto quando fazemos <span class="process-math">\(n \to \infty\)</span> o limite acima deve ser zero.</p>
@@ -452,7 +466,7 @@ e^x=\lim_{n\rightarrow\infty}\Big[1 +x + \frac{1}{2} x^2
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_sincosSeriesB"><article class="example example-like"><p id="p-28">Suponha que  <span class="process-math">\(f(x)\)</span> seja <span class="process-math">\(\sin x\)</span> ou <span class="process-math">\(\cos x\text{.}\)</span> Sabemos que toda derivada de <span class="process-math">\(f(x)\)</span> será <span class="process-math">\(\pm \sin(x)\)</span> ou <span class="process-math">\(\pm \cos(x)\text{.}\)</span> Consequentemente, quando calculamos o termo de erro usando a equação <a href="" class="xref" data-knowl="./knowl/eq_TaylorPolyPlusError_b.html" title="Fato 1.3">Fato 1.3</a> sempre temos <span class="process-math">\(\big|f^{(n+1)}(c)\big|\le 1\)</span> e portanto</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_TaylorPolyPlusError_b.html ./knowl/eg_expSeries.html" id="md-17">
 \begin{align*}
-|E_n(x)| &amp;\le \frac{|x|^{n+1}}{(n+1)!}.
+|E_n(x)|   \amp\le \frac{|x|^{n+1}}{(n+1)!}.
 \end{align*}
 </div>
 <p class="continuation">No <a href="" class="xref" data-knowl="./knowl/eg_expSeries.html" title="Exemplo 1.5: Série Exponencial">Exemplo 1.5</a>, mostramos que <span class="process-math">\(\frac{|x|^{n+1}}{(n+1)!} \to 0\)</span> quando <span class="process-math">\(n \to \infty\text{.}\)</span> Já que o erro vai para zero para ambos <span class="process-math">\(f(x)=\sin x\)</span> e <span class="process-math">\(f(x)=\cos x\text{,}\)</span> e</p>
@@ -480,24 +494,24 @@ f(x)=\lim_{n\rightarrow\infty}\Big[f(0)+f'(0)\,x+\cdots +\tfrac{1}{n!}f^{(n)}(0)
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_pi"><article class="example example-like"><p id="p-36">Existem vários métodos de calcular <span class="process-math">\(\pi\)</span> para qualquer grau de precisão desejado. Muitos deles usam a série de Maclaurin</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRimportantTaylorSeries.html" id="md-19">
 \begin{align*}
-\arctan x &amp;= \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}
+\arctan x   \amp= \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}
 \end{align*}
 </div>
 <p class="continuation">do<a href="" class="xref" data-knowl="./knowl/thm_SRimportantTaylorSeries.html" title="Teorema 1.7">Teorema 1.7</a>. Uma vez que <span class="process-math">\(\arctan(1)=\frac{\pi}{4}\text{,}\)</span> a série nos fornece uma fórmula para  <span class="process-math">\(\pi\text{:}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRimportantTaylorSeries.html" id="md-20">
 \begin{align*}
-\frac{\pi}{4} = \arctan 1 &amp;= \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}\\
-\pi &amp;= 4 \left( 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots \right)
+\frac{\pi}{4} = \arctan 1   \amp= \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}\\
+\pi   \amp= 4 \left( 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots \right)
 \end{align*}
 </div>
 <p class="continuation">De fato, esta série não é muito útil para calcular  <span class="process-math">\(\pi\)</span>pois converge lentamente. Se aproximamos s série pela sua <span class="process-math">\(N\)</span>-ésima soma parcial, então o teste da série alternada nos diz que o erro é limitado pelo primeiro termo que eliminamos. Para garantir que temos pelo menos 2 dígitos decimais corretos de <span class="process-math">\(\pi\)</span> corretos, preciamos somar os 200 primeiros termos!</p>
 <p id="p-37">Uma maneira muito melhor de calcular <span class="process-math">\(\pi\)</span> usar esta série é usar a igualdade: <span class="process-math">\(\tan\frac{\pi}{6}=\frac{1}{\sqrt{3}}\text{:}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-21">
 \begin{align*}
-\pi&amp;= 6\arctan\Big(\frac{1}{\sqrt{3}}\Big)
+\pi  \amp= 6\arctan\Big(\frac{1}{\sqrt{3}}\Big)
 = 6\sum_{n=0}^\infty (-1)^n\frac{1}{2n+1}\ \frac{1}{{(\sqrt{3})}^{2n+1}}\\
-&amp;= 2\sqrt{3} \sum_{n=0}^\infty (-1)^n\frac{1}{2n+1}\ \frac{1}{3^n}\\
-&amp;=2\sqrt{3}\Big(1-\frac{1}{3\times 3}+\frac{1}{5\times 9}-\frac{1}{7\times 27}
+\amp= 2\sqrt{3} \sum_{n=0}^\infty (-1)^n\frac{1}{2n+1}\ \frac{1}{3^n}\\
+\amp=2\sqrt{3}\Big(1-\frac{1}{3\times 3}+\frac{1}{5\times 9}-\frac{1}{7\times 27}
 +\frac{1}{9\times 81}-\frac{1}{11\times 243}+\cdots\Big)
 \end{align*}
 </div>
@@ -519,20 +533,20 @@ f(x)=\lim_{n\rightarrow\infty}\Big[f(0)+f'(0)\,x+\cdots +\tfrac{1}{n!}f^{(n)}(0)
 <p class="continuation">é usada no cálculo de probabilidades de “curva de sino” . A integral indefinida do integrando <span class="process-math">\(e^{-t^2}\)</span> não pode ser expressa por funções elementares. Mas ainda podemos avaliar a integral dentro de qualquer grau de precisão desejado usando a série de Taylor da exponencial. Começaremos com a série Maclaurin para <span class="process-math">\(e^x\text{:}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-22">
 \begin{align*}
-e^x &amp;= \sum_{n=0}^\infty \frac{1}{n!}x^n\\
+e^x   \amp= \sum_{n=0}^\infty \frac{1}{n!}x^n\\
 \end{align*}
 <p class="intertext">e em seguida substituimos <span class="process-math">\(x = -t^2\)</span> daí:</p>
 \begin{align*}
-e^{-t^2} &amp;= \sum_{n=0}^\infty \frac{(-1)^n}{n!}t^{2n}
+e^{-t^2}   \amp= \sum_{n=0}^\infty \frac{(-1)^n}{n!}t^{2n}
 \end{align*}
 </div>
 <p class="continuation">E agora integrando termo a termo:</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-23">
 \begin{align*}
 \erf(x)
-&amp;=\frac{2}{\sqrt{\pi}}\int_0^x
+\amp=\frac{2}{\sqrt{\pi}}\int_0^x
 \left[\sum_{n=0}^\infty \frac{{(-t^2)}^n}{n!}\right]\dee{t}\\
-&amp;=\frac{2}{\sqrt{\pi}}\sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)n!}
+\amp=\frac{2}{\sqrt{\pi}}\sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)n!}
 \end{align*}
 </div>
 <p class="continuation">Por exemplo, para a curva em sino, a probabilidade de estar dentro de um desvio padrão da média <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a>, é</p>
@@ -543,7 +557,7 @@ e^{-t^2} &amp;= \sum_{n=0}^\infty \frac{(-1)^n}{n!}t^{2n}
 \sum_{n=0}^\infty (-1)^n\frac{ {(\frac{1}{\sqrt{2}})}^{2n+1}}{(2n+1)n!}
 = \frac{2}{\sqrt{2\pi}}
 \sum_{n=0}^\infty (-1)^n\frac{1}{(2n+1) 2^n n!}\\
-&amp;=\sqrt{\frac{2}{\pi}}\Big(1-\frac{1}{3\times 2} +\frac{1}{5\times 2^2\times 2}
+\amp=\sqrt{\frac{2}{\pi}}\Big(1-\frac{1}{3\times 2} +\frac{1}{5\times 2^2\times 2}
 -\frac{1}{7\times 2^3\times 3!} + \frac{1}{9\times2^4\times 4!}-\cdots
 \Big)
 \end{align*}
@@ -752,7 +766,229 @@ f^{(15)}(0) = 15!\times \frac{2^5}{5!} = 348{,}713{,}164{,}800
 <span class="type">Subseção</span> <span class="codenumber">1.5</span> <span class="title">Sugestão de Vídeos</span>
 </h3></section><section class="exercises" id="exercises-series-taylor"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">1.6</span> <span class="title">Exercícios</span>
-</h3></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/7Xr0Lm2m6SQ</code></div></div>
+</h3>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-48">Seja <span class="process-math">\(c_0 + c_1 (x-a) + c_2 (x-a)^2 + \cdots + c_n (x-a)^n\)</span>  a série de Taylor da função <span class="process-math">\(f(x) = x^2 \sin(x)\text{.}\)</span></p>
+<p id="p-49">para <span class="process-math">\(a=0\)</span> determine o valor de <span class="process-math">\(c_{3}\text{.}\)</span></p>
+<p id="p-50"><span class="process-math">\(c_{3} =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-51"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-52">O <span class="process-math">\(n^{th}\)</span> coeficiente da série de Taylor é dado por: <span class="process-math">\(\frac{f^n(0)}{n!}\text{.}\)</span></p>
+<p id="p-53">Primeiro calcule as primeiras 3 derivadas:</p>
+<p id="p-54"><span class="process-math">\(f'(x) = 2x\sin(x) + x^2\cos(x)\text{,}\)</span></p>
+<p id="p-55"><span class="process-math">\(f''(x) = 2\sin(x) + 4\cos(x) - x^2\sin(x)\text{,}\)</span></p>
+<p id="p-56"><span class="process-math">\(f'''(x) = 6\cos(x) - 6x\sin(x) - x^2\cos(x)\text{.}\)</span></p>
+<p id="p-57"><span class="process-math">\(f'''(0) = 6\text{.}\)</span></p>
+<p id="p-58">Portanto, <span class="process-math">\(c_{3} = 1\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-59">Considere a função <span class="process-math">\(f(x) = \sqrt{x+1}\text{.}\)</span></p>
+<p id="p-60">Seja <span class="process-math">\(T_n\)</span> o <span class="process-math">\(n\)</span>-ésino grau da aproximação de Taylor de <span class="process-math">\(f(10)\)</span> em torno <span class="process-math">\(x = 8\text{.}\)</span></p>
+<p id="p-61">Encontre:</p>
+<p id="p-62"><span class="process-math">\(T_{1} =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-63"><span class="process-math">\(T_{2} =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-64"><span class="process-math">\(T_{3} =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-65"><em class="alert">Use 3 casas decimais em sua resposta</em></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-66"><span class="process-math">\(3.3333\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-67"><span class="process-math">\(3.3148\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-68"><span class="process-math">\(3.3169\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-69">No geral <span class="process-math">\(n\)</span>-ésimo grau de  aproximação de <span class="process-math">\(f(10)\)</span> em torno de <span class="process-math">\(x=8\)</span> é dada por:</p>
+<p id="p-70"><span class="process-math">\(T_n = f(8) + f'(8)(10-a) + \ldots + \frac{f^n(10)}{n!}(10-8)^n\)</span></p>
+<p id="p-71"><span class="process-math">\(f'(x) = \frac{1}{x\sqrt{1+x}}\text{,}\)</span></p>
+<p id="p-72"><span class="process-math">\(f''(x) = -\frac{1}{4(1+x)^{\frac{3}{2}}}\text{,}\)</span></p>
+<p id="p-73"><span class="process-math">\(f'''(x) = \frac{3}{8(1+x)^{\frac{5}{2}}}\text{.}\)</span></p>
+<p id="p-74">Portanto,</p>
+<p id="p-75"><span class="process-math">\(T_1 = 3.3333\text{,}\)</span></p>
+<p id="p-76"><span class="process-math">\(T_2 = 3.3148\text{,}\)</span></p>
+<p id="p-77"><span class="process-math">\(T_3 = 3.3169\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-78">Use a notação de somatório para escrever a série de Maclaurin para a função, <span class="process-math">\(e^{-2x}\text{.}\)</span></p>
+<p id="p-79">Série de Maclaurin  <span class="process-math">\(\displaystyle  =\sum_{k=0}^{\infty}\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-80"><span class="process-math">\(\frac{\left(-2\right)^{k}x^{k}}{k!}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-81">Seja</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)=e^{-2x},\;f'(x)=-2e^{-2x},\; f''(x)=4e^{-2x}\text{.}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-82">
+\begin{equation*}
+f(0)=1,\;f'(0)=-2,\; f''(0)=4
+\end{equation*}
+</div>
+<p class="continuation">Nós podemos ver isso</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f^{(k)}(0)=(-2)^k
+\end{equation*}
+</div>
+<p class="continuation">de modo que a série de Maclaurin é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\displaystyle   =\sum_{k=0}^{\infty}\frac{(-2)^k x^k}{k!}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-83">Use a notação sigma para escrever a série de Taylor em torno de <span class="process-math">\(x = x_0\)</span> para a função <span class="process-math">\(e^{-x},\;x_0=-1\text{.}\)</span></p>
+<p id="p-84">Série de Taylor  <span class="process-math">\(\displaystyle  =\sum_{k=0}^{\infty}\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-85"><span class="process-math">\(\frac{e\!\left(-1\right)^{k}\!\left(x--1\right)^{k}}{k!}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-86">Seja</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)=e^{-x},\;f'(x)=-e^{-x},\; f''(x)=e^{-x}\text{.}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-87">
+\begin{equation*}
+f(-1)=e,\;f'(-1)=e\!\left(-1\right),\; f''(-1)=e\!\left(-1\right)
+\end{equation*}
+</div>
+<p class="continuation">Podemos ver que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f^{(k)}(0)=e\cdot(-1)^k
+\end{equation*}
+</div>
+<p class="continuation">de modo que a série de Taylor em torno de  <span class="process-math">\(x_0=-1\)</span> é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\displaystyle   =e\sum_{k=0}^{\infty}\frac{(-1)^k (x + 1)^k}{k!}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-88">Reconhecendo cada série abaixo como uma série de Taylor avaliada em um valor particular de <span class="process-math">\(x\text{,}\)</span> encontre a soma de cada série convergente.</p>
+<p id="p-89"><em class="alert">A.</em> <span class="process-math">\(1 + {1\over 5} + ({1\over 5})^2 + ({1\over 5})^3 + ({1\over 5})^4 + \cdots + ({1\over 5})^n + \cdots =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-90"><em class="alert">B.</em> <span class="process-math">\(1 + 5 + {5^2\over 2!} + {5^3\over 3!} + {5^4\over 4!} + \cdots + {5^n\over n!} + \cdots =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-91"><span class="process-math">\(1.25\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-92"><span class="process-math">\(148.413159102577\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-93"><em class="alert">A.</em> Esta é a série para <span class="process-math">\({1\over 1-x}\)</span> com <span class="process-math">\(x\)</span> substituído por <span class="process-math">\({1\over 5}\text{,}\)</span> então a série converge para <span class="process-math">\({1\over1 - {1\over 5}}\text{.}\)</span></p>
+<p id="p-94"><em class="alert">B.</em> Esta é a série para  <span class="process-math">\(e^{x}\)</span> com <span class="process-math">\(x\)</span> substituído por <span class="process-math">\(5\text{,}\)</span> então a série converge para <span class="process-math">\(e^{5}\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-95">Use a notação sigma para escrever a série de Maclaurin para a função. <span class="process-math">\(\ln\!\left(7+x\right)\text{.}\)</span></p>
+<p id="p-96">Série de Maclaurin <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(\displaystyle + \sum_{k=1}^{\infty}\)</span> <span class="fillin" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span></p>
+<p id="p-97">(Observe o primeiro termo separado e a soma de <span class="process-math">\(k=1\)</span>)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-98"><span class="process-math">\(\ln\!\left(7\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-99"><span class="process-math">\(\frac{\left(-1\right)^{k-1}x^{k}}{7^{k}k}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-100">Seja</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)=\ln\!\left(7+x\right),\;f'(x)=\frac{1}{7+x},\; f''(x)=-\frac{1}{\left(7+x\right)^{2}},\; f'''(x)=\frac{2}{\left(7+x\right)^{3}}\text{.}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-101">
+\begin{equation*}
+f(0)=\ln(7),\;f'(0)={\textstyle\frac{1}{7}},\; f''(0)=-{\textstyle\frac{1}{49}},\; f'''(0)={\textstyle\frac{2}{343}}
+\end{equation*}
+</div>
+<p class="continuation">Podemos ver isso para <span class="process-math">\(k\geq 1\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f^{(k)}(0)=\frac{(-1)^{k-1}\cdot(k-1)!}{(7)^k}
+\end{equation*}
+</div>
+<p class="continuation">de modo que a série de Maclaurin é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\displaystyle   =\ln(7)+\sum_{k=1}^{\infty}\frac{(-1)^{k-1} x^k}{(7)^k k}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-102">Encontre um limite superior para o erro que pode resultar se <span class="process-math">\(\cos (x)\)</span> é aproximado por <span class="process-math">\(1 - (x^2/2!) + (x^4/4!)\)</span> ao longo do intervalo <span class="process-math">\([ -0.8, 0.8]\text{.}\)</span></p>
+<p id="p-103">Limite superior: <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>Digite a resposta com seis casas decimais.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-104"><span class="process-math">\(0.000364\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-105">Pelo teste da série alternada, a magnitude do erro que resulta da aproximação de <span class="process-math">\(S\)</span> por <span class="process-math">\(s_n\)</span> é no máximo a do primeiro termo que não está incluído na soma parcial. Portanto,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-106">
+\begin{equation*}
+| \cos(x) -( 1 - \frac{x^2}{2!} + \frac{x^4}{4!})| \leq | \frac{x^6}{6!}| \leq \frac{|0.8|^6}{720} \leq 0.000364088888888889\approx0.000364
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-107">Aproxime <span class="process-math">\(\cos(0.22)\)</span> com precisão de cinco casas decimais usando a série MacLaurin para <span class="process-math">\(\cos\!\left(x\right)\text{.}\)</span></p>
+<p id="p-108"><span class="process-math">\(\cos(0.22)\approx\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-109"><span class="process-math">\(0.9759\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-110">Usando o Teorema do Resto:</p>
+<p id="p-111">Como queremos alcançar a precisão de cinco casas decimais, precisamos escolher <span class="process-math">\(n\)</span> para que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-112">
+\begin{equation*}
+|R_n(0.22)|\leq 5\times 10^{-6}
+\end{equation*}
+</div>
+<p class="continuation">No entanto, desde que <span class="process-math">\(f(x) =\cos\!\left(x\right)\text{,}\)</span> então <span class="process-math">\(f^{n+1}(x)\)</span>é <span class="process-math">\(\pm \sin x\)</span> ou <span class="process-math">\(\pm \cos x\text{,}\)</span> e em ambos os casos <span class="process-math">\(|f^{n+1}(x)|\leq 1\text{.}\)</span></p>
+<p id="p-113">Assim, segue do teorema de estimação do resto, com <span class="process-math">\(M = 1\text{,}\)</span> <span class="process-math">\(x_0 = 0\)</span> e <span class="process-math">\(x = 0.22\)</span> que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+|R_n(0.22)|\leq\frac{(0.22)^{n+1}}{(n+1)!}\leq 5\times 10^{-6}
+\end{equation*}
+</div>
+<p class="continuation">Já que para <span class="process-math">\(n = 3\text{,}\)</span> temos <span class="process-math">\(\frac{(0.22)^4}{24}=9.76067\times 10^{-5}&gt; 5\times 10^{-6}\)</span> e para <span class="process-math">\(n =4\text{,}\)</span> temos <span class="process-math">\(\frac{(0.22)^5}{120}=4.29469\times 10^{-6}\leq 5\times 10^{-6}\text{.}\)</span></p>
+<p id="p-114">Portanto, <span class="process-math">\(n = 4\)</span> é o menor <span class="process-math">\(n\)</span> que atende a este critério.</p>
+<p id="p-115">Agora temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\cos(0.22)\approx1-\frac{(0.22)^2}{2!}+\frac{(0.22)^4}{4!}=0.975897606666667\approx0.97590
+\end{equation*}
+</div>
+<p class="continuation">O mesmo resultado teria sido obtido usando o teste de séries alternadas.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-116">Use uma série de Maclaurin para derivar a série de Maclaurin para a função <span class="process-math">\(\displaystyle f(x) = \int
+\frac{\sin(x)}{x}\,dx, f(0) = 0\text{.}\)</span>  Encontre os 4 primeiros termos diferentes de zero na série, ou seja, escreva o polinômio de Taylor com 4 termos diferentes de zero.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-118"><span class="process-math">\(x-\frac{x^{3}}{18}+\frac{x^{5}}{600}-\frac{x^{7}}{35280}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<p id="p-119">SOLUTION</p>
+<p id="p-120">Usamos a conhecida série de Maclaurin para <span class="process-math">\(\sin(x)\text{,}\)</span> cujos primeiros quatro termos diferentes de zero são</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sin(x) \approx  x -  \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!}
+\end{equation*}
+</div>
+<p class="continuation">Assim, os quatro primeiros termos diferentes de zero de <span class="process-math">\(\dfrac {\sin(x)}{x}\)</span> são</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac {\sin(x)}{x} \approx \frac {x -  \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!}}{x}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+= 1 -  \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!}
+\end{equation*}
+</div>
+<p id="p-121">Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int \frac {\sin(x)}{x} \; dx \approx \int  1 -  \frac{x^2}{6} + \frac{x^4}{120} - \frac{x^6}{5040} \; dx
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+= x  -  \frac{1}{18}x^3 + \frac{1}{600}x^5 - \frac{1}{35280} x^7
+\end{equation*}
+</div>
+<p class="continuation">(<span class="process-math">\(f (0)=0\)</span> significa que o termo constante da série de Maclaurin é 0, então não adicionamos uma constante arbitrária na integração de <span class="process-math">\(\frac {\sin(x)}{x}\text{.}\)</span> Observe também que esta série tem raio de convergência <span class="process-math">\(R=\infty\text{.}\)</span>)</p>
+</div></div>
+</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/7Xr0Lm2m6SQ</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/URAEuEjNTjU</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/0qLSl_ea7ZE</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/1OI3BgQYag4</code></div></div>

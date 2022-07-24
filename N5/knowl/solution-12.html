@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-24T13:41:48-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.6.9.1</span><span class="period">.</span>
+</h4>
+<p>SOLUTION</p>
+<p>Usamos a conhecida série de Maclaurin para <span class="process-math">\(\sin(x)\text{,}\)</span> cujos primeiros quatro termos diferentes de zero são</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sin(x) \approx  x -  \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!}
+\end{equation*}
+</div>
+<p class="continuation">Assim, os quatro primeiros termos diferentes de zero de <span class="process-math">\(\dfrac {\sin(x)}{x}\)</span> são</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac {\sin(x)}{x} \approx \frac {x -  \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!}}{x}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+= 1 -  \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!}
+\end{equation*}
+</div>
+<p>Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int \frac {\sin(x)}{x} \; dx \approx \int  1 -  \frac{x^2}{6} + \frac{x^4}{120} - \frac{x^6}{5040} \; dx
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+= x  -  \frac{1}{18}x^3 + \frac{1}{600}x^5 - \frac{1}{35280} x^7
+\end{equation*}
+</div>
+<p class="continuation">(<span class="process-math">\(f (0)=0\)</span> significa que o termo constante da série de Maclaurin é 0, então não adicionamos uma constante arbitrária na integração de <span class="process-math">\(\frac {\sin(x)}{x}\text{.}\)</span> Observe também que esta série tem raio de convergência <span class="process-math">\(R=\infty\text{.}\)</span>)</p>
+</div>
+<span class="incontext"><a href="section-1.html#solution-12" class="internal">em contexto</a></span>
+</body>
+</html>

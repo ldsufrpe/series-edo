@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-23T16:00:00-03:00       *-->
+<!--*       on 2022-07-24T13:41:48-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -47,21 +47,21 @@ e^x\text{.}\)</span></p></li>
 <p>Defina o limite superior por  <span class="process-math">\(e_n(x)=\tfrac{|x|^{n+1}}{(n+1)!}\)</span> (exceto para o fator <span class="process-math">\(e^x+1\text{,}\)</span> que independe de   <span class="process-math">\(n\)</span>). Para mostrar que isso se reduz a zero quando <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> vamos escrevê-lo da seguinte forma:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-e_n(x) &amp;= \frac{|x|^{n+1}}{(n+1)!}
+e_n(x)   \amp= \frac{|x|^{n+1}}{(n+1)!}
 = \overbrace{\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3}
 \cdots \frac{|x|}{n}\cdot \frac{|x|}{|n+1|}}^{\text{$n+1$ factors}}\\
 \end{align*}
 <p class="intertext">Agora seja <span class="process-math">\(k\)</span> um inteiro maior que <span class="process-math">\(|x|\text{.}\)</span> Podemos dividir o produto</p>
 \begin{align*}
 e_n(x)
-&amp;= \overbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
+\amp= \overbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
 \frac{|x|}{k} \right)}^{
 \text{$k$ fatores}} \cdot \left( \frac{|x|}{k+1} \cdots \frac{|x|}{|n+1|}\right)\\
-&amp;\leq \underbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
+\amp\leq \underbrace{\left(\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3} \cdots
 \frac{|x|}{k} \right)}_{=Q(x)}
 \cdot
 \left( \frac{|x|}{k+1} \right)^{n+1-k}\\
-&amp;= Q(x) \cdot \left( \frac{|x|}{k+1} \right)^{n+1-k}
+\amp= Q(x) \cdot \left( \frac{|x|}{k+1} \right)^{n+1-k}
 \end{align*}
 </div>
 <p class="continuation">Já que <span class="process-math">\(k\)</span> não dependa de <span class="process-math">\(n\)</span> (embora dependa de <span class="process-math">\(x\)</span>), a função <span class="process-math">\(Q(x)\)</span> não se altera à medida que <span class="process-math">\(n\)</span> cresce. Além disso, sabemos que <span class="process-math">\(|x| \lt k+1\)</span> e então <span class="process-math">\(\frac{|x|}{k+1} \lt 1\text{.}\)</span> Portanto quando fazemos <span class="process-math">\(n \to \infty\)</span> o limite acima deve ser zero.</p>

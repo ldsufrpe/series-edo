@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-23T15:57:43-03:00       *-->
+<!--*       on 2022-07-24T12:30:46-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -36,7 +49,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -702,10 +716,497 @@ A_n(x-3)^n\text{.}\)</span> A maneira mais fácil de encontrar tal série é for
 <li id="li-32"><p id="p-49"><a class="external" href="https://youtu.be/6CKq8w-7ljc" target="_blank">Série de potências de  <span class="process-math">\(\ln(1+x^3)\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
 <li id="li-33"><p id="p-50"><a class="external" href="https://youtu.be/QKtI-p8qjTw" target="_blank">Encontrando <span class="process-math">\(\int_0^1f(x)\mathrm{d}x\)</span> para <span class="process-math">\(f(x)=\sum_{n=1}^{\infty}\frac{n+1}{4^{n+1}}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p></li>
 <li id="li-34"><p id="p-51"><a class="external" href="https://youtu.be/QKtI-p8qjTw" target="_blank">Encontrando <span class="process-math">\(f'''(0)\)</span> para <span class="process-math">\(f(x)=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+3}}{(2n+1)!}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a></p></li>
-<li id="li-35"><p id="p-52"><a class="external" href="https://youtu.be/lI965HKuUTY" target="_blank">Como encontrar funções a partir de séries de potência por integração.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a></p></li>
+<li id="li-35"><p id="p-52"><a class="external" href="https://youtu.be/lI965HKuUTY" target="_blank">Como encontrar funções a partir de séries de potências por integração.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a></p></li>
 </ul></section><section class="exercises" id="exercises-serie-potencia"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">1.5</span> <span class="title">Exercícios</span>
-</h3></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/XGJp6iuaseo</code></div></div>
+</h3>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-53">Se  <span class="process-math">\(y = \sum_{k=0}^\infty \left(k+1\right)x^{k+3}\)</span> então <span class="process-math">\(y^\prime = \sum_{k=0}^\infty\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-54"><span class="process-math">\(\left(k+1\right)\!\left(k+3\right)x^{k+3-1}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-55">(a)</p>
+<p id="p-56">Calcule  a integral</p>
+<p id="p-57"><span class="process-math">\(\displaystyle \int_{0}^{2} \frac{24}{x^2+4} dx\text{.}\)</span></p>
+<p id="p-58">Sua resposta deve estar no formato <span class="process-math">\(k\pi\text{,}\)</span> na qual <span class="process-math">\(k\)</span> é um inteiro. Qual é o valor de  <span class="process-math">\(k\text{?}\)</span></p>
+<p id="p-59">(Dica: <span class="process-math">\(\frac{d \arctan(x)}{dx} = \frac{1}{x^2+1}\)</span> )</p>
+<p id="p-60"><span class="process-math">\(k =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-61">(b)</p>
+<p id="p-62">Agora, vamos calcular a mesma integral usando séries de potências. Primeiro, encontre a série de potências para a função <span class="process-math">\(f(x) = \frac{24}{x^2+4}\text{.}\)</span> Em seguida, integre-o de 0 a 2 e chame-o de S. S deve ser uma série infinita <span class="process-math">\(\sum_{n=0}^\infty a_n\)</span> .</p>
+<p id="p-63">Quais são os primeiros termos de S?</p>
+<p id="p-64"><span class="process-math">\(a_0 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-65"><span class="process-math">\(a_1 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-66"><span class="process-math">\(a_2 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-67"><span class="process-math">\(a_3 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-68"><span class="process-math">\(a_4 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-69">(c) A resposta na parte (a) é igual à soma da série infinita na parte (b) (por quê?). Portanto, se você dividir sua série infinita de (b) por <span class="process-math">\(k\)</span> (a resposta de (a)), você encontrou uma estimativa para o valor de <span class="process-math">\(\pi\)</span> em termos de uma série infinita. Aproxime o valor de <span class="process-math">\(\pi\)</span> pelos primeiros termos 5.</p>
+<p id="p-70"><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>  .</p>
+<p id="p-71">(d)</p>
+<p id="p-72">Qual é um limite superior para o erro de sua estimativa se você usar os primeiros termos 8? (Use a estimativa de séries alternadas.)</p>
+<p id="p-73"><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>  .</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-74"><span class="process-math">\(3\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-75"><span class="process-math">\(12\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-76"><span class="process-math">\(-4\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-77"><span class="process-math">\(2.4\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-78"><span class="process-math">\(-1.71428571428571\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-79"><span class="process-math">\(1.33333333333333\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-80"><span class="process-math">\(3.33968253968254\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-81"><span class="process-math">\(0.235294117647059\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-82">(a)</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\int_0^2 \frac{24}{x^2+4} dx
+\amp =	\int_0^2 \frac{\frac{24}{4}}{\left(\frac x 2\right)^2+1} dx	\\\\
+\amp =	\frac{24}{2} \int_0^2 \frac 1 {\left(\frac x 2\right)^2+1} \cdot
+\frac{dx}2	\\\\
+\amp =	12 \left. \tan^{-1}\left(\frac x 2\right) \right|_0^2	\\\\
+\amp =	12 \tan^{-1} 1 - 12 \tan^{-1} 0	\\\\
+\amp =	12 \cdot \frac{\pi}{4} - 0 = 3 \pi
+\end{aligned}
+\end{equation*}
+</div>
+<p id="p-83">(b) Podemos encontrar a série de potências para <span class="process-math">\(\frac{24}{x^2+4}\)</span> usando</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\frac{24}{x^2+4}
+\amp =	\frac{24}{4-(-x^2)}	\\\\
+\amp =	\frac{\frac{24}4}{1-\left(-\frac{x^2}4\right)}	\\\\
+\amp =	6 \sum_{n=0}^\infty \left(\frac{-x^2}4\right)^n
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Então podemos calcular <span class="process-math">\(S\)</span> conforme a seguir:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+S
+\amp =	\int_0^2 6 \sum_{n=0}^\infty \left(\frac{-x^2}4\right)^n dx \\\\
+\amp =	6 \sum_{n=0}^\infty \int_0^2 \frac{(-1)^n x^{2n}}{4^n} dx	\\\\
+\amp =	6 \sum_{n=0}^\infty \frac{(-1)^n}{4^n(2n+1)}
+\left( \left. x^{2n+1} \right|_0^2 \right)	\\\\
+\amp =	6 \sum_{n=0}^\infty \frac{(-1)^n}{4^n(2n+1)} \cdot
+\left( 2^{2n+1}-0 \right)	\\\\
+\amp =	6 \sum_{n=0}^\infty \frac{(-1)^n}{4^n(2n+1)}
+\left( 2 \cdot 4^n \right)	\\\\
+\amp =	12 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">E agora podemos, com esta fórmula para<span class="process-math">\(S\text{,}\)</span> calcular seus primeiros termos:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+S
+\amp =	\frac{12 (-1)^0}{2 \cdot 0 + 1} +
+\frac{12 (-1)^1}{2 \cdot 1 + 1} +
+\frac{12 (-1)^2}{2 \cdot 2 + 1} +
+\frac{12 (-1)^3}{2 \cdot 3 + 1} +
+\frac{12 (-1)^4}{2 \cdot 4 + 1} + \cdots	\\\\
+\amp =	12 - \frac{12}3 + \frac{12}5 -
+\frac{12}7 + \frac{12}9 - \cdots	\\\\
+\amp =	12  - 4 + 2.4  - 1.71428571428571 + 1.33333333333333
+\end{aligned}
+\end{equation*}
+</div>
+<p id="p-84">(c) A nova série que aborda o valor de <span class="process-math">\(\pi\)</span> seria então:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{ \displaystyle 12 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1} }{ k }
+=	4 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}
+\end{equation*}
+</div>
+<p class="continuation">Para aproximar isso pelos primeiros termos 5, simplesmente escrevemos:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+4 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}
+\amp =	\frac 4 {2 \cdot 0 + 1} - \frac 4 {2 \cdot 1 + 1} + \frac 4 {2 \cdot 2 + 1} - \frac 4 {2 \cdot 3 + 1} + \frac 4 {2 \cdot 4 + 1}	\\\\
+\amp =	4 - 1.33333333333333 + 0.8 - 0.571428571428571 + 0.444444444444444	\\\\
+\amp =	3.33968253968254
+\end{aligned}
+\end{equation*}
+</div>
+<p id="p-85">(d) O Teorema da Estimativa de Séries Alternadas diz que o próximo termo fornece um limite superior no erro causado pelo truncamento da série no termo atual.  A série na parte (c) começa em <span class="process-math">\(n=0\)</span> so <span class="process-math">\(n=7\)</span> no <span class="process-math">\(8\)</span>-ésimo termo. Assim, o erro não é maior do que <span class="process-math">\(\left| 4 \cdot \frac{(-1)^{7+1}}{2(7+1)+1} \right|\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left| 4 \cdot \frac{(-1)^8}{2 \cdot 8 + 1} \right|
+=	\frac 4 {17} = 0.235294117647059
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-86">A função <span class="process-math">\(f(x) = 4 x^2 \arctan(x^{2})\)</span> é representada como uma série de potências</p>
+<p id="p-87"><span class="process-math">\(\displaystyle f(x) = \sum_{n=0}^\infty c_n x^n .\)</span></p>
+<p id="p-88">Qual é o menor termo  com um coeficiente diferente de zero.</p>
+<p id="p-89"><span class="process-math">\(n =\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-90">Encontre o raio de convergência <span class="process-math">\(R\)</span> da série .</p>
+<p id="p-91"><span class="process-math">\(R =\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>  .</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-92"><span class="process-math">\(4\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-93"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-94">Trabalhando a partir da série de Taylor para <span class="process-math">\(\tan^{-1}\text{,}\)</span> podemos deduzir que <span class="process-math">\(\displaystyle 4 x^2 \tan^{-1}(x^{2})
+= 4 x^2 \sum_{n=0}^\infty (-1)^n \frac{(x^{2})^{2n+1}}{2n+1}\text{,}\)</span> mas essa expressão é um pouco complicada, então vamos ver se podemos simplificá-la um pouco, ou ter uma ideia melhor de como fica expandido:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+4 x^2 \sum_{n=0}^\infty (-1)^n \frac{(x^{2})^{2n+1}}{2n+1}
+\amp =	4 x^2 \sum_{n=0}^\infty (-1)^n \frac{x^{4 n+2}}{2n+1}	\\\\
+\amp =	\sum_{n=0}^\infty (-1)^n
+\left( \frac{4}{2n+1} \right) x^{4 n+4}	\\\\
+\amp =	\frac{4}{1}x^{4} - \frac{4}{3}x^{8}
++ \frac{4}{5}x^{12} - \cdots
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Assim, o termo mais baixo com um coeficiente diferente de zero é termo <span class="process-math">\(4\text{.}\)</span></p>
+<p id="p-95">O raio de convergência pode ser encontrado com o teste da razão:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\lim_{n\to\infty} \left|
+\frac{ (-1)^{n+1} \left(\frac{4}{2(n+1)+1}\right)
+x^{4(n+1)+4} }
+{ (-1)^n \left(\frac{4}{2n+1}\right) x^{4 n+4} } \right|
+=	\lim_{n\to\infty} \left| \left(\frac{2n+1}{2n+3}\right)x^{4} \right|
+=	x^{4}
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Já que <span class="process-math">\(x^{4} \lt  1\)</span> exatamente quando <span class="process-math">\(\left| x \right| \lt  1\text{,}\)</span> o raio de convergência é 1.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-96">Compute the convergence set for the following power series.  Use <a class="external" href="/webwork2_files/helpFiles/IntervalNotation.html" target="_blank">notação de intervalo</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a> for your answers.</p>
+<p id="p-97"><span class="process-math">\(\displaystyle\sum_{n=0}^{\infty} \frac{x^n}{(n+1)2^{n}}\)</span> converge para <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<p id="p-98"><span class="process-math">\(\displaystyle\sum_{n=1}^{\infty} \frac{(x-1)^n}{n}\)</span> converge para <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<p id="p-99"><span class="process-math">\(\displaystyle\sum_{n=1}^{\infty} \frac{(x-1)^n}{n!}\)</span> converge para <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<p id="p-100"><span class="process-math">\(\displaystyle\sum_{n=17}^{\infty} \frac{(x+1)^n}{3^n}\)</span> converge para <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-101"><span class="process-math">\(\left[-2,2\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-102"><span class="process-math">\(\left[0,2\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-103"><span class="process-math">\(\left(-\infty ,\infty \right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-104"><span class="process-math">\(\left(-4,2\right)\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-105">Encontre o intervalo de convergência da série de potências dada:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-106">
+\begin{equation*}
+\sum_{n=1}^{\infty} \dfrac{2^{n}x^{n}}{n!}
+\end{equation*}
+</div>
+<p id="p-107">A série acima converge para <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(\lt  x \lt \)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.</p>
+<p id="p-108">Digite "infinity" para <span class="process-math">\(\infty\)</span> e "-infinity" para <span class="process-math">\(-\infty\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-109">-infinity</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-110">infinity</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-111">Encontre o intervalo de convergência da série de potências dada:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-112">
+\begin{equation*}
+\sum_{n=1}^{\infty} \dfrac{(x-2)^{n}}{n^{2}}
+\end{equation*}
+</div>
+<p id="p-113">The above series converges for <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(\leq x \leq\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.</p>
+<p id="p-114">Digite "infinity" para <span class="process-math">\(\infty\)</span> e "-infinity" para <span class="process-math">\(-\infty\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-115"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-116"><span class="process-math">\(3\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-117">Encontre os primeiros cinco termos diferentes de zero da representação em série de potências em torno de <span class="process-math">\(x = 0\)</span> para a função abaixo.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) = \frac{x^{3}}{1+5 x}
+\end{equation*}
+</div>
+<p id="p-118">Resposta: <span class="process-math">\(f(x) =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+ \cdots\)</span></p>
+<p id="p-119">Qual é o intervalo de convergência?</p>
+<p id="p-120">Resposta (em notação de intervalo): <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-121"><span class="process-math">\(x^{3}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-122"><span class="process-math">\(-5x^{4}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-123"><span class="process-math">\(25x^{5}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-124"><span class="process-math">\(-125x^{6}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-125"><span class="process-math">\(625x^{7}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-126"><span class="process-math">\(\left(-0.2,0.2\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-127">Sabemos que para <span class="process-math">\(|x|\lt 1\text{,}\)</span> a representação da série de potências de <span class="process-math">\(\frac {1}{1-x}\)</span> é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac {1}{1-x} = \sum_{n=0}^{\infty}x^n ,\;\;|x|\lt 1
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+=1+x+x^2+x^3+x^4+\cdots ,\;\; |x|\lt 1
+\end{equation*}
+</div>
+<p class="continuation">E assim a série de potências de <span class="process-math">\(\frac{(x^3)}{1+5 x}\)</span> para <span class="process-math">\(\left|-5 x\right| \lt 1\)</span> é</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-128">
+\begin{equation*}
+\frac{(x^3)}{1+5 x} = (x^3)\left(\frac {1}{1-\left(-5 x\right)}\right)= (x^3)\sum_{n=0}^{\infty}\left(-5 x\right)^n
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+= (x^3)\left (1 + \left(-5 x\right) +  \left(-5 x\right)^2 +  \left(-5 x\right)^{3} +  \left(-5 x\right)^{4} + \cdots\right)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+= (x^3)\left (1-5 x +  5^2 x^2  -5^3 x^3+5^4 x^4  - \; +  \cdots\right)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+= x^{3} - 5 x^{4} + 25 x^{5} - 125 x^{6}+ 625 x^{7} - \;+ \cdots
+\end{equation*}
+</div>
+<p id="p-129">Com os primeiros cinco termos diferentes de zero da série de potências listados acima.</p>
+<p id="p-130">Esta série converge absolutamente para</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left|-5 x\right| \lt 1 
+\implies 5 |x|\lt 1\implies |x|\lt \frac {1}{5}
+\end{equation*}
+</div>
+<p class="continuation">Isso é equivalente a <span class="process-math">\(-\frac{1}{5} \lt x \lt  \frac{1}{5}\text{,}\)</span> ou em outras palavras, a convergência ocorre para <span class="process-math">\(x\)</span> no intervalo <span class="process-math">\(\left(-\frac{1}{5} , \frac{1}{5} \right)\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-131">A função <span class="process-math">\(f(x) = 9 x \ln(1 + x)\)</span> é representado como uma série de potências</p>
+<p id="p-132"><span class="process-math">\(\displaystyle f(x) = \sum_{n=0}^\infty c_n x^n .\)</span></p>
+<p id="p-133">Encontre os seguintes coeficientes na série de potências.</p>
+<p id="p-134"><span class="process-math">\(c_2 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-135"><span class="process-math">\(c_3 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-136"><span class="process-math">\(c_4 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-137"><span class="process-math">\(c_5 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-138"><span class="process-math">\(c_6 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-139">Encontre o raio de convergência <span class="process-math">\(R\)</span> da série.</p>
+<p id="p-140"><span class="process-math">\(R =\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>  .</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-26" id="answer-26"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like"><p id="p-141"><span class="process-math">\(9\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><p id="p-142"><span class="process-math">\(-4.5\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-143"><span class="process-math">\(3\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like"><p id="p-144"><span class="process-math">\(-2.25\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-30" id="answer-30"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-30"><div class="answer solution-like"><p id="p-145"><span class="process-math">\(1.8\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-31" id="answer-31"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-31"><div class="answer solution-like"><p id="p-146"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-147">Já que <span class="process-math">\(\displaystyle \ln(1-x) = - \sum_{n=1}^\infty \frac{x^n}n\text{,}\)</span> também temos, portanto, <span class="process-math">\(\displaystyle \ln(1+x) = - \sum_{n=1}^\infty \frac{(-x)^n}n\text{.}\)</span> Assim</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+9 x \ln(1+x)
+\amp =	-9 \sum_{n=1}^\infty \frac{(-x)^n x}n	\\\\
+\amp =	9 \sum_{n=1}^\infty \frac{(-x)^{n+1}}n	\\\\
+\amp =	\frac{9 x^2}1 - \frac{9 x^3}2 + \frac{9 x^4}3 - \cdots
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">e daí <span class="process-math">\(c_0 = 0\text{,}\)</span> <span class="process-math">\(c_1 = 0\text{,}\)</span> <span class="process-math">\(c_2 = 9\text{,}\)</span> <span class="process-math">\(c_3 = \frac{-9}2 = -4.5\text{,}\)</span> <span class="process-math">\(c_4 = \frac{9}3 = 3\text{,}\)</span> and in general, <span class="process-math">\(c_n = \frac{9(-1)^n}{n-1}\)</span> for all <span class="process-math">\(n \geq 2\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-148">Represente a função <span class="process-math">\(\displaystyle \frac{10}{(1 - 10 x)^2}\)</span> como uma série de potências <span class="process-math">\(\displaystyle f(x) = \sum_{n=0}^\infty c_n x^n\)</span></p>
+<p id="p-149"><span class="process-math">\(c_0 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-150"><span class="process-math">\(c_1 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-151"><span class="process-math">\(c_2 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-152"><span class="process-math">\(c_3 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-153"><span class="process-math">\(c_4 =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-154">Encontre o raio de convergência <span class="process-math">\(R =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>  .</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-32" id="answer-32"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like"><p id="p-155"><span class="process-math">\(10\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-33" id="answer-33"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><p id="p-156"><span class="process-math">\(200\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><p id="p-157"><span class="process-math">\(3000\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-35" id="answer-35"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like"><p id="p-158"><span class="process-math">\(40000\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-36" id="answer-36"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><p id="p-159"><span class="process-math">\(500000\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-37" id="answer-37"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like"><p id="p-160"><span class="process-math">\(0.1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-161">Sabemos que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{\left(1-x\right)^2} = \sum_{n=0}^\infty \left(n+1\right)x^n
+\end{equation*}
+</div>
+<p id="p-162">Vamos modificar este fato substituindo <span class="process-math">\(x\)</span> com <span class="process-math">\(10 x\)</span> para obter:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{\left(1 - 10 x\right)^2}
+= \sum_{n=0}^\infty \left(n+1\right)\left(10 x\right)^n
+\end{equation*}
+</div>
+<p id="p-163">E essa equação nos permite resolver o problema:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\frac{10}{\left(1 - 10 x\right)^2}
+\amp =
+\sum_{n=0}^\infty \left(n+1\right)\left(10 x\right)^n		\\\\
+\amp =
+\sum_{n=0}^\infty 10^n\left(n+1\right)x^n					\\\\
+\amp =
+10^0\left(0+1\right)x^0 + 10^1\left(1+1\right)x^1 +
+10^2\left(2+1\right)x^2 + 10^3\left(3+1\right)x^3 +
+10^4\left(4+1\right)x^4 + \cdots							\\\\
+\amp =
+1\left(1\right)x^0 + 10\left(2\right)x^1 + 
+100\left(3\right)x^2 + 1000\left(4\right)x^3 +
+10000\left(5\right)x^4 + \cdots						\\\\
+\amp =
+10 x^0 + 200 x^1 + 3000 x^2 +
+40000 x^3 + 500000 x^4 + \cdots
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Assim:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+c_0	\amp =	10			\\\\
+c_1	\amp =	200			\\\\
+c_2	\amp =	3000			\\\\
+c_3	\amp =	40000			\\\\
+c_4	\amp =	500000
+\end{aligned}
+\end{equation*}
+</div>
+<p id="p-164">O raio de convergência para isso pode ser calculado da seguinte forma:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\left|10 x\right| \lt  1	\amp \iff	10\left|x\right| \lt  1		\\\\
+\amp \iff	\left|x\right| \lt  \frac{1}{10}
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Então <span class="process-math">\(R=\frac{1}{10}=0.1\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-165">Encontre todos os valores de x tais que a série dada convirja.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-166">
+\begin{equation*}
+\sum_{n=1}^\infty \frac{(8 x)^n}{n^{3}}
+\end{equation*}
+</div>
+<p id="p-167">A série é convergente</p>
+<p id="p-168">de x = <span class="fillin" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, extremidade esquerda incluída (S,N):	<span class="fillin" role="img" aria-label="1-character blank" style="width: 0.454545454545455em;"></span></p>
+<p id="p-169">até   x = <span class="fillin" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, extremidade direita incluída (S,N):  <span class="fillin" role="img" aria-label="1-character blank" style="width: 0.454545454545455em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-38" id="answer-38"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><p id="p-170"><span class="process-math">\(-0.125\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-39" id="answer-39"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like"><p id="p-171">S</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-40" id="answer-40"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like"><p id="p-172"><span class="process-math">\(0.125\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-41" id="answer-41"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like"><p id="p-173">S</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<p id="p-174">Devemos encontrar o intervalo de convergência. Usamos o teste de razão, que é muito confiável para esse fim:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+\lim_{n\to\infty}
+\left| \frac{ \left( \frac{ (8 x)^{n+1} }{ (n+1)^{3} } \right) }
+{ \left( \frac{ (8 x)^n }{ n^{3} } \right) } \right|
+=	\lim_{n\to\infty}
+\left| \frac{ 8 x }{ \left( \frac{n+1}{n} \right)^{3} } \right|
+=	\left| 8 x \right|
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Em seguida, usamos a expressão resultante para obter o intervalo de convergência verificando quando é menor que 1:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left| 8 x \right| \lt  1
+\iff	\left| x \right| \lt  \frac 1 {8}
+\iff	\frac{-1}{8} \lt  x \lt  \frac 1 {8}
+\end{equation*}
+</div>
+<p class="continuation">Assim, devemos simplesmente verificar os pontos das extremidades.</p>
+<p id="p-175">Quando <span class="process-math">\(x = \frac{-1}{8}\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty \frac{(8 x)^n}{n^{3}}
+=	\sum_{n=1}^\infty \frac{(-1)^n}{n^{3}}
+\end{equation*}
+</div>
+<p class="continuation">Isso é convergente pelo teste da série alternada, uma vez que claramente <span class="process-math">\(\frac 1 {n^{3}}\)</span> tende a zero <span class="process-math">\(0\text{.}\)</span></p>
+<p id="p-176">quando <span class="process-math">\(x = \frac 1 {8}\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty \frac{(8 x)^n}{n^{3}}
+=	\sum_{n=1}^\infty \frac 1 {n^{3}}
+\end{equation*}
+</div>
+<p class="continuation">Isso é convergente como uma p-série.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<p id="p-177">Encontre o intervalo de convergência de</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty\,{n^2\,x^{2 n}\over 3^{2 n}}.
+\end{equation*}
+</div>
+<p id="p-178">intervalo de convergência = <span class="fillin" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span></p>
+<p id="p-179"><em class="emphasis">(Digite sua resposta como um intervalo: assim, se o intervalo de convergência for <span class="process-math">\(-3 \lt  x\le 5\text{,}\)</span> responda <em class="alert">(-3,5]</em>. Use <em class="alert">Inf</em> para qualquer extremidade no infinito.)</em></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-42" id="answer-42"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like"><p id="p-180"><span class="process-math">\(\left(-3,3\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-181">Usamos o teste da razão:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left|{a_{n+1} \over {a_n}}\right| =
+\left|{{(n+1)^2 x^{2(n+1)}} \over {3^{2(n+1)}}} \cdot
+{{3^{2 n}} \over {n^2 x^{2 n}}}\right| =
+\left({{n+1} \over n}\right)^2 \cdot {{x^2} \over 9}.
+\end{equation*}
+</div>
+<p class="continuation">Já que  <span class="process-math">\({{(n+1)}/ n} \rightarrow 1\)</span> quando <span class="process-math">\(n \rightarrow \infty\text{,}\)</span> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\to\infty} \left|{{a_{n+1}} \over {a_n}}\right|={{x^2}\over 9}.
+\end{equation*}
+</div>
+<p class="continuation">Temos <span class="process-math">\({{x^2}/ 9} \lt  1\)</span> quando <span class="process-math">\(|x| \lt  3\text{.}\)</span>  O raio de convergência é 3 e a série converge para <span class="process-math">\(-3 \lt  x \lt  3\text{.}\)</span></p>
+<p id="p-182">Verificando as extremidades.  Para <span class="process-math">\(x = -3\text{,}\)</span> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^{\infty}{{n^2 x^{2 n}} \over {3^{2 n}}} =
+\sum_{n=1}^{\infty}{{n^2 (-3)^{2 n}}\over {3^{2 n}}} =
+\sum_{n=1}^{\infty}  n^2,
+\end{equation*}
+</div>
+<p class="continuation">que diverge.  Similarmente, para <span class="process-math">\(x = 3\text{,}\)</span> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^{\infty}{{n^2 x^{2 n}} \over {3^{2 n}}} =
+\sum_{n=1}^{\infty}{{n^2 3^{2 n}}\over {3^{2 n}}} =
+\sum_{n=1}^{\infty} n^2,
+\end{equation*}
+</div>
+<p class="continuation">que diverge.  A série diverge em ambas as extremidades, então o intervalo de convergência é <span class="process-math">\(-3 \lt  x \lt  3\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-183">Use o teste da razão para encontrar o raio de convergência da série de potências</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+2 x + 16 x^2 + 72 x^3 + 256 x^4 + 800 x^5 + \cdots
+\end{equation*}
+</div>
+<p id="p-184"><span class="process-math">\(R =\)</span> <span class="fillin" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span></p>
+<p id="p-185"><em class="emphasis">(Se o raio for infinito, digite <em class="alert">Inf</em> for R.)</em></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-43" id="answer-43"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-43"><div class="answer solution-like"><p id="p-186"><span class="process-math">\(\frac{1}{2}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-187">Para encontrar <span class="process-math">\(R\text{,}\)</span> consideramos o seguinte limite, onde o coeficiente do <span class="process-math">\(n\)</span>-ésimo termo é dado por <span class="process-math">\(C_{n} = 2^n n^2.\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n \rightarrow \infty} \frac{|a_{n+1}|}{|a_{n}|}
+=\lim_{n\rightarrow\infty}\left|\frac{2^{n+1} (n+1)^2 x^{n+1}}{2^n n^2 x^n}\right|
+=\lim_{n \rightarrow \infty}|x| a\frac{n^2 + 2n + 1}{n^2}
+=\lim_{n \rightarrow \infty} a |x| \frac{1 + 2/n + 1/n^2}{1}
+= a |x|.
+\end{equation*}
+</div>
+<p class="continuation">Isso deve ser menor que um, então <span class="process-math">\(|x| \lt  1/a\text{,}\)</span> e nosso raio de convergência é <span class="process-math">\(R=1/2\text{.}\)</span></p>
+</div></div>
+</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/XGJp6iuaseo</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/4My_Z2t5JFs</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/lE0VVkesRBY</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/cNspjy_VHeQ</code></div></div>
@@ -713,6 +1214,7 @@ A_n(x-3)^n\text{.}\)</span> A maneira mais fácil de encontrar tal série é for
 <div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">https://youtu.be/QKtI-p8qjTw</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">https://youtu.be/QKtI-p8qjTw</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/lI965HKuUTY</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn"><code class="code-inline tex2jax_ignore">/webwork2_files/helpFiles/IntervalNotation.html</code></div></div>
 </div></main>
 </div>
 </body>

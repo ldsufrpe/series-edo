@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-24T13:41:48-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>Usando o Teorema do Resto:</p>
+<p>Como queremos alcançar a precisão de cinco casas decimais, precisamos escolher <span class="process-math">\(n\)</span> para que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+|R_n(0.22)|\leq 5\times 10^{-6}
+\end{equation*}
+</div>
+<p class="continuation">No entanto, desde que <span class="process-math">\(f(x) =\cos\!\left(x\right)\text{,}\)</span> então <span class="process-math">\(f^{n+1}(x)\)</span>é <span class="process-math">\(\pm \sin x\)</span> ou <span class="process-math">\(\pm \cos x\text{,}\)</span> e em ambos os casos <span class="process-math">\(|f^{n+1}(x)|\leq 1\text{.}\)</span></p>
+<p>Assim, segue do teorema de estimação do resto, com <span class="process-math">\(M = 1\text{,}\)</span> <span class="process-math">\(x_0 = 0\)</span> e <span class="process-math">\(x = 0.22\)</span> que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+|R_n(0.22)|\leq\frac{(0.22)^{n+1}}{(n+1)!}\leq 5\times 10^{-6}
+\end{equation*}
+</div>
+<p class="continuation">Já que para <span class="process-math">\(n = 3\text{,}\)</span> temos <span class="process-math">\(\frac{(0.22)^4}{24}=9.76067\times 10^{-5}&gt; 5\times 10^{-6}\)</span> e para <span class="process-math">\(n =4\text{,}\)</span> temos <span class="process-math">\(\frac{(0.22)^5}{120}=4.29469\times 10^{-6}\leq 5\times 10^{-6}\text{.}\)</span></p>
+<p>Portanto, <span class="process-math">\(n = 4\)</span> é o menor <span class="process-math">\(n\)</span> que atende a este critério.</p>
+<p>Agora temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\cos(0.22)\approx1-\frac{(0.22)^2}{2!}+\frac{(0.22)^4}{4!}=0.975897606666667\approx0.97590
+\end{equation*}
+</div>
+<p class="continuation">O mesmo resultado teria sido obtido usando o teste de séries alternadas.</p>
+</div></body>
+</html>

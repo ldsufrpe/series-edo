@@ -1,559 +1,622 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-representations>
   <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
-    <static seed="1" source="pretext-teste-convergencia/problem1.pg">
-      <statement><p>Determine se a série é convergente ou divergente. Se convergente, encontre a soma;
-se divergente, insira <em> div </em>.
-<me>\sum_{n=1}^\infty \frac{n}{\sqrt{n^2+3}}</me>
-Resposta: <fillin name="AnSwEr0001" characters="20"/></p>
+    <static seed="1" source="pretext-serie-potencias/problem1.pg">
+      <statement><p>Se  <m>y = \sum_{k=0}^\infty \left(k+1\right)x^{k+3}</m> então <m>y^\prime = \sum_{k=0}^\infty</m> <fillin name="AnSwEr0001" characters="30"/></p>
 </statement>
       <answer>
         <p>
-          <m>\text{div}</m>
+          <m>\left(k+1\right)\!\left(k+3\right)x^{k+3-1}</m>
         </p>
       </answer>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-teste-convergencia/problem1.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-teste-convergencia/problem1.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-teste-convergencia/problem1.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-teste-convergencia/problem1.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem1.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-serie-potencias/problem1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-serie-potencias/problem1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-serie-potencias/problem1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-serie-potencias/problem1.pg</server-url>
+    <pg source="pretext-serie-potencias/problem1.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
-    <static seed="10" source="pretext-teste-convergencia/problem10.pg">
-      <statement><p>Encontre o valor de
-<me>\int_1^{\infty} \frac{2 \ln(x)}{x^6} \, dx</me></p>
-<p><fillin name="AnSwEr0001" characters="20"/></p>
-<p>Determine se a série converge ou diverge:
-<me>\displaystyle \sum_{n=1}^\infty \frac{2\ln(n)}{n^6}</me>
-Insira A se a série for convergente ou B se for divergente.
-<fillin name="AnSwEr0002" characters="1"/></p>
+    <static seed="10" source="pretext-serie-potencias/problem10.pg">
+      <statement><p>Encontre todos os valores de x tais que a série dada convirja.</p>
+<p><me>\sum_{n=1}^\infty \frac{(8 x)^n}{n^{3}}</me></p>
+<p>A série é convergente</p>
+<p>de x = <fillin name="AnSwEr0001" characters="3"/>, extremidade esquerda incluída (S,N):	<fillin name="AnSwEr0002" characters="1"/></p>
+<p>até   x = <fillin name="AnSwEr0003" characters="3"/>, extremidade direita incluída (S,N):  <fillin name="AnSwEr0004" characters="1"/></p>
 </statement>
       <answer>
         <p>
-          <m>0.08</m>
+          <m>-0.125</m>
         </p>
       </answer>
       <answer>
-        <p>A</p>
+        <p>S</p>
       </answer>
-      <solution><p>Por definição,</p>
-<p><me>\int_1^{\infty} \frac{2 \ln(x)}{x^6} \, dx
-  = \lim_{t\to\infty} \int_1^t \frac{2 \ln(x)}{x^6} \, dx \;.</me></p>
-<p>Para calcular a integral, integramos por partes, usando a fórmula</p>
-<p><me>\int u dv = u v - \int v du</me></p>
-<p>e substituindo <m>u = \ln(x)</m> e <m>dv = x^{-6}dx</m>, tal que
-<m>du = \frac{dx}{x}</m> e
-<m>v = \frac{1}{-6+1}(x^{-6+1}) = -\frac{1}{5 x^5}</m>:</p>
-<p><me>\begin{aligned}
-\lim_{t\to\infty} \int_1^t \frac{2 \ln(x)}{x^6} \, dx
-  \amp = 2 \lim_{t\to\infty} \int_1^t \ln(x) \cdot \frac{dx}{x^6} \\\\
-  \amp = 2 \lim_{t\to\infty} \left[
-    \left. -\frac{\ln(x)}{5 x^5} \right|_1^t
-    - \int_1^t \left( -\frac{1}{5 x^5} \right) \, \frac{dx}{x}
-    \right] \\\\
-  \amp = -\frac{2}{5} \left[
-    \left( \lim_{t\to\infty} \frac{\ln(t)}{t^5}
-      - \frac{\ln(1)}{1^5} \right)
-     - \lim_{t\to\infty} \int_1^t \frac{dx}{x^6}
-    \right] \\\\
-  \amp = -\frac{2}{5} \left[ \left( 0 - \frac 01 \right)
-    + \lim_{t\to\infty}
-      \left( \left. \frac1{5 x^5} \right|_1^t \right)
-    \right] \\\\
-  \amp = -\frac{2}{5} \left( \lim_{t\to\infty}
-      \frac1{5 t^5} - \frac1{5 \cdot 1^5}
-    \right) \\\\
-  \amp = -\frac{2}{5} \left( 0 - \frac1{5} \right) \\\\
-  \amp = \frac{2}{25} = 0.08 \;.
-\end{aligned}</me></p>
-<p>Esta primeira questão está intimamente relacionada com a segunda questão, é claro, porque é o teste integral da série dada. No entanto, é importante primeiro verificar se o teste integral realmente se aplica. Descobrimos que, como <m>\ln(x)</m> e <m>x^{-6}</m> são ambas funções contínuas positivas, a série é positiva e contínua. (A única descontinuidade introduzida possível seria em <m>x^6=0</m>, mas isso não ocorre no domínio da integração <m>[1,\infty)</m>.) Já que <m>x^6\ ) cresce muito mais rápido que \(\ln(x)</m>, a série está diminuindo. Podemos ver mais claramente por que isso acontece, porque
-<me>\frac{d}{dx} \left( \frac{\ln(x)}{x^6} \right)
-  = \frac {\frac{1}{x}\cdot x^6 - 6 x^5\ln(x)} {x^{12}}
-  = \frac{1 - 6\ln(x)}{x^7}\;,</me>
-que é negativa para todo <m>x&gt;e^{1/6}</m>.</p>
-<p>Assim, todas as condições para o teste da integral se aplicam, e o fato de nossa integral produzir um número real mostra que a série converge.</p>
+      <answer>
+        <p>
+          <m>0.125</m>
+        </p>
+      </answer>
+      <answer>
+        <p>S</p>
+      </answer>
+      <solution><p>Devemos encontrar o intervalo de convergência. Usamos o teste de razão, que é muito confiável para esse fim:
+<me>\begin{aligned}
+\lim_{n\to\infty}
+	\left| \frac{ \left( \frac{ (8 x)^{n+1} }{ (n+1)^{3} } \right) }
+		{ \left( \frac{ (8 x)^n }{ n^{3} } \right) } \right|
+=	\lim_{n\to\infty}
+		\left| \frac{ 8 x }{ \left( \frac{n+1}{n} \right)^{3} } \right|
+=	\left| 8 x \right|
+\end{aligned}</me>
+Em seguida, usamos a expressão resultante para obter o intervalo de convergência verificando quando é menor que 1:
+<me>\left| 8 x \right| \lt  1
+\iff	\left| x \right| \lt  \frac 1 {8}
+\iff	\frac{-1}{8} \lt  x \lt  \frac 1 {8}</me>
+Assim, devemos simplesmente verificar os pontos das extremidades.</p>
+<p>Quando <m>x = \frac{-1}{8}</m>:
+<me>\sum_{n=1}^\infty \frac{(8 x)^n}{n^{3}}
+=	\sum_{n=1}^\infty \frac{(-1)^n}{n^{3}}</me>
+Isso é convergente pelo teste da série alternada, uma vez que claramente
+<m>\frac 1 {n^{3}}</m> tende a zero <m>0</m>.</p>
+<p>quando <m>x = \frac 1 {8}</m>:
+<me>\sum_{n=1}^\infty \frac{(8 x)^n}{n^{3}}
+=	\sum_{n=1}^\infty \frac 1 {n^{3}}</me>
+Isso é convergente como uma p-série.</p>
 </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-teste-convergencia/problem10.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-teste-convergencia/problem10.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-teste-convergencia/problem10.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-teste-convergencia/problem10.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem10.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-serie-potencias/problem10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-serie-potencias/problem10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-serie-potencias/problem10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-serie-potencias/problem10.pg</server-url>
+    <pg source="pretext-serie-potencias/problem10.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
-    <static seed="11" source="pretext-teste-convergencia/problem11.pg">
-      <statement><p>Aproxime o valor da série com um erro de no máximo <m>10^{-4}</m>.</p>
-<p><me>\sum_{n=1}^{\infty} \frac{ (-1)^{n+1}}{n^{5}}</me>
-De acordo com o Teste da Série Alternada:
-<me>\left| S_N-S \right|\le a_{N+1} .</me>
-Qual o menor valor de <m>N</m> que se aproxima para <m>S</m> dentro de um erro de no máximo <m>10^{-4}</m>?</p>
-<p><m>N =</m> <fillin name="AnSwEr0001" characters="20"/></p>
-<p><m>S\approx</m> <fillin name="AnSwEr0002" characters="20"/></p>
+    <static seed="11" source="pretext-serie-potencias/problem11.pg">
+      <statement><p>Encontre o intervalo de convergência de
+<me>\sum_{n=1}^\infty\,{n^2\,x^{2 n}\over 3^{2 n}}.</me></p>
+<p>intervalo de convergência = <fillin name="AnSwEr0001" characters="15"/></p>
+<p><em>(Digite sua resposta como um intervalo: assim, se o intervalo
+de convergência for <m>-3 \lt  x\le 5</m>, responda <alert>(-3,5]</alert>.
+Use <alert>Inf</alert> para qualquer extremidade no infinito.)</em></p>
 </statement>
       <answer>
         <p>
-          <m>6</m>
+          <m>\left(-3,3\right)</m>
         </p>
       </answer>
-      <answer>
-        <p>
-          <m>0.97208</m>
-        </p>
-      </answer>
-      <solution><p>Seja <m>S =  \sum _{n=1}^{\infty} \frac{ (-1)^{n+1}}{n^{5}}</m>, de maneira que <m>a_n = \frac{1}{n^{5}}</m>.  Então,</p>
-<p><me>| S_N - S | \le a_{N+1} = \frac{1}{(N+1)^{5}}.</me></p>
-<p>Para tornar o erro menor que <m>10^{-4}</m>, devemos escolher <m>N</m> de modo que
-<me>\frac{1}{(N+1)^{5}} \lt  10^{-4} \qquad\textrm{or}\qquad N &gt; 10^\frac{4}{5}-1\approx 5.31.</me></p>
-<p>O menor valor que satisfaz a desigualdade requerida é então <m>N=6</m>.  Portanto, 
-<me>S \approx S_{6} = 1-\frac{1}{2^{5}}+\frac{1}{3^{5}}-\frac{1}{4^{5}}+\frac{1}{5^{5}}-\frac{1}{6^{5}} = 0.97208</me></p>
+      <solution><p>Usamos o teste da razão:
+<me>\left|{a_{n+1} \over {a_n}}\right| =
+\left|{{(n+1)^2 x^{2(n+1)}} \over {3^{2(n+1)}}} \cdot
+      {{3^{2 n}} \over {n^2 x^{2 n}}}\right| =
+\left({{n+1} \over n}\right)^2 \cdot {{x^2} \over 9}.</me>
+Já que  <m>{{(n+1)}/ n} \rightarrow 1</m> quando <m>n \rightarrow \infty</m>,
+temos
+<me>\lim_{n\to\infty} \left|{{a_{n+1}} \over {a_n}}\right|={{x^2}\over 9}.</me>
+Temos <m>{{x^2}/ 9} \lt  1</m> quando <m>|x| \lt  3</m>.  O raio de convergência é 3 e a série converge para <m>-3 \lt  x \lt  3</m>.</p>
+<p>Verificando as extremidades.  Para <m>x = -3</m>, temos
+<me>\sum_{n=1}^{\infty}{{n^2 x^{2 n}} \over {3^{2 n}}} =
+\sum_{n=1}^{\infty}{{n^2 (-3)^{2 n}}\over {3^{2 n}}} =
+\sum_{n=1}^{\infty}  n^2,</me>
+que diverge.  Similarmente, para <m>x = 3</m>, temos
+<me>\sum_{n=1}^{\infty}{{n^2 x^{2 n}} \over {3^{2 n}}} =
+\sum_{n=1}^{\infty}{{n^2 3^{2 n}}\over {3^{2 n}}} =
+\sum_{n=1}^{\infty} n^2,</me>
+que diverge.  A série diverge em ambas as extremidades,
+então o intervalo de convergência é <m>-3 \lt  x \lt  3</m>.</p>
 </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-teste-convergencia/problem11.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-teste-convergencia/problem11.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-teste-convergencia/problem11.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-teste-convergencia/problem11.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem11.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-serie-potencias/problem11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-serie-potencias/problem11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-serie-potencias/problem11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-serie-potencias/problem11.pg</server-url>
+    <pg source="pretext-serie-potencias/problem11.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
-    <static seed="12" source="pretext-teste-convergencia/problem12.pg">
-      <statement><p>Determine se a seguinte série converge ou diverge.
-<me>\sum_{n=1}^\infty\frac{(-1)^{n+1}}{ 4 n^{9}+8 }</me></p>
-<p>Insira <em> C </em> para convergente e <em> D </em> para divergente: <fillin name="AnSwEr0001" characters="2"/></p>
-</statement>
-      <answer>
-        <p>C</p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-teste-convergencia/problem12.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-teste-convergencia/problem12.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-teste-convergencia/problem12.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-teste-convergencia/problem12.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem12.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
-    <static seed="13" source="pretext-teste-convergencia/problem13.pg">
-      <statement><p>Determine se a seguinte série converge ou diverge.
-<me>\sum_{n=1}^\infty\frac{ (-1)^{n-1} }{ \sqrt{n} }</me></p>
-<p>Insira <em> C </em> para convergente e <em> D </em> para divergente: <fillin name="AnSwEr0001" characters="1"/></p>
-</statement>
-      <answer>
-        <p>C</p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-teste-convergencia/problem13.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-teste-convergencia/problem13.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-teste-convergencia/problem13.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-teste-convergencia/problem13.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem13.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-14" ww-id="webwork-14">
-    <static seed="14" source="pretext-teste-convergencia/problem14.pg">
-      <statement><p>Aplique o Teste de Razão para determinar convergência ou divergência, ou declare que o Teste de Razão é inconclusivo.
-<me>\sum\limits_{n=1}^{\infty} \frac{(n!)^2}{(2n)!}</me>
-<m>\rho = \lim\limits_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| =</m> <fillin name="AnSwEr0001" characters="20"/> (Insira 'inf' para <m>\infty</m>.)</p>
-<p><m>\displaystyle
-\sum_{n=1}^{\infty} \frac{(n!)^2}{(2n)!}</m> é:</p>
-<p><var form="buttons">
-<li>
-<p>convergente</p>
-</li>
-<li>
-<p>divergente</p>
-</li>
-<li>
-<p>O Teste da Razão é inconclusivo</p>
-</li>
-</var></p>
+    <static seed="12" source="pretext-serie-potencias/problem12.pg">
+      <statement><p>Use o teste da razão para encontrar o raio de convergência da série de potências
+<me>2 x + 16 x^2 + 72 x^3 + 256 x^4 + 800 x^5 + \cdots</me></p>
+<p><m>R =</m> <fillin name="AnSwEr0001" characters="15"/></p>
+<p><em>(Se o raio for infinito, digite <alert>Inf</alert> for R.)</em></p>
 </statement>
       <answer>
         <p>
-          <m>0.25</m>
+          <m>\frac{1}{2}</m>
         </p>
       </answer>
-      <solution><p>Com <m>a_n = \frac{(n!)^2}{(2n)!}</m>, 
-<me>\left| \frac{a_{n+1}}{a_n} \right| = \frac{((n+1)!)^2}{(2n+2)!} \cdot \frac{(2n)!}{(n!)^2} = \frac{(n+1)^2}{(2n+2)(2n+1)}</me> e <me>\rho = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \frac{1}{4} \lt  1.</me>
-Portanto, a série <m>\sum\limits_{n=1}^{\infty} \frac{(n!)^2}{(2n)!}</m> converge pelo Teste da Razão.</p>
+      <solution><p>Para encontrar <m>R</m>, consideramos o seguinte limite, onde o coeficiente do <m>n</m>-ésimo termo é dado por 
+<m>C_{n} = 2^n n^2.</m>
+<me>\lim_{n \rightarrow \infty} \frac{|a_{n+1}|}{|a_{n}|}
+  =\lim_{n\rightarrow\infty}\left|\frac{2^{n+1} (n+1)^2 x^{n+1}}{2^n n^2 x^n}\right|
+  =\lim_{n \rightarrow \infty}|x| a\frac{n^2 + 2n + 1}{n^2}
+  =\lim_{n \rightarrow \infty} a |x| \frac{1 + 2/n + 1/n^2}{1}
+  = a |x|.</me>
+Isso deve ser menor que um, então <m>|x| \lt  1/a</m>, e nosso raio de convergência é <m>R=1/2</m>.</p>
 </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-teste-convergencia/problem14.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-teste-convergencia/problem14.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-teste-convergencia/problem14.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-teste-convergencia/problem14.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem14.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-15" ww-id="webwork-15">
-    <static seed="15" source="pretext-teste-convergencia/problem15.pg">
-      <statement><p>Assuma que <m>| \frac{a_{n+1}}{a_n}|</m> converge para <m>\rho = \frac{1}{7}</m>.  O que você pode dizer sobre a convergência da série dada?
-<me>\sum\limits_{n=1}^{\infty} {b_n} =  \sum\limits_{n=1}^{\infty} n^{9} a_n</me>
-<m>\lim\limits_{n \to \infty} \left| \frac{b_{n+1}}{b_n} \right| =</m> <fillin name="AnSwEr0001" characters="20"/> (Insira 'inf' para <m>\infty</m>.)</p>
-<p><m>\sum\limits_{n=1}^{\infty} n^{9} a_n</m> é:
-<var form="buttons">
-<li>
-<p>convergente</p>
-</li>
-<li>
-<p>divergente</p>
-</li>
-<li>
-<p>O Teste da Razão é inconclusivo</p>
-</li>
-</var></p>
-</statement>
-      <answer>
-        <p>
-          <m>0.142857</m>
-        </p>
-      </answer>
-      <solution><p>Seja <m>b_n = n^{9} a_n</m>.  Então</p>
-<p><me>\rho =  \lim_{n \to \infty} \left| \frac{b_{n+1}}{b_n} \right| 
-= \lim_{n \to \infty} \left( \frac{n+1}{n} \right)^{9} \left| \frac{a_{n+1}}{a_n} \right|</me> <me>=  1^{9} \cdot \frac{1}{7} = \frac{1}{7} \lt  1</me>
-Portanto, a série <m>\sum\limits_{n=1}^{\infty} n^{9} a_n</m> converge pelo Teste da Razão.</p>
-</solution>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-teste-convergencia/problem15.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-teste-convergencia/problem15.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-teste-convergencia/problem15.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-teste-convergencia/problem15.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem15.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-16" ww-id="webwork-16">
-    <static seed="16" source="pretext-teste-convergencia/problem16.pg">
-      <statement><p>Use qualquer método para determinar se a série converge.</p>
-<p>(1) <m>\displaystyle \sum_{k=1}^{\infty} \frac{\left(k+4\right)!^{2}}{\left(2k\right)!}</m></p>
-<p><var form="popup">
-<li>
-<p>?</p>
-</li>
-<li>
-<p>Converge</p>
-</li>
-<li>
-<p>Diverge</p>
-</li>
-</var></p>
-<p>(2) <m>\displaystyle \sum_{k=1}^{\infty} \frac{\ln\!\left(k\right)}{6^{k}}</m></p>
-<p><var form="popup">
-<li>
-<p>?</p>
-</li>
-<li>
-<p>Converge</p>
-</li>
-<li>
-<p>Diverge</p>
-</li>
-</var></p>
-</statement>
-      <solution><p>Usando o Teste de Razão</p>
-<p>(1) <m>\displaystyle\rho=\lim_{k\to\infty} \left(\frac{\left(k+5\right)^{2}}{\left(2k+2\right)\!\left(2k+1\right)}\right)={\textstyle\frac{1}{4}}</m>, então a série é Convergente.</p>
-<p>(2) <m>\displaystyle\rho=\lim_{k\to\infty} \left(\frac{\ln\!\left(k+1\right)}{6\ln\!\left(k\right)}\right)={\textstyle\frac{1}{6}}</m>, então a série é Convergente.</p>
-</solution>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-teste-convergencia/problem16.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-teste-convergencia/problem16.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-teste-convergencia/problem16.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-teste-convergencia/problem16.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem16.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-17" ww-id="webwork-17">
-    <static seed="17" source="pretext-teste-convergencia/problem17.pg">
-      <statement><p>Use o Teste de Raiz para determinar a convergência ou divergência de uma determinada série ou declare que o Teste de Raiz é inconclusivo.
-<me>\sum\limits_{n=1}^{\infty} \left(\frac{n + 17}{3 n + 18}\right)^n</me>
-<m>L = \lim\limits_{n \to \infty} \sqrt[n]{\left| a_n \right|} =</m> <fillin name="AnSwEr0001" characters="20"/> (Enter 'inf' for <m>\infty</m>.)</p>
-<p><m>\sum\limits_{n=1}^{\infty} \left(\frac{n + 17}{3 n + 18}\right)^n</m> is:
-<var form="buttons">
-<li>
-<p>convergente</p>
-</li>
-<li>
-<p>divergente</p>
-</li>
-<li>
-<p>O Teste de Raiz é inconclusivo</p>
-</li>
-</var></p>
-</statement>
-      <answer>
-        <p>
-          <m>0.333333</m>
-        </p>
-      </answer>
-      <solution><p>Com <m>a_n = \left(\frac{n + 17}{3 n + 18}\right)^n</m>, 
-<me>\sqrt[n]{a_n} = \sqrt[n]{\left(\frac{n + 17}{3 n + 18}\right)^n} = \frac{n + 17}{3 n + 18}</me> e <me>\lim_{n \to \infty} \sqrt[n]{a_n}  \frac{1}{3} \lt  1.</me></p>
-<p>Portanto, a série <m>\sum\limits_{n=1}^{\infty}</m> converge pelo Teste da Raiz.</p>
-</solution>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-teste-convergencia/problem17.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-teste-convergencia/problem17.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-teste-convergencia/problem17.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-teste-convergencia/problem17.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem17.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-18" ww-id="webwork-18">
-    <static seed="18" source="pretext-teste-convergencia/problem18.pg">
-      <statement><p>Use o Teste de Raiz para determinar a convergência ou divergência de uma determinada série ou declare que o Teste de Raiz é inconclusivo.
-<me>\sum\limits_{n=1}^{\infty} \frac{1}{n^{9 n}}</me>
-<m>L = \lim\limits_{n \to \infty} \sqrt[n]{\left| a_n \right|} =</m> <fillin name="AnSwEr0001" characters="20"/> (Insira 'inf' para <m>\infty</m>.)</p>
-<p><m>\sum\limits_{n=1}^{\infty} \frac{1}{n^{9 n}}</m> is:
-<var form="buttons">
-<li>
-<p>convergente</p>
-</li>
-<li>
-<p>divergente</p>
-</li>
-<li>
-<p>O Teste de Raiz é inconclusivo</p>
-</li>
-</var></p>
-</statement>
-      <answer>
-        <p>
-          <m>0</m>
-        </p>
-      </answer>
-      <solution><p>Com <m>a_n = \frac{1}{n^{9 n}}</m>, 
-<me>\sqrt[n]{a_n} = \sqrt[n]{\frac{1}{n^{9 n}}} = \frac{1}{n^{9}}</me> and <me>L = \lim_{n \to \infty} \sqrt[n]{a_n} = 0 \lt  1.</me>
-Portanto, a série <m>\sum\limits_{n=1}^{\infty} \frac{1}{n^{9 n}}</m> converge pelo Teste da Raiz.</p>
-</solution>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-teste-convergencia/problem18.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-teste-convergencia/problem18.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-teste-convergencia/problem18.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-teste-convergencia/problem18.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem18.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-19" ww-id="webwork-19">
-    <static seed="19" source="pretext-teste-convergencia/problem19.pg">
-      <statement><p>Use o Teste de Raiz para determinar a convergência ou divergência de uma determinada série ou declare que o Teste de Raiz é inconclusivo.
-<me>\sum\limits_{n=1}^{\infty} \left(1+\frac{1}{2 n}\right)^{-n^2}</me>
-<m>L = \lim\limits_{n \to \infty} \sqrt[n]{\left| a_n \right|} =</m> <fillin name="AnSwEr0001" characters="20"/> (Insira 'inf' para <m>\infty</m>.)</p>
-<p><m>\sum_{n=4}^{\infty} \left(1+\frac{1}{2 n}\right)^{-n^2}</m> is:
-<var form="buttons">
-<li>
-<p>convergente</p>
-</li>
-<li>
-<p>divergente</p>
-</li>
-<li>
-<p>O Teste de Raiz é inconclusivo</p>
-</li>
-</var></p>
-</statement>
-      <answer>
-        <p>
-          <m>0.606531</m>
-        </p>
-      </answer>
-      <solution><p>Com <m>a_n = \left(1+\frac{1}{2 n}\right)^{-n^2}</m>, 
-<me>\sqrt[n]{a_n} = \sqrt[n]{\left(1+\frac{1}{2 n}\right)^{-n^2}} = \left( 1 + \frac{1}{2 n} \right)^{-n}</me> e <me>\lim_{n \to \infty} \sqrt[n]{a_n} = \lim_{n\to\infty} \left( 1+\frac{1}{2 n}\right)^{-n} = \lim_{n\to\infty}\left[\left(1+\frac{1}{2 n} \right)^{2 n} \right]^{-\frac{1}{2}} =e^{-\frac{1}{2}}\lt 1.</me>
-Portanto, a série <m>\sum\limits_{n=1}^{\infty} \left(1+\frac{1}{2 n}\right)^{-n^2}</m> converge pelo Teste de Raiz.</p>
-</solution>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-teste-convergencia/problem19.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-teste-convergencia/problem19.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-teste-convergencia/problem19.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-teste-convergencia/problem19.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem19.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-serie-potencias/problem12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-serie-potencias/problem12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-serie-potencias/problem12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-serie-potencias/problem12.pg</server-url>
+    <pg source="pretext-serie-potencias/problem12.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
-    <static seed="2" source="pretext-teste-convergencia/problem2.pg">
-      <statement><p>O teste de divergência aplicado à série
-<me>\sum_{n=1}^\infty \frac{2n}{4n+3}</me>
-nos diz que a série 
-<var form="popup">
-<li>
-<p>a série converge.</p>
-</li>
-<li>
-<p>a série diverge.</p>
-</li>
-<li>
-<p>mais testes são necessários.</p>
-</li>
-</var></p>
+    <static seed="2" source="pretext-serie-potencias/problem2.pg">
+      <statement><p>(a)</p>
+<p>Calcule  a integral</p>
+<p><m>\displaystyle \int_{0}^{2} \frac{24}{x^2+4} dx</m>.</p>
+<p>Sua resposta deve estar no formato <m>k\pi</m>, na qual <m>k</m> é um inteiro. Qual é o valor de  <m>k</m>?</p>
+<p>(Dica: <m>\frac{d \arctan(x)}{dx} = \frac{1}{x^2+1}</m> )</p>
+<p><m>k =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p>(b)</p>
+<p>Agora, vamos calcular a mesma integral usando séries de potências. Primeiro, encontre a série de potências para a função <m>f(x) = \frac{24}{x^2+4}</m>. Em seguida, integre-o de 0 a 2 e chame-o de S. S deve ser uma série infinita <m>\sum_{n=0}^\infty a_n</m> .</p>
+<p>Quais são os primeiros termos de S?</p>
+<p><m>a_0 =</m> <fillin name="AnSwEr0002" characters="20"/></p>
+<p><m>a_1 =</m> <fillin name="AnSwEr0003" characters="20"/></p>
+<p><m>a_2 =</m> <fillin name="AnSwEr0004" characters="20"/></p>
+<p><m>a_3 =</m> <fillin name="AnSwEr0005" characters="20"/></p>
+<p><m>a_4 =</m> <fillin name="AnSwEr0006" characters="20"/></p>
+<p>(c)
+A resposta na parte (a) é igual à soma da série infinita na parte (b) (por quê?). Portanto, se você dividir sua série infinita de (b) por <m>k</m> (a resposta de (a)), você encontrou uma estimativa para o valor de <m>\pi</m> em termos de uma série infinita. Aproxime o valor de <m>\pi</m> pelos primeiros termos 5.</p>
+<p><fillin name="AnSwEr0007" characters="20"/>  .</p>
+<p>(d)</p>
+<p>Qual é um limite superior para o erro de sua estimativa se você usar os primeiros termos 8? (Use a estimativa de séries alternadas.)</p>
+<p><fillin name="AnSwEr0008" characters="20"/>  .</p>
 </statement>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>12</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2.4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-1.71428571428571</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1.33333333333333</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3.33968253968254</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.235294117647059</m>
+        </p>
+      </answer>
+      <solution><p>(a)
+<me>\begin{aligned}
+\int_0^2 \frac{24}{x^2+4} dx
+\amp =	\int_0^2 \frac{\frac{24}{4}}{\left(\frac x 2\right)^2+1} dx	\\\\
+\amp =	\frac{24}{2} \int_0^2 \frac 1 {\left(\frac x 2\right)^2+1} \cdot
+		\frac{dx}2	\\\\
+\amp =	12 \left. \tan^{-1}\left(\frac x 2\right) \right|_0^2	\\\\
+\amp =	12 \tan^{-1} 1 - 12 \tan^{-1} 0	\\\\
+\amp =	12 \cdot \frac{\pi}{4} - 0 = 3 \pi
+\end{aligned}</me></p>
+<p>(b)
+Podemos encontrar a série de potências para <m>\frac{24}{x^2+4}</m> usando
+<me>\begin{aligned}
+\frac{24}{x^2+4}
+\amp =	\frac{24}{4-(-x^2)}	\\\\
+\amp =	\frac{\frac{24}4}{1-\left(-\frac{x^2}4\right)}	\\\\
+\amp =	6 \sum_{n=0}^\infty \left(\frac{-x^2}4\right)^n
+\end{aligned}</me>
+Então podemos calcular <m>S</m> conforme a seguir:
+<me>\begin{aligned}
+S
+\amp =	\int_0^2 6 \sum_{n=0}^\infty \left(\frac{-x^2}4\right)^n dx \\\\
+\amp =	6 \sum_{n=0}^\infty \int_0^2 \frac{(-1)^n x^{2n}}{4^n} dx	\\\\
+\amp =	6 \sum_{n=0}^\infty \frac{(-1)^n}{4^n(2n+1)}
+		\left( \left. x^{2n+1} \right|_0^2 \right)	\\\\
+\amp =	6 \sum_{n=0}^\infty \frac{(-1)^n}{4^n(2n+1)} \cdot
+		\left( 2^{2n+1}-0 \right)	\\\\
+\amp =	6 \sum_{n=0}^\infty \frac{(-1)^n}{4^n(2n+1)}
+		\left( 2 \cdot 4^n \right)	\\\\
+\amp =	12 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}
+\end{aligned}</me>
+E agora podemos, com esta fórmula para<m>S</m>, calcular seus primeiros termos:
+<me>\begin{aligned}
+S
+\amp =	\frac{12 (-1)^0}{2 \cdot 0 + 1} +
+		\frac{12 (-1)^1}{2 \cdot 1 + 1} +
+		\frac{12 (-1)^2}{2 \cdot 2 + 1} +
+		\frac{12 (-1)^3}{2 \cdot 3 + 1} +
+		\frac{12 (-1)^4}{2 \cdot 4 + 1} + \cdots	\\\\
+\amp =	12 - \frac{12}3 + \frac{12}5 -
+		\frac{12}7 + \frac{12}9 - \cdots	\\\\
+\amp =	12  - 4 + 2.4  - 1.71428571428571 + 1.33333333333333
+\end{aligned}</me></p>
+<p>(c)
+A nova série que aborda o valor de <m>\pi</m> seria então:
+<me>\frac{ \displaystyle 12 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1} }{ k }
+=	4 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}</me>
+Para aproximar isso pelos primeiros termos 5, simplesmente escrevemos:
+<me>\begin{aligned}
+4 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}
+\amp =	\frac 4 {2 \cdot 0 + 1} - \frac 4 {2 \cdot 1 + 1} + \frac 4 {2 \cdot 2 + 1} - \frac 4 {2 \cdot 3 + 1} + \frac 4 {2 \cdot 4 + 1}	\\\\
+\amp =	4 - 1.33333333333333 + 0.8 - 0.571428571428571 + 0.444444444444444	\\\\
+\amp =	3.33968253968254
+\end{aligned}</me></p>
+<p>(d)
+O Teorema da Estimativa de Séries Alternadas diz que o próximo termo fornece um limite superior no erro causado pelo truncamento da série no termo atual.  A série na parte (c) começa em <m>n=0</m> so <m>n=7</m> no <m>8</m>-ésimo termo. Assim, o erro não é maior do que <m>\left| 4 \cdot \frac{(-1)^{7+1}}{2(7+1)+1} \right|</m>:
+<me>\left| 4 \cdot \frac{(-1)^8}{2 \cdot 8 + 1} \right|
+=	\frac 4 {17} = 0.235294117647059</me></p>
+</solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-teste-convergencia/problem2.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-teste-convergencia/problem2.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-teste-convergencia/problem2.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-teste-convergencia/problem2.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem2.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-serie-potencias/problem2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-serie-potencias/problem2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-serie-potencias/problem2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-serie-potencias/problem2.pg</server-url>
+    <pg source="pretext-serie-potencias/problem2.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
-    <static seed="3" source="pretext-teste-convergencia/problem3.pg">
-      <statement><p>Cada uma das seguintes afirmações é uma tentativa de mostrar que uma determinada série é convergente ou divergente usando o Teste de Comparação (NÃO o Teste de Comparação de Limite).</p>
-<p>Para cada declaração, digite C (para "correto") se o argumento
-é válido, ou digite I (para "incorreto") se qualquer parte do argumento for defeituosa. (Nota: se a conclusão for verdadeira, mas o argumento que levou a ela estiver errado, você deve digitar I.)</p>
+    <static seed="3" source="pretext-serie-potencias/problem3.pg">
+      <statement><p>A função
+	<m>f(x) = 4 x^2 \arctan(x^{2})</m>
+é representada como uma série de potências</p>
+<p><m>\displaystyle f(x) = \sum_{n=0}^\infty c_n x^n .</m></p>
+<p>Qual é o menor termo  com um coeficiente diferente de zero.</p>
+<p><m>n =</m>  <fillin name="AnSwEr0001" characters="20"/></p>
+<p>Encontre o raio de convergência <m>R</m> da série .</p>
+<p><m>R =</m>  <fillin name="AnSwEr0002" characters="20"/>  .</p>
 </statement>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+      <solution><p>Trabalhando a partir da série de Taylor para <m>\tan^{-1}</m>, podemos deduzir que
+<m>\displaystyle 4 x^2 \tan^{-1}(x^{2})
+= 4 x^2 \sum_{n=0}^\infty (-1)^n \frac{(x^{2})^{2n+1}}{2n+1}</m>, mas essa expressão é um pouco complicada, então vamos ver se podemos simplificá-la um pouco, ou
+ter uma ideia melhor de como fica expandido:
+<me>\begin{aligned}
+4 x^2 \sum_{n=0}^\infty (-1)^n \frac{(x^{2})^{2n+1}}{2n+1}
+\amp =	4 x^2 \sum_{n=0}^\infty (-1)^n \frac{x^{4 n+2}}{2n+1}	\\\\
+\amp =	\sum_{n=0}^\infty (-1)^n
+		\left( \frac{4}{2n+1} \right) x^{4 n+4}	\\\\
+\amp =	\frac{4}{1}x^{4} - \frac{4}{3}x^{8}
+		+ \frac{4}{5}x^{12} - \cdots
+\end{aligned}</me>
+Assim, o termo mais baixo com um coeficiente diferente de zero é termo <m>4</m>.</p>
+<p>O raio de convergência pode ser encontrado com o teste da razão:
+<me>\begin{aligned}
+\lim_{n\to\infty} \left|
+	\frac{ (-1)^{n+1} \left(\frac{4}{2(n+1)+1}\right)
+			x^{4(n+1)+4} }
+	{ (-1)^n \left(\frac{4}{2n+1}\right) x^{4 n+4} } \right|
+=	\lim_{n\to\infty} \left| \left(\frac{2n+1}{2n+3}\right)x^{4} \right|
+=	x^{4}
+\end{aligned}</me>
+Já que <m>x^{4} \lt  1</m> exatamente quando <m>\left| x \right| \lt  1</m>,
+o raio de convergência é 1.</p>
+</solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-teste-convergencia/problem3.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-teste-convergencia/problem3.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-teste-convergencia/problem3.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-teste-convergencia/problem3.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem3.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-serie-potencias/problem3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-serie-potencias/problem3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-serie-potencias/problem3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-serie-potencias/problem3.pg</server-url>
+    <pg source="pretext-serie-potencias/problem3.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
-    <static seed="4" source="pretext-teste-convergencia/problem4.pg">
-      <statement><p>O teste de divergência aplicado à série
-<me>\sum_{k=1}^\infty \frac{4k}{\left(7k+4\right)^{2}}</me>
-nos diz que
-<var form="popup">
-<li>
-<p>a série converge.</p>
-</li>
-<li>
-<p>a série diverge.</p>
-</li>
-<li>
-<p>mais testes são necessários.</p>
-</li>
-</var></p>
+    <static seed="4" source="pretext-serie-potencias/problem4.pg">
+      <statement><p>Compute the convergence set for
+the following power series.  Use <url href="/webwork2_files/helpFiles/IntervalNotation.html">notação de intervalo</url>
+for your answers.</p>
+<p><m>\displaystyle\sum_{n=0}^{\infty} \frac{x^n}{(n+1)2^{n}}</m> converge para
+<fillin name="AnSwEr0001" characters="25"/></p>
+<p><m>\displaystyle\sum_{n=1}^{\infty} \frac{(x-1)^n}{n}</m> converge para
+<fillin name="AnSwEr0002" characters="25"/></p>
+<p><m>\displaystyle\sum_{n=1}^{\infty} \frac{(x-1)^n}{n!}</m> converge para
+<fillin name="AnSwEr0003" characters="25"/></p>
+<p><m>\displaystyle\sum_{n=17}^{\infty} \frac{(x+1)^n}{3^n}</m> converge para
+<fillin name="AnSwEr0004" characters="25"/></p>
 </statement>
+      <answer>
+        <p>
+          <m>\left[-2,2\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left[0,2\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(-\infty ,\infty \right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(-4,2\right)</m>
+        </p>
+      </answer>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-teste-convergencia/problem4.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-teste-convergencia/problem4.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-teste-convergencia/problem4.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-teste-convergencia/problem4.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem4.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-serie-potencias/problem4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-serie-potencias/problem4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-serie-potencias/problem4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-serie-potencias/problem4.pg</server-url>
+    <pg source="pretext-serie-potencias/problem4.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
-    <static seed="5" source="pretext-teste-convergencia/problem5.pg">
-      <statement><p>Determine se a seguinte série converge ou diverge:
-<me>\sum_{n=1}^\infty\frac{n}{ \sqrt{n^{7}+4} }</me> 
-Ponha <em> C </em> para convergência e <em> D </em> para divergência: <fillin name="AnSwEr0001" characters="1"/></p>
+    <static seed="5" source="pretext-serie-potencias/problem5.pg">
+      <statement><p>Encontre o intervalo de convergência da série de potências dada:</p>
+<p><me>\sum_{n=1}^{\infty} \dfrac{2^{n}x^{n}}{n!}</me></p>
+<p>A série acima converge para <fillin name="AnSwEr0001" characters="10"/> <m>\lt  x \lt </m> <fillin name="AnSwEr0002" characters="10"/>.</p>
+<p>Digite "infinity" para <m>\infty</m> e "-infinity" para <m>-\infty</m>.</p>
 </statement>
       <answer>
-        <p>C</p>
+        <p>-infinity</p>
+      </answer>
+      <answer>
+        <p>infinity</p>
       </answer>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-teste-convergencia/problem5.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-teste-convergencia/problem5.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-teste-convergencia/problem5.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-teste-convergencia/problem5.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem5.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-serie-potencias/problem5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-serie-potencias/problem5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-serie-potencias/problem5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-serie-potencias/problem5.pg</server-url>
+    <pg source="pretext-serie-potencias/problem5.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
-    <static seed="6" source="pretext-teste-convergencia/problem6.pg">
-      <statement><p>Determine se a seguinte série é convergente ou divergente. Se convergir, encontre seu valor. Se divergir, insira DIV.</p>
-<p><me>\frac{1}{7}+\frac{1}{9}+\frac{1}{11}+\frac{1}{13}+\frac{1}{15}+\frac{1}{17}+\cdots</me></p>
-<p><fillin name="AnSwEr0001" characters="20"/></p>
+    <static seed="6" source="pretext-serie-potencias/problem6.pg">
+      <statement><p>Encontre o intervalo de convergência da série de potências dada:</p>
+<p><me>\sum_{n=1}^{\infty} \dfrac{(x-2)^{n}}{n^{2}}</me></p>
+<p>The above series converges for <fillin name="AnSwEr0001" characters="10"/> <m>\leq x \leq</m> <fillin name="AnSwEr0002" characters="10"/>.</p>
+<p>Digite "infinity" para <m>\infty</m> e "-infinity" para <m>-\infty</m>.</p>
 </statement>
       <answer>
         <p>
-          <m>\text{DIV}</m>
+          <m>1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3</m>
         </p>
       </answer>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-teste-convergencia/problem6.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-teste-convergencia/problem6.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-teste-convergencia/problem6.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-teste-convergencia/problem6.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem6.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-serie-potencias/problem6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-serie-potencias/problem6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-serie-potencias/problem6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-serie-potencias/problem6.pg</server-url>
+    <pg source="pretext-serie-potencias/problem6.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
-    <static seed="7" source="pretext-teste-convergencia/problem7.pg">
-      <statement><p>Calcule o valor da seguinte integral imprópria. Se isso
-converge, insira seu valor. Insira <alert>infinity</alert> se divergir para <m>\infty</m>, e
-<alert>-infinity</alert> se divergir para <m>-\infty</m>. Caso contrário, insira
-<alert>diverge.</alert></p>
-<p><m>\displaystyle \int_{1}^{\infty} 8 x^2 e^{-x^3} \, dx</m> = <fillin name="AnSwEr0001" characters="20"/></p>
-<p>A série
-<m>\displaystyle \sum_{n=1}^{\infty} 8 n^2 e^{-n^3}</m> converge ou diverge?
-<var form="popup">
-<li>
-<p>?</p>
-</li>
-<li>
-<p>converge</p>
-</li>
-<li>
-<p>diverge para +infinity</p>
-</li>
-<li>
-<p>diverge para -infinity</p>
-</li>
-<li>
-<p>diverge</p>
-</li>
-</var></p>
+    <static seed="7" source="pretext-serie-potencias/problem7.pg">
+      <statement><p>Encontre os primeiros cinco termos diferentes de zero da representação em série de potências em torno de <m>x = 0</m> para a função abaixo.
+<me>f(x) = \frac{x^{3}}{1+5 x}</me></p>
+<p>Resposta: <m>f(x) =</m> <fillin name="AnSwEr0001" characters="10"/> <m>+</m> <fillin name="AnSwEr0002" characters="10"/> <m>+</m> <fillin name="AnSwEr0003" characters="10"/> <m>+</m> <fillin name="AnSwEr0004" characters="10"/> <m>+</m> <fillin name="AnSwEr0005" characters="10"/> <m>+ \cdots</m></p>
+<p>Qual é o intervalo de convergência?</p>
+<p>Resposta (em notação de intervalo): <fillin name="AnSwEr0006" characters="20"/></p>
 </statement>
       <answer>
         <p>
-          <m>\frac{8}{3e}</m>
+          <m>x^{3}</m>
         </p>
       </answer>
+      <answer>
+        <p>
+          <m>-5x^{4}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>25x^{5}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-125x^{6}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>625x^{7}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left(-0.2,0.2\right)</m>
+        </p>
+      </answer>
+      <solution><p>Sabemos que para <m>|x|\lt 1</m>, a representação da série de potências de <m>\frac {1}{1-x}</m> é
+<me>\frac {1}{1-x} = \sum_{n=0}^{\infty}x^n ,\;\;|x|\lt 1</me>
+<me>=1+x+x^2+x^3+x^4+\cdots ,\;\; |x|\lt 1</me>
+E assim a série de potências de <m>\frac{(x^3)}{1+5 x}</m> para <m>\left|-5 x\right| \lt 1</m> é</p>
+<p><me>\frac{(x^3)}{1+5 x} = (x^3)\left(\frac {1}{1-\left(-5 x\right)}\right)= (x^3)\sum_{n=0}^{\infty}\left(-5 x\right)^n</me>
+<me>= (x^3)\left (1 + \left(-5 x\right) +  \left(-5 x\right)^2 +  \left(-5 x\right)^{3} +  \left(-5 x\right)^{4} + \cdots\right)</me>
+<me>= (x^3)\left (1-5 x +  5^2 x^2  -5^3 x^3+5^4 x^4  - \; +  \cdots\right)</me>
+<me>= x^{3} - 5 x^{4} + 25 x^{5} - 125 x^{6}+ 625 x^{7} - \;+ \cdots</me></p>
+<p>Com os primeiros cinco termos diferentes de zero da série de potências listados acima.</p>
+<p>Esta série converge absolutamente para
+ <me>\left|-5 x\right| \lt 1 
+ \implies 5 |x|\lt 1\implies |x|\lt \frac {1}{5}</me>
+Isso é equivalente a <m>-\frac{1}{5} \lt x \lt  \frac{1}{5}</m>, ou em outras palavras, a convergência ocorre para <m>x</m> no intervalo <m>\left(-\frac{1}{5} , \frac{1}{5} \right)</m>.</p>
+</solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-teste-convergencia/problem7.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-teste-convergencia/problem7.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-teste-convergencia/problem7.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-teste-convergencia/problem7.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem7.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-serie-potencias/problem7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-serie-potencias/problem7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-serie-potencias/problem7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-serie-potencias/problem7.pg</server-url>
+    <pg source="pretext-serie-potencias/problem7.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
-    <static seed="8" source="pretext-teste-convergencia/problem8.pg">
-      <statement><p>A série 
-<me>\sum_{n=1}^\infty \frac1{(4 n+2)^3}</me>
-é convergente.</p>
-<p>(A). De acordo com a Estimativa do Resto para o Teste Integral, o erro na aproximação <m>s\approx s_n</m> (onde <m>s</m> é o valor da soma infinita e <m>s_n</m> é o <m>n</m> -ésima soma parcial) é</p>
-<p><m>|s-s_n| \le</m> <fillin name="AnSwEr0001" characters="40"/></p>
-<p>(B). Encontre o menor valor de <m>n</m> tal que este limite superior é menor
-do que 0.00009 .</p>
-<p><m>n =</m> <fillin name="AnSwEr0002" characters="10"/></p>
+    <static seed="8" source="pretext-serie-potencias/problem8.pg">
+      <statement><p>A função 
+	<m>f(x) = 9 x \ln(1 + x)</m>
+é representado como uma série de potências</p>
+<p><m>\displaystyle f(x) = \sum_{n=0}^\infty c_n x^n .</m></p>
+<p>Encontre os seguintes coeficientes na série de potências.</p>
+<p><m>c_2 =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>c_3 =</m> <fillin name="AnSwEr0002" characters="20"/></p>
+<p><m>c_4 =</m> <fillin name="AnSwEr0003" characters="20"/></p>
+<p><m>c_5 =</m> <fillin name="AnSwEr0004" characters="20"/></p>
+<p><m>c_6 =</m> <fillin name="AnSwEr0005" characters="20"/></p>
+<p>Encontre o raio de convergência <m>R</m> da série.</p>
+<p><m>R =</m>  <fillin name="AnSwEr0006" characters="20"/>  .</p>
 </statement>
-      <answer>
-        <p>
-          <m>\frac{1}{8\!\left(4n+2\right)^{2}}</m>
-        </p>
-      </answer>
       <answer>
         <p>
           <m>9</m>
         </p>
       </answer>
-      <solution><p>Em primeiro lugar, a função <m>\dfrac1{(4 x+2)^3}</m> é positiva
-e decrescente para todo <m>x\ge1</m>, pois seu denominador é positivo e crescente para <m>x\ge1</m>. Além disso, a função vai para 0 como <m>x\to\infty</m> porque seu denominador vai para o infinito. Portanto, o Teste Integral, e sua Estimativa do Resto, podem ser aplicados.</p>
-<p>Para parte (A), a estimativa do resto é
+      <answer>
+        <p>
+          <m>-4.5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-2.25</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1.8</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+      <solution><p>Já que <m>\displaystyle \ln(1-x) = - \sum_{n=1}^\infty \frac{x^n}n</m>,
+também temos, portanto, <m>\displaystyle \ln(1+x) = - \sum_{n=1}^\infty \frac{(-x)^n}n</m>.
+Assim
 <me>\begin{aligned}
-    |s-s_n| \amp \le \int_n^\infty \frac{dx}{(4 x+2)^3} \\
-    \amp = \lim_{t\to\infty} \frac{-1}{4(2)(4 x+2)^2} \biggr]_n^t
-    \amp = \frac1{4(2)(4 n+2)^2} \;.
-  \end{aligned}</me></p>
-<p>Para parte (B), precisamos encontrar o menor inteiro positivo <m>n</m> para o qual a expressão acima é menor que 0.00009. Então, montamos a desigualdade relevante e a resolvemos:
-<me>\begin{aligned}
-    \frac1{4(2)(4 n+2)^2} \amp \lt  0.00009 \\
-    (4 n+2)^2 \amp &gt; \frac1{4(2)0.00009} \\
-    (4 n+2) \amp &gt; \frac1{\root 2\of{4(2)0.00009}} \\
-    n \amp &gt; \frac{\frac1{\root 2\of{4(2)0.00009}} - 2}{4}
-      \approx 8.8169
-  \end{aligned}</me>
-Arredondando para o próximo maior inteiro dá <m>n = 9</m>.</p>
+9 x \ln(1+x)
+\amp =	-9 \sum_{n=1}^\infty \frac{(-x)^n x}n	\\\\
+\amp =	9 \sum_{n=1}^\infty \frac{(-x)^{n+1}}n	\\\\
+\amp =	\frac{9 x^2}1 - \frac{9 x^3}2 + \frac{9 x^4}3 - \cdots
+\end{aligned}</me>
+e daí 
+<m>c_0 = 0</m>, <m>c_1 = 0</m>, <m>c_2 = 9</m>, <m>c_3 = \frac{-9}2 = -4.5</m>,
+<m>c_4 = \frac{9}3 = 3</m>, and in general,
+<m>c_n = \frac{9(-1)^n}{n-1}</m> for all <m>n \geq 2</m>.</p>
 </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-teste-convergencia/problem8.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-teste-convergencia/problem8.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-teste-convergencia/problem8.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-teste-convergencia/problem8.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem8.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-serie-potencias/problem8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-serie-potencias/problem8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-serie-potencias/problem8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-serie-potencias/problem8.pg</server-url>
+    <pg source="pretext-serie-potencias/problem8.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
-    <static seed="9" source="pretext-teste-convergencia/problem9.pg">
-      <statement><p>Encontre os valores de <m>p</m> para que a série convirja.
-<me>\sum_{n=1}^{\infty} \frac{\ln n}{n^{5 p}}</me>
-Resposta (use notação de intervalo): <fillin name="AnSwEr0001" characters="30"/></p>
+    <static seed="9" source="pretext-serie-potencias/problem9.pg">
+      <statement><p>Represente a função <m>\displaystyle \frac{10}{(1 - 10 x)^2}</m> como uma série de potências
+<m>\displaystyle f(x) = \sum_{n=0}^\infty c_n x^n</m></p>
+<p><m>c_0 =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>c_1 =</m> <fillin name="AnSwEr0002" characters="20"/></p>
+<p><m>c_2 =</m> <fillin name="AnSwEr0003" characters="20"/></p>
+<p><m>c_3 =</m> <fillin name="AnSwEr0004" characters="20"/></p>
+<p><m>c_4 =</m> <fillin name="AnSwEr0005" characters="20"/></p>
+<p>Encontre o raio de convergência <m>R =</m> <fillin name="AnSwEr0006" characters="20"/>  .</p>
 </statement>
       <answer>
         <p>
-          <m>\left(0.2,\infty \right)</m>
+          <m>10</m>
         </p>
       </answer>
+      <answer>
+        <p>
+          <m>200</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3000</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>40000</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>500000</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.1</m>
+        </p>
+      </answer>
+      <solution><p>Sabemos que
+	<me>\frac{1}{\left(1-x\right)^2} = \sum_{n=0}^\infty \left(n+1\right)x^n</me></p>
+<p>Vamos modificar este fato substituindo <m>x</m> com <m>10 x</m> para obter:
+	<me>\frac{1}{\left(1 - 10 x\right)^2}
+	= \sum_{n=0}^\infty \left(n+1\right)\left(10 x\right)^n</me></p>
+<p>E essa equação nos permite resolver o problema:
+	<me>\begin{aligned}
+	\frac{10}{\left(1 - 10 x\right)^2}
+	\amp =
+	\sum_{n=0}^\infty \left(n+1\right)\left(10 x\right)^n		\\\\
+	\amp =
+	\sum_{n=0}^\infty 10^n\left(n+1\right)x^n					\\\\
+	\amp =
+	10^0\left(0+1\right)x^0 + 10^1\left(1+1\right)x^1 +
+	10^2\left(2+1\right)x^2 + 10^3\left(3+1\right)x^3 +
+	10^4\left(4+1\right)x^4 + \cdots							\\\\
+	\amp =
+	1\left(1\right)x^0 + 10\left(2\right)x^1 + 
+	100\left(3\right)x^2 + 1000\left(4\right)x^3 +
+	10000\left(5\right)x^4 + \cdots						\\\\
+	\amp =
+	10 x^0 + 200 x^1 + 3000 x^2 +
+	40000 x^3 + 500000 x^4 + \cdots
+	\end{aligned}</me>
+	Assim:
+	<me>\begin{aligned}
+	c_0	\amp =	10			\\\\
+	c_1	\amp =	200			\\\\
+	c_2	\amp =	3000			\\\\
+	c_3	\amp =	40000			\\\\
+	c_4	\amp =	500000
+	\end{aligned}</me></p>
+<p>O raio de convergência para isso pode ser calculado da seguinte forma:
+	<me>\begin{aligned}
+	\left|10 x\right| \lt  1	\amp \iff	10\left|x\right| \lt  1		\\\\
+							\amp \iff	\left|x\right| \lt  \frac{1}{10}
+	\end{aligned}</me>
+Então <m>R=\frac{1}{10}=0.1</m>.</p>
+</solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-teste-convergencia/problem9.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-teste-convergencia/problem9.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-teste-convergencia/problem9.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-teste-convergencia/problem9.pg</server-url>
-    <pg source="pretext-teste-convergencia/problem9.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-serie-potencias/problem9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-serie-potencias/problem9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-serie-potencias/problem9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-serie-potencias/problem9.pg</server-url>
+    <pg source="pretext-serie-potencias/problem9.pg"/>
   </webwork-reps>
 </webwork-representations>

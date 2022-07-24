@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-23T15:11:20-03:00       *-->
+<!--*       on 2022-07-24T13:41:48-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,47 +15,7 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>Now we are ready to evaluate the limit. Because the expressions are a little involved, we will simplify the numerator and denominator separately and then put things together. Using the expansions we developed in Example<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_bigohsincos" missing or not unique]</code>, the numerator,</p>
-<div class="displaymath process-math" data-contains-math-knowls="      ">
-\begin{align*}
-\cos x -1 + \frac{1}{2} x\sin x
-&amp;=
-\left( 1 - \frac{1}{2!}x^2 + \frac{1}{4!}x^4 + O(|x|^6) \right)\\
-&amp;\phantom{=\ } -1 + \frac{x}{2}\left( x - \frac{1}{3!}x^3 + O(|x|^5) \right)
-&amp; \text{expand}\\
-&amp;= \left( \frac{1}{24}-\frac{1}{12} \right)x^4 + O(|x|^6) + \frac{x}{2} O(|x|^5)\\
-\end{align*}
-<p class="intertext">Then by Remark<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "rem_bigohppties" missing or not unique]</code>(b)</p>
-\begin{align*}
-&amp;= - \frac{1}{24}x^4 + O(|x|^6) + O(|x|^6)\\
-\end{align*}
-<p class="intertext">and now by Remark<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "rem_bigohppties" missing or not unique]</code>(c)</p>
-\begin{align*}
-&amp;= - \frac{1}{24}x^4 + O(|x|^6)
-\end{align*}
-</div>
-<p class="continuation">Similarly, using the expansion that we developed in Example<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_bigohlog" missing or not unique]</code>,</p>
-<div class="displaymath process-math" data-contains-math-knowls="      ">
-\begin{align*}
-[ \log(1+x) ]^4 &amp;= \big[ x + O(|x|^2) \big]^4\\
-&amp;= \big[x + x O(|x|)\big]^4 &amp; \text{by Remark }[cross-reference to target(s) "rem_bigohppties" missing or not unique]\text{(b)}\\
-&amp;= x^4 [1 + O(|x|)]^4
-\end{align*}
-</div>
-<p class="continuation">Now put these together and take the limit as <span class="process-math">\(x \to 0\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="      ">
-\begin{align*}
-\lim_{x \to 0}
-\frac{\cos x -1 + \half x\sin x}{[\log(1+x)]^4}
-&amp;= \lim_{x \to 0}
-\frac{ -\frac{1}{24}x^4 + O(|x|^6)}{x^4 [1+O(|x|)]^4}\\
-&amp;= \lim_{x \to 0}
-\frac{-\frac{1}{24}x^4 + x^4O(|x|^2)}{x^4 [1+O(|x|)]^4}&amp; \text{by Remark }[cross-reference to target(s) "rem_bigohppties" missing or not unique]\text{(b)}\\
-&amp;= \lim_{x \to 0}
-\frac{-\frac{1}{24} + O(|x|^2)}{[1+O(|x|)]^4}\\
-&amp;= -\frac{1}{24} &amp; \text{by Remark }[cross-reference to target(s) "rem_bigohppties" missing or not unique]\text{(a)}.
-\end{align*}
-</div>
+<p>Seja <span class="process-math">\(c_0 + c_1 (x-a) + c_2 (x-a)^2 + \cdots + c_n (x-a)^n\)</span>  a série de Taylor da função <span class="process-math">\(f(x) = x^2 \sin(x)\text{.}\)</span></p>
 <span class="incontext"><a href="section-1.html#p-48" class="internal">em contexto</a></span>
 </body>
 </html>
