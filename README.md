@@ -1,6 +1,6 @@
 ## Séries e EDO 
 
-**Prof. Leon Silva**
+**Prof. Leon Silva -- DM\UFRPE**
 
 ### Sequências, Séries e Equações Diferenciais
 - [N1 - Introdução às Sequências Infinitas](https://ldsufrpe.github.io/series-edo/N1). 
