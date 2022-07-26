@@ -1395,7 +1395,7 @@
                 <p>
                     Calcule
                     <me>
-                        \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n3^n}\qquad\text{and}\qquad
+                        \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n3^n}\qquad\text{e}\qquad
                         \sum_{n=1}^\infty \frac{1}{n3^n}
                     </me>
                 </p>
@@ -1491,7 +1491,7 @@
                             Sabemos a série de Taylor para <m>\sin(2x^3)</m>.
                         </li>
                     </ul>
-                    Aplicando essa estratégio:
+                    Aplicando essa estratégia:
                     <ul>
                         <li>
                             Em primeiro lugar, sabemos que, para todo <m>y</m>,
@@ -1870,7 +1870,7 @@
                 <me>
                     \arctan x -x = -\frac{x^3}{3}+\frac{x^5}{5}-\cdots
                 </me>
-                Do<xref ref="eg_sincosSeries"/>,
+                Do <xref ref="eg_sincosSeries"/>,
                 <me>
                     \sin x = x-\frac{1}{3!}x^3+\frac{1}{5!}x^5 - \cdots
                 </me>
