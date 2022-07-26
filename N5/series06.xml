@@ -11,12 +11,12 @@
 
         <p>
             Lembramos que os polinômios de Taylor fornecem uma hierarquia de aproximações para uma determinada
-            funçãoperto de um determinado ponto <m>a</m>. Normalmente, a qualidade dessas aproximações melhora à medida
+            função perto de um ponto <m>a</m>. Normalmente, a qualidade dessas aproximações melhora à medida
             que subimos na hierarquia.
             <ul>
-                <li>A aproximação mais grosseira é a aproximação constante <m>f(x)\approx f(a)</m>.
+                <li>A aproximação mais grosseira é a aproximação constante <me>f(x)\approx f(a)</me>.
                 </li>
-                <li>Em seguida, vem a aproximação linear, ou linha tangente <m>f(x)\approx f(a) + f'(a)\,(x-a)</m>.
+                <li>Em seguida, vem a aproximação linear <me>f(x)\approx f(a) + f'(a)\,(x-a)</me>.
                 </li>
                 <li>Então vem a aproximação quadrática
                     <me>
@@ -24,8 +24,7 @@
                     </me>
                 </li>
                 <li>
-                    Em geral, o polinômio de Taylor de grau <m>n</m>, para a função <m>f(x)</m>, sobre o ponto de
-                    expansão <m>a</m>, é o polinômio, <m>T_n(x)</m>, determinados pelos requisitos que <m>
+                    Em geral, o polinômio de Taylor de grau <m>n</m>, para a função <m>f(x)</m>, em torno do ponto <m>a</m>, é o polinômio, <m>T_n(x)</m>, determinados pelos requisitos que <m>
                     f^{(k)}(a) = T_n^{(k)}(a)
                 </m> para todo <m>0\le k \le n</m>. Isto é, <m>f</m> e <m>T_n</m> tem as mesmas derivadas em <m>a</m>,
                     até a ordem <m>n</m>. Explicitamente,
@@ -56,7 +55,7 @@
         </p>
 
         <p>
-            Fixe um numéro real <m>a</m> suponha que todas as derivadas da função <m>f(x)</m> existem. Então, para
+            Fixado um numéro real <m>a</m> suponha que todas as derivadas da função <m>f(x)</m> existem. Então, para
             qualquer número natural <m>n</m>,
         </p>
 
@@ -90,7 +89,7 @@
                 </p>
             </statement>
         </fact>
-        <p>enquanto erro satisfaz
+        <p>enquanto o erro satisfaz
 
         </p>
         <fact xml:id="eq_TaylorPolyPlusError_b">
@@ -115,7 +114,7 @@
         <!--        </p>-->
 
         <p>
-            Para que nosso polinômio de Taylor seja uma representação exata da função <m>f(x)</m> precisamos que o erro <m>
+            Para o polinômio de Taylor seja uma representação exata da função <m>f(x)</m> precisamos que o erro <m>
             E_n(x)
         </m> seja nulo. Isso não acontecerá quando <m>n</m> for finito a menos que <m>f(x)</m> seja um polinômio.
             No entanto, isso pode acontecer quando <m>n \to \infty</m>, e nesse caso podemos escrever  <m>
@@ -138,7 +137,7 @@
             <title>Série de Taylor</title>
             <statement>
                 <p>
-                    A séries de Taylor para a função <m>f(x)</m> em torno de <m>a</m> é a série de potência
+                    A séries de Taylor para a função <m>f(x)</m> em torno de <m>a</m> é a série de potências
                     <md>
                         <mrow>
                             \sum_{n=0}^\infty \tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
@@ -172,7 +171,7 @@
                 <p>
 
                     Assim como foi o caso para calcular polinômios de Taylor, precisamos calcular as derivadas da função
-                    em <m>a</m>.Já que se trata de uma série de Maclaurin,  <m>a=0</m>.
+                    em <m>a</m>. Já que se trata de uma série de Maclaurin,  <m>a=0</m>.
                     Então agora só precisamos encontrar  <m>f^{(k)}(0)</m> para todos os inteiros <m>k\ge 0</m>.
                 </p>
 
@@ -220,7 +219,7 @@
                     e^x.
                 </mrow>
             </md>
-            Desenvolvemos séries para seno e cosseno a seguir.
+            Apresentaremos as séries para seno e cosseno a seguir.
         </p>
 
         <example xml:id="eg_sincosSeries">
@@ -239,6 +238,7 @@
                           \amp   \amp
                         f^{(4)}(x)  \amp=\sin x   \amp \cdots
                     </mrow>
+
                     <mrow>
                         g(x)  \amp=\cos x   \amp
                         g'(x)  \amp=\!-\sin x   \amp
@@ -282,7 +282,7 @@
                 ímpares alternam entre <m>1</m> e <m>-1</m>. Similarmente, para <m>\cos x</m>, todas derivadas de ordem
                 ímpar (em <m>x=0</m>) são nulas, enquanto as derivadas pares alternam entre <m>
                     1
-                </m> e <m>-1</m>. Então, os polinômios de Taylor quem melhor aproximam <m>\sin x</m> e <m>\cos x</m>  em
+                </m> e <m>-1</m>. Então, os polinômios de Taylor que melhor aproximam <m>\sin x</m> e <m>\cos x</m>  em
                 torno de <m>
                     x=a=0
                 </m> são
@@ -1321,7 +1321,7 @@
         </example>
 
         <p>
-            As séries de potência também nos dão acesso a novas funções que podem não ser facilmente expressas em termos
+            As séries de potências também nos dão acesso a novas funções que podem não ser facilmente expressas em termos
             das funções apresentadas até agora. O seguinte é um bom exemplo disso.
         </p>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-24T17:06:59-03:00       *-->
+<!--*       on 2022-07-26T10:10:43-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -175,16 +175,24 @@ true);
 <section class="introduction" id="introduction-2"></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Estendendo Polinômios de Taylor</span>
 </h3>
-<p id="p-3">Lembramos que os polinômios de Taylor fornecem uma hierarquia de aproximações para uma determinada funçãoperto de um determinado ponto <span class="process-math">\(a\text{.}\)</span> Normalmente, a qualidade dessas aproximações melhora à medida que subimos na hierarquia.</p>
+<p id="p-3">Lembramos que os polinômios de Taylor fornecem uma hierarquia de aproximações para uma determinada função perto de um ponto <span class="process-math">\(a\text{.}\)</span> Normalmente, a qualidade dessas aproximações melhora à medida que subimos na hierarquia.</p>
 <ul class="disc">
-<li id="li-1"><p id="p-derived-li-1">A aproximação mais grosseira é a aproximação constante <span class="process-math">\(f(x)\approx f(a)\text{.}\)</span></p></li>
-<li id="li-2"><p id="p-derived-li-2">Em seguida, vem a aproximação linear, ou linha tangente <span class="process-math">\(f(x)\approx f(a) + f'(a)\,(x-a)\text{.}\)</span></p></li>
+<li id="li-1"><p id="p-derived-li-1">A aproximação mais grosseira é a aproximação constante<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)\approx f(a)\text{.}
+\end{equation*}
+</div></p></li>
+<li id="li-2"><p id="p-derived-li-2">Em seguida, vem a aproximação linear<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)\approx f(a) + f'(a)\,(x-a)\text{.}
+\end{equation*}
+</div></p></li>
 <li id="li-3"><p id="p-derived-li-3">Então vem a aproximação quadrática<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x)\approx f(a) + f'(a)\,(x-a) +\frac{1}{2} f''(a)\,(x-a)^2
 \end{equation*}
 </div></p></li>
-<li id="li-4"><p id="p-derived-li-4">Em geral, o polinômio de Taylor de grau <span class="process-math">\(n\text{,}\)</span> para a função <span class="process-math">\(f(x)\text{,}\)</span> sobre o ponto de expansão <span class="process-math">\(a\text{,}\)</span> é o polinômio, <span class="process-math">\(T_n(x)\text{,}\)</span> determinados pelos requisitos que <span class="process-math">\(f^{(k)}(a) = T_n^{(k)}(a)\)</span> para todo <span class="process-math">\(0\le k \le n\text{.}\)</span> Isto é, <span class="process-math">\(f\)</span> e <span class="process-math">\(T_n\)</span> tem as mesmas derivadas em <span class="process-math">\(a\text{,}\)</span> até a ordem <span class="process-math">\(n\text{.}\)</span> Explicitamente,<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+<li id="li-4"><p id="p-derived-li-4">Em geral, o polinômio de Taylor de grau <span class="process-math">\(n\text{,}\)</span> para a função <span class="process-math">\(f(x)\text{,}\)</span> em torno do ponto <span class="process-math">\(a\text{,}\)</span> é o polinômio, <span class="process-math">\(T_n(x)\text{,}\)</span> determinados pelos requisitos que <span class="process-math">\(f^{(k)}(a) = T_n^{(k)}(a)\)</span> para todo <span class="process-math">\(0\le k \le n\text{.}\)</span> Isto é, <span class="process-math">\(f\)</span> e <span class="process-math">\(T_n\)</span> tem as mesmas derivadas em <span class="process-math">\(a\text{,}\)</span> até a ordem <span class="process-math">\(n\text{.}\)</span> Explicitamente,<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{align*}
 f(x)   \amp\approx T_n(x)\\
 \amp= f(a) + f'(a)\,(x-a) +\frac{1}{2} f''(a)\,(x-a)^2
@@ -194,7 +202,7 @@ f(x)   \amp\approx T_n(x)\\
 </div></p></li>
 </ul>
 <p class="continuation">Estas são, é claro, aproximações — muitas vezes aproximações muito boas perto de <span class="process-math">\(x=a\)</span> — mas ainda apenas aproximações. Pode-se esperar que, se deixarmos o grau, <span class="process-math">\(n\text{,}\)</span> da aproximação ir para o infinito então o erro na aproximação pode ir para zero. Se for esse o caso, então o polinômio de Taylor  “infinito” seria uma representação exata da função. Vamos ver como isso pode funcionar.</p>
-<p id="p-4">Fixe um numéro real <span class="process-math">\(a\)</span> suponha que todas as derivadas da função <span class="process-math">\(f(x)\)</span> existem. Então, para qualquer número natural <span class="process-math">\(n\text{,}\)</span></p>
+<p id="p-4">Fixado um numéro real <span class="process-math">\(a\)</span> suponha que todas as derivadas da função <span class="process-math">\(f(x)\)</span> existem. Então, para qualquer número natural <span class="process-math">\(n\text{,}\)</span></p>
 <article class="fact theorem-like" id="eq_TaylorPolyPlusError"><h4 class="heading">
 <span class="type">Fato</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h4>
@@ -210,7 +218,7 @@ f(x)   \amp=T_n(x) +E_n(x)
 \begin{align*}
 T_n(x)  \amp=f(a)+f'(a)\,(x-a)+\cdots+\tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
 \end{align*}
-</div></article><p id="p-8">enquanto erro satisfaz</p>
+</div></article><p id="p-8">enquanto o erro satisfaz</p>
 <article class="fact theorem-like" id="eq_TaylorPolyPlusError_b"><h4 class="heading">
 <span class="type">Fato</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
 </h4>
@@ -219,7 +227,7 @@ T_n(x)  \amp=f(a)+f'(a)\,(x-a)+\cdots+\tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
 E_n(x)=\tfrac{1}{(n+1)!}f^{(n+1)}(c)\, (x-a)^{n+1}
 \end{gather*}
 </div>
-<p class="continuation">para algum  <span class="process-math">\(c\)</span> estritamente entre <span class="process-math">\(a\)</span> e <span class="process-math">\(x\text{.}\)</span></p></article><p id="p-10">Para que nosso polinômio de Taylor seja uma representação exata da função <span class="process-math">\(f(x)\)</span> precisamos que o erro <span class="process-math">\(E_n(x)\)</span> seja nulo. Isso não acontecerá quando <span class="process-math">\(n\)</span> for finito a menos que <span class="process-math">\(f(x)\)</span> seja um polinômio. No entanto, isso pode acontecer quando <span class="process-math">\(n \to \infty\text{,}\)</span> e nesse caso podemos escrever  <span class="process-math">\(f(x)\)</span> como o limite</p>
+<p class="continuation">para algum  <span class="process-math">\(c\)</span> estritamente entre <span class="process-math">\(a\)</span> e <span class="process-math">\(x\text{.}\)</span></p></article><p id="p-10">Para o polinômio de Taylor seja uma representação exata da função <span class="process-math">\(f(x)\)</span> precisamos que o erro <span class="process-math">\(E_n(x)\)</span> seja nulo. Isso não acontecerá quando <span class="process-math">\(n\)</span> for finito a menos que <span class="process-math">\(f(x)\)</span> seja um polinômio. No entanto, isso pode acontecer quando <span class="process-math">\(n \to \infty\text{,}\)</span> e nesse caso podemos escrever  <span class="process-math">\(f(x)\)</span> como o limite</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x)=\lim_{n\rightarrow\infty} T_n(x)
@@ -236,7 +244,7 @@ f(x)=\sum_{k=0}^\infty \tfrac{1}{k!}f^{(k)}(a)\, (x-a)^k
 <article class="definition definition-like" id="defn_taylorSeries"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Série de Taylor.</span>
 </h4>
-<p id="p-11">A séries de Taylor para a função <span class="process-math">\(f(x)\)</span> em torno de <span class="process-math">\(a\)</span> é a série de potência</p>
+<p id="p-11">A séries de Taylor para a função <span class="process-math">\(f(x)\)</span> em torno de <span class="process-math">\(a\)</span> é a série de potências</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
 \begin{gather*}
 \sum_{n=0}^\infty \tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
@@ -253,7 +261,7 @@ f(x)=\sum_{n=0}^\infty \tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_expSeries"><article class="example example-like"><p id="p-13">Encontre a série Maclaurin para <span class="process-math">\(f(x)=e^x\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
-<p id="p-14">Assim como foi o caso para calcular polinômios de Taylor, precisamos calcular as derivadas da função em <span class="process-math">\(a\text{.}\)</span>Já que se trata de uma série de Maclaurin,  <span class="process-math">\(a=0\text{.}\)</span> Então agora só precisamos encontrar  <span class="process-math">\(f^{(k)}(0)\)</span> para todos os inteiros <span class="process-math">\(k\ge 0\text{.}\)</span></p>
+<p id="p-14">Assim como foi o caso para calcular polinômios de Taylor, precisamos calcular as derivadas da função em <span class="process-math">\(a\text{.}\)</span> Já que se trata de uma série de Maclaurin,  <span class="process-math">\(a=0\text{.}\)</span> Então agora só precisamos encontrar  <span class="process-math">\(f^{(k)}(0)\)</span> para todos os inteiros <span class="process-math">\(k\ge 0\text{.}\)</span></p>
 <p id="p-15">Uma vez que <span class="process-math">\(\diff{}{x}e^x = e^x\)</span> temos</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_TaylorPolyPlusError.html ./knowl/eq_TaylorPolyPlusError_a.html ./knowl/eg_expSeriesB.html" id="md-8">
 \begin{align*}
@@ -284,7 +292,7 @@ e^x=\lim_{n\rightarrow\infty}\Big[1 +x + \frac{1}{2} x^2
 e^x.
 \end{align*}
 </div>
-<p class="continuation">Desenvolvemos séries para seno e cosseno a seguir.</p>
+<p class="continuation">Apresentaremos as séries para seno e cosseno a seguir.</p>
 <article class="example example-like" id="eg_sincosSeries"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_sincosSeries"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Séries Seno e Cosseno.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_sincosSeries"><article class="example example-like"><p id="p-17">Vamos usar a série de Maclaurin para representar as funções trigonométricas <span class="process-math">\(\sin x\)</span> e <span class="process-math">\(\cos x\)</span> Para isso, vamos encontrar primeiro as suas derivadas gerais em  <span class="process-math">\(x\text{.}\)</span></p>
@@ -323,7 +331,7 @@ g^{(3)}(0)  \amp=0\\
 g^{(4)}(0)  \amp=1   \amp \cdots
 \end{align*}
 </div>
-<p class="continuation">Para <span class="process-math">\(\sin x\text{,}\)</span> todas as derivadas de ordem par (em <span class="process-math">\(x=0\)</span>) são nulas, enquanto as derivadas ímpares alternam entre <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{.}\)</span> Similarmente, para <span class="process-math">\(\cos x\text{,}\)</span> todas derivadas de ordem ímpar (em <span class="process-math">\(x=0\)</span>) são nulas, enquanto as derivadas pares alternam entre <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{.}\)</span> Então, os polinômios de Taylor quem melhor aproximam <span class="process-math">\(\sin x\)</span> e <span class="process-math">\(\cos x\)</span>  em torno de <span class="process-math">\(x=a=0\)</span> são</p>
+<p class="continuation">Para <span class="process-math">\(\sin x\text{,}\)</span> todas as derivadas de ordem par (em <span class="process-math">\(x=0\)</span>) são nulas, enquanto as derivadas ímpares alternam entre <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{.}\)</span> Similarmente, para <span class="process-math">\(\cos x\text{,}\)</span> todas derivadas de ordem ímpar (em <span class="process-math">\(x=0\)</span>) são nulas, enquanto as derivadas pares alternam entre <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{.}\)</span> Então, os polinômios de Taylor que melhor aproximam <span class="process-math">\(\sin x\)</span> e <span class="process-math">\(\cos x\)</span>  em torno de <span class="process-math">\(x=a=0\)</span> são</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_sincosSeriesB.html" id="md-13">
 \begin{align*}
 \sin x   \amp\approx x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots\\
@@ -521,7 +529,7 @@ f(x)=\lim_{n\rightarrow\infty}\Big[f(0)+f'(0)\,x+\cdots +\tfrac{1}{n!}f^{(n)}(0)
 \frac{2\sqrt{3}}{21\times 3^{10}} \lt 3\times 10^{-6}
 \end{equation*}
 </div></article></div>
-<p id="p-38">As séries de potência também nos dão acesso a novas funções que podem não ser facilmente expressas em termos das funções apresentadas até agora. O seguinte é um bom exemplo disso.</p>
+<p id="p-38">As séries de potências também nos dão acesso a novas funções que podem não ser facilmente expressas em termos das funções apresentadas até agora. O seguinte é um bom exemplo disso.</p>
 <article class="example example-like" id="eg_erf"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_erf"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Função Erro.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_erf"><article class="example example-like"><p id="p-39">A <em class="emphasis">função erro</em></p>
