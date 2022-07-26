@@ -7,7 +7,7 @@
     <introduction></introduction>
 
     <subsection>
-        <title>Estendendo Polinômios de Taylor</title>
+        <title>Polinômios de Taylor</title>
 
         <p>
             Lembramos que os polinômios de Taylor fornecem uma hierarquia de aproximações para uma determinada
@@ -189,7 +189,7 @@
 
                     <xref ref="eq_TaylorPolyPlusError"/>
                     e
-                    <nbsp/>
+
                     <xref ref="eq_TaylorPolyPlusError_a"/>
                     fornecem
                     <md>
@@ -197,7 +197,7 @@
                             e^x=f(x)  \amp= 1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+E_n(x)
                         </mrow>
                     </md>
-                    Veremos,
+                    Veremos, no
                     <xref ref="eg_expSeriesB"/>
                     que para qualquer <m>x</m> fixado, <m>\lim\limits_{n\rightarrow\infty}E_n(x)=0</m>.
                     Consequentemente,
