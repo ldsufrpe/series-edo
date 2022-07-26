@@ -12,7 +12,7 @@
           <m>1</m>
         </p>
       </answer>
-      <solution><p>O <m>n^{th}</m> coeficiente da série de Taylor é dado por: <m>\frac{f^n(0)}{n!}</m>.</p>
+      <solution><p>O <m>n</m>-ésimo coeficiente da série de Taylor é dado por: <m>\frac{f^n(0)}{n!}</m>.</p>
 <p>Primeiro calcule as primeiras 3 derivadas:</p>
 <p><m>f'(x) = 2x\sin(x) + x^2\cos(x)</m>,</p>
 <p><m>f''(x) = 2\sin(x) + 4\cos(x) - x^2\sin(x)</m>,</p>
