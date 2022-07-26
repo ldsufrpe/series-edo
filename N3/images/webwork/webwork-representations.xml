@@ -541,13 +541,13 @@ condicionalmente por outro teste ou testes.</p>
 <p>?</p>
 </li>
 <li>
-<p>Absolutely Convergent</p>
+<p>Absolutamente convergente</p>
 </li>
 <li>
-<p>Conditionally Convergent</p>
+<p>Condicionalmente convergente</p>
 </li>
 <li>
-<p>Diverges</p>
+<p>Diverge</p>
 </li>
 </var></p>
 <p>(b) <m>\displaystyle \sum_{k=1}^{\infty}\frac{(-1)^{k+1} }{\left(k+1\right)! }</m> <var form="popup">
@@ -555,13 +555,13 @@ condicionalmente por outro teste ou testes.</p>
 <p>?</p>
 </li>
 <li>
-<p>Absolutely Convergent</p>
+<p>Absolutamente convergente</p>
 </li>
 <li>
-<p>Conditionally Convergent</p>
+<p>Condicionalmente convergente</p>
 </li>
 <li>
-<p>Diverges</p>
+<p>Diverge</p>
 </li>
 </var></p>
 </statement>
