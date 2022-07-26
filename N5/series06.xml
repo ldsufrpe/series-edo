@@ -185,8 +185,8 @@
                             1   \amp= f(0) = f'(0) = f''(0) = \cdots = f^{(k)}(0) = \cdots.
                         </mrow>
                     </md>
-                    As Equações do
-                    <nbsp/>
+                    As equações do
+
                     <xref ref="eq_TaylorPolyPlusError"/>
                     e
                     <nbsp/>
@@ -418,7 +418,7 @@
                 <me>
                     |E_n(x)|=\Big|\frac{e^c}{(n+1)!}x^{n+1}\Big| \le [e^x+1]\frac{|x|^{n+1}}{(n+1)!}
                 </me>
-                Afirmamos que esse é o limite superior e, e portanro o erro <m>E_n(x)</m>, tende rapidamente para zero
+                Afirmamos que esse é o limite superior e, e portanto o erro <m>E_n(x)</m>, tende rapidamente para zero
                 quando <m>n \to
                 \infty</m>.
             </p>
@@ -433,7 +433,7 @@
                     <mrow>
                         e_n(x)   \amp= \frac{|x|^{n+1}}{(n+1)!}
                         = \overbrace{\frac{|x|}{1} \cdot \frac{|x|}{2} \cdot \frac{|x|}{3}
-                        \cdots \frac{|x|}{n}\cdot \frac{|x|}{|n+1|}}^{\text{$n+1$ factors}}
+                        \cdots \frac{|x|}{n}\cdot \frac{|x|}{|n+1|}}^{\text{$n+1$ factores}}
                     </mrow>
                     <intertext>Agora seja <m>k</m> um inteiro maior que <m>|x|</m>. Podemos dividir o produto
                     </intertext>
