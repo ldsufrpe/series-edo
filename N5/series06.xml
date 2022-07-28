@@ -1805,8 +1805,8 @@
                 \sin x</m>, quanto o denominador, <m>x</m>, tendem para <m>0</m>. Portanto, não podemos avaliar o limite
                 da razão simplesmente dividindo os limites do numerador e do denominador. Para encontrar o limite, ou
                 mostrar que ele não existe, teremos que exibir um cancelamento entre o numerador e o denominador. Vamos
-                começar estudando o numerador. Por exemplo<xref
-                    ref="eg_sincosSeries"/>,
+                começar estudando o numerador. Do <xref
+                    ref="eg_sincosSeries"/>, temos
                 <me>
                     \sin x = x-\frac{1}{3!}x^3+\frac{1}{5!}x^5 - \cdots
                 </me>
@@ -1855,10 +1855,10 @@
                 <me>
                     \lim_{x\rightarrow 0}\frac{\arctan x -x}{\sin x-x}
                 </me>
-                Mais uma vez, a primeira coisa a notar sobre este limite é que, quendo <m>x</m>  tende para zero, o
+                Mais uma vez, a primeira coisa a notar sobre este limite é que, quando <m>x</m>  tende para zero, o
                 numerador tende para
-                <m>\arctan 0 -0</m>, que é <m>0</m>, e o denominador tende para <m>\sin 0-0</m>, que é
-                também <m>0</m>.Portanto, não podemos avaliar o limite da razão simplesmente dividindo os limites do
+                <m>\arctan{0}-0</m>, que é <m>0</m>, e o denominador tende para <m>\sin 0-0</m>, que é
+                também <m>0</m>. Portanto, não podemos avaliar o limite da razão simplesmente dividindo os limites do
                 numerador e do denominador. Novamente, para encontrar o limite, ou mostrar que ele não existe, teremos
                 que exibir um cancelamento entre o numerador e o denominador. Para obter uma compreensão mais detalhada
                 do comportamento do numerador e denominador próximo de <m>x=0</m>, vamos encontrar as repectivas séries

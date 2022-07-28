@@ -231,7 +231,7 @@ O mesmo resultado teria sido obtido usando o teste de séries alternadas.</p>
           <m>x-\frac{x^{3}}{18}+\frac{x^{5}}{600}-\frac{x^{7}}{35280}</m>
         </p>
       </answer>
-      <solution><p>SOLUTION</p>
+      <solution>
 <p>Usamos a conhecida série de Maclaurin para <m>\sin(x)</m>, cujos primeiros quatro termos diferentes de zero são
 <me>\sin(x) \approx  x -  \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!}</me>
 Assim, os quatro primeiros termos diferentes de zero de <m>\dfrac {\sin(x)}{x}</m> são
