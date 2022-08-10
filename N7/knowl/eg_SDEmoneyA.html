@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span><span class="space"> </span><span class="title">Computing my future bank balance.</span>
+</h4>
+<p>Suppose, again, that you deposit <span class="process-math">\(\$P\)</span> in a bank  account at time <span class="process-math">\(t=0\text{,}\)</span> and that the account pays <span class="process-math">\(r\%\)</span> interest per year  compounded <span class="process-math">\(n\)</span> times per year, and denote by <span class="process-math">\(B(t)\)</span> the balance at time <span class="process-math">\(t\text{.}\)</span> Suppose that you have just received an interest payment at time <span class="process-math">\(t\text{.}\)</span> Then the next interest payment will be made at time <span class="process-math">\(t+\frac{1}{n}\)</span> and will be <span class="process-math">\(\frac{1}{n}\times\frac{r}{100}\times B(t)=\frac{r}{100n}B(t)\text{.}\)</span> So, calling <span class="process-math">\(\frac{1}{n}=h\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html ./knowl/cor_carbonDating.html">
+\begin{equation*}
+B(t+h)=B(t) + \frac{r}{100}B(t)h\qquad\text{or}\qquad \frac{B(t+h)-B(t)}{h} = \frac{r}{100}B(t)
+\end{equation*}
+</div>
+<p class="continuation">To get continuous compounding we take the limit <span class="process-math">\(n\rightarrow\infty\)</span> or, equivalently, <span class="process-math">\(h\rightarrow 0\text{.}\)</span> This gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html ./knowl/cor_carbonDating.html">
+\begin{equation*}
+\lim_{h\rightarrow 0}\frac{B(t+h)-B(t)}{h} = \frac{r}{100}B(t)
+\qquad\text{or}\qquad
+\diff{B}{t}(t) = \frac{r}{100}B(t)
+\end{equation*}
+</div>
+<p class="continuation">By Theorem <a href="" class="xref" data-knowl="./knowl/thm_linearODE.html" title="Teorema 1.4">Teorema 1.4</a>, with <span class="process-math">\(a=\frac{r}{100}\)</span> and <span class="process-math">\(b=0\text{,}\)</span> (or Corollary <a href="" class="xref" data-knowl="./knowl/cor_carbonDating.html" title="Corolário 1.10">Corolário 1.10</a> with <span class="process-math">\(k=-\frac{r}{100}\)</span>),</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html ./knowl/cor_carbonDating.html">
+\begin{gather*}
+B(t)=e^{rt/100}B(0)=e^{rt/100}P
+\end{gather*}
+</div>
+<p class="continuation">once again.</p></article><span class="incontext"><a href="sec_sep_de.html#eg_SDEmoneyA" class="internal">em contexto</a></span>
+</body>
+</html>

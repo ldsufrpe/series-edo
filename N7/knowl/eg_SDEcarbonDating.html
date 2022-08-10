@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">The age of a piece of parchment.</span>
+</h4>
+<p>A particular piece of parchment contains about <span class="process-math">\(64\%\)</span> as  much <span class="process-math">\({}^{14}C\)</span> as plants do today.  Estimate the age of the parchment.</p>
+<p><em class="alert">Solution:</em> Let <span class="process-math">\(Q(t)\)</span> denote the amount of <span class="process-math">\({}^{14}C\)</span> in the parchment <span class="process-math">\(t\)</span> years after it was first created. By equation (<a href="" class="xref" data-knowl="./knowl/eq_carbonDating.html" title="Fato 1.8: Radioactive decay">Fato 1.8</a>) and  Example <a href="" class="xref" data-knowl="./knowl/eg_carbonDatingHalfLife.html" title="Exemplo 1.9: Half life and the constant k">Exemplo 1.9</a></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_carbonDating.html ./knowl/eg_carbonDatingHalfLife.html ./knowl/cor_carbonDating.html">
+\begin{gather*}
+\diff{Q}{t}(t)=-k Q(t)\qquad\text{with } k=\frac{\log 2}{5730} = 0.000121
+\end{gather*}
+</div>
+<p class="continuation">By Corollary <a href="" class="xref" data-knowl="./knowl/cor_carbonDating.html" title="Corolário 1.10">Corolário 1.10</a></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_carbonDating.html ./knowl/eg_carbonDatingHalfLife.html ./knowl/cor_carbonDating.html">
+\begin{gather*}
+Q(t) = Q(0)\, e^{-kt}
+\end{gather*}
+</div>
+<p class="continuation">The time at which <span class="process-math">\(Q(t)\)</span> reaches <span class="process-math">\(0.64\,Q(0)\)</span> is determined by</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_carbonDating.html ./knowl/eg_carbonDatingHalfLife.html ./knowl/cor_carbonDating.html">
+\begin{align*}
+Q(t)&amp;=0.64\, Q(0) &amp;\text{but $Q(t) = Q(0)\, e^{-kt}$}\\
+Q(0)\,e^{-kt}&amp;=0.64\, Q(0) &amp;\text{cancel $Q(0)$}\\
+e^{-kt}&amp;=0.64&amp;\text{take logarithms}\\
+-kt&amp;=\log 0.64\\
+t&amp;=\frac{\log 0.64}{-k}
+=\frac{\log 0.64}{-0.000121}
+= 3700 \qquad&amp;\text{to 2 significant digits}
+\end{align*}
+</div>
+<p class="continuation">That is, the parchment <a href="" class="fn-knowl original" data-knowl="./knowl/fn-4-hidden.html" title="Nota de rodapé 1.4"><sup> 4 </sup></a> is about 37 centuries old.</p></article><span class="incontext"><a href="sec_sep_de.html#eg_SDEcarbonDating" class="internal">em contexto</a></span>
+</body>
+</html>

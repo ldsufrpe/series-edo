@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>A tank contains 1500 liters of brine with a concentration of <span class="process-math">\(0.3\)</span> kg of  salt per liter. Another brine solution, this with a concentration of  <span class="process-math">\(0.1\)</span> kg of salt per liter is poured into the tank at a rate of <span class="process-math">\(20\)</span> li/min.  At the same time, <span class="process-math">\(20\)</span> li/min of the solution in the tank, which is stirred  continuously, is drained from the tank.</p>
+<ol class="lower-alpha">
+<li><p>How many kilograms of salt will remain in the tank after half an hour?</p></li>
+<li><p>How long will it take to reduce the concentration to <span class="process-math">\(0.2\)</span> kg/li?</p></li>
+</ol>
+<p><em class="alert">Solution:</em> Denote by <span class="process-math">\(Q(t)\)</span> the amount of salt in the tank at time <span class="process-math">\(t\text{.}\)</span> In a very short time interval <span class="process-math">\(dt\text{,}\)</span> the incoming solution adds <span class="process-math">\(20\, dt\)</span> liters of a solution carrying <span class="process-math">\(0.1\)</span> kg/li. So the incoming solution adds <span class="process-math">\(0.1\times 20\, dt=2\, dt\)</span> kg of salt. In the same time interval <span class="process-math">\(20\, dt\)</span> liters is drained from the tank. The concentration of the drained brine is <span class="process-math">\(\frac{Q(t)}{1500}\text{.}\)</span> So <span class="process-math">\(\frac{Q(t)}{1500} 20\, dt\)</span> kg were  removed. All together, the change in the salt content of the tank during  the short time interval is</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
+\begin{equation*}
+dQ=2\, dt-\frac{Q(t)}{1500} 20\, dt =\Big(2-\frac{Q(t)}{75}\Big) dt
+\end{equation*}
+</div>
+<p class="continuation">The rate of change of salt content per unit time is</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
+\begin{equation*}
+\frac{dQ}{dt}=2-\frac{Q(t)}{75} =-\frac{1}{75}\big(Q(t)-150\big)
+\end{equation*}
+</div>
+<p class="continuation">The solution of this equation  is</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
+\begin{equation*}
+Q(t)=\big\{Q(0)-150\big\}e^{-t/75} + 150
+\end{equation*}
+</div>
+<p class="continuation">by Theorem <a href="" class="xref" data-knowl="./knowl/thm_linearODE.html" title="Teorema 1.4">Teorema 1.4</a>, with <span class="process-math">\(a=-\frac{1}{75}\)</span> and <span class="process-math">\(b=150\text{.}\)</span>  At time <span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(Q(0)=1500\times 0.3=450\text{.}\)</span> So</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
+\begin{equation*}
+Q(t)=150+300e^{-t/75}
+\end{equation*}
+</div>
+<p>(a) At <span class="process-math">\(t=30\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+Q(30)=150+300e^{-30/75}=\text{351.1 kg}
+\end{equation*}
+</div>
+<p>(b) <span class="process-math">\(Q(t)=0.2\times 1500=300\)</span> kg is achieved when</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+&amp;150+300e^{-t/75}=300\implies 300e^{-t/75}=150
+\implies e^{-t/75}=0.5\cr
+&amp;\implies -\frac{t}{75}=\log (0.5)
+\implies t=-75\log (0.5)=\text{51.99 min}
+\end{align*}
+</div></article></body>
+</html>

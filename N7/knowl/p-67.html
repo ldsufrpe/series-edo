@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Parágrafo</span></h4>
+<ul class="disc">
+<li><p>The first interest payment is made at time <span class="process-math">\(t=\frac{1}{n}\text{.}\)</span> Because the balance in the account during the time interval  <span class="process-math">\(0 \lt t \lt \frac{1}{n}\)</span> is <span class="process-math">\(\$P\)</span> and interest is being paid for <span class="process-math">\(\big(\frac{1}{n}\big)^{\rm th}\)</span> of a year, that first  interest payment is <span class="process-math">\(\frac{1}{n}\times\frac{r}{100}\times P\text{.}\)</span> After the first interest payment, the balance in the account is <span class="process-math">\(P+\frac{1}{n}\times\frac{r}{100}\times P  =  \big(1+\frac{r}{100n}\big)P\text{.}\)</span></p></li>
+<li><p>The second interest payment is made at time <span class="process-math">\(t=\frac{2}{n}\text{.}\)</span> Because the balance in the account during the time interval  <span class="process-math">\(\frac{1}{n} \lt t \lt \frac{2}{n}\)</span> is <span class="process-math">\(\big(1+\frac{r}{100n}\big)P\)</span>  and interest is being paid for <span class="process-math">\(\big(\frac{1}{n}\big)^{\rm th}\)</span>  of a year, the second  interest payment is  <span class="process-math">\(\frac{1}{n}\times\frac{r}{100}\times \big(1+\frac{r}{100n}\big)P\text{.}\)</span> After the second interest payment, the balance in the account is <span class="process-math">\(\big(1+\frac{r}{100n}\big)P+\frac{1}{n}\times\frac{r}{100}\times  \big(1+\frac{r}{100n}\big)P  =  \big(1+\frac{r}{100n}\big)^2P\text{.}\)</span></p></li>
+<li><p>And so on.</p></li>
+</ul>
+<p class="continuation">In general, at time <span class="process-math">\(t=\frac{m}{n}\)</span> (just after the <span class="process-math">\(m^{\rm th}\)</span> interest  payment), the balance in the account is <article class="fact theorem-like"><h4 class="heading">
+<span class="type">Fato</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Discrete compounding interest.</span>
+</h4>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+B(t) = \Big(1+\frac{r}{100n}\Big)^m P = \Big(1+\frac{r}{100n}\Big)^{nt}P
+\end{equation*}
+</div></article> Three common values of <span class="process-math">\(n\)</span> are <span class="process-math">\(1\)</span> (interest is paid once a year), <span class="process-math">\(12\)</span> (i.e. interest is paid once a month) and 365 (i.e. interest  is paid daily). The limit <span class="process-math">\(n\rightarrow\infty\)</span> is called continuous  compounding <a href="" class="fn-knowl original" data-knowl="./knowl/fn-11-hidden.html" title="Nota de rodapé 1.11"><sup> 11 </sup></a>. Under continuous compounding, the balance at time <span class="process-math">\(t\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEexpLimit.html ./knowl/eq_SDEexpLimit.html ./knowl/eq_SDEcontinuousCompounding.html ./knowl/eq_SDEexpLimit.html">
+\begin{align*}
+B(t) &amp;= \lim_{n\rightarrow\infty} \Big(1+\frac{r}{100n}\Big)^{nt}P
+\end{align*}
+</div>
+<p class="continuation">You may have already seen the limit <article class="fact theorem-like"><h4 class="heading">
+<span class="type">Fato</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span><span class="space"> </span><span class="title">A useful limit.</span>
+</h4>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow 0}(1+x)^{a/x}=e^a
+\end{equation*}
+</div></article> If so, you can evaluate <span class="process-math">\(B(t)\)</span> by applying <a href="" class="xref" data-knowl="./knowl/eq_SDEexpLimit.html" title="Fato 1.24: A useful limit">Fato 1.24</a> with <span class="process-math">\(x=\frac{r}{100n}\)</span> and <span class="process-math">\(a=\frac{rt}{100}\)</span> (so that <span class="process-math">\(\frac{a}{x}=nt\)</span>).  As <span class="process-math">\(n\rightarrow \infty\text{,}\)</span> <span class="process-math">\(x\rightarrow 0\)</span> so that <article class="fact theorem-like"><h4 class="heading">
+<span class="type">Fato</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous compound interest.</span>
+</h4>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+B(t) = \lim_{n\rightarrow\infty} \Big(1+\frac{r}{100n}\Big)^{nt}P
+=\lim_{x\rightarrow 0}(1+x)^{a/x}P=e^aP
+= e^{rt/100}P
+\end{equation*}
+</div></article> If you haven't seen (<a href="" class="xref" data-knowl="./knowl/eq_SDEexpLimit.html" title="Fato 1.24: A useful limit">Fato 1.24</a>) before, that's OK. In the following example, we rederive (<a href="" class="xref" data-knowl="./knowl/eq_SDEcontinuousCompounding.html" title="Fato 1.25: Continuous compound interest">Fato 1.25</a>) using a differential equation instead of (<a href="" class="xref" data-knowl="./knowl/eq_SDEexpLimit.html" title="Fato 1.24: A useful limit">Fato 1.24</a>).</p>
+<span class="incontext"><a href="sec_sep_de.html#p-67" class="internal">em contexto</a></span>
+</body>
+</html>

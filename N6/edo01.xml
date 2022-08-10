@@ -1,0 +1,687 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Introdução às Equações Diferenciais</title>
+
+
+    <objectives>
+
+
+        <ol>
+            <li>
+                <p>
+                    Reconhecer e classificar uma equação diferencial.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Resolver uma equação diferncial.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    Apresentar o teorema de existência e unicidade.
+                </p>
+            </li>
+
+        </ol>
+
+    </objectives>
+
+    <introduction>
+
+        <p>
+            Uma equação diferencial é uma equação para uma função desconhecida que envolve a derivada sua derivada. As
+            equações diferenciais desempenham um papel central na modelagem de um grande número de
+            fenômenos diferentes. Aqui está uma tabela que fornece várias equações diferenciais importantes e para que elas
+            são usadas. Está longe de ser completo.
+        </p>
+
+        <sidebyside>
+            <tabular left="minor" right="minor" bottom="minor" top="minor">
+                <row>
+                    <cell>Lei do Movimento de Newton</cell>
+                    <cell>descreve o movimento de partículas</cell>
+                </row>
+                <row>
+                    <cell>Equações de Maxwell</cell>
+                    <cell>descreve a radiação eletromagnética</cell>
+                </row>
+                <row>
+                    <cell>Equações de Navier-Stokes</cell>
+                    <cell>descreve o movimento do fluido</cell>
+                </row>
+                <row>
+                    <cell>Equação de calor</cell>
+                    <cell>descreve o fluxo de calor</cell>
+                </row>
+                <row>
+                    <cell>Equação de onda</cell>
+                    <cell>descreve o movimento das ondas</cell>
+                </row>
+                <row>
+                    <cell>Equação de Schrödinger</cell>
+                    <cell>descreve átomos, moléculas e cristais</cell>
+                </row>
+                <row>
+                    <cell>Equações tensão-deformação</cell>
+                    <cell>descreve materiais elásticos</cell>
+                </row>
+                <row>
+                    <cell>Modelos Black-Scholes</cell>
+                    <cell>usado para precificar opções financeiras</cell>
+                </row>
+                <row>
+                    <cell>Equações predador-presa</cell>
+                    <cell>descreve populações de ecossistemas</cell>
+                </row>
+                <row>
+                    <cell>Equações de Einstein</cell>
+                    <cell>conecta gravidade e geometria</cell>
+                </row>
+                <!--                <row>-->
+                <!--                    <cell>Equação de Ludwig-Jones-Holling</cell>-->
+                <!--                    <cell>modela o ecossistema da lagarta do abeto/abeto bálsamo</cell>-->
+                <!--                </row>-->
+                <row>
+                    <cell>Modelo de Zeeman</cell>
+                    <cell>modela batimentos cardíacos e impulsos nervosos</cell>
+                </row>
+                <row>
+                    <cell>Modelo Sherman-Rinzel-Keizer</cell>
+                    <cell>para atividade elétrica em células <m>\beta</m> pancreáticas
+                    </cell>
+                </row>
+                <row>
+                    <cell>Equações de Hodgkin-Huxley</cell>
+                    <cell>modela os potenciais de ação do nervo</cell>
+                </row>
+            </tabular>
+        </sidebyside>
+
+        <p>
+            Vamos apenas introdudir conceitos e métodos com objetivo de resolver um pequeno grupo de equações
+            diferenciais.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Definições Básicas</title>
+        <p>Um problema relevante do cálculo diferencial trata de encontrar a função derivada para <m>y=f(x)</m>. No
+            cálculo
+            integral, buscamos uma função <m>F</m> tal que  <m>F'(x)=f(x)</m> de modo que o Teorema Fundamental do
+            Cálculo fornece
+            <me>F(x)=\int f(x)\dd x</me>. Agora, estamos em busca de resolver o seguinte problema: dada uma equação como
+            <mdn>
+
+                <mrow xml:id="eqd1">\frac{\dd y}{\dd x}=5xy+2</mrow>,
+            </mdn>
+            encontre uma função <m>y=f(x)</m> que satisfaça a
+            equação<xref ref="eqd1"/>. Uma equação do tipo
+            <xref ref="eqd1"/>
+            são denominadas
+            <term>equações diferenciais</term>
+        </p>
+
+        <definition>
+            <p>Equações diferenciais são aquelas que contém as derivadas de uma ou mais variáveis dependentes (digamos <m>
+                y=f(x)
+            </m> em
+                relação a uma, ou mais variáveis independentes (digamos <m>x</m>).
+            </p>
+        </definition>
+
+        <p>Equações diferenciais são classificadas em relação ao <term>tipo</term>, a <term>ordem</term> e a linearidade
+        </p>
+
+        <paragraphs>
+
+            <title>Tipos das Equações Diferenciais</title>
+
+            <p>Quando uma equação contém apenas derivadas ordinárias
+                <fn>
+                    <p>O adjetivo ordinário aqui se refere às equações diferenciais que envolvem uma variável.
+                    </p>
+                </fn>
+                de uma ou mais variáveis dependentes, com relação a uma única variável dependente, a denominamos de
+                <term>equação diferencial ordinária</term>
+                (EDO). As equações a seguir
+
+                <me>\frac{\dd y}{\dd t}+3y=6</me>
+                <me>(y+2x)\dd x - 3x\dd y =0</me>
+                <me>\frac{\dd^2y}{\dd x^2}-5\frac{\dd y}{\dd x}-13y=0</me>
+
+                são exemplos de equações diferenciais ordinárias. Uma equação que envolve as derivadas parciais de uma
+                ou mais variáveis dependentes é denominada <term>equação diferencial parcial</term> (EDP). Por exemplo,
+
+                <me>\frac{\partial u}{\partial y}=-3\frac{\partial v}{\partial x}</me>
+                <me>x\frac{\partial u}{\partial x}- y\frac{\partial u}{\partial y}=u</me>
+                são equações diferenciais parciais.
+            </p>
+
+        </paragraphs>
+
+        <paragraphs>
+            <title>Ordem das Equações Diferenciais</title>
+
+            <p>A ordem da equação diferencial é dada pela maior ordem entre as derivadas envolvidas. Na equação a seguir
+
+                <me>\ob{\frac{\dd^2 y}{\dd^2 x}}{\text{segunda ordem}} - \ob{\frac{2}{3}\left(\frac{\dd y}{\dd
+                    x}\right)^5}{\text{primeira ordem}}+\color{black}{y=\ln(x)}
+                </me>
+
+                é uma EDO de segunda ordem (ou ordem dois). Já que a EDO <m>(y+2x)\dd x - 3x\dd y =0</m> pode ser
+                reescrita como (basta dividir pela diferencial <m>\dd x</m>)
+
+                <me>y -3x\frac{\dd y}{\dd x}=-2x</me>
+
+                podemos afirmar ser uma equação de primeira ordem. A equação diferencial parcial
+
+                <me>\frac{\partial^5u}{\partial x^5}+3\frac{\partial^3 u}{\partial t^3}=1</me>
+                é uma equação de quinta ordem.
+            </p>
+
+        </paragraphs>
+
+        <observation>
+            <p>Aqui vamos tratar apenas de equações diferenciais ordinárias (EDOs).</p>
+        </observation>
+
+
+        <paragraphs>
+            <title>Linearidade das Equações Diferenciais Ordinárias</title>
+
+            <p>Uma Equação diferencial ordinária é dita linear se:
+                <ol>
+                    <li label="a">
+                        <p>A variável dependente <m>y</m> e todas as suas derivadas são de ordem um, ou seja, a potência
+                            de cada termo envolvendo <m>y</m> é igual a 1.
+                        </p>
+
+                    </li>
+
+                    <li>
+                        Todos os coeficientes (que podem ser funções) dependem apenas da variável independente <m>x</m>.
+                    </li>
+                </ol>
+                Em outros termos, uma equação é denominada linear quando é escrita na forma
+
+
+                <me>a_n(x)\frac{\dd^n y}{\dd x^n} + a_{n-1}(x)\frac{\dd^{n-1} y}{\dd x^{n-1}} + \cdots + a_1(x)\frac{\dd
+                    y}{\dd x} + a_0(x)y=g(x).
+                </me>
+
+                As equações são exemplos de equações lineares:
+
+                <md>
+                    <mrow>x\dd y + y\dd x=0 \amp \qquad \ct{Linear de primeira ordem}</mrow>
+                </md>
+                <md>
+                    <mrow>y''+5y'+ 2y=3\amp \quad \ct{Linear de segunda ordem}</mrow>
+                </md>
+                <md>
+                    <mrow>x\frac{\dd^3 y}{\dd x^3} + x^3\frac{\dd^{2} y}{\dd x^2} - 5x\frac{\dd y}{\dd x} + 5y= e^x
+                        \amp \quad \ct{Linear de terceira ordem}
+                    </mrow>
+                </md>
+
+                Por outro lado, as equações a seguir não são lineares já que
+
+                <md>
+                    <mrow>\textcolor{gray}{2y} \frac{\dd y}{\dd x}=x \amp \qquad \ct{Coeficiente dependente de $y$}
+                    </mrow>
+                </md>
+                <md>
+                    <mrow>\frac{\dd^3 y}{\dd x^3} + 5\textcolor{gray}{y^2}=1 \amp \qquad \ct{Potência $\neq 1$}</mrow>
+                </md>
+            </p>
+
+
+        </paragraphs>
+    </subsection>
+
+    <subsection>
+        <title>Resolvendo EDOs</title>
+        <introduction>
+            De modo geral uma equação diferêncial ordinária de orden <m>n</m> pode ser escrita como
+            <mdn><mrow xml:id="eqd2">F\left(x,y, y', y'', \ldots, y^{(n)}\right)=0</mrow>.
+            </mdn>
+            Neste caso, uma solução para
+            <xref ref="eqd2"/>
+            é uma função <m>f:I\to\mathbb{R}</m> que possui pelo menos <m>n</m> derivadas e
+            satisfaz a equação diferencial, ou seja,
+
+            <me>F\left(x,f(x), f'(x), f''(x), \ldots, f^{(n)}(x)\right)=0</me>
+
+            para algum intervalo <m>I\subseteq \mathbb{R}</m>.
+        </introduction>
+
+
+        <example xml:id="ex1">
+            <statement>
+                <p>
+                    Verifique que <m>y=\cos{x}</m> é uma solução para equação linear de ordem dois <m>y''=1-y^2</m> no
+                    intervalo
+                    <m>I=(-\infty, \infty).</m>
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+
+                </p>
+            </solution>
+        </example>
+
+
+        <example xml:id="ex2">
+
+            <p>
+                Verifique quais das funções a seguir é uma solução para a equação linear de ordem dois <m>y''-2y-15y=0
+            </m> no intervalo
+                <m>I=(-\infty, \infty).</m>
+            </p>
+
+            <task>
+                <statement>
+                    <p>
+                        <m>y=0</m>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+
+                    </p>
+                </solution>
+
+
+            </task>
+
+            <task>
+                <statement>
+                    <p>
+                        <m>y=e^{5x}</m>
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+
+                    </p>
+                </solution>
+
+            </task>
+
+
+            <task>
+                <statement>
+                    <p>
+                        <m>y=e^{-3x}</m>
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+
+                    </p>
+                </solution>
+
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>y=e^{x}</m>
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+
+                    </p>
+                </solution>
+
+            </task>
+
+
+        </example>
+
+        <p>Falar sobre a solução nula
+            <term>TRIVIAL</term>
+        </p>
+        <exercise>
+            <statement>
+                <p>
+                    Verifique se <m>y=\frac{x^4}{16}</m> é uma solução para equação diferencial não-linear <m>\frac{\dd
+                    y}{\dd x}=xy^{1/2}
+                </m> no intervalo
+                    <m>(-\infty, \infty)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p>
+
+                </p>
+            </answer>
+        </exercise>
+
+        <p>A seguir apresentamos exmplos que mostram que nem toda equação diferencial possui solução.</p>
+        <example xml:id="ex3">
+            <title>Equações diferenciais sem soluções</title>
+
+            <p>
+                As eqções diferenciais de primeira ordem <me>(y')^2+3 =0</me> e
+                <me>(y')^2+ 2y^2+6 +10=0
+                </me>
+                não possuem solução. A primeira porque sendo <m>(y')^2</m> positivo, seja qual for a função <m>y</m>,
+                não há a
+                possibilidade se anularem quando somada a 3. A segunda segue o mesmo argumento, já que os termos
+                <m>(y')^2</m>
+                e <m>y^2</m> são positivos para qualquer <m>y</m>.
+            </p>
+
+
+        </example>
+
+
+        <p>Até aqui observamos o que chamamos de <term>solução explicitas</term> de uma equação diferencial ordinária,
+            ou seja, funções que podem ser
+            escritas como <m>y=f(x)</m>. Por exemplo, as soluções encontradas em
+            <xref ref="ex1"/>
+            e
+            <xref ref="ex2"/>
+            são explicitas.
+            No exemplo a seguir exemplificamos o que seria uma <term>solução implícita</term> de uma EDO.
+
+
+        </p>
+
+        <example xml:id="ex4">
+            <p>
+                A equação <m>x^2+y^2-4=0</m> é uma solução implícita para a equação diferencial <me>\frac{\dd y}{\dd
+                x}=-\frac{x}{y}
+            </me> no intervalo <m>(-2,2)</m>. Já que, por derivação implicita temos
+
+                <md>
+                    <mrow>2x + 2y\frac{\dd y}{\dd x}=0</mrow>
+                </md>
+                ou seja,
+                <me>\frac{\dd y}{\dd x}=-\frac{x}{y}.</me>
+                Observe que a equação <m>x^2+y^2-4=0</m> define implicitamente duas funções explicitas: <m>
+                y=\sqrt{4-x^2}
+            </m> e
+                <m>y=-\sqrt{4-x^2}</m>
+                no intervalo <m>(-2,2)</m>.
+            </p>
+        </example>
+
+        <exercise>
+            <statement>
+                <p>Mostre que para qualquer <m>c>0</m> a equação <m>x^2+y^2-c=0</m> é uma solução implícita para
+                    <m>\frac{\dd
+                        y}{\dd x}=-\frac{x}{y}
+                    </m>
+                </p>
+            </statement>
+
+            <hint>Proceda como no
+                <xref ref="ex4"/>
+            </hint>
+        </exercise>
+        <paragraphs>
+            <title>Infinidade de soluções</title>
+            <p>
+                É fácil verificar que para qualquer contante <m>c</m> a função <m>y=ce^{x^2}</m>  é uma solução para a
+                equação
+                diferencial ordinária <m>\frac{\dd y}{\dd x}=2xy</m>. Em geral, uma EDO possui um número infinito de
+                soluções. A seguir alguns exemplos ilustrativos.
+            </p>
+        </paragraphs>
+
+        <example>
+            <statement>
+                <p>
+                    Verifique que para qualquer constante <m>c</m> arbitrária, a função <m>y=\frac{c}{x}+1</m> é solução
+                    da EDO de primeira ordem <m>x\frac{\dd y}{\dd x}+y=1</m> em <m>(0, \infty)</m>.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    Para <m>y=\frac{c}{x}+1</m> temos  <m>\frac{\dd y}{\dd x}=-\frac{c}{x^2}</m>. Logo,
+
+                    <me>x\frac{\dd y}{\dd x} +y=x\left(-\frac{c}{x^2}\right) + \frac{c}{x}+1=1.</me>
+
+                    Quando variamos o parâmetro <m>c</m>, geramos uma infinidade de soluções. Em particular, fazendo
+                    <m>c=0</m>, obtemos uma solução constante <m>y=1</m>.
+                </p>
+            </solution>
+        </example>
+
+        <p>Muitas vezes, podemos obter uma nova solução para uma EDO simplesmente somando outras duas soluções. Observe
+            no exemplo a seguir.
+        </p>
+
+        <example>
+            <p>
+                Dada a equação diferencial <m>y''+ 9y=0</m> e <m>c_1, c_2\in \mathbb{R}</m>.
+
+            </p>
+
+            <task>
+                <statement>
+                    <p>
+                        Verifique que as funções <m>y=c_1\cos{3x}</m> e <m>y=c_2\sin{3x}</m> são soluções para equação
+                        diferencial.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Para <m>y=c_1\cos{3x}</m> temos as derivadas:
+
+                        <me>
+                            y'=-3c_1\sin{3x}
+                        </me>
+                        e
+                        <me>y'' = -9c_1\cos{3x},</me>
+                        assim
+
+                        <me>y''+9y = -9c_1\cos{3x}+9(c_1\cos{3x}=0.</me>
+
+                        De maneira similar, para <m>y=c_2\sin{3x}</m>,
+                        <me>y''+9y=-9c_2\sin{3x}+9(c_2\sin{3x}=0.</me>
+                    </p>
+                </solution>
+            </task>
+
+
+            <task>
+                <statement>
+                    <p>
+                        Verifique que a soma das soluções dadas acima é também uma solução da equação diferencial.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Neste caso, se <m>y=c_1\cos{3x} + c_2\sin{3x}</m> então
+
+                        <md>
+                            <mrow>y'=-3c_1\sin{3x} + 3c_2\cos{3x}</mrow>
+                            <mrow>y'' = -9c_1\cos{3x} -9c_2\sin{3x}</mrow>
+                        </md>
+                        então
+
+                        <md>
+                            <mrow>y''+9y = -9c_1\cos{3x} -9c_2\sin{3x} + 9 (c_1\cos{3x} + c_2\sin{3x})=0.</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+        </example>
+        <exercise>
+            <statement>
+                <p>
+                    Verifique que as funções <m>y=e^x</m>, <m>y=e^{-x}</m>, <m>y=c_1e^{-x}</m>, <m>y=c_2e^{x}</m> e
+                    <m>y=c_1e^{x}+ c_2e^{-x}</m>
+                    são soluções da EDO de segunda ordem
+                    <me>y''-y=0.</me>
+                </p>
+            </statement>
+
+
+        </exercise>
+
+    </subsection>
+
+    <subsection>
+        <title>Equações Diferenciais de Primeira Ordem</title>
+
+        <p>O problema de resolver a euqação diferencial de primeira ordem
+
+            <me>\frac{\dd y}{\dd x}=f(x,y)</me>
+
+            sujeito à
+            <term>condição inical</term>
+            <m>y(x_0)=y_0</m>
+            em que
+            <m>x_0\in I</m>
+            é chamado de <term>Problema de valor inicial</term>. Em outros termos, a solução da EDO é uma curva definida
+            no intervalo <m>I</m> que passa pelo ponto <m>(x_0, y_0)</m>.
+        </p>
+
+        <example>
+            <statement>
+                <p>
+                    Resolva o problema de valor inicial
+                    <md>
+                        <mrow>\frac{\dd y}{\dd x}=y, \qquad y(0)=2</mrow>
+
+                    </md>
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    Já vimos que  <m>y=ce^x</m> é uma família de soluções para a EDO <m>\frac{\dd y}{\dd x}=y</m> em
+                    <m>(-\nfty, \infty)</m>. Quando <m>x=0</m> e <m>y=2</m> produzimos <m>2=ce^0</m>. Assim, a solução
+                    desejada para o problema de valor inicial
+                    é
+                    <m>y=2e^x</m>.
+                </p>
+            </solution>
+        </example>
+
+        <example>
+            <statement>
+                <p>
+                    Resolva o problema de valor inicial
+                    <md>
+                        <mrow>y'=xy^{\frac{1}{2}}, \qquad y(0)=0</mrow>
+
+                    </md>
+
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    É fácil verificar que  <m>y=0</m> é uma solução para <m>y'=xy^{\frac{1}{2}}</m> que passa por <m>
+                    (0,0)</m>.
+                    Se <m>y=\frac{x^4}{16}</m> então <m>y(0)=0</m> e <m>y'=\frac{x^3}{4}</m>. Logo,
+
+                    <me>y'=\frac{x^3}{4} = x\left(\frac{x^4}{16}\right)^{\frac{1}{2}} = xy^{\frac{1}{2}}.</me>
+                </p>
+            </solution>
+        </example>
+
+        <theorem xml:id="th-01">
+            <title>
+                Existência e unicidade
+            </title>
+
+            <p>
+                Considere uma região uma regão retângular <m>R</m> definida por <m>[a,b]\times [c,d]</m>, que contém
+                <m>(x_0,y_0)</m>
+                no seu interior. Se <m>f(x,y)</m> e <m>\frac{\partial f}{\partial y}</m> são contínuas em <m>R</m> então
+                existe um intervalo
+                <m>I</m>
+                centrado em <m>x_0</m> e uma única função <m>y(x)</m> definida em <m>I</m> que satisfaz o problema de
+                valor inicial de uma EDO
+                de primeira ordem.
+            </p>
+        </theorem>
+        <example>
+
+            <p>
+                O Problema de valor inicial
+                <md>
+                    <mrow>y'=xy^{\frac{1}{2}}\qquad y(0)=0</mrow>
+                </md>
+                possui pelo menos duas soluções. Uma vez que
+
+                <md>
+                    <mrow>f(x,y)=xy^{\frac{1}{2}} \qquad \frac{\partial f}{\partial y}=\frac{x}{2y^{1/2}}</mrow>
+                </md>
+                são contínuas para <m>y>0</m>. Logo, pelo<xref ref="th-01"/>, dado um ponto qualquer
+                <m>(x_0,y_0)</m>
+                com <m>y_0>0</m>, existe algum intervalo que contém <m>x_0</m> no qual a equação diferencial
+                <m>y'=xy^{\frac{1}{2}}</m>
+                possui uma única solução <m>y(t)</m>, tal que <m>y(x_0)=y_0</m>.
+            </p>
+
+
+        </example>
+
+
+    </subsection>
+
+    <subsection>
+
+        <title>Sugestão de vídeos</title>
+        <ul>
+            <li>
+                <p>
+                    <url href="https://youtu.be/4nwz7jgepMY" visual="youtu.be/4nwz7jgepMY">Introdução às Equações
+                        Diferenciais.
+                    </url>
+                </p>
+            </li>
+
+            li>
+        </ul>
+
+    </subsection>
+
+<!--    <exercises xml:id="exercises-intro-edo">-->
+
+<!--        <exercise>-->
+<!--            <webwork source="Library/Rochester/setDiffEQ1/e7_1_4a.pg"/>-->
+<!--        </exercise>-->
+
+
+<!--        &lt;!&ndash;       <exercise>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <webwork source=" Library/Rochester/setDiffEQ1/ur_de_1_1.pg."/>&ndash;&gt;-->
+<!--        &lt;!&ndash;    </exercise>&ndash;&gt;-->
+<!--        <exercise>-->
+<!--            <webwork source="Library/FortLewis/DiffEq/0-Introduction/Lebl-0-2-10.pg"/>-->
+<!--        </exercise>-->
+
+
+<!--        <exercise>-->
+<!--            <webwork source="Library/AlfredUniv/diffeq/ivp/oneparameter1.pg"/>-->
+<!--        </exercise>-->
+<!--        <exercise>-->
+<!--            <webwork source="Library/MiamiUOhio/DiffEq/Definitions_and_Terminology/Problem25.pg"/>-->
+<!--        </exercise>-->
+<!--        &lt;!&ndash;    <exercise>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <webwork source="Library/Utah/AP_Calculus_I/set4_Graphing_and_Maximum-Minimum_Problems/1210set8p18.pg"/>&ndash;&gt;-->
+<!--        &lt;!&ndash;    </exercise>&ndash;&gt;-->
+
+<!--        <exercise>-->
+<!--            <webwork source="Library/AlfredUniv/diffeq/ivp/existenceuniqueness.pg"/>-->
+<!--        </exercise>-->
+
+
+<!--    </exercises>-->
+
+
+</section>

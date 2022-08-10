@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Parágrafo</span></h4>
+<p>We'll start by developing a recipe for solving separable differential  equations. Then we'll look at many examples. Usually one suppresses the argument of <span class="process-math">\(y(x)\)</span>  and writes the  equation <a href="" class="fn-knowl original" data-knowl="./knowl/fn-1-hidden.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html ./knowl/eq_SDEbasicSln.html">
+\begin{equation*}
+\diff{y}{x} = f(x)\ g(y)
+\end{equation*}
+</div>
+<p class="continuation">and solves such an equation by cross multiplying/dividing to get all of the <span class="process-math">\(y\)</span>'s, including the <span class="process-math">\(\dee{y}\)</span> on one side of  the equation and all of the <span class="process-math">\(x\)</span>'s, including the <span class="process-math">\(\dee{x}\text{,}\)</span> on the  other side of the equation.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html ./knowl/eq_SDEbasicSln.html">
+\begin{equation*}
+\frac{\dee{y}}{g(y)}=f(x)\,\dee{x}
+\end{equation*}
+</div>
+<p class="continuation">(We are of course assuming that <span class="process-math">\(g(y)\)</span> is nonzero.) Then you integrate both sides</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html ./knowl/eq_SDEbasicSln.html">
+\begin{gather}
+\int\frac{\dee{y}}{g(y)}=\int f(x)\,\dee{x}\tag{✶}
+\end{gather}
+</div>
+<p class="continuation">This looks illegal, and indeed is illegal — <span class="process-math">\(\diff{y}{x}\)</span> is not a fraction. But we'll now see that the answer is still correct. This procedure is simply  a mnemonic device to help you remember that answer <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSln.html" title="Equação">(✶)</a>.</p>
+<ul class="disc">
+<li><p>Our goal is to find all functions <span class="process-math">\(y(x)\)</span> that obey <span class="process-math">\(\diff{y}{x}(x) = f(x)\ g\big(y(x)\big)\text{.}\)</span></p></li>
+<li>
+<p>Assuming that <span class="process-math">\(g\)</span> is nonzero,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+y'(x) = f(x)\ g(y(x)) \amp \iff \frac{y'(x)}{g(y(x))}=f(x)\iff \int\frac{y'(x)}{g(y(x))}\,\dee{x}= \int f(x)\,\dee{x}\\
+\amp \iff \int\frac{\dee{y}}{g(y)}\bigg|_{y=y(x)}= \int f(x)\,\dee{x}\\
+\amp\hskip0.5in \text{with the substitution }y=y(x), \dee y = y'(x)\,\dee{x}
+\end{align*}
+</div>
+</li>
+<li><p>That's our answer <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSln.html" title="Equação">(✶)</a> again.</p></li>
+</ul>
+<span class="incontext"><a href="sec_sep_de.html#p-4" class="internal">em contexto</a></span>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Warming iced tea.</span>
+</h4>
+<p>The temperature of a glass of iced tea is initially <span class="process-math">\(5^\circ\text{.}\)</span> After 5 minutes, the tea has heated to <span class="process-math">\(10^\circ\)</span> in a room where the air temperature is <span class="process-math">\(30^\circ\text{.}\)</span></p>
+<ol class="lower-alpha">
+<li><p>Determine the temperature as a function of time.</p></li>
+<li><p>What is the temperature after 10 minutes?</p></li>
+<li><p>Determine when the tea will reach a temperature of <span class="process-math">\(20^\circ\text{.}\)</span></p></li>
+</ol>
+<p><em class="alert">Solution:</em> (a)</p>
+<ul class="disc">
+<li><p>Denote by <span class="process-math">\(T(t)\)</span> the temperature of the tea <span class="process-math">\(t\)</span> minutes after it was removed from the fridge, and let <span class="process-math">\(A=30\)</span> be the ambient temperature.</p></li>
+<li><p>By Newton's law of cooling,<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\diff{T}{t}=K(T-A) = K(T-30)
+\end{equation*}
+</div>for some, as yet unknown, constant of proportionality <span class="process-math">\(K\text{.}\)</span></p></li>
+<li><p>By Theorem <a href="" class="xref" data-knowl="./knowl/thm_linearODE.html" title="Teorema 1.4">Teorema 1.4</a> with <span class="process-math">\(a=K\)</span> and <span class="process-math">\(b=30\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
+\begin{equation*}
+T(t) = [T(0)-30]\,e^{Kt} + 30
+=30-25 e^{Kt}
+\end{equation*}
+</div>since the initial temperature <span class="process-math">\(T(0)=5\text{.}\)</span></p></li>
+<li><p>This solution is not complete because it still contains an unknown constant, namely <span class="process-math">\(K\text{.}\)</span> We have not yet used the given data that <span class="process-math">\(T(5)=10\text{.}\)</span> We can use it to determine <span class="process-math">\(K\text{.}\)</span> At <span class="process-math">\(t=5\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+T(5)=30-25 e^{5K}=10
+&amp;\implies e^{5K}=\frac{20}{25}
+\implies 5K=\log\frac{20}{25}\\
+&amp;\implies K=\frac{1}{5}\log\frac{4}{5}=-0.044629
+\end{align*}
+</div>to six decimal places.</p></li>
+</ul>
+<p>(b) To find the temperature at 10 minutes we can just use the solution  we have determined above.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+T(10)&amp;=30-25 e^{10K}\\
+&amp;=30-25 e^{10\times\frac{1}{5}\log\frac{4}{5}}\\
+&amp;=30-25 e^{2\log\frac{4}{5}}  = 30-25 e^{\log\frac{16}{25}}\\
+&amp;=30-16=\text{$14^\circ$}
+\end{align*}
+</div>
+<p>(c) The temperature is <span class="process-math">\(20^\circ\)</span> when</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+30-25 e^{Kt}=20 &amp;\implies e^{Kt}=\frac{10}{25} \implies Kt=\log\frac{10}{25}\\
+&amp;\implies t=\frac{1}{K}\log\frac{2}{5}=\hbox{20.5 min}
+\end{align*}
+</div>
+<p class="continuation">to one decimal place.</p></article><span class="incontext"><a href="sec_sep_de.html#eg_SDEcoolingA" class="internal">em contexto</a></span>
+</body>
+</html>

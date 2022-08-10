@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p><em class="alert">Solution:</em> (a)</p>
+<ul class="disc">
+<li><p>Denote by <span class="process-math">\(T(t)\)</span> the temperature of the tea <span class="process-math">\(t\)</span> minutes after it was removed from the fridge, and let <span class="process-math">\(A=30\)</span> be the ambient temperature.</p></li>
+<li><p>By Newton's law of cooling,<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\diff{T}{t}=K(T-A) = K(T-30)
+\end{equation*}
+</div>for some, as yet unknown, constant of proportionality <span class="process-math">\(K\text{.}\)</span></p></li>
+<li><p>By Theorem <a href="" class="xref" data-knowl="./knowl/thm_linearODE.html" title="Teorema 1.4">Teorema 1.4</a> with <span class="process-math">\(a=K\)</span> and <span class="process-math">\(b=30\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
+\begin{equation*}
+T(t) = [T(0)-30]\,e^{Kt} + 30
+=30-25 e^{Kt}
+\end{equation*}
+</div>since the initial temperature <span class="process-math">\(T(0)=5\text{.}\)</span></p></li>
+<li><p>This solution is not complete because it still contains an unknown constant, namely <span class="process-math">\(K\text{.}\)</span> We have not yet used the given data that <span class="process-math">\(T(5)=10\text{.}\)</span> We can use it to determine <span class="process-math">\(K\text{.}\)</span> At <span class="process-math">\(t=5\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+T(5)=30-25 e^{5K}=10
+&amp;\implies e^{5K}=\frac{20}{25}
+\implies 5K=\log\frac{20}{25}\\
+&amp;\implies K=\frac{1}{5}\log\frac{4}{5}=-0.044629
+\end{align*}
+</div>to six decimal places.</p></li>
+</ul>
+<span class="incontext"><a href="sec_sep_de.html#p-36" class="internal">em contexto</a></span>
+</body>
+</html>

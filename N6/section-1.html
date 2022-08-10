@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introdução às Equações Diferenciais</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      $(document).trigger("runestone:mathjax-ready");
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(           \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+           \newcommand{ctm}[1]{\color{gray}{#1}}
+
+           \newcommand{\doubler}[1]{2#1}
+           \newcommand{\dd}{\mathrm{d}}
+           \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+           \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+           \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+           \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+           \DeclareMathOperator{\arcsec}{arc \,sec}
+           \DeclareMathOperator{\sin}{sen}
+           \DeclareMathOperator{\arcsin}{arc \,sen}
+           \DeclareMathOperator{\arccos}{arc \,cos}
+           \DeclareMathOperator{\csc}{cossec}
+           \DeclareMathOperator{\tan}{tg}
+           \DeclareMathOperator{\arctan}{arc\,tg}
+           \DeclareMathOperator{\cot}{cotg}
+           \newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="external/images/logo/logo_UFRPE.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="intro-edo.html"><span class="title">EDO: N6</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="intro-edo.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="intro-edo.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="intro-edo.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="intro-edo.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link active">
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Introdução às Equações Diferenciais</span></a><ul>
+<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Definições Básicas</a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Resolvendo EDOs</a></li>
+<li><a href="section-1.html#subsection-3" data-scroll="subsection-3" class="internal">Equações Diferenciais de Primeira Ordem</a></li>
+<li><a href="section-1.html#subsection-4" data-scroll="subsection-4" class="internal">Sugestão de vídeos</a></li>
+</ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Introdução às Equações Diferenciais</span>
+</h2>
+<article class="objectives goal-like" id="objectives-1"><h3 class="heading"><span class="type">Objetivos</span></h3>
+<ol class="decimal">
+<li id="li-1"><p id="p-3">Reconhecer e classificar uma equação diferencial.</p></li>
+<li id="li-2"><p id="p-4">Resolver uma equação diferncial.</p></li>
+<li id="li-3"><p id="p-5">Apresentar o teorema de existência e unicidade.</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-6">Uma equação diferencial é uma equação para uma função desconhecida que envolve a derivada sua derivada. As equações diferenciais desempenham um papel central na modelagem de um grande número de fenômenos diferentes. Aqui está uma tabela que fornece várias equações diferenciais importantes e para que elas são usadas. Está longe de ser completo.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr>
+<td class="l m b1 r1 l1 t1 lines">Lei do Movimento de Newton</td>
+<td class="l m b1 r1 l0 t1 lines">descreve o movimento de partículas</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Equações de Maxwell</td>
+<td class="l m b1 r1 l0 t0 lines">descreve a radiação eletromagnética</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Equações de Navier-Stokes</td>
+<td class="l m b1 r1 l0 t0 lines">descreve o movimento do fluido</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Equação de calor</td>
+<td class="l m b1 r1 l0 t0 lines">descreve o fluxo de calor</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Equação de onda</td>
+<td class="l m b1 r1 l0 t0 lines">descreve o movimento das ondas</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Equação de Schrödinger</td>
+<td class="l m b1 r1 l0 t0 lines">descreve átomos, moléculas e cristais</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Equações tensão-deformação</td>
+<td class="l m b1 r1 l0 t0 lines">descreve materiais elásticos</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Modelos Black-Scholes</td>
+<td class="l m b1 r1 l0 t0 lines">usado para precificar opções financeiras</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Equações predador-presa</td>
+<td class="l m b1 r1 l0 t0 lines">descreve populações de ecossistemas</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Equações de Einstein</td>
+<td class="l m b1 r1 l0 t0 lines">conecta gravidade e geometria</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Modelo de Zeeman</td>
+<td class="l m b1 r1 l0 t0 lines">modela batimentos cardíacos e impulsos nervosos</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Modelo Sherman-Rinzel-Keizer</td>
+<td class="l m b1 r1 l0 t0 lines">para atividade elétrica em células <span class="process-math">\(\beta\)</span> pancreáticas</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Equações de Hodgkin-Huxley</td>
+<td class="l m b1 r1 l0 t0 lines">modela os potenciais de ação do nervo</td>
+</tr>
+</table></div></div></div>
+<p id="p-7">Vamos apenas introdudir conceitos e métodos com objetivo de resolver um pequeno grupo de equações diferenciais.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Definições Básicas</span>
+</h3>
+<p id="p-8">Um problema relevante do cálculo diferencial trata de encontrar a função derivada para <span class="process-math">\(y=f(x)\text{.}\)</span> No cálculo integral, buscamos uma função <span class="process-math">\(F\)</span> tal que  <span class="process-math">\(F'(x)=f(x)\)</span> de modo que o Teorema Fundamental do Cálculo fornece</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqd1.html ./knowl/eqd1.html">
+\begin{equation*}
+F(x)=\int f(x)\dd x\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Agora, estamos em busca de resolver o seguinte problema: dada uma equação como</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqd1.html ./knowl/eqd1.html" id="mdn-1">
+\begin{gather}
+\frac{\dd y}{\dd x}=5xy+2\tag{1.1}
+\end{gather}
+</div>
+<p class="continuation">encontre uma função <span class="process-math">\(y=f(x)\)</span> que satisfaça a equação<a href="" class="xref" data-knowl="./knowl/eqd1.html" title="Equação 1.1">(1.1)</a>. Uma equação do tipo <a href="" class="xref" data-knowl="./knowl/eqd1.html" title="Equação 1.1">(1.1)</a> são denominadas <dfn class="terminology">equações diferenciais</dfn></p>
+<article class="definition definition-like" id="definition-1"><h4 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
+</h4>
+<p id="p-9">Equações diferenciais são aquelas que contém as derivadas de uma ou mais variáveis dependentes (digamos <span class="process-math">\(y=f(x)\)</span> em relação a uma, ou mais variáveis independentes (digamos <span class="process-math">\(x\)</span>).</p></article><p id="p-10">Equações diferenciais são classificadas em relação ao <dfn class="terminology">tipo</dfn>, a <dfn class="terminology">ordem</dfn> e a linearidade</p>
+<section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Tipos das Equações Diferenciais.</span></h4>
+<p id="p-11">Quando uma equação contém apenas derivadas ordinárias <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> de uma ou mais variáveis dependentes, com relação a uma única variável dependente, a denominamos de <dfn class="terminology">equação diferencial ordinária</dfn> (EDO). As equações a seguir</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd y}{\dd t}+3y=6
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(y+2x)\dd x - 3x\dd y =0
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd^2y}{\dd x^2}-5\frac{\dd y}{\dd x}-13y=0
+\end{equation*}
+</div>
+<p class="continuation">são exemplos de equações diferenciais ordinárias. Uma equação que envolve as derivadas parciais de uma ou mais variáveis dependentes é denominada <dfn class="terminology">equação diferencial parcial</dfn> (EDP). Por exemplo,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\partial u}{\partial y}=-3\frac{\partial v}{\partial x}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x\frac{\partial u}{\partial x}- y\frac{\partial u}{\partial y}=u
+\end{equation*}
+</div>
+<p class="continuation">são equações diferenciais parciais.</p></section><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">Ordem das Equações Diferenciais.</span></h4>
+<p id="p-13">A ordem da equação diferencial é dada pela maior ordem entre as derivadas envolvidas. Na equação a seguir</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\ob{\frac{\dd^2 y}{\dd^2 x}}{\text{segunda ordem}} - \ob{\frac{2}{3}\left(\frac{\dd y}{\dd
+x}\right)^5}{\text{primeira ordem}}+\color{black}{y=\ln(x)}
+\end{equation*}
+</div>
+<p class="continuation">é uma EDO de segunda ordem (ou ordem dois). Já que a EDO <span class="process-math">\((y+2x)\dd x - 3x\dd y =0\)</span> pode ser reescrita como (basta dividir pela diferencial <span class="process-math">\(\dd x\)</span>)</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y -3x\frac{\dd y}{\dd x}=-2x
+\end{equation*}
+</div>
+<p class="continuation">podemos afirmar ser uma equação de primeira ordem. A equação diferencial parcial</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\partial^5u}{\partial x^5}+3\frac{\partial^3 u}{\partial t^3}=1
+\end{equation*}
+</div>
+<p class="continuation">é uma equação de quinta ordem.</p></section><article class="observation remark-like" id="observation-1"><h4 class="heading">
+<span class="type">Observação</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
+</h4>
+<p id="p-14">Aqui vamos tratar apenas de equações diferenciais ordinárias (EDOs).</p></article><section class="paragraphs" id="paragraphs-3"><h4 class="heading"><span class="title">Linearidade das Equações Diferenciais Ordinárias.</span></h4>
+<p id="p-15">Uma Equação diferencial ordinária é dita linear se:</p>
+<ol class="decimal">
+<li id="a"><p id="p-16">A variável dependente <span class="process-math">\(y\)</span> e todas as suas derivadas são de ordem um, ou seja, a potência de cada termo envolvendo <span class="process-math">\(y\)</span> é igual a 1.</p></li>
+<li id="li-5"><p id="p-derived-li-5">Todos os coeficientes (que podem ser funções) dependem apenas da variável independente <span class="process-math">\(x\text{.}\)</span></p></li>
+</ol>
+<p class="continuation">Em outros termos, uma equação é denominada linear quando é escrita na forma</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n(x)\frac{\dd^n y}{\dd x^n} + a_{n-1}(x)\frac{\dd^{n-1} y}{\dd x^{n-1}} + \cdots + a_1(x)\frac{\dd
+y}{\dd x} + a_0(x)y=g(x).
+\end{equation*}
+</div>
+<p class="continuation">As equações são exemplos de equações lineares:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+\begin{align*}
+x\dd y + y\dd x=0 \amp \qquad \ct{Linear de primeira ordem}
+\end{align*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+\begin{align*}
+y''+5y'+ 2y=3\amp \quad \ct{Linear de segunda ordem}
+\end{align*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+\begin{align*}
+x\frac{\dd^3 y}{\dd x^3} + x^3\frac{\dd^{2} y}{\dd x^2} - 5x\frac{\dd y}{\dd x} + 5y= e^x
+\amp \quad \ct{Linear de terceira ordem}
+\end{align*}
+</div>
+<p class="continuation">Por outro lado, as equações a seguir não são lineares já que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+\begin{align*}
+\textcolor{gray}{2y} \frac{\dd y}{\dd x}=x \amp \qquad \ct{Coeficiente dependente de $y$}
+\end{align*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+\begin{align*}
+\frac{\dd^3 y}{\dd x^3} + 5\textcolor{gray}{y^2}=1 \amp \qquad \ct{Potência $\neq 1$}
+\end{align*}
+</div></section></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Resolvendo EDOs</span>
+</h3>
+<section class="introduction" id="introduction-3">De modo geral uma equação diferêncial ordinária de orden <span class="process-math">\(n\)</span> pode ser escrita como<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqd2.html" id="mdn-2">
+\begin{gather}
+F\left(x,y, y', y'', \ldots, y^{(n)}\right)=0\tag{1.2}
+\end{gather}
+</div>Neste caso, uma solução para <a href="" class="xref" data-knowl="./knowl/eqd2.html" title="Equação 1.2">(1.2)</a> é uma função <span class="process-math">\(f:I\to\mathbb{R}\)</span> que possui pelo menos <span class="process-math">\(n\)</span> derivadas e satisfaz a equação diferencial, ou seja,<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqd2.html">
+\begin{equation*}
+F\left(x,f(x), f'(x), f''(x), \ldots, f^{(n)}(x)\right)=0
+\end{equation*}
+</div>para algum intervalo <span class="process-math">\(I\subseteq \mathbb{R}\text{.}\)</span></section><article class="example example-like" id="ex1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex1"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex1"><article class="example example-like"><p id="p-17">Verifique que <span class="process-math">\(y=\cos{x}\)</span> é uma solução para equação linear de ordem dois <span class="process-math">\(y''=1-y^2\)</span> no intervalo <span class="process-math">\(I=(-\infty, \infty).\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-18"></p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex2"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex2"><article class="example example-like"><p id="p-19">Verifique quais das funções a seguir é uma solução para a equação linear de ordem dois <span class="process-math">\(y''-2y-15y=0\)</span> no intervalo <span class="process-math">\(I=(-\infty, \infty).\)</span></p>
+<article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-20"><span class="process-math">\(y=0\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><p id="p-21"></p></div></div>
+</div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-22"><span class="process-math">\(y=e^{5x}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-23"></p></div></div>
+</div></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-24"><span class="process-math">\(y=e^{-3x}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><p id="p-25"></p></div></div>
+</div></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-26"><span class="process-math">\(y=e^{x}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-27"></p></div></div>
+</div></article></article></div>
+<p id="p-28">Falar sobre a solução nula <dfn class="terminology">TRIVIAL</dfn></p>
+<article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-29">Verifique se <span class="process-math">\(y=\frac{x^4}{16}\)</span> é uma solução para equação diferencial não-linear <span class="process-math">\(\frac{\dd
+y}{\dd x}=xy^{1/2}\)</span> no intervalo <span class="process-math">\((-\infty, \infty)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-30"></p></div></div>
+</div></article></div>
+<p id="p-31">A seguir apresentamos exmplos que mostram que nem toda equação diferencial possui solução.</p>
+<article class="example example-like" id="ex3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex3"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Equações diferenciais sem soluções.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex3"><article class="example example-like"><p id="p-32">As eqções diferenciais de primeira ordem</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(y')^2+3 =0
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(y')^2+ 2y^2+6 +10=0
+\end{equation*}
+</div>
+<p class="continuation">não possuem solução. A primeira porque sendo <span class="process-math">\((y')^2\)</span> positivo, seja qual for a função <span class="process-math">\(y\text{,}\)</span> não há a possibilidade se anularem quando somada a 3. A segunda segue o mesmo argumento, já que os termos <span class="process-math">\((y')^2\)</span> e <span class="process-math">\(y^2\)</span> são positivos para qualquer <span class="process-math">\(y\text{.}\)</span></p></article></div>
+<p id="p-33">Até aqui observamos o que chamamos de <dfn class="terminology">solução explicitas</dfn> de uma equação diferencial ordinária, ou seja, funções que podem ser escritas como <span class="process-math">\(y=f(x)\text{.}\)</span> Por exemplo, as soluções encontradas em <a href="" class="xref" data-knowl="./knowl/ex1.html" title="Exemplo 1.3">Exemplo 1.3</a> e <a href="" class="xref" data-knowl="./knowl/ex2.html" title="Exemplo 1.4">Exemplo 1.4</a> são explicitas. No exemplo a seguir exemplificamos o que seria uma <dfn class="terminology">solução implícita</dfn> de uma EDO.</p>
+<article class="example example-like" id="ex4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex4"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex4"><article class="example example-like"><p id="p-34">A equação <span class="process-math">\(x^2+y^2-4=0\)</span> é uma solução implícita para a equação diferencial</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd y}{\dd
+x}=-\frac{x}{y}
+\end{equation*}
+</div>
+<p class="continuation">no intervalo <span class="process-math">\((-2,2)\text{.}\)</span> Já que, por derivação implicita temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+\begin{gather*}
+2x + 2y\frac{\dd y}{\dd x}=0
+\end{gather*}
+</div>
+<p class="continuation">ou seja,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd y}{\dd x}=-\frac{x}{y}.
+\end{equation*}
+</div>
+<p class="continuation">Observe que a equação <span class="process-math">\(x^2+y^2-4=0\)</span> define implicitamente duas funções explicitas: <span class="process-math">\(y=\sqrt{4-x^2}\)</span> e <span class="process-math">\(y=-\sqrt{4-x^2}\)</span> no intervalo <span class="process-math">\((-2,2)\text{.}\)</span></p></article></div>
+<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-35">Mostre que para qualquer <span class="process-math">\(c&gt;0\)</span> a equação <span class="process-math">\(x^2+y^2-c=0\)</span> é uma solução implícita para <span class="process-math">\(\frac{\dd
+y}{\dd x}=-\frac{x}{y}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like">Proceda como no <a href="" class="xref" data-knowl="./knowl/ex4.html" title="Exemplo 1.7">Exemplo 1.7</a>
+</div></div>
+</div></article></div>
+<section class="paragraphs" id="paragraphs-4"><h4 class="heading"><span class="title">Infinidade de soluções.</span></h4>
+<p id="p-36">É fácil verificar que para qualquer contante <span class="process-math">\(c\)</span> a função <span class="process-math">\(y=ce^{x^2}\)</span>  é uma solução para a equação diferencial ordinária <span class="process-math">\(\frac{\dd y}{\dd x}=2xy\text{.}\)</span> Em geral, uma EDO possui um número infinito de soluções. A seguir alguns exemplos ilustrativos.</p></section><article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-37">Verifique que para qualquer constante <span class="process-math">\(c\)</span> arbitrária, a função <span class="process-math">\(y=\frac{c}{x}+1\)</span> é solução da EDO de primeira ordem <span class="process-math">\(x\frac{\dd y}{\dd x}+y=1\)</span> em <span class="process-math">\((0, \infty)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-38">Para <span class="process-math">\(y=\frac{c}{x}+1\)</span> temos  <span class="process-math">\(\frac{\dd y}{\dd x}=-\frac{c}{x^2}\text{.}\)</span> Logo,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x\frac{\dd y}{\dd x} +y=x\left(-\frac{c}{x^2}\right) + \frac{c}{x}+1=1.
+\end{equation*}
+</div>
+<p class="continuation">Quando variamos o parâmetro <span class="process-math">\(c\text{,}\)</span> geramos uma infinidade de soluções. Em particular, fazendo <span class="process-math">\(c=0\text{,}\)</span> obtemos uma solução constante <span class="process-math">\(y=1\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<p id="p-39">Muitas vezes, podemos obter uma nova solução para uma EDO simplesmente somando outras duas soluções. Observe no exemplo a seguir.</p>
+<article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-40">Dada a equação diferencial <span class="process-math">\(y''+ 9y=0\)</span> e <span class="process-math">\(c_1, c_2\in \mathbb{R}\text{.}\)</span></p>
+<article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-41">Verifique que as funções <span class="process-math">\(y=c_1\cos{3x}\)</span> e <span class="process-math">\(y=c_2\sin{3x}\)</span> são soluções para equação diferencial.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-42">Para <span class="process-math">\(y=c_1\cos{3x}\)</span> temos as derivadas:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y'=-3c_1\sin{3x}
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y'' = -9c_1\cos{3x},
+\end{equation*}
+</div>
+<p class="continuation">assim</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y''+9y = -9c_1\cos{3x}+9(c_1\cos{3x}=0.
+\end{equation*}
+</div>
+<p class="continuation">De maneira similar, para <span class="process-math">\(y=c_2\sin{3x}\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y''+9y=-9c_2\sin{3x}+9(c_2\sin{3x}=0.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-43">Verifique que a soma das soluções dadas acima é também uma solução da equação diferencial.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-44">Neste caso, se <span class="process-math">\(y=c_1\cos{3x} + c_2\sin{3x}\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+\begin{gather*}
+y'=-3c_1\sin{3x} + 3c_2\cos{3x}\\
+y'' = -9c_1\cos{3x} -9c_2\sin{3x}
+\end{gather*}
+</div>
+<p class="continuation">então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+\begin{gather*}
+y''+9y = -9c_1\cos{3x} -9c_2\sin{3x} + 9 (c_1\cos{3x} + c_2\sin{3x})=0.
+\end{gather*}
+</div>
+</div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-45">Verifique que as funções <span class="process-math">\(y=e^x\text{,}\)</span> <span class="process-math">\(y=e^{-x}\text{,}\)</span> <span class="process-math">\(y=c_1e^{-x}\text{,}\)</span> <span class="process-math">\(y=c_2e^{x}\)</span> e <span class="process-math">\(y=c_1e^{x}+ c_2e^{-x}\)</span> são soluções da EDO de segunda ordem</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y''-y=0.
+\end{equation*}
+</div></article></div></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Equações Diferenciais de Primeira Ordem</span>
+</h3>
+<p id="p-46">O problema de resolver a euqação diferencial de primeira ordem</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd y}{\dd x}=f(x,y)
+\end{equation*}
+</div>
+<p class="continuation">sujeito à <dfn class="terminology">condição inical</dfn> <span class="process-math">\(y(x_0)=y_0\)</span> em que <span class="process-math">\(x_0\in I\)</span> é chamado de <dfn class="terminology">Problema de valor inicial</dfn>. Em outros termos, a solução da EDO é uma curva definida no intervalo <span class="process-math">\(I\)</span> que passa pelo ponto <span class="process-math">\((x_0, y_0)\text{.}\)</span></p>
+<article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-47">Resolva o problema de valor inicial</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+\begin{gather*}
+\frac{\dd y}{\dd x}=y, \qquad y(0)=2
+\end{gather*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><p id="p-48">Já vimos que  <span class="process-math">\(y=ce^x\)</span> é uma família de soluções para a EDO <span class="process-math">\(\frac{\dd y}{\dd x}=y\)</span> em <span class="process-math">\((-\nfty, \infty)\text{.}\)</span> Quando <span class="process-math">\(x=0\)</span> e <span class="process-math">\(y=2\)</span> produzimos <span class="process-math">\(2=ce^0\text{.}\)</span> Assim, a solução desejada para o problema de valor inicial é <span class="process-math">\(y=2e^x\text{.}\)</span></p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-49">Resolva o problema de valor inicial</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+\begin{gather*}
+y'=xy^{\frac{1}{2}}, \qquad y(0)=0
+\end{gather*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-50">É fácil verificar que  <span class="process-math">\(y=0\)</span> é uma solução para <span class="process-math">\(y'=xy^{\frac{1}{2}}\)</span> que passa por <span class="process-math">\((0,0)\text{.}\)</span> Se <span class="process-math">\(y=\frac{x^4}{16}\)</span> então <span class="process-math">\(y(0)=0\)</span> e <span class="process-math">\(y'=\frac{x^3}{4}\text{.}\)</span> Logo,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y'=\frac{x^3}{4} = x\left(\frac{x^4}{16}\right)^{\frac{1}{2}} = xy^{\frac{1}{2}}.
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<article class="theorem theorem-like" id="th-01"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Existência e unicidade.</span>
+</h4>
+<p id="p-51">Considere uma região uma regão retângular <span class="process-math">\(R\)</span> definida por <span class="process-math">\([a,b]\times [c,d]\text{,}\)</span> que contém <span class="process-math">\((x_0,y_0)\)</span> no seu interior. Se <span class="process-math">\(f(x,y)\)</span> e <span class="process-math">\(\frac{\partial f}{\partial y}\)</span> são contínuas em <span class="process-math">\(R\)</span> então existe um intervalo <span class="process-math">\(I\)</span> centrado em <span class="process-math">\(x_0\)</span> e uma única função <span class="process-math">\(y(x)\)</span> definida em <span class="process-math">\(I\)</span> que satisfaz o problema de valor inicial de uma EDO de primeira ordem.</p></article><article class="example example-like" id="example-9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-52">O Problema de valor inicial</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th-01.html" id="md-11">
+\begin{gather*}
+y'=xy^{\frac{1}{2}}\qquad y(0)=0
+\end{gather*}
+</div>
+<p class="continuation">possui pelo menos duas soluções. Uma vez que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th-01.html" id="md-12">
+\begin{gather*}
+f(x,y)=xy^{\frac{1}{2}} \qquad \frac{\partial f}{\partial y}=\frac{x}{2y^{1/2}}
+\end{gather*}
+</div>
+<p class="continuation">são contínuas para <span class="process-math">\(y&gt;0\text{.}\)</span> Logo, pelo<a href="" class="xref" data-knowl="./knowl/th-01.html" title="Teorema 1.14: Existência e unicidade">Teorema 1.14</a>, dado um ponto qualquer <span class="process-math">\((x_0,y_0)\)</span> com <span class="process-math">\(y_0&gt;0\text{,}\)</span> existe algum intervalo que contém <span class="process-math">\(x_0\)</span> no qual a equação diferencial <span class="process-math">\(y'=xy^{\frac{1}{2}}\)</span> possui uma única solução <span class="process-math">\(y(t)\text{,}\)</span> tal que <span class="process-math">\(y(x_0)=y_0\text{.}\)</span></p></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Sugestão de vídeos</span>
+</h3>
+<ul class="disc"><li id="li-6"><p id="p-53"><a class="external" href="https://youtu.be/4nwz7jgepMY" target="_blank">Introdução às Equações Diferenciais.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li></ul></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><p id="p-12">O adjetivo ordinário aqui se refere às equações diferenciais que envolvem uma variável.</p></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/4nwz7jgepMY</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Dissolving salt.</span>
+</h4>
+<p>At time <span class="process-math">\(t=0\text{,}\)</span> where <span class="process-math">\(t\)</span> is measured in minutes, a tank with a 5-litre capacity contains 3 litres of water in which 1 kg of salt  is dissolved. Fresh water enters the tank at a rate of 2 litres per  minute and the fully mixed solution leaks out of the tank at the  <em class="emphasis">varying</em> rate of <span class="process-math">\(2t\)</span> litres per minute.</p>
+<ol class="lower-alpha">
+<li><p>Determine the volume of solution <span class="process-math">\(V(t)\)</span> in the tank at time <span class="process-math">\(t\text{.}\)</span></p></li>
+<li><p>Determine the amount of salt <span class="process-math">\(Q(t)\)</span> in solution when the amount of water in the tank is at maximum.</p></li>
+</ol>
+<p><em class="alert">Solution<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a>:</em> (a) The rate of change of the volume in the tank, at time <span class="process-math">\(t\text{,}\)</span>  is <span class="process-math">\(2-2t\text{,}\)</span> because water is entering at a rate <span class="process-math">\(2\)</span> and solution is  leaking out at a rate <span class="process-math">\(2t\text{.}\)</span> Thus</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\diff{V}{t}=2-2t
+\implies dV=(2-2t)\,dt
+\implies V=\int (2-2t)\,dt
+=2t-t^2+C
+\end{equation*}
+</div>
+<p class="continuation">at least until <span class="process-math">\(V(t)\)</span> reaches either the capacity of the tank or zero.  When <span class="process-math">\(t=0\text{,}\)</span> <span class="process-math">\(V=3\)</span> so <span class="process-math">\(C=3\)</span> and <span class="process-math">\(V(t)=3+2t-t^2\text{.}\)</span> Observe that  <span class="process-math">\(V(t)\)</span> is at a maximum when <span class="process-math">\(\diff{V}{t}=2-2t=0\text{,}\)</span> or <span class="process-math">\(t=1\text{.}\)</span></p>
+<p>(b) In the very short time interval from time <span class="process-math">\(t\)</span> to time <span class="process-math">\(t+dt\text{,}\)</span> <span class="process-math">\(2t\,dt\)</span> litres of brine leaves the tank. That is, the fraction  <span class="process-math">\(\frac{2t\,dt}{V(t)}\)</span> of the total salt in the tank, namely <span class="process-math">\(Q(t)\frac{2t\,dt}{V(t)}\)</span> kilograms, leaves. Thus salt is leaving the  tank at the rate</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{Q(t)\frac{2t\,dt}{V(t)}}{dt}
+=\frac{2tQ(t)}{V(t)}
+=\frac{2tQ(t)}{3+2t-t^2} \text{ kilograms per minute}
+\end{equation*}
+</div>
+<p class="continuation">so</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\diff{Q}{t}=-\frac{2tQ(t)}{3+2t-t^2}
+&amp;\implies
+\frac{dQ}{Q}=-\frac{2t}{3+2t-t^2}dt=-\frac{2t}{(3-t)(1+t)}dt\\
+&amp; \qquad\qquad\qquad =\Big[\frac{3/2}{t-3}+\frac{1/2}{t+1}\Big]dt\\
+&amp;\implies
+\log Q=\frac{3}{2}\log|t-3|+\frac{1}{2}\log|t+1|+C
+\end{align*}
+</div>
+<p class="continuation">We are interested in the time interval <span class="process-math">\(0\le t\le 1\text{.}\)</span> In this time interval <span class="process-math">\(|t-3|=3-t\)</span> and <span class="process-math">\(|t+1|=t+1\)</span> so</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\log Q=\frac{3}{2}\log(3-t)+\frac{1}{2}\log(t+1)+C
+\end{equation*}
+</div>
+<p class="continuation">At <span class="process-math">\(t=0\text{,}\)</span> <span class="process-math">\(Q\)</span> is 1 so</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\log 1 &amp; =\frac{3}{2}\log(3-0)+\frac{1}{2}\log(0+1)+C\\
+&amp;\implies  C=\log 1-\frac{3}{2}\log 3-\frac{1}{2}\log 1=-\frac{3}{2}\log 3
+\end{align*}
+</div>
+<p class="continuation">At <span class="process-math">\(t=1\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\log Q&amp;=\frac{3}{2}\log(3-1)+\frac{1}{2}\log(1+1)-\frac{3}{2}\log 3\\
+&amp; =2\log 2-\frac{3}{2}\log 3 =\log 4 -\log 3^{\frac{3}{2}}
+\end{align*}
+</div>
+<p class="continuation">so <span class="process-math">\(Q=\frac{4}{3^{\frac{3}{2}}}\text{.}\)</span></p></article><span class="incontext"><a href="sec_sep_de.html#eg_SDEmixingA" class="internal">em contexto</a></span>
+</body>
+</html>
