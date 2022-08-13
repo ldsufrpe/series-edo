@@ -23,6 +23,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -41,7 +54,8 @@ startup: {
     )}
 },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org//webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/0.13/pretext-webwork/2.16/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org//webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -115,7 +129,7 @@ startup: {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="external/images/logo/logo_UFRPE.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="intro-edo.html"><span class="title">EDO: N6</span></a></h1>
 <p class="byline">Leon Silva</p>
 </div>
@@ -153,6 +167,7 @@ true);
 <li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Resolvendo EDOs</a></li>
 <li><a href="section-1.html#subsection-3" data-scroll="subsection-3" class="internal">Equações Diferenciais de Primeira Ordem</a></li>
 <li><a href="section-1.html#subsection-4" data-scroll="subsection-4" class="internal">Sugestão de vídeos</a></li>
+<li><a href="section-1.html#exercises-intro-edo" data-scroll="exercises-intro-edo" class="internal">Exercícios</a></li>
 </ul>
 </li>
 <li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
@@ -167,7 +182,7 @@ true);
 <li id="li-1"><p id="p-3">Reconhecer e classificar uma equação diferencial.</p></li>
 <li id="li-2"><p id="p-4">Resolver uma equação diferncial.</p></li>
 <li id="li-3"><p id="p-5">Apresentar o teorema de existência e unicidade.</p></li>
-</ol></article><section class="introduction" id="introduction-2"><p id="p-6">Uma equação diferencial é uma equação para uma função desconhecida que envolve a derivada sua derivada. As equações diferenciais desempenham um papel central na modelagem de um grande número de fenômenos diferentes. Aqui está uma tabela que fornece várias equações diferenciais importantes e para que elas são usadas. Está longe de ser completo.</p>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-6">Uma equação diferencial é uma equação para uma função desconhecida que envolve a sua derivada. As equações diferenciais desempenham um papel central na modelagem de um grande número de fenômenos diferentes. Aqui está uma tabela que fornece várias equações diferenciais importantes e para que elas são usadas. Está longe de ser completo.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Lei do Movimento de Newton</td>
@@ -190,7 +205,7 @@ true);
 <td class="l m b1 r1 l0 t0 lines">descreve o movimento das ondas</td>
 </tr>
 <tr>
-<td class="l m b1 r1 l1 t0 lines">Equação de Schrödinger</td>
+<td class="l m b1 r1 l1 t0 lines">Equação de Schrodinger</td>
 <td class="l m b1 r1 l0 t0 lines">descreve átomos, moléculas e cristais</td>
 </tr>
 <tr>
@@ -241,8 +256,8 @@ F(x)=\int f(x)\dd x\text{.}
 <article class="definition definition-like" id="definition-1"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h4>
-<p id="p-9">Equações diferenciais são aquelas que contém as derivadas de uma ou mais variáveis dependentes (digamos <span class="process-math">\(y=f(x)\)</span> em relação a uma, ou mais variáveis independentes (digamos <span class="process-math">\(x\)</span>).</p></article><p id="p-10">Equações diferenciais são classificadas em relação ao <dfn class="terminology">tipo</dfn>, a <dfn class="terminology">ordem</dfn> e a linearidade</p>
-<section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Tipos das Equações Diferenciais.</span></h4>
+<p id="p-9">Equações diferenciais são aquelas que contém as derivadas de uma ou mais variáveis dependentes (digamos <span class="process-math">\(y=f(x)\)</span>) em relação a uma, ou mais variáveis independentes (digamos <span class="process-math">\(x\)</span>).</p></article><p id="p-10">Equações diferenciais são classificadas em relação ao <dfn class="terminology">tipo</dfn>, a <dfn class="terminology">ordem</dfn> e a linearidade.</p>
+<section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Tipos.</span></h4>
 <p id="p-11">Quando uma equação contém apenas derivadas ordinárias <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> de uma ou mais variáveis dependentes, com relação a uma única variável dependente, a denominamos de <dfn class="terminology">equação diferencial ordinária</dfn> (EDO). As equações a seguir</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
@@ -270,7 +285,7 @@ F(x)=\int f(x)\dd x\text{.}
 x\frac{\partial u}{\partial x}- y\frac{\partial u}{\partial y}=u
 \end{equation*}
 </div>
-<p class="continuation">são equações diferenciais parciais.</p></section><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">Ordem das Equações Diferenciais.</span></h4>
+<p class="continuation">são equações diferenciais parciais.</p></section><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">Ordem.</span></h4>
 <p id="p-13">A ordem da equação diferencial é dada pela maior ordem entre as derivadas envolvidas. Na equação a seguir</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
@@ -293,7 +308,7 @@ y -3x\frac{\dd y}{\dd x}=-2x
 <p class="continuation">é uma equação de quinta ordem.</p></section><article class="observation remark-like" id="observation-1"><h4 class="heading">
 <span class="type">Observação</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h4>
-<p id="p-14">Aqui vamos tratar apenas de equações diferenciais ordinárias (EDOs).</p></article><section class="paragraphs" id="paragraphs-3"><h4 class="heading"><span class="title">Linearidade das Equações Diferenciais Ordinárias.</span></h4>
+<p id="p-14">Aqui vamos tratar apenas de equações diferenciais ordinárias (EDOs).</p></article><section class="paragraphs" id="paragraphs-3"><h4 class="heading"><span class="title">Linearidade.</span></h4>
 <p id="p-15">Uma Equação diferencial ordinária é dita linear se:</p>
 <ol class="decimal">
 <li id="a"><p id="p-16">A variável dependente <span class="process-math">\(y\)</span> e todas as suas derivadas são de ordem um, ou seja, a potência de cada termo envolvendo <span class="process-math">\(y\)</span> é igual a 1.</p></li>
@@ -306,7 +321,7 @@ a_n(x)\frac{\dd^n y}{\dd x^n} + a_{n-1}(x)\frac{\dd^{n-1} y}{\dd x^{n-1}} + \cdo
 y}{\dd x} + a_0(x)y=g(x).
 \end{equation*}
 </div>
-<p class="continuation">As equações são exemplos de equações lineares:</p>
+<p class="continuation">As equações abaixo são exemplos de equações lineares:</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{align*}
 x\dd y + y\dd x=0 \amp \qquad \ct{Linear de primeira ordem}
@@ -336,7 +351,7 @@ x\frac{\dd^3 y}{\dd x^3} + x^3\frac{\dd^{2} y}{\dd x^2} - 5x\frac{\dd y}{\dd x} 
 </div></section></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Resolvendo EDOs</span>
 </h3>
-<section class="introduction" id="introduction-3">De modo geral uma equação diferêncial ordinária de orden <span class="process-math">\(n\)</span> pode ser escrita como<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqd2.html" id="mdn-2">
+<section class="introduction" id="introduction-3">De modo geral uma equação diferencial ordinária de orden <span class="process-math">\(n\)</span> pode ser escrita como<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqd2.html" id="mdn-2">
 \begin{gather}
 F\left(x,y, y', y'', \ldots, y^{(n)}\right)=0\tag{1.2}
 \end{gather}
@@ -345,32 +360,54 @@ F\left(x,y, y', y'', \ldots, y^{(n)}\right)=0\tag{1.2}
 F\left(x,f(x), f'(x), f''(x), \ldots, f^{(n)}(x)\right)=0
 \end{equation*}
 </div>para algum intervalo <span class="process-math">\(I\subseteq \mathbb{R}\text{.}\)</span></section><article class="example example-like" id="ex1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex1"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex1"><article class="example example-like"><p id="p-17">Verifique que <span class="process-math">\(y=\cos{x}\)</span> é uma solução para equação linear de ordem dois <span class="process-math">\(y''=1-y^2\)</span> no intervalo <span class="process-math">\(I=(-\infty, \infty).\)</span></p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Verificando uma solução.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex1"><article class="example example-like"><p id="p-17">Verifique que <span class="process-math">\(f(x)=\sin{x}\)</span> é uma solução para equação linear de ordem dois <span class="process-math">\((y'')^2=1-(y')^2\)</span> no intervalo <span class="process-math">\(I=(-\infty, \infty).\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-18"></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-18">Reescrevendo a EDO ficamos como <span class="process-math">\(F(y, y', y'')=(y'')^2+(y')^2-1\text{.}\)</span> Se <span class="process-math">\(f=\sin{x}\)</span> temos <span class="process-math">\(f'(x)=\cos{x}\)</span> e <span class="process-math">\(f''(x)=-\sin{x}\text{.}\)</span> Assim,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+F(y, f'(x), f''(x))=\sin^2{x}+ \cos^2{x}-1=1-1=0.
+\end{equation*}
+</div>
+<p class="continuation">Portanto, a função <span class="process-math">\(f(x)=\sin{x}\)</span> é uma solução para a EDO <span class="process-math">\((y'')^2=1-(y')^2\text{.}\)</span></p>
+</div></div>
 </div></article></div>
+<p id="p-19">Daqui em diante vamos sempre pensar que <span class="process-math">\(y=f(x)\text{.}\)</span></p>
 <article class="example example-like" id="ex2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex2"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex2"><article class="example example-like"><p id="p-19">Verifique quais das funções a seguir é uma solução para a equação linear de ordem dois <span class="process-math">\(y''-2y-15y=0\)</span> no intervalo <span class="process-math">\(I=(-\infty, \infty).\)</span></p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Mais de uma solução para uma EDO.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex2"><article class="example example-like"><p id="p-20">Verifique quais das funções a seguir é uma solução para a equação linear de ordem dois <span class="process-math">\(y''-2y'-15y=0\)</span> no intervalo <span class="process-math">\(I=(-\infty, \infty).\)</span></p>
 <article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-20"><span class="process-math">\(y=0\)</span></p>
+<p id="p-21"><span class="process-math">\(y=0\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><p id="p-21"></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><p id="p-22">Se <span class="process-math">\(y=0\)</span> então <span class="process-math">\(y'=0\)</span> e <span class="process-math">\(y''=0\text{.}\)</span> Daí, trata-se de uma solução para a EDO. Nestes casos, chamamos de <dfn class="terminology">solução trivial</dfn>.</p></div></div>
 </div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-22"><span class="process-math">\(y=e^{5x}\)</span></p>
+<p id="p-23"><span class="process-math">\(y=e^{5x}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-23"></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-24">Já que <span class="process-math">\(y=e^{5x}\)</span> temos <span class="process-math">\(y'=5e^{5x}\)</span> e consequentemente, <span class="process-math">\(y''=25e^{5x}\text{.}\)</span> Assim,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y''-2y'-15y = 25e^{5x} - 2\left(5e^{5x}\right)-15\left(e^{5x} \right)=0.
+\end{equation*}
+</div>
+</div></div>
 </div></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-24"><span class="process-math">\(y=e^{-3x}\)</span></p>
+<p id="p-25"><span class="process-math">\(y=e^{-3x}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><p id="p-25"></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-26">Já que <span class="process-math">\(y=e^{-3x}\)</span> temos <span class="process-math">\(y'=-3e^{-3x}\)</span> e consequentemente, <span class="process-math">\(y''=9e^{-3x}\text{.}\)</span> Assim,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y''-2y'-15y = 9e^{-3x} - 2\left(-3e^{-3x}\right)-15\left(e^{-3x} \right)=0.
+\end{equation*}
+</div>
+</div></div>
 </div></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-26"><span class="process-math">\(y=e^{x}\)</span></p>
+<p id="p-27"><span class="process-math">\(y=e^{x}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-27"></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-28">Se <span class="process-math">\(y=e^x\)</span> temos <span class="process-math">\(y=y'=y''\text{.}\)</span> Então fica claro que não se trata de uma solução para <span class="process-math">\(y''-2y'-15y.\)</span></p></div></div>
 </div></article></article></div>
-<p id="p-28">Falar sobre a solução nula <dfn class="terminology">TRIVIAL</dfn></p>
 <article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-29">Verifique se <span class="process-math">\(y=\frac{x^4}{16}\)</span> é uma solução para equação diferencial não-linear <span class="process-math">\(\frac{\dd
@@ -381,7 +418,7 @@ y}{\dd x}=xy^{1/2}\)</span> no intervalo <span class="process-math">\((-\infty, 
 <p id="p-31">A seguir apresentamos exmplos que mostram que nem toda equação diferencial possui solução.</p>
 <article class="example example-like" id="ex3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex3"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Equações diferenciais sem soluções.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex3"><article class="example example-like"><p id="p-32">As eqções diferenciais de primeira ordem</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex3"><article class="example example-like"><p id="p-32">As equações diferenciais de primeira ordem</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 (y')^2+3 =0
@@ -393,10 +430,10 @@ y}{\dd x}=xy^{1/2}\)</span> no intervalo <span class="process-math">\((-\infty, 
 (y')^2+ 2y^2+6 +10=0
 \end{equation*}
 </div>
-<p class="continuation">não possuem solução. A primeira porque sendo <span class="process-math">\((y')^2\)</span> positivo, seja qual for a função <span class="process-math">\(y\text{,}\)</span> não há a possibilidade se anularem quando somada a 3. A segunda segue o mesmo argumento, já que os termos <span class="process-math">\((y')^2\)</span> e <span class="process-math">\(y^2\)</span> são positivos para qualquer <span class="process-math">\(y\text{.}\)</span></p></article></div>
-<p id="p-33">Até aqui observamos o que chamamos de <dfn class="terminology">solução explicitas</dfn> de uma equação diferencial ordinária, ou seja, funções que podem ser escritas como <span class="process-math">\(y=f(x)\text{.}\)</span> Por exemplo, as soluções encontradas em <a href="" class="xref" data-knowl="./knowl/ex1.html" title="Exemplo 1.3">Exemplo 1.3</a> e <a href="" class="xref" data-knowl="./knowl/ex2.html" title="Exemplo 1.4">Exemplo 1.4</a> são explicitas. No exemplo a seguir exemplificamos o que seria uma <dfn class="terminology">solução implícita</dfn> de uma EDO.</p>
+<p class="continuation">não possuem solução. A primeira porque sendo <span class="process-math">\((y')^2\)</span> positivo, seja qual for a função <span class="process-math">\(y\text{,}\)</span> quando somada a 3 sempre diferirá de zero. A segunda segue o mesmo argumento, já que os termos <span class="process-math">\((y')^2\)</span> e <span class="process-math">\(y^2\)</span> são positivos para qualquer <span class="process-math">\(y\text{.}\)</span></p></article></div>
+<p id="p-33">Até aqui observamos o que chamamos de <dfn class="terminology">solução explicitas</dfn> de uma equação diferencial ordinária, ou seja, funções que podem ser escritas como <span class="process-math">\(y=f(x)\text{.}\)</span> Por exemplo, as soluções encontradas em <a href="" class="xref" data-knowl="./knowl/ex1.html" title="Exemplo 1.3: Verificando uma solução">Exemplo 1.3</a> e <a href="" class="xref" data-knowl="./knowl/ex2.html" title="Exemplo 1.4: Mais de uma solução para uma EDO">Exemplo 1.4</a> são explicitas. No exemplo a seguir exemplificamos o que seria uma <dfn class="terminology">solução implícita</dfn> de uma EDO.</p>
 <article class="example example-like" id="ex4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex4"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Solução implícita.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex4"><article class="example example-like"><p id="p-34">A equação <span class="process-math">\(x^2+y^2-4=0\)</span> é uma solução implícita para a equação diferencial</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
@@ -422,12 +459,12 @@ x}=-\frac{x}{y}
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-35">Mostre que para qualquer <span class="process-math">\(c&gt;0\)</span> a equação <span class="process-math">\(x^2+y^2-c=0\)</span> é uma solução implícita para <span class="process-math">\(\frac{\dd
 y}{\dd x}=-\frac{x}{y}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like">Proceda como no <a href="" class="xref" data-knowl="./knowl/ex4.html" title="Exemplo 1.7">Exemplo 1.7</a>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like">Proceda como no <a href="" class="xref" data-knowl="./knowl/ex4.html" title="Exemplo 1.7: Solução implícita">Exemplo 1.7</a>
 </div></div>
 </div></article></div>
 <section class="paragraphs" id="paragraphs-4"><h4 class="heading"><span class="title">Infinidade de soluções.</span></h4>
 <p id="p-36">É fácil verificar que para qualquer contante <span class="process-math">\(c\)</span> a função <span class="process-math">\(y=ce^{x^2}\)</span>  é uma solução para a equação diferencial ordinária <span class="process-math">\(\frac{\dd y}{\dd x}=2xy\text{.}\)</span> Em geral, uma EDO possui um número infinito de soluções. A seguir alguns exemplos ilustrativos.</p></section><article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Solução parametrizada.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-37">Verifique que para qualquer constante <span class="process-math">\(c\)</span> arbitrária, a função <span class="process-math">\(y=\frac{c}{x}+1\)</span> é solução da EDO de primeira ordem <span class="process-math">\(x\frac{\dd y}{\dd x}+y=1\)</span> em <span class="process-math">\((0, \infty)\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
@@ -442,7 +479,7 @@ x\frac{\dd y}{\dd x} +y=x\left(-\frac{c}{x^2}\right) + \frac{c}{x}+1=1.
 </div></article></div>
 <p id="p-39">Muitas vezes, podemos obter uma nova solução para uma EDO simplesmente somando outras duas soluções. Observe no exemplo a seguir.</p>
 <article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Combinando soluções.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-40">Dada a equação diferencial <span class="process-math">\(y''+ 9y=0\)</span> e <span class="process-math">\(c_1, c_2\in \mathbb{R}\text{.}\)</span></p>
 <article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <p id="p-41">Verifique que as funções <span class="process-math">\(y=c_1\cos{3x}\)</span> e <span class="process-math">\(y=c_2\sin{3x}\)</span> são soluções para equação diferencial.</p>
@@ -477,7 +514,7 @@ y''+9y=-9c_2\sin{3x}+9(c_2\sin{3x}=0.
 <p id="p-43">Verifique que a soma das soluções dadas acima é também uma solução da equação diferencial.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
-<p id="p-44">Neste caso, se <span class="process-math">\(y=c_1\cos{3x} + c_2\sin{3x}\)</span> então</p>
+<p id="p-44">Neste caso, se <span class="process-math">\(y=c_1\cos{3x} + c_2\sin{3x}\)</span> assim</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
 \begin{gather*}
 y'=-3c_1\sin{3x} + 3c_2\cos{3x}\\
@@ -510,7 +547,7 @@ y''-y=0.
 </div>
 <p class="continuation">sujeito à <dfn class="terminology">condição inical</dfn> <span class="process-math">\(y(x_0)=y_0\)</span> em que <span class="process-math">\(x_0\in I\)</span> é chamado de <dfn class="terminology">Problema de valor inicial</dfn>. Em outros termos, a solução da EDO é uma curva definida no intervalo <span class="process-math">\(I\)</span> que passa pelo ponto <span class="process-math">\((x_0, y_0)\text{.}\)</span></p>
 <article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Simples orblema de valor inicial.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-47">Resolva o problema de valor inicial</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
 \begin{gather*}
@@ -518,10 +555,10 @@ y''-y=0.
 \end{gather*}
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><p id="p-48">Já vimos que  <span class="process-math">\(y=ce^x\)</span> é uma família de soluções para a EDO <span class="process-math">\(\frac{\dd y}{\dd x}=y\)</span> em <span class="process-math">\((-\nfty, \infty)\text{.}\)</span> Quando <span class="process-math">\(x=0\)</span> e <span class="process-math">\(y=2\)</span> produzimos <span class="process-math">\(2=ce^0\text{.}\)</span> Assim, a solução desejada para o problema de valor inicial é <span class="process-math">\(y=2e^x\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><p id="p-48">Já vimos que  <span class="process-math">\(y=ce^x\)</span> é uma família de soluções para a EDO <span class="process-math">\(\frac{\dd y}{\dd x}=y\)</span> em <span class="process-math">\((-\infty, \infty)\text{.}\)</span> Quando <span class="process-math">\(x=0\)</span> e <span class="process-math">\(y=2\)</span> produzimos <span class="process-math">\(2=ce^0\text{.}\)</span> Assim, a solução desejada para o problema de valor inicial é <span class="process-math">\(y=2e^x\text{.}\)</span></p></div></div>
 </div></article></div>
 <article class="example example-like" id="example-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Uma EDO não-linear.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-49">Resolva o problema de valor inicial</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
 \begin{gather*}
@@ -558,7 +595,89 @@ f(x,y)=xy^{\frac{1}{2}} \qquad \frac{\partial f}{\partial y}=\frac{x}{2y^{1/2}}
 <p class="continuation">são contínuas para <span class="process-math">\(y&gt;0\text{.}\)</span> Logo, pelo<a href="" class="xref" data-knowl="./knowl/th-01.html" title="Teorema 1.14: Existência e unicidade">Teorema 1.14</a>, dado um ponto qualquer <span class="process-math">\((x_0,y_0)\)</span> com <span class="process-math">\(y_0&gt;0\text{,}\)</span> existe algum intervalo que contém <span class="process-math">\(x_0\)</span> no qual a equação diferencial <span class="process-math">\(y'=xy^{\frac{1}{2}}\)</span> possui uma única solução <span class="process-math">\(y(t)\text{,}\)</span> tal que <span class="process-math">\(y(x_0)=y_0\text{.}\)</span></p></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Sugestão de vídeos</span>
 </h3>
-<ul class="disc"><li id="li-6"><p id="p-53"><a class="external" href="https://youtu.be/4nwz7jgepMY" target="_blank">Introdução às Equações Diferenciais.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li></ul></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><p id="p-12">O adjetivo ordinário aqui se refere às equações diferenciais que envolvem uma variável.</p></div></div>
+<ul class="disc"><li id="li-6"><p id="p-53"><a class="external" href="https://youtu.be/4nwz7jgepMY" target="_blank">Introdução às Equações Diferenciais.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li></ul></section><section class="exercises" id="exercises-intro-edo"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.5</span> <span class="title">Exercícios</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-54">As funções</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y = x^2 + \frac{c}{x^2}
+\end{equation*}
+</div>
+<p class="continuation">são todas soluções da equação:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+xy' + 2y = 4x^2,\ (x \gt 0).
+\end{equation*}
+</div>
+<p class="continuation">Encontre a constante  <span class="process-math">\(c\)</span> que produz a solução que também satisfaz a condição inicial <span class="process-math">\(y(2)= 8\text{.}\)</span></p>
+<p id="p-55"><span class="process-math">\(c =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-56"><span class="process-math">\(c=16\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-57">Encontre uma solução não constante para <span class="process-math">\((x^{\,\prime})^2 + x^2 = 4\)</span> usando seu conhecimento de derivadas do cálculo básico.</p>
+<p id="p-58"><span class="process-math">\(x(t) =\)</span> <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-59"><span class="process-math">\(2\cos\!\left(t\right)\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-60">A equação diferencial</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-61">
+\begin{equation*}
+y^\prime = y-y^2
+\end{equation*}
+</div>
+<p class="continuation">tem uma das seguintes famílias de parâmetros como a sua solução geral</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-62">
+\begin{equation*}
+\begin{aligned}
+y\amp =\frac{1}{1+ce^{-x}} \\
+y\amp =\frac{1}{c+x^2} \\
+\end{aligned}
+\end{equation*}
+</div>
+<p id="p-63">Encontre a solução tal que <span class="process-math">\(y(0) = 4\text{:}\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-64"><span class="process-math">\(\frac{1}{1+-0.75e^{-x}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-65">Tente primeiro <span class="process-math">\(y=\frac{1}{c+x^2}\text{.}\)</span></p>
+<p id="p-66">Então <span class="process-math">\(y^\prime = \frac{-4x}{(c+x^2)^2}\)</span> enquanto</p>
+<p id="p-67"><span class="process-math">\(y-y^2 = \frac{1}{c+x^2} - \frac{1}{(c+x^2)^2}= \frac{c+x^2}{(c+x^2)^2} -
+\frac{1}{(c+x^2)^2}=\frac{c+x^2-1}{(c+x^2)^2}\)</span></p>
+<p id="p-68">Assim <span class="process-math">\(y^\prime\neq y-y^2\)</span> para esta função, não é a solução.</p>
+<p id="p-69">Agora tente <span class="process-math">\(y=\frac{1}{1+ce^{-x}}\text{.}\)</span> Então</p>
+<p id="p-70"><span class="process-math">\(y^\prime = \frac{ce^{-x}}{1+ce^{-x}}\)</span></p>
+<p id="p-71">enquanto</p>
+<p id="p-72"><span class="process-math">\(y-y^2=\frac{1}{1+ce^{-x}}-\frac{1}{(1+ce^{-x})^2}=\frac{1+ce^{-x}}{(1+ce^{-x})^2}-\frac{1}{(1+ce^{-x})^2}=\frac{ce^{-x}}{(1+ce^{-x})^2}\)</span></p>
+<p id="p-73">Então esta função é a solução</p>
+<p id="p-74">Definindo <span class="process-math">\(y(0)=4\)</span> temos</p>
+<p id="p-75"><span class="process-math">\(4 = \frac{1}{1+c}\)</span></p>
+<p id="p-76">Resolvendo para c, obtemos <span class="process-math">\(c = \frac{1}{4}-1=-0.75\text{.}\)</span></p>
+<p id="p-77">Então a solução para o Problema de Valor Inicial é <span class="process-math">\(y = \frac{1}{1 - 0.75e^{-x}}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-78">É a função definida por partes</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y = \left\lbrace \begin{array}{ll} -x^{2}, \amp \mbox{ se } x \lt 0 \\ x^{2}, \amp \mbox{ se } x
+\geq 0 \end{array} \right.
+\end{equation*}
+</div>
+<p class="continuation">a solução da equação diferencial <span class="process-math">\(xy'-2y=0\)</span> em <span class="process-math">\((-\infty,\infty)\text{?}\)</span></p>
+<p id="p-79"><ul style="list-style:circle;">
+<li id="li-7"><p id="p-80">Sim</p></li>
+<li id="li-8"><p id="p-81">Não</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-82"><span class="process-math">\(\text{Sim}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-83">O Teorema 1.14 garante que existe uma solução da equação diferencial <span class="process-math">\(\frac{dy}{dx} = \sqrt{y^{2}-25}\)</span> que passa pelo ponto</p>
+<ol id="p-84" class="lower-alpha">
+<li id="li-9"><p id="p-85"><span class="process-math">\(\left(3,-5\right)\text{?}\)</span></p></li>
+<li id="li-10"><p id="p-86"><span class="process-math">\(\left(-6,27\right)\text{?}\)</span></p></li>
+<li id="li-11"><p id="p-87"><span class="process-math">\(\left(0,31\right)\text{?}\)</span></p></li>
+<li id="li-12"><p id="p-88"><span class="process-math">\(\left(-3,5\right)\text{?}\)</span></p></li>
+</ol></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><p id="p-12">O adjetivo ordinário aqui se refere às equações diferenciais que envolvem uma variável.</p></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/4nwz7jgepMY</code></div></div>
 </div></main>
 </div>

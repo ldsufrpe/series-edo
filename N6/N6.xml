@@ -44,7 +44,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <pretext xml:lang="pt-BR" xmlns:xi="http://www.w3.org/2001/XInclude">
     <docinfo>
-        <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/logo_UFRPE.png"/>
+<!--        <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/logo_UFRPE.jpg"/>-->
 
 
         <macros>

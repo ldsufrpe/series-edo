@@ -54,6 +54,5 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         />
 
     <source>
-<directories generated="generated" external="external"/>
-</source>
+<directories external="media" generated="generated"/></source>
 </publication>
