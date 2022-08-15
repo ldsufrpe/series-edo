@@ -12,7 +12,27 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>When a raindrop falls it increases in size so that its mass <span class="process-math">\(m(t)\text{,}\)</span> is a function of time <span class="process-math">\(t\text{.}\)</span> The rate of growth of mass, i.e. <span class="process-math">\(\frac{dm}{dt}\text{,}\)</span> is <span class="process-math">\(km(t)\)</span> for some positive  constant <span class="process-math">\(k\text{.}\)</span> According to Newton's law of motion, <span class="process-math">\(\diff{}{t} (mv)=gm\text{,}\)</span>  where <span class="process-math">\(v\)</span> is the velocity of the raindrop (with <span class="process-math">\(v\)</span> being positive for downward motion) and <span class="process-math">\(g\)</span> is the acceleration due to gravity. Find the  terminal velocity, <span class="process-math">\(\lim\limits_{t\rightarrow\infty}v(t)\text{,}\)</span> of a raindrop.</p>
+<p><em class="alert">Solution:</em> When <span class="process-math">\(y\ne 0\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\diff{y}{x}=y^2
+\implies \frac{\dee{y}}{y^2}=\dee{x}
+\implies \frac{y^{-1}}{-1}=x+C
+\implies y=-\frac{1}{x+C}
+\end{equation*}
+</div>
+<p class="continuation">When <span class="process-math">\(y=0\text{,}\)</span> this computation breaks down because  <span class="process-math">\(\frac{\dee{y}}{y^2}\)</span> contains a division by 0. We can check if the function <span class="process-math">\(y(x)=0\)</span> satisfies the differential equation by just subbing it in:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y(x)=0\implies y'(x)=0,\ y(x)^2=0\implies y'(x)=y(x)^2
+\end{equation*}
+</div>
+<p class="continuation">So <span class="process-math">\(y(x)=0\)</span> is a solution and the full solution is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y(x)=0 \text{ or } y(x)=-\frac{1}{x+C}, \text{ for any constant $C$}
+\end{equation*}
+</div>
 <span class="incontext"><a href="sec_sep_de.html#p-15" class="internal">em contexto</a></span>
 </body>
 </html>

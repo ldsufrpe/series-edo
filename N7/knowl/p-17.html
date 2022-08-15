@@ -12,22 +12,12 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>Now that we know <span class="process-math">\(m(t)\)</span> (except for the value of the constant <span class="process-math">\(m(0)\)</span>),  we can substitute it into the second differential equation, which we can then use to determine the remaining unknown function <span class="process-math">\(v(t)\text{.}\)</span> Observe that the second equation, <span class="process-math">\(\diff{}{t} (mv)=gm(t)=gm(0)e^{kt}\)</span> tells that the derivative of the function <span class="process-math">\(y(t)=m(t)v(t)\)</span> is <span class="process-math">\(gm(0)e^{kt}\text{.}\)</span> So <span class="process-math">\(y(t)\)</span> is just an antiderivative of <span class="process-math">\(gm(0)e^{kt}\text{.}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p><em class="alert">Solution:</em> In this problem we have two unknown functions, <span class="process-math">\(m(t)\)</span> and <span class="process-math">\(v(t)\text{,}\)</span> and two differential equations, <span class="process-math">\(\frac{dm}{dt}=km\)</span> and <span class="process-math">\(\diff{}{t} (mv)=gm\text{.}\)</span> The first differential equation, <span class="process-math">\(\frac{dm}{dt}=km\text{,}\)</span> involves only  <span class="process-math">\(m(t)\text{,}\)</span> not <span class="process-math">\(v(t)\text{,}\)</span> so we use it to determine <span class="process-math">\(m(t)\text{.}\)</span> By Theorem<a href="" class="xref" data-knowl="./knowl/thm_linearODE.html" title="Teorema 1.5">Teorema 1.5</a>, with <span class="process-math">\(b=0\text{,}\)</span> <span class="process-math">\(a=k\text{,}\)</span> <span class="process-math">\(y\)</span> replaced by <span class="process-math">\(m\)</span> and <span class="process-math">\(x\)</span> replaced by <span class="process-math">\(t\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
 \begin{equation*}
-\diff{y}{t}=gm(t)=gm(0)e^{kt}
-\qquad
-\implies y(t)=\int gm(0)e^{kt}\,dt = gm(0)\frac{e^{kt}}{k}+C
+\diff{m}{t}=km \implies m(t) = m(0) e^{kt}
 \end{equation*}
 </div>
-<p class="continuation">Now that we know <span class="process-math">\(y(t)=m(t)v(t)=m(0)e^{kt}v(t)\text{,}\)</span> we can get <span class="process-math">\(v(t)\)</span> just by dividing out the <span class="process-math">\(m(0)e^{kt}\text{.}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-y(t) =gm(0)\frac{e^{kt}}{k}+C &amp; \implies m(0)e^{kt}v(t)=gm(0)\frac{e^{kt}}{k}+C\\
-&amp;  \implies v(t)=\frac{g}{k}+\frac{C}{m(0)e^{kt}}
-\end{align*}
-</div>
-<p class="continuation">Our solution, <span class="process-math">\(v(t)\text{,}\)</span> contains two arbitrary constants, namely <span class="process-math">\(C\)</span> and <span class="process-math">\(m(0)\text{.}\)</span> They will be determined by, for example, the mass and velocity at time <span class="process-math">\(t=0\text{.}\)</span> But since we are only interested in the terminal velocity  <span class="process-math">\(\lim\limits_{t\rightarrow\infty}v(t)\text{,}\)</span> we don't need to know <span class="process-math">\(C\)</span> and <span class="process-math">\(m(0)\text{.}\)</span> Since <span class="process-math">\(k \gt 0\text{,}\)</span> <span class="process-math">\(\lim\limits_{t\rightarrow\infty}\frac{C}{e^{kt}}=0\)</span> and the terminal velocity <span class="process-math">\(\lim\limits_{t\rightarrow\infty}v(t)=\frac{g}{k}\text{.}\)</span></p>
 <span class="incontext"><a href="sec_sep_de.html#p-17" class="internal">em contexto</a></span>
 </body>
 </html>

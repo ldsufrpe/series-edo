@@ -115,7 +115,7 @@ startup: {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="external/images/logo/logo_UFRPE.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="edo-separavel.html"><span class="title">EDO: N6</span></a></h1>
 <p class="byline">Leon Silva</p>
 </div>
@@ -163,138 +163,109 @@ true);
 <article class="definition definition-like" id="def_SDEsepdiffeq"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h4>
-<p id="p-3">A <em class="emphasis">separable differential equation</em> is an equation for a function <span class="process-math">\(y(x)\)</span> of the form</p>
+<p id="p-3">Uma <em class="emphasis">equação diferencial separável</em> é uma equação para a função <span class="process-math">\(y(x)\)</span> da forma</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \diff{y}{x}(x) = f(x)\ g\big(y(x)\big)
 \end{equation*}
-</div></article><p id="p-4">We'll start by developing a recipe for solving separable differential  equations. Then we'll look at many examples. Usually one suppresses the argument of <span class="process-math">\(y(x)\)</span>  and writes the  equation <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
+</div></article><p id="p-4">Começaremos desenvolvendo um método para resolver equações diferenciais separáveis. Para isso, normalmente suprime-se o argumento de <span class="process-math">\(y(x)\)</span> e escreve-se a equação <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html ./knowl/eq_SDEbasicSln.html">
 \begin{equation*}
 \diff{y}{x} = f(x)\ g(y)
 \end{equation*}
 </div>
-<p class="continuation">and solves such an equation by cross multiplying/dividing to get all of the <span class="process-math">\(y\)</span>'s, including the <span class="process-math">\(\dee{y}\)</span> on one side of  the equation and all of the <span class="process-math">\(x\)</span>'s, including the <span class="process-math">\(\dee{x}\text{,}\)</span> on the  other side of the equation.</p>
+<p class="continuation">e resolve tal equação multiplicando/dividindo cruzadamente para obter todos os <span class="process-math">\(y\)</span>'s, incluindo <span class="process-math">\(\dd y\)</span> em um dos lados da equação e todos os  <span class="process-math">\(x\)</span>'s, incluindo o <span class="process-math">\(\dd x\text{,}\)</span> no outro lado da equação.</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html ./knowl/eq_SDEbasicSln.html">
 \begin{equation*}
 \frac{\dee{y}}{g(y)}=f(x)\,\dee{x}
 \end{equation*}
 </div>
-<p class="continuation">(We are of course assuming that <span class="process-math">\(g(y)\)</span> is nonzero.) Then you integrate both sides</p>
+<p class="continuation">(Assumimos que  <span class="process-math">\(g(y)\)</span> é diferentre de zero.) Integrando ambos os lados</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html ./knowl/eq_SDEbasicSln.html" id="mdn-1">
 \begin{gather}
 \int\frac{\dee{y}}{g(y)}=\int f(x)\,\dee{x}\tag{✶}
 \end{gather}
 </div>
-<p class="continuation">This looks illegal, and indeed is illegal — <span class="process-math">\(\diff{y}{x}\)</span> is not a fraction. But we'll now see that the answer is still correct. This procedure is simply  a mnemonic device to help you remember that answer <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSln.html" title="Equação">(✶)</a>.</p>
+<p class="continuation">De fato — <span class="process-math">\(\diff{y}{x}\)</span> não é uma fração. Mas agora veremos que a resposta ainda está correta. Este procedimento é simplesmente um dispositivo para ajudá-lo a lembrar dessa resposta.   <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSln.html" title="Equação">(✶)</a>.</p>
 <ul class="disc">
-<li id="li-1"><p id="p-derived-li-1">Our goal is to find all functions <span class="process-math">\(y(x)\)</span> that obey <span class="process-math">\(\diff{y}{x}(x) = f(x)\ g\big(y(x)\big)\text{.}\)</span></p></li>
+<li id="li-1"><p id="p-derived-li-1">Nosso objetivo é encontrar todas as funções <span class="process-math">\(y(x)\)</span> que satisfazem <span class="process-math">\(\diff{y}{x}(x) = f(x)\
+g\big(y(x)\big)\text{.}\)</span></p></li>
 <li id="li-2">
-<p id="p-5">Assuming that <span class="process-math">\(g\)</span> is nonzero,</p>
+<p id="p-5">Assumindo que  <span class="process-math">\(g\)</span> é diferente de zero,</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{align*}
-y'(x) = f(x)\ g(y(x)) \amp \iff \frac{y'(x)}{g(y(x))}=f(x)\iff \int\frac{y'(x)}{g(y(x))}\,\dee{x}= \int f(x)\,\dee{x}\\
+y'(x) = f(x)\ g(y(x)) \amp \iff \frac{y'(x)}{g(y(x))}=f(x)\iff
+\int\frac{y'(x)}{g(y(x))}\,\dee{x}= \int f(x)\,\dee{x}\\
 \amp \iff \int\frac{\dee{y}}{g(y)}\bigg|_{y=y(x)}= \int f(x)\,\dee{x}\\
-\amp\hskip0.5in \text{with the substitution }y=y(x), \dee y = y'(x)\,\dee{x}
+\amp\hskip0.5in \text{com a substituição }y=y(x), \dee y = y'(x)\,\dee{x}
 \end{align*}
 </div>
 </li>
-<li id="li-3"><p id="p-derived-li-3">That's our answer <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSln.html" title="Equação">(✶)</a> again.</p></li>
+<li id="li-3"><p id="p-derived-li-3">E chegamos novamente em <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSln.html" title="Equação">(✶)</a> again.</p></li>
 </ul>
-<p id="p-6">Let <span class="process-math">\(G(y)\)</span> be an antiderivative of <span class="process-math">\(\frac{1}{g(y)}\)</span> (i.e. <span class="process-math">\(G'(y)=\frac{1}{g(y)}\)</span>) and <span class="process-math">\(F(x)\)</span> be an antiderivative of <span class="process-math">\(f(x)\)</span> (i.e. <span class="process-math">\(F'(x)=f(x)\)</span>). If we reinstate the argument of <span class="process-math">\(y\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSln.html" title="Equação">(✶)</a> is</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html" id="eq_SDEbasicSlnRig">
-\begin{equation}
-G\big(y(x)\big) = F(x) + C\tag{1.1}
-\end{equation}
-</div>
-<p id="p-7">Observe that the solution equation <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSlnRig.html" title="Equação 1.1">(1.1)</a> contains an arbitrary constant, <span class="process-math">\(C\text{.}\)</span> The value of this arbitrary constant <em class="emphasis">can not</em> be determined by the differential equation. You need additional data to determine it. Often this data consists of the value of the unknown function for one value of <span class="process-math">\(x\text{.}\)</span> That is, often the problem you have to solve is of the form</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSlnRig.html">
+<p id="p-6">O problema de valor inicial de uma equação separável tem a forma</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \diff{y}{x}(x) = f(x)\ g\big(y(x)\big)\qquad y(x_0)=y_0
 \end{equation*}
 </div>
-<p class="continuation">where <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(y)\)</span> are given functions and <span class="process-math">\(x_0\)</span> and <span class="process-math">\(y_0\)</span> are given numbers. This type of problem is called an “initial value problem”. It is solved by first using the method above to find the general solution to the differential equation, including the arbitrary constant <span class="process-math">\(C\text{,}\)</span> and then using the “initial condition” <span class="process-math">\(y(x_0)=y_0\)</span> to determine the value of <span class="process-math">\(C\text{.}\)</span> We'll see examples of this shortly.</p>
+<p class="continuation">no qual <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(y)\)</span> são funções e <span class="process-math">\(x_0\)</span> e <span class="process-math">\(y_0\)</span> são números reais. É resolvido primeiro usando o método acima para encontrar a solução geral para a equação diferencial, incluindo a constante arbitrária <span class="process-math">\(C\text{,}\)</span> e então usamos a initial condition <span class="process-math">\(y(x_0)=y_0\)</span> para determinar o valor de <span class="process-math">\(C\text{.}\)</span> Veremos exemplos disso mais adiante.</p>
 <article class="example example-like" id="eg_SDEsdeAA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SDEsdeAA"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">A separable warm-up.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SDEsdeAA"><article class="example example-like"><p id="p-8">The differential equation</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Um exemplo simples.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SDEsdeAA"><article class="example example-like"><p id="p-7">Enontre todas as soluções para a equação</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \diff{y}{x} = xe^{-y}
 \end{equation*}
 </div>
-<p class="continuation">is separable, and we now find all of its solutions by using our mnemonic  device. We start by cross-multiplying so as to move all <span class="process-math">\(y\)</span>'s to the left  hand side and all <span class="process-math">\(x\)</span>'s to the right hand side.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-8">A equação diferencial é separável. Começamos pela multiplicação cruzada para mover todos os <span class="process-math">\(y\)</span>'s para o lado esquerdo e todos os <span class="process-math">\(x\)</span>'s para o lado direito.</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 e^y\,\dee{y} = x\,\dee{x}
 \end{equation*}
 </div>
-<p class="continuation">Then we integrate both sides</p>
+<p class="continuation">Então nós integramos ambos os lados</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \int e^y\dee{y} = \int x\dee{x} \iff e^y = \frac{x^2}{2}+C
 \end{equation*}
 </div>
-<p class="continuation">The <span class="process-math">\(C\)</span> on the right hand side contains both the arbitrary constant  for the indefinite integral <span class="process-math">\(\int e^y\dee{y}\)</span> and the arbitrary constant for  the indefinite integral  <span class="process-math">\(\int x\dee{x}\text{.}\)</span> Finally, we solve for <span class="process-math">\(y\text{,}\)</span>  which is really a function of <span class="process-math">\(x\text{.}\)</span></p>
+<p class="continuation">O <span class="process-math">\(C\)</span> no lado direito contém tanto a constante arbitrária para a integral indefinida <span class="process-math">\(\int e^y\dee{y}\)</span> quanto a constante arbitrária para a integral indefinida arbitrary constant for the indefinite integral  <span class="process-math">\(\int x\dd x\text{.}\)</span> Por fim, resolvemos para <span class="process-math">\(y\)</span> para obter:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-y(x) = \log\Big(\frac{x^2}{2}+C\Big)
+y(x) = \ln\Big(\frac{x^2}{2}+C\Big)
 \end{equation*}
 </div>
-<p class="continuation">Recall that we are using <span class="process-math">\(\log\)</span> to refer to the natural (base <span class="process-math">\(e\)</span>) logarithm.</p>
-<p id="p-9">Note that <span class="process-math">\(C\)</span> is an arbitrary constant. It can take any value. It cannot be determined by the differential equation itself. In applications <span class="process-math">\(C\)</span> is usually determined by a requirement that <span class="process-math">\(y\)</span> take some prescribed value (determined by the  application) when <span class="process-math">\(x\)</span> is some prescribed value. For example, suppose that we wish to find a function <span class="process-math">\(y(x)\)</span> that obeys both</p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Um problema de valor inicial.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-9">Resolve o problema de valor inicial</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\diff{y}{x} = xe^{-y}\qquad\text{and}\qquad y(0)=1
+\diff{y}{x} = xe^{-y}\qquad\text{e}\qquad y(0)=1
 \end{equation*}
 </div>
-<p class="continuation">We know that, to have <span class="process-math">\(\diff{y}{x} = xe^{-y}\)</span> satisfied, we must have  <span class="process-math">\(y(x) = \log\big(\frac{x^2}{2}+C\big)\text{,}\)</span> for some constant <span class="process-math">\(C\text{.}\)</span> To also have <span class="process-math">\(y(0)=1\text{,}\)</span> we must have</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-10">Do <a href="" class="xref" data-knowl="./knowl/eg_SDEsdeAA.html" title="Exemplo 1.2: Um exemplo simples">Exemplo 1.2</a> sabemos que <span class="process-math">\(y(x) =
+\ln\big(\frac{x^2}{2}+C\big)\)</span> resolve <span class="process-math">\(\diff{y}{x} = xe^{-y}\text{,}\)</span> para alguma constante <span class="process-math">\(C\text{.}\)</span> Já que queremos <span class="process-math">\(y(0)=1\)</span> encontramos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SDEsdeAA.html" id="md-2">
 \begin{gather*}
 1=y(0)=\log\Big(\frac{x^2}{2}+C\Big)\bigg|_{x=0}=\log C \iff \log C =1 \iff C=e
 \end{gather*}
 </div>
-<p class="continuation">So our final solution is <span class="process-math">\(y(x) = \log\big(\frac{x^2}{2}+e\big)\text{.}\)</span></p></article></div>
-<article class="example example-like" id="eg_SDEsdeFrist"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SDEsdeFrist"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">A little more warm-up.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SDEsdeFrist"><article class="example example-like"><p id="p-10">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be any two constants. We'll now solve the family of differential equations</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\diff{y}{x} =a(y-b)
-\end{equation*}
-</div>
-<p class="continuation">using our mnemonic device.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
-\begin{align*}
-\frac{\dee{y}}{y-b} =a\,\dee{x} &amp;\implies  \int \frac{\dee{y}}{y-b}= \int a\,\dee{x}\\
-&amp; \implies  \log|y-b|= ax+c \implies |y-b|= e^{ax+c} =e^c e^{ax}\\
-&amp;\implies y-b = C e^{ax}
-\end{align*}
-</div>
-<p class="continuation">where <span class="process-math">\(C\)</span> is either <span class="process-math">\(+e^c\)</span> or <span class="process-math">\(-e^c\text{.}\)</span> Note that as <span class="process-math">\(c\)</span> runs over all real numbers, <span class="process-math">\(+e^c\)</span> runs over all strictly positive real numbers and <span class="process-math">\(-e^c\)</span> runs over all strictly negative real numbers. So, so far, <span class="process-math">\(C\)</span> can be any real number except <span class="process-math">\(0\text{.}\)</span> But we were a bit sloppy here. We implicitly assumed that <span class="process-math">\(y-b\)</span> was nonzero, so that we could divide it across.  None-the-less, the constant function <span class="process-math">\(y=b\text{,}\)</span> which corresponds to <span class="process-math">\(C=0\text{,}\)</span> is a perfectly good solution — when <span class="process-math">\(y\)</span> is the constant function <span class="process-math">\(y=b\text{,}\)</span> both <span class="process-math">\(\diff{y}{x}\)</span> and <span class="process-math">\(a(y-b)\)</span> are zero. So the general solution to <span class="process-math">\(\diff{y}{x} =a(y-b)\)</span> is <span class="process-math">\(y(x)=C e^{ax}+b\text{,}\)</span> where the constant <span class="process-math">\(C\)</span> can be any real number. Note that when <span class="process-math">\(y(x)=C e^{ax}+b\)</span> we have <span class="process-math">\(y(0)=C+b\text{.}\)</span> So <span class="process-math">\(C=y(0)-b\)</span> and the general solution is</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-y(x) = \{y(0)-b\}\,e^{ax} + b
-\end{equation*}
+<p class="continuation">Então a solução desejada é <span class="process-math">\(y(x) = \ln\big(\frac{x^2}{2}+e\big)\text{.}\)</span></p>
+</div></div>
 </div></article></div>
-<p id="p-11">This is worth stating as a theorem.</p>
-<article class="theorem theorem-like" id="thm_linearODE"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
-</h4>
-<p id="p-12">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be constants. The differentiable function <span class="process-math">\(y(x\)</span>) obeys the differential equation</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\diff{y}{x} =a(y-b)
-\end{equation*}
-</div>
-<p class="continuation">if and only if</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-y(x) = \{y(0)-b\}\,e^{ax} + b
-\end{equation*}
-</div></article><article class="example example-like" id="eg_SDEsdeA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SDEsdeA"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Solve <span class="process-math">\(\diff{y}{x}=y^2\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SDEsdeA"><article class="example example-like"><p id="p-13">Solve <span class="process-math">\(\diff{y}{x}=y^2\)</span></p>
-<p id="p-14"><em class="alert">Solution:</em> When <span class="process-math">\(y\ne 0\text{,}\)</span></p>
+<article class="example example-like" id="eg_SDEsdeA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SDEsdeA"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Resolvendo <span class="process-math">\(\diff{y}{x}=y^2\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SDEsdeA"><article class="example example-like"><p id="p-11">Resolva a equação diferencial <span class="process-math">\(\diff{y}{x}=y^2.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-12">Quando <span class="process-math">\(y\ne 0\text{,}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \diff{y}{x}=y^2
@@ -303,74 +274,26 @@ y(x) = \{y(0)-b\}\,e^{ax} + b
 \implies y=-\frac{1}{x+C}
 \end{equation*}
 </div>
-<p class="continuation">When <span class="process-math">\(y=0\text{,}\)</span> this computation breaks down because  <span class="process-math">\(\frac{\dee{y}}{y^2}\)</span> contains a division by 0. We can check if the function <span class="process-math">\(y(x)=0\)</span> satisfies the differential equation by just subbing it in:</p>
+<p class="continuation">Mas se <span class="process-math">\(y=0\text{,}\)</span> o cálculo falha porque  <span class="process-math">\(\frac{\dee{y}}{y^2}\)</span> contém uma divisão por <span class="process-math">\(0\text{.}\)</span> Podemos verificar se a função <span class="process-math">\(y(x)=0\)</span> satisfaz a equação diferencial apenas subtraindo-a:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 y(x)=0\implies y'(x)=0,\ y(x)^2=0\implies y'(x)=y(x)^2
 \end{equation*}
 </div>
-<p class="continuation">So <span class="process-math">\(y(x)=0\)</span> is a solution and the full solution is</p>
+<p class="continuation">Então <span class="process-math">\(y(x)=0\)</span> é uma solução e a geral é</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-y(x)=0 \text{ or } y(x)=-\frac{1}{x+C}, \text{ for any constant $C$}
+y(x)=0 \text{ ou } y(x)=-\frac{1}{x+C}, \text{ para qualquer constante $C$}
 \end{equation*}
+</div>
+</div></div>
 </div></article></div>
-<article class="example example-like" id="eg_SDEraindrop"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SDEraindrop"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">A falling raindrop.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SDEraindrop"><article class="example example-like"><p id="p-15">When a raindrop falls it increases in size so that its mass <span class="process-math">\(m(t)\text{,}\)</span> is a function of time <span class="process-math">\(t\text{.}\)</span> The rate of growth of mass, i.e. <span class="process-math">\(\frac{dm}{dt}\text{,}\)</span> is <span class="process-math">\(km(t)\)</span> for some positive  constant <span class="process-math">\(k\text{.}\)</span> According to Newton's law of motion, <span class="process-math">\(\diff{}{t} (mv)=gm\text{,}\)</span>  where <span class="process-math">\(v\)</span> is the velocity of the raindrop (with <span class="process-math">\(v\)</span> being positive for downward motion) and <span class="process-math">\(g\)</span> is the acceleration due to gravity. Find the  terminal velocity, <span class="process-math">\(\lim\limits_{t\rightarrow\infty}v(t)\text{,}\)</span> of a raindrop.</p>
-<p id="p-16"><em class="alert">Solution:</em> In this problem we have two unknown functions, <span class="process-math">\(m(t)\)</span> and <span class="process-math">\(v(t)\text{,}\)</span> and two differential equations, <span class="process-math">\(\frac{dm}{dt}=km\)</span> and <span class="process-math">\(\diff{}{t} (mv)=gm\text{.}\)</span> The first differential equation, <span class="process-math">\(\frac{dm}{dt}=km\text{,}\)</span> involves only  <span class="process-math">\(m(t)\text{,}\)</span> not <span class="process-math">\(v(t)\text{,}\)</span> so we use it to determine <span class="process-math">\(m(t)\text{.}\)</span> By Theorem <a href="" class="xref" data-knowl="./knowl/thm_linearODE.html" title="Teorema 1.4">Teorema 1.4</a>, with <span class="process-math">\(b=0\text{,}\)</span> <span class="process-math">\(a=k\text{,}\)</span> <span class="process-math">\(y\)</span> replaced by <span class="process-math">\(m\)</span> and <span class="process-math">\(x\)</span> replaced by <span class="process-math">\(t\text{,}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
-\begin{equation*}
-\diff{m}{t}=km \implies m(t) = m(0) e^{kt}
-\end{equation*}
-</div>
-<p id="p-17">Now that we know <span class="process-math">\(m(t)\)</span> (except for the value of the constant <span class="process-math">\(m(0)\)</span>),  we can substitute it into the second differential equation, which we can then use to determine the remaining unknown function <span class="process-math">\(v(t)\text{.}\)</span> Observe that the second equation, <span class="process-math">\(\diff{}{t} (mv)=gm(t)=gm(0)e^{kt}\)</span> tells that the derivative of the function <span class="process-math">\(y(t)=m(t)v(t)\)</span> is <span class="process-math">\(gm(0)e^{kt}\text{.}\)</span> So <span class="process-math">\(y(t)\)</span> is just an antiderivative of <span class="process-math">\(gm(0)e^{kt}\text{.}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\diff{y}{t}=gm(t)=gm(0)e^{kt}
-\qquad
-\implies y(t)=\int gm(0)e^{kt}\,dt = gm(0)\frac{e^{kt}}{k}+C
-\end{equation*}
-</div>
-<p class="continuation">Now that we know <span class="process-math">\(y(t)=m(t)v(t)=m(0)e^{kt}v(t)\text{,}\)</span> we can get <span class="process-math">\(v(t)\)</span> just by dividing out the <span class="process-math">\(m(0)e^{kt}\text{.}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
-\begin{align*}
-y(t) =gm(0)\frac{e^{kt}}{k}+C &amp; \implies m(0)e^{kt}v(t)=gm(0)\frac{e^{kt}}{k}+C\\
-&amp;  \implies v(t)=\frac{g}{k}+\frac{C}{m(0)e^{kt}}
-\end{align*}
-</div>
-<p class="continuation">Our solution, <span class="process-math">\(v(t)\text{,}\)</span> contains two arbitrary constants, namely <span class="process-math">\(C\)</span> and <span class="process-math">\(m(0)\text{.}\)</span> They will be determined by, for example, the mass and velocity at time <span class="process-math">\(t=0\text{.}\)</span> But since we are only interested in the terminal velocity  <span class="process-math">\(\lim\limits_{t\rightarrow\infty}v(t)\text{,}\)</span> we don't need to know <span class="process-math">\(C\)</span> and <span class="process-math">\(m(0)\text{.}\)</span> Since <span class="process-math">\(k \gt 0\text{,}\)</span> <span class="process-math">\(\lim\limits_{t\rightarrow\infty}\frac{C}{e^{kt}}=0\)</span> and the terminal velocity <span class="process-math">\(\lim\limits_{t\rightarrow\infty}v(t)=\frac{g}{k}\text{.}\)</span></p></article></div>
-<article class="example example-like" id="eg_SDEgluclose"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SDEgluclose"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Intravenous glucose.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SDEgluclose"><article class="example example-like"><p id="p-18">A glucose solution is administered  intravenously into the bloodstream at a constant rate <span class="process-math">\(r\text{.}\)</span> As the glucose is added, it is converted into other substances at a rate that is proportional to the concentration at that time. The concentration, <span class="process-math">\(C(t)\text{,}\)</span> of the glucose in the bloodstream at time <span class="process-math">\(t\)</span> obeys the differential equation</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\diff{C}{t}=r-kC
-\end{equation*}
-</div>
-<p class="continuation">where <span class="process-math">\(k\)</span> is a positive constant of proportionality.</p>
-<ol class="lower-alpha">
-<li id="li-4"><p id="p-derived-li-4">Express <span class="process-math">\(C(t)\)</span> in terms of <span class="process-math">\(k\)</span> and <span class="process-math">\(C(0)\text{.}\)</span></p></li>
-<li id="li-5"><p id="p-derived-li-5">Find <span class="process-math">\(\lim\limits_{t\rightarrow\infty} C(t)\text{.}\)</span></p></li>
-</ol>
-<p id="p-19"><em class="alert">Solution:</em> (a) Since <span class="process-math">\(r-kC=-k\big(C-\frac{r}{k}\big)\)</span> the given equation is</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
-\begin{equation*}
-\diff{C}{t}=-k\big(C-\frac{r}{k}\big)
-\end{equation*}
-</div>
-<p class="continuation">which is of the form solved in Theorem <a href="" class="xref" data-knowl="./knowl/thm_linearODE.html" title="Teorema 1.4">Teorema 1.4</a>  with <span class="process-math">\(a=-k\)</span> and <span class="process-math">\(b=\frac{r}{k}\text{.}\)</span> So the solution is</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
-\begin{equation*}
-C(t)=\frac{r}{k}+\Big(C(0)-\frac{r}{k}\Big)e^{-kt}
-\end{equation*}
-</div>
-<p id="p-20">For any <span class="process-math">\(k \gt 0\text{,}\)</span> <span class="process-math">\(\lim\limits_{t\rightarrow\infty} e^{-kt}=0\text{.}\)</span> Consequently, for any <span class="process-math">\(C(0)\)</span> and any <span class="process-math">\(k \gt 0\text{,}\)</span>  <span class="process-math">\(\lim\limits_{t\rightarrow\infty} C(t)=\frac{r}{k}, \text{.}\)</span> We could have predicted this limit without solving for <span class="process-math">\(C(t)\text{.}\)</span> If we  assume that <span class="process-math">\(C(t)\)</span> approaches some equilibrium value <span class="process-math">\(C_e\)</span> as <span class="process-math">\(t\)</span> approaches infinity, then taking the limits of both sides of <span class="process-math">\(\frac{dC}{dt}=r-kC\)</span> as <span class="process-math">\(t\rightarrow\infty\)</span> gives</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-0=r-kC_e\implies C_e=\frac{r}{k}
-\end{equation*}
-</div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Look at the right hand side of the equation. The <span class="process-math">\(x\)</span>-dependence is separated from the <span class="process-math">\(y\)</span>-dependence. That's the reason for the name “separable”.</div></div>
+<article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-13">Resolva <span class="process-math">\(\frac{\dd y}{\dd x}=\frac{x}{y} \qquad\text{e}\qquad y(4)=3.\)</span></p></article></div>
+<article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-14">Resolva <span class="process-math">\((1+x)\dd x - y\dd x=0\)</span></p></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Olhe para o lado direito da equação. A dependencia de <span class="process-math">\(x\)</span> é separada da dependência <span class="process-math">\(y\text{.}\)</span> Essa é a razão do nome “separável”.</div></div>
 </div></main>
 </div>
 </body>

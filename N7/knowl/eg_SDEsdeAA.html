@@ -12,45 +12,14 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">A separable warm-up.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Um exemplo simples.</span>
 </h4>
-<p>The differential equation</p>
+<p>Enontre todas as soluções para a equação</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \diff{y}{x} = xe^{-y}
 \end{equation*}
 </div>
-<p class="continuation">is separable, and we now find all of its solutions by using our mnemonic  device. We start by cross-multiplying so as to move all <span class="process-math">\(y\)</span>'s to the left  hand side and all <span class="process-math">\(x\)</span>'s to the right hand side.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-e^y\,\dee{y} = x\,\dee{x}
-\end{equation*}
-</div>
-<p class="continuation">Then we integrate both sides</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\int e^y\dee{y} = \int x\dee{x} \iff e^y = \frac{x^2}{2}+C
-\end{equation*}
-</div>
-<p class="continuation">The <span class="process-math">\(C\)</span> on the right hand side contains both the arbitrary constant  for the indefinite integral <span class="process-math">\(\int e^y\dee{y}\)</span> and the arbitrary constant for  the indefinite integral  <span class="process-math">\(\int x\dee{x}\text{.}\)</span> Finally, we solve for <span class="process-math">\(y\text{,}\)</span>  which is really a function of <span class="process-math">\(x\text{.}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-y(x) = \log\Big(\frac{x^2}{2}+C\Big)
-\end{equation*}
-</div>
-<p class="continuation">Recall that we are using <span class="process-math">\(\log\)</span> to refer to the natural (base <span class="process-math">\(e\)</span>) logarithm.</p>
-<p>Note that <span class="process-math">\(C\)</span> is an arbitrary constant. It can take any value. It cannot be determined by the differential equation itself. In applications <span class="process-math">\(C\)</span> is usually determined by a requirement that <span class="process-math">\(y\)</span> take some prescribed value (determined by the  application) when <span class="process-math">\(x\)</span> is some prescribed value. For example, suppose that we wish to find a function <span class="process-math">\(y(x)\)</span> that obeys both</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\diff{y}{x} = xe^{-y}\qquad\text{and}\qquad y(0)=1
-\end{equation*}
-</div>
-<p class="continuation">We know that, to have <span class="process-math">\(\diff{y}{x} = xe^{-y}\)</span> satisfied, we must have  <span class="process-math">\(y(x) = \log\big(\frac{x^2}{2}+C\big)\text{,}\)</span> for some constant <span class="process-math">\(C\text{.}\)</span> To also have <span class="process-math">\(y(0)=1\text{,}\)</span> we must have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-1=y(0)=\log\Big(\frac{x^2}{2}+C\Big)\bigg|_{x=0}=\log C \iff \log C =1 \iff C=e
-\end{gather*}
-</div>
-<p class="continuation">So our final solution is <span class="process-math">\(y(x) = \log\big(\frac{x^2}{2}+e\big)\text{.}\)</span></p></article><span class="incontext"><a href="sec_sep_de.html#eg_SDEsdeAA" class="internal">em contexto</a></span>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-1-hidden.html" title="Solução 1.2.1"><span class="type">Solução</span><span class="period">.</span></a></div></article><span class="incontext"><a href="sec_sep_de.html#eg_SDEsdeAA" class="internal">em contexto</a></span>
 </body>
 </html>
