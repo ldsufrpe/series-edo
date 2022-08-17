@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<publication>
+    <calculator model="geogebra-graphing"/>
+    <index-page ref="edo-separavel"/>
+    <css style="default" colors="red_blue"/>
+    <!-- directories are relative to the main source PreTeXt file -->
+    <source>
+        <directories external="../assets" generated="../generated-assets"/>
+    </source>
+
+    <webwork
+        server="https://webwork-ptx.aimath.org/"
+        course="anonymous"
+        coursepassword="anonymous"
+        user="anonymous"
+        userpassword="anonymous"
+        />
+</publication>

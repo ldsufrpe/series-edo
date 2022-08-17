@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pretext xml:lang="pt-BR" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <docinfo>
+     <macros>
+            \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+            \newcommand{ctm}[1]{\color{gray}{#1}}
+
+            \newcommand{\doubler}[1]{2#1}
+            \newcommand{\dd}{\mathrm{d}}
+            \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+            \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+            \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+            \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+            \DeclareMathOperator{\arcsec}{arc \,sec}
+            \DeclareMathOperator{\sin}{sen}
+            \DeclareMathOperator{\arcsin}{arc \,sen}
+            \DeclareMathOperator{\arccos}{arc \,cos}
+            \DeclareMathOperator{\csc}{cossec}
+            \DeclareMathOperator{\tan}{tg}
+            \DeclareMathOperator{\arctan}{arc\,tg}
+            \DeclareMathOperator{\cot}{cotg}
+            \newcommand{\dee}[1]{\mathrm{d}#1}
+	\newcommand{\half}{ \frac{1}{2} }
+	\newcommand{\ds}{\displaystyle}
+	\newcommand{\ts}{\textstyle}
+	\newcommand{\es}{ {\varnothing}}
+	\newcommand{\st}{ {\mbox{ s.t. }} }
+	\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+	\newcommand{\set}[1]{ \left\{#1\right\} }
+	\newcommand{\lin}{{\text{LIN}}}
+	\newcommand{\quot}{{\text{QR}}}
+	\newcommand{\simp}{{\text{SMP}}}
+	\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+	\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+	\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+	\renewcommand{\neg}{ {\sim} }
+	\newcommand{\limp}{ {\;\Rightarrow\;} }
+	\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+	\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+	\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+	\newcommand{\De}{\Delta}
+	\newcommand{\bbbn}{\mathbb{N}}
+	\newcommand{\bbbr}{\mathbb{R}}
+	\newcommand{\bbbp}{\mathbb{P}}
+	\newcommand{\cA}{\mathcal{A}}
+	\newcommand{\cI}{\mathcal{I}}
+	\newcommand{\cR}{\mathcal{R}}
+	\newcommand{\cV}{\mathcal{V}}
+	\newcommand{\Si}{\Sigma}
+
+
+	\newcommand{\erf}{\mathop{\mathrm{erf}}}
+	\newcommand{\smsum}{\mathop{{\ts \sum}}}
+	\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+	\newcommand{\ave}{\mathrm{ave}}
+	\newcommand{\llt}{\left \lt }
+	\newcommand{\rgt}{\right \gt }
+        </macros>
+  </docinfo>
+
+
+
+      <article xml:id="edo-separavel">
+        <title>EDO: N7</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
+                </author>
+
+
+                <date>
+                    <today/>
+                </date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana .</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária</p>
+        </introduction>
+
+
+        <xi:include href="./section-1.ptx"/>
+          <xi:include href="./section-2.ptx" />
+
+        <references xml:id="references-backmatter">
+            <title>Referências</title>
+            <biblio type="raw" xml:id="biblio-03">DENNIS, G. Zill; MICHAEL, R. Cullen <title>Equações Diferenciais.
+            </title>   <journal>PEARSON</journal>, 2001.
+            </biblio>
+
+
+                       <biblio type="raw" xml:id="biblio-05">MARIVALDO, P Matos. <title>Séries e Equações Diferenciais.</title>
+               <journal>Ciência Moderna</journal>, 2016.
+            </biblio>
+
+            <biblio type="raw" xml:id="biblio-06">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de
+                Computação
+                Matemática com SageMath.
+            </title>
+                <journal>SBM</journal>, 2019.
+            </biblio>
+        </references>
+
+    </article>
+
+
+
+</pretext>
