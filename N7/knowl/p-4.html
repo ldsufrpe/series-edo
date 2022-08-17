@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Parágrafo</span></h4>
+<p>Começaremos desenvolvendo um método para resolver equações diferenciais separáveis. Para isso, normalmente suprime-se o argumento de <span class="process-math">\(y(x)\)</span> e escreve-se a equação <a href="" class="fn-knowl original" data-knowl="./knowl/fn-1-hidden.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html ./knowl/eq_SDEbasicSln.html">
+\begin{equation*}
+\diff{y}{x} = f(x)\ g(y)
+\end{equation*}
+</div>
+<p class="continuation">e resolve tal equação multiplicando/dividindo cruzadamente para obter todos os <span class="process-math">\(y\)</span>'s, incluindo <span class="process-math">\(\dd y\)</span> em um dos lados da equação e todos os  <span class="process-math">\(x\)</span>'s, incluindo o <span class="process-math">\(\dd x\text{,}\)</span> no outro lado da equação.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html ./knowl/eq_SDEbasicSln.html">
+\begin{equation*}
+\frac{\dee{y}}{g(y)}=f(x)\,\dee{x}
+\end{equation*}
+</div>
+<p class="continuation">(Assumimos que  <span class="process-math">\(g(y)\)</span> é diferentre de zero.) Integrando ambos os lados</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SDEbasicSln.html ./knowl/eq_SDEbasicSln.html">
+\begin{gather}
+\int\frac{\dee{y}}{g(y)}=\int f(x)\,\dee{x}\tag{✶}
+\end{gather}
+</div>
+<p class="continuation">De fato — <span class="process-math">\(\diff{y}{x}\)</span> não é uma fração. Mas agora veremos que a resposta ainda está correta. Este procedimento é simplesmente um dispositivo para ajudá-lo a lembrar dessa resposta.   <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSln.html" title="Equação">(✶)</a>.</p>
+<ul class="disc">
+<li><p>Nosso objetivo é encontrar todas as funções <span class="process-math">\(y(x)\)</span> que satisfazem <span class="process-math">\(\diff{y}{x}(x) = f(x)\
+g\big(y(x)\big)\text{.}\)</span></p></li>
+<li>
+<p>Assumindo que  <span class="process-math">\(g\)</span> é diferente de zero,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+y'(x) = f(x)\ g(y(x)) \amp \iff \frac{y'(x)}{g(y(x))}=f(x)\iff
+\int\frac{y'(x)}{g(y(x))}\,\dee{x}= \int f(x)\,\dee{x}\\
+\amp \iff \int\frac{\dee{y}}{g(y)}\bigg|_{y=y(x)}= \int f(x)\,\dee{x}\\
+\amp\hskip0.5in \text{com a substituição }y=y(x), \dee y = y'(x)\,\dee{x}
+\end{align*}
+</div>
+</li>
+<li><p>E chegamos novamente em <a href="" class="xref" data-knowl="./knowl/eq_SDEbasicSln.html" title="Equação">(✶)</a> again.</p></li>
+</ul>
+<span class="incontext"><a href="sec_sep_de.html#p-4" class="internal">em contexto</a></span>
+</body>
+</html>

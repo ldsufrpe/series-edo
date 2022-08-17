@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Equações Diferenciais Homogênias</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(           \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+           \newcommand{ctm}[1]{\color{gray}{#1}}
+
+           \newcommand{\doubler}[1]{2#1}
+           \newcommand{\dd}{\mathrm{d}}
+           \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+           \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+           \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+           \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+           \DeclareMathOperator{\arcsec}{arc \,sec}
+           \DeclareMathOperator{\sin}{sen}
+           \DeclareMathOperator{\arcsin}{arc \,sen}
+           \DeclareMathOperator{\arccos}{arc \,cos}
+           \DeclareMathOperator{\csc}{cossec}
+           \DeclareMathOperator{\tan}{tg}
+           \DeclareMathOperator{\arctan}{arc\,tg}
+           \DeclareMathOperator{\cot}{cotg}
+           \newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="edo-separavel.html"><span class="title">EDO: N7</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_sep_de.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="edo-separavel.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="sec_sep_de.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="edo-separavel.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link">
+<a href="sec_sep_de.html" data-scroll="sec_sep_de" class="internal"><span class="codenumber">1</span> <span class="title">Equações Diferenciais Separáveis</span></a><ul><li><a href="sec_sep_de.html#subsection-1" data-scroll="subsection-1" class="internal">Separar e integrar</a></li></ul>
+</li>
+<li class="link active">
+<a href="section-2.html" data-scroll="section-2" class="internal"><span class="codenumber">2</span> <span class="title">Equações Diferenciais Homogênias</span></a><ul><li><a href="section-2.html#subsection-2" data-scroll="subsection-2" class="internal">Um método de solução</a></li></ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">3</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-2"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">2</span> <span class="title">Equações Diferenciais Homogênias</span>
+</h2>
+<section class="introduction" id="introduction-2"><p id="p-15">Para apresentar o conceito de equação diferencial homogênea de primeira ordem e como resolvê-las precisamos definir o que é uma <dfn class="terminology">função homogênea</dfn>.</p></section><article class="definition definition-like" id="definition-2"><h3 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Função Homogênea.</span>
+</h3>
+<p id="p-16">Uma função <span class="process-math">\(f\)</span> é dita homogênea de grau <span class="process-math">\(n\)</span> se satisfaz</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(tx,y)=t^{n}f(x,y)
+\end{equation*}
+</div>
+<p class="continuation">para algum <span class="process-math">\(n\text{.}\)</span></p></article><article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(f(x,y)=x^2+y^2\)</span> é homogênea de grau <span class="process-math">\(2\)</span>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-17">Note que se <span class="process-math">\(f(x,y)=x^2+y^2\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(tx,ty)=(xt)^2+ (yt)^2=t^2x^2+ t^2y^2= t^2(x^2+y^2)=t^2f(x,y).
+\end{equation*}
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h3 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-18">Verifique se <span class="process-math">\(f(x,y)=x^2-3xy+5y^2\)</span> é uma função homogênea.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like">
+<span class="process-math">\(f\)</span> é homogênea de grau 2.</div></div>
+</div></article></div>
+<article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(f(x,y)=\sqrt[5]{2x^2 + 2y^2}\)</span> é homogênea?</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-19">Observe que se <span class="process-math">\(f(x,y)=\sqrt[5]{2x^2 + 2y^2}\)</span>  então</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(xt,yt)=\sqrt[5]{2t^2x^2 + 2t^2y^2} = t^{\frac{2}{5}}\sqrt[5]{2x^2 + 2y^2}=t^{\frac{2}{5}}f(x,y).
+\end{equation*}
+</div>
+<p class="continuation">Logo, <span class="process-math">\(f(x,y)=\sqrt[5]{2x^2 + 2y^2}\)</span> é homogênea de grau <span class="process-math">\(\frac{2}{5}.\)</span></p></article></div>
+<article class="example example-like" id="example-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Uma função simples e não homogênea.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-20">A função <span class="process-math">\(f(x,y)= x^2+y^2+1\)</span> é não homogênea já que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(tx,ty)=t^2x^2 + t^2x^2+1 \neq t^2f(x,y).
+\end{equation*}
+</div>
+<p class="continuation">Isso se deve, geralmente, pela constante adicionada ao final da expressão <span class="process-math">\(x^2+y^2\)</span> que, por se só, é uma função homogênea. Outro fator que naturalmente influencia na homogêneadade é o grau dos termos da expressão, por exemplo,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+h(x,y)=\ob{x^2}{\text{grau 2}}-\ob{y}{\text{grau 1}}
+\end{equation*}
+</div>
+<p class="continuation">é não homogênea. Podemos ver isso verificando que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+h(tx,ty)=t^2x^2-ty\neq t^kh(x,y)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">seja  <span class="process-math">\(k=1\)</span> ou <span class="process-math">\(k=2\text{.}\)</span></p></article></div>
+<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h3 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-21">Mostre que <span class="process-math">\(f(x,y)=\frac{x}{3y} + 2\)</span> é homogênea de grau 0.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like">Lembre que podemos escrever <span class="process-math">\(1=t^0.\)</span>
+</div></div>
+</div></article></div>
+<p id="p-22">Agora vamos a um dos nossos objetivos que é apresentar o conceito de <dfn class="terminology">equação diferencial homogênea.</dfn></p>
+<article class="definition definition-like" id="definition-3"><h3 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Equação Diferencial Homogênia.</span>
+</h3>
+<p id="p-23">Uma equação diferencial é dita ser homogênea de primeira ordem se ela é da forma</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+P(x,y)\dd x + Q(x,y)\dd y=0
+\end{equation*}
+</div>
+<p class="continuation">em que <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\)</span> são funções homogêneas de mesmo grau.</p></article><article class="example example-like" id="example-9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-24">Verifique se a equação diferencial</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd y}{\dd x}=\frac{2xy+ y^2}{x^2}
+\end{equation*}
+</div>
+<p class="continuation">é homogênea.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-25">A EDO pode ser reescrita como</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+-(2xy+y^2)\dd x + x^2\dd y=0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Fazendo <span class="process-math">\(P(x,y)=-(2xy+y^2)\)</span> e <span class="process-math">\(Q(x,y)=x^2\)</span> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+\begin{gather*}
+P(xt,yt)=-(2xtyt+t^2y^2)= t^2P(x,y)\\
+Q(xt,yt)= t^2x=t^2Q(x,y).
+\end{gather*}
+</div>
+<p class="continuation">são ambas homogêneas de grau 2. Portanto, a equação diferencial <span class="process-math">\(\frac{\dd y}{\dd x}=\frac{2xy+
+y^2}{x^2}\)</span> é homogênea.</p>
+</div></div>
+</div></article></div>
+<section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">2.1</span> <span class="title">Um método de solução</span>
+</h3>
+<p id="p-26">A ideia principal é tranformar uma equação diferencial homogênea em separável. Para isso, fazemos a substituição <span class="process-math">\(y=ux\)</span> ou <span class="process-math">\(x=vy\)</span> de modo que <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> sejam as novas variáveis independentes. Isso fica claro quando diferenciamos <span class="process-math">\(y=ux\text{,}\)</span> obtendo</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-1.html ./knowl/eq-1.html ./knowl/eq-1.html" id="md-4">
+\begin{gather*}
+\dd y =u\dd x + x\dd u \quad \ct{Uma espécie de derivada do produto}.
+\end{gather*}
+</div>
+<p class="continuation">Substituindo na equação diferencial homogênea, temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-1.html ./knowl/eq-1.html ./knowl/eq-1.html">
+\begin{equation*}
+P(x,ux)\dd x + Q(x,ux)[u\dd x + x\dd u]=0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Do fato de <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\)</span> serem homogêneas de mesmo grau (digamos <span class="process-math">\(k\)</span>), podemos escrever</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-1.html ./knowl/eq-1.html ./knowl/eq-1.html">
+\begin{equation*}
+x^kP(1,u)\dd x + x^kQ(1,u)[u\dd x + x\dd u]=0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">ou ainda,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-1.html ./knowl/eq-1.html ./knowl/eq-1.html">
+\begin{equation*}
+[P(1,u) + uQ(1,u)]\dd x + xQ(1,u)\dd u = 0,
+\end{equation*}
+</div>
+<p class="continuation">daí,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-1.html ./knowl/eq-1.html ./knowl/eq-1.html" id="mdn-2">
+\begin{gather}
+\frac{\dd x}{x} + \frac{Q(1,u)\dd u}{P(1,u) + uQ(1,u)}=0.\tag{2.1}
+\end{gather}
+</div>
+<p class="continuation">Note que a equação <a href="" class="xref" data-knowl="./knowl/eq-1.html" title="Equação 2.1">(2.1)</a> é separável. É possível usar a substituição <span class="process-math">\(x=vy\)</span> e também chegar a uma equação separável como<a href="" class="xref" data-knowl="./knowl/eq-1.html" title="Equação 2.1">(2.1)</a>. <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span>
+</h4>
+<p id="p-27">Ao invés de memorizar a equação <a href="" class="xref" data-knowl="./knowl/eq-1.html" title="Equação 2.1">(2.1)</a> para resolver uma EDO homogênea é preferível repetir os passos acima.</p></article></p>
+<article class="example example-like" id="example-10"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-10"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Resolvendo uma Equação Homogênea.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-28">Resolva a equação <span class="process-math">\((x^2+y^2)\dd x + (x^2-xy)\dd y=0.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-29">As função <span class="process-math">\(P=(x^2+ y^2)\)</span> e <span class="process-math">\(Q(x,y)=x^2-xy\)</span> são homogêneas de grau 2. A substituição <span class="process-math">\(y=ux\)</span> produz</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html ./knowl/eq-3.html" id="md-5">
+\begin{align*}
+(x^2+u^2x^2)\dd x + (x^2-ux^2)[u\dd x + x\dd u]\amp = 0\\
+x^2(1+u)\dd x + x^3(1-u)\dd u\amp =0\\
+\frac{1-u}{1+u}\dd u + \frac{\dd x}{x}\amp =0\\
+\left[-1+\frac{2}{1+u}\right]\dd u + \frac{\dd x}{x}\amp = 0
+\end{align*}
+</div>
+<p class="continuation">Agora, após integrar a última linha acima, obtemos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html ./knowl/eq-3.html" id="mdn-3">
+\begin{align}
+-u + 2\ln|1+u| + \ln|x| \amp=\ln|c|\tag{2.2}\\
+-\frac{y}{x} + 2\ln\left|1+\frac{y}{x}\right| + \ln|x|\amp =\ln|c|.\tag{2.3}
+\end{align}
+</div>
+<p class="continuation">Por fim, usamos as propriedades de logaritmo em <a href="" class="xref" data-knowl="./knowl/eq-2.html" title="Equação 2.3">(2.3)</a> para obter</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html ./knowl/eq-3.html" id="mdn-4">
+\begin{gather}
+\ln\left|\frac{(x+y)^2}{cx}\right|=\frac{y}{x}.\tag{2.4}
+\end{gather}
+</div>
+<p class="continuation">Tomando a exponencial de <a href="" class="xref" data-knowl="./knowl/eq-3.html" title="Equação 2.4">(2.4)</a> encontramos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html ./knowl/eq-3.html">
+\begin{equation*}
+(x+y)^2=cxe^{\frac{y}{x}}.
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<p id="p-30">A escolha entre a substituição <span class="process-math">\(x=vy\)</span> e a <span class="process-math">\(y=ux\)</span> na equação diferencial homogênea pode tornar os termos da equação <a href="" class="xref" data-knowl="./knowl/eq-3.html" title="Equação 2.4">(2.4)</a> difíceis de integrar. De maneira geral, é p´referível usar <span class="process-math">\(x=vy\)</span> quando a função <span class="process-math">\(P(x,y)\)</span> é mais simples que <span class="process-math">\(Q(x,y)\text{,}\)</span> exemplificamos a seguir.</p>
+<article class="example example-like" id="example-11"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-11"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Usando a substituição <span class="process-math">\(x=vy\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-11"><article class="example example-like"><p id="p-31">Resolva e equação</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+2x^3y\dd x + (x^4+y^4)\dd y=0
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-32">As funções <span class="process-math">\(P(x,y)=x^3y\,\dd x\)</span> e <span class="process-math">\(Q(x,y)=(x^4+y^4)\dd y\)</span> são ambas homogêneas de grau 4. Como a expressão de <span class="process-math">\(P\)</span> é mais simples que a de <span class="process-math">\(Q\text{,}\)</span> escolhemos <span class="process-math">\(x=vy\)</span> para obter</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+\begin{align*}
+2v^3y^4[v\dd y + y\dd v] + (v^4y^4+ y^4)\dd y\amp =0
+\end{align*}
+</div>
+<p class="continuation">que depois de simplificada se torna</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{2v^3 \dd v}{3v^4+1} + \frac{\dd y}{y} =0.
+\end{equation*}
+</div>
+<p class="continuation">A integral de cada termo acima gera</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{6}\ln{(3v^4+1)} + \ln|y| = \ln|c_1|
+\end{equation*}
+</div>
+<p class="continuation">que depois de aplicar a exponencial em ambos os lados produz</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(3v^4+1)^{\frac{1}{6}}y=\ln|c_1|.
+\end{equation*}
+</div>
+<p class="continuation">Agora, fazendo <span class="process-math">\(v=x/y\)</span> e elevando ambos os lados a sexta potência descobrimos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+3x^4y^2+y^6=c
+\end{equation*}
+</div>
+<p class="continuation">de modo que <span class="process-math">\(c=c_{1}^6\text{.}\)</span> Por outro lado, quando se usa a substituição <span class="process-math">\(y=ux\)</span> teríamos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd x}{x} + \frac{u^4+1}{u^5+3u}\dd u =0.
+\end{equation*}
+</div>
+<p class="continuation">O último termos da equação acima parecer ser ainda mais complicado do que no caso anterior.</p>
+</div></div>
+</div></article></div>
+<section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Uma forma alternativa.</span></h4>
+<p id="p-33">Primeiro observe que se <span class="process-math">\(f(x,y)\)</span> for uma função homogênea de grau <span class="process-math">\(n\text{,}\)</span> note que poderemos escrever</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="mdn-5">
+\begin{gather}
+f(x,y)=x^nf\left(1,\frac{y}{x}\right)\tag{2.5}\\
+f(x,y)=y^nf\left(\frac{x}{y},1\right)\tag{2.6}
+\end{gather}
+</div>
+<p class="continuation">de modo que <span class="process-math">\(f(1, y/x)\)</span> e <span class="process-math">\(f(x/y,1)\)</span>  são ambas homogêneas de grau zero.</p>
+<p id="p-34">Agora suponha que reescrevemos a EDO <span class="process-math">\(P(x,y)\dd x + Q(x,y)\dd y=0\)</span> na forma</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-4.html">
+\begin{equation*}
+\frac{\dd y}{\dd x}=f(x,y)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">de modo que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-4.html">
+\begin{equation*}
+f(x,y)=-\frac{P(x,y)}{Q(x,y)}.
+\end{equation*}
+</div>
+<p class="continuation">A função <span class="process-math">\(f(x,y)\)</span> deve ser necessáriamente homogênea de grau zero quando <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\)</span> são homogêneas de grau <span class="process-math">\(n\text{.}\)</span> De <a href="" class="xref" data-knowl="./knowl/eq-4.html" title="Equação 2.5">(2.5)</a> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-4.html" id="mdn-6">
+\begin{gather}
+f(x,y) =-\frac{x^nP\left(1,\frac{y}{x}\right)}{x^nQ\left(1,\frac{y}{x}\right)}=
+-\frac{P\left(1,\frac{y}{x}\right)}{Q\left(1,\frac{y}{x}\right)}.\tag{2.7}
+\end{gather}
+</div>
+<p id="p-35">Assim, alternativamente, podemos representar uma equação diferencial homogênea da forma</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd y}{\dd x}=F\left(\frac{y}{x}\right).
+\end{equation*}
+</div></section><article class="example example-like" id="example-12"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-12"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-12"><article class="example example-like"><p id="p-36">Resolva o problema de valor inicial</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x\frac{\dd y}{\dd x}=y+xe^{\frac{y}{x},\qquad y(1)=1.
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-37">Quando escrevemos a equação diferencial da forma</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd y}{\dd x}=\frac{y}{x} + xe^{\frac{y}{x}},
+\end{equation*}
+</div>
+<p class="continuation">nota-se que a expressão à direita da igualdade é homogênea de grau zero. Olhando para expressão, somos induzidos a escolher a substituição <span class="process-math">\(u=\frac{y}{x}.\)</span> Depois de derivar <span class="process-math">\(y=ux\)</span> usando a regra do produto e substituir, obtemos <span class="process-math">\(u+x\frac{\dd u}{\dd x}=u+e^u.\)</span> Separando as variáveis encontramos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+e^{-u}\dd u=\frac{\dd x}{x}.
+\end{equation*}
+</div>
+<p class="continuation">Integrando e substituindo <span class="process-math">\(u=\frac{y}{x},\)</span> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+\begin{align*}
+-e^{-u}+c\amp=\ln|x|\\
+-e^{-y/x}+c\amp=\ln|x| \ct{retornando às variáveis $x$ e $y$}.
+\end{align*}
+</div>
+<p class="continuation">Da condição inicial temos <span class="process-math">\(-e^{-1}+c =0\text{,}\)</span> isto é, <span class="process-math">\(c=e^{-1}\text{.}\)</span> Portanto, A solução para o problema de valor inical é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+e^{-1}-e^{-y/x}=\ln|x|.
+\end{equation*}
+</div>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>
