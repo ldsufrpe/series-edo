@@ -11,34 +11,39 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<section class="paragraphs"><h4 class="heading"><span class="title">Tipos das Equações Diferenciais.</span></h4>
-<p>Quando uma equação contém apenas derivadas ordinárias <a href="" class="fn-knowl original" data-knowl="./knowl/fn-1-hidden.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a> de uma ou mais variáveis dependentes, com relação a uma única variável dependente, a denominamos de <dfn class="terminology">equação diferencial ordinária</dfn> (EDO). As equações a seguir</p>
+<section class="paragraphs"><h4 class="heading"><span class="title">Uma forma alternativa.</span></h4>
+<p>Primeiro observe que se <span class="process-math">\(f(x,y)\)</span> for uma função homogênea de grau <span class="process-math">\(n\text{,}\)</span> note que poderemos escrever</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather}
+f(x,y)=x^nf\left(1,\frac{y}{x}\right)\tag{2.5}\\
+f(x,y)=y^nf\left(\frac{x}{y},1\right)\tag{2.6}
+\end{gather}
+</div>
+<p class="continuation">de modo que <span class="process-math">\(f(1, y/x)\)</span> e <span class="process-math">\(f(x/y,1)\)</span>  são ambas homogêneas de grau zero.</p>
+<p>Agora suponha que reescrevemos a EDO <span class="process-math">\(P(x,y)\dd x + Q(x,y)\dd y=0\)</span> na forma</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-4.html">
 \begin{equation*}
-\frac{\dd y}{\dd t}+3y=6
+\frac{\dd y}{\dd x}=f(x,y)\text{,}
 \end{equation*}
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">de modo que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-4.html">
 \begin{equation*}
-(y+2x)\dd x - 3x\dd y =0
+f(x,y)=-\frac{P(x,y)}{Q(x,y)}.
 \end{equation*}
 </div>
+<p class="continuation">A função <span class="process-math">\(f(x,y)\)</span> deve ser necessáriamente homogênea de grau zero quando <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\)</span> são homogêneas de grau <span class="process-math">\(n\text{.}\)</span> De <a href="" class="xref" data-knowl="./knowl/eq-4.html" title="Equação 2.5">(2.5)</a> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-4.html">
+\begin{gather}
+f(x,y) =-\frac{x^nP\left(1,\frac{y}{x}\right)}{x^nQ\left(1,\frac{y}{x}\right)}=
+-\frac{P\left(1,\frac{y}{x}\right)}{Q\left(1,\frac{y}{x}\right)}.\tag{2.7}
+\end{gather}
+</div>
+<p>Assim, alternativamente, podemos representar uma equação diferencial homogênea da forma</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\frac{\dd^2y}{\dd x^2}-5\frac{\dd y}{\dd x}-13y=0
+\frac{\dd y}{\dd x}=F\left(\frac{y}{x}\right).
 \end{equation*}
-</div>
-<p class="continuation">são exemplos de equações diferenciais ordinárias. Uma equação que envolve as derivadas parciais de uma ou mais variáveis dependentes é denominada <dfn class="terminology">equação diferencial parcial</dfn> (EDP). Por exemplo,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{\partial u}{\partial y}=-3\frac{\partial v}{\partial x}
-\end{equation*}
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-x\frac{\partial u}{\partial x}- y\frac{\partial u}{\partial y}=u
-\end{equation*}
-</div>
-<p class="continuation">são equações diferenciais parciais.</p></section><span class="incontext"><a href="section-1.html#paragraphs-1" class="internal">em contexto</a></span>
+</div></section><span class="incontext"><a href="section-2.html#paragraphs-1" class="internal">em contexto</a></span>
 </body>
 </html>

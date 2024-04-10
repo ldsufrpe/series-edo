@@ -11,19 +11,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p><em class="alert">Solution:</em> (a) Since <span class="process-math">\(r-kC=-k\big(C-\frac{r}{k}\big)\)</span> the given equation is</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
+<h4 class="heading"><span class="type">Parágrafo</span></h4>
+<p>A função <span class="process-math">\(f(x,y)= x^2+y^2+1\)</span> é não homogênea já que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\diff{C}{t}=-k\big(C-\frac{r}{k}\big)
+f(tx,ty)=t^2x^2 + t^2x^2+1 \neq t^2f(x,y).
 \end{equation*}
 </div>
-<p class="continuation">which is of the form solved in Theorem <a href="" class="xref" data-knowl="./knowl/thm_linearODE.html" title="Teorema 1.5">Teorema 1.5</a> with <span class="process-math">\(a=-k\)</span> and <span class="process-math">\(b=\frac{r}{k}\text{.}\)</span> So the solution is</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_linearODE.html">
+<p class="continuation">Isso se deve, geralmente, pela constante adicionada ao final da expressão <span class="process-math">\(x^2+y^2\)</span> que, por se só, é uma função homogênea. Outro fator que naturalmente influencia na homogêneadade é o grau dos termos da expressão, por exemplo,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-C(t)=\frac{r}{k}+\Big(C(0)-\frac{r}{k}\Big)e^{-kt}
+h(x,y)=\ob{x^2}{\text{grau 2}}-\ob{y}{\text{grau 1}}
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec_sep_de.html#p-20" class="internal">em contexto</a></span>
+<p class="continuation">é não homogênea. Podemos ver isso verificando que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+h(tx,ty)=t^2x^2-ty\neq t^kh(x,y)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">seja  <span class="process-math">\(k=1\)</span> ou <span class="process-math">\(k=2\text{.}\)</span></p>
+<span class="incontext"><a href="section-2.html#p-20" class="internal">em contexto</a></span>
 </body>
 </html>

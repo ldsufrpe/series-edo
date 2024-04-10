@@ -10,11 +10,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="example example-like"><p>Resolva o problema de valor inicial</p>
+<body class="ignore-math"><article class="example example-like"><p>A função <span class="process-math">\(f(x,y)= x^2+y^2+1\)</span> é não homogênea já que</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-y'=xy^{\frac{1}{2}}, \qquad y(0)=0
-\end{gather*}
+\begin{equation*}
+f(tx,ty)=t^2x^2 + t^2x^2+1 \neq t^2f(x,y).
+\end{equation*}
 </div>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-10-hidden.html" title="Solução 1.13.1"><span class="type">Solução</span><span class="period">.</span></a></div></article></body>
+<p class="continuation">Isso se deve, geralmente, pela constante adicionada ao final da expressão <span class="process-math">\(x^2+y^2\)</span> que, por se só, é uma função homogênea. Outro fator que naturalmente influencia na homogêneadade é o grau dos termos da expressão, por exemplo,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+h(x,y)=\ob{x^2}{\text{grau 2}}-\ob{y}{\text{grau 1}}
+\end{equation*}
+</div>
+<p class="continuation">é não homogênea. Podemos ver isso verificando que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+h(tx,ty)=t^2x^2-ty\neq t^kh(x,y)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">seja  <span class="process-math">\(k=1\)</span> ou <span class="process-math">\(k=2\text{.}\)</span></p></article></body>
 </html>

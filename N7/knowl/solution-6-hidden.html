@@ -11,12 +11,42 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>Para <span class="process-math">\(y=\frac{c}{x}+1\)</span> temos  <span class="process-math">\(\frac{\dd y}{\dd x}=-\frac{c}{x^2}\text{.}\)</span> Logo,</p>
+<p>As funções <span class="process-math">\(P(x,y)=x^3y\,\dd x\)</span> e <span class="process-math">\(Q(x,y)=(x^4+y^4)\dd y\)</span> são ambas homogêneas de grau 4. Como a expressão de <span class="process-math">\(P\)</span> é mais simples que a de <span class="process-math">\(Q\text{,}\)</span> escolhemos <span class="process-math">\(x=vy\)</span> para obter</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+2v^3y^4[v\dd y + y\dd v] + (v^4y^4+ y^4)\dd y\amp =0
+\end{align*}
+</div>
+<p class="continuation">que depois de simplificada se torna</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-x\frac{\dd y}{\dd x} +y=x\left(-\frac{c}{x^2}\right) + \frac{c}{x}+1=1.
+\frac{2v^3 \dd v}{3v^4+1} + \frac{\dd y}{y} =0.
 \end{equation*}
 </div>
-<p class="continuation">Quando variamos o parâmetro <span class="process-math">\(c\text{,}\)</span> geramos uma infinidade de soluções. Em particular, fazendo <span class="process-math">\(c=0\text{,}\)</span> obtemos uma solução constante <span class="process-math">\(y=1\text{.}\)</span></p>
+<p class="continuation">A integral de cada termo acima gera</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{6}\ln{(3v^4+1)} + \ln|y| = \ln|c_1|
+\end{equation*}
+</div>
+<p class="continuation">que depois de aplicar a exponencial em ambos os lados produz</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(3v^4+1)^{\frac{1}{6}}y=\ln|c_1|.
+\end{equation*}
+</div>
+<p class="continuation">Agora, fazendo <span class="process-math">\(v=x/y\)</span> e elevando ambos os lados a sexta potência descobrimos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+3x^4y^2+y^6=c
+\end{equation*}
+</div>
+<p class="continuation">de modo que <span class="process-math">\(c=c_{1}^6\text{.}\)</span> Por outro lado, quando se usa a substituição <span class="process-math">\(y=ux\)</span> teríamos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dd x}{x} + \frac{u^4+1}{u^5+3u}\dd u =0.
+\end{equation*}
+</div>
+<p class="continuation">O último termos da equação acima parecer ser ainda mais complicado do que no caso anterior.</p>
 </div></body>
 </html>

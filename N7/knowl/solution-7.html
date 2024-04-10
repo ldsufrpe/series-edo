@@ -12,34 +12,35 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h5 class="heading">
-<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.10.a.1</span><span class="period">.</span>
-</h5>
-<p>Para <span class="process-math">\(y=c_1\cos{3x}\)</span> temos as derivadas:</p>
+<h4 class="heading">
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">2.12.1</span><span class="period">.</span>
+</h4>
+<p>Quando escrevemos a equação diferencial da forma</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-y'=-3c_1\sin{3x}
+\frac{\dd y}{\dd x}=\frac{y}{x} + xe^{\frac{y}{x}},
 \end{equation*}
 </div>
-<p class="continuation">e</p>
+<p class="continuation">nota-se que a expressão à direita da igualdade é homogênea de grau zero. Olhando para expressão, somos induzidos a escolher a substituição <span class="process-math">\(u=\frac{y}{x}.\)</span> Depois de derivar <span class="process-math">\(y=ux\)</span> usando a regra do produto e substituir, obtemos <span class="process-math">\(u+x\frac{\dd u}{\dd x}=u+e^u.\)</span> Separando as variáveis encontramos</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-y'' = -9c_1\cos{3x},
+e^{-u}\dd u=\frac{\dd x}{x}.
 \end{equation*}
 </div>
-<p class="continuation">assim</p>
+<p class="continuation">Integrando e substituindo <span class="process-math">\(u=\frac{y}{x},\)</span> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+-e^{-u}+c\amp=\ln|x|\\
+-e^{-y/x}+c\amp=\ln|x| \ct{retornando às variáveis $x$ e $y$}.
+\end{align*}
+</div>
+<p class="continuation">Da condição inicial temos <span class="process-math">\(-e^{-1}+c =0\text{,}\)</span> isto é, <span class="process-math">\(c=e^{-1}\text{.}\)</span> Portanto, A solução para o problema de valor inical é</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-y''+9y = -9c_1\cos{3x}+9(c_1\cos{3x}=0.
-\end{equation*}
-</div>
-<p class="continuation">De maneira similar, para <span class="process-math">\(y=c_2\sin{3x}\text{,}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-y''+9y=-9c_2\sin{3x}+9(c_2\sin{3x}=0.
+e^{-1}-e^{-y/x}=\ln|x|.
 \end{equation*}
 </div>
 </div>
-<span class="incontext"><a href="section-1.html#solution-7" class="internal">em contexto</a></span>
+<span class="incontext"><a href="section-2.html#solution-7" class="internal">em contexto</a></span>
 </body>
 </html>
