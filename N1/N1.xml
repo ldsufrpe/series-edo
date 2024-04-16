@@ -151,8 +151,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!--        <xi:include href="./otimizacao.xml" />-->
 
 
-
-
         <references xml:id="references-backmatter">
             <title>Referências</title>
             <biblio type="raw" xml:id="biblio-06">FELDMAN, joel; RECHNITZER, Andrew; YEAGER, Elyse <title>CLP-2
