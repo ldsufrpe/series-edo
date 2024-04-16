@@ -39,7 +39,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -67,7 +84,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -708,8 +726,184 @@ a_n\)</span> e  <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> conv
 </ul></section><section class="exercises" id="exercises-intro-series"><h3 class="heading hide-type">
 <span class="type">Exercícios</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Exercícios</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="para logical" id="p-41">
+<div class="para">Encontrar uma fórmula para o termo geral <span class="process-math">\(a_n\)</span> (não a soma parcial) da série infinita (começando com <span class="process-math">\(a_1\)</span>).</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\cdots
+\end{equation*}
+</div>
+</div> <div class="para" id="p-42">
+<span class="process-math">\(a_n\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
+<div class="solutions">
+<details id="answer-1" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-43"><span class="process-math">\(\frac{1}{2^{n}}\)</span></div></div></details><details id="solution-4" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-44">Os denominadores são potências de 2,começando com a primeira potência. Assim, o termo geral é <span class="process-math">\(a_n=\frac{1}{2^n}\text{.}\)</span>
+</div></div></details>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="p-45">
+<div class="para">Escreva a fórmula geral para a seguinte séries alternada da forma <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty}a_n.\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{3}{5}-\frac{3}{6}+\frac{3}{7}-\frac{3}{8}+\cdots
+\end{equation*}
+</div>
+</div> <div class="para" id="p-46">
+<span class="process-math">\(a_n =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
+<div class="solutions"><details id="answer-2" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-47"><span class="process-math">\(\frac{3\!\left(-1\right)^{n-1}}{4+n}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="p-48">
+<div class="para">Calcular as somas parciais <span class="process-math">\(S_2,S_4\text{,}\)</span> e <span class="process-math">\(S_6\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+4+\frac{4}{2^2}+\frac{4}{3^2}+\frac{4}{4^2}+\cdots
+\end{equation*}
+</div>
+</div> <div class="para" id="p-49">
+<span class="process-math">\(S_2\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-50">
+<span class="process-math">\(S_4\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-51">
+<span class="process-math">\(S_6\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
+<div class="solutions">
+<details id="answer-3" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-52"><span class="process-math">\(5\)</span></div></div></details><details id="answer-4" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-53"><span class="process-math">\(5.69444\)</span></div></div></details><details id="answer-5" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-54"><span class="process-math">\(5.96556\)</span></div></div></details><details id="solution-5" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-55"><span class="process-math">\(S_2=4+\frac{4}{2^2}=4\left( 1+\frac{1}{4}\right)=4\left(\frac{5}{4}\right)\text{;}\)</span></div> <div class="para" id="p-56"><span class="process-math">\(S_4=4+\frac{4}{2^2}+\frac{4}{3^2}+\frac{4}{4^2}=4\left(\frac{205}{144}\right)\text{;}\)</span></div> <div class="para" id="p-57"><span class="process-math">\(S_6=4+\frac{4}{2^2}+\frac{4}{3^2}+\frac{4}{4^2}+\frac{4}{5^2}+\frac{4}{6^2}=4\left(\frac{5369}{3600}\right)\text{.}\)</span></div>
+</div></details>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-58">Escreva <span class="process-math">\(S=\sum\limits_{n=6}^\infty \frac{1}{n(n-1)}\)</span> como uma série telescópica e encontre sua soma.</div> <div class="para" id="p-59">
+<span class="process-math">\(S_N\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-60">
+<span class="process-math">\(S\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
+<div class="solutions">
+<details id="answer-6" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-61"><span class="process-math">\(0.2-\frac{1}{N}\)</span></div></div></details><details id="answer-7" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-62"><span class="process-math">\(0.2\)</span></div></div></details><details id="solution-6" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-63">
+<div class="para">Por decomposição em fração parcial</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{n(n-1)}=\frac{1}{n-1}-\frac{1}{n},
+\end{equation*}
+</div>
+<div class="para">então</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S=\sum_{n=6}^\infty \frac{1}{n(n-1)}=\sum_{n=6}^\infty \left(\frac{1}{n-1}-\frac{1}{n}\right).
+\end{equation*}
+</div>
+<div class="para">O termo geral na sequência de somas parciais para esta série é</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_N=\left(\frac{1}{5}-\frac{1}{6}\right) + \left(\frac{1}{6}-\frac{1}{7}\right) + \cdots + \left(\frac{1}{N-1}-\frac{1}{N}\right)=\frac{1}{5}-\frac{1}{N};
+\end{equation*}
+</div>
+</div> <div class="para" id="p-64">Assim,</div> <div class="para logical" id="p-65"><div class="displaymath process-math">
+\begin{equation*}
+S=\lim_{N\rightarrow \infty} S_N = \lim_{N\rightarrow \infty}\left(\frac{1}{5}-\frac{1}{N}\right)=\frac{1}{5}.
+\end{equation*}
+</div></div>
+</div></details>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="p-66">
+<div class="para">Calcule <span class="process-math">\(S_3,S_{4}\)</span> e <span class="process-math">\(S_{5}\)</span> e encontre a soma para a série telescópica</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S=\sum_{n=6}^\infty \left(\frac{1}{n+1}-\frac{1}{n+2}\right)
+\end{equation*}
+</div>
+<div class="para">na qual <span class="process-math">\(S_k\)</span> é a soma parcial usando os primeiros valores <span class="process-math">\(k\)</span> de <span class="process-math">\(n\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-67">
+<span class="process-math">\(S_3\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-68">
+<span class="process-math">\(S_{4}\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-69">
+<span class="process-math">\(S_{5}\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-70">
+<span class="process-math">\(S\)</span> =  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
+<div class="solutions">
+<details id="answer-8" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-71"><span class="process-math">\(0.0428571\)</span></div></div></details><details id="answer-9" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-72"><span class="process-math">\(0.0519481\)</span></div></div></details><details id="answer-10" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-73"><span class="process-math">\(0.0595238\)</span></div></div></details><details id="answer-11" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-74"><span class="process-math">\(0.142857\)</span></div></div></details><details id="solution-7" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-75"><div class="displaymath process-math">
+\begin{equation*}
+S_3=\left(\frac{1}{7}-\frac{1}{8}\right)+\left(\frac{1}{8}-\frac{1}{9}\right)+\left(\frac{1}{9}-\frac{1}{10}\right)=\frac{1}{7}-\frac{1}{10}=\frac{3}{70};
+\end{equation*}
+</div></div> <div class="para logical" id="p-76"><div class="displaymath process-math">
+\begin{equation*}
+S_4=S_3+\left(\frac{1}{10}-\frac{1}{11}\right)=\frac{1}{7}-\frac{1}{11}=\frac{4}{77};
+\end{equation*}
+</div></div> <div class="para logical" id="p-77"><div class="displaymath process-math">
+\begin{equation*}
+S_5=S_4+\left(\frac{1}{11}-\frac{1}{12}\right)=\frac{1}{7}-\frac{1}{12}=\frac{5}{84}.
+\end{equation*}
+</div></div> <div class="para logical" id="p-78">
+<div class="para">O termo geral na sequência de somas parciais é</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_N=\left(\frac{1}{7}-\frac{1}{8}\right)+\left(\frac{1}{8}-\frac{1}{9}\right)+\left(\frac{1}{9}-\frac{1}{10}\right)+\cdots +\left(\frac{1}{N+6}-\frac{1}{N+7}\right)=\frac{1}{7}-\frac{1}{N+7};
+\end{equation*}
+</div>
+<div class="para">então,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S=\lim_{N\rightarrow \infty} S_N=\lim_{N\rightarrow \infty}\left(\frac{1}{7}-\frac{1}{N+7}\right)=\frac{1}{7}.
+\end{equation*}
+</div>
+</div> <div class="para" id="p-79">Portanto, a soma da série telescópica é <span class="process-math">\(\frac{1}{7}\text{.}\)</span>
+</div>
+</div></details>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-80">As seguintes séries são séries geométricas ou uma soma de duas Séries Geométricas.</div> <div class="para" id="p-81">Determine se cada série converge ou não.</div> <div class="para" id="p-82">Para as séries que convergem, insira a soma das séries. Para a série que diverge digite "DIV" (sem aspas).</div> <div class="para" id="p-83">(a)  <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} \frac{6^n}{5^n} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</div> <div class="para" id="p-84">(b)  <span class="process-math">\(\displaystyle \sum_{n=2}^{\infty} \frac{1}{3^n} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</div> <div class="para" id="p-85">(c)  <span class="process-math">\(\displaystyle \sum_{n=0}^{\infty} \frac{3^n}{4^{2n+1}} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</div> <div class="para" id="p-86">(d)  <span class="process-math">\(\displaystyle \sum_{n=5}^{\infty} \frac{5^n}{6^n} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</div> <div class="para" id="p-87">(e)  <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} \frac{6^n}{6^{n+4}} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</div> <div class="para" id="p-88">(f)  <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} \frac{5^n +3^n}{6^n} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</div>
+<div class="solutions">
+<details id="answer-12" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-89">DIV</div></div></details><details id="answer-13" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-90"><span class="process-math">\(0.166666666666667\)</span></div></div></details><details id="answer-14" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-91"><span class="process-math">\(0.307692307692308\)</span></div></div></details><details id="answer-15" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-92"><span class="process-math">\(2.41126543209877\)</span></div></div></details><details id="answer-16" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-93">DIV</div></div></details><details id="answer-17" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-94"><span class="process-math">\(6\)</span></div></div></details>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-95">Determine se a série converge e, em caso afirmativo, encontre sua soma.</div> <div class="para" id="p-96">
+<span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{1}{\left(k+6\right)\!\left(k+7\right)} =\)</span> <span class="fillin underline" role="img" aria-label="50-character blank" style="width: 22.7272727272727em;"></span>
+</div> <div class="para" id="p-97">(Insira DNE se a soma não existir.)</div>
+<div class="solutions">
+<details id="answer-18" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-98"><span class="process-math">\(\frac{1}{6+1}\)</span></div></div></details><details id="solution-8" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-99">
+<div class="para">Usando frações paciais</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{\left(k+6\right)\!\left(k+7\right)}=\frac{A}{k+6}+\frac{B}{k+7}=\frac{1}{k+6}-\frac{1}{k+7}
+\end{equation*}
+</div>
+<div class="para"><span class="process-math">\(s_n=\displaystyle \sum_{k=1}^{n} \left(\frac{1}{k+6}-\frac{1}{k+7}\right) =\left({\textstyle\frac{1}{7}}-{\textstyle\frac{1}{8}}\right)+\left({\textstyle\frac{1}{8}}-{\textstyle\frac{1}{9}}\right)+\left({\textstyle\frac{1}{9}}-{\textstyle\frac{1}{10}}\right)+...+\left(\frac{1}{n+5}-\frac{1}{n+6}\right)+\left(\frac{1}{n+6}-\frac{1}{n+7}\right)=\left({\textstyle\frac{1}{7}}-\frac{1}{n+7}\right)\)</span></div>
+</div> <div class="para" id="p-100">Logo, <span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{1}{\left(k+6\right)\!\left(k+7\right)} = \lim_{n\to\infty} \left({\textstyle\frac{1}{7}}-\frac{1}{n+7}\right) ={\textstyle\frac{1}{7}}\)</span>
+</div>
+</div></details>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-101">Determine se a série converge e, em caso afirmativo, encontre sua soma.</div> <div class="para" id="p-102">
+<span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{2^{k+5}}{3^{k-1}} =\)</span> <span class="fillin underline" role="img" aria-label="50-character blank" style="width: 22.7272727272727em;"></span>
+</div> <div class="para" id="p-103">(Insira DNE se a soma não existir.)</div>
+<div class="solutions">
+<details id="answer-19" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-104"><span class="process-math">\(\frac{3\cdot 2^{5+1}}{3^{-1+1}\!\left(3-2\right)}\)</span></div></div></details><details id="solution-9" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-105">Com <span class="process-math">\(a=64\)</span> e <span class="process-math">\(r={\textstyle\frac{2}{3}}\text{,}\)</span> <span class="process-math">\(|r|\lt 1\)</span> obtemos</div> <div class="para" id="p-106"><span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{2^{k+5}}{3^{k-1}} =64 \sum_{k=0}^{\infty} \left({\textstyle\frac{2}{3}}\right)^{k} =\frac{64}{1-\left({\textstyle\frac{2}{3}}\right)}=192\)</span></div>
+</div></details>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-107">Use a fórmula para a soma de uma série geométrica para encontrar a soma ou indique que a série diverge (insira DIV para uma série divergente).</div> <div class="para logical" id="p-108"><div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=4}^\infty \frac{7^n}{14^n}
+\end{equation*}
+</div></div> <div class="para" id="p-109">
+<span class="process-math">\(S=\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
+<div class="solutions">
+<details id="answer-20" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-110"><span class="process-math">\(0.125\)</span></div></div></details><details id="solution-10" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-111">
+<div class="para">Esta é uma série geométrica com <span class="process-math">\(c=\left(\frac{7}{14}\right)^{4}\)</span> e <span class="process-math">\(0\lt r=\frac{7}{14}\lt 1\text{.}\)</span> Logo,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=4}^\infty \frac{7^n}{14^n}=
+\left(\frac{7}{14}\right)^{4}\sum_{n=0}^\infty\left( \frac{7}{14}\right)^n=
+\left(\frac{7}{14}\right)^{4}\left(\frac{1}{1-\frac{7}{14}}\right)=\left(\frac{7}{14}\right)^{4}\left(\frac{14}{7}\right).
+\end{equation*}
+</div>
+</div></div></details>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para logical" id="p-112">
 <div class="para">Suponha que a sequência de somas parciais da série <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> é <span class="process-math">\(\{S_N\} = \left\{\dfrac{N}{N+1}\right\}\text{.}\)</span>
 </div>
 <ol class="lower-alpha">
@@ -722,10 +916,10 @@ a_n\)</span> e  <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> conv
 </ol>
 </div>
 <div class="solutions">
-<details id="answer-1" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-42">(a) <span class="process-math">\(\displaystyle a_n = \begin{cases}
+<details id="answer-21" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-113">(a) <span class="process-math">\(\displaystyle a_n = \begin{cases}
 \frac12 \amp\mbox{ se } n=1\\
 \dfrac{1}{n(n+1)} \amp\mbox{ caso contrário }\\
-\end{cases}\qquad\)</span> (b) <span class="process-math">\(0\qquad\)</span> (c) 1</div></div></details><details id="solution-4" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-43"><ol class="lower-alpha">
+\end{cases}\qquad\)</span> (b) <span class="process-math">\(0\qquad\)</span> (c) 1</div></div></details><details id="solution-11" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-114"><ol class="lower-alpha">
 <li id="li-20"><div class="para" id="p-derived-li-20">
 <span class="process-math">\(S_N\)</span> é a soma dos primeiros  <span class="process-math">\(N\)</span> termos de <span class="process-math">\(\{a_n\}\text{,}\)</span> e <span class="process-math">\(S_{N-1}\)</span> é a soma dos mesmos termos <em class="emphasis">exceto</em> <span class="process-math">\(a_N\text{.}\)</span> Então, <span class="process-math">\(a_N = S_N-S_{N-1}\)</span> quando <span class="process-math">\(N \geq 2\text{.}\)</span> Em outros termos:<div class="displaymath process-math" id="md-20">
 \begin{align*}
@@ -754,12 +948,12 @@ a_n\amp=\frac{1}{n(n+1)}
 </div>
 </div></li>
 <li id="li-21">
-<div class="para logical" id="p-44"><div class="displaymath process-math">
+<div class="para logical" id="p-115"><div class="displaymath process-math">
 \begin{equation*}
 \lim\limits_{n \to \infty} a_n =\lim\limits_{n \to \infty} \dfrac{1}{n(n+1)}=0.
 \end{equation*}
 </div></div>
-<div class="para" id="p-45">Ou seja, os termos que estamos somando estão ficando arbitrariamente pequenos à medida que avançamos.</div>
+<div class="para" id="p-116">Ou seja, os termos que estamos somando estão ficando arbitrariamente pequenos à medida que avançamos.</div>
 </li>
 <li id="li-22"><div class="para" id="p-derived-li-22">Por definição,<div class="displaymath process-math">
 \begin{equation*}
@@ -768,13 +962,13 @@ a_n\amp=\frac{1}{n(n+1)}
 </div>Ou seja, à medida que adicionamos mais termos da série, a nossa soma acumulada fica próxima de 1.</div></li>
 </ol></div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="p-46">Suponha que a sequência de somas parciais da série <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> é <span class="process-math">\(\{S_N\} = \left\{(-1)^N+\dfrac{1}{N}\right\}\text{.}\)</span> Encontre <span class="process-math">\(\{a_n\}\text{.}\)</span>
+<div class="para" id="p-117">Suponha que a sequência de somas parciais da série <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> é <span class="process-math">\(\{S_N\} = \left\{(-1)^N+\dfrac{1}{N}\right\}\text{.}\)</span> Encontre <span class="process-math">\(\{a_n\}\text{.}\)</span>
 </div>
 <div class="solutions">
-<details id="hint-1" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-47">Calcule <span class="process-math">\(a_1\)</span> separadamente dos outros termos.</div></div></details><details id="answer-2" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-48"><span class="process-math">\(a_n=\begin{cases}
+<details id="hint-1" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-118">Calcule <span class="process-math">\(a_1\)</span> separadamente dos outros termos.</div></div></details><details id="answer-22" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-119"><span class="process-math">\(a_n=\begin{cases}
 0 \amp \mbox{ if } n=1\\
 2(-1)^{n} -\frac{1}{n(n-1)} \amp\mbox{ caso contrário }
-\end{cases}\)</span></div></div></details><details id="solution-5" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-49"><div class="displaymath process-math" id="md-21">
+\end{cases}\)</span></div></div></details><details id="solution-12" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-120"><div class="displaymath process-math" id="md-21">
 \begin{align*}
 a_N \amp=S_N-S_{N-1}=\left[(-1)^N+\dfrac{1}{N}\right]-\left[(-1)^{N-1}+\dfrac{1}{N-1}\right]\\
 \amp=(-1)^N-(-1)^{N-1} + \frac{1}{N}-\frac{1}{N-1}\\
@@ -795,12 +989,12 @@ a_n\amp=\begin{cases}
 \end{align*}
 </div></div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="p-50">Calcule <span class="process-math">\(\displaystyle\sum_{n=0}^{100}\frac{1}{5^n}\text{.}\)</span>
+<div class="para" id="p-121">Calcule <span class="process-math">\(\displaystyle\sum_{n=0}^{100}\frac{1}{5^n}\text{.}\)</span>
 </div>
 <div class="solutions">
-<details id="hint-2" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-51">
+<details id="hint-2" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-122">
 <span class="process-math">\(\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}\text{,}\)</span> para <span class="process-math">\(r \neq 1\text{.}\)</span>
-</div></div></details><details id="answer-3" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-52"><span class="process-math">\(\dfrac{5^{101}-1}{4\cdot 5^{100}}\)</span></div></div></details><details id="solution-6" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-53">
+</div></div></details><details id="answer-23" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-123"><span class="process-math">\(\dfrac{5^{101}-1}{4\cdot 5^{100}}\)</span></div></div></details><details id="solution-13" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-124">
 <div class="para">
 <span class="process-math">\(\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}\text{,}\)</span> for <span class="process-math">\(r \neq 1\text{.}\)</span> A série é Geométrica com <span class="process-math">\(a=1\text{,}\)</span> <span class="process-math">\(r=\frac{1}{5}\text{,}\)</span> e <span class="process-math">\(N=100\text{.}\)</span> Logo:</div>
 <div class="displaymath process-math">
@@ -811,10 +1005,10 @@ a_n\amp=\begin{cases}
 </div>
 </div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<div class="para" id="p-54">Calcule <span class="process-math">\(\displaystyle\sum_{n=50}^{100}\frac{1}{5^n}\text{.}\)</span>
+<div class="para" id="p-125">Calcule <span class="process-math">\(\displaystyle\sum_{n=50}^{100}\frac{1}{5^n}\text{.}\)</span>
 </div>
 <div class="solutions">
-<details id="hint-3" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-55">Para ajustar o índice inicial, fatore o primeiro termo da série ou subtraia duas séries.</div></div></details><details id="answer-4" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-56"><span class="process-math">\(\dfrac{5^{51}-1}{4\cdot 5^{100}}\)</span></div></div></details><details id="solution-7" class="solution solution-like"><summary><span class="type">Solução</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-57">
+<details id="hint-3" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-126">Para ajustar o índice inicial, fatore o primeiro termo da série ou subtraia duas séries.</div></div></details><details id="answer-24" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-127"><span class="process-math">\(\dfrac{5^{51}-1}{4\cdot 5^{100}}\)</span></div></div></details><details id="solution-14" class="solution solution-like"><summary><span class="type">Solução</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-128">
 <div class="para">Observe que</div>
 <div class="displaymath process-math" id="md-22">
 \begin{align*}
@@ -830,7 +1024,7 @@ a_n\amp=\begin{cases}
 \amp=\frac{5^{51}-1}{4\cdot 5^{100}}
 \end{align*}
 </div>
-</div></div></details><details id="solution-8" class="solution solution-like"><summary><span class="type">Solução</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-58">
+</div></div></details><details id="solution-15" class="solution solution-like"><summary><span class="type">Solução</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-129">
 <div class="para">Se escrevermos os primeiros termos da nossa série, veremos que podemos fatorar uma constante para alterar o índice inicial.</div>
 <div class="displaymath process-math" id="md-23">
 \begin{align*}
@@ -849,12 +1043,12 @@ a_n\amp=\begin{cases}
 </div>
 </div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<div class="para" id="p-59">Calcule <span class="process-math">\(\displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)\text{.}\)</span>
+<div class="para" id="p-130">Calcule <span class="process-math">\(\displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)\text{.}\)</span>
 </div>
 <div class="solutions">
-<details id="hint-4" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-60">Use regras de logaritmo para transformar isso em uma série telescópica mais simples</div></div></details><details id="answer-5" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-61">A séries diverge para <span class="process-math">\(-\infty\text{.}\)</span>
-</div></div></details><details id="solution-9" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para logical" id="p-62">
+<details id="hint-4" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-131">Use regras de logaritmo para transformar isso em uma série telescópica mais simples</div></div></details><details id="answer-25" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-132">A séries diverge para <span class="process-math">\(-\infty\text{.}\)</span>
+</div></div></details><details id="solution-16" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-133">
 <div class="para">Usando regras de logaritmo, notamos que</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -862,7 +1056,7 @@ a_n\amp=\begin{cases}
 \displaystyle\sum_{n=5}^\infty \big[\log(n-3)-\log n\big]
 \end{equation*}
 </div>
-</div> <div class="para" id="p-63">que é uma série telescópica. Vamos fazer uma tabela para descobrir as somas parciais.</div> <div class="para logical" id="p-64"><div class="displaymath process-math">
+</div> <div class="para" id="p-134">que é uma série telescópica. Vamos fazer uma tabela para descobrir as somas parciais.</div> <div class="para logical" id="p-135"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{c||cc||c}
 \mathbf{N}\amp\mathbf{\log(N\!-\!3)}\!\!\amp\mathbf{-\log N}\amp\mathbf{S_N}\\
@@ -885,7 +1079,7 @@ a_n\amp=\begin{cases}
 \vdots\amp\amp\amp
 \end{array}
 \end{equation*}
-</div></div> <div class="para logical" id="p-65">
+</div></div> <div class="para logical" id="p-136">
 <div class="para">Assim, é possível perceber que a soma parcial de <span class="process-math">\(N\)</span> termos é:</div>
 <div class="displaymath process-math" id="md-24">
 \begin{align*}

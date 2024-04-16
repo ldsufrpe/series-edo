@@ -13,56 +13,9 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.3.14.1</span><span class="period">.</span>
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.3.8.1</span><span class="period">.</span>
 </h4>
-<div class="para logical">
-<div class="para">Usando regras de logaritmo, notamos que</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)=
-\displaystyle\sum_{n=5}^\infty \big[\log(n-3)-\log n\big]
-\end{equation*}
-</div>
-</div> <div class="para">que é uma série telescópica. Vamos fazer uma tabela para descobrir as somas parciais.</div> <div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{c||cc||c}
-\mathbf{N}\amp\mathbf{\log(N\!-\!3)}\!\!\amp\mathbf{-\log N}\amp\mathbf{S_N}\\
-\hline
-5\amp\log 2\amp\color{red}{-\log 5}\amp\log 2 - \color{red}{\log 5}\\
-6\amp\log 3\amp\color{green}{-\log 6}\amp\log 2 +\log 3- \color{red}{\log 5}\color{green}{-\log
-6}\\
-7\amp\log 4\amp\color{purple}{-\log 7}\amp\log 2 +\log 3+\log 4- \color{red}{\log
-5}\color{green}{-\log 6}
-\color{purple}{-\log 7}\\
-8\amp\color{red}{\log 5} \amp\color{blue}{-\log 8} \amp\log 2 +\log 3+\log 4 \color{green}{-\log
-6}
-\color{purple}{-\log 7}\color{blue}{-\log 8}\\
-9\amp\color{green}{\log 6}\amp\color{orange}{-\log 9}\amp\log 2 +\log 3+\log 4
-\color{purple}{-\log 7}\color{blue}{-\log 8}\color{orange}{-\log 9}\\
-10\amp\color{purple}{\log 7}\amp\color{brown}{-\log 10}\amp\log 2 +\log 3+\log 4
-\color{blue}{-\log 8}\color{orange}{-\log 9}\color{brown}{-\log 10}\\
-11\amp\color{blue}{\log 8}\amp\color{yellow}{-\log 11}\amp\log 2 +\log 3+\log 4
-\color{orange}{-\log 9}\color{brown}{-\log 10}\color{yellow}{-\log 11}\\
-\vdots\amp\amp\amp
-\end{array}
-\end{equation*}
-</div></div> <div class="para logical">
-<div class="para">Assim, é possível perceber que a soma parcial de <span class="process-math">\(N\)</span> termos é:</div>
-<div class="displaymath process-math">
-\begin{align*}
-S_N = \amp\sum_{n=5}^N \Big(\log(n-3)-\log(n)\Big)\\
-\amp\hskip0.5in=\log 2+\log 3 + \log 4 - \log(N-2)-\log(N-1)-\log(N)\\
-\amp\hskip0.5in=\log \left(\frac{24}{N(N-1)(N-2)}\right)\\
-\end{align*}
-<p class="intertext">para <span class="process-math">\(N \geq 7\text{.}\)</span> Então,</p>
-\begin{align*}
-\sum_{n=5}^\infty \Big(\log(n-3)-\log(n)\Big)\amp=
-\lim_{N \to \infty}S_N\\
-\amp=\lim_{N \to \infty}\log \left(\frac{24}{N(N-1)(N-2)}\right)\\
-\amp=-\infty
-\end{align*}
-</div>
-</div>
+<div class="para">Com <span class="process-math">\(a=64\)</span> e <span class="process-math">\(r={\textstyle\frac{2}{3}}\text{,}\)</span> <span class="process-math">\(|r|\lt 1\)</span> obtemos</div> <div class="para"><span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{2^{k+5}}{3^{k-1}} =64 \sum_{k=0}^{\infty} \left({\textstyle\frac{2}{3}}\right)^{k} =\frac{64}{1-\left({\textstyle\frac{2}{3}}\right)}=192\)</span></div>
 </div>
 <span class="incontext"><a class="internal" href="section-1.html#solution-9">em contexto</a></span>
 </body>

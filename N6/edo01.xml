@@ -674,7 +674,7 @@
 
 
             <!--       <exercise>-->
-            <!--            <webwork source=" Library/Rochester/setDiffEQ1/ur_de_1_1.pg."/>-->
+            <!--            <webwork-extract-extract source=" Library/Rochester/setDiffEQ1/ur_de_1_1.pg."/>-->
             <!--    </exercise>-->
             <exercise>
                 <webwork source="Library/FortLewis/DiffEq/0-Introduction/Lebl-0-2-10.pg"/>
@@ -688,7 +688,7 @@
                 <webwork source="Library/MiamiUOhio/DiffEq/Definitions_and_Terminology/Problem25.pg"/>
             </exercise>
             <!--    <exercise>-->
-            <!--            <webwork source="Library/Utah/AP_Calculus_I/set4_Graphing_and_Maximum-Minimum_Problems/1210set8p18.pg"/>-->
+            <!--            <webwork-extract-extract source="Library/Utah/AP_Calculus_I/set4_Graphing_and_Maximum-Minimum_Problems/1210set8p18.pg"/>-->
             <!--    </exercise>-->
 
             <exercise>

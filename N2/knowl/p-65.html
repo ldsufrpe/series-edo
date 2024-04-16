@@ -12,23 +12,11 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Parágrafo</span></h5>
-<div class="para logical">
-<div class="para">Assim, é possível perceber que a soma parcial de <span class="process-math">\(N\)</span> termos é:</div>
-<div class="displaymath process-math">
-\begin{align*}
-S_N = \amp\sum_{n=5}^N \Big(\log(n-3)-\log(n)\Big)\\
-\amp\hskip0.5in=\log 2+\log 3 + \log 4 - \log(N-2)-\log(N-1)-\log(N)\\
-\amp\hskip0.5in=\log \left(\frac{24}{N(N-1)(N-2)}\right)\\
-\end{align*}
-<p class="intertext">para <span class="process-math">\(N \geq 7\text{.}\)</span> Então,</p>
-\begin{align*}
-\sum_{n=5}^\infty \Big(\log(n-3)-\log(n)\Big)\amp=
-\lim_{N \to \infty}S_N\\
-\amp=\lim_{N \to \infty}\log \left(\frac{24}{N(N-1)(N-2)}\right)\\
-\amp=-\infty
-\end{align*}
-</div>
-</div>
+<div class="para logical"><div class="displaymath process-math">
+\begin{equation*}
+S=\lim_{N\rightarrow \infty} S_N = \lim_{N\rightarrow \infty}\left(\frac{1}{5}-\frac{1}{N}\right)=\frac{1}{5}.
+\end{equation*}
+</div></div>
 <span class="incontext"><a class="internal" href="section-1.html#p-65">em contexto</a></span>
 </body>
 </html>

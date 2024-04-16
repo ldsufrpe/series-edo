@@ -41,6 +41,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <!-- StatCounter requires both values to be set            -->
         
     </html>
-<source webwork-problems="webwork-extract/webwork-representations.ptx"/>   
+<source webwork-problems="webwork-extract/webwork-representations.xml"/>
  
 </publication>

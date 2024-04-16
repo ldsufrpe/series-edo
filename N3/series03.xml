@@ -2827,7 +2827,7 @@
                 <webwork source="pretext-teste-convergencia/problem24.pg"/>
             </exercise>
 <!--                 <exercise>-->
-<!--                <webwork source="pretext-teste-convergencia/problem24.pg"/>-->
+<!--                <webwork-extract-extract source="pretext-teste-convergencia/problem24.pg"/>-->
 <!--            </exercise>-->
 
 
