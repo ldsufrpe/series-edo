@@ -127,7 +127,7 @@
                         \sum_{n=1}^{20}\frac{3}{10^n} &amp;= 0.33333333333333333333
                     </mrow>
                 </md>
-                Note que à medida que adicionamos mais termos, nos aproximamos cada vez mais <m>0.\dot
+                Note que à medida que adicionamos mais termos, nos aproximamos cada vez mais de <m>0.
                 3=\frac{1}{3}</m>. Logo, é razoável escrever
                 <m>\sum_{n=1}^\infty\frac{3}{10^n}=\frac{1}{3}</m>.
 
@@ -200,7 +200,7 @@
             medida que adicionamos mais e mais termos. Ou seja, tentamos chegar à soma infinita observando o limite das
             somas (parciais) dos primeiros termos. Essa abordagem pode ser transformada em uma definição mais formal e
             rigorosa. Mais precisamente, para definir o que se entende por soma infinita  <m>\sum_{n=1}^\infty
-            a_n</m>, nós o aproximamos pela soma dos seus primeiros <m>N</m> termos e então tomamos o limite conforme <m>
+            a_n</m>,  nós o aproximamos pela soma dos seus primeiros <m>N</m> termos e então tomamos o limite conforme <m>
             N
         </m> tende
             ao infinito.
@@ -217,7 +217,7 @@
                             S_N=\sum_{n=1}^N a_n.
                         </mrow>
                     </md>
-                    As somas parciais formam uma sequência  <m>\big\{S_N\big\}_{N=1}^\infty</m>. Se esta sequência de
+                    As somas parciais formam uma sequência  <m>\big\{S_N\big\}_{N=1}^\infty</m>.   Se esta sequência de
                     somas parciais converge <m>S_N \to S</m> quando  <m>N\rightarrow\infty</m>  então dizemos que a
                     série <m>
                     \sum_{n=1}^\infty a_n
@@ -251,7 +251,7 @@
                 Observe que optamos por iniciar o índice de soma em <m>n=0</m>.
                 O primeiro
                 termo é o termo <m>n=0</m>, que é <m>ar^0=a</m>. O segundo termo é o termos <m>n=1</m>, que é
-                <m>ar^1=ar</m>. E assim por diante.Poderíamos também ter escrito a série <m>\sum_{n=1}^\infty
+                <m>ar^1=ar</m>. E assim por diante. Poderíamos também ter escrito a série <m>\sum_{n=1}^\infty
                 ar^{n-1}</m>.
                 Que é a mesma série
                 <mdash/>
@@ -505,8 +505,7 @@
             <p>
                 Agora, vamos estudar a série <m>\sum_{n=1}^\infty\frac{1}{n(n+1)}</m>   que foi
                 manipulada para ilustrar um fenômeno chamado<q>telescópio</q>. Observe que
-
-                Observe que o <m>n</m>-ésimo termo pode ser reescrita como
+                o <m>n</m>-ésimo termo pode ser reescrita como
                 <mdn>
                     <mrow xml:id="eq1">
                         \frac{1}{n(n+1)}= \frac{1}{n}-\frac{1}{n+1}
@@ -552,7 +551,7 @@
                         a_n &amp;= b_n - b_{n+1}
                     </mrow>
                     <intertext>
-                        para alguma outra sequência conhecida <m>b_n</m>, então os telescópios em série e podemos
+                        para alguma outra sequência conhecida <m>b_n</m>, então a série é telescópica e podemos
                         calcular somas parciais usando
                     </intertext>
                     <mrow>
@@ -718,7 +717,7 @@
                 <me>
                     \sum_{n=1}^\infty\frac{1}{n(n+1)} =1
                 </me>
-                pelo<xref ref="eq1"/>. Agora podemos usar o
+                pela iguadade <xref ref="eq1"/>. Agora podemos usar o
                 <xref ref="thm_SRseriesarith"/>
                 para obter:
                 <md>

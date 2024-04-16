@@ -1,70 +1,124 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-08T16:27:50-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Introdução às Séries Infinitas</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<script>window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        }, '']
-    },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(           \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Ir ao conteúdo principal</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://www.dm.ufrpe.br"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-intro-serie.html"><span class="title">Introdução às Séries Infinitas: N2</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Sumário"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Sumário</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Buscando por: </h2>
+<div id="searchempty" class="searchempty"><span>Não encontrado.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="calc-intro-serie.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="up-button button" href="calc-intro-serie.html" title="Acima"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Acima</span></a><a class="next-button button" href="references-backmatter.html" title="Próximo"><span class="name">Próximo</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(           \newcommand{ct}[1]{\color{gray}{\text{#1}}}
            \newcommand{ctm}[1]{\color{gray}{#1}}
 
            \newcommand{\doubler}[1]{2#1}
@@ -121,84 +175,66 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="calc-intro-serie.html"><span class="title">Introdução às Séries Infinitas: N2</span></a></h1>
-<p class="byline">Leon Silva</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
-<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "graphing",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-intro-serie.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-intro-serie.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-intro-serie.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-intro-serie.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
-<li class="link active">
-<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Introdução às Séries Infinitas</span></a><ul>
-<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Séries</a></li>
-<li><a href="section-1.html#subsection-4" data-scroll="subsection-4" class="internal">Sugestão de vídeos</a></li>
-<li><a href="section-1.html#exercises-intro-series" data-scroll="exercises-intro-series" class="internal">Exercícios</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter-1.html" class="internal"><span class="title">Pré-textual</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="frontmatter-1.html#abstract-1" class="internal"><span class="title">Resumo</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introdução às Séries Infinitas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="section-1.html#subsection-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Séries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#eg_SRgeom" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Séries Geométricas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#eg_SRtelecope" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Série Telescópica</span></a></div></li>
 </ul>
 </li>
-<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content">
-<section class="section" id="section-1"><h2 class="heading hide-type">
-<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Introdução às Séries Infinitas</span>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsection-4" class="internal"><span class="codenumber">1.2</span> <span class="title">Sugestão de vídeos</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-1.html#exercises-intro-series" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercícios</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="references-backmatter.html" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span><span class="space"> </span><span class="codenumber">1</span><span class="space"> </span><span class="title">Introdução às Séries Infinitas</span>
 </h2>
 <section class="introduction" id="introduction-2"></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Séries</span>
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Séries</span>
 </h3>
-<p id="p-3">Uma <dfn class="terminology">série infinita</dfn>  é uma soma</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+<div class="para logical" id="p-3">
+<div class="para">Uma <dfn class="terminology">série infinita</dfn>  é uma soma</div>
+<div class="displaymath process-math" id="md-1">
 \begin{gather*}
 a_1+a_2+a_3+\cdots+a_n+\cdots
 \end{gather*}
 </div>
-<p class="continuation">de infinitos termos. Em notação de soma, escreve-se</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+<div class="para">de infinitos termos. Em notação de soma, escreve-se</div>
+<div class="displaymath process-math" id="md-2">
 \begin{gather*}
 \sum_{n=1}^\infty a_n
 \end{gather*}
 </div>
-<p class="continuation">Quando escrevemos um número usando sua expansão decimal, de fato estamos expressando-o como uma série. Talvez o exemplo mais simples disso seja a expansão decimal de <span class="process-math">\(\frac{1}{3}\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+<div class="para">Quando escrevemos um número usando sua expansão decimal, de fato estamos expressando-o como uma série. Talvez o exemplo mais simples disso seja a expansão decimal de <span class="process-math">\(\frac{1}{3}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="md-3">
 \begin{align*}
 \frac{1}{3} &amp;= 0.3333\cdots
 \end{align*}
 </div>
-<p class="continuation">Lembre-se de que a expansão escrita dessa maneira na verdade significa</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+<div class="para">Lembre-se de que a expansão escrita dessa maneira na verdade significa</div>
+<div class="displaymath process-math" id="md-4">
 \begin{align*}
 0.333333\cdots &amp;= \frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\frac{3}{10000}+\cdots
 =\sum_{n=1}^\infty\frac{3}{10^n}
 \end{align*}
 </div>
-<p class="continuation">O índice do somatório <span class="process-math">\(n\)</span> é, obviamente, um índice genérico. Podemos usar qualquer símbolo que desejar para o índice de soma.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">O índice do somatório <span class="process-math">\(n\)</span> é, obviamente, um índice genérico. Podemos usar qualquer símbolo que desejar para o índice de soma.</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty\frac{3}{10^n}
 =\sum_{i=1}^\infty\frac{3}{10^i}
@@ -206,8 +242,8 @@ a_1+a_2+a_3+\cdots+a_n+\cdots
 =\sum_{\ell=1}^\infty\frac{3}{10^\ell}
 \end{equation*}
 </div>
-<p class="continuation">Uma série pode ser expressa usando a notação de somatório de muitas maneiras. Por exemplo, as seguintes expressões representam a mesma série:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+<div class="para">Uma série pode ser expressa usando a notação de somatório de muitas maneiras. Por exemplo, as seguintes expressões representam a mesma série:</div>
+<div class="displaymath process-math" id="md-5">
 \begin{align*}
 \sum_{n=1}^\infty\frac{3}{10^n}
 &amp;= \overbrace{\frac{3}{10}}^{n=1}
@@ -227,15 +263,17 @@ a_1+a_2+a_3+\cdots+a_n+\cdots
 +\overbrace{\frac{3}{1000}}^{n=3}+\cdots
 \end{align*}
 </div>
-<p class="continuation">Podemos ir da primeira linha para a segunda linha substituindo <span class="process-math">\(n=j-1\)</span> — não se esqueça de alterar também os limites da soma (de modo que <span class="process-math">\(n=1\)</span> torna-se  <span class="process-math">\(j-1=1\)</span> de modo que n = 1 se torna j-1 que é reescrito como <span class="process-math">\(j=2\)</span>). Para ir da primeira linha para a terceira linha, substitua <span class="process-math">\(n=\ell+1\)</span> em todos os lugares, inclusive nos limites do somatório (de modo que  <span class="process-math">\(n=1\)</span> torne-se <span class="process-math">\(\ell+1=1\)</span>     que é reescrito como <span class="process-math">\(\ell=0\)</span>).</p>
+<div class="para">Podemos ir da primeira linha para a segunda linha substituindo <span class="process-math">\(n=j-1\)</span> — não se esqueça de alterar também os limites da soma (de modo que <span class="process-math">\(n=1\)</span> torna-se  <span class="process-math">\(j-1=1\)</span> de modo que n = 1 se torna j-1 que é reescrito como <span class="process-math">\(j=2\)</span>). Para ir da primeira linha para a terceira linha, substitua <span class="process-math">\(n=\ell+1\)</span> em todos os lugares, inclusive nos limites do somatório (de modo que  <span class="process-math">\(n=1\)</span> torne-se <span class="process-math">\(\ell+1=1\)</span>     que é reescrito como <span class="process-math">\(\ell=0\)</span>).</div>
+</div>
 <article class="remark remark-like" id="remark-1"><h4 class="heading">
 <span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h4>
-<p id="p-4">Sempre que você estiver em dúvida sobre qual série uma expressão de notação de somatória representa, é um bom hábito escrever os primeiros termos, assim como fizemos acima.</p></article><p id="p-5">É claro que, neste ponto, não está claro se a soma de infinitos termos resulta em um número finito ou não. Para dar sentido a isso, vamos reformular o problema em termos de convergência de sequências. Antes de prosseguirmos mais formalmente, vamos ilustrar a ideia básica com alguns exemplos simples.</p>
-<article class="example example-like" id="eg_SRprelimSumA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRprelimSumA"><h4 class="heading">
+<div class="para" id="p-4">Sempre que você estiver em dúvida sobre qual série uma expressão de notação de somatória representa, é um bom hábito escrever os primeiros termos, assim como fizemos acima.</div></article><div class="para" id="p-5">É claro que, neste ponto, não está claro se a soma de infinitos termos resulta em um número finito ou não. Para dar sentido a isso, vamos reformular o problema em termos de convergência de sequências. Antes de prosseguirmos mais formalmente, vamos ilustrar a ideia básica com alguns exemplos simples.</div>
+<details id="eg_SRprelimSumA" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\ds \sum_{n=1}^\infty\frac{3}{10^n}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRprelimSumA"><article class="example example-like"><p id="p-6">Como acabamos de ver anteriormente da série <span class="process-math">\(\sum_{n=1}^\infty\frac{3}{10^n}\)</span> é</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</h4></summary><article class="example example-like"> <div class="para logical" id="p-6">
+<div class="para">Como acabamos de ver anteriormente da série <span class="process-math">\(\sum_{n=1}^\infty\frac{3}{10^n}\)</span> é</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty\frac{3}{10^n}
 = \overbrace{\frac{3}{10}}^{n=1}
@@ -243,14 +281,14 @@ a_1+a_2+a_3+\cdots+a_n+\cdots
 +\overbrace{\frac{3}{1000}}^{n=3}+\cdots
 \end{equation*}
 </div>
-<p class="continuation">Observe que o <span class="process-math">\(n\)</span>-ésimo termo na soma é</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Observe que o <span class="process-math">\(n\)</span>-ésimo termo na soma é</div>
+<div class="displaymath process-math">
 \begin{equation*}
 3\times 10^{-n} = 0.\!\!\overbrace{00\cdots 0}^{n-1\ \mathrm{zeroes}}\!3
 \end{equation*}
 </div>
-<p class="continuation">Então a soma dos primeiros  <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(10\text{,}\)</span> <span class="process-math">\(15\)</span> e <span class="process-math">\(20\)</span> termos desta série são</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+<div class="para">Então a soma dos primeiros  <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(10\text{,}\)</span> <span class="process-math">\(15\)</span> e <span class="process-math">\(20\)</span> termos desta série são</div>
+<div class="displaymath process-math" id="md-6">
 \begin{align*}
 \sum_{n=1}^5\frac{3}{10^n} &amp;= 0.33333 &amp;
 \sum_{n=1}^{10}\frac{3}{10^n} &amp;= 0.3333333333\\
@@ -258,21 +296,18 @@ a_1+a_2+a_3+\cdots+a_n+\cdots
 \sum_{n=1}^{20}\frac{3}{10^n} &amp;= 0.33333333333333333333
 \end{align*}
 </div>
-<p class="continuation">Note que à medida que adicionamos mais termos, nos aproximamos cada vez mais <span class="process-math">\(0.\dot
-3=\frac{1}{3}\text{.}\)</span> Logo, é razoável escrever <span class="process-math">\(\sum_{n=1}^\infty\frac{3}{10^n}=\frac{1}{3}\text{.}\)</span></p></article></div>
-<article class="example example-like" id="eg_SRprelimSumB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRprelimSumB"><h4 class="heading">
+<div class="para">Note que à medida que adicionamos mais termos, nos aproximamos cada vez mais de <span class="process-math">\(0.
+3=\frac{1}{3}\text{.}\)</span> Logo, é razoável escrever <span class="process-math">\(\sum_{n=1}^\infty\frac{3}{10^n}=\frac{1}{3}\text{.}\)</span>
+</div>
+</div></article></details><details id="eg_SRprelimSumB" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\ds \sum_{n=1}^\infty 1\)</span> e <span class="process-math">\(\sum_{n=1}^\infty (-1)^n\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRprelimSumB"><article class="example example-like"><p id="p-7">Verifique a convêngência para as séries:</p>
-<article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-8"><span class="process-math">\(\ds \sum_{n=1}^\infty 1\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-9">Cada termo da śerie <span class="process-math">\(\sum_{n=1}^\infty 1\)</span> é exatamente <span class="process-math">\(1\text{.}\)</span> Então a soma dos primeiros <span class="process-math">\(N\)</span> termos vale exatamente  <span class="process-math">\(N\text{.}\)</span> À medida que adicionamos mais e mais termos, isso cresce sem limites. Portanto, é muito razoável dizer que a série   <span class="process-math">\(\sum_{n=1}^\infty 1\)</span>  diverge.</p></div></div>
-</div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-10"><span class="process-math">\(\displaystyle\sum_{n=1}^\infty (-1)^n\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
-<p id="p-11">Observe que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</h4></summary><article class="example example-like"><article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-8"><span class="process-math">\(\ds \sum_{n=1}^\infty 1\)</span></div>
+<div class="solutions"><details id="solution-1" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-9">Cada termo da śerie <span class="process-math">\(\sum_{n=1}^\infty 1\)</span> é exatamente <span class="process-math">\(1\text{.}\)</span> Então a soma dos primeiros <span class="process-math">\(N\)</span> termos vale exatamente  <span class="process-math">\(N\text{.}\)</span> À medida que adicionamos mais e mais termos, isso cresce sem limites. Portanto, é muito razoável dizer que a série   <span class="process-math">\(\sum_{n=1}^\infty 1\)</span>  diverge.</div></div></details></div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-10"><span class="process-math">\(\displaystyle\sum_{n=1}^\infty (-1)^n\)</span></div>
+<div class="solutions"><details id="solution-2" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-11">
+<div class="para">Observe que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty (-1)^n
 =\overbrace{(-1)}^{n=1}
@@ -282,42 +317,46 @@ a_1+a_2+a_3+\cdots+a_n+\cdots
 +\overbrace{(-1)}^{n=5}+\cdots
 \end{equation*}
 </div>
-<p class="continuation">Então a soma dos primeiros <span class="process-math">\(N\)</span> termos é <span class="process-math">\(0\)</span> se <span class="process-math">\(N\)</span> é par e <span class="process-math">\(-1\)</span> se <span class="process-math">\(N\)</span> é par. À medida que adicionamos mais termos da série, a soma alterna entre <span class="process-math">\(0\)</span> e <span class="process-math">\(-1\)</span> Portanto, a soma infinita de termos não faz sentido. Logo, podemos dizer que a série  <span class="process-math">\(\sum_{n=1}^\infty(-1)^n\)</span> diverge.</p>
-</div></div>
-</div></article></article></div>
-<p id="p-12">Em <a href="" class="xref" data-knowl="./knowl/eg_SRprelimSumA.html" title="Exemplo 1.2: \ds \sum_{n=1}^\infty\frac{3}{10^n}">Exemplo 1.2</a> e <a href="" class="xref" data-knowl="./knowl/eg_SRprelimSumB.html" title="Exemplo 1.3: \ds \sum_{n=1}^\infty 1 e \sum_{n=1}^\infty (-1)^n">Exemplo 1.3</a> , tentamos entender a série examinando a soma dos primeiros termos e depois extrapolando à medida que adicionamos mais e mais termos. Ou seja, tentamos chegar à soma infinita observando o limite das somas (parciais) dos primeiros termos. Essa abordagem pode ser transformada em uma definição mais formal e rigorosa. Mais precisamente, para definir o que se entende por soma infinita  <span class="process-math">\(\sum_{n=1}^\infty
-a_n\text{,}\)</span> nós o aproximamos pela soma dos seus primeiros <span class="process-math">\(N\)</span> termos e então tomamos o limite conforme <span class="process-math">\(N\)</span> tende ao infinito.</p>
+<div class="para">Então a soma dos primeiros <span class="process-math">\(N\)</span> termos é <span class="process-math">\(0\)</span> se <span class="process-math">\(N\)</span> é par e <span class="process-math">\(-1\)</span> se <span class="process-math">\(N\)</span> é par. À medida que adicionamos mais termos da série, a soma alterna entre <span class="process-math">\(0\)</span> e <span class="process-math">\(-1\)</span> Portanto, a soma infinita de termos não faz sentido. Logo, podemos dizer que a série  <span class="process-math">\(\sum_{n=1}^\infty(-1)^n\)</span> diverge.</div>
+</div></div></details></div></article></article></details><div class="para" id="p-12">Em <a href="" class="xref" data-knowl="./knowl/eg_SRprelimSumA.html" title="Exemplo 1.2: \ds \sum_{n=1}^\infty\frac{3}{10^n}">Exemplo 1.2</a> e <a href="" class="xref" data-knowl="./knowl/eg_SRprelimSumB.html" title="Exemplo 1.3: \ds \sum_{n=1}^\infty 1 e \sum_{n=1}^\infty (-1)^n">Exemplo 1.3</a> , tentamos entender a série examinando a soma dos primeiros termos e depois extrapolando à medida que adicionamos mais e mais termos. Ou seja, tentamos chegar à soma infinita observando o limite das somas (parciais) dos primeiros termos. Essa abordagem pode ser transformada em uma definição mais formal e rigorosa. Mais precisamente, para definir o que se entende por soma infinita  <span class="process-math">\(\sum_{n=1}^\infty
+a_n\text{,}\)</span>  nós o aproximamos pela soma dos seus primeiros <span class="process-math">\(N\)</span> termos e então tomamos o limite conforme <span class="process-math">\(N\)</span> tende ao infinito.</div>
 <article class="definition definition-like" id="def_SRseries"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
 </h4>
-<p id="p-13">A <span class="process-math">\(N\)</span>-ésima soma parcial da série <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> é a soma dos seus primeiros <span class="process-math">\(N\)</span> termos</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+<div class="para logical" id="p-13">
+<div class="para">A <span class="process-math">\(N\)</span>-ésima soma parcial da série <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> é a soma dos seus primeiros <span class="process-math">\(N\)</span> termos</div>
+<div class="displaymath process-math" id="md-7">
 \begin{gather*}
 S_N=\sum_{n=1}^N a_n.
 \end{gather*}
 </div>
-<p class="continuation">As somas parciais formam uma sequência  <span class="process-math">\(\big\{S_N\big\}_{N=1}^\infty\text{.}\)</span> Se esta sequência de somas parciais converge <span class="process-math">\(S_N \to S\)</span> quando  <span class="process-math">\(N\rightarrow\infty\)</span>  então dizemos que a série <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span>  converge para <span class="process-math">\(S\)</span> e escrevemos</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">As somas parciais formam uma sequência  <span class="process-math">\(\big\{S_N\big\}_{N=1}^\infty\text{.}\)</span>   Se esta sequência de somas parciais converge <span class="process-math">\(S_N \to S\)</span> quando  <span class="process-math">\(N\rightarrow\infty\)</span>  então dizemos que a série <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span>  converge para <span class="process-math">\(S\)</span> e escrevemos</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty a_n=S
 \end{equation*}
 </div>
-<p class="continuation">Se a sequência de somas parciais diverge, dizemos que a série diverge.</p></article><section class="subsection" id="eg_SRgeom"><h4 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.1.1</span> <span class="title">Séries Geométricas</span>
+<div class="para">Se a sequência de somas parciais diverge, dizemos que a série diverge.</div>
+</div></article><section class="subsection" id="eg_SRgeom"><h4 class="heading hide-type">
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="space"> </span><span class="title">Séries Geométricas</span>
 </h4>
 <article class="definition definition-like" id="definition-2"><h5 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
 </h5>
-<p id="p-14">Seja <span class="process-math">\(a\)</span> e <span class="process-math">\(r\)</span> quaisquer dois números reais fixados com <span class="process-math">\(a\ne 0\text{.}\)</span> A série</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-14">
+<div class="para">Seja <span class="process-math">\(a\)</span> e <span class="process-math">\(r\)</span> quaisquer dois números reais fixados com <span class="process-math">\(a\ne 0\text{.}\)</span> A série</div>
+<div class="displaymath process-math">
 \begin{equation*}
 a + ar + ar^2 + \cdots + ar^n + \cdots = \sum_{n=0}^\infty ar^n
 \end{equation*}
 </div>
-<p class="continuation">é denominada série geométrica com primeiro termo <span class="process-math">\(a\)</span> e razão <span class="process-math">\(r\text{.}\)</span></p></article><p id="p-15">Observe que optamos por iniciar o índice de soma em <span class="process-math">\(n=0\text{.}\)</span> O primeiro termo é o termo <span class="process-math">\(n=0\text{,}\)</span> que é <span class="process-math">\(ar^0=a\text{.}\)</span> O segundo termo é o termos <span class="process-math">\(n=1\text{,}\)</span> que é <span class="process-math">\(ar^1=ar\text{.}\)</span> E assim por diante.Poderíamos também ter escrito a série <span class="process-math">\(\sum_{n=1}^\infty
-ar^{n-1}\text{.}\)</span> Que é a mesma série — o primeiro termo é <span class="process-math">\(ar^{n-1}\big|_{n=1}=ar^{1-1}=a\text{,}\)</span> o segundo termo é <span class="process-math">\(ar^{n-1}\big|_{n=2}=ar^{2-1}=ar\text{,}\)</span> e assim sucessivamente. Independentemente de como escrevemos a série, <span class="process-math">\(a\)</span> é o primeiro termo e <span class="process-math">\(r\)</span> é a razão entre os termos sucessivos.</p>
-<p id="p-16">As séries geométricas têm a propriedade extremamente útil de que existe uma fórmula muito simples para as suas somas parciais. Denote a soma parcial por</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+<div class="para">é denominada série geométrica com primeiro termo <span class="process-math">\(a\)</span> e razão <span class="process-math">\(r\text{.}\)</span>
+</div>
+</div></article><div class="para" id="p-15">Observe que optamos por iniciar o índice de soma em <span class="process-math">\(n=0\text{.}\)</span> O primeiro termo é o termo <span class="process-math">\(n=0\text{,}\)</span> que é <span class="process-math">\(ar^0=a\text{.}\)</span> O segundo termo é o termos <span class="process-math">\(n=1\text{,}\)</span> que é <span class="process-math">\(ar^1=ar\text{.}\)</span> E assim por diante. Poderíamos também ter escrito a série <span class="process-math">\(\sum_{n=1}^\infty
+ar^{n-1}\text{.}\)</span> Que é a mesma série — o primeiro termo é <span class="process-math">\(ar^{n-1}\big|_{n=1}=ar^{1-1}=a\text{,}\)</span> o segundo termo é <span class="process-math">\(ar^{n-1}\big|_{n=2}=ar^{2-1}=ar\text{,}\)</span> e assim sucessivamente. Independentemente de como escrevemos a série, <span class="process-math">\(a\)</span> é o primeiro termo e <span class="process-math">\(r\)</span> é a razão entre os termos sucessivos.</div>
+<div class="para logical" id="p-16">
+<div class="para">As séries geométricas têm a propriedade extremamente útil de que existe uma fórmula muito simples para as suas somas parciais. Denote a soma parcial por</div>
+<div class="displaymath process-math" id="md-8">
 \begin{align*}
 S_N &amp;= \sum_{n=0}^Nar^n = a + ar + ar^2 + \cdots + ar^N.\\
 \end{align*}
@@ -327,8 +366,8 @@ rS_N &amp;= r\big(a + ar + ar^2 + \cdots + ar^N\big)\\
 &amp; = ar + ar^2 + ar^3 + \cdots + ar^{N+1}
 \end{align*}
 </div>
-<p class="continuation">Observe que isso é quase o mesmo que <span class="process-math">\(S_N\text{.}\)</span> As únicas diferenças são que o primeiro termo, <span class="process-math">\(a\text{,}\)</span> está faltando e um termo adicional , <span class="process-math">\(ar^{N+1}\text{,}\)</span> foi adicionado ao final. Então</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+<div class="para">Observe que isso é quase o mesmo que <span class="process-math">\(S_N\text{.}\)</span> As únicas diferenças são que o primeiro termo, <span class="process-math">\(a\text{,}\)</span> está faltando e um termo adicional , <span class="process-math">\(ar^{N+1}\text{,}\)</span> foi adicionado ao final. Então</div>
+<div class="displaymath process-math" id="md-9">
 \begin{align*}
 S_N &amp;= a + ar + ar^2 + \cdots + ar^N\\
 r S_N &amp;= \phantom{ar +} ar + ar^2 + \cdots + ar^N + ar^{N+1}\\
@@ -342,14 +381,14 @@ r S_N &amp;= \phantom{ar +} ar + ar^2 + \cdots + ar^N + ar^{N+1}\\
 S_N &amp;= a \cdot \frac{1-r^{N+1}}{1-r}.
 \end{align*}
 </div>
-<p class="continuation">Por outro lado, se <span class="process-math">\(r=1\text{,}\)</span> então</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+<div class="para">Por outro lado, se <span class="process-math">\(r=1\text{,}\)</span> então</div>
+<div class="displaymath process-math" id="md-10">
 \begin{align*}
 S_N &amp;= \underbrace{a + a +\cdots + a}_{N+1 \text{ termos}} = a (N+1)
 \end{align*}
 </div>
-<p class="continuation">Resumindo:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Resumindo:</div>
+<div class="displaymath process-math">
 \begin{equation*}
 S_N = \begin{cases}
 a\frac{1-r^{N+1}}{1-r} &amp; \text{se $r\ne 1$} \\
@@ -357,37 +396,49 @@ a(N+1) &amp; \text{se $r=1$}
 \end{cases}
 \end{equation*}
 </div>
-<p id="p-17">Agora que temos essa expressão, podemos determinar se a série converge ou não. Se <span class="process-math">\(|r| \lt
-1\text{,}\)</span> então <span class="process-math">\(r^{N+1}\)</span>  tende a zero quando <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> de modo a <span class="process-math">\(S_N\)</span>  convergir para <span class="process-math">\(\frac{a}{1-r}\)</span> quando <span class="process-math">\(N\rightarrow\infty\)</span> e</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div>
+<div class="para logical" id="p-17">
+<div class="para">Agora que temos essa expressão, podemos determinar se a série converge ou não. Se <span class="process-math">\(|r| \lt
+1\text{,}\)</span> então <span class="process-math">\(r^{N+1}\)</span>  tende a zero quando <span class="process-math">\(N\rightarrow\infty\text{,}\)</span> de modo a <span class="process-math">\(S_N\)</span>  convergir para <span class="process-math">\(\frac{a}{1-r}\)</span> quando <span class="process-math">\(N\rightarrow\infty\)</span> e</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=0}^\infty ar^n = \frac{a}{1-r}
 \text{desde que $|r| \lt 1$}.
 \end{equation*}
 </div>
-<p class="continuation">Por outro lado se <span class="process-math">\(|r|\ge 1\text{,}\)</span> <span class="process-math">\(S_N\)</span> diverge. Para entender essa divergência, considere os <span class="process-math">\(4\)</span> casos a seguir:</p>
+<div class="para">Por outro lado se <span class="process-math">\(|r|\ge 1\text{,}\)</span> <span class="process-math">\(S_N\)</span> diverge. Para entender essa divergência, considere os <span class="process-math">\(4\)</span> casos a seguir:</div>
 <ul class="disc">
-<li id="li-1"><p id="p-derived-li-1">Se <span class="process-math">\(r \gt 1\text{,}\)</span> então <span class="process-math">\(r^N\)</span> tende para <span class="process-math">\(\infty\)</span> quando <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></li>
-<li id="li-2"><p id="p-derived-li-2">Se <span class="process-math">\(r \lt -1\text{,}\)</span> então a grandeza de <span class="process-math">\(r^N\)</span> cresce para <span class="process-math">\(\infty\text{,}\)</span> e o sinal de <span class="process-math">\(r^N\)</span> oscila entre <span class="process-math">\(+\)</span> e <span class="process-math">\(-\text{,}\)</span> quando <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></li>
-<li id="li-3"><p id="p-derived-li-3">Se <span class="process-math">\(r=+1\text{,}\)</span> então <span class="process-math">\(N+1\)</span> cresce para <span class="process-math">\(\infty\)</span> a medida que <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></li>
-<li id="li-4"><p id="p-derived-li-4">Se <span class="process-math">\(r=-1\text{,}\)</span> então <span class="process-math">\(r^N\)</span> apenas oscila entre <span class="process-math">\(+1\)</span> 3 <span class="process-math">\(-1\)</span> quando <span class="process-math">\(N\rightarrow\infty\text{.}\)</span></p></li>
+<li id="li-1"><div class="para" id="p-derived-li-1">Se <span class="process-math">\(r \gt 1\text{,}\)</span> então <span class="process-math">\(r^N\)</span> tende para <span class="process-math">\(\infty\)</span> quando <span class="process-math">\(N\rightarrow\infty\text{.}\)</span>
+</div></li>
+<li id="li-2"><div class="para" id="p-derived-li-2">Se <span class="process-math">\(r \lt -1\text{,}\)</span> então a grandeza de <span class="process-math">\(r^N\)</span> cresce para <span class="process-math">\(\infty\text{,}\)</span> e o sinal de <span class="process-math">\(r^N\)</span> oscila entre <span class="process-math">\(+\)</span> e <span class="process-math">\(-\text{,}\)</span> quando <span class="process-math">\(N\rightarrow\infty\text{.}\)</span>
+</div></li>
+<li id="li-3"><div class="para" id="p-derived-li-3">Se <span class="process-math">\(r=+1\text{,}\)</span> então <span class="process-math">\(N+1\)</span> cresce para <span class="process-math">\(\infty\)</span> a medida que <span class="process-math">\(N\rightarrow\infty\text{.}\)</span>
+</div></li>
+<li id="li-4"><div class="para" id="p-derived-li-4">Se <span class="process-math">\(r=-1\text{,}\)</span> então <span class="process-math">\(r^N\)</span> apenas oscila entre <span class="process-math">\(+1\)</span> 3 <span class="process-math">\(-1\)</span> quando <span class="process-math">\(N\rightarrow\infty\text{.}\)</span>
+</div></li>
 </ul>
-<p class="continuation">Em cada caso, a sequência de somas parciais não converge e, portanto, a série não converge.</p>
-<p id="p-18">Na <a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.6">Figura 1.6</a> estão alguns esboços dos gráficos de <span class="process-math">\(\frac{1}{1-r}\)</span> e <span class="process-math">\(S_N\text{,}\)</span> <span class="process-math">\(0\le N\le 5\text{,}\)</span> for <span class="process-math">\(a=1\)</span> e <span class="process-math">\(-1\le r\lt 1\text{.}\)</span></p>
+<div class="para">Em cada caso, a sequência de somas parciais não converge e, portanto, a série não converge.</div>
+</div>
+<div class="para" id="p-18">Na <a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.6">Figura 1.6</a> estão alguns esboços dos gráficos de <span class="process-math">\(\frac{1}{1-r}\)</span> e <span class="process-math">\(S_N\text{,}\)</span> <span class="process-math">\(0\le N\le 5\text{,}\)</span> for <span class="process-math">\(a=1\)</span> e <span class="process-math">\(-1\le r\lt 1\text{.}\)</span>
+</div>
 <figure class="figure figure-like" id="fig1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/geomT.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"></div></div>
-<p id="p-19">Nestes esboços vemos que</p>
+<div class="para logical" id="p-19">
+<div class="para">Nestes esboços vemos que</div>
 <ul class="disc">
-<li id="li-5"><p id="p-derived-li-5">Quando <span class="process-math">\(0\lt r \lt 1\text{,}\)</span> e também quando <span class="process-math">\(-1\lt r\lt 0\)</span> com <span class="process-math">\(N\)</span> ímpar, temos <span class="process-math">\(S_N=\frac{1-r^{N+1}}{1-r}\lt \frac{1}{1-r}\text{.}\)</span> Por outro lado, quando <span class="process-math">\(-1\lt r\lt 0\)</span> com <span class="process-math">\(N\)</span> par, temos <span class="process-math">\(S_N=\frac{1-r^{N+1}}{1-r}\gt \frac{1}{1-r}\text{.}\)</span></p></li>
-<li id="li-6"><p id="p-derived-li-6">Quando <span class="process-math">\(0\lt |r|\lt 1\text{,}\)</span> <span class="process-math">\(S_N=\frac{1-r^{N+1}}{1-r}\)</span> se aproxima de <span class="process-math">\(\frac{1}{1-r}\)</span> à medida que <span class="process-math">\(N\)</span> cresce.</p></li>
-<li id="li-7"><p id="p-derived-li-7">Quando <span class="process-math">\(r=-1\text{,}\)</span> <span class="process-math">\(S_N\)</span> apenas alterna entre <span class="process-math">\(0\text{,}\)</span> quando <span class="process-math">\(N\)</span> é ímpar, e <span class="process-math">\(1\text{,}\)</span> quando <span class="process-math">\(N\)</span> é par.</p></li>
+<li id="li-5"><div class="para" id="p-derived-li-5">Quando <span class="process-math">\(0\lt r \lt 1\text{,}\)</span> e também quando <span class="process-math">\(-1\lt r\lt 0\)</span> com <span class="process-math">\(N\)</span> ímpar, temos <span class="process-math">\(S_N=\frac{1-r^{N+1}}{1-r}\lt \frac{1}{1-r}\text{.}\)</span> Por outro lado, quando <span class="process-math">\(-1\lt r\lt 0\)</span> com <span class="process-math">\(N\)</span> par, temos <span class="process-math">\(S_N=\frac{1-r^{N+1}}{1-r}\gt \frac{1}{1-r}\text{.}\)</span>
+</div></li>
+<li id="li-6"><div class="para" id="p-derived-li-6">Quando <span class="process-math">\(0\lt |r|\lt 1\text{,}\)</span> <span class="process-math">\(S_N=\frac{1-r^{N+1}}{1-r}\)</span> se aproxima de <span class="process-math">\(\frac{1}{1-r}\)</span> à medida que <span class="process-math">\(N\)</span> cresce.</div></li>
+<li id="li-7"><div class="para" id="p-derived-li-7">Quando <span class="process-math">\(r=-1\text{,}\)</span> <span class="process-math">\(S_N\)</span> apenas alterna entre <span class="process-math">\(0\text{,}\)</span> quando <span class="process-math">\(N\)</span> é ímpar, e <span class="process-math">\(1\text{,}\)</span> quando <span class="process-math">\(N\)</span> é par.</div></li>
 </ul>
-<p id="p-20">Devemos resumir os resultados do exemplo anterior no lemma a seguir.</p>
+</div>
+<div class="para" id="p-20">Devemos resumir os resultados do exemplo anterior no lemma a seguir.</div>
 <article class="lemma theorem-like" id="lem_geomsum"><h5 class="heading">
 <span class="type">Lema</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Séries Geométricas.</span>
 </h5>
-<p id="p-21">Seja <span class="process-math">\(a\)</span> e <span class="process-math">\(r\)</span> números reais e seja <span class="process-math">\(N \geq 0\)</span> um inteiro então</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-21">
+<div class="para">Seja <span class="process-math">\(a\)</span> e <span class="process-math">\(r\)</span> números reais e seja <span class="process-math">\(N \geq 0\)</span> um inteiro então</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=0}^N ar^n = \begin{cases}
 a\dfrac{1-r^{N+1}}{1-r} &amp; \text{se $r\ne 1$} \\
@@ -395,15 +446,17 @@ a(N+1) &amp; \text{se $r=1$}
 \end{cases}.
 \end{equation*}
 </div>
-<p class="continuation">Além disso, se <span class="process-math">\(|r|\lt1\)</span> então</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Além disso, se <span class="process-math">\(|r|\lt1\)</span> então</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=0}^\infty ar^n = \dfrac{a}{1-r}.
 \end{equation*}
-</div></article><p id="p-22">Agora que sabemos como lidar com séries geométricas vamos voltar ao <a href="" class="xref" data-knowl="./knowl/eg_SRprelimSumA.html" title="Exemplo 1.2: \ds \sum_{n=1}^\infty\frac{3}{10^n}">Exemplo 1.2</a>.</p>
-<article class="example example-like" id="eg_SRgeomB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRgeomB"><h5 class="heading">
+</div>
+</div></article><div class="para" id="p-22">Agora que sabemos como lidar com séries geométricas vamos voltar ao <a href="" class="xref" data-knowl="./knowl/eg_SRprelimSumA.html" title="Exemplo 1.2: \ds \sum_{n=1}^\infty\frac{3}{10^n}">Exemplo 1.2</a>.</div>
+<details id="eg_SRgeomB" class="example example-like"><summary><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Expansões Decimais.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRgeomB"><article class="example example-like"><p id="p-23">A expansão decimal</p>
+</h5></summary><article class="example example-like"> <div class="para logical" id="p-23">
+<div class="para">A expansão decimal</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_geomsum.html">
 \begin{equation*}
 0.3333\cdots
@@ -411,7 +464,7 @@ a(N+1) &amp; \text{se $r=1$}
 =\sum_{n=1}^\infty\frac{3}{10^n}
 \end{equation*}
 </div>
-<p class="continuation">é uma série geométrica com o primeiro termo <span class="process-math">\(a=\frac{3}{10}\)</span> e razão <span class="process-math">\(r=\frac{1}{10}\text{.}\)</span> Então, pelo <a href="" class="xref" data-knowl="./knowl/lem_geomsum.html" title="Lema 1.7: Séries Geométricas">Lema 1.7</a>,</p>
+<div class="para">é uma série geométrica com o primeiro termo <span class="process-math">\(a=\frac{3}{10}\)</span> e razão <span class="process-math">\(r=\frac{1}{10}\text{.}\)</span> Então, pelo <a href="" class="xref" data-knowl="./knowl/lem_geomsum.html" title="Lema 1.7: Séries Geométricas">Lema 1.7</a>,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_geomsum.html">
 \begin{equation*}
 0.3333\cdots
@@ -421,15 +474,16 @@ a(N+1) &amp; \text{se $r=1$}
 =\frac{1}{3}
 \end{equation*}
 </div>
-<p class="continuation">exatamente como esperávamos.</p>
-<p id="p-24">Podemos levar essa ideia adiante. Considere a expansão decimal periódica:</p>
+<div class="para">exatamente como esperávamos.</div>
+</div> <div class="para logical" id="p-24">
+<div class="para">Podemos levar essa ideia adiante. Considere a expansão decimal periódica:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_geomsum.html">
 \begin{equation*}
 0.16161616\cdots
 =\frac{16}{100}+\frac{16}{10000}+\frac{16}{1000000}+\cdots
 \end{equation*}
 </div>
-<p class="continuation">Esta é outra série geométrica com o primeiro termo <span class="process-math">\(a=\frac{16}{100}\)</span>  e razão <span class="process-math">\(r=\frac{1}{100}\text{.}\)</span> Então, pelo <a href="" class="xref" data-knowl="./knowl/lem_geomsum.html" title="Lema 1.7: Séries Geométricas">Lema 1.7</a>,</p>
+<div class="para">Esta é outra série geométrica com o primeiro termo <span class="process-math">\(a=\frac{16}{100}\)</span>  e razão <span class="process-math">\(r=\frac{1}{100}\text{.}\)</span> Então, pelo <a href="" class="xref" data-knowl="./knowl/lem_geomsum.html" title="Lema 1.7: Séries Geométricas">Lema 1.7</a>,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_geomsum.html">
 \begin{equation*}
 0.16161616\cdots
@@ -439,8 +493,9 @@ a(N+1) &amp; \text{se $r=1$}
 =\frac{16}{99}
 \end{equation*}
 </div>
-<p class="continuation">novamente, como esperado. Desta forma, qualquer expansão decimal periódica converge para uma razão de dois inteiros — ou seja, para um número racional.</p>
-<p id="p-25">A seguir está outro exemplo mais complicado.</p>
+<div class="para">novamente, como esperado. Desta forma, qualquer expansão decimal periódica converge para uma razão de dois inteiros — ou seja, para um número racional.</div>
+</div> <div class="para logical" id="p-25">
+<div class="para">A seguir está outro exemplo mais complicado.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_geomsum.html" id="md-11">
 \begin{align*}
 0.1234343434\cdots
@@ -453,12 +508,14 @@ a(N+1) &amp; \text{se $r=1$}
 &amp;=\frac{12}{100}+\frac{34}{10000}\frac{100}{99}\\
 &amp;=\frac{1222}{9900}
 \end{align*}
-</div></article></div></section><p id="p-26">Normalmente, é muito difícil escrever uma expressão para as somas parciais de uma série. Séries geométricas são exceções a isso. Outra família de séries para as quais podemos escrever somas parciais é denominada “série telescópica”. Essas séries têm a propriedade desejável de que muitos dos termos da soma se cancelam, tornando as somas parciais bastante simples.</p>
+</div>
+</div></article></details></section><div class="para" id="p-26">Normalmente, é muito difícil escrever uma expressão para as somas parciais de uma série. Séries geométricas são exceções a isso. Outra família de séries para as quais podemos escrever somas parciais é denominada “série telescópica”. Essas séries têm a propriedade desejável de que muitos dos termos da soma se cancelam, tornando as somas parciais bastante simples.</div>
 <section class="subsection" id="eg_SRtelecope"><h4 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.1.2</span> <span class="title">Série Telescópica</span>
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="space"> </span><span class="title">Série Telescópica</span>
 </h4>
-<p id="p-27">Agora, vamos estudar a série <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n(n+1)}\)</span>   que foi manipulada para ilustrar um fenômeno chamado“telescópio”. Observe que Observe que o <span class="process-math">\(n\)</span>-ésimo termo pode ser reescrita como</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="mdn-1">
+<div class="para logical" id="p-27">
+<div class="para">Agora, vamos estudar a série <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n(n+1)}\)</span>   que foi manipulada para ilustrar um fenômeno chamado“telescópio”. Observe que o <span class="process-math">\(n\)</span>-ésimo termo pode ser reescrita como</div>
+<div class="displaymath process-math" id="mdn-1">
 \begin{align}
 \frac{1}{n(n+1)}= \frac{1}{n}-\frac{1}{n+1}\tag{1.1}\\
 \end{align}
@@ -467,8 +524,8 @@ a(N+1) &amp; \text{se $r=1$}
 a_n &amp;= b_n - b_{n+1} &amp; \text{no qual } \,b_n &amp;= \frac{1}{n}.\tag{1.2}
 \end{align}
 </div>
-<p class="continuation">Por conta disso, temos cancelamentos quando somamos os termos. Isso nos permite obter uma fórmula simples para as somas parciais desta série.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-12">
+<div class="para">Por conta disso, temos cancelamentos quando somamos os termos. Isso nos permite obter uma fórmula simples para as somas parciais desta série.</div>
+<div class="displaymath process-math" id="md-12">
 \begin{align*}
 S_N&amp;= \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} +
 \cdots + \frac{1}{N\cdot (N+1)}\\
@@ -478,14 +535,14 @@ S_N&amp;= \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} +
 \cdots + \Big(\frac{1}{N}-\frac{1}{N+1}\Big)
 \end{align*}
 </div>
-<p class="continuation">O segundo termo de cada colchete cancela exatamente o primeiro termo do colchete seguinte. Então a soma torna-se</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">O segundo termo de cada colchete cancela exatamente o primeiro termo do colchete seguinte. Então a soma torna-se</div>
+<div class="displaymath process-math">
 \begin{equation*}
 S_N = 1-\frac{1}{N+1}
 \end{equation*}
 </div>
-<p class="continuation">deixando a soma simples de calcular</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">deixando a soma simples de calcular</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty\frac{1}{n(n+1)}
 =\lim_{N\rightarrow\infty} S_N
@@ -493,12 +550,14 @@ S_N = 1-\frac{1}{N+1}
 =1
 \end{equation*}
 </div>
-<p id="p-28">Mais geralmente, se pudermos escrever</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-13">
+</div>
+<div class="para logical" id="p-28">
+<div class="para">Mais geralmente, se pudermos escrever</div>
+<div class="displaymath process-math" id="md-13">
 \begin{align*}
 a_n &amp;= b_n - b_{n+1}\\
 \end{align*}
-<p class="intertext">para alguma outra sequência conhecida <span class="process-math">\(b_n\text{,}\)</span> então os telescópios em série e podemos calcular somas parciais usando</p>
+<p class="intertext">para alguma outra sequência conhecida <span class="process-math">\(b_n\text{,}\)</span> então a série é telescópica e podemos calcular somas parciais usando</p>
 \begin{align*}
 \sum_{n=1}^N a_n
 &amp;=
@@ -513,14 +572,15 @@ a_n &amp;= b_n - b_{n+1}\\
 &amp;= b_1 - \lim_{N\to\infty} b_{N+1}
 \end{align*}
 </div>
-<p class="continuation">desde que este limite exista. Frequentemente <span class="process-math">\(\lim\limits_{N\to\infty} b_{N+1}=0\)</span> e então <span class="process-math">\(\sum\limits_{n=1}^\infty a_n =b_1\text{.}\)</span> Mas isso nem sempre acontece, como explicaremos a seguir.</p>
-<article class="example example-like" id="eg_SRtelecopeB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRtelecopeB"><h5 class="heading">
+<div class="para">desde que este limite exista. Frequentemente <span class="process-math">\(\lim\limits_{N\to\infty} b_{N+1}=0\)</span> e então <span class="process-math">\(\sum\limits_{n=1}^\infty a_n =b_1\text{.}\)</span> Mas isso nem sempre acontece, como explicaremos a seguir.</div>
+</div>
+<details id="eg_SRtelecopeB" class="example example-like"><summary><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Uma série Telescópica Divergente.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRtelecopeB"><article class="example example-like"><p id="p-29">Estude a série <span class="process-math">\(\sum\limits_{n=1}^\infty\log\big(1+\frac{1}{n}\big)\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
-<p id="p-30">Vamos começar escrevendo apenas os primeiros termos.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
+</h5></summary><article class="example example-like"><div class="para" id="p-29">Estude a série <span class="process-math">\(\sum\limits_{n=1}^\infty\log\big(1+\frac{1}{n}\big)\)</span>
+</div>
+<div class="solutions"><details id="solution-3" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-30">
+<div class="para">Vamos começar escrevendo apenas os primeiros termos.</div>
+<div class="displaymath process-math" id="md-14">
 \begin{alignat*}{1}
 \sum_{n=1}^\infty\log\Big(1+\frac{1}{n}\Big)
 &amp;=\overbrace{\log\Big(1+\frac{1}{1}\Big)}^{n=1}
@@ -532,8 +592,8 @@ a_n &amp;= b_n - b_{n+1}\\
 \amp\hskip1in +\log\Big(\frac{5}{4}\Big) + \cdots
 \end{alignat*}
 </div>
-<p class="continuation">Mas</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-15">
+<div class="para">Mas</div>
+<div class="displaymath process-math" id="md-15">
 \begin{gather*}
 \log(2)+\log\Big(\frac{3}{2}\Big) +\log\Big(\frac{4}{3}\Big)
 +\log\Big(\frac{5}{4}\Big)
@@ -541,8 +601,8 @@ a_n &amp;= b_n - b_{n+1}\\
 =\log(5)
 \end{gather*}
 </div>
-<p class="continuation">Então isso pode facilitar calcular a soma parcial <span class="process-math">\(S_N\text{.}\)</span> Observe:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-16">
+<div class="para">Então isso pode facilitar calcular a soma parcial <span class="process-math">\(S_N\text{.}\)</span> Observe:</div>
+<div class="displaymath process-math" id="md-16">
 \begin{align*}
 S_N&amp;=\sum_{n=1}^N\log\Big(1+\frac{1}{n}\Big)\\
 &amp;=\overbrace{\log\Big(1+\frac{1}{1}\Big)}^{n=1}
@@ -557,53 +617,57 @@ S_N&amp;=\sum_{n=1}^N\log\Big(1+\frac{1}{n}\Big)\\
 &amp;=\log(N+1)
 \end{align*}
 </div>
-<p class="continuation">Daí,</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-17">
+<div class="para">Daí,</div>
+<div class="displaymath process-math" id="md-17">
 \begin{gather*}
 \lim_{N\rightarrow\infty} S_N
 =\lim_{N\rightarrow\infty}\log(N+1)
 =+\infty
 \end{gather*}
 </div>
-<p class="continuation">Esta série telescópica diverge! Há uma lição importante aqui. As séries telescópicas podem divergir. Nem sempre convergem para <span class="process-math">\(b_1\text{.}\)</span></p>
-</div></div>
-</div></article></div>
-<p id="p-31">Como foi o caso de limites, derivada e antiderivada, podemos calcular séries mais complicadas em termos de séries mais simples, entendendo como elas interagem com as operações usuais da aritmética. Talvez não seja tão surpreendente que existam regras simples para adição e subtração de séries e para multiplicação de uma série por uma constante. Infelizmente, não existem regras gerais simples para computar produtos ou razões de séries.</p></section><article class="theorem theorem-like" id="thm_SRseriesarith"><h4 class="heading">
+<div class="para">Esta série telescópica diverge! Há uma lição importante aqui. As séries telescópicas podem divergir. Nem sempre convergem para <span class="process-math">\(b_1\text{.}\)</span>
+</div>
+</div></div></details></div></article></details><div class="para" id="p-31">Como foi o caso de limites, derivada e antiderivada, podemos calcular séries mais complicadas em termos de séries mais simples, entendendo como elas interagem com as operações usuais da aritmética. Talvez não seja tão surpreendente que existam regras simples para adição e subtração de séries e para multiplicação de uma série por uma constante. Infelizmente, não existem regras gerais simples para computar produtos ou razões de séries.</div></section><article class="theorem theorem-like" id="thm_SRseriesarith"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Aritmética de séries.</span>
 </h4>
-<p id="p-32">Seja <span class="process-math">\(K\)</span> um número real e sejam as séries <span class="process-math">\(\sum_{n=1}^\infty
-a_n\)</span> e  <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> convergentes para <span class="process-math">\(S\)</span> e <span class="process-math">\(T\)</span> respectivamente. Ou seja, assuma que</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-18">
+<div class="para logical" id="p-32">
+<div class="para">Seja <span class="process-math">\(K\)</span> um número real e sejam as séries <span class="process-math">\(\sum_{n=1}^\infty
+a_n\)</span> e  <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> convergentes para <span class="process-math">\(S\)</span> e <span class="process-math">\(T\)</span> respectivamente. Ou seja, assuma que</div>
+<div class="displaymath process-math" id="md-18">
 \begin{align*}
 \sum_{n=1}^\infty a_n&amp;=S &amp; \sum_{n=1}^\infty b_n &amp;=T
 \end{align*}
 </div>
-<p class="continuation">Então as seguintes afirmações são verdadeiras:</p>
+<div class="para">Então as seguintes afirmações são verdadeiras:</div>
 <ol class="lower-alpha">
-<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\ds \sum_{n=1}^\infty \big[a_n+b_n\big] = S+T\qquad\)</span>and <span class="process-math">\(\qquad\ds \sum_{n=1}^\infty \big[a_n-b_n\big] = S-T\)</span></p></li>
-<li id="li-9"><p id="p-derived-li-9"><span class="process-math">\(\ds \sum_{n=1}^\infty K a_n = K S\text{.}\)</span></p></li>
-</ol></article><article class="example example-like" id="eg_SRseriesarith"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRseriesarith"><h4 class="heading">
+<li id="li-8"><div class="para" id="p-derived-li-8">
+<span class="process-math">\(\ds \sum_{n=1}^\infty \big[a_n+b_n\big] = S+T\qquad\)</span>and <span class="process-math">\(\qquad\ds \sum_{n=1}^\infty \big[a_n-b_n\big] = S-T\)</span>
+</div></li>
+<li id="li-9"><div class="para" id="p-derived-li-9"><span class="process-math">\(\ds \sum_{n=1}^\infty K a_n = K S\text{.}\)</span></div></li>
+</ol>
+</div></article><details id="eg_SRseriesarith" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sum_{n=1}^\infty\Big( \frac{1}{7^n}+\frac{2}{n(n+1)}\Big)\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRseriesarith"><article class="example example-like"><p id="p-33">Como um exemplo simples de como usamos a aritmética das séries (<a href="" class="xref" data-knowl="./knowl/thm_SRseriesarith.html" title="Teorema 1.10: Aritmética de séries">Teorema 1.10</a>), considere</p>
+</h4></summary><article class="example example-like"> <div class="para logical" id="p-33">
+<div class="para">Como um exemplo simples de como usamos a aritmética das séries (<a href="" class="xref" data-knowl="./knowl/thm_SRseriesarith.html" title="Teorema 1.10: Aritmética de séries">Teorema 1.10</a>), considere</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRseriesarith.html ./knowl/eg_SRgeom.html ./knowl/lem_geomsum.html ./knowl/eq1.html ./knowl/thm_SRseriesarith.html ./knowl/thm_SRseriesarith.html ./knowl/thm_SRseriesarith.html">
 \begin{equation*}
 \sum_{n=1}^\infty\Big[\frac{1}{7^n}+\frac{2}{n(n+1)}\Big]
 \end{equation*}
 </div>
-<p class="continuation">Sabemos que</p>
+<div class="para">Sabemos que</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRseriesarith.html ./knowl/eg_SRgeom.html ./knowl/lem_geomsum.html ./knowl/eq1.html ./knowl/thm_SRseriesarith.html ./knowl/thm_SRseriesarith.html ./knowl/thm_SRseriesarith.html">
 \begin{equation*}
 \sum_{n=1}^\infty\frac{1}{7^n}=\frac{\frac{1}{7}}{1-\frac{1}{7}}
 =\frac{1}{6}
 \end{equation*}
 </div>
-<p class="continuation">pois é uma  <a href="section-1.html#eg_SRgeom" class="internal" title="Subseção 1.1.1: Séries Geométricas">Séries Geométrica 1.1.1</a> e, logo vale o <a href="" class="xref" data-knowl="./knowl/lem_geomsum.html" title="Lema 1.7: Séries Geométricas">Lema 1.7</a>) com primeiro termo <span class="process-math">\(a=\frac{1}{7}\)</span> e razão <span class="process-math">\(r=\frac{1}{7}\text{.}\)</span> Também sabemos que</p>
+<div class="para">pois é uma  <a href="section-1.html#eg_SRgeom" class="internal" title="Subseção 1.1.1: Séries Geométricas">Séries Geométrica 1.1.1</a> e, logo vale o <a href="" class="xref" data-knowl="./knowl/lem_geomsum.html" title="Lema 1.7: Séries Geométricas">Lema 1.7</a>) com primeiro termo <span class="process-math">\(a=\frac{1}{7}\)</span> e razão <span class="process-math">\(r=\frac{1}{7}\text{.}\)</span> Também sabemos que</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRseriesarith.html ./knowl/eg_SRgeom.html ./knowl/lem_geomsum.html ./knowl/eq1.html ./knowl/thm_SRseriesarith.html ./knowl/thm_SRseriesarith.html ./knowl/thm_SRseriesarith.html">
 \begin{equation*}
 \sum_{n=1}^\infty\frac{1}{n(n+1)} =1
 \end{equation*}
 </div>
-<p class="continuation">pelo<a href="" class="xref" data-knowl="./knowl/eq1.html" title="Equação 1.1">(1.1)</a>. Agora podemos usar o <a href="" class="xref" data-knowl="./knowl/thm_SRseriesarith.html" title="Teorema 1.10: Aritmética de séries">Teorema 1.10</a> para obter:</p>
+<div class="para">pela iguadade <a href="" class="xref" data-knowl="./knowl/eq1.html" title="Equação 1.1">(1.1)</a>. Agora podemos usar o <a href="" class="xref" data-knowl="./knowl/thm_SRseriesarith.html" title="Teorema 1.10: Aritmética de séries">Teorema 1.10</a> para obter:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SRseriesarith.html ./knowl/eg_SRgeom.html ./knowl/lem_geomsum.html ./knowl/eq1.html ./knowl/thm_SRseriesarith.html ./knowl/thm_SRseriesarith.html ./knowl/thm_SRseriesarith.html" id="md-19">
 \begin{align*}
 \sum_{n=1}^\infty\Big[\frac{1}{7^n}+\frac{2}{n(n+1)}\Big]
@@ -615,217 +679,55 @@ a_n\)</span> e  <span class="process-math">\(\sum_{n=1}^\infty b_n\)</span> conv
 &amp; \text{pelo }\knowl{./knowl/thm_SRseriesarith.html}{\text{Teorema 1.10}}\text{(b)}\\
 &amp;=\frac{1}{6}+2\cdot 1 =\frac{13}{6}
 \end{align*}
-</div></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Sugestão de vídeos</span>
+</div>
+</div></article></details></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Sugestão de vídeos</span>
 </h3>
 <ul class="disc">
-<li id="li-10"><p id="p-34"><a class="external" href="https://youtu.be/eR7pIQXNT2wQ" target="_blank">Introdução a somas parciais</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p></li>
-<li id="li-11"><p id="p-35"><a class="external" href="https://youtu.be/f-FrABeDX0o" target="_blank">Exemplo resolvido: fórmula para o enésimo termo da soma parcial</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li>
-<li id="li-12"><p id="p-36"><a class="external" href="https://youtu.be/xvZGyrnXXsw" target="_blank">Exemplo resolvido: valor do termo da soma parcial</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a></p></li>
-<li id="li-13"><p id="p-37"><a class="external" href="https://youtu.be/xQtafdrGb_o" target="_blank">A série <span class="process-math">\(\sum_{n=1}^{\infty}\frac{2n^3}{(n+1)(n+2)} \)</span> converge?</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a></p></li>
-<li id="li-14"><p id="p-38"><a class="external" href="https://youtu.be/4DQc6AJKNiQ" target="_blank">Séries Geométricas: a série <span class="process-math">\(8 + \frac{8}{3} + \frac{8}{9} + \ldots\,\)</span>  converge?</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
-<li id="li-15"><p id="p-39"><a class="external" href="https://youtu.be/EWeltCgv2Qw" target="_blank">Séries Geométricas: a série <span class="process-math">\(-0.5 + 1.5 - 4.5 + \ldots\, \)</span>  converge?</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p></li>
-<li id="li-16"><p id="p-40"><a class="external" href="https://youtu.be/HTtAvoQSQZ0" target="_blank">Séries Geométricas: dízimas periódicas</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a></p></li>
+<li id="li-10"><div class="para" id="p-34">
+<a class="external" href="https://youtu.be/eR7pIQXNT2wQ" target="_blank">Introdução a somas parciais</a><a class="xref" id="fn-1" href="" data-knowl="./knowl/fn-1.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a>
+</div></li>
+<li id="li-11"><div class="para" id="p-35">
+<a class="external" href="https://youtu.be/f-FrABeDX0o" target="_blank">Exemplo resolvido: fórmula para o enésimo termo da soma parcial</a><a class="xref" id="fn-2" href="" data-knowl="./knowl/fn-2.html" title="Nota de rodapé 1.2"><sup> 2 </sup></a>
+</div></li>
+<li id="li-12"><div class="para" id="p-36">
+<a class="external" href="https://youtu.be/xvZGyrnXXsw" target="_blank">Exemplo resolvido: valor do termo da soma parcial</a><a class="xref" id="fn-3" href="" data-knowl="./knowl/fn-3.html" title="Nota de rodapé 1.3"><sup> 3 </sup></a>
+</div></li>
+<li id="li-13"><div class="para" id="p-37">
+<a class="external" href="https://youtu.be/xQtafdrGb_o" target="_blank">A série <span class="process-math">\(\sum_{n=1}^{\infty}\frac{2n^3}{(n+1)(n+2)} \)</span> converge?</a><a class="xref" id="fn-4" href="" data-knowl="./knowl/fn-4.html" title="Nota de rodapé 1.4"><sup> 4 </sup></a>
+</div></li>
+<li id="li-14"><div class="para" id="p-38">
+<a class="external" href="https://youtu.be/4DQc6AJKNiQ" target="_blank">Séries Geométricas: a série <span class="process-math">\(8 + \frac{8}{3} + \frac{8}{9} + \ldots\,\)</span>  converge?</a><a class="xref" id="fn-5" href="" data-knowl="./knowl/fn-5.html" title="Nota de rodapé 1.5"><sup> 5 </sup></a>
+</div></li>
+<li id="li-15"><div class="para" id="p-39">
+<a class="external" href="https://youtu.be/EWeltCgv2Qw" target="_blank">Séries Geométricas: a série <span class="process-math">\(-0.5 + 1.5 - 4.5 + \ldots\, \)</span>  converge?</a><a class="xref" id="fn-6" href="" data-knowl="./knowl/fn-6.html" title="Nota de rodapé 1.6"><sup> 6 </sup></a>
+</div></li>
+<li id="li-16"><div class="para" id="p-40">
+<a class="external" href="https://youtu.be/HTtAvoQSQZ0" target="_blank">Séries Geométricas: dízimas periódicas</a><a class="xref" id="fn-7" href="" data-knowl="./knowl/fn-7.html" title="Nota de rodapé 1.7"><sup> 7 </sup></a>
+</div></li>
 </ul></section><section class="exercises" id="exercises-intro-series"><h3 class="heading hide-type">
-<span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
+<span class="type">Exercícios</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Exercícios</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-41">Encontrar uma fórmula para o termo geral <span class="process-math">\(a_n\)</span> (não a soma parcial) da série infinita (começando com <span class="process-math">\(a_1\)</span>).</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\cdots
-\end{equation*}
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para logical" id="p-41">
+<div class="para">Suponha que a sequência de somas parciais da série <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> é <span class="process-math">\(\{S_N\} = \left\{\dfrac{N}{N+1}\right\}\text{.}\)</span>
 </div>
-<p id="p-42"><span class="process-math">\(a_n\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-43"><span class="process-math">\(\frac{1}{2^{n}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><p id="p-44">Os denominadores são potências de 2,começando com a primeira potência. Assim, o termo geral é <span class="process-math">\(a_n=\frac{1}{2^n}\text{.}\)</span></p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-45">Escreva a fórmula geral para a seguinte séries alternada da forma <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty}a_n.\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{3}{5}-\frac{3}{6}+\frac{3}{7}-\frac{3}{8}+\cdots
-\end{equation*}
-</div>
-<p id="p-46"><span class="process-math">\(a_n =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-47"><span class="process-math">\(\frac{3\!\left(-1\right)^{n-1}}{4+n}\)</span></p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-48">Calcular as somas parciais <span class="process-math">\(S_2,S_4\text{,}\)</span> e <span class="process-math">\(S_6\text{.}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-4+\frac{4}{2^2}+\frac{4}{3^2}+\frac{4}{4^2}+\cdots
-\end{equation*}
-</div>
-<p id="p-49"><span class="process-math">\(S_2\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-50"><span class="process-math">\(S_4\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-51"><span class="process-math">\(S_6\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-52"><span class="process-math">\(5\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-53"><span class="process-math">\(5.69444\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-54"><span class="process-math">\(5.96556\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
-<p id="p-55"><span class="process-math">\(S_2=4+\frac{4}{2^2}=4\left( 1+\frac{1}{4}\right)=4\left(\frac{5}{4}\right)\text{;}\)</span></p>
-<p id="p-56"><span class="process-math">\(S_4=4+\frac{4}{2^2}+\frac{4}{3^2}+\frac{4}{4^2}=4\left(\frac{205}{144}\right)\text{;}\)</span></p>
-<p id="p-57"><span class="process-math">\(S_6=4+\frac{4}{2^2}+\frac{4}{3^2}+\frac{4}{4^2}+\frac{4}{5^2}+\frac{4}{6^2}=4\left(\frac{5369}{3600}\right)\text{.}\)</span></p>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-58">Escreva <span class="process-math">\(S=\sum\limits_{n=6}^\infty \frac{1}{n(n-1)}\)</span> como uma série telescópica e encontre sua soma.</p>
-<p id="p-59"><span class="process-math">\(S_N\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-60"><span class="process-math">\(S\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-61"><span class="process-math">\(0.2-\frac{1}{N}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-62"><span class="process-math">\(0.2\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
-<p id="p-63">Por decomposição em fração parcial</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{1}{n(n-1)}=\frac{1}{n-1}-\frac{1}{n},
-\end{equation*}
-</div>
-<p class="continuation">então</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-S=\sum_{n=6}^\infty \frac{1}{n(n-1)}=\sum_{n=6}^\infty \left(\frac{1}{n-1}-\frac{1}{n}\right).
-\end{equation*}
-</div>
-<p class="continuation">O termo geral na sequência de somas parciais para esta série é</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-S_N=\left(\frac{1}{5}-\frac{1}{6}\right) + \left(\frac{1}{6}-\frac{1}{7}\right) + \cdots + \left(\frac{1}{N-1}-\frac{1}{N}\right)=\frac{1}{5}-\frac{1}{N};
-\end{equation*}
-</div>
-<p id="p-64">Assim,</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-65">
-\begin{equation*}
-S=\lim_{N\rightarrow \infty} S_N = \lim_{N\rightarrow \infty}\left(\frac{1}{5}-\frac{1}{N}\right)=\frac{1}{5}.
-\end{equation*}
-</div>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-66">Calcule <span class="process-math">\(S_3,S_{4}\)</span> e <span class="process-math">\(S_{5}\)</span> e encontre a soma para a série telescópica</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-S=\sum_{n=6}^\infty \left(\frac{1}{n+1}-\frac{1}{n+2}\right)
-\end{equation*}
-</div>
-<p class="continuation">na qual <span class="process-math">\(S_k\)</span> é a soma parcial usando os primeiros valores <span class="process-math">\(k\)</span> de <span class="process-math">\(n\text{.}\)</span></p>
-<p id="p-67"><span class="process-math">\(S_3\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-68"><span class="process-math">\(S_{4}\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-69"><span class="process-math">\(S_{5}\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-70"><span class="process-math">\(S\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-71"><span class="process-math">\(0.0428571\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-72"><span class="process-math">\(0.0519481\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-73"><span class="process-math">\(0.0595238\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-74"><span class="process-math">\(0.142857\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-75">
-\begin{equation*}
-S_3=\left(\frac{1}{7}-\frac{1}{8}\right)+\left(\frac{1}{8}-\frac{1}{9}\right)+\left(\frac{1}{9}-\frac{1}{10}\right)=\frac{1}{7}-\frac{1}{10}=\frac{3}{70};
-\end{equation*}
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-76">
-\begin{equation*}
-S_4=S_3+\left(\frac{1}{10}-\frac{1}{11}\right)=\frac{1}{7}-\frac{1}{11}=\frac{4}{77};
-\end{equation*}
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-77">
-\begin{equation*}
-S_5=S_4+\left(\frac{1}{11}-\frac{1}{12}\right)=\frac{1}{7}-\frac{1}{12}=\frac{5}{84}.
-\end{equation*}
-</div>
-<p id="p-78">O termo geral na sequência de somas parciais é</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-S_N=\left(\frac{1}{7}-\frac{1}{8}\right)+\left(\frac{1}{8}-\frac{1}{9}\right)+\left(\frac{1}{9}-\frac{1}{10}\right)+\cdots +\left(\frac{1}{N+6}-\frac{1}{N+7}\right)=\frac{1}{7}-\frac{1}{N+7};
-\end{equation*}
-</div>
-<p class="continuation">então,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-S=\lim_{N\rightarrow \infty} S_N=\lim_{N\rightarrow \infty}\left(\frac{1}{7}-\frac{1}{N+7}\right)=\frac{1}{7}.
-\end{equation*}
-</div>
-<p id="p-79">Portanto, a soma da série telescópica é <span class="process-math">\(\frac{1}{7}\text{.}\)</span></p>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<p id="p-80">As seguintes séries são séries geométricas ou uma soma de duas Séries Geométricas.</p>
-<p id="p-81">Determine se cada série converge ou não.</p>
-<p id="p-82">Para as séries que convergem, insira a soma das séries. Para a série que diverge digite "DIV" (sem aspas).</p>
-<p id="p-83">(a)  <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} \frac{6^n}{5^n} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
-<p id="p-84">(b)  <span class="process-math">\(\displaystyle \sum_{n=2}^{\infty} \frac{1}{3^n} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
-<p id="p-85">(c)  <span class="process-math">\(\displaystyle \sum_{n=0}^{\infty} \frac{3^n}{4^{2n+1}} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
-<p id="p-86">(d)  <span class="process-math">\(\displaystyle \sum_{n=5}^{\infty} \frac{5^n}{6^n} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
-<p id="p-87">(e)  <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} \frac{6^n}{6^{n+4}} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
-<p id="p-88">(f)  <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} \frac{5^n +3^n}{6^n} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-89">DIV</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-90"><span class="process-math">\(0.166666666666667\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-91"><span class="process-math">\(0.307692307692308\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-92"><span class="process-math">\(2.41126543209877\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-93">DIV</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-94"><span class="process-math">\(6\)</span></p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<p id="p-95">Determine se a série converge e, em caso afirmativo, encontre sua soma.</p>
-<p id="p-96"><span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{1}{\left(k+6\right)\!\left(k+7\right)} =\)</span> <span class="fillin" role="img" aria-label="50-character blank" style="width: 22.7272727272727em;"></span></p>
-<p id="p-97">(Insira DNE se a soma não existir.)</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-98"><span class="process-math">\(\frac{1}{6+1}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
-<p id="p-99">Usando frações paciais</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{1}{\left(k+6\right)\!\left(k+7\right)}=\frac{A}{k+6}+\frac{B}{k+7}=\frac{1}{k+6}-\frac{1}{k+7}
-\end{equation*}
-</div>
-<p class="continuation"><span class="process-math">\(s_n=\displaystyle \sum_{k=1}^{n} \left(\frac{1}{k+6}-\frac{1}{k+7}\right) =\left({\textstyle\frac{1}{7}}-{\textstyle\frac{1}{8}}\right)+\left({\textstyle\frac{1}{8}}-{\textstyle\frac{1}{9}}\right)+\left({\textstyle\frac{1}{9}}-{\textstyle\frac{1}{10}}\right)+...+\left(\frac{1}{n+5}-\frac{1}{n+6}\right)+\left(\frac{1}{n+6}-\frac{1}{n+7}\right)=\left({\textstyle\frac{1}{7}}-\frac{1}{n+7}\right)\)</span></p>
-<p id="p-100">Logo, <span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{1}{\left(k+6\right)\!\left(k+7\right)} = \lim_{n\to\infty} \left({\textstyle\frac{1}{7}}-\frac{1}{n+7}\right) ={\textstyle\frac{1}{7}}\)</span></p>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<p id="p-101">Determine se a série converge e, em caso afirmativo, encontre sua soma.</p>
-<p id="p-102"><span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{2^{k+5}}{3^{k-1}} =\)</span> <span class="fillin" role="img" aria-label="50-character blank" style="width: 22.7272727272727em;"></span></p>
-<p id="p-103">(Insira DNE se a soma não existir.)</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-104"><span class="process-math">\(\frac{3\cdot 2^{5+1}}{3^{-1+1}\!\left(3-2\right)}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
-<p id="p-105">Com <span class="process-math">\(a=64\)</span> e <span class="process-math">\(r={\textstyle\frac{2}{3}}\text{,}\)</span> <span class="process-math">\(|r|\lt 1\)</span> obtemos</p>
-<p id="p-106"><span class="process-math">\(\displaystyle \sum_{k=1}^{\infty} \frac{2^{k+5}}{3^{k-1}} =64 \sum_{k=0}^{\infty} \left({\textstyle\frac{2}{3}}\right)^{k} =\frac{64}{1-\left({\textstyle\frac{2}{3}}\right)}=192\)</span></p>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<p id="p-107">Use a fórmula para a soma de uma série geométrica para encontrar a soma ou indique que a série diverge (insira DIV para uma série divergente).</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-108">
-\begin{equation*}
-\sum_{n=4}^\infty \frac{7^n}{14^n}
-\end{equation*}
-</div>
-<p id="p-109"><span class="process-math">\(S=\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-110"><span class="process-math">\(0.125\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
-<p id="p-111">Esta é uma série geométrica com <span class="process-math">\(c=\left(\frac{7}{14}\right)^{4}\)</span> e <span class="process-math">\(0\lt r=\frac{7}{14}\lt 1\text{.}\)</span> Logo,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\sum_{n=4}^\infty \frac{7^n}{14^n}=
-\left(\frac{7}{14}\right)^{4}\sum_{n=0}^\infty\left( \frac{7}{14}\right)^n=
-\left(\frac{7}{14}\right)^{4}\left(\frac{1}{1-\frac{7}{14}}\right)=\left(\frac{7}{14}\right)^{4}\left(\frac{14}{7}\right).
-\end{equation*}
-</div>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<p id="p-112">Suponha que a sequência de somas parciais da série <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> é <span class="process-math">\(\{S_N\} = \left\{\dfrac{N}{N+1}\right\}\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-17"><p id="p-derived-li-17">Encontre <span class="process-math">\(\{a_n\}\text{.}\)</span></p></li>
-<li id="li-18"><p id="p-derived-li-18">Encontre <span class="process-math">\(\lim\limits_{n \to \infty} a_n\text{.}\)</span></p></li>
-<li id="li-19"><p id="p-derived-li-19">Determine <span class="process-math">\(\sum_{n=1}^\infty a_n\text{.}\)</span></p></li>
+<li id="li-17"><div class="para" id="p-derived-li-17">Encontre <span class="process-math">\(\{a_n\}\text{.}\)</span>
+</div></li>
+<li id="li-18"><div class="para" id="p-derived-li-18">Encontre <span class="process-math">\(\lim\limits_{n \to \infty} a_n\text{.}\)</span>
+</div></li>
+<li id="li-19"><div class="para" id="p-derived-li-19">Determine <span class="process-math">\(\sum_{n=1}^\infty a_n\text{.}\)</span>
+</div></li>
 </ol>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-113">(a) <span class="process-math">\(\displaystyle a_n = \begin{cases}
+<details id="answer-1" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-42">(a) <span class="process-math">\(\displaystyle a_n = \begin{cases}
 \frac12 \amp\mbox{ se } n=1\\
 \dfrac{1}{n(n+1)} \amp\mbox{ caso contrário }\\
-\end{cases}\qquad\)</span> (b) <span class="process-math">\(0\qquad\)</span> (c) 1</p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><ol id="p-114" class="lower-alpha">
-<li id="li-20"><p id="p-derived-li-20"><span class="process-math">\(S_N\)</span> é a soma dos primeiros  <span class="process-math">\(N\)</span> termos de <span class="process-math">\(\{a_n\}\text{,}\)</span> e <span class="process-math">\(S_{N-1}\)</span> é a soma dos mesmos termos <em class="emphasis">exceto</em> <span class="process-math">\(a_N\text{.}\)</span> Então, <span class="process-math">\(a_N = S_N-S_{N-1}\)</span> quando <span class="process-math">\(N \geq 2\text{.}\)</span> Em outros termos:<div class="displaymath process-math" data-contains-math-knowls="" id="md-20">
+\end{cases}\qquad\)</span> (b) <span class="process-math">\(0\qquad\)</span> (c) 1</div></div></details><details id="solution-4" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-43"><ol class="lower-alpha">
+<li id="li-20"><div class="para" id="p-derived-li-20">
+<span class="process-math">\(S_N\)</span> é a soma dos primeiros  <span class="process-math">\(N\)</span> termos de <span class="process-math">\(\{a_n\}\text{,}\)</span> e <span class="process-math">\(S_{N-1}\)</span> é a soma dos mesmos termos <em class="emphasis">exceto</em> <span class="process-math">\(a_N\text{.}\)</span> Então, <span class="process-math">\(a_N = S_N-S_{N-1}\)</span> quando <span class="process-math">\(N \geq 2\text{.}\)</span> Em outros termos:<div class="displaymath process-math" id="md-20">
 \begin{align*}
 S_N \amp=a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1}+a_N\\
 S_{N-1}\amp=a_1+a_2+a_3+\cdots+a_{N-2}+a_{N-1}\\
@@ -849,30 +751,30 @@ a_N\amp=S_N-S_{N-1}=\left(\dfrac{N}{N+1}\right)-\left(\dfrac{N-1}{N-1+1}\right)\
 \begin{align*}
 a_n\amp=\frac{1}{n(n+1)}
 \end{align*}
-</div></p></li>
+</div>
+</div></li>
 <li id="li-21">
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-115">
+<div class="para logical" id="p-44"><div class="displaymath process-math">
 \begin{equation*}
 \lim\limits_{n \to \infty} a_n =\lim\limits_{n \to \infty} \dfrac{1}{n(n+1)}=0.
 \end{equation*}
-</div>
-<p id="p-116">Ou seja, os termos que estamos somando estão ficando arbitrariamente pequenos à medida que avançamos.</p>
+</div></div>
+<div class="para" id="p-45">Ou seja, os termos que estamos somando estão ficando arbitrariamente pequenos à medida que avançamos.</div>
 </li>
-<li id="li-22"><p id="p-derived-li-22">Por definição,<div class="displaymath process-math" data-contains-math-knowls="">
+<li id="li-22"><div class="para" id="p-derived-li-22">Por definição,<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty a_n = \lim_{N \to \infty}S_N = \lim_{N \to \infty}\dfrac{N}{N+1}=1
 \end{equation*}
-</div>Ou seja, à medida que adicionamos mais termos da série, a nossa soma acumulada fica próxima de 1.</p></li>
-</ol></div></div>
+</div>Ou seja, à medida que adicionamos mais termos da série, a nossa soma acumulada fica próxima de 1.</div></li>
+</ol></div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<p id="p-117">Suponha que a sequência de somas parciais da série <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> é <span class="process-math">\(\{S_N\} = \left\{(-1)^N+\dfrac{1}{N}\right\}\text{.}\)</span> Encontre <span class="process-math">\(\{a_n\}\text{.}\)</span></p>
+<div class="para" id="p-46">Suponha que a sequência de somas parciais da série <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> é <span class="process-math">\(\{S_N\} = \left\{(-1)^N+\dfrac{1}{N}\right\}\text{.}\)</span> Encontre <span class="process-math">\(\{a_n\}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-118">Calcule <span class="process-math">\(a_1\)</span> separadamente dos outros termos.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-119"><span class="process-math">\(a_n=\begin{cases}
+<details id="hint-1" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-47">Calcule <span class="process-math">\(a_1\)</span> separadamente dos outros termos.</div></div></details><details id="answer-2" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-48"><span class="process-math">\(a_n=\begin{cases}
 0 \amp \mbox{ if } n=1\\
 2(-1)^{n} -\frac{1}{n(n-1)} \amp\mbox{ caso contrário }
-\end{cases}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="md-21">
+\end{cases}\)</span></div></div></details><details id="solution-5" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-49"><div class="displaymath process-math" id="md-21">
 \begin{align*}
 a_N \amp=S_N-S_{N-1}=\left[(-1)^N+\dfrac{1}{N}\right]-\left[(-1)^{N-1}+\dfrac{1}{N-1}\right]\\
 \amp=(-1)^N-(-1)^{N-1} + \frac{1}{N}-\frac{1}{N-1}\\
@@ -891,29 +793,30 @@ a_n\amp=\begin{cases}
 2(-1)^{n} -\frac{1}{n(n-1)} \amp\mbox{ caso contrário }
 \end{cases}
 \end{align*}
-</div></div></div>
+</div></div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<p id="p-121">Calcule <span class="process-math">\(\displaystyle\sum_{n=0}^{100}\frac{1}{5^n}\text{.}\)</span></p>
+<div class="para" id="p-50">Calcule <span class="process-math">\(\displaystyle\sum_{n=0}^{100}\frac{1}{5^n}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-122"><span class="process-math">\(\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}\text{,}\)</span> para <span class="process-math">\(r \neq 1\text{.}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-123"><span class="process-math">\(\dfrac{5^{101}-1}{4\cdot 5^{100}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
-<p id="p-124"><span class="process-math">\(\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}\text{,}\)</span> for <span class="process-math">\(r \neq 1\text{.}\)</span> A série é Geométrica com <span class="process-math">\(a=1\text{,}\)</span> <span class="process-math">\(r=\frac{1}{5}\text{,}\)</span> e <span class="process-math">\(N=100\text{.}\)</span> Logo:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<details id="hint-2" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-51">
+<span class="process-math">\(\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}\text{,}\)</span> para <span class="process-math">\(r \neq 1\text{.}\)</span>
+</div></div></details><details id="answer-3" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-52"><span class="process-math">\(\dfrac{5^{101}-1}{4\cdot 5^{100}}\)</span></div></div></details><details id="solution-6" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-53">
+<div class="para">
+<span class="process-math">\(\displaystyle\sum_{n=0}^N ar^n = a\dfrac{1-r^{N+1}}{1-r}\text{,}\)</span> for <span class="process-math">\(r \neq 1\text{.}\)</span> A série é Geométrica com <span class="process-math">\(a=1\text{,}\)</span> <span class="process-math">\(r=\frac{1}{5}\text{,}\)</span> e <span class="process-math">\(N=100\text{.}\)</span> Logo:</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \displaystyle\sum_{n=0}^{100}\frac{1}{5^n} =
 \frac{1-\frac{1}{5^{101}}}{1-\frac{1}{5}} = \dfrac{5^{101}-1}{4\cdot 5^{100}}
 \end{equation*}
 </div>
-</div></div>
+</div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<p id="p-125">Calcule <span class="process-math">\(\displaystyle\sum_{n=50}^{100}\frac{1}{5^n}\text{.}\)</span></p>
+<div class="para" id="p-54">Calcule <span class="process-math">\(\displaystyle\sum_{n=50}^{100}\frac{1}{5^n}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-126">Para ajustar o índice inicial, fatore o primeiro termo da série ou subtraia duas séries.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-127"><span class="process-math">\(\dfrac{5^{51}-1}{4\cdot 5^{100}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
-<p id="p-128">Observe que</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-22">
+<details id="hint-3" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-55">Para ajustar o índice inicial, fatore o primeiro termo da série ou subtraia duas séries.</div></div></details><details id="answer-4" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-56"><span class="process-math">\(\dfrac{5^{51}-1}{4\cdot 5^{100}}\)</span></div></div></details><details id="solution-7" class="solution solution-like"><summary><span class="type">Solução</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-57">
+<div class="para">Observe que</div>
+<div class="displaymath process-math" id="md-22">
 \begin{align*}
 \sum_{n={50}}^{100}
 \frac{1}{5^n}\amp=\sum_{n=0}^{100}\frac{1}{5^n}-\sum_{n=0}^{49}\frac{1}{5^n}\\
@@ -927,10 +830,9 @@ a_n\amp=\begin{cases}
 \amp=\frac{5^{51}-1}{4\cdot 5^{100}}
 \end{align*}
 </div>
-</div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
-<p id="p-129">Se escrevermos os primeiros termos da nossa série, veremos que podemos fatorar uma constante para alterar o índice inicial.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-23">
+</div></div></details><details id="solution-8" class="solution solution-like"><summary><span class="type">Solução</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-58">
+<div class="para">Se escrevermos os primeiros termos da nossa série, veremos que podemos fatorar uma constante para alterar o índice inicial.</div>
+<div class="displaymath process-math" id="md-23">
 \begin{align*}
 \sum_{n={50}}^{100} \frac{1}{5^n}\amp= \frac{1}{5^{50}}+
 \frac{1}{5^{51}}+\frac{1}{5^{52}}+\frac{1}{5^{53}}+\cdots +\frac{1}{5^{100}}\\
@@ -945,22 +847,22 @@ a_n\amp=\begin{cases}
 \amp=\frac{5^{51}-1}{4\cdot 5^{100}}
 \end{align*}
 </div>
-</div></div>
+</div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<p id="p-130">Calcule <span class="process-math">\(\displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)\text{.}\)</span></p>
+<div class="para" id="p-59">Calcule <span class="process-math">\(\displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-131">Use regras de logaritmo para transformar isso em uma série telescópica mais simples</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-132">A séries diverge para <span class="process-math">\(-\infty\text{.}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
-<p id="p-133">Usando regras de logaritmo, notamos que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<details id="hint-4" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-60">Use regras de logaritmo para transformar isso em uma série telescópica mais simples</div></div></details><details id="answer-5" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-61">A séries diverge para <span class="process-math">\(-\infty\text{.}\)</span>
+</div></div></details><details id="solution-9" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-62">
+<div class="para">Usando regras de logaritmo, notamos que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \displaystyle\sum_{n=5}^\infty \log\left(\frac{n-3}{n}\right)=
 \displaystyle\sum_{n=5}^\infty \big[\log(n-3)-\log n\big]
 \end{equation*}
 </div>
-<p id="p-134">que é uma série telescópica. Vamos fazer uma tabela para descobrir as somas parciais.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-135">
+</div> <div class="para" id="p-63">que é uma série telescópica. Vamos fazer uma tabela para descobrir as somas parciais.</div> <div class="para logical" id="p-64"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{c||cc||c}
 \mathbf{N}\amp\mathbf{\log(N\!-\!3)}\!\!\amp\mathbf{-\log N}\amp\mathbf{S_N}\\
@@ -983,9 +885,9 @@ a_n\amp=\begin{cases}
 \vdots\amp\amp\amp
 \end{array}
 \end{equation*}
-</div>
-<p id="p-136">Assim, é possível perceber que a soma parcial de <span class="process-math">\(N\)</span> termos é:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-24">
+</div></div> <div class="para logical" id="p-65">
+<div class="para">Assim, é possível perceber que a soma parcial de <span class="process-math">\(N\)</span> termos é:</div>
+<div class="displaymath process-math" id="md-24">
 \begin{align*}
 S_N = \amp\sum_{n=5}^N \Big(\log(n-3)-\log(n)\Big)\\
 \amp\hskip0.5in=\log 2+\log 3 + \log 4 - \log(N-2)-\log(N-1)-\log(N)\\
@@ -999,15 +901,15 @@ S_N = \amp\sum_{n=5}^N \Big(\log(n-3)-\log(n)\Big)\\
 \amp=-\infty
 \end{align*}
 </div>
-</div></div>
-</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/eR7pIQXNT2w</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/f-FrABeDX0o</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/xvZGyrnXXsw</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">https://youtu.be/xQtafdrGb_o</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/4DQc6AJKNiQ</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/EWeltCgv2Qw</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/HTtAvoQSQZ0</code></div></div>
+</div>
+</div></details>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="calc-intro-serie.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="references-backmatter.html" title="Próximo"><span class="name">Próximo</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

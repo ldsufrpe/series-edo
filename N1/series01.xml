@@ -481,7 +481,7 @@
                         \lim_{n\rightarrow\infty} \Big[1+\frac{9}{n}\Big] = 1
                     </mrow>
                 </md>
-                Então o teorema do aperto com <m>a_n=1</m>, <m>b_n=1+\frac{\pi_n}{n}</m>, e <m>c_n=1+\frac{9}{n}</m> fornece
+                Então o teorema do confronto com <m>a_n=1</m>, <m>b_n=1+\frac{\pi_n}{n}</m>, e <m>c_n=1+\frac{9}{n}</m> fornece
                 <me>
                     \lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big] = 1
                 </me>
