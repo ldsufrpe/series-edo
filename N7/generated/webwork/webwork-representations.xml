@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="16" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="Library/Rochester/setDiffEQ1/e7_1_4a.pg">
+      <statement><p>The  functions   <me>y = x^2 + \frac{c}{x^2}</me>  are all solutions of equation:
+<me>xy' + 2y = 4x^2,\ (x \gt 0).</me>
+Find the constant <m>c</m> which produces a solution 
+which also satisfies the initial condition <m>y(2)= 8</m>.</p>
+<p><m>c =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>16</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Rochester/setDiffEQ1/e7_1_4a.pg" domain="https://webwork-ptx.aimath.org/" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="pt-BR"/>
+    <pg source="Library/Rochester/setDiffEQ1/e7_1_4a.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="16" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="Library/FortLewis/DiffEq/0-Introduction/Lebl-0-2-10.pg">
+      <statement><p>Find a non-constant solution to <m>(x^{\,\prime})^2 + x^2 = 4</m> using your 
+knowledge of derivatives from basic calculus.</p>
+<p><m>x(t) =</m>
+<fillin name="AnSwEr0001" characters="30"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2\cos\!\left(t\right)</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/FortLewis/DiffEq/0-Introduction/Lebl-0-2-10.pg" domain="https://webwork-ptx.aimath.org/" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="pt-BR"/>
+    <pg source="Library/FortLewis/DiffEq/0-Introduction/Lebl-0-2-10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="16" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="Library/AlfredUniv/diffeq/ivp/oneparameter1.pg">
+      <statement><p>The differential equation</p>
+<p><me>y^\prime = y-y^2</me>
+has one of the following one parameter families as its general solution</p>
+<p><me>\begin{aligned}
+y\amp =\frac{1}{1+ce^{-x}}  \\
+y\amp =\frac{1}{c+x^2} \\
+\end{aligned}</me></p>
+<p>Find the solution such that <m>y(0) = 4</m>: <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{1}{1+-0.75e^{-x}}</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solution </alert></p>
+<p>Try <m>y=\frac{1}{c+x^2}</m> first.</p>
+<p>Then <m>y^\prime = \frac{-4x}{(c+x^2)^2}</m> while</p>
+<p><m>y-y^2 = \frac{1}{c+x^2} - \frac{1}{(c+x^2)^2}= \frac{c+x^2}{(c+x^2)^2} - \frac{1}{(c+x^2)^2}=\frac{c+x^2-1}{(c+x^2)^2}</m></p>
+<p>So <m>y^\prime\neq y-y^2</m> for this function, it is not the solution.</p>
+<p>Now try <m>y=\frac{1}{1+ce^{-x}}</m>. Then</p>
+<p><m>y^\prime = \frac{ce^{-x}}{1+ce^{-x}}</m></p>
+<p>while</p>
+<p><m>y-y^2=\frac{1}{1+ce^{-x}}-\frac{1}{(1+ce^{-x})^2}=\frac{1+ce^{-x}}{(1+ce^{-x})^2}-\frac{1}{(1+ce^{-x})^2}=\frac{ce^{-x}}{(1+ce^{-x})^2}</m></p>
+<p>So this function is the solution</p>
+<p>Setting <m>y(0)=4</m> we get</p>
+<p><m>4 = \frac{1}{1+c}</m></p>
+<p>Solve for c, <m>c = \frac{1}{4}-1=-0.75</m></p>
+<p>So the solution for the IVP is <m>y = \frac{1}{1 - 0.75e^{-x}}</m></p>
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/AlfredUniv/diffeq/ivp/oneparameter1.pg" domain="https://webwork-ptx.aimath.org/" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="pt-BR"/>
+    <pg source="Library/AlfredUniv/diffeq/ivp/oneparameter1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="16" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="Library/MiamiUOhio/DiffEq/Definitions_and_Terminology/Problem25.pg">
+      <statement><p>Is the piecewise-defined function 
+<me>y = \left\lbrace \begin{array}{ll} -x^{2}, \amp  \mbox{ if }  x \lt  0 \\  x^{2}, \amp  \mbox{ if } x \geq 0 \end{array} \right.</me>
+a solution of the differential equation <m>xy'-2y=0</m> on <m>(-\infty,\infty)</m>?</p>
+<p><alert>You have only one attempt for credit. </alert></p>
+<p><var form="popup" name="AnSwEr0001">
+<li>
+<p>Choose</p>
+</li>
+<li>
+<p>Yes</p>
+</li>
+<li>
+<p>No</p>
+</li>
+</var></p>
+</statement>
+      <answer>
+        <p>
+          <m>\text{Yes}</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/MiamiUOhio/DiffEq/Definitions_and_Terminology/Problem25.pg" domain="https://webwork-ptx.aimath.org/" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="pt-BR"/>
+    <pg source="Library/MiamiUOhio/DiffEq/Definitions_and_Terminology/Problem25.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="16" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="Library/AlfredUniv/diffeq/ivp/existenceuniqueness.pg">
+      <statement><p>For the differential equation <m>\frac{dy}{dx} = \sqrt{y^{2}-25}</m> does the existence/uniqueness theorem guarantee that there is a solution to this equation through the point</p>
+<p><ol>
+<li>
+<p><m>\left(3,-5\right)</m>?</p>
+</li>
+<li>
+<p><m>\left(-6,27\right)</m>?</p>
+</li>
+<li>
+<p><m>\left(0,31\right)</m>?</p>
+</li>
+<li>
+<p><m>\left(-3,5\right)</m>?</p>
+</li>
+</ol></p>
+</statement>
+    </static>
+    <server-data sourceFilePath="Library/AlfredUniv/diffeq/ivp/existenceuniqueness.pg" domain="https://webwork-ptx.aimath.org/" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="pt-BR"/>
+    <pg source="Library/AlfredUniv/diffeq/ivp/existenceuniqueness.pg"/>
+  </webwork-reps>
+</webwork-representations>
