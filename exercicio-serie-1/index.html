@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios de Séries</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+
+        async function loadContent() {
+            console.log("Iniciando carregamento do conteúdo...");
+
+            try {
+                // Carregar informações do cabeçalho
+                const responseInfo = await fetch('info.json');
+                if (!responseInfo.ok) {
+                    throw new Error("Erro ao carregar info.json: " + responseInfo.statusText);
+                }
+                const info = await responseInfo.json();
+                console.log("Informações carregadas:", info);
+                document.getElementById('university').textContent = info.university;
+                document.getElementById('department').textContent = info.department;
+                document.getElementById('professor').textContent = info.professor;
+                document.getElementById('course').textContent = info.course;
+                document.getElementById('class').textContent = info.class;
+
+                // Carregar questões e respostas
+                const responseQuestions = await fetch('questions.json');
+                if (!responseQuestions.ok) {
+                    throw new Error("Erro ao carregar questions.json: " + responseQuestions.statusText);
+                }
+                const data = await responseQuestions.json();
+                console.log("Questões carregadas:", data);
+                const container = document.getElementById('questions-container');
+                if (!container) {
+                    throw new Error("Elemento container para questões não encontrado.");
+                }
+                console.log("Container encontrado:", container);
+                data.questions.forEach((q, index) => {
+                    console.log("Adicionando questão:", index + 1);
+                    const questionContainer = document.createElement('div');
+                    questionContainer.className = 'question-container';
+
+                    const question = document.createElement('p');
+                    question.innerHTML = `<strong>${index + 1}.</strong> ${q.question}`;
+                    questionContainer.appendChild(question);
+
+                    const button = document.createElement('button');
+                    button.textContent = 'Mostrar/Esconder Gabarito';
+                    button.setAttribute('onclick', `toggleAnswer('answer${index + 1}')`);
+                    questionContainer.appendChild(button);
+
+                    const answer = document.createElement('p');
+                    answer.id = `answer${index + 1}`;
+                    answer.className = 'answer';
+                    answer.innerHTML = `<strong>Gabarito:</strong> ${q.answer}`;
+                    questionContainer.appendChild(answer);
+
+                    container.appendChild(questionContainer);
+                });
+                // Atualizar o MathJax após adicionar o conteúdo dinamicamente
+                if (window.MathJax) {
+                    window.MathJax.typesetPromise();
+                }
+            } catch (error) {
+                console.error("Erro ao carregar conteúdo:", error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadContent);
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="logo_ufrpe_2.png" alt="Logo UFRPE">
+        <h1 id="university"></h1>
+        <p id="department"></p>
+        <p id="professor"></p>
+        <p id="course"></p>
+        <p id="class"></p>
+    </div>
+    <div class="container">
+        <h2>Lista de Exercícios de Séries</h2>
+        <div id="questions-container"></div>
+    </div>
+</body>
+</html>

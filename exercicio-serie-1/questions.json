@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "question": "Verifique se a série \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^2 + 1} \\) converge ou diverge usando o teste da comparação.",
+            "answer": "Converge. Comparando com \\( \\frac{1}{n^2} \\), que é uma série p com \\( p = 2 > 1 \\)."
+        },
+        {
+            "question": "Use o teste da comparação para determinar a convergência da série \\( \\sum_{n=1}^{\\infty} \\frac{1}{n(n+1)} \\).",
+            "answer": "Converge. Comparando com \\( \\frac{1}{n^2} \\), que é uma série p com \\( p = 2 > 1 \\)."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\frac{2^n}{3^n + 1} \\) converge ou diverge? Utilize o teste da comparação.",
+            "answer": "Converge. Comparando com \\( \\frac{2^n}{3^n} \\), que converge porque \\( \\left(\\frac{2}{3}\\right)^n \\) é uma série geométrica com \\( r < 1 \\)."
+        },
+        {
+            "question": "Determine se a série \\( \\sum_{n=1}^{\\infty} \\frac{n}{n^2 + 1} \\) converge ou diverge usando o teste da comparação.",
+            "answer": "Diverge. Comparando com \\( \\frac{1}{n} \\), que é uma série p com \\( p = 1 \\leq 1 \\)."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n^3 + 1}} \\) converge ou diverge? Use o teste da comparação.",
+            "answer": "Converge. Comparando com \\( \\frac{1}{n^{3/2}} \\), que é uma série p com \\( p = 3/2 > 1 \\)."
+        },
+        {
+            "question": "Use o teste da divergência para determinar se a série \\( \\sum_{n=1}^{\\infty} \\frac{n+1}{n} \\) converge ou diverge.",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\frac{n+1}{n} = 1 \\neq 0 \\)."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n} \\) converge ou diverge? Utilize o teste da divergência.",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\frac{(-1)^n}{n} = 0 \\), mas isso não conclui a convergência; teste da divergência não se aplica."
+        },
+        {
+            "question": "Verifique a convergência da série \\( \\sum_{n=1}^{\\infty} \\frac{2n}{n+1} \\) usando o teste da divergência.",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\frac{2n}{n+1} = 2 \\neq 0 \\)."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\frac{3^n}{2^n} \\) converge ou diverge? Utilize o teste da divergência.",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\frac{3^n}{2^n} = \\left(\\frac{3}{2}\\right)^n \\) cresce sem limite."
+        },
+        {
+            "question": "Determine se a série \\( \\sum_{n=1}^{\\infty} \\frac{n^2}{n^3 + 1} \\) converge ou diverge usando o teste da divergência.",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\frac{n^2}{n^3 + 1} = \\lim_{n \\to \\infty} \\frac{n^2}{n^3} = \\frac{1}{n} \\to 0 \\), mas o teste da divergência não se aplica diretamente."
+        },
+        {
+            "question": "Verifique se a série \\( \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n} \\) converge utilizando o teste da série alternada.",
+            "answer": "Converge. Os termos alternam e \\( \\frac{1}{n} \\to 0 \\) monotonicamente."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n^2 + 1} \\) converge ou diverge? Utilize o teste da série alternada.",
+            "answer": "Converge. Os termos alternam e \\( \\frac{1}{n^2 + 1} \\to 0 \\) monotonicamente."
+        },
+        {
+            "question": "Determine a convergência da série \\( \\sum_{n=1}^{\\infty} (-1)^{n+1} \\frac{n}{n+1} \\) usando o teste da série alternada.",
+            "answer": "Diverge. Não é uma série alternada verdadeira porque os termos não diminuem em magnitude."
+        },
+        {
+            "question": "Use o teste da série alternada para determinar a convergência da série \\( \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{\\sqrt{n}} \\).",
+            "answer": "Diverge. Embora os termos alternem, \\( \\frac{1}{\\sqrt{n}} \\) não tende a zero."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} (-1)^n \\frac{n+1}{n} \\) converge ou diverge? Utilize o teste da série alternada.",
+            "answer": "Diverge. A razão dos termos alternados não tende a zero."
+        },
+        {
+            "question": "Use o teste da integral para determinar se a série \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^p} \\) converge para \\( p > 1 \\).",
+            "answer": "Converge. A integral \\( \\int_{1}^{\\infty} \\frac{1}{x^p} dx \\) converge para \\( p > 1 \\)."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\frac{1}{n \\ln(n)} \\) converge ou diverge? Utilize o teste da integral.",
+            "answer": "Diverge. A integral \\( \\int_{1}^{\\infty} \\frac{1}{x \\ln(x)} dx \\) diverge."
+        },
+        {
+            "question": "Determine se a série \\( \\sum_{n=1}^{\\infty} \\frac{1}{n (\\ln(n))^2} \\) converge ou diverge usando o teste da integral.",
+            "answer": "Converge. A integral \\( \\int_{1}^{\\infty} \\frac{1}{x (\\ln(x))^2} dx \\) converge."
+        },
+        {
+            "question": "Utilize o teste da integral para verificar a convergência da série \\( \\sum_{n=1}^{\\infty} \\frac{1}{(n+1) \\ln(n+1)} \\).",
+            "answer": "Converge. A integral \\( \\int_{1}^{\\infty} \\frac{1}{(x+1) \\ln(x+1)} dx \\) converge, é comparável a \\( \\frac{1}{x \\ln(x)} \\) para grandes \\( x \\)."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^2 \\ln(n)} \\) converge ou diverge? Use o teste da integral.",
+            "answer": "Converge. A integral \\( \\int_{1}^{\\infty} \\frac{1}{x^2 \\ln(x)} dx \\) converge."
+        },
+        {
+            "question": "Verifique se a série \\( \\sum_{n=1}^{\\infty} \\left(\\frac{1}{n}\\right)^n \\) converge utilizando o teste da raiz.",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\sqrt[n]{\\left(\\frac{1}{n}\\right)^n} = \\lim_{n \\to \\infty} \\frac{1}{n} = 0 \\), mas não conclui a convergência."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\left(\\frac{2n}{n+1}\\right)^n \\) converge ou diverge? Utilize o teste da raiz.",
+            "answer": "Converge. \\( \\lim_{n \\to \\infty} \\sqrt[n]{\\left(\\frac{2n}{n+1}\\right)^n} = \\frac{2}{1} = 2 > 1 \\)."
+        },
+        {
+            "question": "Determine a convergência da série \\( \\sum_{n=1}^{\\infty} \\left(\\frac{n}{n+2}\\right)^n \\) usando o teste da raiz.",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\sqrt[n]{\\left(\\frac{n}{n+2}\\right)^n} = \\lim_{n \\to \\infty} \\frac{n}{n+2} = 1 \\), mas não conclui a convergência."
+        },
+        {
+            "question": "Use o teste da raiz para determinar a convergência da série \\( \\sum_{n=1}^{\\infty} \\left(\\frac{3}{n}\\right)^n \\).",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\sqrt[n]{\\left(\\frac{3}{n}\\right)^n} = 0 \\), mas isso não conclui a convergência."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\frac{n!}{2^n} \\) converge ou diverge? Utilize o teste da razão.",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n \\to \\infty} \\frac{(n+1)!}{2^{n+1}} \\cdot \\frac{2^n}{n!} = \\infty \\)."
+        },
+        {
+            "question": "Verifique a convergência da série \\( \\sum_{n=1}^{\\infty} \\frac{n!}{n^n} \\) usando o teste da razão.",
+            "answer": "Diverge. \\( \\lim_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n \\to \\infty} \\frac{(n+1)!}{(n+1)^{n+1}} \\cdot \\frac{n^n}{n!} = \\infty \\)."
+        },
+        {
+            "question": "Determine se a série \\( \\sum_{n=1}^{\\infty} \\frac{2^n}{n!} \\) converge ou diverge utilizando o teste da razão.",
+            "answer": "Converge. \\( \\lim_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n \\to \\infty} \\frac{2^{n+1}}{(n+1)!} \\cdot \\frac{n!}{2^n} = \\frac{2}{n+1} \\to 0 \\)."
+        },
+        {
+            "question": "Use o teste da razão para verificar a convergência da série \\( \\sum_{n=1}^{\\infty} \\frac{n^n}{(n+1)^n} \\).",
+            "answer": "Converge. \\( \\lim_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n \\to \\infty} \\frac{(n+1)^{n+1}}{(n+2)^{n+1}} \\cdot \\frac{n^n}{n^n} = \\frac{n+1}{n+2} < 1 \\)."
+        },
+        {
+            "question": "A série \\( \\sum_{n=1}^{\\infty} \\frac{3^n}{n^n} \\) converge ou diverge? Utilize o teste da razão.",
+            "answer": "Converge. \\( \\lim_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n \\to \\infty} \\frac{3^{n+1}}{(n+1)^{n+1}} \\cdot \\frac{n^n}{3^n} = \\lim_{n \\to \\infty} \\frac{3}{n+1} = 0 \\)."
+        },
+        {
+            "question": "Verifique a convergência da série \\( \\sum_{n=1}^{\\infty} \\frac{(n+1)!}{(2n)!} \\) usando o teste da razão.",
+            "answer": "Converge. \\( \\lim_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n \\to \\infty} \\frac{(n+2)!}{(2n+2)!} \\cdot \\frac{(2n)!}{(n+1)!} = \\lim_{n \\to \\infty} \\frac{1}{4} < 1 \\)."
+        }
+    ]
+}
