@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-26T17:47:22-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -16,59 +13,61 @@
 <body class="ignore-math">
 <article class="example example-like"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Convergência da série harmônica.</span>
-</h4>
-<p>Visualize os termos da série harmônica <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}\)</span> como um gráfico de barras — cada termo é um retângulo de altura <span class="process-math">\(\frac{1}{n}\)</span> e largura <span class="process-math">\(1\text{.}\)</span> O limite da série é então a área limite desta união de retângulos.</p>
-<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/harmonic_int.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p>Considere o esboço à esquerda da<a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.5">Figura 1.5</a>. Isto mostra que a área das colunas sombreadas, <span class="process-math">\(\sum_{n=1}^4\frac{1}{n}\text{,}\)</span> é maior que a área sob a curva <span class="process-math">\(y=\frac{1}{x}\)</span> com <span class="process-math">\(1\le x\le 5\text{.}\)</span> Ou seja</p>
+</h4> <div class="para">Visualize os termos da série harmônica <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}\)</span> como um gráfico de barras — cada termo é um retângulo de altura <span class="process-math">\(\frac{1}{n}\)</span> e largura <span class="process-math">\(1\text{.}\)</span> O limite da série é então a área limite desta união de retângulos.</div> <figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/harmonic_int.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para logical">
+<div class="para">Considere o esboço à esquerda da<a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.5">Figura 1.5</a>. Isto mostra que a área das colunas sombreadas, <span class="process-math">\(\sum_{n=1}^4\frac{1}{n}\text{,}\)</span> é maior que a área sob a curva <span class="process-math">\(y=\frac{1}{x}\)</span> com <span class="process-math">\(1\le x\le 5\text{.}\)</span> Ou seja</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{align*}
 \sum_{n=1}^4 \frac{1}{n} &amp; \ge \int_1^5 \frac{1}{x}\dee{x}
 \end{align*}
 </div>
-<p class="continuation">Se continuássemos desenhando as colunas infinitamente, teríamos</p>
+<div class="para">Se continuássemos desenhando as colunas infinitamente, teríamos</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{align*}
 \sum_{n=1}^\infty \frac{1}{n} &amp; \ge \int_1^\infty \frac{1}{x}\dee{x}
 \end{align*}
 </div>
-<p class="continuation">Podemos calcular exatamente essa integral imprópria:</p>
+<div class="para">Podemos calcular exatamente essa integral imprópria:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{align*}
 \int_1^\infty \frac{1}{x} \dee{x} &amp;= \lim_{R \to \infty} \Big[ \log|x| \Big]_1^R = +\infty
 \end{align*}
 </div>
-<p class="continuation">Ou seja, a área sob a curva diverge para <span class="process-math">\(+\infty\)</span> e, portanto, a área representada pelas colunas também deve divergir para <span class="process-math">\(+\infty\text{.}\)</span></p>
-<p>Deve ficar claro que o argumento acima pode ser facilmente generalizado. Por exemplo, o mesmo argumento vale para a série</p>
+<div class="para">Ou seja, a área sob a curva diverge para <span class="process-math">\(+\infty\)</span> e, portanto, a área representada pelas colunas também deve divergir para <span class="process-math">\(+\infty\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Deve ficar claro que o argumento acima pode ser facilmente generalizado. Por exemplo, o mesmo argumento vale para a série</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{gather*}
 \sum_{n=1}^\infty \frac{1}{n^2}
 \end{gather*}
 </div>
-<p class="continuation">De fato, vemos à direita da <a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.5">Figura 1.5</a> que</p>
+<div class="para">De fato, vemos à direita da <a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.5">Figura 1.5</a> que</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{align*}
 \sum_{n=2}^N \frac{1}{n^2} &amp;\le \int_1^N \frac{1}{x^2}\dee{x}
 \end{align*}
 </div>
-<p class="continuation">e, portanto</p>
+<div class="para">e, portanto</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{gather*}
 \sum_{n=2}^\infty \frac{1}{n^2} \leq \int_1^\infty \frac{1}{x^2}\dee{x}
 \end{gather*}
 </div>
-<p class="continuation">Esta última integral imprópria é fácil de calcular:</p>
+<div class="para">Esta última integral imprópria é fácil de calcular:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{align*}
 \int_2^\infty \frac{1}{x^2}\dee{x} &amp;= \lim_{R\to\infty} \left[ - \frac{1}{x} \right]_2^R\\
 &amp;= \lim_{R\to\infty} \left( \frac{1}{2} - \frac{1}{R} \right) = \frac{1}{2}
 \end{align*}
 </div>
-<p class="continuation">Assim sabemos que</p>
+<div class="para">Assim sabemos que</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1.html">
 \begin{gather*}
 \sum_{n=1}^\infty \frac{1}{n^2} = 1+ \sum_{n=2}^\infty \frac{1}{n^2} \leq \frac{3} {2}.
 \end{gather*}
 </div>
-<p class="continuation">e assim a série deve convergir.</p></article><span class="incontext"><a href="section-1.html#eg_firstIntTest" class="internal">em contexto</a></span>
+<div class="para">e assim a série deve convergir.</div>
+</div></article><span class="incontext"><a class="internal" href="section-1.html#eg_firstIntTest">em contexto</a></span>
 </body>
 </html>

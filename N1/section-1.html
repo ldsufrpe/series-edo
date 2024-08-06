@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-08T16:27:36-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Introdução às Sequências</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<script>window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -37,34 +53,90 @@
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        }, '']
-    },
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(           \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Ir ao conteúdo principal</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://www.dm.ufrpe.br"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-sequencia.html"><span class="title">Introdução às Sequências Infinitas: N1</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Sumário"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Sumário</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Buscando por: </h2>
+<div id="searchempty" class="searchempty"><span>Não encontrado.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="calc-sequencia.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="up-button button" href="calc-sequencia.html" title="Acima"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Acima</span></a><a class="next-button button" href="references-backmatter.html" title="Próximo"><span class="name">Próximo</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(           \newcommand{ct}[1]{\color{gray}{\text{#1}}}
            \newcommand{ctm}[1]{\color{gray}{#1}}
 
            \newcommand{\doubler}[1]{2#1}
@@ -121,75 +193,53 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="calc-sequencia.html"><span class="title">Introdução às Sequências Infinitas: N1</span></a></h1>
-<p class="byline">Leon Silva</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
-<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "graphing",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-sequencia.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-sequencia.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-sequencia.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-sequencia.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
-<li class="link active">
-<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Introdução às Sequências</span></a><ul>
-<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Limites de uma Sequência</a></li>
-<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Sugestão de vídeos</a></li>
-<li><a href="section-1.html#exercises-sequencias" data-scroll="exercises-sequencias" class="internal">Exercícios</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter-1.html" class="internal"><span class="title">Pré-textual</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="frontmatter-1.html#abstract-1" class="internal"><span class="title">Resumo</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introdução às Sequências</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsection-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Limites de uma Sequência</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsection-2" class="internal"><span class="codenumber">1.2</span> <span class="title">Sugestão de vídeos</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-1.html#exercises-sequencias" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercícios</span></a></div></li>
 </ul>
 </li>
-<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content">
-<section class="section" id="section-1"><h2 class="heading hide-type">
-<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Introdução às Sequências</span>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="references-backmatter.html" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span><span class="space"> </span><span class="codenumber">1</span><span class="space"> </span><span class="title">Introdução às Sequências</span>
 </h2>
-<section class="introduction" id="introduction-2"><p id="p-3">O polinômio de Taylor de <span class="process-math">\(e^x\)</span> é dada por</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+<section class="introduction" id="introduction-2"><div class="para logical" id="p-3">
+<div class="para">O polinômio de Taylor de <span class="process-math">\(e^x\)</span> é dada por</div>
+<div class="displaymath process-math" id="md-1">
 \begin{align*}
 e^x \amp= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + E_n(x)
 \end{align*}
 </div>
-<p class="continuation">em que <span class="process-math">\(E_n(x)\)</span> é o erro introduzido quando você aproxima <span class="process-math">\(e^x\)</span> por seu polinômio de Taylor de grau <span class="process-math">\(n\text{.}\)</span> No curso de derivada conhemos uma fórmula para  <span class="process-math">\(E_n(x)\text{.}\)</span> Agora vamos perguntar o que acontece quando <span class="process-math">\(n\)</span> vai ao infinito? O erro vai para zero, dando uma fórmula exata para <span class="process-math">\(e^x\text{?}\)</span> Veremos mais tarde que faz e isso</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+<div class="para">em que <span class="process-math">\(E_n(x)\)</span> é o erro introduzido quando você aproxima <span class="process-math">\(e^x\)</span> por seu polinômio de Taylor de grau <span class="process-math">\(n\text{.}\)</span> No curso de derivada conhemos uma fórmula para  <span class="process-math">\(E_n(x)\text{.}\)</span> Agora vamos perguntar o que acontece quando <span class="process-math">\(n\)</span> vai ao infinito? O erro vai para zero, dando uma fórmula exata para <span class="process-math">\(e^x\text{?}\)</span> Veremos mais tarde que faz e isso</div>
+<div class="displaymath process-math" id="md-2">
 \begin{align*}
 e^x \amp=1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=0}^\infty\frac{x^n}{n!}
 \end{align*}
 </div>
-<p class="continuation">Neste ponto, não definimos ou desenvolvemos qualquer compreensão dessa soma infinita. Como podemos calcular a soma de um número infinito de termos? De fato, quando a soma de um número infinito de termos faz sentido? Claramente, precisamos construir bases para lidar com essas ideias. Ao longo do caminho também veremos outras funções para as quais o erro correspondente obedece <span class="process-math">\(\lim\limits_{n\rightarrow\infty}E_n(x)=0\)</span> para alguns valores de <span class="process-math">\(x\)</span> e não para outros valores de <span class="process-math">\(x\text{.}\)</span></p>
-<p id="p-4">Agora considere a fórmula acima com  <span class="process-math">\(x=1\)</span> para calcular o número <span class="process-math">\(e\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+<div class="para">Neste ponto, não definimos ou desenvolvemos qualquer compreensão dessa soma infinita. Como podemos calcular a soma de um número infinito de termos? De fato, quando a soma de um número infinito de termos faz sentido? Claramente, precisamos construir bases para lidar com essas ideias. Ao longo do caminho também veremos outras funções para as quais o erro correspondente obedece <span class="process-math">\(\lim\limits_{n\rightarrow\infty}E_n(x)=0\)</span> para alguns valores de <span class="process-math">\(x\)</span> e não para outros valores de <span class="process-math">\(x\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-4">
+<div class="para">Agora considere a fórmula acima com  <span class="process-math">\(x=1\)</span> para calcular o número <span class="process-math">\(e\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="md-3">
 \begin{align*}
 e \amp= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1}{n!}
 \end{align*}
 </div>
-<p class="continuation">Como dissemos acima, ainda não entendemos o que fazer com esse número infinito de termos, mas podemos tentar descobrir isso pensando no que acontece à medida que pegamos mais e mais termos.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+<div class="para">Como dissemos acima, ainda não entendemos o que fazer com esse número infinito de termos, mas podemos tentar descobrir isso pensando no que acontece à medida que pegamos mais e mais termos.</div>
+<div class="displaymath process-math" id="md-4">
 \begin{align*}
 \text{1 termo}\phantom{s} \amp\amp 1\amp=1\\
 \text{2 termos} \amp\amp 1+1\amp=2\\
@@ -200,22 +250,24 @@ e \amp= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1}
 \frac{1}{120}\amp=2.716666\dots
 \end{align*}
 </div>
-<p class="continuation">Ao olhar para a soma infinita desta forma, obtemos naturalmente uma sequência de números</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+<div class="para">Ao olhar para a soma infinita desta forma, obtemos naturalmente uma sequência de números</div>
+<div class="displaymath process-math" id="md-5">
 \begin{gather*}
 \{\ 1\,,\,2\,,\,2.5\,,\,2.666666\,,\cdots,\,2.708333\,,\cdots,\,
 2.716666\,,\cdots,\,\cdots\ \}.
 \end{gather*}
 </div>
-<p class="continuation">A chave para entender a soma infinita original é entender o comportamento dessa <dfn class="terminology">sequências</dfn> de números — em particular, o que os números fazem à medida que avançamos mais e mais? Ele estabelece um determinado limite?</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Limites de uma Sequência</span>
+<div class="para">A chave para entender a soma infinita original é entender o comportamento dessa <dfn class="terminology">sequências</dfn> de números — em particular, o que os números fazem à medida que avançamos mais e mais? Ele estabelece um determinado limite?</div>
+</div></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Limites de uma Sequência</span>
 </h3>
-<p id="p-5">A seguir uma definição matemática do termo <dfn class="terminology">sequências</dfn> que usamos acima.</p>
+<div class="para" id="p-5">A seguir uma definição matemática do termo <dfn class="terminology">sequências</dfn> que usamos acima.</div>
 <article class="definition definition-like" id="def_SRsequence"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h4>
-<p id="p-6">Uma sequência é uma lista de infinitos números com uma ordem específica. Denotaremos uma sequência numérica por</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-6">
+<div class="para">Uma sequência é uma lista de infinitos números com uma ordem específica. Denotaremos uma sequência numérica por</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \big\{a_1,\ a_2,\ a_3,\ \cdots,\ a_n,\ \cdots\big\}
 \quad\text{ou}\quad
@@ -223,17 +275,21 @@ e \amp= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1}
 \quad\text{ou}\quad
 \big\{a_n\big\}_{n=1}^\infty
 \end{equation*}
-</div></article><p id="p-7">Frequentemente, especificamos uma sequência escrevendo-a mais explicitamente, como</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+</div>
+</div></article><div class="para logical" id="p-7">
+<div class="para">Frequentemente, especificamos uma sequência escrevendo-a mais explicitamente, como</div>
+<div class="displaymath process-math" id="md-6">
 \begin{gather*}
 \Big\{ a_n = f(n) \Big\}_{n=1}^\infty
 \end{gather*}
 </div>
-<p class="continuation">No qual  <span class="process-math">\(f(n)\)</span> é alguma função dos números naturais para os números reais.</p>
-<article class="example example-like" id="eg_SRsequence"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRsequence"><h4 class="heading">
+<div class="para">No qual  <span class="process-math">\(f(n)\)</span> é alguma função dos números naturais para os números reais.</div>
+</div>
+<details id="eg_SRsequence" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Três sequências e mais uma.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRsequence"><article class="example example-like"><p id="p-8">Aqui estão três sequências.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+</h4></summary><article class="example example-like"> <div class="para logical" id="p-8">
+<div class="para">Aqui estão três sequências.</div>
+<div class="displaymath process-math" id="md-7">
 \begin{align*}
 \amp\Big\{1,\ \frac{1}{2},\ \frac{1}{3},\ \cdots,\ \frac{1}{n},\ \cdots\Big\}
 \amp\amp\text{ou}
@@ -246,135 +302,139 @@ e \amp= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \sum_{n=0}^\infty\frac{1}
 \amp\amp\Big\{a_n=(-1)^{n-1}\Big\}_{n=1}^\infty
 \end{align*}
 </div>
-<p class="continuation">Muitas vezes não existe uma fórmula simples e explícita para o  <span class="process-math">\(n\)</span>-ésimo termo de uma sequência. Por exemplo, os dígitos decimais de  <span class="process-math">\(\pi\)</span> formam uma sequência</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Muitas vezes não existe uma fórmula simples e explícita para o  <span class="process-math">\(n\)</span>-ésimo termo de uma sequência. Por exemplo, os dígitos decimais de  <span class="process-math">\(\pi\)</span> formam uma sequência</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \big\{3,\ 1,\ 4,\ 1,\ 5,\ 9,\ 2,\ 6,\ 5,\ 3,\ 5,\ 8,\ 9,\ 7,\ 9,\ 3,\ 2,\ 3,\
 8,\ 4,\ 6,\ 2,\ 6,\ 4,\ \cdots\ \big\}
 \end{equation*}
 </div>
-<p class="continuation">porém não existe uma fórmula simples para o <span class="process-math">\(n\)</span>-ésimo dígito.</p></article></div>
-<p id="p-9">Nossa principal preocupação com sequências será o comportamento de <span class="process-math">\(a_n\)</span> com <span class="process-math">\(n\)</span> tendendo para o infinito. Estamos interessados em saber se <span class="process-math">\(a_n\)</span> <dfn class="terminology">converge</dfn> para algum valor quando <span class="process-math">\(n\)</span> tende ao infinito.</p>
+<div class="para">porém não existe uma fórmula simples para o <span class="process-math">\(n\)</span>-ésimo dígito.</div>
+</div></article></details><div class="para" id="p-9">Nossa principal preocupação com sequências será o comportamento de <span class="process-math">\(a_n\)</span> com <span class="process-math">\(n\)</span> tendendo para o infinito. Estamos interessados em saber se <span class="process-math">\(a_n\)</span> <dfn class="terminology">converge</dfn> para algum valor quando <span class="process-math">\(n\)</span> tende ao infinito.</div>
 <article class="definition definition-like" id="def_SRsequenceLimit"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
 </h4>
-<p id="p-10">Dizemos que uma sequência <span class="process-math">\(\big\{a_n\big\}_{n=1}^\infty\)</span> converge para o limite <span class="process-math">\(L\)</span> se <span class="process-math">\(a_n\)</span> se aproxima de  <span class="process-math">\(L\)</span> quando <span class="process-math">\(n\)</span> tende ao infinito. Nesta caso, escrevemos</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-10">
+<div class="para">Dizemos que uma sequência <span class="process-math">\(\big\{a_n\big\}_{n=1}^\infty\)</span> converge para o limite <span class="process-math">\(L\)</span> se <span class="process-math">\(a_n\)</span> se aproxima de  <span class="process-math">\(L\)</span> quando <span class="process-math">\(n\)</span> tende ao infinito. Nesta caso, escrevemos</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow\infty} a_n=L\qquad\hbox{ou}\qquad a_n\rightarrow L\text{ com
 }n\rightarrow\infty
 \end{equation*}
 </div>
-<p class="continuation">A <dfn class="terminology">sequência converge</dfn> se converge para algum limite. Caso contrário, dizemos que a <dfn class="terminology">sequência diverge</dfn>.</p></article><p id="p-11">Note a similaridade com os limites infinitos.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+<div class="para">A <dfn class="terminology">sequência converge</dfn> se converge para algum limite. Caso contrário, dizemos que a <dfn class="terminology">sequência diverge</dfn>.</div>
+</div></article><div class="para logical" id="p-11">
+<div class="para">Note a similaridade com os limites infinitos.</div>
+<div class="displaymath process-math" id="md-8">
 \begin{gather*}
 \lim_{x \to \infty} f(x) = L \qquad\hbox{se}\qquad
 f(x) \to L \text{ com } x \to \infty
 \end{gather*}
 </div>
-<article class="example example-like" id="eg_SRsequenceLimA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRsequenceLimA"><h4 class="heading">
+</div>
+<details id="eg_SRsequenceLimA" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Convergência no Exemplo 1.2.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRsequenceLimA"><article class="example example-like"><p id="p-12">Estude a convergência das sequências a seguir:</p>
-<article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-13"><span class="process-math">\(\big\{a_n=n\big\}_{n=1}^\infty\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-14">A sequência <span class="process-math">\(\big\{a_n=n\big\}_{n=1}^\infty\)</span> diverge pois  <span class="process-math">\(a_n\)</span> cresce sem limitações, em vez de se aproximar de algum valor finito, quando <span class="process-math">\(n\)</span>  tende ao infinto.</p></div></div>
-</div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-15"><span class="process-math">\(\big\{a_n=(-1)^{n-1}\big\}_{n=1}^\infty\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><p id="p-16">A sequência <span class="process-math">\(\big\{a_n=(-1)^{n-1}\big\}_{n=1}^\infty\)</span> diverge pois <span class="process-math">\(a_n\)</span> oscila entre <span class="process-math">\(+1\)</span> e <span class="process-math">\(-1\)</span> quando <span class="process-math">\(n\)</span> tende ao infinito.</p></div></div>
-</div></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-17">A sequência dos dígitos decimais de <span class="process-math">\(\pi\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-18">A sequência dos dígitos decimais de <span class="process-math">\(\pi\)</span> também diverge, embora a prova esteja fora do escorpo deste texto. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> .</p></div></div>
-</div></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-19"><span class="process-math">\(\left\{a_n=\frac{1}{n}\right\}^{\infty}_{n=1}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-20">Com <span class="process-math">\(n\)</span> tendendo para o infinito, <span class="process-math">\(\frac{1}{n}\)</span> tende para zero. Então</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</h4></summary><article class="example example-like"><article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-13"><span class="process-math">\(\big\{a_n=n\big\}_{n=1}^\infty\)</span></div>
+<div class="solutions"><details id="solution-1" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-14">A sequência <span class="process-math">\(\big\{a_n=n\big\}_{n=1}^\infty\)</span> diverge pois  <span class="process-math">\(a_n\)</span> cresce sem limitações, em vez de se aproximar de algum valor finito, quando <span class="process-math">\(n\)</span>  tende ao infinto.</div></div></details></div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-15"><span class="process-math">\(\big\{a_n=(-1)^{n-1}\big\}_{n=1}^\infty\)</span></div>
+<div class="solutions"><details id="solution-2" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-16">A sequência <span class="process-math">\(\big\{a_n=(-1)^{n-1}\big\}_{n=1}^\infty\)</span> diverge pois <span class="process-math">\(a_n\)</span> oscila entre <span class="process-math">\(+1\)</span> e <span class="process-math">\(-1\)</span> quando <span class="process-math">\(n\)</span> tende ao infinito.</div></div></details></div></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-17">A sequência dos dígitos decimais de <span class="process-math">\(\pi\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-3" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-18">A sequência dos dígitos decimais de <span class="process-math">\(\pi\)</span> também diverge, embora a prova esteja fora do escorpo deste texto. <a class="xref" id="fn-1" href="" data-knowl="./knowl/fn-1.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a> .</div></div></details></div></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-19"><span class="process-math">\(\left\{a_n=\frac{1}{n}\right\}^{\infty}_{n=1}\)</span></div>
+<div class="solutions"><details id="solution-4" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-20">
+<div class="para">Com <span class="process-math">\(n\)</span> tendendo para o infinito, <span class="process-math">\(\frac{1}{n}\)</span> tende para zero. Então</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow\infty} \frac{1}{n}=0
 \end{equation*}
 </div>
-</div></div>
-</div></article></article></div>
-<article class="example example-like" id="eg_SRsequenceLimB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRsequenceLimB"><h4 class="heading">
+</div></div></details></div></article></article></details><details id="eg_SRsequenceLimB" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\displaystyle\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRsequenceLimB"><article class="example example-like"><p id="p-21">Aqui está um exemplo um pouco menos trivial. Para estudar o comportamento de <span class="process-math">\(\frac{n}{2n+1}\)</span> quando <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> Reescrevendo a expressão obtemos:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</h4></summary><article class="example example-like"> <div class="para logical" id="p-21">
+<div class="para">Aqui está um exemplo um pouco menos trivial. Para estudar o comportamento de <span class="process-math">\(\frac{n}{2n+1}\)</span> quando <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> Reescrevendo a expressão obtemos:</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \frac{n}{2n+1}=\frac{1}{2+\frac{1}{n}}
 \end{equation*}
 </div>
-<p class="continuation">Quando <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> o denominador <span class="process-math">\(\frac{1}{n}\)</span> tende a zero, de modo que o denominador <span class="process-math">\(2+\frac{1}{n}\)</span> tende para  <span class="process-math">\(2\)</span> e  <span class="process-math">\(\frac{1}{2+\frac{1}{n}}\)</span> tende para <span class="process-math">\(\frac{1}{2}\text{.}\)</span> Então</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+<div class="para">Quando <span class="process-math">\(n\rightarrow\infty\text{,}\)</span> o denominador <span class="process-math">\(\frac{1}{n}\)</span> tende a zero, de modo que o denominador <span class="process-math">\(2+\frac{1}{n}\)</span> tende para  <span class="process-math">\(2\)</span> e  <span class="process-math">\(\frac{1}{2+\frac{1}{n}}\)</span> tende para <span class="process-math">\(\frac{1}{2}\text{.}\)</span> Então</div>
+<div class="displaymath process-math" id="md-9">
 \begin{gather*}
 \lim_{n\rightarrow\infty}\frac{n}{2n+1}
 =\lim_{n\rightarrow\infty}\frac{1}{2+\frac{1}{n}}
 =\frac{1}{2}
 \end{gather*}
-</div></article></div>
-<p id="p-22">Observe que no<a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimB.html" title="Exemplo 1.5: \displaystyle\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}">Exemplo 1.5</a>, estamos realmente usando técnicas que usamos antes para estudar limites infinitos como  <span class="process-math">\(\ds \lim_{x\rightarrow\infty}f(x)\text{.}\)</span> Essa experiência pode ser facilmente transferida para lidar com limites  <span class="process-math">\(\lim\limits_{n\rightarrow\infty}a_n\)</span>  usando o seguinte resultado.</p>
+</div>
+</div></article></details><div class="para" id="p-22">Observe que no<a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimB.html" title="Exemplo 1.5: \displaystyle\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}">Exemplo 1.5</a>, estamos realmente usando técnicas que usamos antes para estudar limites infinitos como  <span class="process-math">\(\ds \lim_{x\rightarrow\infty}f(x)\text{.}\)</span> Essa experiência pode ser facilmente transferida para lidar com limites  <span class="process-math">\(\lim\limits_{n\rightarrow\infty}a_n\)</span>  usando o seguinte resultado.</div>
 <article class="theorem theorem-like" id="thm_SRxlimtoanlim"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h4>
-<p id="p-23">Se</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-23">
+<div class="para">Se</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{x\rightarrow\infty} f(x) = L
 \end{equation*}
 </div>
-<p class="continuation">e se <span class="process-math">\(a_n=f(n)\)</span> para todos os inteiros positivos <span class="process-math">\(n\text{,}\)</span> então</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">e se <span class="process-math">\(a_n=f(n)\)</span> para todos os inteiros positivos <span class="process-math">\(n\text{,}\)</span> então</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow\infty} a_n = L
 \end{equation*}
-</div></article><article class="example example-like" id="eg_SRsequenceLimC"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRsequenceLimC"><h4 class="heading">
+</div>
+</div></article><details id="eg_SRsequenceLimC" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\lim\limits_{n\rightarrow\infty}e^{-n}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRsequenceLimC"><article class="example example-like"><p id="p-24">Seja <span class="process-math">\(f(x)=e^{-x}\text{.}\)</span> Então <span class="process-math">\(e^{-n}=f(n)\)</span> e</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+</h4></summary><article class="example example-like"> <div class="para logical" id="p-24">
+<div class="para">Seja <span class="process-math">\(f(x)=e^{-x}\text{.}\)</span> Então <span class="process-math">\(e^{-n}=f(n)\)</span> e</div>
+<div class="displaymath process-math" id="md-10">
 \begin{align*}
 \text{já que }
 \lim_{x\rightarrow\infty}e^{-x}\amp=0
 \amp\text{ sabemos que }\amp\amp
 \lim\limits_{n\rightarrow\infty}e^{-n}\amp=0
 \end{align*}
-</div></article></div>
-<p id="p-25">A maior parte das regras para a aritmética de limites de funções conhecidas conhece também se aplicam aos limites de sequências. Ou seja, as regras aplicadas a limites como  <span class="process-math">\(\ds
-\lim_{x\rightarrow\infty}f(x)\)</span>  também se aplicam a limites como  <span class="process-math">\(\ds\lim_{n\rightarrow\infty}a_n\text{.}\)</span></p>
+</div>
+</div></article></details><div class="para" id="p-25">A maior parte das regras para a aritmética de limites de funções conhecidas conhece também se aplicam aos limites de sequências. Ou seja, as regras aplicadas a limites como  <span class="process-math">\(\ds
+\lim_{x\rightarrow\infty}f(x)\)</span>  também se aplicam a limites como  <span class="process-math">\(\ds\lim_{n\rightarrow\infty}a_n\text{.}\)</span>
+</div>
 <article class="theorem theorem-like" id="thm_SRlimarith"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Aritmética dos limites.</span>
 </h4>
-<p id="p-26">Sejam  <span class="process-math">\(L\text{,}\)</span> <span class="process-math">\(M\)</span> e <span class="process-math">\(K\)</span>  números reais e sejam as duas sequências <span class="process-math">\(\big\{a_n\big\}_{n=1}^\infty\)</span> e <span class="process-math">\(\big\{b_n\big\}_{n=1}^\infty\)</span> convergindo para <span class="process-math">\(L\)</span> e <span class="process-math">\(M\)</span> respectivamente. Ou seja, suponha que</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
+<div class="para logical" id="p-26">
+<div class="para">Sejam  <span class="process-math">\(L\text{,}\)</span> <span class="process-math">\(M\)</span> e <span class="process-math">\(K\)</span>  números reais e sejam as duas sequências <span class="process-math">\(\big\{a_n\big\}_{n=1}^\infty\)</span> e <span class="process-math">\(\big\{b_n\big\}_{n=1}^\infty\)</span> convergindo para <span class="process-math">\(L\)</span> e <span class="process-math">\(M\)</span> respectivamente. Ou seja, suponha que</div>
+<div class="displaymath process-math" id="md-11">
 \begin{align*}
 \lim_{n \to \infty} a_n\amp=L \amp \lim_{n \to \infty} b_n \amp=M
 \end{align*}
 </div>
-<p class="continuation">Então os seguintes limites são verdadeiros.</p>
+<div class="para">Então os seguintes limites são verdadeiros.</div>
 <ol class="lower-alpha">
 <li id="limita">
-<p id="p-27"><span class="process-math">\(\ds \lim_{n \to \infty} \big[a_n+b_n\big] = L+M\)</span></p>
-<p id="p-28">(O limite da soma é a soma dos limites.)</p>
+<div class="para" id="p-27"><span class="process-math">\(\ds \lim_{n \to \infty} \big[a_n+b_n\big] = L+M\)</span></div>
+<div class="para" id="p-28">(O limite da soma é a soma dos limites.)</div>
 </li>
 <li id="li-2">
-<p id="p-29"><span class="process-math">\(\ds \lim_{n \to \infty} \big[a_n-b_n\big] = L-M\)</span></p>
-<p id="p-30">(O limite da diferença é a diferença dos limites.)</p>
+<div class="para" id="p-29"><span class="process-math">\(\ds \lim_{n \to \infty} \big[a_n-b_n\big] = L-M\)</span></div>
+<div class="para" id="p-30">(O limite da diferença é a diferença dos limites.)</div>
 </li>
-<li id="li-3"><p id="p-derived-li-3"><span class="process-math">\(\ds \lim_{n \to \infty} K a_n = K L\text{.}\)</span></p></li>
+<li id="li-3"><div class="para" id="p-derived-li-3"><span class="process-math">\(\ds \lim_{n \to \infty} K a_n = K L\text{.}\)</span></div></li>
 <li id="limitc">
-<p id="p-31"><span class="process-math">\(\ds \lim_{n \to \infty} a_n\,b_n = L\cdot K\)</span></p>
-<p id="p-32">(O limite do produto é o produto dos limites.)</p>
+<div class="para" id="p-31"><span class="process-math">\(\ds \lim_{n \to \infty} a_n\,b_n = L\cdot K\)</span></div>
+<div class="para" id="p-32">(O limite do produto é o produto dos limites.)</div>
 </li>
 <li id="li-5">
-<p id="p-33">Se <span class="process-math">\(M \neq 0\)</span> então <span class="process-math">\(\ds \lim_{n \to \infty}\frac{a_n}{b_n} = \frac{L}{M}\)</span></p>
-<p id="p-34">(O limite do quociente é o quociente dos limites <em class="emphasis">desde que</em> o limite do denominador não seja zero.)</p>
+<div class="para" id="p-33">Se <span class="process-math">\(M \neq 0\)</span> então <span class="process-math">\(\ds \lim_{n \to \infty}\frac{a_n}{b_n} = \frac{L}{M}\)</span>
+</div>
+<div class="para" id="p-34">(O limite do quociente é o quociente dos limites <em class="emphasis">desde que</em> o limite do denominador não seja zero.)</div>
 </li>
-</ol></article><p id="p-35">Usamos essas regras para avaliar os limites de sequências mais complicadas em termos dos limites de sequências mais simples — assim como fizemos para limites de funções.</p>
-<article class="example example-like" id="eg_SRlimarith"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRlimarith"><h4 class="heading">
+</ol>
+</div></article><div class="para" id="p-35">Usamos essas regras para avaliar os limites de sequências mais complicadas em termos dos limites de sequências mais simples — assim como fizemos para limites de funções.</div>
+<details id="eg_SRlimarith" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Aritmética dos limites.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRlimarith"><article class="example example-like"><p id="p-36">Combinando <a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimB.html" title="Exemplo 1.5: \displaystyle\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}">Exemplo 1.5</a> e<a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimC.html" title="Exemplo 1.7: \lim\limits_{n\rightarrow\infty}e^{-n}">Exemplo 1.7</a>,</p>
+</h4></summary><article class="example example-like"> <div class="para logical" id="p-36">
+<div class="para">Combinando <a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimB.html" title="Exemplo 1.5: \displaystyle\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}">Exemplo 1.5</a> e<a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimC.html" title="Exemplo 1.7: \lim\limits_{n\rightarrow\infty}e^{-n}">Exemplo 1.7</a>,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRsequenceLimB.html ./knowl/eg_SRsequenceLimC.html ./knowl/thm_SRlimarith.html ./knowl/limita.html ./knowl/thm_SRlimarith.html ./knowl/limitc.html ./knowl/eg_SRsequenceLimB.html ./knowl/eg_SRsequenceLimC.html" id="md-12">
 \begin{align*}
 \lim_{n\rightarrow\infty}\Big[\frac{n}{2n+1} + 7 e^{-n}\Big]
@@ -390,69 +450,76 @@ f(x) \to L \text{ com } x \to \infty
 \amp=\frac{1}{2} + 7\cdot 0\\
 \amp=\frac{1}{2}
 \end{align*}
-</div></article></div>
-<p id="p-37">Há também um teorema do confronto (sanduíche) para sequências.</p>
+</div>
+</div></article></details><div class="para" id="p-37">Há também um teorema do confronto (sanduíche) para sequências.</div>
 <article class="theorem theorem-like" id="thm_SRsqueeze"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema do Confronto.</span>
 </h4>
-<p id="p-38">Se <span class="process-math">\(a_n\le c_n\le b_n\)</span> para todos os números naturais <span class="process-math">\(n\text{,}\)</span> e se</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-38">
+<div class="para">Se <span class="process-math">\(a_n\le c_n\le b_n\)</span> para todos os números naturais <span class="process-math">\(n\text{,}\)</span> e se</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow\infty}a_n=\lim_{n\rightarrow\infty}b_n=L
 \end{equation*}
 </div>
-<p class="continuation">então</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">então</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow\infty}c_n=L
 \end{equation*}
-</div></article><article class="example example-like" id="eg_SRsqueeze"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRsqueeze"><h4 class="heading">
+</div>
+</div></article><details id="eg_SRsqueeze" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Usando o Teorema do Confronto.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRsqueeze"><article class="example example-like"><p id="p-39">Determine <span class="process-math">\(\lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big]\text{,}\)</span> no qual <span class="process-math">\(\pi_n\)</span> é o <span class="process-math">\(n\)</span>-ésimo digito decimal de <span class="process-math">\(\pi\text{.}\)</span> Ou seja,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</h4></summary><article class="example example-like"> <div class="para logical" id="p-39">
+<div class="para">Determine <span class="process-math">\(\lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big]\text{,}\)</span> no qual <span class="process-math">\(\pi_n\)</span> é o <span class="process-math">\(n\)</span>-ésimo digito decimal de <span class="process-math">\(\pi\text{.}\)</span> Ou seja,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \pi_1=3\quad \pi_2=1 \quad \pi_3=4 \quad \pi_4=1 \quad \pi_5=5 \quad\pi_6=9\quad\cdots
 \end{equation*}
 </div>
-<p id="p-40">Não temos uma fórmula simples para <span class="process-math">\(\pi_n\text{.}\)</span> Mas nós sabemos que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para logical" id="p-40">
+<div class="para">Não temos uma fórmula simples para <span class="process-math">\(\pi_n\text{.}\)</span> Mas nós sabemos que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 0\le\pi_n\le 9
 \implies 0 \le \frac{\pi_n}{n} \le \frac{9}{n}
 \implies 1 \le 1+\frac{\pi_n}{n} \le 1+\frac{9}{n}
 \end{equation*}
 </div>
-<p class="continuation">e também sabemos que</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-13">
+<div class="para">e também sabemos que</div>
+<div class="displaymath process-math" id="md-13">
 \begin{gather*}
 \lim_{n\rightarrow\infty} 1 = 1\qquad
 \lim_{n\rightarrow\infty} \Big[1+\frac{9}{n}\Big] = 1
 \end{gather*}
 </div>
-<p class="continuation">Então o teorema do aperto com <span class="process-math">\(a_n=1\text{,}\)</span> <span class="process-math">\(b_n=1+\frac{\pi_n}{n}\text{,}\)</span> e <span class="process-math">\(c_n=1+\frac{9}{n}\)</span> fornece</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Então o teorema do confronto com <span class="process-math">\(a_n=1\text{,}\)</span> <span class="process-math">\(b_n=1+\frac{\pi_n}{n}\text{,}\)</span> e <span class="process-math">\(c_n=1+\frac{9}{n}\)</span> fornece</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big] = 1
 \end{equation*}
-</div></article></div>
-<p id="p-41">Finalmente, lembre-se de que podemos calcular o limite da composição de duas funções usando a continuidade. Da mesma forma, temos o seguinte resultado:</p>
+</div>
+</div></article></details><div class="para" id="p-41">Finalmente, lembre-se de que podemos calcular o limite da composição de duas funções usando a continuidade. Da mesma forma, temos o seguinte resultado:</div>
 <article class="theorem theorem-like" id="thm_SRcontfn"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Limite de uma função contínua.</span>
 </h4>
-<p id="p-42">Se  <span class="process-math">\(\lim\limits_{n\rightarrow\infty}a_n=L\)</span> e se a função <span class="process-math">\(g(x)\)</span> é contínua em <span class="process-math">\(L\text{,}\)</span> então</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-42">
+<div class="para">Se  <span class="process-math">\(\lim\limits_{n\rightarrow\infty}a_n=L\)</span> e se a função <span class="process-math">\(g(x)\)</span> é contínua em <span class="process-math">\(L\text{,}\)</span> então</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow\infty}g(a_n)=g(L)
 \end{equation*}
-</div></article><article class="example example-like" id="eg_SRsequenceLimD"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_SRsequenceLimD"><h4 class="heading">
+</div>
+</div></article><details id="eg_SRsequenceLimD" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\lim\limits_{n\rightarrow\infty}\sin\frac{\pi n}{2n+1}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_SRsequenceLimD"><article class="example example-like"><p id="p-43">Escreva <span class="process-math">\(\sin\frac{\pi n}{2n+1}=g\big(\frac{n}{2n+1}\big)\)</span> com  <span class="process-math">\(g(x)=\sin(\pi x)\text{.}\)</span> Vimos, no <a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimB.html" title="Exemplo 1.5: \displaystyle\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}">Exemplo 1.5</a> que</p>
+</h4></summary><article class="example example-like"> <div class="para logical" id="p-43">
+<div class="para">Escreva <span class="process-math">\(\sin\frac{\pi n}{2n+1}=g\big(\frac{n}{2n+1}\big)\)</span> com  <span class="process-math">\(g(x)=\sin(\pi x)\text{.}\)</span> Vimos, no <a href="" class="xref" data-knowl="./knowl/eg_SRsequenceLimB.html" title="Exemplo 1.5: \displaystyle\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}">Exemplo 1.5</a> que</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRsequenceLimB.html">
 \begin{equation*}
 \lim_{n\rightarrow\infty}\frac{n}{2n+1} = \frac{1}{2}.
 \end{equation*}
 </div>
-<p class="continuation">Já que <span class="process-math">\(g(x) = \sin (\pi x)\)</span> é contínua e que  <span class="process-math">\(x=\frac{1}{2}\text{,}\)</span> é o limite de <span class="process-math">\(\frac{n}{2n+1}\text{,}\)</span> temos</p>
+<div class="para">Já que <span class="process-math">\(g(x) = \sin (\pi x)\)</span> é contínua e que  <span class="process-math">\(x=\frac{1}{2}\text{,}\)</span> é o limite de <span class="process-math">\(\frac{n}{2n+1}\text{,}\)</span> temos</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_SRsequenceLimB.html">
 \begin{equation*}
 \lim_{n\rightarrow\infty}\sin\frac{\pi n}{2n+1}
@@ -461,253 +528,241 @@ f(x) \to L \text{ com } x \to \infty
 =\sin\frac{\pi}{2}
 =1
 \end{equation*}
-</div></article></div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Sugestão de vídeos</span>
+</div>
+</div></article></details></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Sugestão de vídeos</span>
 </h3>
 <ul class="disc">
-<li id="li-6"><p id="p-44"><a class="external" href="https://youtu.be/CAKhkDBam1Q" target="_blank">Sequências convergentes e divergentes</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li>
-<li id="li-7"><p id="p-45"><a class="external" href="https://youtu.be/s_KzqFfmxhs" target="_blank">Exemplos resolvidos.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a></p></li>
-<li id="li-8"><p id="p-46"><a class="external" href="https://youtu.be/-yAcNxTxLY0" target="_blank">Definição formal do limite de uma sequência</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a></p></li>
-<li id="li-9"><p id="p-47"><a class="external" href="https://youtu.be/vhogCuKoaVQ" target="_blank">Prova de que uma sequência converge usando a definição formal</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
+<li id="li-6"><div class="para" id="p-44">
+<a class="external" href="https://youtu.be/CAKhkDBam1Q" target="_blank">Sequências convergentes e divergentes</a><a class="xref" id="fn-2" href="" data-knowl="./knowl/fn-2.html" title="Nota de rodapé 1.2"><sup> 2 </sup></a>
+</div></li>
+<li id="li-7"><div class="para" id="p-45">
+<a class="external" href="https://youtu.be/s_KzqFfmxhs" target="_blank">Exemplos resolvidos.</a><a class="xref" id="fn-3" href="" data-knowl="./knowl/fn-3.html" title="Nota de rodapé 1.3"><sup> 3 </sup></a>
+</div></li>
+<li id="li-8"><div class="para" id="p-46">
+<a class="external" href="https://youtu.be/-yAcNxTxLY0" target="_blank">Definição formal do limite de uma sequência</a><a class="xref" id="fn-4" href="" data-knowl="./knowl/fn-4.html" title="Nota de rodapé 1.4"><sup> 4 </sup></a>
+</div></li>
+<li id="li-9"><div class="para" id="p-47">
+<a class="external" href="https://youtu.be/vhogCuKoaVQ" target="_blank">Prova de que uma sequência converge usando a definição formal</a><a class="xref" id="fn-5" href="" data-knowl="./knowl/fn-5.html" title="Nota de rodapé 1.5"><sup> 5 </sup></a>
+</div></li>
 </ul></section><section class="exercises" id="exercises-sequencias"><h3 class="heading hide-type">
-<span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
+<span class="type">Exercícios</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Exercícios</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-48">Determine o limite da sequência ou mostre que a sequência diverge usando as regras do limite ou teoremas apropriados. Se a sequência divergir, digite DIV como sua resposta.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-48">
+<div class="para">Determine o limite da sequência ou mostre que a sequência diverge usando as regras do limite ou teoremas apropriados. Se a sequência divergir, digite DIV como sua resposta.</div>
+<div class="displaymath process-math">
 \begin{equation*}
 a_n=\frac{2 n^2+n+2}{11 n^2-3}
 \end{equation*}
 </div>
-<p id="p-49"><span class="process-math">\(\lim\limits_{n\to\infty}a_n =\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+</div> <div class="para" id="p-49">
+<span class="process-math">\(\lim\limits_{n\to\infty}a_n =\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-50"><span class="process-math">\(0.181818181818182\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
-<p id="p-51">Nós temos <span class="process-math">\(a_n=f(n)\text{,}\)</span> na qual <span class="process-math">\(f(x)=\frac{2 x^2+x+2}{11 x^2-3}\text{.}\)</span> Assim,</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-52">
+<details id="answer-1" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-50"><span class="process-math">\(0.181818181818182\)</span></div></div></details><details id="solution-5" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-51">Nós temos <span class="process-math">\(a_n=f(n)\text{,}\)</span> na qual <span class="process-math">\(f(x)=\frac{2 x^2+x+2}{11 x^2-3}\text{.}\)</span> Assim,</div> <div class="para logical" id="p-52"><div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow \infty} \frac{2 n^2+n+2}{11 n^2-3} = \lim_{x\rightarrow \infty} \frac{2 x^2+x+2}{11 x^2-3} =\frac{2}{11}.
 \end{equation*}
-</div>
 </div></div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-53"><em class="alert">Sequência definida por uma função (Theorem 1.6.)</em></p>
-<p id="p-54">Seja <span class="process-math">\(f(x)\)</span> uma função definida em <span class="process-math">\([c,\infty ]\)</span> para alguma constante  <span class="process-math">\(c\text{.}\)</span>  Se <span class="process-math">\(\lim_{x\to\infty}f(x)\)</span> existe, então a sequência <span class="process-math">\(a_n=f(n)\text{,}\)</span> definida para <span class="process-math">\(n\geq c\text{,}\)</span> converge e</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para" id="p-53"><em class="alert">Sequência definida por uma função (Theorem 1.6.)</em></div> <div class="para logical" id="p-54">
+<div class="para">Seja <span class="process-math">\(f(x)\)</span> uma função definida em <span class="process-math">\([c,\infty ]\)</span> para alguma constante  <span class="process-math">\(c\text{.}\)</span>  Se <span class="process-math">\(\lim_{x\to\infty}f(x)\)</span> existe, então a sequência <span class="process-math">\(a_n=f(n)\text{,}\)</span> definida para <span class="process-math">\(n\geq c\text{,}\)</span> converge e</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\to\infty}a_n=\lim_{x\to\infty}f(x)
 \end{equation*}
 </div>
-<p id="p-55">Use a afirmação acima para determinar o limite da sequência ou digite DIV se a sequência divergir.</p>
-<p id="p-56"><span class="process-math">\(a_n=2\)</span></p>
-<p id="p-57"><span class="process-math">\(\lim\limits_{n\to\infty}a_n =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+</div> <div class="para" id="p-55">Use a afirmação acima para determinar o limite da sequência ou digite DIV se a sequência divergir.</div> <div class="para" id="p-56"><span class="process-math">\(a_n=2\)</span></div> <div class="para" id="p-57">
+<span class="process-math">\(\lim\limits_{n\to\infty}a_n =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-58"><span class="process-math">\(2\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
-<p id="p-59">Temos <span class="process-math">\(a_n=f(n)\)</span> no qual <span class="process-math">\(f(x)=2\text{.}\)</span>  Assim,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<details id="answer-2" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-58"><span class="process-math">\(2\)</span></div></div></details><details id="solution-6" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-59">
+<div class="para">Temos <span class="process-math">\(a_n=f(n)\)</span> no qual <span class="process-math">\(f(x)=2\text{.}\)</span>  Assim,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\to\infty}a_n = 
 \lim_{x\to\infty}f(x) =
 \lim_{x\to\infty}2= 2
 \end{equation*}
 </div>
-</div></div>
+</div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-60">Determine o limite da sequência ou mostre que a sequência diverge usando as regras do limite ou teoremas apropriados. Se a sequência divergir, digite DIV como sua resposta.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-60">
+<div class="para">Determine o limite da sequência ou mostre que a sequência diverge usando as regras do limite ou teoremas apropriados. Se a sequência divergir, digite DIV como sua resposta.</div>
+<div class="displaymath process-math">
 \begin{equation*}
 c_n=\ln\left(\frac{4 n-7}{2 n+4}\right)
 \end{equation*}
 </div>
-<p id="p-61"><span class="process-math">\(\lim\limits_{n\to\infty}c_n =\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+</div> <div class="para" id="p-61">
+<span class="process-math">\(\lim\limits_{n\to\infty}c_n =\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-62"><span class="process-math">\(0.693147180559945\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
-<p id="p-63">Do fato da função <span class="process-math">\(f(x)=\ln x\)</span> ser contínua segue que</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-64">
+<details id="answer-3" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-62"><span class="process-math">\(0.693147180559945\)</span></div></div></details><details id="solution-7" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-63">Do fato da função <span class="process-math">\(f(x)=\ln x\)</span> ser contínua segue que</div> <div class="para logical" id="p-64"><div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow \infty} c_n = \lim_{x\rightarrow \infty}\ln\left(\frac{4 x-7}{2 x+4}\right)=\ln\left(\lim_{x\rightarrow \infty}\frac{4 x-7}{2 x+4}\right)=\ln \left(\frac{4}{2}\right).
 \end{equation*}
-</div>
 </div></div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-65">Seja <span class="process-math">\(a_n=\frac{n+1}{n+4}\text{.}\)</span>  Encontre o menor número <span class="process-math">\(M\)</span> tal que :</p>
-<p id="p-66"><em class="alert">(a)</em> <span class="process-math">\(|a_n-1|\le 0.001\)</span> para <span class="process-math">\(n\ge M\)</span></p>
-<p id="p-67"><span class="process-math">\(M=\)</span><span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
-<p id="p-68"><em class="alert">(b)</em> <span class="process-math">\(|a_n-1|\le 0.00001\)</span> para <span class="process-math">\(n\ge M\)</span></p>
-<p id="p-69"><span class="process-math">\(M=\)</span><span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
-<p id="p-70"><em class="alert">(c)</em> Agora use a definição de limite para provar que <span class="process-math">\(\displaystyle\lim_{n\to\infty}a_n=1\text{.}\)</span> Ou seja, encontre o menor valor de <span class="process-math">\(M\)</span> (em termos de <span class="process-math">\(t\)</span>) tal que <span class="process-math">\(\left|a_n-1\right|\lt t\)</span> para todo <span class="process-math">\(n&gt;M\text{.}\)</span></p>
-<p id="p-71">(Observe que estamos usando <span class="process-math">\(t\)</span> em vez de <span class="process-math">\(\epsilon\)</span> na definição para permitir que você insira sua resposta mais facilmente).</p>
-<p id="p-72"><span class="process-math">\(M=\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> Digite sua resposta em função de <span class="process-math">\(t\)</span>).</p>
+<div class="para" id="p-65">Seja <span class="process-math">\(a_n=\frac{n+1}{n+4}\text{.}\)</span>  Encontre o menor número <span class="process-math">\(M\)</span> tal que :</div> <div class="para" id="p-66">
+<em class="alert">(a)</em> <span class="process-math">\(|a_n-1|\le 0.001\)</span> para <span class="process-math">\(n\ge M\)</span>
+</div> <div class="para" id="p-67">
+<span class="process-math">\(M=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
+</div> <div class="para" id="p-68">
+<em class="alert">(b)</em> <span class="process-math">\(|a_n-1|\le 0.00001\)</span> para <span class="process-math">\(n\ge M\)</span>
+</div> <div class="para" id="p-69">
+<span class="process-math">\(M=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
+</div> <div class="para" id="p-70">
+<em class="alert">(c)</em> Agora use a definição de limite para provar que <span class="process-math">\(\displaystyle\lim_{n\to\infty}a_n=1\text{.}\)</span> Ou seja, encontre o menor valor de <span class="process-math">\(M\)</span> (em termos de <span class="process-math">\(t\)</span>) tal que <span class="process-math">\(\left|a_n-1\right|\lt t\)</span> para todo <span class="process-math">\(n&gt;M\text{.}\)</span>
+</div> <div class="para" id="p-71">(Observe que estamos usando <span class="process-math">\(t\)</span> em vez de <span class="process-math">\(\epsilon\)</span> na definição para permitir que você insira sua resposta mais facilmente).</div> <div class="para" id="p-72">
+<span class="process-math">\(M=\)</span><span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> Digite sua resposta em função de <span class="process-math">\(t\)</span>).</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-73"><span class="process-math">\(2996\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-74"><span class="process-math">\(299996\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-75"><span class="process-math">\(\frac{3}{t}-4\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
-<p id="p-76">Temos</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<details id="answer-4" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-73"><span class="process-math">\(2996\)</span></div></div></details><details id="answer-5" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-74"><span class="process-math">\(299996\)</span></div></div></details><details id="answer-6" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-75"><span class="process-math">\(\frac{3}{t}-4\)</span></div></div></details><details id="solution-8" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-76">
+<div class="para">Temos</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \left|a_n-1\right|=\left|\frac{n+1}{n+4}-1\right|=\left|\frac{n+1-\left(n+4\right)}{n+4}\right|=\left|\frac{-3}{n+4}\right|=\frac{3}{n+4}
 \end{equation*}
 </div>
-<p class="continuation">Portanto, <span class="process-math">\(|a_n-1|\le 0.001\)</span> forneceu <span class="process-math">\(\frac{3}{n+4}\le 0.001\text{,}\)</span> ou seja, <span class="process-math">\(n\ge 2996\text{.}\)</span>  Segue-se que podemos tomar <span class="process-math">\(M=2996\text{.}\)</span></p>
-<p id="p-77">Pela parte (a), <span class="process-math">\(|a_n-1|\le 0.00001\)</span> forneceu <span class="process-math">\(\frac{3}{n+4}\le 0.00001\text{,}\)</span> ou seja, <span class="process-math">\(n\ge 299996\text{.}\)</span>  Segue-se que podemos tomar <span class="process-math">\(M=299996\text{.}\)</span></p>
-<p id="p-78">Usando a parte (a), sabemos que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Portanto, <span class="process-math">\(|a_n-1|\le 0.001\)</span> forneceu <span class="process-math">\(\frac{3}{n+4}\le 0.001\text{,}\)</span> ou seja, <span class="process-math">\(n\ge 2996\text{.}\)</span>  Segue-se que podemos tomar <span class="process-math">\(M=2996\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-77">Pela parte (a), <span class="process-math">\(|a_n-1|\le 0.00001\)</span> forneceu <span class="process-math">\(\frac{3}{n+4}\le 0.00001\text{,}\)</span> ou seja, <span class="process-math">\(n\ge 299996\text{.}\)</span>  Segue-se que podemos tomar <span class="process-math">\(M=299996\text{.}\)</span>
+</div> <div class="para logical" id="p-78">
+<div class="para">Usando a parte (a), sabemos que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 |a_n-1|=\frac{3}{n+4}\lt t,
 \end{equation*}
 </div>
-<p class="continuation">forneceu <span class="process-math">\(n&gt;\frac{3}{t}-4\text{.}\)</span>  Assim, para completar a prova, seja <span class="process-math">\(t&gt;0\)</span> e faça<span class="process-math">\(M=\frac{3}{t}-4\text{.}\)</span>  Então, para <span class="process-math">\(n&gt;M\text{,}\)</span> obtemos</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">forneceu <span class="process-math">\(n&gt;\frac{3}{t}-4\text{.}\)</span>  Assim, para completar a prova, seja <span class="process-math">\(t&gt;0\)</span> e faça<span class="process-math">\(M=\frac{3}{t}-4\text{.}\)</span>  Então, para <span class="process-math">\(n&gt;M\text{,}\)</span> obtemos</div>
+<div class="displaymath process-math">
 \begin{equation*}
 |a_n-1|=\frac{3}{n+4}\lt \frac{3}{M+4}=t.
 \end{equation*}
 </div>
-</div></div>
+</div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-79">Determine se a sequência <span class="process-math">\(\displaystyle a_n = \frac{1^2}{n^3} + \frac{2^2}{n^3} + \cdots + \frac{n^2}{n^3}\)</span> converge ou diverge. Se convergir, encontre o limite.</p>
-<p id="p-80">Observe,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para" id="p-79">Determine se a sequência <span class="process-math">\(\displaystyle a_n = \frac{1^2}{n^3} + \frac{2^2}{n^3} + \cdots + \frac{n^2}{n^3}\)</span> converge ou diverge. Se convergir, encontre o limite.</div> <div class="para logical" id="p-80">
+<div class="para">Observe,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{i=1}^k i^2 = \frac{k(k+1)(2k+1)}{6}
 \end{equation*}
 </div>
-<p id="p-81">Converge (sim/não): <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-82">Limite: <span class="fillin" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span></p>
+</div> <div class="para" id="p-81">Converge (sim/não): <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-82">Limite: <span class="fillin underline" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-83">sim</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-84"><span class="process-math">\(0.333333333333333\)</span></p></div></div>
+<details id="answer-7" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-83">sim</div></div></details><details id="answer-8" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-84"><span class="process-math">\(0.333333333333333\)</span></div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<p id="p-85">Determine se a sequência é divergente ou convergente. Se for convergente, avalie seu limite.</p>
-<p id="p-86">(Se divergir para o infinito, indique sua resposta como <em class="emphasis">inf</em> . Se divergir para infinito negativo, indique sua resposta como <em class="emphasis">-inf</em> . Se diverge sem ser infinito ou infinito negativo, responda como <em class="emphasis">div</em>)</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-87">
+<div class="para" id="p-85">Determine se a sequência é divergente ou convergente. Se for convergente, avalie seu limite.</div> <div class="para" id="p-86">(Se divergir para o infinito, indique sua resposta como <em class="emphasis">inf</em> . Se divergir para infinito negativo, indique sua resposta como <em class="emphasis">-inf</em> . Se diverge sem ser infinito ou infinito negativo, responda como <em class="emphasis">div</em>)</div> <div class="para logical" id="p-87"><div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\rightarrow\infty} (-1)^n\sin(14/n)
 \end{equation*}
+</div></div> <div class="para" id="p-88">Resposta: <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
 </div>
-<p id="p-88">Resposta: <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="solutions"><details id="answer-9" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-89"><span class="process-math">\(0\)</span></div></div></details></div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-90">Escreva os cinco primeiros termos da sequência com, <span class="process-math">\(\left[{\left(1-\frac{6}{n+6}\right)^{n}}\right]_{n=1}^{\infty}\text{,}\)</span> determine se a sequência converge e, em caso afirmativo, encontre seu limite.</div> <div class="para" id="p-91">Enter the following information for <span class="process-math">\(a_n=\left(1-\frac{6}{n+6}\right)^{n}\text{.}\)</span>
+</div> <div class="para" id="p-92">
+<span class="process-math">\(a_1=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-93">
+<span class="process-math">\(a_2=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-94">
+<span class="process-math">\(a_3=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-95">
+<span class="process-math">\(a_4=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-96">
+<span class="process-math">\(a_5=\)</span>  <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div> <div class="para" id="p-97">
+<span class="process-math">\(\displaystyle \lim_{n\to\infty} \left(1-\frac{6}{n+6}\right)^{n} =\)</span> <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div> <div class="para" id="p-98">(Digite DNE se o limite não existir.)</div> <div class="para" id="p-99">A sequência converge <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> (Digite "sim" ou "não").</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-89"><span class="process-math">\(0\)</span></p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<p id="p-90">Escreva os cinco primeiros termos da sequência com, <span class="process-math">\(\left[{\left(1-\frac{6}{n+6}\right)^{n}}\right]_{n=1}^{\infty}\text{,}\)</span> determine se a sequência converge e, em caso afirmativo, encontre seu limite.</p>
-<p id="p-91">Enter the following information for <span class="process-math">\(a_n=\left(1-\frac{6}{n+6}\right)^{n}\text{.}\)</span></p>
-<p id="p-92"><span class="process-math">\(a_1=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-93"><span class="process-math">\(a_2=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-94"><span class="process-math">\(a_3=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-95"><span class="process-math">\(a_4=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-96"><span class="process-math">\(a_5=\)</span>  <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
-<p id="p-97"><span class="process-math">\(\displaystyle \lim_{n\to\infty} \left(1-\frac{6}{n+6}\right)^{n} =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
-<p id="p-98">(Digite DNE se o limite não existir.)</p>
-<p id="p-99">A sequência converge <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> (Digite "sim" ou "não").</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-100"><span class="process-math">\(\left(1-\frac{6}{1+6}\right)^{1}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-101"><span class="process-math">\(\left(1-\frac{6}{2+6}\right)^{2}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-102"><span class="process-math">\(\left(1-\frac{6}{3+6}\right)^{3}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-103"><span class="process-math">\(\left(1-\frac{6}{4+6}\right)^{4}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-104"><span class="process-math">\(\left(1-\frac{6}{5+6}\right)^{5}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-105"><span class="process-math">\(e^{-6}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-106"><span class="process-math">\(\text{sim}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
-<p id="p-107">Para <span class="process-math">\(a_n=\left(1-\frac{6}{n+6}\right)^{n}\)</span></p>
-<p id="p-108"><span class="process-math">\(a_1={\textstyle\frac{1}{7}}\)</span></p>
-<p id="p-109"><span class="process-math">\(a_2={\textstyle\frac{1}{16}}\)</span></p>
-<p id="p-110"><span class="process-math">\(a_3={\textstyle\frac{1}{27}}\)</span></p>
-<p id="p-111"><span class="process-math">\(a_4={\textstyle\frac{16}{625}}\)</span></p>
-<p id="p-112"><span class="process-math">\(a_5={\textstyle\frac{3125}{161051}}\)</span></p>
-<p id="p-113"><span class="process-math">\(\displaystyle \lim_{n\to\infty} \left(1-\frac{6}{n+6}\right)^{n} =\lim_{n\to\infty} e^{n\ln\!\left(1-\frac{6}{n+6}\right)}  =e^{\displaystyle\lim_{n\to\infty} \frac{\ln\!\left(\frac{n}{n+6}\right)}{\frac{1}{n}} }=e^{\displaystyle\lim_{n\to\infty} -\frac{\frac{6}{n\!\left(n+6\right)}}{\frac{1}{n^{2}}} } =e^{\displaystyle\lim_{n\to\infty} -\frac{6}{1+\frac{6}{n}} }=  e^{-6}\text{,}\)</span> então a sequência converge para <span class="process-math">\(e^{-6}\text{.}\)</span></p>
-</div></div>
+<details id="answer-10" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-100"><span class="process-math">\(\left(1-\frac{6}{1+6}\right)^{1}\)</span></div></div></details><details id="answer-11" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-101"><span class="process-math">\(\left(1-\frac{6}{2+6}\right)^{2}\)</span></div></div></details><details id="answer-12" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-102"><span class="process-math">\(\left(1-\frac{6}{3+6}\right)^{3}\)</span></div></div></details><details id="answer-13" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-103"><span class="process-math">\(\left(1-\frac{6}{4+6}\right)^{4}\)</span></div></div></details><details id="answer-14" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-104"><span class="process-math">\(\left(1-\frac{6}{5+6}\right)^{5}\)</span></div></div></details><details id="answer-15" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-105"><span class="process-math">\(e^{-6}\)</span></div></div></details><details id="answer-16" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-106"><span class="process-math">\(\text{sim}\)</span></div></div></details><details id="solution-9" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-107">Para <span class="process-math">\(a_n=\left(1-\frac{6}{n+6}\right)^{n}\)</span>
+</div> <div class="para" id="p-108"><span class="process-math">\(a_1={\textstyle\frac{1}{7}}\)</span></div> <div class="para" id="p-109"><span class="process-math">\(a_2={\textstyle\frac{1}{16}}\)</span></div> <div class="para" id="p-110"><span class="process-math">\(a_3={\textstyle\frac{1}{27}}\)</span></div> <div class="para" id="p-111"><span class="process-math">\(a_4={\textstyle\frac{16}{625}}\)</span></div> <div class="para" id="p-112"><span class="process-math">\(a_5={\textstyle\frac{3125}{161051}}\)</span></div> <div class="para" id="p-113">
+<span class="process-math">\(\displaystyle \lim_{n\to\infty} \left(1-\frac{6}{n+6}\right)^{n} =\lim_{n\to\infty} e^{n\ln\!\left(1-\frac{6}{n+6}\right)}  =e^{\displaystyle\lim_{n\to\infty} \frac{\ln\!\left(\frac{n}{n+6}\right)}{\frac{1}{n}} }=e^{\displaystyle\lim_{n\to\infty} -\frac{\frac{6}{n\!\left(n+6\right)}}{\frac{1}{n^{2}}} } =e^{\displaystyle\lim_{n\to\infty} -\frac{6}{1+\frac{6}{n}} }=  e^{-6}\text{,}\)</span> então a sequência converge para <span class="process-math">\(e^{-6}\text{.}\)</span>
+</div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<p id="p-114">Escreva os cinco primeiros termos da sequência <span class="process-math">\(\left[{\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}}\right]_{n=1}^{\infty}\text{,}\)</span>determine se a sequência converge e, em caso afirmativo, encontre seu limite.</p>
-<p id="p-115">Insira as seguintes informações para <span class="process-math">\(a_n=\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}\text{.}\)</span></p>
-<p id="p-116"><span class="process-math">\(a_1=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-117"><span class="process-math">\(a_2=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-118"><span class="process-math">\(a_3=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-119"><span class="process-math">\(a_4=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-120"><span class="process-math">\(a_5=\)</span>  <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
-<p id="p-121"><span class="process-math">\(\displaystyle \lim_{n\to\infty} \frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}} =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
-<p id="p-122">(Digite DNE se o limite não existir.)</p>
-<p id="p-123">A sequência converge<span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> (Digite "sim" ou "não").</p>
+<div class="para" id="p-114">Escreva os cinco primeiros termos da sequência <span class="process-math">\(\left[{\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}}\right]_{n=1}^{\infty}\text{,}\)</span>determine se a sequência converge e, em caso afirmativo, encontre seu limite.</div> <div class="para" id="p-115">Insira as seguintes informações para <span class="process-math">\(a_n=\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}\text{.}\)</span>
+</div> <div class="para" id="p-116">
+<span class="process-math">\(a_1=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-117">
+<span class="process-math">\(a_2=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-118">
+<span class="process-math">\(a_3=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-119">
+<span class="process-math">\(a_4=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-120">
+<span class="process-math">\(a_5=\)</span>  <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div> <div class="para" id="p-121">
+<span class="process-math">\(\displaystyle \lim_{n\to\infty} \frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}} =\)</span> <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div> <div class="para" id="p-122">(Digite DNE se o limite não existir.)</div> <div class="para" id="p-123">A sequência converge<span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> (Digite "sim" ou "não").</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-124"><span class="process-math">\(\frac{\left(-1\right)^{1+-1}}{\left(1+6\right)^{2}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-125"><span class="process-math">\(\frac{\left(-1\right)^{2+-1}}{\left(2+6\right)^{2}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-126"><span class="process-math">\(\frac{\left(-1\right)^{3+-1}}{\left(3+6\right)^{2}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-127"><span class="process-math">\(\frac{\left(-1\right)^{4+-1}}{\left(4+6\right)^{2}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-128"><span class="process-math">\(\frac{\left(-1\right)^{5+-1}}{\left(5+6\right)^{2}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-129"><span class="process-math">\(0\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-130"><span class="process-math">\(\text{sim}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
-<p id="p-131">Para <span class="process-math">\(a_n=\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}\)</span></p>
-<p id="p-132"><span class="process-math">\(a_1={\textstyle\frac{1}{49}}\)</span></p>
-<p id="p-133"><span class="process-math">\(a_2=-{\textstyle\frac{1}{64}}\)</span></p>
-<p id="p-134"><span class="process-math">\(a_3={\textstyle\frac{1}{81}}\)</span></p>
-<p id="p-135"><span class="process-math">\(a_4=-{\textstyle\frac{1}{100}}\)</span></p>
-<p id="p-136"><span class="process-math">\(a_5={\textstyle\frac{1}{121}}\)</span></p>
-<p id="p-137"><span class="process-math">\(\displaystyle \lim_{n\to\infty} \frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}} =0\)</span> então a sequência converge para <span class="process-math">\(0\text{.}\)</span></p>
-</div></div>
+<details id="answer-17" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-124"><span class="process-math">\(\frac{\left(-1\right)^{1+-1}}{\left(1+6\right)^{2}}\)</span></div></div></details><details id="answer-18" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-125"><span class="process-math">\(\frac{\left(-1\right)^{2+-1}}{\left(2+6\right)^{2}}\)</span></div></div></details><details id="answer-19" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-126"><span class="process-math">\(\frac{\left(-1\right)^{3+-1}}{\left(3+6\right)^{2}}\)</span></div></div></details><details id="answer-20" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-127"><span class="process-math">\(\frac{\left(-1\right)^{4+-1}}{\left(4+6\right)^{2}}\)</span></div></div></details><details id="answer-21" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-128"><span class="process-math">\(\frac{\left(-1\right)^{5+-1}}{\left(5+6\right)^{2}}\)</span></div></div></details><details id="answer-22" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-129"><span class="process-math">\(0\)</span></div></div></details><details id="answer-23" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-130"><span class="process-math">\(\text{sim}\)</span></div></div></details><details id="solution-10" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-131">Para <span class="process-math">\(a_n=\frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}}\)</span>
+</div> <div class="para" id="p-132"><span class="process-math">\(a_1={\textstyle\frac{1}{49}}\)</span></div> <div class="para" id="p-133"><span class="process-math">\(a_2=-{\textstyle\frac{1}{64}}\)</span></div> <div class="para" id="p-134"><span class="process-math">\(a_3={\textstyle\frac{1}{81}}\)</span></div> <div class="para" id="p-135"><span class="process-math">\(a_4=-{\textstyle\frac{1}{100}}\)</span></div> <div class="para" id="p-136"><span class="process-math">\(a_5={\textstyle\frac{1}{121}}\)</span></div> <div class="para" id="p-137">
+<span class="process-math">\(\displaystyle \lim_{n\to\infty} \frac{\left(-1\right)^{n-1}}{\left(n+6\right)^{2}} =0\)</span> então a sequência converge para <span class="process-math">\(0\text{.}\)</span>
+</div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<p id="p-138">Escreva os primeiros cinco termos da sequência com <span class="process-math">\(\left[{\left(\frac{n+9}{n+8}\right)^{n}}\right]_{n=1}^{\infty}\text{,}\)</span> determine se a sequência converge e, em caso afirmativo, encontre seu limite.</p>
-<p id="p-139">Insira as seguintes informações para <span class="process-math">\(a_n=\left(\frac{n+9}{n+8}\right)^{n}\text{.}\)</span></p>
-<p id="p-140"><span class="process-math">\(a_1=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-141"><span class="process-math">\(a_2=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-142"><span class="process-math">\(a_3=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-143"><span class="process-math">\(a_4=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-144"><span class="process-math">\(a_5=\)</span>  <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
-<p id="p-145"><span class="process-math">\(\displaystyle \lim_{n\to\infty} \left(\frac{n+9}{n+8}\right)^{n} =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
-<p id="p-146">(Digite DNE se o limite não existir.)</p>
-<p id="p-147">A sequência converge <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> (Digite "sim" ou "não").</p>
+<div class="para" id="p-138">Escreva os primeiros cinco termos da sequência com <span class="process-math">\(\left[{\left(\frac{n+9}{n+8}\right)^{n}}\right]_{n=1}^{\infty}\text{,}\)</span> determine se a sequência converge e, em caso afirmativo, encontre seu limite.</div> <div class="para" id="p-139">Insira as seguintes informações para <span class="process-math">\(a_n=\left(\frac{n+9}{n+8}\right)^{n}\text{.}\)</span>
+</div> <div class="para" id="p-140">
+<span class="process-math">\(a_1=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-141">
+<span class="process-math">\(a_2=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-142">
+<span class="process-math">\(a_3=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-143">
+<span class="process-math">\(a_4=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-144">
+<span class="process-math">\(a_5=\)</span>  <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div> <div class="para" id="p-145">
+<span class="process-math">\(\displaystyle \lim_{n\to\infty} \left(\frac{n+9}{n+8}\right)^{n} =\)</span> <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div> <div class="para" id="p-146">(Digite DNE se o limite não existir.)</div> <div class="para" id="p-147">A sequência converge <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> (Digite "sim" ou "não").</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-148"><span class="process-math">\(\left(\frac{1+9}{1+8}\right)^{1}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-149"><span class="process-math">\(\left(\frac{2+9}{2+8}\right)^{2}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-26" id="answer-26"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like"><p id="p-150"><span class="process-math">\(\left(\frac{3+9}{3+8}\right)^{3}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><p id="p-151"><span class="process-math">\(\left(\frac{4+9}{4+8}\right)^{4}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-152"><span class="process-math">\(\left(\frac{5+9}{5+8}\right)^{5}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like"><p id="p-153"><span class="process-math">\(e^{9-8}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-30" id="answer-30"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-30"><div class="answer solution-like"><p id="p-154"><span class="process-math">\(\text{sim}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
-<p id="p-155">Para <span class="process-math">\(a_n=\left(\frac{n+9}{n+8}\right)^{n}\)</span></p>
-<p id="p-156"><span class="process-math">\(a_1={\textstyle\frac{10}{9}}\)</span></p>
-<p id="p-157"><span class="process-math">\(a_2={\textstyle\frac{121}{100}}\)</span></p>
-<p id="p-158"><span class="process-math">\(a_3={\textstyle\frac{1728}{1331}}\)</span></p>
-<p id="p-159"><span class="process-math">\(a_4={\textstyle\frac{28561}{20736}}\)</span></p>
-<p id="p-160"><span class="process-math">\(a_5={\textstyle\frac{537824}{371293}}\)</span></p>
-<p id="p-161"><span class="process-math">\(\displaystyle \lim_{n\to\infty} \left(\frac{n+9}{n+8}\right)^{n}  =\lim_{n\to\infty} e^{n\ln\!\left(\frac{n+9}{n+8}\right)}  =e^{\displaystyle\lim_{n\to\infty} \frac{\ln\!\left(\frac{n+9}{n+8}\right)}{\frac{1}{n}} }=e^{\displaystyle\lim_{n\to\infty} \frac{\frac{-1}{\left(n+9\right)\!\left(n+8\right)}}{\frac{-1}{n^{2}}} } =e^{\displaystyle\lim_{n\to\infty} \frac{1}{\left(1+\frac{9}{n}\right)\!\left(1+\frac{8}{n}\right)} }=e\text{,}\)</span> então a sequência converge para <span class="process-math">\(e\text{.}\)</span></p>
-</div></div>
+<details id="answer-24" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-148"><span class="process-math">\(\left(\frac{1+9}{1+8}\right)^{1}\)</span></div></div></details><details id="answer-25" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-149"><span class="process-math">\(\left(\frac{2+9}{2+8}\right)^{2}\)</span></div></div></details><details id="answer-26" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-150"><span class="process-math">\(\left(\frac{3+9}{3+8}\right)^{3}\)</span></div></div></details><details id="answer-27" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-151"><span class="process-math">\(\left(\frac{4+9}{4+8}\right)^{4}\)</span></div></div></details><details id="answer-28" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-152"><span class="process-math">\(\left(\frac{5+9}{5+8}\right)^{5}\)</span></div></div></details><details id="answer-29" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-153"><span class="process-math">\(e^{9-8}\)</span></div></div></details><details id="answer-30" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-154"><span class="process-math">\(\text{sim}\)</span></div></div></details><details id="solution-11" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-155">Para <span class="process-math">\(a_n=\left(\frac{n+9}{n+8}\right)^{n}\)</span>
+</div> <div class="para" id="p-156"><span class="process-math">\(a_1={\textstyle\frac{10}{9}}\)</span></div> <div class="para" id="p-157"><span class="process-math">\(a_2={\textstyle\frac{121}{100}}\)</span></div> <div class="para" id="p-158"><span class="process-math">\(a_3={\textstyle\frac{1728}{1331}}\)</span></div> <div class="para" id="p-159"><span class="process-math">\(a_4={\textstyle\frac{28561}{20736}}\)</span></div> <div class="para" id="p-160"><span class="process-math">\(a_5={\textstyle\frac{537824}{371293}}\)</span></div> <div class="para" id="p-161">
+<span class="process-math">\(\displaystyle \lim_{n\to\infty} \left(\frac{n+9}{n+8}\right)^{n}  =\lim_{n\to\infty} e^{n\ln\!\left(\frac{n+9}{n+8}\right)}  =e^{\displaystyle\lim_{n\to\infty} \frac{\ln\!\left(\frac{n+9}{n+8}\right)}{\frac{1}{n}} }=e^{\displaystyle\lim_{n\to\infty} \frac{\frac{-1}{\left(n+9\right)\!\left(n+8\right)}}{\frac{-1}{n^{2}}} } =e^{\displaystyle\lim_{n\to\infty} \frac{1}{\left(1+\frac{9}{n}\right)\!\left(1+\frac{8}{n}\right)} }=e\text{,}\)</span> então a sequência converge para <span class="process-math">\(e\text{.}\)</span>
+</div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<p id="p-162">Escreva os primeiros cinco termos da sequência com, <span class="process-math">\(\left[{\frac{\ln\!\left(n\right)}{n+1}}\right]_{n=1}^{\infty}\text{,}\)</span> determine se a sequência converge e, em caso afirmativo, encontre seu limite.</p>
-<p id="p-163">Insira as seguintes informações para <span class="process-math">\(a_n=\frac{\ln\!\left(n\right)}{n+1}\text{.}\)</span></p>
-<p id="p-164"><span class="process-math">\(a_1=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-165"><span class="process-math">\(a_2=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-166"><span class="process-math">\(a_3=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-167"><span class="process-math">\(a_4=\)</span>  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<p id="p-168"><span class="process-math">\(a_5=\)</span>  <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
-<p id="p-169"><span class="process-math">\(\displaystyle \lim_{n\to\infty} \frac{\ln\!\left(n\right)}{n+1} =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
-<p id="p-170">(Digite DNE se o limite não existir.)</p>
-<p id="p-171">A sequência converge <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> (Digite "sim" or "não").</p>
+<div class="para" id="p-162">Escreva os primeiros cinco termos da sequência com, <span class="process-math">\(\left[{\frac{\ln\!\left(n\right)}{n+1}}\right]_{n=1}^{\infty}\text{,}\)</span> determine se a sequência converge e, em caso afirmativo, encontre seu limite.</div> <div class="para" id="p-163">Insira as seguintes informações para <span class="process-math">\(a_n=\frac{\ln\!\left(n\right)}{n+1}\text{.}\)</span>
+</div> <div class="para" id="p-164">
+<span class="process-math">\(a_1=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-165">
+<span class="process-math">\(a_2=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-166">
+<span class="process-math">\(a_3=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-167">
+<span class="process-math">\(a_4=\)</span>  <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div> <div class="para" id="p-168">
+<span class="process-math">\(a_5=\)</span>  <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div> <div class="para" id="p-169">
+<span class="process-math">\(\displaystyle \lim_{n\to\infty} \frac{\ln\!\left(n\right)}{n+1} =\)</span> <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div> <div class="para" id="p-170">(Digite DNE se o limite não existir.)</div> <div class="para" id="p-171">A sequência converge <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> (Digite "sim" or "não").</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-31" id="answer-31"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-31"><div class="answer solution-like"><p id="p-172"><span class="process-math">\(0\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-32" id="answer-32"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like"><p id="p-173"><span class="process-math">\(\frac{\ln\!\left(2\right)}{2+1}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-33" id="answer-33"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><p id="p-174"><span class="process-math">\(\frac{\ln\!\left(3\right)}{3+1}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><p id="p-175"><span class="process-math">\(\frac{\ln\!\left(4\right)}{4+1}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-35" id="answer-35"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like"><p id="p-176"><span class="process-math">\(\frac{\ln\!\left(5\right)}{5+1}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-36" id="answer-36"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><p id="p-177"><span class="process-math">\(0\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-37" id="answer-37"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like"><p id="p-178"><span class="process-math">\(\text{yes}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
-<p id="p-179">Para <span class="process-math">\(a_n=\frac{\ln\!\left(n\right)}{n+1}\)</span></p>
-<p id="p-180"><span class="process-math">\(a_1=\frac{\ln{1}}{2}=0\)</span></p>
-<p id="p-181"><span class="process-math">\(a_2=\frac{\ln{2}}{3}\)</span></p>
-<p id="p-182"><span class="process-math">\(a_3=\frac{\ln{3}}{4}\)</span></p>
-<p id="p-183"><span class="process-math">\(a_4=\frac{\ln{4}}{5}\)</span></p>
-<p id="p-184"><span class="process-math">\(a_5=\frac{\ln{5}}{6}\)</span></p>
-<p id="p-185"><span class="process-math">\(\displaystyle \lim_{n\to\infty} \frac{\ln\!\left(n\right)}{n+1} =\lim_{n\to\infty} \frac{1}{n} =0\)</span> então a sequência converge para <span class="process-math">\(0\text{.}\)</span></p>
-</div></div>
-</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Se os dígitos de <span class="process-math">\(\pi\)</span> convergissem, então <span class="process-math">\(\pi\)</span> teria que ser um número racional. A irracionalidade de <span class="process-math">\(\pi\)</span> (que não pode ser escrito como uma fração) foi provada pela primeira vez por Lambert em 1761. A prova de Niven (1947) é mais acessível e convidamos o leitor interessado a usar seu mecanismo de busca favorito para encontrar guias passo a passo para essa prova.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/CAKhkDBam1Q</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/s_KzqFfmxhs</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/-yAcNxTxLY0</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/vhogCuKoaVQ</code></div></div>
+<details id="answer-31" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-172"><span class="process-math">\(0\)</span></div></div></details><details id="answer-32" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-173"><span class="process-math">\(\frac{\ln\!\left(2\right)}{2+1}\)</span></div></div></details><details id="answer-33" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-174"><span class="process-math">\(\frac{\ln\!\left(3\right)}{3+1}\)</span></div></div></details><details id="answer-34" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-175"><span class="process-math">\(\frac{\ln\!\left(4\right)}{4+1}\)</span></div></div></details><details id="answer-35" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-176"><span class="process-math">\(\frac{\ln\!\left(5\right)}{5+1}\)</span></div></div></details><details id="answer-36" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-177"><span class="process-math">\(0\)</span></div></div></details><details id="answer-37" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-178"><span class="process-math">\(\text{yes}\)</span></div></div></details><details id="solution-12" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-179">Para <span class="process-math">\(a_n=\frac{\ln\!\left(n\right)}{n+1}\)</span>
+</div> <div class="para" id="p-180"><span class="process-math">\(a_1=\frac{\ln{1}}{2}=0\)</span></div> <div class="para" id="p-181"><span class="process-math">\(a_2=\frac{\ln{2}}{3}\)</span></div> <div class="para" id="p-182"><span class="process-math">\(a_3=\frac{\ln{3}}{4}\)</span></div> <div class="para" id="p-183"><span class="process-math">\(a_4=\frac{\ln{4}}{5}\)</span></div> <div class="para" id="p-184"><span class="process-math">\(a_5=\frac{\ln{5}}{6}\)</span></div> <div class="para" id="p-185">
+<span class="process-math">\(\displaystyle \lim_{n\to\infty} \frac{\ln\!\left(n\right)}{n+1} =\lim_{n\to\infty} \frac{1}{n} =0\)</span> então a sequência converge para <span class="process-math">\(0\text{.}\)</span>
+</div>
+</div></details>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="calc-sequencia.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="references-backmatter.html" title="Próximo"><span class="name">Próximo</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

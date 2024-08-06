@@ -2662,7 +2662,7 @@
                         <webwork source="pretext-serie-taylor/problem9.pg"/>
             </exercise>
 <!--        <exercise>-->
-<!--                        <webwork source="pretext-serie-taylor/problem10.pg"/>-->
+<!--                        <webwork-extract-extract source="pretext-serie-taylor/problem10.pg"/>-->
 <!--            </exercise>-->
 
     </exercises>

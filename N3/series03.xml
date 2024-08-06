@@ -716,7 +716,7 @@
                             Então agora precisamos encontrar uma constante <m>K</m> de tal forma que  <m>
                             \frac{1+\frac{(\cos
                             n)}{n}}{1-\frac{1}{3n^3}}
-                        </m> seja menor que <m>K</m> for all <m>n\ge 1</m>.
+                        </m> seja menor que <m>K</m> para todo <m>n\ge 1</m>.
                             <ul>
                                 <li>
                                     <p>
@@ -2827,7 +2827,7 @@
                 <webwork source="pretext-teste-convergencia/problem24.pg"/>
             </exercise>
 <!--                 <exercise>-->
-<!--                <webwork source="pretext-teste-convergencia/problem24.pg"/>-->
+<!--                <webwork-extract-extract source="pretext-teste-convergencia/problem24.pg"/>-->
 <!--            </exercise>-->
 
 
