@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd1accca-499e-43dc-b30d-278edbe5d845" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/exercicio-edo-1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercicio-edo-1/info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercicio-edo-1/logo_UFRPE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercicio-edo-1/logo_ufrpe_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercicio-edo-1/questions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercicio-edo-1/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DPN08xFrRUJfBdcO78NYbec9DY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "//wsl$/Ubuntu-22.04/home/ldsufrpe/series-edo"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-22.04\home\ldsufrpe\series-edo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-22.04\home\ldsufrpe\series-edo\N2" />
+      <recent name="\\wsl$\Ubuntu-22.04\home\ldsufrpe\series-edo\N1" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd1accca-499e-43dc-b30d-278edbe5d845" name="Changes" comment="" />
+      <created>1660596533496</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660596533496</updated>
+      <workItem from="1660596534845" duration="1397000" />
+      <workItem from="1660694471419" duration="553000" />
+      <workItem from="1660695043140" duration="1269000" />
+      <workItem from="1660753311018" duration="1155000" />
+      <workItem from="1660853581445" duration="1212000" />
+      <workItem from="1660857605960" duration="12000" />
+      <workItem from="1712684556296" duration="647000" />
+      <workItem from="1713295959505" duration="5466000" />
+      <workItem from="1713986885092" duration="6000" />
+      <workItem from="1721763012220" duration="174000" />
+      <workItem from="1721766633510" duration="403000" />
+      <workItem from="1722878434846" duration="26000" />
+      <workItem from="1722966507622" duration="265000" />
+      <workItem from="1722966784969" duration="108000" />
+      <workItem from="1722967210271" duration="693000" />
+      <workItem from="1725990813382" duration="3273000" />
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1660694541314</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660694541314</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <created>1660694617940</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660694617940</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <created>1660695091215</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660695091215</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update">
+      <created>1660695114596</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660695114596</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <created>1660753339881</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660753339881</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update">
+      <created>1660753365023</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660753365023</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update">
+      <created>1660753525595</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660753525595</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update">
+      <created>1713297452760</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713297452760</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <created>1713298110158</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713298110158</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update">
+      <created>1713298137751</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713298137751</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update">
+      <created>1713298287808</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713298287808</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update">
+      <created>1713303249261</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713303249261</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update">
+      <created>1722966808081</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1722966808081</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update">
+      <created>1722967293769</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722967293769</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+</project>

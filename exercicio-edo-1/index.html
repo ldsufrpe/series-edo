@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios de Equações Diferenciais</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <!-- Adicionando MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+
+        async function loadContent() {
+            // Carregar informações do cabeçalho
+            const responseInfo = await fetch('info.json');
+            const info = await responseInfo.json();
+            document.getElementById('university').textContent = info.university;
+            document.getElementById('department').textContent = info.department;
+            document.getElementById('professor').textContent = info.professor;
+            document.getElementById('course').textContent = info.course;
+            document.getElementById('class').textContent = info.class;
+
+            // Carregar questões e respostas
+            const responseQuestions = await fetch('questions.json');
+            const data = await responseQuestions.json();
+            const container = document.getElementById('questions-container');
+            data.questions.forEach((q, index) => {
+                const questionContainer = document.createElement('div');
+                questionContainer.className = 'question-container';
+
+                const question = document.createElement('p');
+                question.innerHTML = `<strong>${index + 1}.</strong> ${q.question}`;
+                questionContainer.appendChild(question);
+
+                const button = document.createElement('button');
+                button.textContent = 'Mostrar/Esconder Gabarito';
+                button.setAttribute('onclick', `toggleAnswer('answer${index + 1}')`);
+                questionContainer.appendChild(button);
+
+                const answer = document.createElement('p');
+                answer.id = `answer${index + 1}`;
+                answer.className = 'answer';
+                answer.style.display = "none";  // Oculte a resposta inicialmente
+                answer.innerHTML = `<strong>Gabarito:</strong> ${q.answer}`;
+                questionContainer.appendChild(answer);
+
+                container.appendChild(questionContainer);
+            });
+
+            // Reprocessar o MathJax para renderizar as equações dinâmicas
+            if (window.MathJax) {
+                MathJax.typeset();
+            }
+        }
+
+        function printPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            let yOffset = 10;
+
+            // Adicionar informações do cabeçalho
+            doc.setFontSize(14);
+            doc.text(document.getElementById('university').textContent, 10, yOffset);
+            yOffset += 10;
+            doc.text(document.getElementById('department').textContent, 10, yOffset);
+            yOffset += 10;
+            doc.text(document.getElementById('professor').textContent, 10, yOffset);
+            yOffset += 10;
+            doc.text(document.getElementById('course').textContent, 10, yOffset);
+            yOffset += 10;
+            doc.text(document.getElementById('class').textContent, 10, yOffset);
+            yOffset += 20;
+
+            // Adicionar questões e respostas
+            const questions = document.querySelectorAll('.question-container');
+            questions.forEach((q, index) => {
+                const questionText = q.querySelector('p').innerText;
+                const answerText = q.querySelector('.answer').innerText;
+                doc.setFontSize(12);
+                doc.text(`${index + 1}. ${questionText}`, 10, yOffset);
+                yOffset += 10;
+                doc.text(answerText, 10, yOffset);
+                yOffset += 20;
+
+                if (yOffset > 270) {  // Quebra de página se ultrapassar o limite
+                    doc.addPage();
+                    yOffset = 10;
+                }
+            });
+
+            doc.save('Lista_de_Exercicios.pdf');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadContent);
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="logo_ufrpe_2.png" alt="Logo UFRPE">
+        <h1 id="university"></h1>
+        <p id="department"></p>
+        <p id="professor"></p>
+        <p id="course"></p>
+        <p id="class"></p>
+    </div>
+    <div class="container">
+        <h2>Lista de Exercícios de Equações Diferenciais</h2>
+        <button onclick="printPDF()">Imprimir Lista em PDF</button>
+        <div id="questions-container"></div>
+    </div>
+</body>
+</html>
