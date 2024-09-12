@@ -13,4 +13,5 @@
 
 
 ### Exercícios Extras
-- [Exercícios - Testes de convergência](https://ldsufrpe.github.io/series-edo/exercicio-serie-1/index.html). 
+- [Exercícios - Testes de Convergência](https://ldsufrpe.github.io/series-edo/exercicio-serie-1/index.html).
+- - [Exercícios - EDOs Separáveis e Homogêneas](https://ldsufrpe.github.io/series-edo/exercicio-edo-1/index.html). 
